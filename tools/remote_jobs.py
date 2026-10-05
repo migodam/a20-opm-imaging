@@ -24,6 +24,7 @@ def connection():
 
 def shell(script):
     target,key=connection()
+    script="$ProgressPreference='SilentlyContinue';\n"+script
     code=base64.b64encode(script.encode('utf-16le')).decode()
     return subprocess.check_output(['ssh','-i',key,'-o','BatchMode=yes','-o','ConnectTimeout=8',
         '-o','StrictHostKeyChecking=yes',target,'powershell.exe -NoProfile -EncodedCommand '+code],text=True).strip()
@@ -90,6 +91,48 @@ Write-Output ('STARTED '+$p.Id)
     print(shell(script))
 
 
+def run(stage,job,parents=None,iterations=None):
+    """Keep SSH attached to the physics process; Windows may kill detached children.
+
+    Use a long-lived terminal session for this command. Another connection can
+    inspect the flushed stdout and receipts without terminating this session.
+    """
+    target,key=connection()
+    if any(not (c.isalnum() or c in '-_') for c in job):
+        raise ValueError('Unsafe job id')
+    options=['-u','-m','a20.cli',stage,'--device','cuda','--job',job]
+    if parents:
+        options+=['--parents']+[str(int(x)) for x in parents]
+    if iterations:
+        options+=['--iterations']+[str(int(x)) for x in iterations]
+    args=','.join("'"+x+"'" for x in options)
+    script=f"""
+$ProgressPreference='SilentlyContinue'
+$ErrorActionPreference='Stop'
+Set-Location '{REMOTE}'
+$env:PYTHONPATH='{REMOTE}/src'
+$env:PYTHONDONTWRITEBYTECODE='1'
+$env:OPENBLAS_NUM_THREADS='1'
+$env:OMP_NUM_THREADS='1'
+$env:MKL_NUM_THREADS='1'
+$env:NUMEXPR_NUM_THREADS='1'
+$busy=@(& nvidia-smi --query-compute-apps=pid,process_name,used_gpu_memory --format=csv,noheader)
+if($LASTEXITCODE -ne 0) {{ throw 'GPU inventory failed' }}
+if($busy.Count -gt 0) {{ throw 'Existing GPU compute process; no concurrent physics launch' }}
+if(Test-Path '{REMOTE}/runs/gpu.lock') {{ throw 'Existing A20 physics lock; inspect current job' }}
+New-Item -ItemType Directory -Force '{REMOTE}/runs' | Out-Null
+& '{PYTHON}' @({args}) 1>'{REMOTE}/runs/{job}.stdout' 2>'{REMOTE}/runs/{job}.stderr'
+$rc=$LASTEXITCODE
+Get-Content '{REMOTE}/runs/{job}.stdout' -Tail 6
+Get-Content '{REMOTE}/runs/{job}.stderr' -Tail 20
+exit $rc
+"""
+    encoded=base64.b64encode(script.encode('utf-16le')).decode()
+    subprocess.run(['ssh','-i',key,'-o','BatchMode=yes','-o','ConnectTimeout=8',
+                    '-o','StrictHostKeyChecking=yes',target,
+                    'powershell.exe -NoProfile -EncodedCommand '+encoded],check=True)
+
+
 def status(job):
     if any(not (c.isalnum() or c in '-_') for c in job):
         raise ValueError('Unsafe job id')
@@ -118,7 +161,7 @@ def pull():
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()
-    p.add_argument('operation',choices=['deploy','start','status','pull'])
+    p.add_argument('operation',choices=['deploy','start','run','status','pull'])
     p.add_argument('--stage',choices=['algebra','g0-real','replay','a1','a2','noise','timing','evaluate'])
     p.add_argument('--job')
     p.add_argument('--parents',type=int,nargs='*')
@@ -126,5 +169,6 @@ if __name__=='__main__':
     a=p.parse_args()
     if a.operation=='deploy': deploy()
     elif a.operation=='start': start(a.stage,a.job,a.parents,a.iterations)
+    elif a.operation=='run': run(a.stage,a.job,a.parents,a.iterations)
     elif a.operation=='status': status(a.job)
     else: pull()

@@ -1,0 +1,5 @@
+{
+  "status": "FAILED_LAUNCH",
+  "reason": "PID returned, empty stdout/stderr, no CLI manifest or physics receipt, no Python process at inspection",
+  "no_scientific_result": true
+}

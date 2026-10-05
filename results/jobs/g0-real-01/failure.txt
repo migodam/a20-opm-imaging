@@ -1,0 +1,1 @@
+Detached Windows Start-Process ended without a Python/physics manifest. Exact CPU occupation unavailable; 501.975 s CPU and GPU are charged as conservative allowances. Retry uses a new ID and attached foreground SSH.

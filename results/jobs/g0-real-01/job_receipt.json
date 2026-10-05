@@ -1,0 +1,19 @@
+{
+  "job": "g0-real-01",
+  "stage": "g0-real",
+  "status": "FAILED_LAUNCH",
+  "process_cpu_seconds": 501.975,
+  "gpu_occupation_seconds": 501.975,
+  "counts": {},
+  "exclusive_walls": {},
+  "wall_seconds": 501.975,
+  "resource_measurement": "conservative charged allowance from PID-file creation until verified ended; no process receipt exists",
+  "scientific_status": "NOT_RUN",
+  "observations": "PID returned, empty stdout/stderr, no CLI manifest or physics receipt, no Python process at inspection",
+  "cause": "unresolved Windows SSH child lifetime; subsequent jobs keep foreground SSH alive",
+  "prior_cpu_seconds": 125.009681,
+  "prior_gpu_seconds": 0,
+  "CPU_limit": 7200,
+  "GPU_limit": 43200,
+  "new_SHA256_checks": 0
+}
