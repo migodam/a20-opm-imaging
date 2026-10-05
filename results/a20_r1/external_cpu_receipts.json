@@ -60,5 +60,12 @@
     "process_cpu_seconds": 0.139495,
     "receipt": null,
     "measurement": "inclusive self CPU from process start + .01s write allowance; no physics"
+  },
+  {
+    "scope": "R1 Codex public package mechanical audit including failed parses and final epilogue",
+    "phase": "phase1",
+    "process_cpu_seconds": 1.364659,
+    "receipt": "results/a20_r1/PUBLIC_PACKAGE_AUDIT_RECEIPT.json",
+    "measurement": "worker final inclusive measured CPU + .05s unmeasured parse allowance; last epilogue .000320s above raw receipt snapshot"
   }
 ]

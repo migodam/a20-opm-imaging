@@ -76,7 +76,7 @@ def assemble_ledgers():
     parent_audit = ROOT/'results/a20_r1/PUBLIC_PACKAGE_PARENT_REVIEW.json'
     if parent_audit.exists():
         failures.append({'failure_kind': 'audit_tooling', 'status': 'FAILED',
-                         'reason': 'Parent initially asserted the wrong normal English term for a credential-regex false positive; resolved as task-residual-conditioned',
+                         'reason': 'Parent made overly specific scientific-compound/dictionary assumptions in three checks; resolved from exact within-word context',
                          'physical_method_failure': False,
                          'source': parent_audit.relative_to(ROOT).as_posix(),
                          'fee_scope': 'existing conservative planning/setup/publication overhead allowance'})

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "worker_audit": "results/a20_r1/PUBLIC_PACKAGE_AUDIT.json",
+  "sensitive_finding_resolution": {
+    "file": "protocol/START_HERE.md",
+    "line": 40,
+    "category": "FALSE_POSITIVE_SCIENTIFIC_COMPOUND_WITHIN_WORD",
+    "credential_present": false,
+    "evidence": "sk- matched inside task-...-conditioned; no token at a word boundary and no credential assignment"
+  },
+  "required_nine_artifacts": "PASS",
+  "local_doc_links": "PASS",
+  "FINAL_REVIEW_json": "results/a20_r1/FINAL_REVIEW.json",
+  "PUBLICATION_json": "results/a20_r1/PUBLICATION.json",
+  "original_generated_pdf_only": true,
+  "third_party_full_text_included": false,
+  "new_SHA256_checks": 0,
+  "worker_final_inclusive_CPU_seconds": 1.364659,
+  "worker_receipt_pre_last_epilogue_seconds": 1.364339,
+  "parent_resolution_failed_assumption_checks": 3,
+  "failure_type": "two guessed compound spellings and one dictionary whitelist were overly specific; resolved by exact word-boundary context",
+  "network_publication_before_resolution": false,
+  "parent_failed_checks_CPU": "included existing conservative planning/publication overhead allowance"
+}
