@@ -73,6 +73,13 @@ def assemble_ledgers():
                      'reason': 'apply_patch rejected two operations targeting START_HERE in one patch; no partial edits applied',
                      'physical_method_failure': False,
                      'fee_scope': 'existing conservative planning/setup/publication overhead allowance'})
+    parent_audit = ROOT/'results/a20_r1/PUBLIC_PACKAGE_PARENT_REVIEW.json'
+    if parent_audit.exists():
+        failures.append({'failure_kind': 'audit_tooling', 'status': 'FAILED',
+                         'reason': 'Parent initially asserted the wrong normal English term for a credential-regex false positive; resolved as task-residual-conditioned',
+                         'physical_method_failure': False,
+                         'source': parent_audit.relative_to(ROOT).as_posix(),
+                         'fee_scope': 'existing conservative planning/setup/publication overhead allowance'})
     for name, values in (('COST_LEDGER.jsonl', costs), ('FAILURE_LEDGER.jsonl', failures)):
         (ROOT/name).write_text(''.join(json.dumps(r, ensure_ascii=False, allow_nan=False)+'\n' for r in values))
     budget = history(ROOT)
