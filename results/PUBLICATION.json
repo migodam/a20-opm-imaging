@@ -1,5 +1,88 @@
 {
-  "status": "PENDING_PUBLICATION",
+  "status": "PUBLISHED_VERIFIED",
   "repository": "https://github.com/migodam/a20-opm-imaging",
-  "scientific_decision_file": "results/GATE_DECISION.json"
+  "release": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.1.0-pilot",
+  "release_tag": "v0.1.0-pilot",
+  "release_source_commit": "4bfa18db1686359d27b45318452fad48abf44867",
+  "physics_source_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea",
+  "offline_gate_source_commit": "b6e922fe7e68ed7d773dcd80701cfe0692972af4",
+  "raw_START_HERE_main": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+  "raw_START_HERE_source": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/4bfa18db1686359d27b45318452fad48abf44867/START_HERE.md",
+  "scientific_decision_file": "results/GATE_DECISION.json",
+  "science_status": "NO_GO_FOR_CURRENT_IMPLEMENTATION_ADVANCEMENT; complete_registered_replay_H_gate=HOLD; A1/A2/G1/G2=NOT_RUN",
+  "verification_mode": "anonymous urllib GET, no authorization/cookies; public web tool independently opened repository/release/raw entry",
+  "verified_utc": "2026-10-05T10:21:07.773820+00:00",
+  "repository_release_raw_checks": {
+    "repository": {
+      "url": "https://github.com/migodam/a20-opm-imaging",
+      "status": 200,
+      "final_url": "https://github.com/migodam/a20-opm-imaging",
+      "body_bytes": 277785,
+      "authorization_header": false
+    },
+    "release": {
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.1.0-pilot",
+      "status": 200,
+      "final_url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.1.0-pilot",
+      "body_bytes": 204937,
+      "authorization_header": false
+    },
+    "raw_start_source": {
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/4bfa18db1686359d27b45318452fad48abf44867/START_HERE.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/4bfa18db1686359d27b45318452fad48abf44867/START_HERE.md",
+      "body_bytes": 3499,
+      "authorization_header": false,
+      "contains_NO_GO": true,
+      "contains_HOLD": true
+    },
+    "raw_start_main": {
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+      "body_bytes": 3499,
+      "authorization_header": false,
+      "contains_NO_GO": true,
+      "contains_HOLD": true
+    },
+    "commit_api": {
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/commits/main",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/migodam/a20-opm-imaging/commits/main",
+      "body_bytes": 498959,
+      "authorization_header": false,
+      "commit_sha": "4bfa18db1686359d27b45318452fad48abf44867"
+    },
+    "release_api": {
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.1.0-pilot",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.1.0-pilot",
+      "body_bytes": 3664,
+      "authorization_header": false,
+      "tag_name": "v0.1.0-pilot",
+      "draft": false,
+      "prerelease": false,
+      "assets": 0
+    }
+  },
+  "release_tag_target_verified": "4bfa18db1686359d27b45318452fad48abf44867",
+  "asset": {
+    "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.1.0-pilot/a20-opm-imaging-v0.1.0-pilot.zip",
+    "name": "a20-opm-imaging-v0.1.0-pilot.zip",
+    "HTTP": 200,
+    "downloaded_bytes": 13891174,
+    "release_api_size_bytes": 13891174,
+    "ZIP_CRC_integrity": "PASS",
+    "archive_files": 1275,
+    "npz_files": 912,
+    "source_identity_stamp_matches_release": true,
+    "contains_auth_headers": false,
+    "SHA256_checks": 0
+  },
+  "archive_build_receipt": "results/ARCHIVE_BUILD.json",
+  "release_archive_publication_receipt": "packaging snapshot before asset upload; this main receipt records final asset verification",
+  "budget_file": "results/BUDGET_FINAL.json",
+  "publication_CPU_accounting": "within existing conservative 120-second preparation/transport/archive/publication allowance",
+  "publication_metadata_commit": "commit containing this receipt; see remote main for Git identity (no self-referential commit field)",
+  "experiment_changes_by_publication": 0
 }
