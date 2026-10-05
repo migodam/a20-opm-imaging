@@ -1,0 +1,174 @@
+{
+  "parents": [
+    {
+      "parent_id": 2001,
+      "historical_split": "validation",
+      "split": "historically_exposed_feasibility",
+      "family": "gaussian",
+      "parameterization": "gaussian",
+      "n_current": 5184,
+      "p_material": 54,
+      "sources": 6,
+      "receivers": 64,
+      "frequencies": [
+        2.0
+      ],
+      "runtime_problem": "data/runtime/2001/problem.npz",
+      "offline_labels": "data/offline/2001/labels.npz",
+      "states": [
+        {
+          "iteration": 0,
+          "runtime_path": "data/runtime/2001/state_00.npz",
+          "physical_expansion_relative_error": 2.0571045932532194e-16
+        },
+        {
+          "iteration": 17,
+          "runtime_path": "data/runtime/2001/state_17.npz",
+          "physical_expansion_relative_error": 1.458565330879783e-16
+        }
+      ]
+    },
+    {
+      "parent_id": 2005,
+      "historical_split": "validation",
+      "split": "historically_exposed_feasibility",
+      "family": "contact",
+      "parameterization": "gaussian",
+      "n_current": 5184,
+      "p_material": 54,
+      "sources": 6,
+      "receivers": 64,
+      "frequencies": [
+        2.0
+      ],
+      "runtime_problem": "data/runtime/2005/problem.npz",
+      "offline_labels": "data/offline/2005/labels.npz",
+      "states": [
+        {
+          "iteration": 0,
+          "runtime_path": "data/runtime/2005/state_00.npz",
+          "physical_expansion_relative_error": 1.9413902380678705e-16
+        },
+        {
+          "iteration": 17,
+          "runtime_path": "data/runtime/2005/state_17.npz",
+          "physical_expansion_relative_error": 1.306454310397041e-16
+        }
+      ]
+    },
+    {
+      "parent_id": 2003,
+      "historical_split": "validation",
+      "split": "historically_exposed_feasibility",
+      "family": "gaussian",
+      "parameterization": "gaussian",
+      "n_current": 5184,
+      "p_material": 54,
+      "sources": 6,
+      "receivers": 64,
+      "frequencies": [
+        2.0
+      ],
+      "runtime_problem": "data/runtime/2003/problem.npz",
+      "offline_labels": "data/offline/2003/labels.npz",
+      "states": [
+        {
+          "iteration": 0,
+          "runtime_path": "data/runtime/2003/state_00.npz",
+          "physical_expansion_relative_error": 1.9792615630442605e-16
+        },
+        {
+          "iteration": 17,
+          "runtime_path": "data/runtime/2003/state_17.npz",
+          "physical_expansion_relative_error": 1.3518990534590515e-16
+        }
+      ]
+    },
+    {
+      "parent_id": 2007,
+      "historical_split": "validation",
+      "split": "historically_exposed_feasibility",
+      "family": "contact",
+      "parameterization": "gaussian",
+      "n_current": 5184,
+      "p_material": 54,
+      "sources": 6,
+      "receivers": 64,
+      "frequencies": [
+        2.0
+      ],
+      "runtime_problem": "data/runtime/2007/problem.npz",
+      "offline_labels": "data/offline/2007/labels.npz",
+      "states": [
+        {
+          "iteration": 0,
+          "runtime_path": "data/runtime/2007/state_00.npz",
+          "physical_expansion_relative_error": 1.8928796294140008e-16
+        },
+        {
+          "iteration": 17,
+          "runtime_path": "data/runtime/2007/state_17.npz",
+          "physical_expansion_relative_error": 1.3779966087662888e-16
+        }
+      ]
+    },
+    {
+      "parent_id": 2010,
+      "historical_split": "validation",
+      "split": "historically_exposed_feasibility",
+      "family": "shell",
+      "parameterization": "voxel",
+      "n_current": 5184,
+      "p_material": 3456,
+      "sources": 6,
+      "receivers": 64,
+      "frequencies": [
+        2.0
+      ],
+      "runtime_problem": "data/runtime/2010/problem.npz",
+      "offline_labels": "data/offline/2010/labels.npz",
+      "states": [
+        {
+          "iteration": 0,
+          "runtime_path": "data/runtime/2010/state_00.npz",
+          "physical_expansion_relative_error": 0.0
+        },
+        {
+          "iteration": 17,
+          "runtime_path": "data/runtime/2010/state_17.npz",
+          "physical_expansion_relative_error": 0.0
+        }
+      ]
+    },
+    {
+      "parent_id": 2013,
+      "historical_split": "validation",
+      "split": "historically_exposed_feasibility",
+      "family": "asymmetric",
+      "parameterization": "gaussian",
+      "n_current": 5184,
+      "p_material": 54,
+      "sources": 6,
+      "receivers": 64,
+      "frequencies": [
+        2.0
+      ],
+      "runtime_problem": "data/runtime/2013/problem.npz",
+      "offline_labels": "data/offline/2013/labels.npz",
+      "states": [
+        {
+          "iteration": 0,
+          "runtime_path": "data/runtime/2013/state_00.npz",
+          "physical_expansion_relative_error": 1.9105488874115063e-16
+        },
+        {
+          "iteration": 17,
+          "runtime_path": "data/runtime/2013/state_17.npz",
+          "physical_expansion_relative_error": 1.3548673183195911e-16
+        }
+      ]
+    }
+  ],
+  "selection": "fixed before A20 physics or metric evaluation",
+  "not_a_blind_test": true
+}

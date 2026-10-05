@@ -1,0 +1,32 @@
+{
+  "A16_problem_commit": "e17f9de3469964c8f4cd1b1c967d2e2f14b3d277",
+  "origin": "A17 EXCHANGE_R1 validated vendor snapshot",
+  "repository_state": "source directory is not Git",
+  "upstream_source_files": [
+    {
+      "module": "a9_engine",
+      "copied_from": "vendor/Gaussian/A9/code/a9_engine.py",
+      "vendored_path": "vendor/a17/a9_engine.py",
+      "historical_sha256": "e4e28318e54598af66b29a407c0ab7ae8f9c10f56614f228687f896ef78c45e3",
+      "sha256_status": "HISTORICAL_NOT_RECHECKED",
+      "bytes": 43596
+    },
+    {
+      "module": "experiment_support",
+      "copied_from": "vendor/Gaussian/A9/code/experiment_support.py",
+      "vendored_path": "vendor/a17/experiment_support.py",
+      "historical_sha256": "a14f1a9ee4c6f1b6af4e0be1e5b36cb38c16582d1296a3644759b5f3e0445346",
+      "sha256_status": "HISTORICAL_NOT_RECHECKED",
+      "bytes": 7014
+    },
+    {
+      "module": "feasible_step",
+      "copied_from": "vendor/Gaussian/A10/code/feasible_step.py",
+      "vendored_path": "vendor/a17/feasible_step.py",
+      "historical_sha256": "779b729e71fbd9d46e748cb6f79284435994a1a4fbcac91439cca98ff69473f6",
+      "sha256_status": "HISTORICAL_NOT_RECHECKED",
+      "bytes": 1718
+    }
+  ],
+  "no_new_sha256_check": true
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.mplconfig/
+.DS_Store
+*.tmp
+runs/
+private/
+dist/
+configs/SOURCE_COMMIT.txt
+*.log.tmp
