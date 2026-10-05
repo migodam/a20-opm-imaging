@@ -23,7 +23,13 @@ def source_commit(root):
     stamp = root/'configs/SOURCE_COMMIT.txt'
     if stamp.exists():
         return stamp.read_text(encoding='utf-8').strip()
-    return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
+    try:
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True,
+                                       stderr=subprocess.DEVNULL).strip()
+    except (OSError,subprocess.CalledProcessError):
+        # Bare source archives can execute the same protocol. Their Git
+        # identity is unavailable unless the release supplies a provenance stamp.
+        return 'UNVERSIONED_SOURCE_ARCHIVE'
 
 
 def metadata(root, args, config):
@@ -217,12 +223,9 @@ def run_optional(root, config, book, args):
         return {'status':'NOT_RUN','reason':'No complete OPM nonlinear quality survivor'}
     method,degree,mode,_=min(candidates,key=lambda r:(r[3],r[1],r[2]))
     if args.stage=='timing':
-        # Warm repeats cannot silently enlarge the approved A1 42-run matrix.
-        base=len(read_rows(root/'results/A1/runs.jsonl'))
-        additional_a1=12 if mode=='A1' else 6
-        if base+additional_a1>42:
-            return {'status':'NOT_RUN','reason':'A1 42-run cap leaves insufficient complete warm pairs; G2 remains HOLD',
-                    'A1_runs':base,'required_additional_A1':additional_a1}
+        # These are paid repetitions of already registered conditions, not new
+        # conditions in the capped initial 6x7 matrix. A20 declares cold/warm
+        # accounting but no A19-style five-repeat requirement.
         return run_warm_timing(root,config,book,args.device,args.job,method,degree,mode)
     return run_noise(root,config,book,args.device,args.job,method,degree,mode)
 

@@ -1,0 +1,103 @@
+{
+  "schema": "a20.docs.REPRODUCE_DOC_RECEIPT.v1",
+  "status": "PASS",
+  "task": "Repair documentation-only reproduction wiring against existing A20 interfaces",
+  "changed_paths_this_task": [
+    "docs/REPRODUCE.md",
+    "results/tests/REPRODUCE_DOC_RECEIPT.json"
+  ],
+  "checks": [
+    {
+      "check": "embedded_python_compile_without_execution",
+      "status": "PASS"
+    },
+    {
+      "check": "shell_syntax_only",
+      "status": "PASS"
+    },
+    {
+      "check": "source_test_ast_parse_only",
+      "status": "PASS"
+    },
+    {
+      "check": "fixed_results_tests_report_and_root_bridge",
+      "status": "PASS"
+    },
+    {
+      "check": "actual_runner_flags_and_no_summarizer_output_flag",
+      "status": "PASS"
+    },
+    {
+      "check": "retain_failed_local_attempt_cpu_in_existing_ledger",
+      "status": "PASS"
+    },
+    {
+      "check": "new_copy_results_isolation_is_once_only",
+      "status": "PASS"
+    },
+    {
+      "check": "G0_LOCAL_ALGEBRA_REAL_replay_stage_order",
+      "status": "PASS"
+    },
+    {
+      "check": "complete_first_replay_and_duplicates_HOLD",
+      "status": "PASS"
+    },
+    {
+      "check": "nonlinear_and_optional_stages_remain_gated",
+      "status": "PASS"
+    },
+    {
+      "check": "A20_single_paired_warm_12_attempts_not_A19_repeat_gate",
+      "status": "PASS"
+    },
+    {
+      "check": "noise_24_attempts_including_failures",
+      "status": "PASS"
+    },
+    {
+      "check": "source_archive_provenance_is_distinct",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_budgets_and_physics_policy_not_replaced",
+      "status": "PASS"
+    }
+  ],
+  "failed_checks": [],
+  "validation_attempts": 1,
+  "process_receipts": [
+    {
+      "scope": "read doc, bounded runner and summarizer source",
+      "process_cpu_seconds": 0.026156
+    },
+    {
+      "scope": "read CLI, robustness and external-ledger interfaces",
+      "process_cpu_seconds": 0.025335999999999997
+    },
+    {
+      "scope": "read current gate, source-stamp and frozen-config interfaces",
+      "process_cpu_seconds": 0.027139
+    },
+    {
+      "scope": "this stdlib validator including AST and shell syntax checks",
+      "self_process_cpu_seconds": 0.04172,
+      "waited_child_cpu_seconds": 0.014582999999999999,
+      "inclusive_process_cpu_seconds": 0.056303,
+      "wall_seconds": 0.03599608293734491
+    }
+  ],
+  "inclusive_measured_process_cpu_seconds": 0.134934,
+  "cpu_limit_seconds": 10,
+  "read_process_measured_work_wall_seconds": 0.010648499941453338,
+  "measurement": "Process startup/imports included in each process CPU sample; samples precede final stdout/receipt serialization. Shell syntax children included. Reasoning/editor/tool-service CPU is not a measured subprocess CPU.",
+  "unmeasured_prior_read_tool_overhead": "Covered by parent shared preparation allowance; not claimed as exact measured CPU here.",
+  "physical_actions": 0,
+  "tests_executed": 0,
+  "CLI_stages_executed": 0,
+  "source_or_test_modifications": 0,
+  "SSH_calls": 0,
+  "hash_checks": 0,
+  "additional_agents": 0,
+  "scientific_judgment": "Parent-owned; no G0/G1/G2 experimental result is added by this documentation check"
+}

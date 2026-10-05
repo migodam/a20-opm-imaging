@@ -9,5 +9,7 @@
 
 实际发现的数值/运行冲突和修复随失败日志、软件 commit、G0 与各 job receipt 留存。缺失条件不会被默认当成通过。
 
-7. **预算与执行顺序。** 在启动任何 A1 之前，执行顺序固定为 method-major：先完成六对象 full GN，再依预先规定 degree 顺序完成六对象配对，最后普通 ROM 对照。最多42个主矩阵重建及所有 gates 不变。预算停止保留部分矩阵；初始 cold 顺序不替代规定的五次轮换 cold/warm finalist 计时。见 results/STAGE_ORDER_DECLARATION.json。
+7. **预算与执行顺序。** 在启动任何 A1 之前，执行顺序固定为 method-major：先完成六对象 full GN，再依预先规定 degree 顺序完成六对象配对，最后普通 ROM 对照。最多42个主矩阵重建及所有 gates 不变。预算停止保留部分矩阵；初始 cold 顺序不替代 A20 合同要求的完整 cold/warm 成本比较。见 results/STAGE_ORDER_DECLARATION.json。
 8. **重试 cohort 不能自动混合。** 单个完整 replay cohort 从空结果开始；不同run产生重复(parent,state,method,degree)时，gate保持HOLD，直到显式声明合规cohort。不能删除失败来制造通过。首次replay没有重试选择。
+
+9. **跨任务计时条款纠正。** 一次文档整理误把之前 A19 的五次计时要求移入 A20；对照本轮 root 执行合同、lightweight spec 及用户批准 A20 计划后已移除。A20 没有规定五次/两次重复。42 是六对象×七方法的初始主矩阵，不是已授权同条件 warm 计时重复的全局次数上限；warm及噪声的所有实际重建/失败仍全额进入12小时GPU、2小时CPU预算。纠正在任何A1或timing动作之前完成，没有调整已执行replay、数值门槛或结果。

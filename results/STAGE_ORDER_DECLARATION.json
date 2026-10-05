@@ -11,6 +11,6 @@
   ],
   "reason": "Hard global CPU budget may leave a partial matrix; complete object-level paired comparisons first. No threshold, method, initialization or scientific policy is changed.",
   "gate_dependency": "all twelve replay states required for each eligible degree",
-  "timing_limitation": "Initial cold order alone cannot certify G2; prescribed rotated cold/warm repeats remain required.",
+  "timing_limitation": "Initial cold order alone cannot certify deployment value; complete A20 cold/warm accounting and generic ROM comparison remain required. No fixed repeat count is specified by A20.",
   "A1_runs_started": 0
 }
