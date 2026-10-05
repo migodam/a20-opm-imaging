@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "process_cpu_seconds": 0.05561,
+  "user_cpu_seconds": 0.045943,
+  "system_cpu_seconds": 0.009667,
+  "wall_seconds": 0.032327374909073114,
+  "CPU_limit_seconds": 20.0,
+  "CPU_measurement_scope": "whole checker process from startup, including source reads/AST compile/pure record/status checks; no a20 module execution",
+  "physical_actions": 0,
+  "SSH_calls": 0,
+  "hash_checks": 0,
+  "attempt": 1,
+  "all_checker_failures": []
+}

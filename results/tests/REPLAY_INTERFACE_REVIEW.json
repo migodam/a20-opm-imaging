@@ -1,0 +1,199 @@
+{
+  "schema": "a20.tests.replay_interface_review.v1",
+  "status": "NO_STATIC_BLOCKER_FOR_FIRST_COMPLETE_COHORT",
+  "constraints": "Fresh empty replay history; one full frozen 6-object x 2-state cohort; G0 prerequisites and actual physics budget remain owned by parent.",
+  "scientific_decision": "PARENT_REVIEW_REQUIRED",
+  "findings": [
+    {
+      "id": "R1",
+      "status": "FIXED_BY_PARENT_STATICALLY_VERIFIED",
+      "current_first_cohort_blocker": false,
+      "problem": "Old _base_row metadata lookup produced backend_commit=None under the CLI metadata contract.",
+      "original_locations": [
+        "src/a20/replay.py:193-194",
+        "src/a20/cli.py:262"
+      ],
+      "repair_locations": [
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 186,
+          "end_line": 211
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/cli.py",
+          "line": 262
+        }
+      ],
+      "verification": {
+        "pure_record_check": true,
+        "row_backend_commit": "STATIC_PROVENANCE_PLACEHOLDER_NO_HASH",
+        "context_metadata_written": [
+          "backend_declared_historical_commit",
+          "degree",
+          "experiment_id",
+          "iteration",
+          "job",
+          "method",
+          "parent_object_id",
+          "run_id",
+          "source_commit"
+        ]
+      }
+    },
+    {
+      "id": "R2",
+      "status": "FIXED_BY_PARENT_STATICALLY_VERIFIED",
+      "current_first_cohort_blocker": false,
+      "problem": "run_replay captures BudgetExceeded in STOPPED_PARTIAL; the old CLI then marked job COMPLETE and exited zero.",
+      "original_locations": [
+        "src/a20/replay.py:766-792",
+        "src/a20/cli.py:296"
+      ],
+      "repair_locations": [
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/cli.py",
+          "line": 297
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/cli.py",
+          "line": 319
+        }
+      ],
+      "verification": {
+        "budget_partial_maps_to_BUDGET_STOP": true,
+        "ordinary_partial_maps_to_FAILED": true,
+        "non_COMPLETE_exit_code": 2
+      }
+    },
+    {
+      "id": "R3",
+      "status": "ACCEPTED_FUTURE_RETRY_LIMITATION",
+      "current_first_cohort_blocker": false,
+      "problem": "Historical replay rows retain all run IDs, while eligibility rejects duplicate parent/state/degree rows without canonical cohort selection.",
+      "locations": [
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 91,
+          "end_line": 154
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 630,
+          "end_line": 815
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/cli.py",
+          "line": 74
+        }
+      ],
+      "parent_resolution": "First real replay is one complete 12-state cohort starting from empty replay.jsonl; duplicate HOLD is intentional. A future retry needs an explicit canonical cohort/attempt manifest; never silently delete failures.",
+      "legacy_actions_path_limit": "CLI prefers nonempty actions.jsonl over replay.jsonl; no legacy rows are allowed in the fresh first-cohort precondition."
+    },
+    {
+      "id": "R4",
+      "status": "NO_STATIC_DIMENSION_OR_CACHE_BLOCKER_IDENTIFIED",
+      "current_first_cohort_blocker": false,
+      "locations": [
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 630,
+          "end_line": 815
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 442,
+          "end_line": 554
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 420,
+          "end_line": 439
+        }
+      ],
+      "verification": "One x/state/full_Jacobian is frozen per replay state. Projection and all B/probe/audit calls use that same x; no trial/material refresh is called during model comparison. SeedBundle and Hierarchy interfaces agree, including the R right-Krylov family.",
+      "declared_dimensions": {
+        "n_current": [
+          5184
+        ],
+        "p_material": [
+          54,
+          3456
+        ],
+        "source_count": [
+          6
+        ],
+        "complex_channels_per_source": [
+          128
+        ]
+      },
+      "limit": "Static control-flow/shape review only; no six-object or large-voxel numerical acceptance claim."
+    },
+    {
+      "id": "R5",
+      "status": "COST_AND_REFERENCE_BOUNDARIES_STATICALLY_CONSISTENT",
+      "current_first_cohort_blocker": false,
+      "locations": [
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 50,
+          "end_line": 82
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 214,
+          "end_line": 229
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 288,
+          "end_line": 322
+        },
+        {
+          "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py",
+          "line": 442,
+          "end_line": 554
+        }
+      ],
+      "verification": "Full Gaussian J acquisition is separately paid once; full voxel J uses matrix-free actions. Saved steps require current chart/feasibility/KKT checks or a newly paid constrained QP. Failed model segments capture CostBook.delta without another budget check; global receipts retain setup/reference failure charges. Cumulative basis cost is explicitly not summed across degree rows.",
+      "pure_cost_record_check": true,
+      "limit": "If a shared setup/state/reference segment stops before row append, its detailed stage receipt remains in cost.jsonl and global book_receipt rather than a completed method row."
+    }
+  ],
+  "checks": {
+    "syntax_errors": [],
+    "modules_compiled_without_import": 10,
+    "record_provenance_fixed": true,
+    "record_cost_schema_ok": true,
+    "budget_partial_status_fixed": true,
+    "exception_partial_status_fixed": true,
+    "fallback_flag_alias_supported_by_CLI": true
+  },
+  "receipt": {
+    "status": "PASS",
+    "process_cpu_seconds": 0.05561,
+    "user_cpu_seconds": 0.045943,
+    "system_cpu_seconds": 0.009667,
+    "wall_seconds": 0.032327374909073114,
+    "CPU_limit_seconds": 20.0,
+    "CPU_measurement_scope": "whole checker process from startup, including source reads/AST compile/pure record/status checks; no a20 module execution",
+    "physical_actions": 0,
+    "SSH_calls": 0,
+    "hash_checks": 0,
+    "attempt": 1,
+    "all_checker_failures": []
+  },
+  "source_mtime_ns": {
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/__init__.py": 1791182807058787549,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py": 1791185941001543767,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/cli.py": 1791188547241065054,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/costs.py": 1791185080666083372,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/imaging.py": 1791185941002348061,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py": 1791185783149404878,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/opm.py": 1791186351711410576,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/real_g0.py": 1791187138721094678,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/replay.py": 1791188653401730536,
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/robustness.py": 1791186470910044972
+  },
+  "source_files_modified_by_reviewer": [],
+  "source_inspection_note": "One read-only shell inventory glob had no matches and was replaced by rg --files; no physical/SSH/hash operation occurred."
+}

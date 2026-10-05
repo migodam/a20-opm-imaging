@@ -51,5 +51,15 @@
     "process_cpu_seconds": 1.113618,
     "measurement": "measured plus explicitly recorded conservative charge",
     "receipt": "research/claim_audit/backend_map_update_receipt.json"
+  },
+  {
+    "scope": "static replay interface review",
+    "process_cpu_seconds": 0.05561,
+    "receipt": "results/tests/REPLAY_INTERFACE_REVIEW_RECEIPT.json"
+  },
+  {
+    "scope": "public input index and key-only schema audit",
+    "process_cpu_seconds": 0.148929,
+    "receipt": "research/claim_audit/package_index_receipt.json"
   }
 ]

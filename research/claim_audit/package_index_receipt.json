@@ -1,0 +1,32 @@
+{
+  "task": "public_package_static_index",
+  "status": "DOCUMENT_INDEX_AND_KEY_ONLY_CHECKS_PASS",
+  "output": "docs/PUBLIC_PACKAGE_INDEX.md",
+  "worker_actual_CPU_seconds": 0.148929,
+  "measurement": "sum of actual read/import/check process user+system CPU; no physics, child process compute or network; receipt final serialization excluded",
+  "CPU_budget_seconds": 10.0,
+  "CPU_budget_respected": true,
+  "archive_count": 24,
+  "runtime_problem_count": 6,
+  "runtime_state_count": 12,
+  "offline_labels_count": 6,
+  "archive_access": "np.load allow_pickle=False, .files only; no archive array indexed/decompressed",
+  "truth_numeric_values_read": false,
+  "offline_step_gradient_numeric_values_read": false,
+  "checks": [
+    "all internal links exist",
+    "runtime problem exact backend whitelist",
+    "state schema chi/ell/iteration/lambda_total",
+    "no truth/fullJ/fullH/oldsteps/gradient in runtime keys",
+    "historical Q/support and exposed feasibility limits explicit",
+    "held receiver missing geometry NOT_RUN",
+    "no third-party fulltext/PDF",
+    "no replay/G1/G2 completion claim"
+  ],
+  "source_results_config_test_modifications": false,
+  "network_calls": 0,
+  "physical_runs": 0,
+  "GPU_seconds": 0,
+  "hash_checks": 0,
+  "scientific_judgment": "PARENT_OWNED"
+}

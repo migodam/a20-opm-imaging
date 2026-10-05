@@ -65,36 +65,6 @@ def deploy():
         print(shell(f"& '{PYTHON}' -c \"import base64; exec(base64.b64decode('{encoded}'))\""))
 
 
-def start(stage,job,parents=None,iterations=None):
-    # Exact choices prevent PowerShell injection through job/stage arguments.
-    if any(not (c.isalnum() or c in '-_') for c in job):
-        raise ValueError('Unsafe job id')
-    options=['-m','a20.cli',stage,'--device','cuda','--job',job]
-    if parents:
-        options+=['--parents']+[str(int(x)) for x in parents]
-    if iterations:
-        options+=['--iterations']+[str(int(x)) for x in iterations]
-    args=','.join("'"+x+"'" for x in options)
-    script=f"""
-$ErrorActionPreference='Stop'
-$env:PYTHONPATH='{REMOTE}/src'
-$env:PYTHONDONTWRITEBYTECODE='1'
-$env:OPENBLAS_NUM_THREADS='1'
-$env:OMP_NUM_THREADS='1'
-$env:MKL_NUM_THREADS='1'
-$env:NUMEXPR_NUM_THREADS='1'
-$busy=@(& nvidia-smi --query-compute-apps=pid,process_name,used_gpu_memory --format=csv,noheader)
-if($LASTEXITCODE -ne 0) {{ throw 'GPU inventory failed' }}
-if($busy.Count -gt 0) {{ throw 'Existing GPU compute process; no concurrent physics launch' }}
-if(Test-Path '{REMOTE}/runs/gpu.lock') {{ throw 'Existing A20 physics lock; inspect current job' }}
-New-Item -ItemType Directory -Force '{REMOTE}/runs' | Out-Null
-$p=Start-Process -FilePath '{PYTHON}' -ArgumentList @({args}) -WorkingDirectory '{REMOTE}' -RedirectStandardOutput '{REMOTE}/runs/{job}.stdout' -RedirectStandardError '{REMOTE}/runs/{job}.stderr' -PassThru
-$p.Id | Set-Content '{REMOTE}/runs/{job}.pid'
-Write-Output ('STARTED '+$p.Id)
-"""
-    print(shell(script))
-
-
 def run(stage,job,parents=None,iterations=None):
     """Keep SSH attached to the physics process; Windows may kill detached children.
 
@@ -141,9 +111,10 @@ def status(job):
     if any(not (c.isalnum() or c in '-_') for c in job):
         raise ValueError('Unsafe job id')
     print(shell(f"""
-$p=[int](Get-Content '{REMOTE}/runs/{job}.pid')
-$live=Get-Process -Id $p -ErrorAction SilentlyContinue
-if($live) {{ Write-Output ('RUNNING CPU='+$live.CPU+' RSS='+$live.WorkingSet64) }} else {{ Write-Output 'ENDED' }}
+$candidate=Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object {{$_.CommandLine -match 'a20[.]cli' -and $_.CommandLine -match '--job +{job}( |$)'}}
+$live=$null
+if($candidate) {{$live=Get-Process -Id $candidate.ProcessId -ErrorAction SilentlyContinue}}
+if($live) {{ Write-Output ('RUNNING PID='+$live.Id+' CPU='+$live.CPU+' RSS='+$live.WorkingSet64) }} else {{ Write-Output 'ENDED_OR_NOT_STARTED' }}
 if(Test-Path '{REMOTE}/results/jobs/{job}/job_receipt.json') {{ Get-Content '{REMOTE}/results/jobs/{job}/job_receipt.json' -Raw }}
 Get-Content '{REMOTE}/runs/{job}.stdout' -Tail 6 -ErrorAction SilentlyContinue
 Get-Content '{REMOTE}/runs/{job}.stderr' -Tail 12 -ErrorAction SilentlyContinue
@@ -183,14 +154,13 @@ def pull():
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()
-    p.add_argument('operation',choices=['deploy','start','run','status','pull'])
+    p.add_argument('operation',choices=['deploy','run','status','pull'])
     p.add_argument('--stage',choices=['algebra','g0-real','replay','a1','a2','noise','timing','evaluate'])
     p.add_argument('--job')
     p.add_argument('--parents',type=int,nargs='*')
     p.add_argument('--iterations',type=int,nargs='*')
     a=p.parse_args()
     if a.operation=='deploy': deploy()
-    elif a.operation=='start': start(a.stage,a.job,a.parents,a.iterations)
     elif a.operation=='run': run(a.stage,a.job,a.parents,a.iterations)
     elif a.operation=='status': status(a.job)
     else: pull()

@@ -182,8 +182,10 @@ def run_images(root, config, book, args):
     dest=root/f'results/{mode}'
     dest.mkdir(parents=True,exist_ok=True)
     done = {(r['parent_object_id'],r['method']) for r in read_rows(dest/'runs.jsonl')}
-    for parent in config['parents']:
-        for method,degree in jobs:
+    # Complete six-parent pairs before advancing to another registered method.
+    # This fixed order is declared before A1; exhausted budgets retain partials.
+    for method,degree in jobs:
+        for parent in config['parents']:
             if (parent,method) in done:
                 continue
             problem=load_problem(root/f'data/runtime/{parent}/problem.npz')

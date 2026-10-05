@@ -8,3 +8,6 @@
 6. **并行分工授权有更新。** 最初任务要求独自执行；用户随后明确允许必要的 multiagent workflow。Codex 子代理仅分担测试、已知协议 replay 实现和证据整理；主线程负责数学、真实物理调度、预算及科学裁决。不使用 DeepSeek，不创建或联系其他用户聊天。
 
 实际发现的数值/运行冲突和修复随失败日志、软件 commit、G0 与各 job receipt 留存。缺失条件不会被默认当成通过。
+
+7. **预算与执行顺序。** 在启动任何 A1 之前，执行顺序固定为 method-major：先完成六对象 full GN，再依预先规定 degree 顺序完成六对象配对，最后普通 ROM 对照。最多42个主矩阵重建及所有 gates 不变。预算停止保留部分矩阵；初始 cold 顺序不替代规定的五次轮换 cold/warm finalist 计时。见 results/STAGE_ORDER_DECLARATION.json。
+8. **重试 cohort 不能自动混合。** 单个完整 replay cohort 从空结果开始；不同run产生重复(parent,state,method,degree)时，gate保持HOLD，直到显式声明合规cohort。不能删除失败来制造通过。首次replay没有重试选择。
