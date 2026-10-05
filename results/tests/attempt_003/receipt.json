@@ -1,0 +1,30 @@
+{
+  "attempt": "attempt_003",
+  "command": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+    "--worker",
+    "--cpu-cap",
+    "30.0",
+    "--pattern",
+    "test_*.py"
+  ],
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONPATH": "src"
+  },
+  "returncode": 1,
+  "timeout": false,
+  "wall_seconds": 0.3973521669395268,
+  "child_cpu_seconds": 0.352511,
+  "runner_cpu_seconds": 0.039517,
+  "inclusive_process_cpu_seconds": 0.39201400000000003,
+  "previous_cpu_seconds": 0.865583,
+  "cumulative_cpu_seconds": 1.257597,
+  "cpu_limit_seconds": 120.0,
+  "worker_hard_cpu_cap_seconds": 30,
+  "peak_child_rss": 78544896,
+  "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "scope": "runtime export/numerical chart checks",
+    "process_cpu_seconds": 0.361586
+  },
+  {
+    "scope": "seven tiny real-backend tests, including failures",
+    "process_cpu_seconds": 2.869308
+  },
+  {
+    "scope": "bounded literature evidence audit",
+    "process_cpu_seconds": 1.4006869999999998
+  },
+  {
+    "scope": "summary module validation",
+    "process_cpu_seconds": 0.12739599999999998
+  },
+  {
+    "scope": "syntax check",
+    "process_cpu_seconds": 0.009304000000000003
+  },
+  {
+    "scope": "conservative charged allowance for uninstrumented setup/read/transport/archive/publication overhead",
+    "process_cpu_seconds": 120.0,
+    "measurement": "allowance, not falsely claimed exact measured CPU"
+  },
+  {
+    "scope": "external ledger assembly",
+    "process_cpu_seconds": 0.0012560000000000002
+  }
+]

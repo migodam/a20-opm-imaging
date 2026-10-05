@@ -1,0 +1,585 @@
+{
+  "schema": "a20.tests.G0_LOCAL.v1",
+  "status": "PASS",
+  "scope": "Local interface and numerical integrity: real vector-Maxwell DenseDDA, 2^3 cells; separate supplied finite-dimensional algebra.",
+  "scientific_scope": "Does not close G1 representation or G2 total deployment cost; no six-object reconstruction performed by test worker.",
+  "fixture": {
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "n_current": 24,
+    "p_material_chart": 6,
+    "p_material_voxel": 16,
+    "source_count": 3,
+    "receiver_count": 4,
+    "complex_channels_per_source": 8,
+    "real_data_dimension_per_frequency": 48,
+    "frequencies": [
+      0.9,
+      1.25
+    ],
+    "precision": "complex128/float64",
+    "device": "cpu",
+    "seed": 2026100501,
+    "synthetic_parent_id": 9020,
+    "whitening_scope": "scalar normalization and non-diagonal real map; no calibrated covariance claim"
+  },
+  "tests": 26,
+  "passed": 26,
+  "latest_attempt": "attempt_007",
+  "coverage": {
+    "complex_L_F_S_current_adjoints": {
+      "status": "PASS",
+      "tests": [
+        "test_complex_current_adjoints_and_metric"
+      ]
+    },
+    "real_B_pullback_and_compressed_injection": {
+      "status": "PASS",
+      "tests": [
+        "test_real_material_B_adjoint_batched_and_compressed"
+      ]
+    },
+    "original_jvp_vjp_adapter_equivalence": {
+      "status": "PASS",
+      "tests": [
+        "test_original_jvp_vjp_equal_adapter_and_factored_actions"
+      ]
+    },
+    "source_frequency_real_packing_and_whitening": {
+      "status": "PASS",
+      "tests": [
+        "test_packing_whitening_multiple_sources_and_probe_columns",
+        "test_multi_frequency_stack_uses_distinct_physics_shared_material"
+      ]
+    },
+    "material_metric_and_gauge": {
+      "status": "PASS",
+      "tests": [
+        "test_material_metric_and_real_gauge_covariance",
+        "test_projection_complex_adjoint_and_current_unitary_gauge"
+      ]
+    },
+    "full_objective_and_full_tangent_FD": {
+      "status": "PASS",
+      "tests": [
+        "test_full_tangent_and_full_objective_finite_difference"
+      ]
+    },
+    "frozen_Galerkin_and_Petrov_consistent_derivatives": {
+      "status": "PASS",
+      "tests": [
+        "test_fixed_galerkin_reduced_state_derivative_and_native_equivalence",
+        "test_frozen_petrov_derivative_and_moving_least_squares_term"
+      ]
+    },
+    "moving_Galerkin_and_LS_explicit_derivative_terms": {
+      "status": "PASS",
+      "tests": [
+        "test_moving_galerkin_basis_requires_explicit_basis_derivative",
+        "test_frozen_petrov_derivative_and_moving_least_squares_term"
+      ]
+    },
+    "A1_A2_tangent_contract_distinction": {
+      "status": "PASS",
+      "tests": [
+        "test_A1_full_state_tangent_distinguished_from_A2_derivative"
+      ]
+    },
+    "exact_Schur_adjoint_resolvent_Galerkin_and_empty_U": {
+      "status": "PASS",
+      "tests": [
+        "test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence"
+      ]
+    },
+    "zero_seed_budgets_empty_projection_zero_J_deflation_and_nested_streams": {
+      "status": "PASS",
+      "tests": [
+        "test_seed_zero_budgets_and_zero_deflated_blocks",
+        "test_real_physical_hierarchy_nested_streams_and_breakdown"
+      ]
+    },
+    "singular_absolute_small_core_rejection_and_named_Petrov_fallback": {
+      "status": "PASS",
+      "tests": [
+        "test_singular_and_absolute_small_cores_rejected_and_fallback_named"
+      ]
+    },
+    "constrained_KKT_Gaussian_voxel_and_full_gap_bounds": {
+      "status": "PASS",
+      "tests": [
+        "test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+        "test_tiny_voxel_quadratic_KKT_and_constraints"
+      ]
+    },
+    "offline_teacher_payload_and_capability_rejection": {
+      "status": "PASS",
+      "tests": [
+        "test_online_payload_and_basis_capability_reject_offline_fields"
+      ]
+    },
+    "material_refresh_cache_invalidation": {
+      "status": "PASS",
+      "tests": [
+        "test_material_refresh_invalidates_projection_and_cached_reduced_matrix"
+      ]
+    },
+    "full_physics_state_material_owner_and_reduced_state_guards": {
+      "status": "PASS",
+      "tests": [
+        "test_full_tangent_and_adjoint_refuse_wrong_material_state",
+        "test_full_physics_contract_refuses_native_and_adapter_reduced_states",
+        "test_full_physics_rejects_foreign_frequency_and_geometry_models"
+      ]
+    },
+    "budget_refusal_and_failed_action_costs": {
+      "status": "PASS",
+      "tests": [
+        "test_budget_rejection_and_failed_action_accounting"
+      ]
+    },
+    "two_update_FULL_GN_A1_A2_smoke": {
+      "status": "PASS",
+      "tests": [
+        "test_tiny_two_update_nonlinear_full_A1_A2_smoke"
+      ]
+    },
+    "supplied_algebra_delayed_path_and_fake_weak_regressions": {
+      "status": "PASS",
+      "tests": [
+        "test_frozen_protocol_algebra_and_counterexample_regressions"
+      ]
+    }
+  },
+  "numerical": {
+    "maximum_paired_adjoint_relative_error": 1.4445379933460153e-14,
+    "maximum_FD_relative_error": 8.350215490309828e-11,
+    "all_FD_errors": {
+      "frozen_Galerkin_fd": 3.0426238586408956e-11,
+      "frozen_Petrov_fd": 4.83621001377752e-11,
+      "moving_LS_correct_fd": 8.350215490309828e-11,
+      "full_tangent_fd": 2.7196014570807446e-11,
+      "full_objective_fd": 8.44542364086848e-12,
+      "full_objective_nonzero_prior_fd": 1.915174887460151e-11,
+      "moving_Galerkin_correct_fd": 3.7265658640731264e-11
+    },
+    "moving_Galerkin_missing_term_relative_error": 0.021034365512581137,
+    "moving_LS_missing_term_relative_error": 0.058037922912576666,
+    "Schur_Galerkin_equivalence_relative_error": 5.986093449085816e-16,
+    "constrained_chart_KKT_relative": 7.260671250204045e-17,
+    "voxel_KKT_relative": 2.5649983693797325e-09
+  },
+  "budgets": {
+    "test_attempt_count": 7,
+    "cumulative_process_cpu_seconds": 2.869308,
+    "cumulative_attempt_wall_seconds": 3.5780687918886542,
+    "hard_cpu_limit_seconds": 120.0,
+    "all_attempt_receipts": [
+      {
+        "attempt": "attempt_001",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 1,
+        "timeout": false,
+        "wall_seconds": 0.882527207955718,
+        "child_cpu_seconds": 0.395686,
+        "runner_cpu_seconds": 0.043123,
+        "inclusive_process_cpu_seconds": 0.438793,
+        "previous_cpu_seconds": 0,
+        "cumulative_cpu_seconds": 0.438793,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78020608,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      },
+      {
+        "attempt": "attempt_002",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 1,
+        "timeout": false,
+        "wall_seconds": 0.6570691670058295,
+        "child_cpu_seconds": 0.390722,
+        "runner_cpu_seconds": 0.036087,
+        "inclusive_process_cpu_seconds": 0.42679,
+        "previous_cpu_seconds": 0.438793,
+        "cumulative_cpu_seconds": 0.865583,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78282752,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      },
+      {
+        "attempt": "attempt_003",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 1,
+        "timeout": false,
+        "wall_seconds": 0.3973521669395268,
+        "child_cpu_seconds": 0.352511,
+        "runner_cpu_seconds": 0.039517,
+        "inclusive_process_cpu_seconds": 0.39201400000000003,
+        "previous_cpu_seconds": 0.865583,
+        "cumulative_cpu_seconds": 1.257597,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78544896,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      },
+      {
+        "attempt": "attempt_004",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 0,
+        "timeout": false,
+        "wall_seconds": 0.40371654101181775,
+        "child_cpu_seconds": 0.359774,
+        "runner_cpu_seconds": 0.03899,
+        "inclusive_process_cpu_seconds": 0.39875099999999997,
+        "previous_cpu_seconds": 1.257597,
+        "cumulative_cpu_seconds": 1.656348,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78446592,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      },
+      {
+        "attempt": "attempt_005",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 0,
+        "timeout": false,
+        "wall_seconds": 0.40477504197042435,
+        "child_cpu_seconds": 0.35833,
+        "runner_cpu_seconds": 0.040956,
+        "inclusive_process_cpu_seconds": 0.39927399999999996,
+        "previous_cpu_seconds": 1.656348,
+        "cumulative_cpu_seconds": 2.055622,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78102528,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      },
+      {
+        "attempt": "attempt_006",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 1,
+        "timeout": false,
+        "wall_seconds": 0.3957761669298634,
+        "child_cpu_seconds": 0.36945,
+        "runner_cpu_seconds": 0.040926,
+        "inclusive_process_cpu_seconds": 0.410364,
+        "previous_cpu_seconds": 2.055622,
+        "cumulative_cpu_seconds": 2.465986,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78512128,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      },
+      {
+        "attempt": "attempt_007",
+        "command": [
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+          "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/run_integrity.py",
+          "--worker",
+          "--cpu-cap",
+          "30.0",
+          "--pattern",
+          "test_*.py"
+        ],
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "PYTHONPATH": "src"
+        },
+        "returncode": 0,
+        "timeout": false,
+        "wall_seconds": 0.4368525000754744,
+        "child_cpu_seconds": 0.360854,
+        "runner_cpu_seconds": 0.042493,
+        "inclusive_process_cpu_seconds": 0.403322,
+        "previous_cpu_seconds": 2.465986,
+        "cumulative_cpu_seconds": 2.869308,
+        "cpu_limit_seconds": 120.0,
+        "worker_hard_cpu_cap_seconds": 30,
+        "peak_child_rss": 78594048,
+        "scope": "tiny 2^3 3-D DenseDDA G0 only; no six-object experiment, no hash"
+      }
+    ]
+  },
+  "historical_failed_test_occurrences": [
+    {
+      "attempt": "attempt_001",
+      "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+      "status": "ERROR",
+      "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 651, in run\n    self._callTestMethod(testMethod)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 606, in _callTestMethod\n    if method() is not None:\n       ~~~~~~^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 474, in test_constrained_chart_quadratic_KKT_and_full_gap_bound\n    s, result, normal = solve_quadratic(self.a.chart, self.x, residual, full, lam, ell, self.config, self.book)\n                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 45, in solve_quadratic\n    return _solve_quadratic(chart, chi, residual, jacobian, lam, ell, config, book, initial=initial)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 106, in _solve_quadratic\n    raise error\na20.material.QPFailure: Constrained QP did not meet registered KKT/feasibility tolerance\n",
+      "subtest_failures": [],
+      "failure_metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501
+      },
+      "final_same_test_status": "PASS"
+    },
+    {
+      "attempt": "attempt_001",
+      "test": "test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state",
+      "status": "FAIL",
+      "traceback": null,
+      "subtest_failures": [
+        {
+          "subtest": "test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_tangent_action')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state\n    with self.assertRaisesRegex(ValueError, 'mismatch'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+        },
+        {
+          "subtest": "test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_adjoint_action')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state\n    with self.assertRaisesRegex(ValueError, 'mismatch'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+        }
+      ],
+      "failure_metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501
+      },
+      "final_same_test_status": "PASS"
+    },
+    {
+      "attempt": "attempt_002",
+      "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+      "status": "ERROR",
+      "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 651, in run\n    self._callTestMethod(testMethod)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 606, in _callTestMethod\n    if method() is not None:\n       ~~~~~~^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 475, in test_constrained_chart_quadratic_KKT_and_full_gap_bound\n    s, result, normal = solve_quadratic(self.a.chart, self.x, residual, full, lam, ell, self.config, self.book)\n                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 45, in solve_quadratic\n    return _solve_quadratic(chart, chi, residual, jacobian, lam, ell, config, book, initial=initial)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 106, in _solve_quadratic\n    raise error\na20.material.QPFailure: Constrained QP did not meet registered KKT/feasibility tolerance\n",
+      "subtest_failures": [],
+      "failure_metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "QP_failure_result": {
+          "success": true,
+          "iterations": 4,
+          "message": "Optimization terminated successfully",
+          "solver": "SLSQP-common-quadratic",
+          "kkt_relative": 4.11880052231142e-08,
+          "feasibility_violation": 0.0,
+          "complementarity": 5.551115123971483e-20,
+          "active_constraints": 8,
+          "multiplier_source": "nonnegative active constraint least-squares; validated residual",
+          "no_post_clipping": true,
+          "objective_scale": 0.5,
+          "quadratic_value": -0.00041124791122026624,
+          "gradient_norm": 0.027028985938573193
+        },
+        "QP_failure_step_error": 2.1085011699100875e-09
+      },
+      "final_same_test_status": "PASS"
+    },
+    {
+      "attempt": "attempt_003",
+      "test": "test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states",
+      "status": "FAIL",
+      "traceback": null,
+      "subtest_failures": [
+        {
+          "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_tangent_action')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 587, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    getattr(self.a, name)(self.x, state, argument)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py\", line 276, in full_tangent_action\n    out = state.jvp(self.chart.expand(d))\n          ^^^^^^^^^\nAttributeError: 'ReducedState' object has no attribute 'jvp'\n"
+        },
+        {
+          "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_adjoint_action')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 587, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    getattr(self.a, name)(self.x, state, argument)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py\", line 289, in full_adjoint_action\n    return self.chart.adjoint(state.vjp(z))\n                              ^^^^^^^^^\nAttributeError: 'ReducedState' object has no attribute 'vjp'\n"
+        },
+        {
+          "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_objective')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 589, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    with self.assertRaisesRegex(ValueError, 'full state'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+        },
+        {
+          "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='native', action='full_objective')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 589, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    with self.assertRaisesRegex(ValueError, 'full state'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+        }
+      ],
+      "failure_metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501
+      },
+      "final_same_test_status": "PASS"
+    },
+    {
+      "attempt": "attempt_006",
+      "test": "test_backend_integrity.IntegrityTests.test_seed_zero_budgets_and_zero_deflated_blocks",
+      "status": "ERROR",
+      "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 651, in run\n    self._callTestMethod(testMethod)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 606, in _callTestMethod\n    if method() is not None:\n       ~~~~~~^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 416, in test_seed_zero_budgets_and_zero_deflated_blocks\n    self.close('empty_projection_J_matrix', empty_J.matrix(), np.zeros((dim, self.a.p)))\n                                            ~~~~~~~~~~~~~~^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/opm.py\", line 327, in matrix\n    coeff = self.projection.solve(b.transpose(1, 0, 2).reshape(self.projection.Z.shape[1], -1))\n                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: cannot reshape array of size 0 into shape (0,newaxis)\n",
+      "subtest_failures": [],
+      "failure_metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "zero_seed_diagnostics": {
+          "O": {
+            "input_columns": 3,
+            "rank": 0,
+            "deflated": 3,
+            "scale": 0.0,
+            "threshold": 0.0,
+            "singular_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "source_count": 3,
+            "requested_rank": 1,
+            "provenance": "measured residual plus independent whitened data probes, C*",
+            "original_column_norms": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "no_truth_or_reference_step": true
+          },
+          "P": {
+            "input_columns": 3,
+            "rank": 0,
+            "deflated": 3,
+            "scale": 0.0,
+            "threshold": 0.0,
+            "singular_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "source_count": 3,
+            "requested_rank": 1,
+            "provenance": "all known illumination forcing, Kb",
+            "original_column_norms": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "no_truth_or_reference_step": true
+          },
+          "M": {
+            "input_columns": 3,
+            "rank": 0,
+            "deflated": 3,
+            "scale": 0.0,
+            "threshold": 0.0,
+            "singular_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "source_count": 3,
+            "requested_rank": 1,
+            "provenance": "real physical-L2 material probes and prior accepted step, KB",
+            "original_column_norms": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "no_truth_or_reference_step": true
+          }
+        },
+        "empty_projection_apply": 0.0,
+        "empty_projection_adjoint": 0.0,
+        "empty_projection_state": 0.0
+      },
+      "final_same_test_status": "PASS"
+    }
+  ],
+  "pre_execution_review_findings_fixed_by_parent": [
+    "small voxel chart.Q=None solver branching",
+    "same-material cached full_state source selection",
+    "ReducedJacobian.matrix cache checks Projection material version"
+  ],
+  "tests_changed_paths": [
+    "tests/test_backend_integrity.py",
+    "tests/run_integrity.py",
+    "tests/summarize_integrity.py"
+  ],
+  "source_modifications_by_test_worker": [],
+  "hash_checks": "NOT_RUN",
+  "original_parent_physics": "NOT_RUN",
+  "six_parent_physics": "NOT_RUN",
+  "source_fix_ownership": "Parent Codex; this worker only edited tests and wrote results/tests receipts.",
+  "run_command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=src \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python\" tests/run_integrity.py"
+}

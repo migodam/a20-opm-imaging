@@ -1,0 +1,10 @@
+{
+  "status": "COPIED_AND_NUMERICALLY_VALIDATED",
+  "wall_seconds": 0.7801496250322089,
+  "cpu_seconds": 0.361586,
+  "sources_unchanged": true,
+  "sha256_checks": 0,
+  "objects": 6,
+  "states": 12,
+  "physics_actions": 0
+}

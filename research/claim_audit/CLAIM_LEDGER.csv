@@ -1,0 +1,12 @@
+id,claim,paper_id,stable_id,source_url,locator,evidence_tier,relationship,study_context,confidence,uncertainty
+C04_1,前向与参数 Jacobian 可由传递函数及其参数导数表示,f04f1cf95e410294db88d6c0211e03eb353a260c,arXiv:1311.0922,https://arxiv.org/html/1311.0922,"§3.1, Eq. (9)–(10)",A,supports,DOT-PaLS；频域输入输出；TREGS,high,不同 B 的语义必须重新映射
+C04_2,满足左右 solved-span 包含及可逆条件时，插值点处前向和导数匹配,f04f1cf95e410294db88d6c0211e03eb353a260c,arXiv:1311.0922,https://arxiv.org/html/1311.0922,"§3.3, Theorem 1, Eq. (14)",A,supports,固定 V/W；参数与频率插值点,high,没有全参数域或全局真值恢复保证
+C04_3,全局基来自参数采样的前向/伴随求解，并按 SVD 容差压缩,f04f1cf95e410294db88d6c0211e03eb353a260c,arXiv:1311.0922,https://arxiv.org/html/1311.0922,"§3.3.1, Eq. (15); §3.5",A,supports,前期参数迭代构基；线上小系统,high,截断小非零奇异值后只近似插值；构基不免费
+C04_4,四个二维 DOT 合成重建示例含基复用与大系统求解计数,f04f1cf95e410294db88d6c0211e03eb353a260c,arXiv:1311.0922,https://arxiv.org/html/1311.0922,§2.1; §4; §3.5,A,contextualizes,两组各两幅图；相同网格及布置组内复用,high,不是三维矢量 Maxwell 实验；未独立重跑
+C04_5,该版本实现 full-matrix interpolation，tangential 方案在未来工作中,f04f1cf95e410294db88d6c0211e03eb353a260c,arXiv:1311.0922,https://arxiv.org/html/1311.0922,"§5 Conclusions and Future Work, final paragraph",A,qualifies,2013 arXiv v1,high,未核对期刊正文是否改写此处
+C05_1,随机源组合估计模型误差并触发拒绝/扩基,956255b98e3715a3ec136d8bf151d006ce1e48d3,arXiv:2003.10938,https://arxiv.org/pdf/2003.10938,"§3, Algorithm 3.1; Eq. before Algorithm 3.1",A,supports,每样本每频率一条大系统 RHS；GN/TREGS,high,一次随机样本不等于确定性全 Jacobian 证书
+C05_2,条件模型讨论要求有限改进恢复一阶精度与充分小信赖域条件,956255b98e3715a3ec136d8bf151d006ce1e48d3,arXiv:2003.10938,https://arxiv.org/pdf/2003.10938,"§2.3, PDF 打印页7",A,qualifies,条件模型理论背景；当前 ROM 未必精确,high,条件必须另行满足
+C05_3,将放松一阶条件扩展至概率设置仍被列为后续工作,956255b98e3715a3ec136d8bf151d006ce1e48d3,arXiv:2003.10938,https://arxiv.org/pdf/2003.10938,"§4.1, PDF 打印页9",A,qualifies,随机误差估计；全文当前版本,high,不能说文中已完成该随机算法全部收敛证明
+C05_4,评价二维和三维 DOT；主要成本量是达 1.1 噪声残差的大系统求解数,956255b98e3715a3ec136d8bf151d006ce1e48d3,arXiv:2003.10938,https://arxiv.org/pdf/2003.10938,"§6, PDF 打印页13; §6.1–6.2",A,contextualizes,full、固定 1/3-point、更新模型比较,high,未独立重跑；没有 A20 全部署墙钟或 Maxwell 成绩
+C05_5,概率检测的样本数与稳健性/成本存在权衡,956255b98e3715a3ec136d8bf151d006ce1e48d3,arXiv:2003.10938,https://arxiv.org/pdf/2003.10938,"§5, PDF 打印页11–13",A,qualifies,误差低估检测；概率与样本数条件,high,未重新证明概率公式；未视觉核对公式图表
+C06_1,时域数据驱动两侧矩匹配与 2ν 个不同插值点匹配有原始先例,24b60af16853e4d0ce0b8c1977a1b4b406413a6e,arXiv:2212.08589,https://arxiv.org/abs/2212.08589,arXiv abstract,B,contextualizes,线性系统；时域样本；渐近估计；benchmark,medium,本次只核对摘要；不能替代 A20 有限幂命题的证明

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "scholarqa-evidence-bundle",
+  "created_at": "2026-10-05T06:59:07+00:00",
+  "question": "Bounded A20 claim audit of arXiv:1311.0922 and arXiv:2003.10938 only: inverse transfer/Jacobian reduction and adaptive model accuracy",
+  "search_queries": [
+    "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+    "Robust Parameter Inversion Using Adaptive Reduced Order Models"
+  ],
+  "filters": {},
+  "query_runs": [
+    {
+      "query": "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+      "snippet_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      },
+      "paper_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      }
+    },
+    {
+      "query": "Robust Parameter Inversion Using Adaptive Reduced Order Models",
+      "snippet_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      },
+      "paper_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      }
+    }
+  ],
+  "candidate_paper_ids": [],
+  "operation_errors": [
+    {
+      "query": "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+      "operation": "search_semantic_scholar_snippets",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    {
+      "query": "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+      "operation": "search_semantic_scholar_papers",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    {
+      "query": "Robust Parameter Inversion Using Adaptive Reduced Order Models",
+      "operation": "search_semantic_scholar_snippets",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    {
+      "query": "Robust Parameter Inversion Using Adaptive Reduced Order Models",
+      "operation": "search_semantic_scholar_papers",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    }
+  ],
+  "evidence_policy": {
+    "snippet_search": "Candidate passage evidence; inspect its source before assigning full-text Tier A or abstract Tier B.",
+    "paper_search": "An abstract may support Tier B; metadata alone is Tier C and does not establish a finding.",
+    "final_citations": "Select papers by relevance and evidence, then run scholarqa-cli verify before citation."
+  }
+}

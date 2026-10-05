@@ -1,0 +1,17 @@
+.....................E....
+======================================================================
+ERROR: test_seed_zero_budgets_and_zero_deflated_blocks (test_backend_integrity.IntegrityTests.test_seed_zero_budgets_and_zero_deflated_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 416, in test_seed_zero_budgets_and_zero_deflated_blocks
+    self.close('empty_projection_J_matrix', empty_J.matrix(), np.zeros((dim, self.a.p)))
+                                            ~~~~~~~~~~~~~~^^
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/opm.py", line 327, in matrix
+    coeff = self.projection.solve(b.transpose(1, 0, 2).reshape(self.projection.Z.shape[1], -1))
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 0 into shape (0,newaxis)
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.140s
+
+FAILED (errors=1)

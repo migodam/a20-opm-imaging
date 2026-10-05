@@ -86,7 +86,13 @@ class CostBook:
             m = psutil.Process().memory_info()
             self.peak_cpu_rss = max(self.peak_cpu_rss, int(getattr(m, 'peak_wset', m.rss)), m.rss)
         except ImportError:
-            pass
+            try:
+                import resource
+                import sys
+                raw = int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+                self.peak_cpu_rss = max(self.peak_cpu_rss, raw if sys.platform=='darwin' else raw*1024)
+            except ImportError:
+                pass
         if self.device == 'cuda':
             import torch
             allocated = torch.cuda.max_memory_allocated()
@@ -154,6 +160,7 @@ class CostBook:
                 'gpu_occupation_seconds': time.perf_counter()-self.started_wall if self.device=='cuda' else 0.,
                 'counts': dict(self.counts), 'exclusive_walls': dict(self.walls),
                 'events': self.events, 'peak_cpu_rss_bytes': self.peak_cpu_rss,
+                'CPU_memory_measurement_available': self.peak_cpu_rss>0,
                 'peak_gpu_allocated_bytes': self.peak_gpu_allocated,
                 'peak_gpu_reserved_bytes': self.peak_gpu_reserved,
                 'device': self.device, 'CPU_in_GPU_job_included': True,

@@ -93,6 +93,41 @@ def _solve_quadratic(chart, chi, residual, jacobian, lam, ell, config, book, *, 
     gradient = hv(seed)+g
     audit = kkt(chart, chi, seed, gradient, tolerance=config.get('feasibility_tolerance', 1e-8))
     relative = audit['stationarity_norm']/max(float(la.norm(g)), 1e-12)
+    # SLSQP's objective termination is not the registered KKT termination.
+    # For the SAME small SPD quadratic, solve the linearly independent active
+    # equalities exactly and accept only a feasible, KKT-validated candidate.
+    # Redundant constraint equations are rank-revealed, never regularized.
+    if A is not None and chart.d<=128 and relative>config.get('qp_kkt_rtol', 1e-8):
+        polish = {'initial_KKT_relative': relative, 'accepted': False}
+        with book.span('Gaussian_KKT_polish', constrained_KKT_polishes=1):
+            active = np.flatnonzero(A@seed-lower<=config.get('feasibility_tolerance', 1e-8))
+            if len(active):
+                _, rr, piv = la.qr(A[active].T, mode='economic', pivoting=True)
+                diag = abs(np.diag(rr))
+                rank = int(np.count_nonzero(diag>1e-12*max(1.,float(la.norm(A[active])))))
+                indices = active[piv[:rank]]
+                E = A[indices]
+                system = np.block([[H, -E.T], [-E, np.zeros((rank,rank))]])
+                rhs = np.concatenate((-g, -lower[indices]))
+                candidate = la.solve(system,rhs,assume_a='sym')[:chart.d]
+                polish.update(active_equations=len(active), independent_equations=rank,
+                              no_ridge_or_pseudoinverse=True)
+            else:
+                candidate = unconstrained
+                polish.update(active_equations=0, independent_equations=0)
+            candidate_gradient = hv(candidate)+g
+            candidate_audit = kkt(chart,chi,candidate,candidate_gradient,
+                                   tolerance=config.get('feasibility_tolerance',1e-8))
+            candidate_relative = candidate_audit['stationarity_norm']/max(float(la.norm(g)),1e-12)
+            value = lambda z: float(.5*z@hv(z)+g@z)
+            objective_roundoff = 100*np.finfo(float).eps*max(1.,abs(value(seed)))
+            if (candidate_audit['violation']<=config.get('feasibility_tolerance',1e-8)
+                and candidate_relative<relative and value(candidate)<=value(seed)+objective_roundoff):
+                seed,gradient,audit,relative=candidate,candidate_gradient,candidate_audit,candidate_relative
+                polish['accepted']=True
+            polish['candidate_KKT_relative']=candidate_relative
+        result['KKT_polish']=polish
+        result['solver'] += '+validated-active-equations'
     result.update(kkt_relative=relative, feasibility_violation=audit['violation'],
                   complementarity=audit['complementarity'], active_constraints=audit['active_constraints'],
                   multiplier_source='nonnegative active constraint least-squares; validated residual',

@@ -1,0 +1,36 @@
+...E...FF...............
+======================================================================
+ERROR: test_constrained_chart_quadratic_KKT_and_full_gap_bound (test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 474, in test_constrained_chart_quadratic_KKT_and_full_gap_bound
+    s, result, normal = solve_quadratic(self.a.chart, self.x, residual, full, lam, ell, self.config, self.book)
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py", line 45, in solve_quadratic
+    return _solve_quadratic(chart, chi, residual, jacobian, lam, ell, config, book, initial=initial)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py", line 106, in _solve_quadratic
+    raise error
+a20.material.QPFailure: Constrained QP did not meet registered KKT/feasibility tolerance
+
+======================================================================
+FAIL: test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_tangent_action')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state
+    with self.assertRaisesRegex(ValueError, 'mismatch'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_adjoint_action')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state
+    with self.assertRaisesRegex(ValueError, 'mismatch'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.128s
+
+FAILED (failures=2, errors=1)

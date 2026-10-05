@@ -1,0 +1,84 @@
+{
+  "measurement": "resource.getrusage SELF+CHILDREN for substantive subprocess stages; early timed reads/help use /usr/bin/time -p (0.01 s resolution)",
+  "operations": [
+    {
+      "name": "bootstrap_timed_read_and_cli_help",
+      "user_seconds": 0.53,
+      "system_seconds": 0.09,
+      "cpu_seconds": 0.62
+    },
+    {
+      "name": "scholarqa_collect",
+      "argv": [
+        "/Users/migodam/.local/bin/scholarqa-cli",
+        "collect",
+        "Bounded A20 claim audit of arXiv:1311.0922 and arXiv:2003.10938 only: inverse transfer/Jacobian reduction and adaptive model accuracy",
+        "--query",
+        "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+        "--query",
+        "Robust Parameter Inversion Using Adaptive Reduced Order Models",
+        "--paper-limit",
+        "2",
+        "--snippet-limit",
+        "3"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 36.00896612496581,
+      "user_seconds": 0.28598199999999996,
+      "system_seconds": 0.042129,
+      "cpu_seconds": 0.32811099999999993
+    },
+    {
+      "name": "scholarqa_verify_exact_ids",
+      "argv": [
+        "/Users/migodam/.local/bin/scholarqa-cli",
+        "verify",
+        "ARXIV:1311.0922",
+        "ARXIV:2003.10938",
+        "ARXIV:2212.08589",
+        "--field",
+        "paperId",
+        "--field",
+        "title",
+        "--field",
+        "authors",
+        "--field",
+        "year",
+        "--field",
+        "externalIds",
+        "--field",
+        "url",
+        "--field",
+        "abstract"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.999996583093889,
+      "user_seconds": 0.273746,
+      "system_seconds": 0.034012,
+      "cpu_seconds": 0.307758
+    },
+    {
+      "name": "timed_static_source_reads",
+      "user_seconds": 0.05,
+      "system_seconds": 0.01,
+      "cpu_seconds": 0.06,
+      "measurement": "Sum of /usr/bin/time -p: backend/opm/vendor reads; 0.01 s precision"
+    },
+    {
+      "name": "write_audit_artifacts",
+      "user_seconds": 0.029945999999999997,
+      "system_seconds": 0.015902,
+      "cpu_seconds": 0.045848,
+      "wall_seconds": 0.007649124949239194,
+      "measurement": "absolute process SELF+CHILDREN usage including startup; snapshot before final receipt write"
+    },
+    {
+      "name": "final_theory_read_and_artifact_verification",
+      "user_seconds": 0.024111,
+      "system_seconds": 0.014858999999999999,
+      "cpu_seconds": 0.03897,
+      "measurement": "absolute SELF+CHILDREN usage snapshot before receipt update"
+    }
+  ],
+  "unmeasured_bootstrap": "Initial un-timed cat/rg skill, memory quick pass and file listing; short read-only setup, excluded from quantitative measured total."
+}

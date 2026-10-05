@@ -1,0 +1,47 @@
+.......EEFF.................
+======================================================================
+ERROR: test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_tangent_action')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 587, in test_full_physics_contract_refuses_native_and_adapter_reduced_states
+    getattr(self.a, name)(self.x, state, argument)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py", line 276, in full_tangent_action
+    out = state.jvp(self.chart.expand(d))
+          ^^^^^^^^^
+AttributeError: 'ReducedState' object has no attribute 'jvp'
+
+======================================================================
+ERROR: test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_adjoint_action')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 587, in test_full_physics_contract_refuses_native_and_adapter_reduced_states
+    getattr(self.a, name)(self.x, state, argument)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py", line 289, in full_adjoint_action
+    return self.chart.adjoint(state.vjp(z))
+                              ^^^^^^^^^
+AttributeError: 'ReducedState' object has no attribute 'vjp'
+
+======================================================================
+FAIL: test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_objective')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 589, in test_full_physics_contract_refuses_native_and_adapter_reduced_states
+    with self.assertRaisesRegex(ValueError, 'full state'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='native', action='full_objective')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py", line 589, in test_full_physics_contract_refuses_native_and_adapter_reduced_states
+    with self.assertRaisesRegex(ValueError, 'full state'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.134s
+
+FAILED (failures=2, errors=2)

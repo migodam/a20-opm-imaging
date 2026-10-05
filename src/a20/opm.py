@@ -324,7 +324,7 @@ class ReducedJacobian:
         if self._matrix is None:
             with self.adapter.book.span('reduced_material_data_matrix', compressed_material_columns=self.adapter.p):
                 b = self.adapter.compressed_B(self.x, self.state, self.projection.W)
-                coeff = self.projection.solve(b.transpose(1, 0, 2).reshape(self.projection.Z.shape[1], -1))
+                coeff = self.projection.solve(b.transpose(1, 0, 2).reshape(self.projection.Z.shape[1], self.adapter.P*self.adapter.p))
                 coeff = coeff.reshape(self.projection.Z.shape[1], self.adapter.P, self.adapter.p).transpose(1, 0, 2)
                 out = np.einsum('mr,prk->pmk', self.projection.SZ, coeff)
                 self._matrix = self.adapter.whiten(pack(out))

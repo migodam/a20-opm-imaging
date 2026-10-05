@@ -1,0 +1,1 @@
+{"event": "supplied_algebra_checks", "phase": "algebra_audit", "counters": {}, "status": "OK", "job": "local-algebra-01", "source_commit": "3ab15f02182a3d406ae979591eea1fd8048ae3d6", "wall_seconds": 0.12019279098603874, "exclusive_wall_seconds": 0.12019279098603874, "process_cpu_seconds": 0.05619500000000001}

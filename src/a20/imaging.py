@@ -60,7 +60,7 @@ def zero_state(adapter, x):
     """A2 bootstrap: known incident field, zero current; no full-state seed."""
     _, da = __import__('a20_vendor_a9').polarizability(x, adapter.problem.volume, adapter.problem.frequency)
     return ReducedState(x.copy(), np.zeros((adapter.P, adapter.n), complex), adapter.model.incident.copy(),
-                        da, np.zeros((adapter.P, adapter.m), complex), adapter.version(x))
+                        da, np.zeros((adapter.P, adapter.m), complex), adapter.version(x), adapter.model)
 
 
 def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
@@ -194,6 +194,8 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
                 'full_KKT_relative_before': last_full_kkt, 'predicted_reduction': predicted,
                 'actual_reduction': float(objective-trial_objective) if accepted else None,
                 'step_size': alpha if accepted else 0., 'step_norm': float(la.norm(step)),
+                'material_step_coefficients': step.tolist(),
+                'accepted_material_coefficients': problem.chart.project(candidate-problem.init).tolist() if accepted else None,
                 'QP': qp, 'trials': trial_logs, 'accepted': accepted, 'fallback_reason': fallback_reason,
                 'wall_seconds': time.perf_counter()-it_start, 'cost': book.delta(snapshot)}
             iterations.append(row)
@@ -232,7 +234,8 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
     row = {'experiment_id': experiment_id, 'parent_object_id': problem.parent_id,
         'split': 'historically_exposed_feasibility', 'method': method, 'mode': mode,
         'parameterization': problem.chart.kind, 'n_current': a.n, 'p_material': a.p,
-        'n_source': a.P, 'n_receiver': a.m, 'frequencies': [problem.frequency],
+        'n_source': a.P, 'n_receiver': len(problem.receivers), 'complex_receiver_channels': a.m,
+        'real_data_dimension': a.P*2*a.m, 'frequencies': [problem.frequency],
         'noise_seed': None, 'noise_level': 0., 'initial_state_id': 'shared_original_init',
         'degree_policy': 'fixed', 'degree': degree if method!='FULL_GN' else None,
         'seed_budget_O': config['seed_rank_O'] if method.startswith('OPM') else 0,
@@ -245,5 +248,6 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
         'wall_total': time.perf_counter()-started, 'wall_setup': setup_wall, 'wall_audit': audit_wall,
         'cost': costs, 'peak_memory': book.receipt(), 'fallback_count': fallback_count,
         'status': status, 'failure': failure, 'solver': 'original direct complex128 LU; zero Krylov solver iterations'}
+    row['native_DDA_counters'] = a.model.counters.as_dict()
     row.update(costs['counts'])
     return x, plain(row), iterations, a

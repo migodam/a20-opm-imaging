@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "scholarqa-citation-verification",
+  "created_at": "2026-10-05T06:59:55+00:00",
+  "fields": [
+    "paperId",
+    "title",
+    "authors",
+    "year",
+    "externalIds",
+    "url",
+    "abstract"
+  ],
+  "requested_count": 3,
+  "resolved_count": 3,
+  "unresolved_ids": [],
+  "verification_scope": "Bibliographic identity only; claim support must be checked against the retrieved evidence.",
+  "items": [
+    {
+      "requested_id": "ARXIV:1311.0922",
+      "resolved": true,
+      "record": {
+        "paperId": "f04f1cf95e410294db88d6c0211e03eb353a260c",
+        "externalIds": {
+          "MAG": "1595822959",
+          "ArXiv": "1311.0922",
+          "DBLP": "journals/siamsc/SturlerGKCBO15",
+          "DOI": "10.1137/130946320",
+          "CorpusId": 207067843
+        },
+        "url": "https://www.semanticscholar.org/paper/f04f1cf95e410294db88d6c0211e03eb353a260c",
+        "title": "Nonlinear Parametric Inversion Using Interpolatory Model Reduction",
+        "year": 2013,
+        "openAccessPdf": {
+          "url": "https://arxiv.org/pdf/1311.0922",
+          "status": "GREEN",
+          "license": null,
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1311.0922, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "2488894099",
+            "name": "E. de Sturler"
+          },
+          {
+            "authorId": "1751711",
+            "name": "S. Gugercin"
+          },
+          {
+            "authorId": "145614783",
+            "name": "M. Kilmer"
+          },
+          {
+            "authorId": "2732683",
+            "name": "Saifon Chaturantabut"
+          },
+          {
+            "authorId": "1766694",
+            "name": "C. Beattie"
+          },
+          {
+            "authorId": "2059522246",
+            "name": "Meghan O'Connell"
+          }
+        ],
+        "abstract": "Nonlinear parametric inverse problems appear in several prominent applications; one such application is diffuse optical tomography (DOT) in medical image reconstruction. Such inverse problems present huge computational challenges, mostly due to the need for solving a sequence of large-scale discretized, parametrized partial differential equations in the forward model. In this paper, we show how interpolatory parametric model reduction can significantly reduce the cost of the inversion process in DOT by drastically reducing the computational cost of solving the forward problems. The key observation is that function evaluations for the underlying optimization problem may be viewed as transfer function evaluations along the imaginary axis; a similar observation holds for Jacobian evaluations as well. This motivates the use of system-theoretic model order reduction methods. We discuss the construction and use of interpolatory parametric reduced models as surrogates for the full forward model. Within the DOT s..."
+      }
+    },
+    {
+      "requested_id": "ARXIV:2003.10938",
+      "resolved": true,
+      "record": {
+        "paperId": "956255b98e3715a3ec136d8bf151d006ce1e48d3",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2003-10938",
+          "MAG": "3012956742",
+          "ArXiv": "2003.10938",
+          "CorpusId": 214622984
+        },
+        "url": "https://www.semanticscholar.org/paper/956255b98e3715a3ec136d8bf151d006ce1e48d3",
+        "title": "Robust Parameter Inversion using Adaptive Reduced Order Models",
+        "year": 2020,
+        "openAccessPdf": {
+          "url": "",
+          "status": null,
+          "license": null,
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2003.10938, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "103401634",
+            "name": "D. Munster"
+          },
+          {
+            "authorId": "2488894099",
+            "name": "E. de Sturler"
+          }
+        ],
+        "abstract": "Nonlinear parametric inverse problems appear in many applications and are typically very expensive to solve, especially if they involve many measurements. These problems pose huge computational challenges as evaluating the objective function or misfit requires the solution of a large number of parameterized partial differential equations, typically one per source term. Newton-type algorithms, which may be required for fast convergence, typically require the additional solution of a large number of adjoint problems. \nThe use of parametric model reduction may substantially alleviate this problem. In [de Sturler, E., Gugercin, S., Kilmer, M. E., Chaturantabut, S., Beattie, C., and O'Connell, M. (2015). Nonlinear Parametric Inversion Using Interpolatory Model Reduction. SIAM Journal on Scientific Computing, 37(3)], interpolatory model reduction was successfully used to drastically speed up inversion for Diffuse Optical Tomography (DOT). However, when using model reduction in high dimensional parameter spaces, obtaining error bounds in parameter space is typically intractable. In this paper, we propose to use stochastic estimates to remedy this problem. At the cost of one (randomized) full-scale linear solve per optimization step we obtain a robust algorithm. Moreover, since we can now update the model when needed, this robustness allows us to further reduce the order of the reduced order model and hence the cost of computing and using it, further decreasing the cost of inversion. We also propose a method to update the model reduction basis that reduces the number of large linear solves required by 46%-98% compared with the fixed reduced-order model. We demonstrate that this leads to a highly efficient and robust inversion method."
+      }
+    },
+    {
+      "requested_id": "ARXIV:2212.08589",
+      "resolved": true,
+      "record": {
+        "paperId": "24b60af16853e4d0ce0b8c1977a1b4b406413a6e",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2212-08589",
+          "ArXiv": "2212.08589",
+          "DOI": "10.48550/arXiv.2212.08589",
+          "CorpusId": 254823186
+        },
+        "url": "https://www.semanticscholar.org/paper/24b60af16853e4d0ce0b8c1977a1b4b406413a6e",
+        "title": "Data-Driven Model Reduction by Two-Sided Moment Matching",
+        "year": 2022,
+        "openAccessPdf": {
+          "url": "http://arxiv.org/pdf/2212.08589",
+          "status": "GREEN",
+          "license": null,
+          "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2212.08589, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+          {
+            "authorId": "1564239298",
+            "name": "Junyu Mao"
+          },
+          {
+            "authorId": "2676126",
+            "name": "G. Scarciotti"
+          }
+        ],
+        "abstract": "In this brief paper, we propose a time-domain data-driven method for model order reduction by two-sided moment matching for linear systems. An algorithm that asymptotically approximates the matrix product $\\Upsilon \\Pi$ from time-domain samples of the so-called two-sided interconnection is provided. Exploiting this estimated matrix, we determine the unique reduced-order model of order $\\nu$, which asymptotically matches the moments at $2 \\nu$ distinct interpolation points. Furthermore, we discuss the impact that certain disturbances and data distortions may have on the algorithm. Finally, we illustrate the use of the proposed methodology by means of a benchmark model."
+      }
+    }
+  ]
+}

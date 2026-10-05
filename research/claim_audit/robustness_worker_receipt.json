@@ -1,0 +1,43 @@
+{
+  "task": "conditional_noise_and_warm_timing_module",
+  "status": "SOURCE_IMPLEMENTED_TINY_CHECKS_PASS",
+  "source_path": "src/a20/robustness.py",
+  "python_executable": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+  "checks": [
+    "syntax_and_lazy_import_no_physics",
+    "fixed_radius_deterministic_circular_draw_and_achieved_SNR",
+    "zero_nonfinite_clean_norm_and_unregistered_level_rejected",
+    "observation_only_NPZ_in_memory_identity_and_metadata_guard",
+    "measured_data_replacement_retains_clean_scale_init_and_chart",
+    "no_automatic_retry_and_success_is_never_repeated",
+    "frozen_parent_method_degree_scope_guard",
+    "warm_static_only_preserves_geometry_SVD_and_clears_material_state",
+    "warm_shared_model_native_counter_delta",
+    "offline_labels_only_after_reconstruct_and_residuals_use_observations",
+    "offline_label_failure_retains_clean_and_noisy_residuals_and_online_status",
+    "failed_started_attempt_preserves_cost_native_delta_and_budget_stop",
+    "budget_failure_before_reconstruction_has_failure_epilogue"
+  ],
+  "check_count": 13,
+  "tiny_checks_process_CPU_seconds": 0.067174,
+  "prior_timed_source_reads_CPU_seconds": 0.02,
+  "worker_actual_CPU_seconds": 0.087174,
+  "CPU_budget_seconds": 30.0,
+  "CPU_budget_respected": true,
+  "measurement": "resource.getrusage self plus child user/system CPU; network wall excluded; source-read setup conservatively recorded separately",
+  "real_physics_runs": 0,
+  "original_six_parent_experiments_run": false,
+  "GPU_seconds": 0,
+  "SSH_calls": 0,
+  "network_calls": 0,
+  "hash_checks": 0,
+  "NPZ_checks": "in-memory observation-only archive only; no filesystem test artifacts",
+  "not_run": [
+    "actual load_problem/Adapter/reconstruct integration",
+    "full noise/warm execution",
+    "filesystem resume/cap recovery",
+    "real timing/physics or noise quality gates",
+    "held receiver residual: registered runtime has no held geometry"
+  ],
+  "scientific_gate_decision": "NOT_COMPUTED_PARENT_OWNED"
+}

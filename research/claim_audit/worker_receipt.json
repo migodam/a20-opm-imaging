@@ -1,0 +1,49 @@
+{
+  "worker": "claim_audit",
+  "completed_utc": "2026-10-05T07:07:59.409953+00:00",
+  "process_cpu_seconds": 1.4006869999999998,
+  "measured_local_cpu_seconds": 1.4006869999999998,
+  "cpu_budget_seconds": 60,
+  "measured_cpu_under_budget": true,
+  "cpu_measurement": "Summed actual user+system process CPU, resource.getrusage SELF+CHILDREN and /usr/bin/time -p; network waiting wall is not CPU",
+  "cpu_measurement_limit": "Initial un-timed cat/rg read-only skill/memory/file bootstrap and tool-host/provider compute are not instrumented; final receipt serialization after snapshot is below timer precision but not included. Report measured total, not an exact all-process or model-inference total.",
+  "gpu_occupation_seconds": 0,
+  "physics_compute_seconds": 0,
+  "network_wall_seconds_instrumented": 41.0089627080597,
+  "sha256_checks": 0,
+  "scientific_gates_evaluated": [],
+  "experiments_run": [],
+  "edited_directories": [
+    "docs",
+    "research/claim_audit"
+  ],
+  "head_at_static_audit": "UNBORN_HEAD",
+  "metadata_verified_count": 3,
+  "metadata_unresolved_count": 0,
+  "literature_collection_status": "HTTP_429_PARTIAL_FAILURE",
+  "artifacts": [
+    "docs/CLOSEST_PRIOR_AUDIT.md",
+    "docs/BACKEND_MAP.md",
+    "research/claim_audit/CLAIM_LEDGER.csv",
+    "research/claim_audit/source_access.json",
+    "research/claim_audit/verified_sources.json",
+    "research/claim_audit/search_log.json",
+    "research/claim_audit/scholarqa_collect.json",
+    "research/claim_audit/scholarqa_verify.json",
+    "research/claim_audit/cpu_ledger.json",
+    "research/claim_audit/worker_receipt.json"
+  ],
+  "codex_intervention_needed": [
+    "Final scientific/novelty judgment retained by parent",
+    "Commit reference must be filled after parent commit",
+    "Small voxel d<=128 constrained-QP boundary to test/repair"
+  ],
+  "status": "COMPLETE_BOUNDED_EVIDENCE_AUDIT_WITH_EXPLICIT_GAPS",
+  "artifact_verification": {
+    "json_parses": true,
+    "csv_claims": 11,
+    "claim_paper_ids_match_verified_ids": true,
+    "pdf_stored": false,
+    "science_tests": "NOT_RUN"
+  }
+}

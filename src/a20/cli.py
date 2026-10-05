@@ -37,6 +37,7 @@ def metadata(root, args, config):
         'python': platform.python_version(), 'numpy': np.__version__, 'scipy': scipy.__version__,
         'device': args.device, 'threads': 1, 'stage': args.stage,
         'frozen_config': config,
+        'selected_parents': args.parents, 'selected_iterations': args.iterations,
         'commands': ['PYTHONPATH=src python -m a20.cli '+args.stage+' --device '+args.device+' --job '+args.job],
         'new_SHA256_checks': 0, 'NN_training': False, 'solver_acceleration': False}
     if args.device=='cuda':
@@ -56,14 +57,17 @@ def truth_metrics(root, parent, x, config):
     from scipy import linalg as la
     with np.load(root/f'data/offline/{parent}/labels.npz', allow_pickle=False) as f:
         truth = f['truth'].copy()
+    with np.load(root/f'data/runtime/{parent}/problem.npz', allow_pickle=False) as f:
+        volume = float(f['volume'])
     diff = x-truth
     total = float(la.norm(diff)/max(la.norm(truth), 1e-300))
     real = float(la.norm(diff.real)/max(la.norm(truth.real), 1e-300))
     imag_den = max(la.norm(truth.imag), config['imaginary_denominator_floor_fraction']*la.norm(truth), 1e-300)
     return {'final_truth_error': total, 'final_real_error': real,
         'final_imag_error': float(la.norm(diff.imag)/imag_den),
-        'final_material_absolute_error': float(la.norm(diff)),
-        'imaginary_denominator': float(imag_den), 'imaginary_absolute_error': float(la.norm(diff.imag)),
+        'final_material_absolute_error': float(np.sqrt(volume)*la.norm(diff)),
+        'imaginary_denominator': float(imag_den), 'imaginary_absolute_error': float(np.sqrt(volume)*la.norm(diff.imag)),
+        'absolute_error_metric': 'physical L2, sqrt(volume)*Euclidean contrast norm',
         'imaginary_denominator_floored': bool(la.norm(truth.imag)<imag_den)}
 
 
@@ -177,9 +181,33 @@ def run_images(root, config, book, args):
     return {'status':'COMPLETE','quality_gate':quality_gate(root,config,mode)}
 
 
+def run_optional(root, config, book, args):
+    from .robustness import run_noise, run_warm_timing
+    a1=quality_gate(root,config,'A1')
+    candidates=[(name,int(name.split('_d')[1]),'A1',decision['median_wall_ratio'])
+                for name,decision in a1.items() if name.startswith('OPM_d') and decision['status']=='PASS']
+    # A2 must have passed A1, and must itself have complete quality evidence.
+    if candidates:
+        a2=quality_gate(root,config,'A2')
+        candidates += [(name,int(name.split('_d')[1]),'A2',decision['median_wall_ratio'])
+                       for name,decision in a2.items() if name.startswith('OPM_d') and decision['status']=='PASS']
+    if not candidates:
+        return {'status':'NOT_RUN','reason':'No complete OPM nonlinear quality survivor'}
+    method,degree,mode,_=min(candidates,key=lambda r:(r[3],r[1],r[2]))
+    if args.stage=='timing':
+        # Warm repeats cannot silently enlarge the approved A1 42-run matrix.
+        base=len(read_rows(root/'results/A1/runs.jsonl'))
+        additional_a1=12 if mode=='A1' else 6
+        if base+additional_a1>42:
+            return {'status':'NOT_RUN','reason':'A1 42-run cap leaves insufficient complete warm pairs; G2 remains HOLD',
+                    'A1_runs':base,'required_additional_A1':additional_a1}
+        return run_warm_timing(root,config,book,args.device,args.job,method,degree,mode)
+    return run_noise(root,config,book,args.device,args.job,method,degree,mode)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('stage',choices=['algebra','g0-real','replay','a1','a2','evaluate'])
+    parser.add_argument('stage',choices=['algebra','g0-real','replay','a1','a2','noise','timing','evaluate'])
     parser.add_argument('--root',type=Path,default=Path.cwd())
     parser.add_argument('--device',choices=['cpu','cuda'],default='cpu')
     parser.add_argument('--job',required=True)
@@ -222,11 +250,18 @@ def main():
                         result=module.run()
                 write_json(root/'results/G0_ALGEBRA.json',result)
             elif args.stage in ('g0-real','replay'):
-                from .replay import run_real_g0,run_replay
                 if args.stage=='g0-real':
+                    from .real_g0 import run_real_g0
+                    local = root/'results/G0_LOCAL.json'
+                    algebra = root/'results/G0_ALGEBRA.json'
+                    if not local.exists() or json.loads(local.read_text())['status']!='PASS':
+                        raise RuntimeError('G0_LOCAL_NOT_PASSED')
+                    if not algebra.exists() or json.loads(algebra.read_text())['status']!='ALL ASSERTIONS PASSED':
+                        raise RuntimeError('SUPPLIED_ALGEBRA_NOT_PASSED')
                     result=run_real_g0(root,config,book,args.device)
                     write_json(root/'results/G0_REAL.json',result)
                 else:
+                    from .replay import run_replay
                     passed=root/'results/G0_REAL.json'
                     if not passed.exists() or json.loads(passed.read_text())['status']!='PASS':
                         raise RuntimeError('G0_REAL_NOT_PASSED; imaging/replay is gate-closed')
@@ -234,6 +269,8 @@ def main():
                     result['representation_gate']=eligibility(root,config)
             elif args.stage in ('a1','a2'):
                 result=run_images(root,config,book,args)
+            elif args.stage in ('noise','timing'):
+                result=run_optional(root,config,book,args)
             else:
                 result={'replay':eligibility(root,config),'A1':quality_gate(root,config,'A1'),'A2':quality_gate(root,config,'A2')}
             status='COMPLETE'
@@ -251,7 +288,9 @@ def main():
                        CPU_limit=config['budget_cpu_seconds'],GPU_limit=config['budget_gpu_wall_seconds'])
         write_json(jobdir/'job_receipt.json',receipt)
         append_jsonl(root/'results/JOB_LEDGER.jsonl',{**receipt,'result':result})
-        print(json.dumps(plain({'job':args.job,'status':status,'result':result,'CPU':receipt['process_cpu_seconds'],
+        brief = result if len(json.dumps(plain(result)))<3000 else {'status':result.get('status'),
+            'keys':list(result),'full_result':'results/jobs/'+args.job+'/result.json'}
+        print(json.dumps(plain({'job':args.job,'status':status,'result':brief,'CPU':receipt['process_cpu_seconds'],
                                'GPU':receipt['gpu_occupation_seconds']}),ensure_ascii=False),flush=True)
     return 0 if status=='COMPLETE' else 2
 

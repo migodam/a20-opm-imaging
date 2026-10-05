@@ -1,0 +1,23 @@
+{
+  "wall_seconds": 0.23739804199431092,
+  "process_cpu_seconds": 0.139742,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {},
+  "exclusive_walls": {
+    "supplied_algebra_checks": 0.12019279098603874
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 0,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "status": "COMPLETE",
+  "job": "local-algebra-01",
+  "stage": "algebra",
+  "prior_cpu_seconds": 0,
+  "prior_gpu_seconds": 0,
+  "CPU_limit": 7200,
+  "GPU_limit": 43200
+}

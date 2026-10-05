@@ -1,0 +1,1624 @@
+{
+  "tests": 23,
+  "passed": 21,
+  "failures": 2,
+  "errors": 1,
+  "status": "FAIL",
+  "cases": [
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_A1_full_state_tangent_distinguished_from_A2_derivative",
+      "status": "PASS",
+      "process_cpu_seconds": 0.008409999999999973,
+      "wall_seconds": 0.01927966601215303,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "A2_is_frozen_reduced_derivative": 3.0426238586408956e-11,
+        "A1_is_not_A2_derivative": 0.02003156078683013
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.01914770796429366,
+        "process_cpu_seconds": 0.008274999999999977,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 3,
+          "L_actions": 15,
+          "Maxwell_matvec_rhs": 15,
+          "S_actions": 21,
+          "projected_factorizations": 3,
+          "reduced_forward_RHS": 9,
+          "reduced_state_Goff_rhs": 9,
+          "forcing_rhs": 9,
+          "reduced_core_rhs": 15,
+          "B_rhs": 6
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.0005848750006407499,
+          "full_forward": 0.003298667026683688,
+          "material_operator_refresh": 3.3917021937668324e-05,
+          "L": 1.3417098671197891e-05,
+          "S": 1.4290912076830864e-05,
+          "projected_core_factorization": 4.0084123611450195e-05,
+          "illumination_forcing": 4.591699689626694e-05,
+          "reduced_core_solve": 6.520887836813927e-05,
+          "reduced_forward": 0.0006248740246519446,
+          "B": 2.491590566933155e-05
+        },
+        "events": 29,
+        "peak_cpu_rss_bytes": 74973184,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_budget_rejection_and_failed_action_accounting",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0010339999999999794,
+      "wall_seconds": 0.0012915829429402947,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "failed_action_receipt": {
+          "event": "injected_failed_action",
+          "phase": "online",
+          "counters": {
+            "rejected_trials": 1
+          },
+          "status": "FAILED",
+          "test": "test_backend_integrity.IntegrityTests.test_budget_rejection_and_failed_action_accounting",
+          "grid": "2^3",
+          "error": "RuntimeError: injected test failure",
+          "wall_seconds": 8.937506936490536e-05,
+          "exclusive_wall_seconds": 8.591613732278347e-05,
+          "process_cpu_seconds": 8.999999999997899e-05
+        }
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.001236666925251484,
+        "process_cpu_seconds": 0.0009790000000000076,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "rejected_trials": 1,
+          "L_actions": 2,
+          "Maxwell_matvec_rhs": 2
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00014337501488626003,
+          "full_forward": 6.312504410743713e-05,
+          "material_operator_refresh": 2.5830231606960297e-06,
+          "L": 3.458932042121887e-06,
+          "injected_failed_action": 8.591613732278347e-05
+        },
+        "events": 5,
+        "peak_cpu_rss_bytes": 74973184,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_complex_current_adjoints_and_metric",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0015080000000000093,
+      "wall_seconds": 0.0016503329388797283,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "L_adjoint": 5.664136755022399e-16,
+        "F_adjoint": 1.8561769869676627e-15,
+        "S_adjoint": 8.473068927560111e-16,
+        "L_plus_F_identity": 8.630464994782184e-19,
+        "physical_current_metric": 2.131788594817976e-16
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0016191670438274741,
+        "process_cpu_seconds": 0.0014769999999999506,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "L_actions": 6,
+          "Maxwell_matvec_rhs": 18,
+          "L_adjoint_actions": 3,
+          "F_actions": 6,
+          "F_adjoint_actions": 3,
+          "S_actions": 3,
+          "S_adjoint_actions": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00011720904149115086,
+          "full_forward": 8.433300536125898e-05,
+          "material_operator_refresh": 3.7919962778687477e-06,
+          "L": 8.458038792014122e-06,
+          "L_adjoint": 5.375011824071407e-06,
+          "F": 8.165952749550343e-06,
+          "F_adjoint": 4.999921657145023e-06,
+          "S": 3.4170225262641907e-06,
+          "S_adjoint": 4.291068762540817e-06
+        },
+        "events": 11,
+        "peak_cpu_rss_bytes": 74973184,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+      "status": "ERROR",
+      "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 651, in run\n    self._callTestMethod(testMethod)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 606, in _callTestMethod\n    if method() is not None:\n       ~~~~~~^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 474, in test_constrained_chart_quadratic_KKT_and_full_gap_bound\n    s, result, normal = solve_quadratic(self.a.chart, self.x, residual, full, lam, ell, self.config, self.book)\n                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 45, in solve_quadratic\n    return _solve_quadratic(chart, chi, residual, jacobian, lam, ell, config, book, initial=initial)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 106, in _solve_quadratic\n    raise error\na20.material.QPFailure: Constrained QP did not meet registered KKT/feasibility tolerance\n",
+      "process_cpu_seconds": 0.003733000000000042,
+      "wall_seconds": 0.00622166704852134,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.006187500082887709,
+        "process_cpu_seconds": 0.0037000000000000366,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "full_tangent_calls": 1,
+          "full_tangent_RHS": 18,
+          "full_tangent_receiver_rhs": 18,
+          "material_subproblems": 1,
+          "small_material_H_assemblies": 1,
+          "material_optimizer_iterations": 4
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.0001259589334949851,
+          "full_forward": 5.987496115267277e-05,
+          "material_operator_refresh": 2.540997229516506e-06,
+          "full_tangent": 7.954193279147148e-05,
+          "small_material_H_assembly": 6.875023245811462e-06,
+          "Gaussian_constrained_quadratic": 0.0014972499338909984,
+          "material_subproblem": 0.001195542048662901
+        },
+        "events": 7,
+        "peak_cpu_rss_bytes": 75169792,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence",
+      "status": "PASS",
+      "process_cpu_seconds": 0.004376999999999964,
+      "wall_seconds": 0.005439833039417863,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "Schur_F_eff": 1.7507662457199529e-15,
+        "Schur_F_eff_adjoint": 1.683367668453653e-15,
+        "Schur_adjoint_pair": 1.4445379933460153e-14,
+        "Schur_T": 2.2755247151119704e-16,
+        "Schur_K": 2.3681166678998184e-16,
+        "Schur_T_adjoint": 2.517966229708556e-16,
+        "Schur_K_adjoint": 2.5461090637832405e-16,
+        "full_Schur_resolvent": 4.615431980745288e-16,
+        "Schur_Galerkin_equivalence": 5.986093449085816e-16,
+        "empty_U_F": 0.0,
+        "empty_U_T": 0.0,
+        "empty_U_K": 0.0,
+        "empty_U_R": 0.0
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0054079999681562185,
+        "process_cpu_seconds": 0.0043460000000000165,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "F_actions": 40,
+          "Maxwell_matvec_rhs": 170,
+          "F_adjoint_actions": 8,
+          "retained_factorizations": 1,
+          "L_actions": 116,
+          "L_adjoint_actions": 6,
+          "S_actions": 6,
+          "projected_factorizations": 1,
+          "reduced_core_rhs": 24
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00013104092795401812,
+          "full_forward": 6.412493530660868e-05,
+          "material_operator_refresh": 2.4581095203757286e-06,
+          "F": 2.9540969990193844e-05,
+          "F_adjoint": 1.9749044440686703e-05,
+          "retained_core_factorization": 1.1708936654031277e-05,
+          "L": 3.6958721466362476e-05,
+          "L_adjoint": 6.917049176990986e-06,
+          "S": 3.00002284348011e-06,
+          "projected_core_factorization": 9.541050530970097e-06,
+          "reduced_core_solve": 1.025001984089613e-05
+        },
+        "events": 29,
+        "peak_cpu_rss_bytes": 75530240,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_fixed_galerkin_reduced_state_derivative_and_native_equivalence",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0038160000000000416,
+      "wall_seconds": 0.004992500063963234,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "native_reduced_current": 7.313685051401044e-16,
+        "native_reduced_field": 4.3445101632211234e-16,
+        "native_reduced_jvp": 8.259634431183828e-16,
+        "native_reduced_vjp": 1.0363165177478904e-15,
+        "reduced_real_adjoint": 1.2043302844487345e-16,
+        "reduced_material_matrix_action": 5.615872501783476e-16,
+        "frozen_Galerkin_fd": 3.0426238586408956e-11
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.004951459006406367,
+        "process_cpu_seconds": 0.003774999999999973,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 3,
+          "L_actions": 15,
+          "Maxwell_matvec_rhs": 15,
+          "S_actions": 18,
+          "projected_factorizations": 3,
+          "reduced_forward_RHS": 9,
+          "reduced_state_Goff_rhs": 9,
+          "forcing_rhs": 9,
+          "reduced_core_rhs": 36,
+          "B_rhs": 3,
+          "S_adjoint_actions": 6,
+          "B_adjoint_rhs": 6,
+          "compressed_material_columns": 6,
+          "compressed_B_current_columns": 15
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.0001378749730065465,
+          "full_forward": 6.0416990891098976e-05,
+          "material_operator_refresh": 2.8749927878379822e-05,
+          "L": 1.1168071068823338e-05,
+          "S": 1.1375173926353455e-05,
+          "projected_core_factorization": 3.437488339841366e-05,
+          "illumination_forcing": 3.4082913771271706e-05,
+          "reduced_core_solve": 5.504197906702757e-05,
+          "reduced_forward": 0.0006100410828366876,
+          "B": 9.500072337687016e-06,
+          "S_adjoint": 7.2069233283400536e-06,
+          "reduced_core_adjoint_solve": 1.8291990272700787e-05,
+          "B_adjoint": 2.329109702259302e-05,
+          "compressed_injection": 1.2542004697024822e-05,
+          "reduced_material_data_matrix": 0.00018920795992016792
+        },
+        "events": 35,
+        "peak_cpu_rss_bytes": 75546624,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_frozen_petrov_derivative_and_moving_least_squares_term",
+      "status": "PASS",
+      "process_cpu_seconds": 0.005343000000000042,
+      "wall_seconds": 0.00746387499384582,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "frozen_Petrov_adjoint": 5.054066206343729e-16,
+        "frozen_Petrov_matrix": 3.574474578412382e-16,
+        "frozen_Petrov_fd": 4.83621001377752e-11,
+        "moving_LS_correct_fd": 8.350215490309828e-11,
+        "moving_LS_omitted_term_error": 0.058037922912576666
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.007426541997119784,
+        "process_cpu_seconds": 0.005305999999999977,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 6,
+          "L_actions": 92,
+          "Maxwell_matvec_rhs": 92,
+          "S_actions": 30,
+          "projected_factorizations": 3,
+          "reduced_forward_RHS": 9,
+          "reduced_state_Goff_rhs": 9,
+          "forcing_rhs": 18,
+          "reduced_core_rhs": 33,
+          "B_rhs": 6,
+          "S_adjoint_actions": 3,
+          "B_adjoint_rhs": 3,
+          "compressed_material_columns": 6,
+          "compressed_B_current_columns": 15
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00012554193381220102,
+          "full_forward": 6.250001024454832e-05,
+          "material_operator_refresh": 6.095808930695057e-05,
+          "L": 2.7082976885139942e-05,
+          "S": 2.2500986233353615e-05,
+          "projected_core_factorization": 2.4582957848906517e-05,
+          "illumination_forcing": 5.912396591156721e-05,
+          "reduced_core_solve": 4.974985495209694e-05,
+          "reduced_forward": 0.0005105832824483514,
+          "B": 1.8125982023775578e-05,
+          "S_adjoint": 3.4580007195472717e-06,
+          "reduced_core_adjoint_solve": 9.541981853544712e-06,
+          "B_adjoint": 1.2334086932241917e-05,
+          "compressed_injection": 1.3415934517979622e-05,
+          "reduced_material_data_matrix": 0.00018887605983763933
+        },
+        "events": 47,
+        "peak_cpu_rss_bytes": 75595776,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state",
+      "status": "FAIL",
+      "subtest_failures": [
+        {
+          "subtest": "test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_tangent_action')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state\n    with self.assertRaisesRegex(ValueError, 'mismatch'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+        },
+        {
+          "subtest": "test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_adjoint_action')",
+          "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state\n    with self.assertRaisesRegex(ValueError, 'mismatch'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+        }
+      ],
+      "process_cpu_seconds": 0.0014139999999999708,
+      "wall_seconds": 0.0014145419700071216,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0013817499857395887,
+        "process_cpu_seconds": 0.0013829999999999676,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "full_tangent_calls": 1,
+          "full_tangent_RHS": 3,
+          "full_tangent_receiver_rhs": 3,
+          "full_adjoint_calls": 1,
+          "full_adjoint_RHS": 3,
+          "full_adjoint_receiver_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00012037495616823435,
+          "full_forward": 5.862489342689514e-05,
+          "material_operator_refresh": 2.4579931050539017e-06,
+          "full_tangent": 3.7207966670393944e-05,
+          "full_adjoint": 3.6917044781148434e-05
+        },
+        "events": 5,
+        "peak_cpu_rss_bytes": 75595776,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_full_tangent_and_full_objective_finite_difference",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0016539999999999888,
+      "wall_seconds": 0.0019185829441994429,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "full_tangent_fd": 2.7196014570807446e-11,
+        "full_objective_fd": 8.44542364086848e-12
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0018833329668268561,
+        "process_cpu_seconds": 0.0016189999999999816,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 5,
+          "full_forward_RHS": 15,
+          "full_LU_factorizations": 5,
+          "full_state_backward_residual_L_rhs": 15,
+          "full_state_receiver_rhs": 15,
+          "full_state_Goff_rhs": 15,
+          "material_operator_refreshes": 5,
+          "full_tangent_calls": 1,
+          "full_tangent_RHS": 3,
+          "full_tangent_receiver_rhs": 3,
+          "full_adjoint_calls": 1,
+          "full_adjoint_RHS": 3,
+          "full_adjoint_receiver_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00012029102072119713,
+          "full_forward": 0.00024733401369303465,
+          "material_operator_refresh": 1.3290904462337494e-05,
+          "full_tangent": 3.21660190820694e-05,
+          "full_adjoint": 3.0041905120015144e-05
+        },
+        "events": 13,
+        "peak_cpu_rss_bytes": 75595776,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_material_metric_and_real_gauge_covariance",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0020709999999999895,
+      "wall_seconds": 0.002121040946803987,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "material_norm_False": 1.3930347854836684e-16,
+        "material_project_False": 5.358019981797597e-16,
+        "material_adjoint_False": 2.5978303512395073e-15,
+        "material_norm_True": 3.27550910754301e-16,
+        "material_project_True": 1.2346665838604788e-16,
+        "material_adjoint_True": 1.4139044331720266e-15,
+        "material_gauge_physical": 4.42787995639647e-16,
+        "material_gauge_J": 4.458903885252712e-16,
+        "material_gauge_pullback": 1.8548373631903253e-16
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.002095084055326879,
+        "process_cpu_seconds": 0.0020449999999999635,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 2,
+          "full_forward_RHS": 6,
+          "full_LU_factorizations": 2,
+          "full_state_backward_residual_L_rhs": 6,
+          "full_state_receiver_rhs": 6,
+          "full_state_Goff_rhs": 6,
+          "material_operator_refreshes": 2,
+          "full_tangent_calls": 2,
+          "full_tangent_RHS": 6,
+          "full_tangent_receiver_rhs": 6,
+          "full_adjoint_calls": 2,
+          "full_adjoint_RHS": 6,
+          "full_adjoint_receiver_rhs": 6
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00042679125908762217,
+          "full_forward": 0.00010408391244709492,
+          "material_operator_refresh": 4.249042831361294e-06,
+          "full_tangent": 5.670799873769283e-05,
+          "full_adjoint": 5.224999040365219e-05
+        },
+        "events": 12,
+        "peak_cpu_rss_bytes": 75612160,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_material_refresh_invalidates_projection_and_cached_reduced_matrix",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0021079999999999988,
+      "wall_seconds": 0.002529334044083953,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "fresh_trial_after_invalidated_cache": 0.0,
+        "full_cache_source_selection": 0.0
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0025052919518202543,
+        "process_cpu_seconds": 0.0020839999999999748,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 3,
+          "L_actions": 10,
+          "Maxwell_matvec_rhs": 10,
+          "S_actions": 10,
+          "projected_factorizations": 2,
+          "reduced_forward_RHS": 6,
+          "reduced_state_Goff_rhs": 6,
+          "forcing_rhs": 6,
+          "reduced_core_rhs": 24,
+          "compressed_material_columns": 6,
+          "compressed_B_current_columns": 15,
+          "same_material_full_state_cache_hits": 2
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.0001052499283105135,
+          "full_forward": 4.9165915697813034e-05,
+          "material_operator_refresh": 2.5582965463399887e-05,
+          "L": 7.541966624557972e-06,
+          "S": 5.541951395571232e-06,
+          "projected_core_factorization": 1.725088804960251e-05,
+          "illumination_forcing": 1.6874982975423336e-05,
+          "reduced_core_solve": 3.058393485844135e-05,
+          "reduced_forward": 0.0003976660082116723,
+          "compressed_injection": 1.337495632469654e-05,
+          "reduced_material_data_matrix": 0.00016795808915048838
+        },
+        "events": 20,
+        "peak_cpu_rss_bytes": 75612160,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_moving_galerkin_basis_requires_explicit_basis_derivative",
+      "status": "PASS",
+      "process_cpu_seconds": 0.002799999999999969,
+      "wall_seconds": 0.00320620893035084,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "moving_Galerkin_correct_fd": 3.7265658640731264e-11,
+        "moving_Galerkin_omitted_term_error": 0.021034365512581137
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.003182583022862673,
+        "process_cpu_seconds": 0.0027780000000000027,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 3,
+          "L_actions": 39,
+          "Maxwell_matvec_rhs": 39,
+          "S_actions": 21,
+          "projected_factorizations": 3,
+          "reduced_forward_RHS": 9,
+          "reduced_state_Goff_rhs": 9,
+          "forcing_rhs": 12,
+          "reduced_core_rhs": 12,
+          "B_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00010783399920910597,
+          "full_forward": 4.9291993491351604e-05,
+          "material_operator_refresh": 2.275104634463787e-05,
+          "L": 1.3748882338404655e-05,
+          "S": 1.2333039194345474e-05,
+          "projected_core_factorization": 2.3250002413988113e-05,
+          "illumination_forcing": 3.320805262774229e-05,
+          "reduced_core_solve": 3.71239148080349e-05,
+          "reduced_forward": 0.0005420860834419727,
+          "B": 8.584000170230865e-06
+        },
+        "events": 29,
+        "peak_cpu_rss_bytes": 75612160,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_multi_frequency_stack_uses_distinct_physics_shared_material",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0018710000000000115,
+      "wall_seconds": 0.001985791022889316,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "frequency_stack_adjoint": 2.8175329943955287e-16,
+        "frequency_stack_material_map": 2.7880985381669145e-16,
+        "source_selection_0": 0.0,
+        "source_selection_1": 0.0,
+        "source_selection_2": 0.0,
+        "stack_scope": "explicit concatenate and sum, no production multifrequency driver claimed"
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.001963124959729612,
+        "process_cpu_seconds": 0.0018489999999999895,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 2,
+          "full_forward_RHS": 6,
+          "full_LU_factorizations": 2,
+          "full_state_backward_residual_L_rhs": 6,
+          "full_state_receiver_rhs": 6,
+          "full_state_Goff_rhs": 6,
+          "material_operator_refreshes": 2,
+          "full_tangent_calls": 4,
+          "full_tangent_RHS": 42,
+          "full_tangent_receiver_rhs": 42,
+          "full_adjoint_calls": 2,
+          "full_adjoint_RHS": 6,
+          "full_adjoint_receiver_rhs": 6,
+          "same_material_full_state_cache_hits": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00021075003314763308,
+          "full_forward": 9.854102972894907e-05,
+          "material_operator_refresh": 4.373956471681595e-06,
+          "full_tangent": 0.00014566711615771055,
+          "full_adjoint": 6.02079089730978e-05
+        },
+        "events": 12,
+        "peak_cpu_rss_bytes": 75612160,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_online_payload_and_basis_capability_reject_offline_fields",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0044580000000000175,
+      "wall_seconds": 0.005622749915346503,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "online_chart_preserved": 0.0
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.005599915981292725,
+        "process_cpu_seconds": 0.004434999999999967,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00010516599286347628,
+          "full_forward": 4.850002005696297e-05,
+          "material_operator_refresh": 2.250075340270996e-06
+        },
+        "events": 3,
+        "peak_cpu_rss_bytes": 75628544,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_original_jvp_vjp_equal_adapter_and_factored_actions",
+      "status": "PASS",
+      "process_cpu_seconds": 0.001346999999999987,
+      "wall_seconds": 0.0013571670278906822,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "native_adapter_jvp": 0.0,
+        "L_inverse_B_S_factorization": 1.3635332237548815e-16,
+        "native_adapter_vjp": 0.0,
+        "full_realified_J_adjoint": 1.3870290763551531e-15,
+        "full_matrix_action": 2.8793270957438167e-16,
+        "full_matrix_pullback": 3.745333213250575e-16
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0013246251037344337,
+        "process_cpu_seconds": 0.0013140000000000374,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "full_tangent_calls": 2,
+          "full_tangent_RHS": 27,
+          "full_tangent_receiver_rhs": 27,
+          "B_rhs": 9,
+          "full_adjoint_calls": 1,
+          "full_adjoint_RHS": 3,
+          "full_adjoint_receiver_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00012850004713982344,
+          "full_forward": 6.245810072869062e-05,
+          "material_operator_refresh": 2.499902620911598e-06,
+          "full_tangent": 9.570806287229061e-05,
+          "B": 1.0707997716963291e-05,
+          "full_adjoint": 2.695806324481964e-05
+        },
+        "events": 7,
+        "peak_cpu_rss_bytes": 75710464,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_packing_whitening_multiple_sources_and_probe_columns",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0016570000000000196,
+      "wall_seconds": 0.0016644159331917763,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "packing_explicit_illumination_major": 0.0,
+        "packing_inverse": 0.0,
+        "packing_probe_columns": 0.0,
+        "packing_batched_inverse": 0.0,
+        "non_diagonal_whitening": 0.0,
+        "non_diagonal_whitened_adjoint": 1.885942752510171e-16,
+        "whitening_pair": 0.0
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0016368749784305692,
+        "process_cpu_seconds": 0.0016309999999999936,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 2,
+          "full_forward_RHS": 6,
+          "full_LU_factorizations": 2,
+          "full_state_backward_residual_L_rhs": 6,
+          "full_state_receiver_rhs": 6,
+          "full_state_Goff_rhs": 6,
+          "material_operator_refreshes": 2,
+          "full_tangent_calls": 1,
+          "full_tangent_RHS": 3,
+          "full_tangent_receiver_rhs": 3,
+          "full_adjoint_calls": 1,
+          "full_adjoint_RHS": 3,
+          "full_adjoint_receiver_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00023029104340821505,
+          "full_forward": 0.0001077079214155674,
+          "material_operator_refresh": 4.750094376504421e-06,
+          "full_tangent": 3.200001083314419e-05,
+          "full_adjoint": 3.7624966353178024e-05
+        },
+        "events": 8,
+        "peak_cpu_rss_bytes": 75776000,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_projection_complex_adjoint_and_current_unitary_gauge",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0049699999999999744,
+      "wall_seconds": 0.0065053750295192,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "projection_adjoint_False": 3.8055069929439026e-16,
+        "current_gauge_projection_False": 3.54829825634762e-16,
+        "current_gauge_state_False": 3.829980455246813e-16,
+        "current_gauge_tangent_False": 3.0007258117029423e-16,
+        "projection_adjoint_True": 2.5103096206730435e-16,
+        "current_gauge_projection_True": 5.142728164997477e-16,
+        "current_gauge_state_True": 5.151301265759685e-16,
+        "current_gauge_tangent_True": 5.508074370571863e-16
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.006479083094745874,
+        "process_cpu_seconds": 0.0049439999999999484,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "L_actions": 25,
+          "Maxwell_matvec_rhs": 25,
+          "S_actions": 32,
+          "projected_factorizations": 4,
+          "reduced_core_rhs": 48,
+          "reduced_forward_RHS": 12,
+          "reduced_state_Goff_rhs": 12,
+          "forcing_rhs": 12,
+          "B_rhs": 12
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00010912492871284485,
+          "full_forward": 5.120900459587574e-05,
+          "material_operator_refresh": 2.333894371986389e-06,
+          "L": 1.791701652109623e-05,
+          "S": 2.237583976238966e-05,
+          "projected_core_factorization": 6.891600787639618e-05,
+          "reduced_core_solve": 0.00014525128062814474,
+          "reduced_core_adjoint_solve": 2.204196061939001e-05,
+          "illumination_forcing": 4.641711711883545e-05,
+          "reduced_forward": 0.0007781668100506067,
+          "B": 4.0081911720335484e-05
+        },
+        "events": 48,
+        "peak_cpu_rss_bytes": 75792384,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_real_material_B_adjoint_batched_and_compressed",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0012830000000000341,
+      "wall_seconds": 0.001348958001472056,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "B_real_adjoint": 0.0,
+        "B_vector_batched_equivalence": 2.9851956148715245e-17,
+        "compressed_B": 2.1280238829703897e-16
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0012974999845027924,
+        "process_cpu_seconds": 0.0012309999999999821,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "B_rhs": 39,
+          "B_adjoint_rhs": 9,
+          "compressed_B_current_columns": 15
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00014154205564409494,
+          "full_forward": 6.029102951288223e-05,
+          "material_operator_refresh": 2.540997229516506e-06,
+          "B": 3.120908513665199e-05,
+          "B_adjoint": 1.1915923096239567e-05,
+          "compressed_injection": 1.2750038877129555e-05
+        },
+        "events": 9,
+        "peak_cpu_rss_bytes": 75825152,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_real_physical_hierarchy_nested_streams_and_breakdown",
+      "status": "PASS",
+      "process_cpu_seconds": 0.004545000000000021,
+      "wall_seconds": 0.00559750001411885,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "nested_prefix_0": 0.0,
+        "nested_prefix_1": 0.0,
+        "nested_prefix_2": 0.0,
+        "hierarchy_diagnostics": {
+          "degree": 2,
+          "rank": 11,
+          "added_rank": 9,
+          "degree_layers": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "joint_deflation": [
+            {
+              "input_columns": 3,
+              "rank": 3,
+              "deflated": 0,
+              "scale": 1.7320508075688772,
+              "threshold": 1.7320508075688773e-10,
+              "singular_values": [
+                1.321568302564859,
+                0.8984823646483697,
+                0.6679720518642311
+              ]
+            },
+            {
+              "input_columns": 3,
+              "rank": 3,
+              "deflated": 0,
+              "scale": 1.7320508075688772,
+              "threshold": 1.7320508075688773e-10,
+              "singular_values": [
+                1.2639011613404048,
+                0.8143642889090439,
+                0.6592465431742415
+              ]
+            },
+            {
+              "input_columns": 3,
+              "rank": 3,
+              "deflated": 0,
+              "scale": 1.7320508075688772,
+              "threshold": 1.7320508075688773e-10,
+              "singular_values": [
+                1.269207302892419,
+                0.5817087799636942,
+                0.4083819243190581
+              ]
+            }
+          ],
+          "separate_stream_recurrences": {
+            "O": [
+              {
+                "new_rank": 1,
+                "deflation": {
+                  "input_columns": 1,
+                  "rank": 1,
+                  "deflated": 0,
+                  "scale": 0.03472538342480219,
+                  "threshold": 3.4725383424802193e-12,
+                  "singular_values": [
+                    0.03359976469164283
+                  ]
+                },
+                "arnoldi_tail_norm": 1.0952722822992076e-17
+              },
+              {
+                "new_rank": 1,
+                "deflation": {
+                  "input_columns": 1,
+                  "rank": 1,
+                  "deflated": 0,
+                  "scale": 0.09144033358724762,
+                  "threshold": 9.144033358724762e-12,
+                  "singular_values": [
+                    0.05354679857882539
+                  ]
+                },
+                "arnoldi_tail_norm": 3.00692189549023e-17
+              }
+            ],
+            "P": [
+              {
+                "new_rank": 1,
+                "deflation": {
+                  "input_columns": 1,
+                  "rank": 1,
+                  "deflated": 0,
+                  "scale": 0.031420189276312536,
+                  "threshold": 3.1420189276312536e-12,
+                  "singular_values": [
+                    0.0299809860915881
+                  ]
+                },
+                "arnoldi_tail_norm": 4.8774790218652205e-18
+              },
+              {
+                "new_rank": 1,
+                "deflation": {
+                  "input_columns": 1,
+                  "rank": 1,
+                  "deflated": 0,
+                  "scale": 0.07466695891803127,
+                  "threshold": 7.466695891803127e-12,
+                  "singular_values": [
+                    0.04737110929102104
+                  ]
+                },
+                "arnoldi_tail_norm": 3.247109711108524e-17
+              }
+            ],
+            "M": [
+              {
+                "new_rank": 1,
+                "deflation": {
+                  "input_columns": 1,
+                  "rank": 1,
+                  "deflated": 0,
+                  "scale": 0.06500550803692871,
+                  "threshold": 6.500550803692872e-12,
+                  "singular_values": [
+                    0.06328432286504702
+                  ]
+                },
+                "arnoldi_tail_norm": 8.031916395612201e-18
+              },
+              {
+                "new_rank": 1,
+                "deflation": {
+                  "input_columns": 1,
+                  "rank": 1,
+                  "deflated": 0,
+                  "scale": 0.10343859379087239,
+                  "threshold": 1.0343859379087239e-11,
+                  "singular_values": [
+                    0.0551141927982121
+                  ]
+                },
+                "arnoldi_tail_norm": 1.4792110007097047e-17
+              }
+            ]
+          },
+          "orthogonality_error": 1.7254468718253248e-15,
+          "joint_core_is_single_Hessenberg": false
+        }
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.005567040992900729,
+        "process_cpu_seconds": 0.004514999999999991,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "F_actions": 31,
+          "Maxwell_matvec_rhs": 44,
+          "F_adjoint_actions": 4,
+          "retained_factorizations": 1,
+          "B_rhs": 3,
+          "L_actions": 6,
+          "S_adjoint_actions": 3,
+          "L_adjoint_actions": 3,
+          "forcing_rhs": 3,
+          "seed_O_input_rhs": 3,
+          "seed_P_input_rhs": 3,
+          "seed_M_input_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00011637492571026087,
+          "full_forward": 5.529192276299e-05,
+          "material_operator_refresh": 2.540997229516506e-06,
+          "F": 2.7708825655281544e-05,
+          "F_adjoint": 1.4666933566331863e-05,
+          "retained_core_factorization": 8.833943866193295e-06,
+          "B": 8.292030543088913e-06,
+          "L": 6.959075108170509e-06,
+          "S_adjoint": 4.375004209578037e-06,
+          "L_adjoint": 4.666042514145374e-06,
+          "illumination_forcing": 1.0791001841425896e-05,
+          "seed_O_compression": 3.0542025342583656e-05,
+          "seed_P_compression": 2.4000066332519054e-05,
+          "seed_M_compression": 2.1583051420748234e-05,
+          "joint_orthogonalization": 7.237493991851807e-05,
+          "native_stream_orthogonalization": 0.000126209226436913
+        },
+        "events": 33,
+        "peak_cpu_rss_bytes": 75857920,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_seed_zero_budgets_and_zero_deflated_blocks",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0019419999999999993,
+      "wall_seconds": 0.0021833329228684306,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "zero_seed_diagnostics": {
+          "O": {
+            "input_columns": 3,
+            "rank": 0,
+            "deflated": 3,
+            "scale": 0.0,
+            "threshold": 0.0,
+            "singular_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "source_count": 3,
+            "requested_rank": 1,
+            "provenance": "measured residual plus independent whitened data probes, C*",
+            "original_column_norms": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "no_truth_or_reference_step": true
+          },
+          "P": {
+            "input_columns": 3,
+            "rank": 0,
+            "deflated": 3,
+            "scale": 0.0,
+            "threshold": 0.0,
+            "singular_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "source_count": 3,
+            "requested_rank": 1,
+            "provenance": "all known illumination forcing, Kb",
+            "original_column_norms": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "no_truth_or_reference_step": true
+          },
+          "M": {
+            "input_columns": 3,
+            "rank": 0,
+            "deflated": 3,
+            "scale": 0.0,
+            "threshold": 0.0,
+            "singular_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "source_count": 3,
+            "requested_rank": 1,
+            "provenance": "real physical-L2 material probes and prior accepted step, KB",
+            "original_column_norms": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "no_truth_or_reference_step": true
+          }
+        }
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0021540839225053787,
+        "process_cpu_seconds": 0.0019140000000000268,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 2,
+          "full_forward_RHS": 6,
+          "full_LU_factorizations": 2,
+          "full_state_backward_residual_L_rhs": 6,
+          "full_state_receiver_rhs": 6,
+          "full_state_Goff_rhs": 6,
+          "material_operator_refreshes": 2,
+          "B_rhs": 3,
+          "S_adjoint_actions": 3,
+          "forcing_rhs": 3,
+          "seed_O_input_rhs": 3,
+          "seed_P_input_rhs": 3,
+          "seed_M_input_rhs": 3
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00011899997480213642,
+          "full_forward": 0.00010674993973225355,
+          "material_operator_refresh": 4.292931407690048e-06,
+          "B": 9.54093411564827e-06,
+          "S_adjoint": 3.2919924706220627e-06,
+          "illumination_forcing": 8.333008736371994e-06,
+          "seed_O_compression": 2.0999927073717117e-05,
+          "seed_P_compression": 1.7623882740736008e-05,
+          "seed_M_compression": 1.6333069652318954e-05,
+          "joint_orthogonalization": 7.915892638266087e-06
+        },
+        "events": 18,
+        "peak_cpu_rss_bytes": 75857920,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_singular_and_absolute_small_cores_rejected_and_fallback_named",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0017260000000000053,
+      "wall_seconds": 0.0022232920164242387,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "well_conditioned_absolute_small_core": {
+          "safe": false,
+          "sigma_min": 1e-12,
+          "sigma_max": 1e-12,
+          "condition": 1.0,
+          "relative_sigma_min": 1.0,
+          "absolute_scaled_sigma_min": 1e-12,
+          "scale_definition": "max(1, full L Frobenius norm)"
+        },
+        "singular_physical_projected_sigma": 2.6846511477385785e-17,
+        "absolute_small_physical_projected_sigma": 9.595923789976091e-13
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0021990829845890403,
+        "process_cpu_seconds": 0.001701000000000008,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 1,
+          "full_forward_RHS": 3,
+          "full_LU_factorizations": 1,
+          "full_state_backward_residual_L_rhs": 3,
+          "full_state_receiver_rhs": 3,
+          "full_state_Goff_rhs": 3,
+          "material_operator_refreshes": 1,
+          "L_actions": 16,
+          "Maxwell_matvec_rhs": 16,
+          "S_actions": 12,
+          "petrov_fallbacks": 1,
+          "projected_factorizations": 1
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.00011037499643862247,
+          "full_forward": 5.0999922677874565e-05,
+          "material_operator_refresh": 2.2079329937696457e-06,
+          "L": 1.4708959497511387e-05,
+          "S": 8.292030543088913e-06,
+          "frozen_test_petrov_QR": 9.875046089291573e-06,
+          "projected_core_factorization": 1.037493348121643e-05
+        },
+        "events": 12,
+        "peak_cpu_rss_bytes": 75857920,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.IntegrityTests.test_tiny_voxel_quadratic_KKT_and_constraints",
+      "status": "PASS",
+      "process_cpu_seconds": 0.0019790000000000085,
+      "wall_seconds": 0.002079833997413516,
+      "metrics": {
+        "scope": "2^3 real vector-Maxwell algebra only",
+        "precision": "complex128/float64",
+        "seed": 2026100501,
+        "voxel_known_step": 4.782119356656691e-09,
+        "voxel_result": {
+          "success": true,
+          "iterations": 4,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "solver": "L-BFGS-B-common-quadratic",
+          "kkt_relative": 2.5649983693797325e-09,
+          "feasibility_violation": 0.0,
+          "complementarity": 0.0,
+          "active_constraints": 8,
+          "multiplier_source": "nonnegative active constraint least-squares; validated residual",
+          "no_post_clipping": true,
+          "objective_scale": 0.5,
+          "quadratic_value": -0.00024899200778175535,
+          "gradient_norm": 0.018301137514123517
+        }
+      },
+      "cost_receipt": {
+        "wall_seconds": 0.0020485420245677233,
+        "process_cpu_seconds": 0.0019460000000000033,
+        "gpu_occupation_seconds": 0.0,
+        "counts": {
+          "full_forward_calls": 2,
+          "full_forward_RHS": 6,
+          "full_LU_factorizations": 2,
+          "full_state_backward_residual_L_rhs": 6,
+          "full_state_receiver_rhs": 6,
+          "full_state_Goff_rhs": 6,
+          "material_operator_refreshes": 2,
+          "full_tangent_calls": 1,
+          "full_tangent_RHS": 48,
+          "full_tangent_receiver_rhs": 48,
+          "material_subproblems": 2,
+          "material_optimizer_iterations": 4
+        },
+        "exclusive_walls": {
+          "physical_geometry_setup": 0.0002364589599892497,
+          "full_forward": 0.00010316597763448954,
+          "material_operator_refresh": 4.582921974360943e-06,
+          "full_tangent": 7.041706703603268e-05,
+          "voxel_bound_quadratic": 0.0003832500660791993,
+          "material_subproblem": 0.00011741591151803732
+        },
+        "events": 10,
+        "peak_cpu_rss_bytes": 75907072,
+        "CPU_memory_measurement_available": true,
+        "peak_gpu_allocated_bytes": 0,
+        "peak_gpu_reserved_bytes": 0,
+        "device": "cpu",
+        "CPU_in_GPU_job_included": true,
+        "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans"
+      }
+    },
+    {
+      "test": "test_backend_integrity.SuppliedCounterexamples.test_frozen_protocol_algebra_and_counterexample_regressions",
+      "status": "PASS",
+      "process_cpu_seconds": 0.03647600000000001,
+      "wall_seconds": 0.03682116698473692,
+      "metrics": {
+        "theory": {
+          "scope": "Synthetic finite-dimensional algebra only. Not A17/A18/A19 replay, not a 3-D Maxwell reconstruction benchmark.",
+          "random_trials": 20,
+          "checks": {
+            "schur_feedback_identity": {
+              "max": 5.394273004581926e-16,
+              "min": 4.2681087979496565e-16,
+              "trials": 20
+            },
+            "full_resolvent_schur_identity": {
+              "max": 9.695387715447352e-16,
+              "min": 7.3190718873353e-16,
+              "trials": 20
+            },
+            "dual_residual_defect_identity": {
+              "max": 1.2248183369632969e-15,
+              "min": 7.815242158531667e-16,
+              "trials": 20
+            },
+            "dual_residual_bound_ratio": {
+              "max": 0.2968154176192359,
+              "min": 0.18024663338215638,
+              "trials": 20
+            },
+            "galerkin_schur_equivalence": {
+              "max": 7.233224146244421e-16,
+              "min": 5.982771824437945e-16,
+              "trials": 20
+            },
+            "gn_stationarity_defect_identity": {
+              "max": 1.334341132940771e-15,
+              "min": 2.0612820007787072e-16,
+              "trials": 20
+            },
+            "gn_exact_gap_relative_error": {
+              "max": 3.2516644759261495e-16,
+              "min": 0.0,
+              "trials": 20
+            },
+            "hessian_relative_bound_ratio": {
+              "max": 0.321125596202834,
+              "min": 0.2413299280890177,
+              "trials": 20
+            },
+            "degree_step_innovation_identity": {
+              "max": 6.4083961571508195e-15,
+              "min": 1.2045872886732689e-15,
+              "trials": 20
+            },
+            "unitary_gauge_resolvent_identity": {
+              "max": 5.378460284393547e-16,
+              "min": 4.160192329902581e-16,
+              "trials": 20
+            },
+            "prior_safe_restricted_bound_ratio": {
+              "max": 0.9637296151024387,
+              "min": 0.864819020713481,
+              "trials": 20
+            }
+          },
+          "two_sided_moment_relative_errors_k_0_to_8": [
+            2.9671879933913647e-15,
+            3.4735638091641822e-15,
+            3.918663231122729e-15,
+            4.69860415234019e-15,
+            6.161291914735989e-15,
+            3.730429514271141e-15,
+            0.6050333035713522,
+            1.0052361772151173,
+            0.8240530054039591
+          ],
+          "delayed_feedback": [
+            {
+              "degree": 0,
+              "rank": 2,
+              "J": 0.0,
+              "step": 0.0
+            },
+            {
+              "degree": 1,
+              "rank": 4,
+              "J": 0.0,
+              "step": 0.0
+            },
+            {
+              "degree": 2,
+              "rank": 6,
+              "J": 0.0,
+              "step": 0.0
+            },
+            {
+              "degree": 3,
+              "rank": 7,
+              "J": 0.26214400000000015,
+              "step": 1.5537269618858762
+            }
+          ],
+          "delayed_feedback_full_J": 0.2621440000000001,
+          "nonnormal_counterexample": {
+            "spectral_radius": 0.0,
+            "resolvent_norm": 100.00999900019995
+          },
+          "galerkin_breakdown": {
+            "full_determinant": 1.0,
+            "reduced_entry": 0.0
+          },
+          "global_norm_counterexample": {
+            "task_error": 0.0,
+            "operator_error": 1.0
+          },
+          "false_weak_counterexample": {
+            "reduced_data_change": 0.0,
+            "full_data_change": 1.0
+          },
+          "scalar_bias_variance_counterexample": [
+            {
+              "a_m": 0.1,
+              "bias_squared": 0.00826446280991736,
+              "variance": 0.008264462809917356,
+              "risk": 0.016528925619834718
+            },
+            {
+              "a_m": 0.2,
+              "bias_squared": 0.18367346938775514,
+              "variance": 0.020408163265306124,
+              "risk": 0.20408163265306126
+            },
+            {
+              "a_m": 0.4,
+              "bias_squared": 0.28994082840236696,
+              "variance": 0.023668639053254444,
+              "risk": 0.3136094674556214
+            },
+            {
+              "a_m": 0.8,
+              "bias_squared": 0.006574141709276818,
+              "variance": 0.01168736303871439,
+              "risk": 0.01826150474799121
+            },
+            {
+              "a_m": 1.0,
+              "bias_squared": 0.00826446280991736,
+              "variance": 0.008264462809917356,
+              "risk": 0.016528925619834718
+            }
+          ],
+          "frozen_basis_derivative_relative_error": 3.091430283932506e-10,
+          "moving_basis_missing_derivative_relative_error": 0.41247486969197433,
+          "status": "ALL ASSERTIONS PASSED"
+        }
+      }
+    }
+  ]
+}

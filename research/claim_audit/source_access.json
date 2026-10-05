@@ -1,0 +1,54 @@
+{
+  "audit_date": "2026-10-05",
+  "mode": "Evidence QA, bounded exact-seed audit",
+  "primary_transport": "ScholarQA CLI",
+  "collect_status": "PARTIAL_FAILURE_HTTP_429_ALL_4_OPERATIONS",
+  "candidate_paper_count": 0,
+  "verify_status": "SUCCESS_3_OF_3",
+  "unresolved_ids": [],
+  "sources": [
+    {
+      "ref": "R04",
+      "version": "arXiv v1, 2013-11-04",
+      "access": "HTML full-text available; targeted §§2.1,3.1,3.3,3.3.1,3.5,4,5 read",
+      "tier": "A for recorded claims; C for journal metadata",
+      "gaps": [
+        "2015 journal full-text not compared",
+        "experiments not rerun",
+        "global bibliography not searched"
+      ]
+    },
+    {
+      "ref": "R05",
+      "version": "arXiv v1, 2020-03-24",
+      "access": "PDF text available, 23 pages; targeted §§2.2–2.4,3,4.1,5,6 read",
+      "tier": "A for recorded claims",
+      "gaps": [
+        "PDF screenshots unavailable in web tool",
+        "no independent numerical replication",
+        "no independent probability-proof audit or figure/table visual audit"
+      ]
+    },
+    {
+      "ref": "R06",
+      "version": "arXiv v1, 2022-12-16",
+      "access": "abstract plus canonical metadata only",
+      "tier": "B for contextual claim",
+      "gaps": [
+        "Full text intentionally outside this bounded optional contextual check",
+        "later Automatica version not independently verified",
+        "A20 finite-power proposition not attributed to R06"
+      ]
+    }
+  ],
+  "screenshot_attempt": {
+    "url": "https://arxiv.org/pdf/2003.10938",
+    "pageno": 7,
+    "status": "ERROR",
+    "error": "Unable to resolve screenshot call because content type is not application/pdf and web screenshot is not enabled"
+  },
+  "no_pdf_saved": true,
+  "no_hash_checks": true,
+  "novelty_judgment_owner": "parent Codex",
+  "science_gate_status": "NOT_EVALUATED_BY_WORKER"
+}

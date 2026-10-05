@@ -1,0 +1,41 @@
+{
+  "R04": {
+    "paper_id": "f04f1cf95e410294db88d6c0211e03eb353a260c",
+    "arxiv": "1311.0922",
+    "url": "https://arxiv.org/html/1311.0922",
+    "title": "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+    "authors": [
+      "Eric de Sturler",
+      "Serkan Gugercin",
+      "Misha E. Kilmer",
+      "Saifon Chaturantabut",
+      "Christopher Beattie",
+      "Meghan O’Connell"
+    ],
+    "preprint_year": 2013,
+    "journal_year": 2015,
+    "doi": "10.1137/130946320"
+  },
+  "R05": {
+    "paper_id": "956255b98e3715a3ec136d8bf151d006ce1e48d3",
+    "arxiv": "2003.10938",
+    "url": "https://arxiv.org/pdf/2003.10938",
+    "title": "Robust Parameter Inversion using Adaptive Reduced Order Models",
+    "authors": [
+      "Drayton Munster",
+      "Eric de Sturler"
+    ],
+    "preprint_year": 2020
+  },
+  "R06": {
+    "paper_id": "24b60af16853e4d0ce0b8c1977a1b4b406413a6e",
+    "arxiv": "2212.08589",
+    "url": "https://arxiv.org/abs/2212.08589",
+    "title": "Data-Driven Model Reduction by Two-Sided Moment Matching",
+    "authors": [
+      "Junyu Mao",
+      "Giordano Scarciotti"
+    ],
+    "preprint_year": 2022
+  }
+}

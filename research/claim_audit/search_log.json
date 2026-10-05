@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-05",
+  "question": "R04/R05 已覆盖什么逆问题 ROM 机制，A20 哪些声称仍需独立 Maxwell 实证？",
+  "subquestions": [
+    "前向/Jacobian 传递表示及两侧基保持哪些导数？",
+    "自适应模型精度/随机审计与成本评价的条件是什么？"
+  ],
+  "inclusion": [
+    "R04 arXiv:1311.0922",
+    "R05 arXiv:2003.10938",
+    "optional protocol R06 arXiv:2212.08589 abstract context"
+  ],
+  "exclusions": [
+    "no citation-neighbor expansion",
+    "no additional directions",
+    "no broad novelty search",
+    "no paper reproduction",
+    "no scientific final verdict"
+  ],
+  "queries": [
+    "Nonlinear Parametric Inversion using Interpolatory Model Reduction",
+    "Robust Parameter Inversion Using Adaptive Reduced Order Models"
+  ],
+  "limits": {
+    "paper_limit_per_query": 2,
+    "snippet_limit_per_query": 3,
+    "expansion_depth": 0
+  },
+  "screening": "collect yielded no candidates owing to 429; exact pre-specified seeds used for metadata verification and primary-source reading",
+  "commands_stored_in": "cpu_ledger.json",
+  "stop_rule": "stop after exact-seed claim/locator extraction; no global novelty claim"
+}

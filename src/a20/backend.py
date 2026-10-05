@@ -221,7 +221,7 @@ class Adapter:
             exciting = self.model.incident + self.model.goff_apply((np.sqrt(self.problem.volume)*current).T).T
             a, da = kernel.polarizability(x, self.problem.volume, self.problem.frequency)
             return ReducedState(np.asarray(x).copy(), current, exciting, da,
-                                current@self.model.GS.T, self._version)
+                                current@self.model.GS.T, self._version, self.model)
 
     def version(self, x):
         self._activate(x)
@@ -230,6 +230,8 @@ class Adapter:
     def injection_factor(self, x, state):
         if not np.array_equal(x, state.chi):
             raise ValueError('B/state material mismatch')
+        if state.model is not self.model:
+            raise ValueError('B/state source/frequency/geometry mismatch')
         return state.exciting.reshape(self.P, self.model.N, 3)*state.da[None, :, None]/np.sqrt(self.problem.volume)
 
     def apply_B(self, x, state, d):
@@ -265,6 +267,12 @@ class Adapter:
             return np.concatenate((c, 1j*c), axis=2)
 
     def full_tangent_action(self, x, state, d):
+        if not np.array_equal(x, state.chi):
+            raise ValueError('Full tangent state/material mismatch')
+        if getattr(state, 'reduced', False):
+            raise ValueError('Full tangent requires a full state')
+        if state.model is not self.model:
+            raise ValueError('Full tangent source/frequency/geometry mismatch')
         self.book.check()
         columns = 1 if d.ndim == 1 else d.shape[1]
         with self.book.span('full_tangent', full_tangent_calls=1, full_tangent_RHS=self.P*columns,
@@ -273,6 +281,12 @@ class Adapter:
             return self.whiten(pack(out))
 
     def full_adjoint_action(self, x, state, w):
+        if not np.array_equal(x, state.chi):
+            raise ValueError('Full adjoint state/material mismatch')
+        if getattr(state, 'reduced', False):
+            raise ValueError('Full adjoint requires a full state')
+        if state.model is not self.model:
+            raise ValueError('Full adjoint source/frequency/geometry mismatch')
         if w.ndim != 1:
             return np.column_stack([self.full_adjoint_action(x, state, w[:, i]) for i in range(w.shape[1])])
         with self.book.span('full_adjoint', full_adjoint_calls=1, full_adjoint_RHS=self.P,
@@ -286,6 +300,10 @@ class Adapter:
     def full_objective(self, x, prior=1e-5, *, state=None):
         if state is None:
             state = self.full_state(x)
+        if getattr(state, 'reduced', False):
+            raise ValueError('Full objective requires a full state')
+        if state.model is not self.model:
+            raise ValueError('Full objective source/frequency/geometry mismatch')
         if not np.array_equal(x, state.chi):
             raise ValueError('Objective state mismatch')
         r = self.residual(state)
@@ -309,6 +327,11 @@ class ReducedState:
     da: np.ndarray
     field: np.ndarray
     version: int
+    model: object
+
+    @property
+    def reduced(self):
+        return True
 
 
 class BasisView:
