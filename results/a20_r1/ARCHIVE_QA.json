@@ -1,0 +1,11 @@
+{
+  "scope": "release ZIP construction and CRC QA",
+  "status": "PASS",
+  "process_cpu_seconds": 0.706714,
+  "GPU_seconds": 0,
+  "fee_source": "already charged 30s conservative planning/setup/archive/publication allowance; non-additive component",
+  "asset": "a20-opm-imaging-v0.2.0-r1-mechanism.zip",
+  "asset_bytes": 15821105,
+  "source_commit": "847540b323392d32e3431af847a3d398b9240126",
+  "new_SHA256_checks": 0
+}

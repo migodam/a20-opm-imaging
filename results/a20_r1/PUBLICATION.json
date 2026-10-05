@@ -1,17 +1,81 @@
 {
-  "schema": "a20.r1.publication.v1",
-  "status": "PREPARED_NOT_YET_PUSHED",
-  "repo": "https://github.com/migodam/a20-opm-imaging",
+  "status": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
+  "checked_at_UTC": "2026-10-05T19:48:22.901974+00:00",
+  "release_commit": "847540b323392d32e3431af847a3d398b9240126",
+  "verified_remote_main_commit_before_receipt_followup": "847540b323392d32e3431af847a3d398b9240126",
   "release_tag": "v0.2.0-r1-mechanism",
+  "repo_url": "https://github.com/migodam/a20-opm-imaging",
   "release_url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.2.0-r1-mechanism",
   "raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
-  "scientific_status": "D_INCONCLUSIVE; legal Gate B FAIL; Phase2/NN NOT_RUN",
-  "scientific_gate": "GATE_DECISION.json",
-  "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
-  "physics_source_commit": "5231aea98f6945a77c4f83f030a57248065695ef",
-  "release_commit": null,
-  "verified_remote_main_commit": null,
+  "asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.2.0-r1-mechanism/a20-opm-imaging-v0.2.0-r1-mechanism.zip",
+  "asset_bytes": 15821105,
+  "asset_members": 1501,
+  "asset_ZIP_CRC": "PASS",
   "old_release_retained": true,
-  "anonymous_checks": "NOT_RUN",
-  "new_SHA256_checks": 0
+  "steps": [
+    {
+      "name": "repository",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging",
+      "HTTP": 200,
+      "bytes": 5456,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "remote-main",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/git/ref/heads/main",
+      "HTTP": 200,
+      "bytes": 344,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "release-api",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.2.0-r1-mechanism",
+      "HTTP": 200,
+      "bytes": 4991,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "release-page",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.2.0-r1-mechanism",
+      "HTTP": 200,
+      "bytes": 204929,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "old-release-retained",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.1.0-pilot",
+      "HTTP": 200,
+      "bytes": 5153,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "raw-start-here",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+      "HTTP": 200,
+      "bytes": 5081,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "release-asset-download",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.2.0-r1-mechanism/a20-opm-imaging-v0.2.0-r1-mechanism.zip",
+      "HTTP": 200,
+      "bytes": 15821105,
+      "authorization_header": false,
+      "cookies": false
+    }
+  ],
+  "anonymous_requests_only": true,
+  "new_SHA256_checks": 0,
+  "process_cpu_seconds": 0.226833,
+  "fee_source": "already charged 30s conservative planning/setup/archive/publication allowance; non-additive component",
+  "scientific_status": "D_INCONCLUSIVE; Gate A/C HOLD, legal Gate B FAIL; Phase2/NN NOT_RUN",
+  "physics_source_commit": "5231aea98f6945a77c4f83f030a57248065695ef",
+  "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+  "post_release_followup": "a receipt-only repository commit will follow; release remains frozen at release_commit"
 }
