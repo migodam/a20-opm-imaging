@@ -1,0 +1,8 @@
+[
+  {
+    "stage": "external CPU ledger assembly",
+    "error": "KeyError process_cpu_seconds; worker used worker_actual_CPU_seconds",
+    "resolution": "Schema corrected; original worker receipt preserved",
+    "CPU_scope": "included in conservative overhead allowance"
+  }
+]

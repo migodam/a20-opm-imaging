@@ -27,5 +27,13 @@
   {
     "scope": "external ledger assembly",
     "process_cpu_seconds": 0.0012560000000000002
+  },
+  {
+    "scope": "conditional noise/warm module validation",
+    "process_cpu_seconds": 0.087174
+  },
+  {
+    "scope": "final source syntax and ledger assembly",
+    "process_cpu_seconds": 0.013227999999999997
   }
 ]
