@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "process_cpu_seconds": 0.081017,
+  "wall_seconds": 0.1004927079193294,
+  "physics_actions": 0,
+  "scope": "missing reference versus actual method failure gate regression; imports included"
+}

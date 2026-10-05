@@ -86,5 +86,10 @@
     "scope": "phase separated plot tool validation",
     "process_cpu_seconds": 0.031074,
     "receipt": "results/plot_replay_states_worker_receipt.json"
+  },
+  {
+    "scope": "missing reference versus actual method failure gate regression; imports included",
+    "process_cpu_seconds": 0.081017,
+    "receipt": "results/tests/REFERENCE_GATE_REGRESSION.json"
   }
 ]

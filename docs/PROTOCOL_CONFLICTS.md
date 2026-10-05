@@ -13,3 +13,5 @@
 8. **重试 cohort 不能自动混合。** 单个完整 replay cohort 从空结果开始；不同run产生重复(parent,state,method,degree)时，gate保持HOLD，直到显式声明合规cohort。不能删除失败来制造通过。首次replay没有重试选择。
 
 9. **跨任务计时条款纠正。** 一次文档整理误把之前 A19 的五次计时要求移入 A20；对照本轮 root 执行合同、lightweight spec 及用户批准 A20 计划后已移除。A20 没有规定五次/两次重复。42 是六对象×七方法的初始主矩阵，不是已授权同条件 warm 计时重复的全局次数上限；warm及噪声的所有实际重建/失败仍全额进入12小时GPU、2小时CPU预算。纠正在任何A1或timing动作之前完成，没有调整已执行replay、数值门槛或结果。
+
+10. **求解失败与缺参考可以同时存在。** 真实 voxel replay 暴露了这种情况：QP 返回 success，但 KKT 未达固定 `1e-8`，完整参考也被拒绝。原 gate classifier 将 FAILED 行全部归入实际失败，可能在仅余参考上计算 median，而没有单列缺参考。修正仅作用于离线 gate 汇总：保留 `observed_failures` 和 `method_validation_status=FAIL`，同时以 `missing_reference_states` 阻止完整12-state H-step gate，记 HOLD。五项无物理回归检查通过。正在运行的 replay 源码、QP、阈值、预算和失败行均不改动；原 job 内自动 gate 与修正后的最终 gate 分别留存，不使用已有不合格步生成参考。

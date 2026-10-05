@@ -107,7 +107,13 @@ def eligibility(root, config):
         observed_failures=[r for r in unique if r.get('status') in ('FAILED','FAIL','INVALID')
                            or r.get('full_fallback_used',r.get('fullfallback_used',False))]
         unresolved=[r for r in unique if r not in good and r not in observed_failures]
-        if not missing and not duplicates and not unexpected and not unresolved:
+        # A solver failure and an unavailable full reference can coexist.
+        # Keep the actual failure, but never compute the registered H median
+        # on the remaining references and call it a complete-cohort screen.
+        missing_references=[(r.get('parent_object_id',r.get('parent_id')),r.get('iteration'))
+                            for r in unique
+                            if str(r.get('reference_status','')).startswith('MISSING')]
+        if not missing and not duplicates and not unexpected and not unresolved and not missing_references:
             median = float(np.median(vals)) if vals else None
             ok = not observed_failures and median is not None and median<=config['replay_median_H_error_gate']
             decision = 'PASS' if ok else 'FAIL'
@@ -118,6 +124,8 @@ def eligibility(root, config):
         answer['degrees'][str(degree)] = {'status': decision, 'valid_states': len(good),
             'missing_states':sorted(missing),'duplicate_states':sorted(duplicates),
             'unexpected_states':unexpected,'observed_failures':len(observed_failures),
+            'missing_reference_states':sorted(missing_references),
+            'method_validation_status':'FAIL' if observed_failures else ('HOLD' if missing or duplicates or unresolved else 'PASS'),
             'unresolved_reference_or_floor':len(unresolved),
             'median_relative_H_step_error': median, 'worst_relative_H_step_error': float(max(vals)) if vals else None}
     if all(r['status']!='HOLD' for r in answer['degrees'].values()):
