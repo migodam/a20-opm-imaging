@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "a20-opm-imaging"
-version = "0.1.0"
-description = "Bounded deterministic OPM vector-Maxwell material imaging pilot"
+version = "0.2.0"
+description = "Bounded OPM vector-Maxwell pilot and R1 mechanism diagnosis archive"
 requires-python = ">=3.10"
 dependencies = ["numpy", "scipy"]
 

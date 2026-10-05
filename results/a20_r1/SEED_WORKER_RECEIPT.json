@@ -122,5 +122,116 @@
     "tests/test_r1_seeds.py",
     "src/a20/imaging.py"
   ],
-  "inclusive_common_and_scaffold_time_attribution": "PASS"
+  "inclusive_common_and_scaffold_time_attribution": "PASS",
+  "baseline_conflict_code_audit": {
+    "attempts": [
+      {
+        "phase": "read_inventory_and_source_anchors",
+        "inclusive_process_cpu_seconds": 0.03159,
+        "wall_seconds": 0.00634999992325902,
+        "new_physics_runs": 0,
+        "new_QP_solves": 0
+      },
+      {
+        "phase": "cached_rows_config_and_source_comparison",
+        "inclusive_process_cpu_seconds": 0.135656,
+        "wall_seconds": 0.11298924998845905,
+        "new_physics_runs": 0,
+        "new_QP_solves": 0
+      },
+      {
+        "phase": "targeted_original_and_conflict_call_paths",
+        "inclusive_process_cpu_seconds": 0.046740000000000004,
+        "wall_seconds": 0.02153420797549188,
+        "new_physics_runs": 0,
+        "new_QP_solves": 0
+      },
+      {
+        "phase": "saved_late_early_QP_comparison",
+        "inclusive_process_cpu_seconds": 0.131684,
+        "wall_seconds": 0.17049566691275686,
+        "new_physics_runs": 0,
+        "new_QP_solves": 0
+      },
+      {
+        "phase": "write_code_audit_artifact",
+        "inclusive_process_cpu_seconds": 0.126166,
+        "wall_seconds": 0.10050512501038611,
+        "new_physics_runs": 0,
+        "new_QP_solves": 0,
+        "failed": false
+      }
+    ],
+    "cpu_limit_seconds": 2.0,
+    "cumulative_process_cpu_seconds": 0.471836,
+    "status": "CODE_AUDIT_COMPLETE_CAUSE_UNPROVEN",
+    "artifact": "results/a20_r1/BASELINE_CONFLICT_CODE_AUDIT.md",
+    "saved_comparison_metadata": [
+      {
+        "parent": 2001,
+        "iteration": 17,
+        "degree_layers_equal": true,
+        "actual_seed_ranks_equal": true,
+        "seed_rng_equal": true,
+        "step_relative_error": 8.59417966537516e-11,
+        "new_QP_iterations": 65,
+        "old_QP_iterations": 63
+      },
+      {
+        "parent": 2005,
+        "iteration": 17,
+        "degree_layers_equal": true,
+        "actual_seed_ranks_equal": true,
+        "seed_rng_equal": true,
+        "step_relative_error": 3.62472909067155e-14,
+        "new_QP_iterations": 64,
+        "old_QP_iterations": 64
+      },
+      {
+        "parent": 2003,
+        "iteration": 17,
+        "degree_layers_equal": true,
+        "actual_seed_ranks_equal": true,
+        "seed_rng_equal": true,
+        "step_relative_error": 2.5348397171930662e-14,
+        "new_QP_iterations": 55,
+        "old_QP_iterations": 61
+      },
+      {
+        "parent": 2007,
+        "iteration": 17,
+        "degree_layers_equal": true,
+        "actual_seed_ranks_equal": true,
+        "seed_rng_equal": true,
+        "step_relative_error": 5.283734753372389e-15,
+        "new_QP_iterations": 0,
+        "old_QP_iterations": 0
+      },
+      {
+        "parent": 2013,
+        "iteration": 17,
+        "degree_layers_equal": true,
+        "actual_seed_ranks_equal": true,
+        "seed_rng_equal": true,
+        "step_relative_error": 1.3499038302417581e-14,
+        "new_QP_iterations": 0,
+        "old_QP_iterations": 0
+      },
+      {
+        "parent": 2001,
+        "iteration": 0,
+        "degree_layers_equal": true,
+        "actual_seed_ranks_equal": true,
+        "seed_rng_equal": true,
+        "step_relative_error": 1.670492038118766e-06,
+        "new_QP_iterations": 99,
+        "old_QP_iterations": 94
+      }
+    ],
+    "source_and_raw_evidence_modified": false,
+    "failed_attempts": 0,
+    "new_physics_runs": 0,
+    "new_QP_solves": 0
+  },
+  "total_worker_cpu_including_baseline_audit": 2.707358
 }

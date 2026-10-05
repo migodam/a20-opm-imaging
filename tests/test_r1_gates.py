@@ -321,7 +321,13 @@ class StaticReport(unittest.TestCase):
             def __getattr__(self, name):
                 def call(*args, **kwargs):
                     self.calls.append((name, args, kwargs))
-                    return object() if name == "get_xaxis_transform" else None
+                    if name == "get_xaxis_transform": return object()
+                    if name == "get_legend_handles_labels":
+                        labels = [k["label"] for n,a,k in self.calls if n == "scatter" and k.get("label")]
+                        return [object() for _ in labels], labels
+                    if name == "table":
+                        return types.SimpleNamespace(auto_set_font_size=lambda *a: None, set_fontsize=lambda *a: None)
+                    return None
                 return call
         figures = []
         class Figure:
@@ -329,7 +335,7 @@ class StaticReport(unittest.TestCase):
                 self.axes = []
                 self.saved = []
                 figures.append(self)
-            def subplots(self, *args):
+            def subplots(self, *args, **kwargs):
                 n = args[0]*args[1] if len(args) == 2 else 1
                 self.axes = [Axis() for _ in range(n)]
                 return self.axes[0] if n == 1 else self.axes
@@ -337,6 +343,7 @@ class StaticReport(unittest.TestCase):
             def clear(self):pass
             def text(self, *args, **kwargs):pass
             def suptitle(self, *args, **kwargs):pass
+            def legend(self, *args, **kwargs):pass
         with tempfile.TemporaryDirectory() as temp:
             with patch.dict(sys.modules, {"matplotlib": types.ModuleType("matplotlib")}), patch("a20_r1.report._new_figure", Figure):
                 result = write_report(temp, anatomy_fixture(), {}, make_figures=True)

@@ -1,0 +1,193 @@
+{
+  "job": "r1-report-local-01",
+  "experiment_id": "r1-report-local-01",
+  "source_commit": "5231aea98f6945a77c4f83f030a57248065695ef",
+  "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+  "stage": "report",
+  "device": "cpu",
+  "config": {
+    "schema": "a20.r1.frozen.v1",
+    "precision": "complex128/float64",
+    "parents": [
+      2001,
+      2005,
+      2003,
+      2007,
+      2013
+    ],
+    "replay_iterations": [
+      0,
+      17
+    ],
+    "stress_parents": [
+      2007,
+      2010
+    ],
+    "master_seed": 20261005,
+    "random_control_seeds": [
+      20261005,
+      20261006,
+      20261007
+    ],
+    "retained_rank": 8,
+    "seed_rank_O": 4,
+    "seed_rank_P": 4,
+    "seed_rank_M": 4,
+    "replay_degrees": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "live_degrees": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "orthogonal_rank_rtol": 1e-10,
+    "core_relative_sigma_floor": 1e-10,
+    "core_absolute_scaled_sigma_floor": 1e-10,
+    "core_condition_cap": 10000000000.0,
+    "fallbacks": [
+      "frozen_test_petrov_qr",
+      "full"
+    ],
+    "prior": 1e-05,
+    "lm0": 0.01,
+    "lm_decay": 0.3,
+    "lm_decay_period": 3,
+    "max_updates": 18,
+    "real_lower": -0.5,
+    "imag_lower": 0.0,
+    "feasibility_tolerance": 1e-08,
+    "qp_kkt_rtol": 1e-08,
+    "qp_maxiter": 200,
+    "armijo": 0.0001,
+    "backtracking": 0.5,
+    "line_trials": 24,
+    "common_full_kkt_rtol": 1e-06,
+    "small_step": 1e-06,
+    "small_step_first_iteration": 9,
+    "reference_error_floor": 1e-06,
+    "imaginary_denominator_floor_fraction": 1e-12,
+    "replay_H_relative_floor": 1e-12,
+    "replay_median_H_error_gate": 0.05,
+    "final_median_excess_gate": 0.05,
+    "final_worst_excess_gate": 0.15,
+    "rank_fraction_target": 0.35,
+    "deployment_wall_ratio_gate": 0.8,
+    "budget_gpu_wall_seconds": 43200,
+    "budget_cpu_seconds": 7200,
+    "cpu_epilogue_reserve_seconds": 300,
+    "gpu_preoperation_reserve_seconds": 120,
+    "gpu_memory_warning_fraction": 0.8,
+    "gpu_memory_stop_fraction": 0.9,
+    "dataset_exposure": "historically_exposed_feasibility",
+    "data_scale_scope": "original measured-data norm normalization; not calibrated noise covariance",
+    "new_sha256_checks": false,
+    "no_NN_or_solver_acceleration": true,
+    "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+    "base_config": "configs/frozen.json",
+    "phase2_parents": [
+      2001,
+      2007,
+      2013
+    ],
+    "current_rank_cap": 56,
+    "baseline_reproduction_rtol": 1e-09,
+    "oracle_capture_threshold": 0.99999999,
+    "oracle_gate_median": 0.3,
+    "oracle_gate_parent_ratio": 0.5,
+    "oracle_gate_min_parents": 4,
+    "legal_gate_median": 0.5,
+    "legal_gate_baseline_ratio": 0.3,
+    "early_gate_absolute": 0.05,
+    "early_gate_excess": 0.02,
+    "negative_kill_rank_tolerance": 2,
+    "match_action_tolerance": 0.1,
+    "closed_loop_quality_ratio": 1.15,
+    "closed_loop_improvement_ratio": 0.8,
+    "closed_loop_vector_ratio": 0.5,
+    "closed_loop_wall_ratio": 0.8,
+    "historical_CPU_seconds": 5292.784926,
+    "historical_GPU_seconds": 5375.9374196,
+    "corrective_CPU_seconds": 1500,
+    "corrective_GPU_seconds": 4800,
+    "phase1_CPU_seconds": 600,
+    "phase1_GPU_seconds": 1200,
+    "phase2_CPU_seconds": 900,
+    "phase2_GPU_seconds": 3600,
+    "phase1_CPU_reserve": 35,
+    "phase2_CPU_reserve": 50,
+    "corrective_GPU_reserve": 25,
+    "no_full_fallback": true,
+    "state_mode": "A1",
+    "main_run_cap": 9,
+    "history_ablation_run_cap": 3,
+    "anatomy_candidate_cap": 60,
+    "oracle_policy": "M4 primary; if any late target compression capture insufficient, all-state M6 protected oracle/random",
+    "snapshot_HISTORY": "NOT_RUN_NO_OWN_ACCEPTED_TRAJECTORY",
+    "teacher_reference": "existing audited constrained references; revalidation only; never regenerated in Phase1",
+    "method_specs": {
+      "FIXED-DEEP": {
+        "O": 4,
+        "P": 4,
+        "M": 4,
+        "degree": 3
+      },
+      "WIDE-M": {
+        "O": 4,
+        "P": 4,
+        "M": 16,
+        "degree": 1
+      },
+      "CHEAP-TASK": {
+        "O": 4,
+        "P": 4,
+        "M": 4,
+        "degree": 3
+      },
+      "ORACLE-M": {
+        "O": 4,
+        "P": 4,
+        "M": 4,
+        "degree": 3
+      },
+      "PROTECTED-ORACLE": {
+        "O": 3,
+        "P": 3,
+        "M": 6,
+        "degree": 3
+      },
+      "PROTECTED-RANDOM": {
+        "O": 3,
+        "P": 3,
+        "M": 6,
+        "degree": 3
+      }
+    },
+    "operative_oracle_rule": "PROTECTED-ORACLE iff any late raw qM capture < threshold; otherwise ORACLE-M; no outcome-dependent cherry-picking",
+    "oracle_capture_certification": "material span, qM source block and final Z capture all pass energy threshold; non-floor target",
+    "state_order": "all five late then all five early; conditional earlier revisits fully charged; no retained full GPU adapters"
+  },
+  "budget_prior": {
+    "global_cpu": 5599.265651999999,
+    "global_gpu": 5661.778858899999,
+    "phases": {
+      "phase1": {
+        "cpu": 306.480726,
+        "gpu": 285.84143929999846
+      },
+      "phase2": {
+        "cpu": 0.0,
+        "gpu": 0.0
+      }
+    },
+    "r1_cpu": 306.480726,
+    "r1_gpu": 285.84143929999846
+  },
+  "dataset": "historically_exposed_feasibility"
+}

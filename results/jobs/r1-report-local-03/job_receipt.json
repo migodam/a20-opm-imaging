@@ -1,0 +1,35 @@
+{
+  "wall_seconds": 1.704370457911864,
+  "process_cpu_seconds": 1.724802,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {},
+  "exclusive_walls": {
+    "r1_report_gates_and_raw_csv": 0.0672711250372231,
+    "r1_report_figure_setup": 0.033930999925360084,
+    "r1_report_figure_A": 0.19191624992527068,
+    "r1_report_figure_B": 0.1997252079891041,
+    "r1_report_figure_C": 0.16280212509445846,
+    "r1_report_figure_D": 0.5144454999826849,
+    "r1_report_figure_D_CAPTURE_CERT": 0.39676320797298104,
+    "r1_report_manifest": 0.00041854195296764374
+  },
+  "events": 8,
+  "peak_cpu_rss_bytes": 129859584,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "r1_phase": "phase1",
+  "prior_R1_CPU_seconds": 310.43765799999994,
+  "prior_R1_GPU_seconds": 285.84143929999846,
+  "r1_phase_caps": {
+    "CPU": 600,
+    "GPU": 1200
+  },
+  "job": "r1-report-local-03",
+  "stage": "report",
+  "status": "COMPLETE",
+  "source_commit": "5231aea98f6945a77c4f83f030a57248065695ef"
+}

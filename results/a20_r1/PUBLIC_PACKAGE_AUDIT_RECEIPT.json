@@ -1,0 +1,75 @@
+{
+  "schema": "a20.r1.public-package-audit-receipt.v1",
+  "cpu_limit_seconds": 5.0,
+  "measured_cpu_seconds": 1.314339,
+  "attempts": [
+    {
+      "label": "stdlib public-index inventory",
+      "status": "PASS",
+      "imports": [
+        "resource",
+        "time",
+        "json",
+        "os",
+        "subprocess",
+        "pathlib"
+      ],
+      "self_cpu_seconds": 0.047261,
+      "git_children_cpu_seconds": 0.010468,
+      "inclusive_process_cpu_seconds": 0.057729,
+      "wall_seconds": 0.03461920900736004
+    },
+    {
+      "label": "orchestration parse before local dispatch",
+      "status": "FAIL",
+      "error_class": "SyntaxError",
+      "local_CPU_process_started": false,
+      "inclusive_process_cpu_seconds": 0.0
+    },
+    {
+      "label": "Python dispatcher parse before imports",
+      "status": "FAIL",
+      "error_class": "SyntaxError",
+      "exact_CPU_unavailable": true,
+      "conservative_CPU_charge_seconds": 0.05
+    },
+    {
+      "label": "mechanical package content scan and artifact epilogue",
+      "status": "PASS",
+      "worker_complete_lifetime_inclusive_CPU_seconds": 1.22773,
+      "controller_CPU_seconds": 0.028879999999999996,
+      "inclusive_process_cpu_seconds": 1.25661,
+      "imports": [
+        "ast",
+        "datetime",
+        "json",
+        "os",
+        "re",
+        "subprocess",
+        "zipfile",
+        "pathlib"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "status": "REQUIRES_PARENT_REVIEW",
+        "unscanned": 0,
+        "required_present": 9,
+        "candidate_files": 1420,
+        "schema_assets": 24
+      },
+      "wall_seconds": 1.4891569999745116,
+      "child_epilogue_included": true
+    }
+  ],
+  "GPU_seconds": 0,
+  "SHA256_checks": 0,
+  "physics_runs": 0,
+  "external_services": 0,
+  "status": "REQUIRES_PARENT_REVIEW",
+  "unmeasured_parse_startup_conservative_charge_seconds": 0.05,
+  "cumulative_process_cpu_seconds": 1.364339,
+  "failed_attempts": 2,
+  "teacher_optimizations": 0,
+  "worker_epilogue_included": true,
+  "measurement_limit": "One dispatcher parse startup CPU was not sampled; .05 second conservatively charged. Final tool output includes receipt writer epilogue."
+}

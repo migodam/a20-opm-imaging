@@ -1,0 +1,9 @@
+{
+  "scope": "R1 final evidence index, row/gate integrity audit and parent report metadata",
+  "process_cpu_seconds": 0.16451100000000002,
+  "measurement": "inclusive self CPU from process start incl imports + 0.01s write epilogue allowance",
+  "physics_calls": 0,
+  "NPZ_reads": 0,
+  "GPU_seconds": 0,
+  "status": "PASS"
+}

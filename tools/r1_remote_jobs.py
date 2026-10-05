@@ -77,9 +77,14 @@ Get-Content '{REMOTE}/runs/{job}.stderr' -Tail 15
 exit $rc
 """
     encoded=base64.b64encode(script.encode('utf-16le')).decode()
-    subprocess.run(['ssh','-i',key,'-o','BatchMode=yes','-o','ConnectTimeout=8',
+    completed = subprocess.run(['ssh','-i',key,'-o','BatchMode=yes','-o','ConnectTimeout=8',
                     '-o','StrictHostKeyChecking=yes',target,
-                    'powershell.exe -NoProfile -EncodedCommand '+encoded],check=True)
+                    'powershell.exe -NoProfile -EncodedCommand '+encoded],check=False)
+    if completed.returncode:
+        # A protocol stop is a nonzero remote job exit. Preserve the pulled
+        # receipt without printing private connection arguments in a traceback.
+        raise SystemExit('Remote job exit '+str(completed.returncode)+
+                         '; pull the immutable receipt before judging the failure')
 
 
 def status(job):

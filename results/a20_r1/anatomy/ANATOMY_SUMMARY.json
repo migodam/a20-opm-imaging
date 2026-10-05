@@ -1,0 +1,216 @@
+{
+  "schema": "a20.r1.anatomy.summary.v1",
+  "job": "r1-anatomy-01",
+  "run_id": "20261005T190101_2cad7f97",
+  "status": "FAILED",
+  "stop_reason": null,
+  "failure_reason": "BaselineConflict: FIXED_BASELINE_STEP_OR_METRICS_NOT_REPRODUCED:(2001, 0)",
+  "baseline_input_conflict_state": [
+    2001,
+    0
+  ],
+  "rows_path": "D:\\AI\\A20_OPM_IMAGING_R1\\results\\a20_r1\\anatomy\\rows.jsonl",
+  "failures_path": "D:\\AI\\A20_OPM_IMAGING_R1\\results\\a20_r1\\anatomy\\failures.jsonl",
+  "canonical_input": "D:\\AI\\A20_OPM_IMAGING_R1\\results\\replay\\replay.jsonl",
+  "canonical_models_expected": 40,
+  "models_expected": 60,
+  "model_rows_written": 60,
+  "models_built": 31,
+  "model_status_counts": {
+    "FAILED": 1,
+    "NOT_RUN": 29,
+    "OK": 30
+  },
+  "protected_guard_triggered": true,
+  "protected_guard_sources": [
+    {
+      "parent_object_id": 2001,
+      "iteration": 17,
+      "oracle_qM_source_capture": 0.38797245691968696
+    },
+    {
+      "parent_object_id": 2005,
+      "iteration": 17,
+      "oracle_qM_source_capture": 0.5540099262658594
+    },
+    {
+      "parent_object_id": 2003,
+      "iteration": 17,
+      "oracle_qM_source_capture": 0.40759371200813405
+    },
+    {
+      "parent_object_id": 2007,
+      "iteration": 17,
+      "oracle_qM_source_capture": 0.3858102329170562
+    },
+    {
+      "parent_object_id": 2013,
+      "iteration": 17,
+      "oracle_qM_source_capture": 0.33989362831164105
+    }
+  ],
+  "protected_guard_indeterminate": [],
+  "protected_state_pairs_written": 5,
+  "state_order": [
+    [
+      2001,
+      17
+    ],
+    [
+      2005,
+      17
+    ],
+    [
+      2003,
+      17
+    ],
+    [
+      2007,
+      17
+    ],
+    [
+      2013,
+      17
+    ],
+    [
+      2001,
+      0
+    ],
+    [
+      2005,
+      0
+    ],
+    [
+      2003,
+      0
+    ],
+    [
+      2007,
+      0
+    ],
+    [
+      2013,
+      0
+    ]
+  ],
+  "teacher_regenerated": false,
+  "scientific_gate_computed": false,
+  "shared_preflight_cost": {
+    "preflight": {
+      "counts": {},
+      "exclusive_walls": {
+        "anatomy_preflight": 0.13262720000057016
+      },
+      "wall_seconds": 0.13549969999439782,
+      "process_cpu_seconds": 0.125
+    }
+  },
+  "cost_ledger_authority": "parent CostBook events; logical standalone attribution is not additional billing",
+  "budget_receipt": {
+    "wall_seconds": 285.82777680000436,
+    "process_cpu_seconds": 263.8125,
+    "gpu_occupation_seconds": 285.8277884000054,
+    "counts": {
+      "full_forward_calls": 6,
+      "full_forward_RHS": 36,
+      "full_LU_factorizations": 6,
+      "full_state_backward_residual_L_rhs": 36,
+      "full_state_receiver_rhs": 36,
+      "full_state_Goff_rhs": 36,
+      "material_operator_refreshes": 6,
+      "L_upload_bytes": 2579890176,
+      "full_tangent_calls": 6,
+      "full_tangent_RHS": 1944,
+      "full_tangent_receiver_rhs": 1944,
+      "receiver_SVD_builds": 6,
+      "F_actions": 802,
+      "Maxwell_matvec_rhs": 5018,
+      "operator_transfer_bytes": 832425984,
+      "F_adjoint_actions": 350,
+      "retained_factorizations": 6,
+      "r1_probe_banks": 6,
+      "B_rhs": 1446,
+      "L_actions": 3182,
+      "S_adjoint_actions": 714,
+      "L_adjoint_actions": 684,
+      "forcing_rhs": 186,
+      "seed_O_input_rhs": 684,
+      "seed_P_input_rhs": 186,
+      "seed_M_input_rhs": 1224,
+      "S_actions": 1922,
+      "projected_factorizations": 31,
+      "r1_material_probe_span_SVD": 31,
+      "compressed_material_columns": 1674,
+      "compressed_B_current_columns": 10416,
+      "reduced_core_rhs": 10260,
+      "material_subproblems": 31,
+      "small_material_H_assemblies": 31,
+      "material_optimizer_iterations": 1619,
+      "constrained_KKT_polishes": 16,
+      "r1_cheap_gradients": 5,
+      "B_adjoint_rhs": 30
+    },
+    "exclusive_walls": {
+      "anatomy_preflight": 0.13262720000057016,
+      "physical_geometry_setup": 34.46041259999765,
+      "anatomy_geometry": 0.25623830001131864,
+      "full_forward": 23.56123650000518,
+      "material_operator_refresh": 0.7185463000132586,
+      "anatomy_full_state": 0.19772129998455057,
+      "full_tangent": 11.400223099997675,
+      "anatomy_reference": 0.1885583999901428,
+      "anatomy_saved_baseline_audit": 0.2794133000061265,
+      "receiver_geometry_SVD": 4.420671999992919,
+      "F": 4.641438700033177,
+      "F_adjoint": 2.5379758000199217,
+      "retained_core_factorization": 0.001326699995843228,
+      "anatomy_shared_schur": 4.904609499986691,
+      "r1_paired_probe_draws": 0.007223599997814745,
+      "anatomy_shared_probe_bank": 0.029235800022433978,
+      "B": 0.32179399999586167,
+      "L": 9.241269100013596,
+      "S_adjoint": 0.9389187000124366,
+      "L_adjoint": 1.4480680999986362,
+      "illumination_forcing": 0.040602100001706276,
+      "seed_O_compression": 1.1245767000073101,
+      "seed_P_compression": 0.2310921999887796,
+      "seed_M_compression": 3.5674408999766456,
+      "joint_orthogonalization": 3.0396725000609877,
+      "native_stream_orthogonalization": 1.4256386000124621,
+      "S": 1.6283837000009953,
+      "projected_core_factorization": 0.01473840001563076,
+      "r1_material_probe_span_SVD": 0.019061200029682368,
+      "anatomy_model_build": 36.30176769985701,
+      "compressed_injection": 1.6037729000090621,
+      "reduced_core_solve": 0.104130800042185,
+      "reduced_material_data_matrix": 0.7503717999788933,
+      "anatomy_material_data_matrix": 0.10336530001222854,
+      "small_material_H_assembly": 0.03820440002164105,
+      "Gaussian_constrained_quadratic": 113.07279150002432,
+      "material_subproblem": 0.42274829994130414,
+      "anatomy_candidate_QP": 0.09504190003644908,
+      "anatomy_target": 0.0661102000012761,
+      "anatomy_model_offline_audit": 2.4572121999735828,
+      "Gaussian_KKT_polish": 0.08839679999073269,
+      "reduced_core_adjoint_solve": 0.0015239999920595437,
+      "B_adjoint": 0.010424799998872913,
+      "r1_cheap_reduced_gradient": 0.09738920001109364
+    },
+    "events": 1554,
+    "peak_cpu_rss_bytes": 2892550144,
+    "CPU_memory_measurement_available": true,
+    "peak_gpu_allocated_bytes": 949250048,
+    "peak_gpu_reserved_bytes": 1298137088,
+    "device": "cuda",
+    "CPU_in_GPU_job_included": true,
+    "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+    "r1_phase": "phase1",
+    "prior_R1_CPU_seconds": 42.652601000000004,
+    "prior_R1_GPU_seconds": 0.0,
+    "r1_phase_caps": {
+      "CPU": 600,
+      "GPU": 1200
+    }
+  },
+  "budget_receipt_scope": "snapshot after CSV export; parent final job receipt also includes summary serialization and imports"
+}

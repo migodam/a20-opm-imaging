@@ -1,0 +1,61 @@
+{
+  "task": "R1_plot_QA_layout_only",
+  "status": "PASS_STDLIB_STRUCTURE_NO_RENDER",
+  "error_class": null,
+  "actual_measured_CPU_seconds": 0.16896699999999998,
+  "actual_CPU_includes_unmeasured_failed_attempt": false,
+  "source_probe_CPU_seconds": 0.027759,
+  "failed_attempt_CPU_allowance_seconds": 0.15,
+  "receipt_epilogue_allowance_seconds": 0.01,
+  "inclusive_budget_charge_seconds": 0.328967,
+  "CPU_budget_seconds": 1,
+  "within_CPU_budget": true,
+  "attempts": [
+    {
+      "kind": "static_source_probe",
+      "status": "OK",
+      "CPU_seconds": 0.027759
+    },
+    {
+      "kind": "prewrite_static_edit_syntax_check",
+      "status": "FAILED",
+      "exception_class": "SyntaxError",
+      "source_written": false,
+      "actual_CPU_measurement_available": false,
+      "conservative_CPU_charge_seconds": 0.15
+    },
+    {
+      "kind": "stdlib_edit_compile_import_fake_axes_checks",
+      "status": "PASS_STDLIB_STRUCTURE_NO_RENDER",
+      "CPU_seconds": 0.044005999999999997
+    },
+    {
+      "kind": "existing_plot_structure_fixture_adapter_regression",
+      "status": "PASS",
+      "CPU_seconds_self_and_children": 0.097202,
+      "actual_render": false
+    }
+  ],
+  "failed_attempt_count": 1,
+  "source_writes": [
+    "src/a20_r1/report.py",
+    "tests/test_r1_gates.py"
+  ],
+  "test_change_scope": "fake-axis adapter for table/legend/subplots kwargs only; no gate fixtures/expectations changed",
+  "checks": [
+    "B scatter and rank/fourtuple table in independent panels",
+    "C valid late retained independently of early NOT_RUN; FAILED numeric diagnostic is red cross; common legend",
+    "D marker x/y unchanged; annotation-only 2003/2013 pixel offsets differ"
+  ],
+  "gate_threshold_or_metric_changes": false,
+  "scientific_gate_recomputed": false,
+  "physics_runs": 0,
+  "NPZ_reads": 0,
+  "Matplotlib_imports": 0,
+  "actual_renders": 0,
+  "GPU_calls": 0,
+  "network_calls": 0,
+  "hash_checks": 0,
+  "parent_final_metered_rerender_required": true,
+  "plot_structure_regression_status": "PASS"
+}

@@ -32,5 +32,33 @@
     "process_cpu_seconds": 1.27367,
     "receipt": "results/a20_r1/ANATOMY_WORKER_RECEIPT.json",
     "measurement": "inclusive measured process CPU"
+  },
+  {
+    "scope": "R1 post-physics baseline source code audit",
+    "phase": "phase1",
+    "process_cpu_seconds": 0.471836,
+    "receipt": "results/a20_r1/SEED_WORKER_RECEIPT.json",
+    "measurement": "additional inclusive measured CPU; initial worker check already billed separately"
+  },
+  {
+    "scope": "R1 plot layout QA incl prewrite syntax failure",
+    "phase": "phase1",
+    "process_cpu_seconds": 0.328967,
+    "receipt": "results/a20_r1/PLOT_QA_RECEIPT.json",
+    "measurement": "inclusive measured CPU + explicit conservative allowances for unmeasured prewrite failure and receipt epilogue"
+  },
+  {
+    "scope": "R1 final evidence index, row/gate integrity audit and parent report metadata",
+    "phase": "phase1",
+    "process_cpu_seconds": 0.16451100000000002,
+    "receipt": "results/a20_r1/FINALIZE_RECEIPT.json",
+    "measurement": "inclusive measured process CPU"
+  },
+  {
+    "scope": "R1 final ledger failure classification assembly",
+    "phase": "phase1",
+    "process_cpu_seconds": 0.139495,
+    "receipt": null,
+    "measurement": "inclusive self CPU from process start + .01s write allowance; no physics"
   }
 ]

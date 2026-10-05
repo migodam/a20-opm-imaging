@@ -1,0 +1,35 @@
+{
+  "global_cpu": 5605.251392,
+  "global_gpu": 5661.778858899999,
+  "phases": {
+    "phase1": {
+      "cpu": 312.46646599999997,
+      "gpu": 285.84143929999846
+    },
+    "phase2": {
+      "cpu": 0.0,
+      "gpu": 0.0
+    }
+  },
+  "r1_cpu": 312.46646599999997,
+  "r1_gpu": 285.84143929999846,
+  "inherited_CPU_seconds": 5292.784926,
+  "inherited_GPU_seconds": 5375.9374196,
+  "caps": {
+    "global_CPU": 7200,
+    "global_GPU": 43200,
+    "R1_CPU": 1500,
+    "R1_GPU": 4800,
+    "phase1_CPU": 600,
+    "phase1_GPU": 1200,
+    "phase2_CPU": 900,
+    "phase2_GPU": 3600
+  },
+  "within_all_caps": true,
+  "billing_authority": "inclusive job receipts + unique external scope registry + historical carry",
+  "nested_spans_not_additive": true,
+  "standalone_attribution_not_extra_billing": true,
+  "GPU_definition": "exclusive job occupation wall, not kernel time",
+  "all_failed_attempts_charged": true,
+  "new_SHA256_checks": 0
+}

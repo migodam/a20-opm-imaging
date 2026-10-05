@@ -1,0 +1,70 @@
+{
+  "status": "STATIC_REPORT_WRITTEN",
+  "paths": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/ANATOMY_RAW.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/RANK_ACTION_MATCHING.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/CLOSED_LOOP_RAW.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/CLOSED_LOOP_COMPARISONS.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/CLOSED_LOOP_ITERATIONS.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/HISTORY_RAW.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/results/a20_r1/report/REGISTERED_GATES.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/A.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/A.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/B.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/B.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/C.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/C.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D_CAPTURE_CERT.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D_CAPTURE_CERT.svg"
+  ],
+  "figure_status": "GENERATED_RESEARCH_FIGURES",
+  "figures": {
+    "A": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/A.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/A.svg"
+    ],
+    "B": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/B.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/B.svg"
+    ],
+    "C": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/C.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/C.svg"
+    ],
+    "D": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D.svg"
+    ],
+    "D_CAPTURE_CERT": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D_CAPTURE_CERT.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/a20-r1-mechanism/figures/a20_r1/D_CAPTURE_CERT.svg"
+    ]
+  },
+  "phase2_status": "NOT_RUN_GATE_CLOSED",
+  "HISTORY": "NOT_RUN_NO_OWN_ACCEPTED_TRAJECTORY",
+  "provided_history_ablation_status": "NOT_RUN",
+  "scientific_judgment": "PARENT_ONLY",
+  "no_physics_or_external_data_access": true,
+  "portable_paths": [
+    "results/a20_r1/report/ANATOMY_RAW.csv",
+    "results/a20_r1/report/RANK_ACTION_MATCHING.csv",
+    "results/a20_r1/report/CLOSED_LOOP_RAW.csv",
+    "results/a20_r1/report/CLOSED_LOOP_COMPARISONS.csv",
+    "results/a20_r1/report/CLOSED_LOOP_ITERATIONS.csv",
+    "results/a20_r1/report/HISTORY_RAW.csv",
+    "results/a20_r1/report/REGISTERED_GATES.json",
+    "figures/a20_r1/A.png",
+    "figures/a20_r1/A.svg",
+    "figures/a20_r1/B.png",
+    "figures/a20_r1/B.svg",
+    "figures/a20_r1/C.png",
+    "figures/a20_r1/C.svg",
+    "figures/a20_r1/D.png",
+    "figures/a20_r1/D.svg",
+    "figures/a20_r1/D_CAPTURE_CERT.png",
+    "figures/a20_r1/D_CAPTURE_CERT.svg"
+  ],
+  "final_parent_review": "results/a20_r1/FINAL_REVIEW.json"
+}

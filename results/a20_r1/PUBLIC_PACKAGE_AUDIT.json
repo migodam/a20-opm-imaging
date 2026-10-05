@@ -1,0 +1,269 @@
+{
+  "schema": "a20.r1.public-package-audit.v1",
+  "timestamp_UTC": "2026-10-05T19:39:15.182763+00:00",
+  "status": "REQUIRES_PARENT_REVIEW",
+  "inventory": {
+    "tracked_files": 1303,
+    "prospective_new_files": 118,
+    "candidate_files": 1420,
+    "audit_products_excluded": [
+      "results/a20_r1/PUBLIC_PACKAGE_AUDIT.json",
+      "results/a20_r1/PUBLIC_PACKAGE_AUDIT.md",
+      "results/a20_r1/PUBLIC_PACKAGE_AUDIT_RECEIPT.json"
+    ]
+  },
+  "coverage": {
+    "text_files": 464,
+    "binary_files": 956,
+    "text_bytes": 83719692
+  },
+  "findings": [
+    {
+      "file": "protocol/START_HERE.md",
+      "line": 40,
+      "category": "POTENTIAL_CREDENTIAL_TOKEN_LITERAL"
+    }
+  ],
+  "unscanned_files": [],
+  "large_files_over_5_MiB": [
+    {
+      "file": "results/jobs/replay-01/cost.jsonl",
+      "bytes": 10699916,
+      "registered_evidence": true
+    },
+    {
+      "file": "results/replay/ACTION_COUNTS.csv",
+      "bytes": 8293699,
+      "registered_evidence": true
+    },
+    {
+      "file": "results/replay/REPLAY_RESULTS.csv",
+      "bytes": 15086444,
+      "registered_evidence": true
+    },
+    {
+      "file": "results/replay/replay.jsonl",
+      "bytes": 17124397,
+      "registered_evidence": true
+    }
+  ],
+  "PDF_origin_classification": [
+    {
+      "file": "results/replay/phase_plots/mixed_H_step_by_state.pdf",
+      "declared_generated_figure": true
+    }
+  ],
+  "license_and_index": {
+    "declared_license": "MIT",
+    "indexes_read": [
+      "README.md",
+      "START_HERE.md",
+      "NOTICE.md",
+      ".gitignore",
+      "vendor/a17/UPSTREAM_PROVENANCE.json"
+    ]
+  },
+  "runtime_offline_schemas": [
+    {
+      "file": "data/offline/2001/labels.npz",
+      "scope": "offline",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/offline/2003/labels.npz",
+      "scope": "offline",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/offline/2005/labels.npz",
+      "scope": "offline",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/offline/2007/labels.npz",
+      "scope": "offline",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/offline/2010/labels.npz",
+      "scope": "offline",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/offline/2013/labels.npz",
+      "scope": "offline",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2001/problem.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2001/state_00.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2001/state_17.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2003/problem.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2003/state_00.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2003/state_17.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2005/problem.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2005/state_00.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2005/state_17.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2007/problem.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2007/state_00.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2007/state_17.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2010/problem.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2010/state_00.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2010/state_17.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2013/problem.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2013/state_00.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    },
+    {
+      "file": "data/runtime/2013/state_17.npz",
+      "scope": "runtime",
+      "registered_member_schema_valid": true
+    }
+  ],
+  "source_boundary_static_checks": {
+    "runtime_whitelist_present": true,
+    "online_offline_field_guard_present": true,
+    "legal_reference_guard_present": true,
+    "reference_audit_optimizer_call": false
+  },
+  "required_nine_documents_and_ledgers": [
+    {
+      "file": "START_HERE.md",
+      "present_nonempty": true
+    },
+    {
+      "file": "LATE_STATE_SEED_ANATOMY.md",
+      "present_nonempty": true
+    },
+    {
+      "file": "RANK_ACTION_MATCHING.md",
+      "present_nonempty": true
+    },
+    {
+      "file": "ORACLE_MATERIAL_SEED_DIAGNOSTIC.md",
+      "present_nonempty": true
+    },
+    {
+      "file": "HISTORY_INFORMATION_AUDIT.md",
+      "present_nonempty": true
+    },
+    {
+      "file": "CLOSED_LOOP_OPM_RESULTS.md",
+      "present_nonempty": true
+    },
+    {
+      "file": "GATE_DECISION.json",
+      "present_nonempty": true
+    },
+    {
+      "file": "FAILURE_LEDGER.jsonl",
+      "present_nonempty": true
+    },
+    {
+      "file": "COST_LEDGER.jsonl",
+      "present_nonempty": true
+    }
+  ],
+  "parent_final_doc_and_link_verification": [
+    {
+      "file": "START_HERE.md",
+      "currently_present": true,
+      "status": "PARENT_FINAL_VERIFY"
+    },
+    {
+      "file": "REPRODUCE_R1.md",
+      "currently_present": true,
+      "status": "PARENT_FINAL_VERIFY"
+    },
+    {
+      "file": "FINAL_REVIEW.json",
+      "currently_present": false,
+      "status": "PARENT_FINAL_VERIFY"
+    },
+    {
+      "file": "PUBLICATION.json",
+      "currently_present": false,
+      "status": "PARENT_FINAL_VERIFY"
+    },
+    {
+      "file": "RELEASE_NOTES_R1.md",
+      "currently_present": true,
+      "status": "PARENT_FINAL_VERIFY"
+    }
+  ],
+  "limits": [
+    "Only file/line/category retained for sensitive matches.",
+    "Binary arrays were not loaded; NumPy archive member schemas only.",
+    "PDFs classified by declared generated-figure paths and file headers; origin/permission needs parent review.",
+    "No scientific judgment, gates, new physics, teacher or retry."
+  ],
+  "GPU_seconds": 0,
+  "SHA256_checks": 0,
+  "physics_runs": 0,
+  "external_services": 0
+}

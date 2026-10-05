@@ -1,0 +1,17 @@
+{
+  "schema": "a20.r1.publication.v1",
+  "status": "PREPARED_NOT_YET_PUSHED",
+  "repo": "https://github.com/migodam/a20-opm-imaging",
+  "release_tag": "v0.2.0-r1-mechanism",
+  "release_url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.2.0-r1-mechanism",
+  "raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+  "scientific_status": "D_INCONCLUSIVE; legal Gate B FAIL; Phase2/NN NOT_RUN",
+  "scientific_gate": "GATE_DECISION.json",
+  "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+  "physics_source_commit": "5231aea98f6945a77c4f83f030a57248065695ef",
+  "release_commit": null,
+  "verified_remote_main_commit": null,
+  "old_release_retained": true,
+  "anonymous_checks": "NOT_RUN",
+  "new_SHA256_checks": 0
+}

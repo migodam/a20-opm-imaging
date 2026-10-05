@@ -201,8 +201,8 @@ def _label(method):
 
 def _width_depth_figure(rows, config):
     figure = _new_figure()
-    ax = figure.subplots()
-    notes = []
+    ax, table_ax = figure.subplots(1, 2, gridspec_kw={"width_ratios": [1, 1.6]})
+    table_rows = []
     for method in DISPLAY_METHODS:
         measured = [r for r in method_rows(rows) if method_id(r) == method and state_id(r, config) == "late"
                     and number(get(r, "actual_rank", "rank")) is not None and action_fourtuple(r) is not None]
@@ -214,52 +214,83 @@ def _width_depth_figure(rows, config):
         ranks = [number(get(r, "actual_rank", "rank")) for r in measured]
         tuples = [action_fourtuple(r) for r in measured]
         ranges = [str(min(v[i] for v in tuples))+".."+str(max(v[i] for v in tuples)) for i in range(4)]
-        notes.append(method+": n="+str(len(measured))+", actual rank "+str(int(min(ranks)))+".."+str(int(max(ranks)))+"; F/F*/L/L*="+" / ".join(ranges))
-    ax.set_xlabel("frozen requested M width (only built/measured points)")
-    ax.set_ylabel("frozen Krylov degree")
-    ax.set_title("B - tested depth versus M width; no interpolated or invented sweep")
+        table_rows.append([method, str(len(measured)), str(int(min(ranks)))+".."+str(int(max(ranks)))]+ranges)
+    ax.set_xlabel("requested M width (frozen)")
+    ax.set_ylabel("Krylov degree")
+    ax.set_title("Built/measured depth-width points")
     ax.grid(alpha=.2)
-    if notes:
-        ax.legend(fontsize=7)
+    if table_rows:
+        ax.legend(fontsize=6)
     else:
-        ax.text(.5, .5, "NOT_RUN: no built/measured rank + action point", transform=ax.transAxes, ha="center")
-    figure.text(.01, .01, "HISTORY NOT_RUN. Actual tuples (per-parent ranges, no rank proxy):\n"+"\n".join(notes), fontsize=7)
+        ax.text(.5, .5, "NOT_RUN: no measured point", transform=ax.transAxes, ha="center")
+    table_ax.set_axis_off()
+    table_ax.set_title("Actual late per-parent ranges", fontsize=10)
+    if table_rows:
+        table = table_ax.table(cellText=table_rows, colLabels=["Method", "n", "U rank", "F", "F*", "L", "L*"],
+                               colWidths=[.29, .055, .115, .135, .135, .135, .135],
+                               cellLoc="center", bbox=[0, .12, 1, .76])
+        table.auto_set_font_size(False)
+        table.set_fontsize(6.5)
+    else:
+        table_ax.text(.5, .5, "NOT_RUN: no actual rank/fourtuple", transform=table_ax.transAxes, ha="center")
+    figure.suptitle("B - frozen tested points; HISTORY NOT_RUN; no inferred sweep")
     return figure
 
 
 def _paired_state_figure(rows, config):
+    # Historical function name retained; observations in each panel are independent.
     figure = _new_figure()
     axes = figure.subplots(1, 2)
     parents = tuple(config.get("parents", (2001, 2005, 2003, 2007, 2013)))
-    pairs = []
-    missing = 0
-    for method in DISPLAY_METHODS:
-        if method == "HISTORY":
-            continue
-        for p in parents:
-            early = [r for r in method_rows(rows) if method_id(r) == method and parent_id(r) == p and state_id(r, config) == "early"]
-            late = [r for r in method_rows(rows) if method_id(r) == method and parent_id(r) == p and state_id(r, config) == "late"]
-            if len(early) != 1 or len(late) != 1 or anatomy_issues(early[0], config) or anatomy_issues(late[0], config):
-                missing += 1
-                continue
-            pairs.append((method, p, number(get(early[0], "relative_H_step_error", "H_error")),
-                          number(get(late[0], "relative_H_step_error", "H_error"))))
-    for method in DISPLAY_METHODS:
-        values = [v for v in pairs if v[0] == method]
-        if not values:
-            continue
-        xs = [parents.index(v[1]) for v in values]
-        for ax, column in zip(axes, (2, 3)):
-            ax.scatter(xs, [v[column] for v in values], label=_label(method), alpha=.8)
+    palette = ("#1f77b4", "#ff7f0e", "#7f7f7f", "#2ca02c", "#9467bd", "#8c564b", "#17becf")
     for ax, state in zip(axes, ("early", "late")):
+        counts = dict(valid=0, NOT_RUN=0, FAILED=0, missing=0, invalid=0)
+        for index, method in enumerate(DISPLAY_METHODS):
+            if method == "HISTORY":
+                continue
+            xs, ys, failed_x, failed_y = [], [], [], []
+            for p in parents:
+                observed = [r for r in method_rows(rows) if method_id(r) == method and parent_id(r) == p and state_id(r, config) == state]
+                if len(observed) != 1:
+                    counts["missing"] += 1
+                    continue
+                row = observed[0]
+                error_value = number(get(row, "relative_H_step_error", "H_error"))
+                row_status = str(get(row, "status") or "")
+                if row_status.startswith("NOT_RUN"):
+                    counts["NOT_RUN"] += 1
+                elif not anatomy_issues(row, config):
+                    xs.append(parents.index(p)); ys.append(error_value)
+                    counts["valid"] += 1
+                elif row_status.startswith("FAILED") or row_status in ("QP_FAILED", "ERROR"):
+                    counts["FAILED"] += 1
+                    if error_value is not None and error_value >= 0:
+                        failed_x.append(parents.index(p)); failed_y.append(error_value)
+                else:
+                    counts["invalid"] += 1
+            if xs:
+                ax.scatter(xs, ys, label=_label(method), color=palette[index], alpha=.8)
+            if failed_x:
+                ax.scatter(failed_x, failed_y, marker="x", color="red", s=65, label="FAILED diagnostic value")
+                for x, y in zip(failed_x, failed_y):
+                    ax.annotate(str(parents[x])+" "+method+" FAILED", (x, y), xytext=(5, 7),
+                                textcoords="offset pixels", fontsize=6, color="red")
         ax.set_xticks(range(len(parents)), [str(p) for p in parents], rotation=25)
-        ax.set_title(state+": same parent/method pairs only")
+        ax.set_title(state+": observed values independently")
         ax.set_ylabel("relative H step error")
         ax.grid(axis="y", alpha=.2)
-    if pairs:
-        axes[1].legend(fontsize=6)
-    figure.suptitle("C - per-parent paired early versus late errors")
-    figure.text(.01, .01, "HISTORY NOT_RUN. Missing/invalid pairs absent: "+str(missing)+"; every original row retained in raw CSV. No partial mean.", fontsize=8)
+        text = "; ".join(k+"="+str(v) for k, v in counts.items())
+        if counts["valid"] == 0:
+            text = "NO VALID "+state.upper()+" ENDPOINTS\n"+text
+        ax.text(.02, .98, text, transform=ax.transAxes, va="top", fontsize=6)
+    common = {}
+    for ax in axes:
+        handles, labels = ax.get_legend_handles_labels()
+        for handle, label in zip(handles, labels):
+            common.setdefault(label, handle)
+    if common:
+        figure.legend(list(common.values()), list(common), loc="outside lower center", ncol=2, fontsize=7)
+    figure.suptitle("C - observed early versus late; HISTORY NOT_RUN; no paired/aggregate claim")
     return figure
 
 
@@ -283,14 +314,20 @@ def _capture_error_figure(rows, config):
         if points:
             ax.scatter([v[0] for v in points], [v[1] for v in points], label=_label(method))
             for x, y, p in points:
-                ax.annotate(str(p), (x, y), xytext=(3, 3), textcoords="offset points", fontsize=6)
+                offset = (-32, 10) if p == 2003 else ((9, -15) if p == 2013 else (4, 5))
+                if method in ("PROTECTED-ORACLE", "PROTECTED-RANDOM"):
+                    shift = 7 if method == "PROTECTED-ORACLE" else -7
+                    offset = (offset[0], offset[1]+shift)
+                ax.annotate(str(p), (x, y), xytext=offset, textcoords="offset pixels", fontsize=6,
+                            ha="right" if offset[0] < 0 else "left",
+                            arrowprops={"arrowstyle": "-", "lw": .4, "alpha": .4})
     ax.axvline(config["oracle_capture_threshold"], color="tab:red", ls="--", label="registered capture threshold")
     ax.set_xlabel("current final-Z KB-source capture (OFFLINE diagnostic)")
     ax.set_ylabel("final relative H step error (OFFLINE reference diagnostic)")
     ax.set_title("D - current KB capture versus final H error, by measured method")
     ax.grid(alpha=.2)
     ax.legend(fontsize=7)
-    figure.text(.01, .01, "Legal builders never receive oracle E. HISTORY NOT_RUN. Missing/invalid late points: "+str(missing)+"; see raw CSV.", fontsize=8)
+    figure.suptitle("HISTORY NOT_RUN; offline reference diagnostic; missing/invalid late points="+str(missing), fontsize=8)
     return figure
 
 
