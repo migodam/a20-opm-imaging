@@ -1,0 +1,126 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 0,
+      "child_process_cpu_seconds": 0.214621,
+      "controller_process_cpu_seconds": 0.028135999999999998,
+      "inclusive_process_cpu_seconds": 0.242757,
+      "wall_seconds": 0.4390397500246763,
+      "stdout": "",
+      "stderr": "test_cache_owner_material_residual_and_bank_rejection (test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection) ... ok\ntest_cheap_reduced_gradient_denies_full_and_keeps_previous_slot (test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot) ... ok\ntest_exact_legacy_rng_seeds_and_projection (test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection) ... ok\ntest_history_copy_validation_and_owner_rejection (test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection) ... ok\ntest_oracle_and_legal_capability_denial (test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial) ... ok\ntest_protected_random_uses_identical_all_source_rule (test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule) ... ok\ntest_six_source_loss_counterexample_and_complete_protection (test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection) ... ok\ntest_wide_prefix_and_observation_pairing (test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing) ... ok\ntest_zero_target_history_and_empty_projection_without_padding (test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.058s\n\nOK\n",
+      "scope": "synthetic complex128 n64 d8 six-source seed interface; no data/remote/full Maxwell solve"
+    },
+    {
+      "attempt": 2,
+      "exit_code": 0,
+      "child_process_cpu_seconds": 0.380524,
+      "controller_process_cpu_seconds": 0.028340999999999998,
+      "inclusive_process_cpu_seconds": 0.408865,
+      "wall_seconds": 0.8144709590123966,
+      "stdout": "",
+      "stderr": "test_hook_owned_history_callback_isolation_and_default_factory (test_r1_seeds.ImagingHookTests.test_hook_owned_history_callback_isolation_and_default_factory) ... ok\ntest_no_full_fallback_for_unsafe_core_and_failed_reduced_qp (test_r1_seeds.ImagingHookTests.test_no_full_fallback_for_unsafe_core_and_failed_reduced_qp) ... ok\ntest_cache_owner_material_residual_and_bank_rejection (test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection) ... ok\ntest_cheap_reduced_gradient_denies_full_and_keeps_previous_slot (test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot) ... ok\ntest_exact_legacy_rng_seeds_and_projection (test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection) ... ok\ntest_history_copy_validation_and_owner_rejection (test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection) ... ok\ntest_oracle_and_legal_capability_denial (test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial) ... ok\ntest_protected_random_uses_identical_all_source_rule (test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule) ... ok\ntest_six_source_loss_counterexample_and_complete_protection (test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection) ... ok\ntest_wide_prefix_and_observation_pairing (test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing) ... ok\ntest_zero_target_history_and_empty_projection_without_padding (test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.052s\n\nOK\n",
+      "scope": "synthetic complex128 n64 d8 P6 seeds plus mocked imaging control flow; no physics run"
+    },
+    {
+      "attempt": 3,
+      "exit_code": 0,
+      "child_process_cpu_seconds": 0.378569,
+      "controller_process_cpu_seconds": 0.033337,
+      "inclusive_process_cpu_seconds": 0.411906,
+      "wall_seconds": 0.5861057920847088,
+      "stdout": "",
+      "stderr": "test_hook_owned_history_callback_isolation_and_default_factory (test_r1_seeds.ImagingHookTests.test_hook_owned_history_callback_isolation_and_default_factory) ... ok\ntest_no_full_fallback_for_unsafe_core_and_failed_reduced_qp (test_r1_seeds.ImagingHookTests.test_no_full_fallback_for_unsafe_core_and_failed_reduced_qp) ... ok\ntest_offline_failure_is_missing_and_budget_failure_propagates (test_r1_seeds.ImagingHookTests.test_offline_failure_is_missing_and_budget_failure_propagates) ... ok\ntest_budget_stop_before_seed_work_cannot_query_full (test_r1_seeds.R1SeedsTests.test_budget_stop_before_seed_work_cannot_query_full) ... ok\ntest_cache_owner_material_residual_and_bank_rejection (test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection) ... ok\ntest_cheap_reduced_gradient_denies_full_and_keeps_previous_slot (test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot) ... ok\ntest_exact_legacy_rng_seeds_and_projection (test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection) ... ok\ntest_history_copy_validation_and_owner_rejection (test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection) ... ok\ntest_legacy_and_typed_own_history_seeds_and_hierarchy_are_exact (test_r1_seeds.R1SeedsTests.test_legacy_and_typed_own_history_seeds_and_hierarchy_are_exact) ... ok\ntest_oracle_and_legal_capability_denial (test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial) ... ok\ntest_protected_random_uses_identical_all_source_rule (test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule) ... ok\ntest_six_source_loss_counterexample_and_complete_protection (test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection) ... ok\ntest_wide_prefix_and_observation_pairing (test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing) ... ok\ntest_zero_target_history_and_empty_projection_without_padding (test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.057s\n\nOK\n",
+      "scope": "synthetic complex128 n64 d8 P6 seeds and mocked imaging control flow; no physical full state"
+    },
+    {
+      "attempt": 4,
+      "exit_code": 0,
+      "exception": null,
+      "child_process_cpu_seconds": 0.37854299999999996,
+      "controller_process_cpu_seconds": 0.028312999999999998,
+      "inclusive_process_cpu_seconds": 0.40685599999999994,
+      "wall_seconds": 0.5369264589389786,
+      "stdout": "{\"tests_run\": 16, \"passing_tests\": [\"test_r1_seeds.ImagingHookTests.test_hook_owned_history_callback_isolation_and_default_factory\", \"test_r1_seeds.ImagingHookTests.test_no_full_fallback_for_unsafe_core_and_failed_reduced_qp\", \"test_r1_seeds.ImagingHookTests.test_non_descent_hook_emits_rejected_trace_without_history\", \"test_r1_seeds.ImagingHookTests.test_offline_failure_is_missing_and_budget_failure_propagates\", \"test_r1_seeds.R1SeedsTests.test_budget_stop_before_seed_work_cannot_query_full\", \"test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection\", \"test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot\", \"test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection\", \"test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection\", \"test_r1_seeds.R1SeedsTests.test_legacy_and_typed_own_history_seeds_and_hierarchy_are_exact\", \"test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial\", \"test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule\", \"test_r1_seeds.R1SeedsTests.test_protected_rank_overallocation_is_invalid_and_paid\", \"test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection\", \"test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing\", \"test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding\"], \"failure_count\": 0, \"error_count\": 0, \"metrics\": {\"legacy_frozen_probe_and_Z_max_absolute_error\": 0.0, \"legacy_history_probe_and_Z_max_absolute_error\": 0.0, \"six_source_raw_M4_relative_loss\": 0.9998422539771745, \"six_source_protected_M6_relative_loss\": 0.0, \"six_source_raw_M4_energy_capture\": 0.0003154671618435661, \"six_source_protected_M6_energy_capture\": 1.0}}\n",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.077s\n\nOK\n",
+      "scope": "synthetic complex128 n64 d8 P6 seed algebra, P7 invalid-cap control, mocked nonlinear control flow; no physics run"
+    },
+    {
+      "attempt": 5,
+      "exit_code": 0,
+      "exception": null,
+      "child_process_cpu_seconds": 0.362126,
+      "controller_process_cpu_seconds": 0.032212,
+      "inclusive_process_cpu_seconds": 0.394338,
+      "wall_seconds": 0.43856791709549725,
+      "stdout": "{\"tests_run\": 16, \"passing_tests\": [\"test_r1_seeds.ImagingHookTests.test_hook_owned_history_callback_isolation_and_default_factory\", \"test_r1_seeds.ImagingHookTests.test_no_full_fallback_for_unsafe_core_and_failed_reduced_qp\", \"test_r1_seeds.ImagingHookTests.test_non_descent_hook_emits_rejected_trace_without_history\", \"test_r1_seeds.ImagingHookTests.test_offline_failure_is_missing_and_budget_failure_propagates\", \"test_r1_seeds.R1SeedsTests.test_budget_stop_before_seed_work_cannot_query_full\", \"test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection\", \"test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot\", \"test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection\", \"test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection\", \"test_r1_seeds.R1SeedsTests.test_legacy_and_typed_own_history_seeds_and_hierarchy_are_exact\", \"test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial\", \"test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule\", \"test_r1_seeds.R1SeedsTests.test_protected_rank_overallocation_is_invalid_and_paid\", \"test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection\", \"test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing\", \"test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding\"], \"failure_count\": 0, \"error_count\": 0, \"metrics\": {\"legacy_frozen_probe_and_Z_max_absolute_error\": 0.0, \"legacy_history_probe_and_Z_max_absolute_error\": 0.0, \"six_source_raw_M4_relative_loss\": 0.9998422539771745, \"six_source_protected_M6_relative_loss\": 0.0, \"six_source_raw_M4_energy_capture\": 0.0003154671618435661, \"six_source_protected_M6_energy_capture\": 1.0}}\n",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.066s\n\nOK\n",
+      "scope": "complex128 n64 d8 P6 synthetic seeds and mocked nonlinear control flow; warmed FIXED scaffold isolation; no physics run"
+    },
+    {
+      "attempt": 6,
+      "exit_code": 0,
+      "exception": null,
+      "child_process_cpu_seconds": 0.33935,
+      "controller_process_cpu_seconds": 0.03145,
+      "inclusive_process_cpu_seconds": 0.37079999999999996,
+      "wall_seconds": 0.43622079107444733,
+      "stdout": "{\"tests_run\": 16, \"passing_tests\": [\"test_r1_seeds.ImagingHookTests.test_hook_owned_history_callback_isolation_and_default_factory\", \"test_r1_seeds.ImagingHookTests.test_no_full_fallback_for_unsafe_core_and_failed_reduced_qp\", \"test_r1_seeds.ImagingHookTests.test_non_descent_hook_emits_rejected_trace_without_history\", \"test_r1_seeds.ImagingHookTests.test_offline_failure_is_missing_and_budget_failure_propagates\", \"test_r1_seeds.R1SeedsTests.test_budget_stop_before_seed_work_cannot_query_full\", \"test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection\", \"test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot\", \"test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection\", \"test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection\", \"test_r1_seeds.R1SeedsTests.test_legacy_and_typed_own_history_seeds_and_hierarchy_are_exact\", \"test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial\", \"test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule\", \"test_r1_seeds.R1SeedsTests.test_protected_rank_overallocation_is_invalid_and_paid\", \"test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection\", \"test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing\", \"test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding\"], \"failure_count\": 0, \"error_count\": 0, \"metrics\": {\"cheap_internal_scaffold_time_counted_once\": true, \"cheap_reused_scaffold_common_times_counted_once\": true, \"legacy_frozen_probe_and_Z_max_absolute_error\": 0.0, \"legacy_history_probe_and_Z_max_absolute_error\": 0.0, \"six_source_raw_M4_relative_loss\": 0.9998422539771745, \"six_source_protected_M6_relative_loss\": 0.0, \"six_source_raw_M4_energy_capture\": 0.0003154671618435661, \"six_source_protected_M6_energy_capture\": 1.0}}\n",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.072s\n\nOK\n",
+      "scope": "synthetic seed/control-flow regression after synchronized inclusive wall/CPU attribution correction; no physics run"
+    }
+  ],
+  "schema": "a20.r1.seed-worker-receipt.v1",
+  "hard_local_cpu_cap_seconds": 12.0,
+  "cumulative_process_cpu_seconds": 2.235522,
+  "status": "PASS",
+  "tests": "tests/test_r1_seeds.py",
+  "measured_imports_and_failed_attempts": true,
+  "latest_suite": {
+    "tests_run": 16,
+    "passing_tests": [
+      "test_r1_seeds.ImagingHookTests.test_hook_owned_history_callback_isolation_and_default_factory",
+      "test_r1_seeds.ImagingHookTests.test_no_full_fallback_for_unsafe_core_and_failed_reduced_qp",
+      "test_r1_seeds.ImagingHookTests.test_non_descent_hook_emits_rejected_trace_without_history",
+      "test_r1_seeds.ImagingHookTests.test_offline_failure_is_missing_and_budget_failure_propagates",
+      "test_r1_seeds.R1SeedsTests.test_budget_stop_before_seed_work_cannot_query_full",
+      "test_r1_seeds.R1SeedsTests.test_cache_owner_material_residual_and_bank_rejection",
+      "test_r1_seeds.R1SeedsTests.test_cheap_reduced_gradient_denies_full_and_keeps_previous_slot",
+      "test_r1_seeds.R1SeedsTests.test_exact_legacy_rng_seeds_and_projection",
+      "test_r1_seeds.R1SeedsTests.test_history_copy_validation_and_owner_rejection",
+      "test_r1_seeds.R1SeedsTests.test_legacy_and_typed_own_history_seeds_and_hierarchy_are_exact",
+      "test_r1_seeds.R1SeedsTests.test_oracle_and_legal_capability_denial",
+      "test_r1_seeds.R1SeedsTests.test_protected_random_uses_identical_all_source_rule",
+      "test_r1_seeds.R1SeedsTests.test_protected_rank_overallocation_is_invalid_and_paid",
+      "test_r1_seeds.R1SeedsTests.test_six_source_loss_counterexample_and_complete_protection",
+      "test_r1_seeds.R1SeedsTests.test_wide_prefix_and_observation_pairing",
+      "test_r1_seeds.R1SeedsTests.test_zero_target_history_and_empty_projection_without_padding"
+    ],
+    "failure_count": 0,
+    "error_count": 0,
+    "metrics": {
+      "cheap_internal_scaffold_time_counted_once": true,
+      "cheap_reused_scaffold_common_times_counted_once": true,
+      "legacy_frozen_probe_and_Z_max_absolute_error": 0.0,
+      "legacy_history_probe_and_Z_max_absolute_error": 0.0,
+      "six_source_raw_M4_relative_loss": 0.9998422539771745,
+      "six_source_protected_M6_relative_loss": 0.0,
+      "six_source_raw_M4_energy_capture": 0.0003154671618435661,
+      "six_source_protected_M6_energy_capture": 1.0
+    }
+  },
+  "failed_attempts": 0,
+  "implemented_files": [
+    "src/a20_r1/seeds.py",
+    "src/a20/imaging.py",
+    "tests/test_r1_seeds.py"
+  ],
+  "physics_full_mesh_runs": 0,
+  "remote_runs": 0,
+  "frozen_worker_files": [
+    "src/a20_r1/seeds.py",
+    "tests/test_r1_seeds.py",
+    "src/a20/imaging.py"
+  ],
+  "inclusive_common_and_scaffold_time_attribution": "PASS"
+}

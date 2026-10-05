@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "physical_primitives_unchanged": true,
+  "original_G0_reused": true,
+  "reference_regeneration": false,
+  "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+  "new_SHA256_checks": 0,
+  "history_snapshot": "NOT_RUN_NO_OWN_ACCEPTED_TRAJECTORY"
+}

@@ -1,0 +1,55 @@
+{
+  "attempts": [
+    {
+      "kind": "unittest_registered_R1_gates_static_report",
+      "returncode": 1,
+      "status": "FAILED",
+      "test_count": 34,
+      "actual_cpu_seconds_self_and_children": 7.3720289999999995,
+      "wall_seconds": 7.936922749970108,
+      "scope": "synthetic scalar fixtures and temporary A-D PNG/SVG only",
+      "failed_test": "test_four_scientific_figures_from_fixtures_only",
+      "failure_classification": "MATPLOTLIB_MACOS_FONT_DISCOVERY_KEYERROR",
+      "actual_render_verification": "FAILED_NO_FIGURE_RENDER_PASS_CLAIM"
+    },
+    {
+      "kind": "registered_gate_and_plot_structure_fixture",
+      "returncode": 0,
+      "status": "PASS",
+      "test_count": 34,
+      "actual_cpu_seconds_self_and_children": 0.12168199999999998,
+      "wall_seconds": 0.0972062919754535,
+      "scope": "stdlib scalar fixtures, CSV/JSON and mocked A-D axis/group structure; no Matplotlib import or actual render"
+    }
+  ],
+  "actual_fixture_cpu_seconds_inclusive": 7.493710999999999,
+  "task": "R1_gate_and_static_report_worker",
+  "fixture_cpu_budget_seconds": 8,
+  "within_cpu_budget": true,
+  "receipt_epilogue_allowance_seconds": 0.01,
+  "inclusive_budget_charge_seconds": 7.503710999999999,
+  "failed_attempt_count": 1,
+  "physics_runs": 0,
+  "live_NPZ_reads": 0,
+  "network_calls": 0,
+  "SSH_calls": 0,
+  "new_hash_checks": 0,
+  "device": "CPU_FIXTURES_ONLY",
+  "source_paths": [
+    "src/a20_r1/gates.py",
+    "src/a20_r1/report.py",
+    "tests/test_r1_gates.py"
+  ],
+  "real_result_or_gate_claims": "NONE; parent invokes one metered real report after physics",
+  "measurement": "resource.getrusage SELF+CHILDREN including Python/Matplotlib imports, unittest, fixture report CSV/JSON/PNG/SVG generation and subprocess setup; all attempts accumulated; final receipt write allowance separate",
+  "final_fixture_status": "PASS",
+  "real_figure_status": "NOT_RUN_BY_WORKER_PARENT_ONE_METERED_WARM_CACHE_CALL_REQUIRED",
+  "frozen_plot_semantics": {
+    "A": "primary late all methods plus frozen NOTRUN HISTORY and labelled protected offline/control",
+    "B": "frozen built width/depth points with actual rank and F/F*/L/L* annotations, no sweep",
+    "C": "per-parent paired early/late two panels",
+    "D": "finalZ KBsource capture x vs relativeHerror y coloured method",
+    "D_CAPTURE_CERT": "three offline capture checks",
+    "E": "conditional supplied own iteration reconstruction+objective curves; missing curve values never fabricated"
+  }
+}

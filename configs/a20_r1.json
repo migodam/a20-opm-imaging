@@ -1,0 +1,100 @@
+{
+  "schema": "a20.r1.frozen.v1",
+  "source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+  "base_config": "configs/frozen.json",
+  "parents": [
+    2001,
+    2005,
+    2003,
+    2007,
+    2013
+  ],
+  "replay_iterations": [
+    0,
+    17
+  ],
+  "phase2_parents": [
+    2001,
+    2007,
+    2013
+  ],
+  "retained_rank": 8,
+  "current_rank_cap": 56,
+  "baseline_reproduction_rtol": 1e-09,
+  "oracle_capture_threshold": 0.99999999,
+  "oracle_gate_median": 0.3,
+  "oracle_gate_parent_ratio": 0.5,
+  "oracle_gate_min_parents": 4,
+  "legal_gate_median": 0.5,
+  "legal_gate_baseline_ratio": 0.3,
+  "early_gate_absolute": 0.05,
+  "early_gate_excess": 0.02,
+  "negative_kill_rank_tolerance": 2,
+  "match_action_tolerance": 0.1,
+  "closed_loop_quality_ratio": 1.15,
+  "closed_loop_improvement_ratio": 0.8,
+  "closed_loop_vector_ratio": 0.5,
+  "closed_loop_wall_ratio": 0.8,
+  "historical_CPU_seconds": 5292.784926,
+  "historical_GPU_seconds": 5375.9374196,
+  "corrective_CPU_seconds": 1500,
+  "corrective_GPU_seconds": 4800,
+  "phase1_CPU_seconds": 600,
+  "phase1_GPU_seconds": 1200,
+  "phase2_CPU_seconds": 900,
+  "phase2_GPU_seconds": 3600,
+  "phase1_CPU_reserve": 35,
+  "phase2_CPU_reserve": 50,
+  "corrective_GPU_reserve": 25,
+  "no_full_fallback": true,
+  "state_mode": "A1",
+  "main_run_cap": 9,
+  "history_ablation_run_cap": 3,
+  "anatomy_candidate_cap": 60,
+  "oracle_policy": "M4 primary; if any late target compression capture insufficient, all-state M6 protected oracle/random",
+  "snapshot_HISTORY": "NOT_RUN_NO_OWN_ACCEPTED_TRAJECTORY",
+  "teacher_reference": "existing audited constrained references; revalidation only; never regenerated in Phase1",
+  "dataset_exposure": "historically_exposed_feasibility",
+  "new_sha256_checks": false,
+  "method_specs": {
+    "FIXED-DEEP": {
+      "O": 4,
+      "P": 4,
+      "M": 4,
+      "degree": 3
+    },
+    "WIDE-M": {
+      "O": 4,
+      "P": 4,
+      "M": 16,
+      "degree": 1
+    },
+    "CHEAP-TASK": {
+      "O": 4,
+      "P": 4,
+      "M": 4,
+      "degree": 3
+    },
+    "ORACLE-M": {
+      "O": 4,
+      "P": 4,
+      "M": 4,
+      "degree": 3
+    },
+    "PROTECTED-ORACLE": {
+      "O": 3,
+      "P": 3,
+      "M": 6,
+      "degree": 3
+    },
+    "PROTECTED-RANDOM": {
+      "O": 3,
+      "P": 3,
+      "M": 6,
+      "degree": 3
+    }
+  },
+  "operative_oracle_rule": "PROTECTED-ORACLE iff any late raw qM capture < threshold; otherwise ORACLE-M; no outcome-dependent cherry-picking",
+  "oracle_capture_certification": "material span, qM source block and final Z capture all pass energy threshold; non-floor target",
+  "state_order": "all five late then all five early; conditional earlier revisits fully charged; no retained full GPU adapters"
+}

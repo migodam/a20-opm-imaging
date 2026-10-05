@@ -1,0 +1,36 @@
+[
+  {
+    "scope": "R1 planning, setup, read-only runtime probe, source transport and archive/publication overhead allowance",
+    "phase": "phase1",
+    "process_cpu_seconds": 30.0,
+    "measurement": "conservative allowance; not claimed exact measured CPU"
+  },
+  {
+    "scope": "R1 complete integrity attempt_1",
+    "phase": "phase1",
+    "process_cpu_seconds": 1.51354,
+    "receipt": "results/a20_r1/tests/attempt_1.json",
+    "measurement": "inclusive measured process CPU"
+  },
+  {
+    "scope": "R1 Codex seed/backend worker inclusive checks",
+    "phase": "phase1",
+    "process_cpu_seconds": 2.235522,
+    "receipt": "results/a20_r1/SEED_WORKER_RECEIPT.json",
+    "measurement": "inclusive measured process CPU"
+  },
+  {
+    "scope": "R1 Codex gate/report worker inclusive checks and failed font attempt",
+    "phase": "phase1",
+    "process_cpu_seconds": 7.503710999999999,
+    "receipt": "results/a20_r1/GATE_WORKER_RECEIPT.json",
+    "measurement": "inclusive measured process CPU"
+  },
+  {
+    "scope": "R1 Codex anatomy worker inclusive checks",
+    "phase": "phase1",
+    "process_cpu_seconds": 1.27367,
+    "receipt": "results/a20_r1/ANATOMY_WORKER_RECEIPT.json",
+    "measurement": "inclusive measured process CPU"
+  }
+]

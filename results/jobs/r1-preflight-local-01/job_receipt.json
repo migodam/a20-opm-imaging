@@ -1,0 +1,26 @@
+{
+  "wall_seconds": 0.11997200001496822,
+  "process_cpu_seconds": 0.126158,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {},
+  "exclusive_walls": {},
+  "events": 0,
+  "peak_cpu_rss_bytes": 53673984,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "r1_phase": "phase1",
+  "prior_R1_CPU_seconds": 42.52644300000001,
+  "prior_R1_GPU_seconds": 0.0,
+  "r1_phase_caps": {
+    "CPU": 600,
+    "GPU": 1200
+  },
+  "job": "r1-preflight-local-01",
+  "stage": "preflight",
+  "status": "COMPLETE",
+  "source_commit": "e29f345ae5aea170a18cca1b79defe57e878ab29"
+}

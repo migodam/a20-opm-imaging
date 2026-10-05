@@ -1,0 +1,24 @@
+{
+  "scope": "R1 complete integrity attempt_1",
+  "status": "PASS",
+  "returncode": 0,
+  "wall_seconds": 1.5179887500125915,
+  "process_cpu_seconds": 1.51354,
+  "measurement": "controller + child CPU, imports and failures included",
+  "GPU_seconds": 0,
+  "phase": "phase1",
+  "command": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "real_5184_current_physics": false,
+  "log": "results/a20_r1/tests/attempt_1.log"
+}

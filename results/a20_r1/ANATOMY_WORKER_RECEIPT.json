@@ -1,0 +1,177 @@
+{
+  "scope": "anatomy worker local inspection/static/tiny checks only; no original physics",
+  "cpu_seconds_total": 1.27367,
+  "cpu_limit_seconds": 8,
+  "attempts": [
+    {
+      "label": "stdlib canonical-schema inspection",
+      "status": "PASS",
+      "imports": [
+        "time",
+        "json",
+        "resource",
+        "pathlib"
+      ],
+      "cpu_seconds": 0.12214699999999999,
+      "elapsed_process_seconds_after_first_statement": 0.09974,
+      "files_read": [
+        "results/replay/replay.jsonl"
+      ]
+    },
+    {
+      "label": "AST + scientific module and fixture imports",
+      "status": "PASS",
+      "cpu_seconds": 0.26140599999999997,
+      "imports": [
+        "ast",
+        "importlib",
+        "io",
+        "json",
+        "signal",
+        "traceback",
+        "unittest",
+        "numpy",
+        "scipy.linalg",
+        "a20.backend/material/costs/replay",
+        "a20_r1.anatomy/seeds"
+      ],
+      "scope": "no physics constructors called"
+    },
+    {
+      "label": "nine tiny/static control-flow tests",
+      "status": "PASS",
+      "cpu_seconds": 0.860107,
+      "tests_run": 9,
+      "failures": 0,
+      "errors": 0,
+      "log": "test_all_ten_real_canonical_keys_provenance_and_registered_paths_readonly (anatomy_worker_test.AnatomyWorkerTests.test_all_ten_real_canonical_keys_provenance_and_registered_paths_readonly) ... ok\ntest_ambiguous_basename_and_duplicate_index_rejected (anatomy_worker_test.AnatomyWorkerTests.test_ambiguous_basename_and_duplicate_index_rejected) ... ok\ntest_baseline_conflict_stops_campaign_without_relaxing_metrics (anatomy_worker_test.AnatomyWorkerTests.test_baseline_conflict_stops_campaign_without_relaxing_metrics) ... ok\ntest_budget_failure_flushes_partial_and_rethrows (anatomy_worker_test.AnatomyWorkerTests.test_budget_failure_flushes_partial_and_rethrows) ... ok\ntest_canonical_40_and_duplicate_attempt_denial (anatomy_worker_test.AnatomyWorkerTests.test_canonical_40_and_duplicate_attempt_denial) ... ok\ntest_conditional_60_revisit_paid_and_oracle_capability_isolated (anatomy_worker_test.AnatomyWorkerTests.test_conditional_60_revisit_paid_and_oracle_capability_isolated) ... ok\ntest_energy_capture_and_zero_floor_no_substitution (anatomy_worker_test.AnatomyWorkerTests.test_energy_capture_and_zero_floor_no_substitution) ... ok\ntest_failed_QP_retains_step_actions_and_capture (anatomy_worker_test.AnatomyWorkerTests.test_failed_QP_retains_step_actions_and_capture) ... ok\ntest_zero_invalid_reference_never_regenerated (anatomy_worker_test.AnatomyWorkerTests.test_zero_invalid_reference_never_regenerated) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.866s\n\nOK\n",
+      "scope": "2D synthetic material quadratics and mocked n64 current policies; real canonical JSONL metadata/paths only"
+    }
+  ],
+  "schema": "a20.r1.anatomy-worker-receipt.v1",
+  "cumulative_process_cpu_seconds": 1.27367,
+  "hard_local_cpu_cap_seconds": 8.0,
+  "measured_cpu_seconds": 1.24367,
+  "receipt_epilogue_cpu_allowance_seconds": 0.03,
+  "status": "PASS",
+  "measured_imports_and_failed_attempts": true,
+  "physics_full_mesh_runs": 0,
+  "remote_runs": 0,
+  "teacher_optimizations": 0,
+  "implemented_files": [
+    "src/a20_r1/anatomy.py",
+    "tests/test_r1_anatomy_worker.py"
+  ],
+  "canonical_metadata_evidence": [
+    {
+      "parent": 2001,
+      "iteration": 0,
+      "reference_line": 3,
+      "fixed_line": 8,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2001_0_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2001_0_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2001,
+      "iteration": 17,
+      "reference_line": 80,
+      "fixed_line": 85,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2001_17_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2001_17_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2005,
+      "iteration": 0,
+      "reference_line": 158,
+      "fixed_line": 163,
+      "reference_status": "VERIFIED_SAVED_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2005_0_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2005_0_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2005,
+      "iteration": 17,
+      "reference_line": 235,
+      "fixed_line": 240,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2005_17_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2005_17_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2003,
+      "iteration": 0,
+      "reference_line": 313,
+      "fixed_line": 318,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2003_0_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2003_0_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2003,
+      "iteration": 17,
+      "reference_line": 390,
+      "fixed_line": 395,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2003_17_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2003_17_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2007,
+      "iteration": 0,
+      "reference_line": 468,
+      "fixed_line": 473,
+      "reference_status": "VERIFIED_SAVED_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2007_0_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2007_0_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2007,
+      "iteration": 17,
+      "reference_line": 545,
+      "fixed_line": 550,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2007_17_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2007_17_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2013,
+      "iteration": 0,
+      "reference_line": 778,
+      "fixed_line": 783,
+      "reference_status": "VERIFIED_SAVED_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2013_0_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2013_0_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    },
+    {
+      "parent": 2013,
+      "iteration": 17,
+      "reference_line": 855,
+      "fixed_line": 860,
+      "reference_status": "VERIFIED_NEW_CONSTRAINED_REFERENCE",
+      "fixed_rank": 56,
+      "reference_basename": "20261005T082521_71339a28_2013_17_full_GN_reference_None.npz",
+      "fixed_basename": "20261005T082521_71339a28_2013_17_mixed_3.npz",
+      "backend_declared_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+    }
+  ]
+}

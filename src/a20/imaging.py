@@ -11,7 +11,12 @@ from .backend import Adapter, BasisView, ReducedState, pack
 from .opm import (orth, SchurFeedback, build_seeds, Hierarchy, Projection,
                   ReducedJacobian, FullJacobian, UnsafeCore, BlockStream)
 from .material import solve_quadratic, kkt, QPFailure
-from .costs import plain
+from .costs import BudgetExceeded, plain
+
+
+def _cost_difference(cost, excluded):
+    return {kind: {key: value-excluded.get(kind, {}).get(key, 0)
+                   for key, value in entries.items()} for kind, entries in cost.items()}
 
 
 def basis_model(adapter, x, state, residual, previous, method, degree, config):
@@ -64,7 +69,9 @@ def zero_state(adapter, x):
 
 
 def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
-                mode='A1', adapter=None, iteration_sink=None, experiment_id=''):
+                mode='A1', adapter=None, iteration_sink=None, experiment_id='',
+                basis_factory=None, offline_iteration_callback=None,
+                no_full_fallback=False):
     """One real reconstruction. Caches are tied to unchanged material only."""
     book.synchronize()
     started = time.perf_counter()
@@ -82,6 +89,10 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
     state = None
     fallback_count = 0
     last_info = {'rank': a.n, 'degree': None, 'projection': 'full'}
+    no_full_fallback = bool(no_full_fallback or config.get('no_full_fallback', False))
+    accepted_history_count = 0
+    offline_iteration_wall = 0.
+    offline_iteration_cost = {'counts': {}, 'exclusive_walls': {}}
     try:
         for outer in range(config['max_updates']):
             book.check()
@@ -122,13 +133,28 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
                         seed_residual = a.residual(seed_state)
                     else:
                         seed_state, seed_residual = state, full_r
-                    projection, info = basis_model(a, x, seed_state, seed_residual, previous, method, degree, config)
+                    policy = None
+                    if basis_factory is None:
+                        projection, info = basis_model(a, x, seed_state, seed_residual, previous, method, degree, config)
+                    else:
+                        policy = basis_factory(a, x, seed_state, seed_residual, previous, method, degree, config)
+                        if isinstance(policy, tuple):
+                            projection, info = policy
+                            policy = None
+                        else:
+                            projection, info = policy.projection, dict(policy.info)
+                        if info.get('method_id', method) != method:
+                            raise ValueError('Basis policy method differs from accepted history owner')
                     model_state = a.reduced_state(x, projection) if mode == 'A2' else state
                     r = a.residual(model_state) if mode == 'A2' else full_r
-                    jac = ReducedJacobian(a, x, model_state, projection)
+                    jac = policy.jacobian if policy is not None and mode != 'A2' else ReducedJacobian(a, x, model_state, projection)
+                    if basis_factory is not None or no_full_fallback:
+                        last_info = info
                     if projection.fallback:
                         fallback_count += 1
                 except UnsafeCore as exc:
+                    if no_full_fallback:
+                        raise
                     fallback_reason = str(exc)
                     fallback_count += 1
                     book.counts['full_model_fallbacks'] += 1
@@ -137,7 +163,7 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
             try:
                 step, qp, normal = solve_quadratic(problem.chart, x, r, jac, lam, ell, config, book)
             except QPFailure as exc:
-                if method == 'FULL_GN' or projection is None:
+                if method == 'FULL_GN' or projection is None or no_full_fallback:
                     raise
                 # A failed reduced QP is not salvaged by clipping or a ridge.
                 fallback_reason = 'reduced_QP_failed:'+str(exc)
@@ -151,8 +177,66 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
             predicted = float(-((jac.pullback(r)+ell)@step+.5*(model_jstep@model_jstep+lam*(step@step))))
             # Armijo slope is the actual full objective derivative.
             slope = float(full_gradient@step)
+            offline_status = None
+            iteration_offline_wall = 0.
+            iteration_offline_cost = {'counts': {}, 'exclusive_walls': {}}
+            if offline_iteration_callback is not None:
+                # An offline audit sees the completed proposal at its own
+                # current state, before any Armijo decision. Its result is
+                # never passed to the basis factory or acceptance logic.
+                proposal = {'experiment_id': experiment_id, 'parent_object_id': problem.parent_id,
+                    'method': method, 'mode': mode, 'outer_iteration': outer,
+                    'degree': degree if method != 'FULL_GN' else None,
+                    'rank': info['rank'], 'basis_info': info, 'lambda_total': lam,
+                    'full_objective_before': objective, 'full_KKT_relative_before': last_full_kkt,
+                    'predicted_reduction': predicted, 'step_norm': float(la.norm(step)),
+                    'material_step_coefficients': step.tolist(), 'QP': qp,
+                    'accepted': None, 'acceptance_pending': True}
+                audit_start = time.perf_counter()
+                offline_before = book.snapshot()
+                try:
+                    with book.scope('offline_iteration_audit'):
+                        with book.span('offline_iteration_callback', offline_iteration_audits=1):
+                            offline_iteration_callback(adapter=a, x=x.copy(), state=state,
+                                residual=full_r.copy(), ell=ell.copy(), lam=lam,
+                                row=plain(proposal), full=full_jac)
+                    offline_status = {'status': 'RECORDED'}
+                except BudgetExceeded:
+                    raise
+                except Exception as exc:
+                    offline_status = {'status': 'DIAGNOSTIC_MISSING',
+                        'exception': type(exc).__name__, 'message': str(exc)}
+                finally:
+                    iteration_offline_wall = time.perf_counter()-audit_start
+                    offline_iteration_wall += iteration_offline_wall
+                    iteration_offline_cost = book.delta(offline_before)
+                    for kind, entries in iteration_offline_cost.items():
+                        for key, value in entries.items():
+                            offline_iteration_cost[kind][key] = offline_iteration_cost[kind].get(key, 0)+value
             if slope >= 0 or not np.isfinite(slope):
                 status, failure = 'NON_DESCENT', 'Full objective derivative is nonnegative'
+                if basis_factory is not None or offline_iteration_callback is not None:
+                    rejected = {'experiment_id': experiment_id, 'parent_object_id': problem.parent_id,
+                        'method': method, 'mode': mode, 'outer_iteration': outer,
+                        'degree': degree if method != 'FULL_GN' else None,
+                        'rank': info['rank'], 'model_refresh': True, 'core': info.get('core'),
+                        'projection': info['projection'], 'basis_info': info, 'lambda_total': lam,
+                        'full_objective_before': objective, 'full_KKT_relative_before': last_full_kkt,
+                        'predicted_reduction': predicted, 'actual_reduction': None,
+                        'step_size': 0., 'step_norm': float(la.norm(step)),
+                        'material_step_coefficients': step.tolist(), 'accepted_material_coefficients': None,
+                        'QP': qp, 'trials': [], 'accepted': False, 'proposal_status': 'NON_DESCENT',
+                        'fallback_reason': fallback_reason, 'failure': failure,
+                        'wall_seconds': time.perf_counter()-it_start, 'cost': book.delta(snapshot)}
+                    if offline_iteration_callback is not None:
+                        rejected.update(offline_audit_wall_s=iteration_offline_wall,
+                            offline_diagnostic=offline_status, offline_audit_cost=iteration_offline_cost,
+                            deployment_cost=_cost_difference(rejected['cost'], iteration_offline_cost),
+                            wall_deployment=rejected['wall_seconds']-iteration_offline_wall)
+                    iterations.append(rejected)
+                    if iteration_sink:
+                        iteration_sink(plain(rejected))
+                    last_info = info
                 break
             accepted, trial_logs = False, []
             alpha = 1.
@@ -174,6 +258,8 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
                         reduced_trial_objective = float(.5*trial_r@trial_r+.5*config['prior']*(trial_z@trial_z))
                         reduced_trial_status = 'COHERENT_FROZEN_BASIS'
                     except UnsafeCore as exc:
+                        if no_full_fallback:
+                            raise
                         reduced_trial_status = 'FULL_FALLBACK:'+str(exc)
                         fallback_count += 1
                         book.counts['full_trial_fallbacks'] += 1
@@ -198,6 +284,12 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
                 'accepted_material_coefficients': problem.chart.project(candidate-problem.init).tolist() if accepted else None,
                 'QP': qp, 'trials': trial_logs, 'accepted': accepted, 'fallback_reason': fallback_reason,
                 'wall_seconds': time.perf_counter()-it_start, 'cost': book.delta(snapshot)}
+            if offline_iteration_callback is not None:
+                row['offline_audit_wall_s'] = iteration_offline_wall
+                row['offline_diagnostic'] = offline_status
+                row['offline_audit_cost'] = iteration_offline_cost
+                row['deployment_cost'] = _cost_difference(row['cost'], iteration_offline_cost)
+                row['wall_deployment'] = row['wall_seconds']-iteration_offline_wall
             iterations.append(row)
             if iteration_sink:
                 iteration_sink(plain(row))
@@ -205,11 +297,18 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
             if not accepted:
                 status, failure = 'LINE_SEARCH_FAILED', 'No full objective accepted trial'
                 break
-            previous = alpha*step
+            accepted_step = alpha*step
+            if basis_factory is not None and method != 'FULL_GN':
+                from a20_r1.seeds import AcceptedHistory
+                accepted_history_count += 1
+                previous = AcceptedHistory(problem.parent_id, method,
+                                           accepted_history_count, accepted_step)
+            else:
+                previous = accepted_step
             # Preserve only Z,W; the new outer builds new LZ, core and B.
             predictor = projection
             x, state = candidate, trial_full_state
-            if outer >= config['small_step_first_iteration'] and la.norm(previous)<config['small_step']:
+            if outer >= config['small_step_first_iteration'] and la.norm(accepted_step)<config['small_step']:
                 # A small step is a stagnation observation, never a full KKT certificate.
                 audit_start = time.perf_counter()
                 final_jac = FullJacobian(a, x, state)
@@ -221,6 +320,10 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
                 break
     except QPFailure as exc:
         status, failure = 'QP_FAILED', {'message': str(exc), 'QP': getattr(exc, 'result', {})}
+    except UnsafeCore as exc:
+        if not no_full_fallback:
+            raise
+        status, failure = 'UNSAFE_CORE', str(exc)
     # BudgetExceeded is handled by the job owner; preserve iteration JSONL first.
     objective, final_r, state = a.full_objective(x, config['prior'], state=state)
     audit_start = time.perf_counter()
@@ -249,5 +352,14 @@ def reconstruct(problem, config, book, device, *, method='FULL_GN', degree=0,
         'cost': costs, 'peak_memory': book.receipt(), 'fallback_count': fallback_count,
         'status': status, 'failure': failure, 'solver': 'original direct complex128 LU; zero Krylov solver iterations'}
     row['native_DDA_counters'] = a.model.counters.as_dict()
+    if basis_factory is not None:
+        allocation = last_info.get('allocation', {})
+        row.update({('seed_budget_'+key): allocation.get(key, 0) for key in 'OPM'})
+    if offline_iteration_callback is not None:
+        row['offline_audit_wall_s'] = offline_iteration_wall
+        row['wall_offline_iteration_audit'] = offline_iteration_wall
+        row['offline_audit_cost'] = offline_iteration_cost
+        row['deployment_cost'] = _cost_difference(costs, offline_iteration_cost)
+        row['wall_deployment'] = row['wall_total']-offline_iteration_wall
     row.update(costs['counts'])
     return x, plain(row), iterations, a
