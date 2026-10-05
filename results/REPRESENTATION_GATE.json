@@ -1,0 +1,95 @@
+{
+  "status": "HOLD",
+  "eligible": [],
+  "degrees": {
+    "0": {
+      "status": "HOLD",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "missing_reference_states": [
+        [
+          2010,
+          0
+        ],
+        [
+          2010,
+          17
+        ]
+      ],
+      "method_validation_status": "FAIL",
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": null,
+      "worst_relative_H_step_error": 6.573211883535582
+    },
+    "1": {
+      "status": "HOLD",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "missing_reference_states": [
+        [
+          2010,
+          0
+        ],
+        [
+          2010,
+          17
+        ]
+      ],
+      "method_validation_status": "FAIL",
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": null,
+      "worst_relative_H_step_error": 5.113195435982987
+    },
+    "2": {
+      "status": "HOLD",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "missing_reference_states": [
+        [
+          2010,
+          0
+        ],
+        [
+          2010,
+          17
+        ]
+      ],
+      "method_validation_status": "FAIL",
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": null,
+      "worst_relative_H_step_error": 4.704389368516216
+    },
+    "3": {
+      "status": "HOLD",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "missing_reference_states": [
+        [
+          2010,
+          0
+        ],
+        [
+          2010,
+          17
+        ]
+      ],
+      "method_validation_status": "FAIL",
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": null,
+      "worst_relative_H_step_error": 4.49688065497439
+    }
+  },
+  "expected_states": 12
+}

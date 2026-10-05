@@ -82,4 +82,4 @@
 
 从拷贝根目录设置 `PYTHONPATH=src`、`PYTHONDONTWRITEBYTECODE=1` 和单线程 BLAS 环境；每个重跑使用新 job ID。公开包中的旧 `results` 应完整保留为只读 `prior_evidence`，独立复现在新的 `results` 中记录自己的完整成本；不能删除旧失败 receipt 绕过预算，也不能将另一轮成本/结果混入本轮。累计限制、锁和停止条件遵循现有复现合同。
 
-本索引只新增文档及本 worker 回执。数据数值未读取，源码、配置、测试、结果未修改；最终公开范围、科学解释和 novelty judgment 由主线程确认。
+本索引的schema审计只读键名而未读取数组数值；它不能决定科学gates。完整replay、失败及最终判断已另交[中文报告](../RESEARCH_REPORT_ZH.md)、[replay索引](../REPLAY_REPORT.md)及[gate decision](../results/GATE_DECISION.json)，发布状态另见[发布回执](../results/PUBLICATION.json)。

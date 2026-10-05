@@ -1,0 +1,45 @@
+{
+  "schema": "a20.final_report.mechanical_consistency_receipt.v1",
+  "status": "PASS",
+  "consistency_result": "CONSISTENT",
+  "read_process_receipts": [
+    {
+      "read": 1,
+      "self_cpu_seconds": 0.030998,
+      "children_cpu_seconds": 0.008177,
+      "wall_seconds": 0.01930883398745209,
+      "purpose": "final documents/gate and artifact index"
+    },
+    {
+      "read": 2,
+      "self_cpu_seconds": 0.102969,
+      "children_cpu_seconds": 0,
+      "wall_seconds": 0.08468854194507003,
+      "purpose": "pre-refresh CSV schema and saved receipts; charged but final CSV reread below"
+    },
+    {
+      "read": 3,
+      "self_cpu_seconds": 0.159502,
+      "children_cpu_seconds": 0,
+      "wall_seconds": 0.18034345796331763,
+      "purpose": "immutable raw replay arithmetic and saved G0 scopes"
+    }
+  ],
+  "checker_process_cpu_seconds": 0.232004,
+  "checker_waited_child_cpu_seconds": 0.0,
+  "inclusive_measured_process_cpu_seconds": 0.53365,
+  "checker_wall_seconds": 0.23674291593488306,
+  "read_wall_seconds": 0.28434083389583975,
+  "CPU_limit_seconds": 8,
+  "all_measured_read_check_attempts_and_failures_included": true,
+  "internal_failed_attempts": [],
+  "measurement": "Process startup/import CPU included; samples precede final receipt/stdout serialization. Tool/editor/reasoning CPU is outside measured subprocess CPU.",
+  "physics": 0,
+  "test_execution": 0,
+  "bootstrap_redraws": 0,
+  "SSH": 0,
+  "hash_checks": 0,
+  "NPZ_values_read": 0,
+  "docs_source_config_modifications": 0,
+  "new_agents": 0
+}

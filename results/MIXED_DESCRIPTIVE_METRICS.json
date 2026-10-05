@@ -1,0 +1,90 @@
+{
+  "scope": "five Gaussian parents, ten finite states; not the registered complete twelve-state gate",
+  "degree_statistics": [
+    {
+      "degree": 0,
+      "actual_rank": [
+        20
+      ],
+      "finite_states": 10,
+      "missing_reference_states": 2,
+      "gaussian_subset_median": 1.0424312625725298,
+      "early_median": 0.0346370100980737,
+      "late_median": 3.986573787496384,
+      "worst": 6.573211883535582,
+      "within_registered_margin": 5,
+      "not_complete_12_state_gate": true
+    },
+    {
+      "degree": 1,
+      "actual_rank": [
+        32
+      ],
+      "finite_states": 10,
+      "missing_reference_states": 2,
+      "gaussian_subset_median": 0.838891626610045,
+      "early_median": 0.03129914976410251,
+      "late_median": 3.114818326985325,
+      "worst": 5.113195435982987,
+      "within_registered_margin": 5,
+      "not_complete_12_state_gate": true
+    },
+    {
+      "degree": 2,
+      "actual_rank": [
+        44
+      ],
+      "finite_states": 10,
+      "missing_reference_states": 2,
+      "gaussian_subset_median": 0.7819234788839691,
+      "early_median": 0.02479721974644194,
+      "late_median": 2.8026709651761883,
+      "worst": 4.704389368516216,
+      "within_registered_margin": 5,
+      "not_complete_12_state_gate": true
+    },
+    {
+      "degree": 3,
+      "actual_rank": [
+        56
+      ],
+      "finite_states": 10,
+      "missing_reference_states": 2,
+      "gaussian_subset_median": 0.7423790836592508,
+      "early_median": 0.022439041606178572,
+      "late_median": 2.695060239644571,
+      "worst": 4.49688065497439,
+      "within_registered_margin": 5,
+      "not_complete_12_state_gate": true
+    },
+    {
+      "degree": 4,
+      "actual_rank": [
+        68
+      ],
+      "finite_states": 10,
+      "missing_reference_states": 2,
+      "gaussian_subset_median": 0.7425355495804151,
+      "early_median": 0.019218896174259235,
+      "late_median": 2.570417102294003,
+      "worst": 4.506540168453662,
+      "within_registered_margin": 5,
+      "not_complete_12_state_gate": true
+    },
+    {
+      "degree": 5,
+      "actual_rank": [
+        80
+      ],
+      "finite_states": 10,
+      "missing_reference_states": 2,
+      "gaussian_subset_median": 0.7271987212592117,
+      "early_median": 0.013250694592937639,
+      "late_median": 2.463268976322091,
+      "worst": 4.416471394074735,
+      "within_registered_margin": 5,
+      "not_complete_12_state_gate": true
+    }
+  ],
+  "processing_cpu_seconds": 0.150522
+}

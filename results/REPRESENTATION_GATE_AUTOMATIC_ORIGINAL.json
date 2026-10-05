@@ -1,0 +1,51 @@
+{
+  "status": "FAIL",
+  "eligible": [],
+  "degrees": {
+    "0": {
+      "status": "FAIL",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": 1.0424312625725298,
+      "worst_relative_H_step_error": 6.573211883535582
+    },
+    "1": {
+      "status": "FAIL",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": 0.838891626610045,
+      "worst_relative_H_step_error": 5.113195435982987
+    },
+    "2": {
+      "status": "FAIL",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": 0.7819234788839691,
+      "worst_relative_H_step_error": 4.704389368516216
+    },
+    "3": {
+      "status": "FAIL",
+      "valid_states": 10,
+      "missing_states": [],
+      "duplicate_states": [],
+      "unexpected_states": [],
+      "observed_failures": 2,
+      "unresolved_reference_or_floor": 0,
+      "median_relative_H_step_error": 0.7423790836592508,
+      "worst_relative_H_step_error": 4.49688065497439
+    }
+  },
+  "expected_states": 12
+}

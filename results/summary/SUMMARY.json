@@ -1,0 +1,84 @@
+{
+  "status": "EVIDENCE_SUMMARIZED",
+  "data_scope": "historically_exposed_feasibility",
+  "selected_replay_source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/replay.jsonl",
+  "replay_rows": 888,
+  "counts": {
+    "metric_valid": 720,
+    "failed": 128,
+    "invalid": 0,
+    "zero_reference": 0,
+    "missing": 168,
+    "duplicate": 0,
+    "oracle": 0
+  },
+  "non_method_records_retained_separately": 42,
+  "non_method_record_kinds": {
+    "shared_setup": 6,
+    "shared_state": 12,
+    "shared_reference": 12,
+    "shared_retained": 12
+  },
+  "non_method_records_not_failed_or_missing_experiment_cells": true,
+  "counts_overlap": true,
+  "missing_expected_cells": 144,
+  "input_issues": [],
+  "input_issue_counts": {},
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "parent, after averaging paired required states",
+  "bootstrap_requires_exact_total_seed_rank_and_actual_rank": true,
+  "bootstrap_intervals_are_descriptive_historical_feasibility_only": true,
+  "one_parent_bootstrap_is_degenerate_no_interval_or_overall_significance": true,
+  "rank_only_controls_may_have_no_strict_bootstrap_pairs": true,
+  "science_judgment": "RETAINED_BY_PARENT_NOT_COMPUTED",
+  "existing_gate_artifacts_copied_not_recomputed": true,
+  "plots": {
+    "status": "GENERATED",
+    "files": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/degree_main_0.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/degree_main_0.svg",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/frontier_actual_rank_0.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/frontier_actual_rank_0.svg",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/frontier_online_Maxwell_vector_actions_0.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/frontier_online_Maxwell_vector_actions_0.svg",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/frontier_feedback_vector_actions_0.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/frontier_feedback_vector_actions_0.svg",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/degree_main_1.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/figures/degree_main_1.svg"
+    ],
+    "font_language": "English figure labels; Chinese report"
+  },
+  "job_count": 5,
+  "job_process_cpu_seconds_all_statuses": 5147.862171,
+  "job_gpu_occupation_seconds_all_statuses": 5375.937419600001,
+  "receipt_wall_seconds_not_summed_as_deployment_cost": true,
+  "counter_axes": "actual rank; logged online F/F*/L/L* vector RHS; non-audit F/F* separately",
+  "replay_wall_attribution_includes_offline_audit_not_online_deployment": true,
+  "canonical_replay_wall_attribution_excludes_shared_geometry_state_reference_U": true,
+  "legacy_wall_scopes_retained_as_logged": true,
+  "cumulative_basis_attribution_not_summed_across_degrees": true,
+  "scope_by_parameterization": {
+    "gaussian": [
+      [
+        "2001",
+        "2005",
+        "2003",
+        "2007",
+        "2013"
+      ],
+      [
+        "0",
+        "17"
+      ]
+    ],
+    "voxel": [
+      [
+        "2010"
+      ],
+      [
+        "0",
+        "17"
+      ]
+    ]
+  }
+}

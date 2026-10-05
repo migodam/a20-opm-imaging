@@ -1,0 +1,263 @@
+{
+  "schema": "a20.route_a.final_decision.v1",
+  "decision": "NO_GO_FOR_CURRENT_IMPLEMENTATION_ADVANCEMENT",
+  "complete_registered_replay_H_gate": "HOLD",
+  "reason": "No eligible degree; both voxel full constrained references unavailable, actual method QP failures retained; valid Gaussian subset has large late-state H-step errors.",
+  "G0": {
+    "status": "PASS_REGISTERED_BACKEND_CHECKS",
+    "core_local_tests": 26,
+    "source_algebra": "ALL ASSERTIONS PASSED",
+    "real_backend_states": [
+      [
+        2001,
+        0
+      ],
+      [
+        2005,
+        0
+      ]
+    ],
+    "high_dimensional_voxel_QP_certification": "FAIL_IN_REPLAY"
+  },
+  "replay": {
+    "status": "HOLD",
+    "eligible": [],
+    "degrees": {
+      "0": {
+        "status": "HOLD",
+        "valid_states": 10,
+        "missing_states": [],
+        "duplicate_states": [],
+        "unexpected_states": [],
+        "observed_failures": 2,
+        "missing_reference_states": [
+          [
+            2010,
+            0
+          ],
+          [
+            2010,
+            17
+          ]
+        ],
+        "method_validation_status": "FAIL",
+        "unresolved_reference_or_floor": 0,
+        "median_relative_H_step_error": null,
+        "worst_relative_H_step_error": 6.573211883535582
+      },
+      "1": {
+        "status": "HOLD",
+        "valid_states": 10,
+        "missing_states": [],
+        "duplicate_states": [],
+        "unexpected_states": [],
+        "observed_failures": 2,
+        "missing_reference_states": [
+          [
+            2010,
+            0
+          ],
+          [
+            2010,
+            17
+          ]
+        ],
+        "method_validation_status": "FAIL",
+        "unresolved_reference_or_floor": 0,
+        "median_relative_H_step_error": null,
+        "worst_relative_H_step_error": 5.113195435982987
+      },
+      "2": {
+        "status": "HOLD",
+        "valid_states": 10,
+        "missing_states": [],
+        "duplicate_states": [],
+        "unexpected_states": [],
+        "observed_failures": 2,
+        "missing_reference_states": [
+          [
+            2010,
+            0
+          ],
+          [
+            2010,
+            17
+          ]
+        ],
+        "method_validation_status": "FAIL",
+        "unresolved_reference_or_floor": 0,
+        "median_relative_H_step_error": null,
+        "worst_relative_H_step_error": 4.704389368516216
+      },
+      "3": {
+        "status": "HOLD",
+        "valid_states": 10,
+        "missing_states": [],
+        "duplicate_states": [],
+        "unexpected_states": [],
+        "observed_failures": 2,
+        "missing_reference_states": [
+          [
+            2010,
+            0
+          ],
+          [
+            2010,
+            17
+          ]
+        ],
+        "method_validation_status": "FAIL",
+        "unresolved_reference_or_floor": 0,
+        "median_relative_H_step_error": null,
+        "worst_relative_H_step_error": 4.49688065497439
+      }
+    },
+    "expected_states": 12
+  },
+  "Gaussian_subset": {
+    "status": "OBSERVED_NEGATIVE_FIDELITY_EVIDENCE_NOT_COMPLETE_REGISTERED_GATE",
+    "parents": 5,
+    "states": 10,
+    "metrics": [
+      {
+        "degree": 0,
+        "actual_rank": [
+          20
+        ],
+        "finite_states": 10,
+        "missing_reference_states": 2,
+        "gaussian_subset_median": 1.0424312625725298,
+        "early_median": 0.0346370100980737,
+        "late_median": 3.986573787496384,
+        "worst": 6.573211883535582,
+        "within_registered_margin": 5,
+        "not_complete_12_state_gate": true
+      },
+      {
+        "degree": 1,
+        "actual_rank": [
+          32
+        ],
+        "finite_states": 10,
+        "missing_reference_states": 2,
+        "gaussian_subset_median": 0.838891626610045,
+        "early_median": 0.03129914976410251,
+        "late_median": 3.114818326985325,
+        "worst": 5.113195435982987,
+        "within_registered_margin": 5,
+        "not_complete_12_state_gate": true
+      },
+      {
+        "degree": 2,
+        "actual_rank": [
+          44
+        ],
+        "finite_states": 10,
+        "missing_reference_states": 2,
+        "gaussian_subset_median": 0.7819234788839691,
+        "early_median": 0.02479721974644194,
+        "late_median": 2.8026709651761883,
+        "worst": 4.704389368516216,
+        "within_registered_margin": 5,
+        "not_complete_12_state_gate": true
+      },
+      {
+        "degree": 3,
+        "actual_rank": [
+          56
+        ],
+        "finite_states": 10,
+        "missing_reference_states": 2,
+        "gaussian_subset_median": 0.7423790836592508,
+        "early_median": 0.022439041606178572,
+        "late_median": 2.695060239644571,
+        "worst": 4.49688065497439,
+        "within_registered_margin": 5,
+        "not_complete_12_state_gate": true
+      },
+      {
+        "degree": 4,
+        "actual_rank": [
+          68
+        ],
+        "finite_states": 10,
+        "missing_reference_states": 2,
+        "gaussian_subset_median": 0.7425355495804151,
+        "early_median": 0.019218896174259235,
+        "late_median": 2.570417102294003,
+        "worst": 4.506540168453662,
+        "within_registered_margin": 5,
+        "not_complete_12_state_gate": true
+      },
+      {
+        "degree": 5,
+        "actual_rank": [
+          80
+        ],
+        "finite_states": 10,
+        "missing_reference_states": 2,
+        "gaussian_subset_median": 0.7271987212592117,
+        "early_median": 0.013250694592937639,
+        "late_median": 2.463268976322091,
+        "worst": 4.416471394074735,
+        "within_registered_margin": 5,
+        "not_complete_12_state_gate": true
+      }
+    ]
+  },
+  "production_QP_validation": {
+    "status": "NO_GO",
+    "failed_method_actions": 128,
+    "failed_reference_generations": 2,
+    "voxel_states_missing_full_reference": [
+      [
+        2010,
+        0
+      ],
+      [
+        2010,
+        17
+      ]
+    ],
+    "failure_type": "QPFailure; registered KKT tolerance not met"
+  },
+  "G1_nonlinear_quality": "NOT_RUN",
+  "G2_deployment_cost": "NOT_RUN",
+  "A1": "NOT_RUN_GATE_CLOSED",
+  "A2": "NOT_RUN_GATE_CLOSED",
+  "noise": "NOT_RUN_GATE_CLOSED",
+  "cold_warm_imaging_timing": "NOT_RUN_GATE_CLOSED",
+  "POD": "NOT_RUN_NO_REGISTERED_INPUT",
+  "strong_goal_aware_ROM": "NOT_RUN_NO_REGISTERED_INPUT",
+  "adaptive_degree": "NOT_RUN_OUT_OF_SCOPE",
+  "neural": "NOT_RUN_OUT_OF_SCOPE",
+  "dataset": "historically_exposed_feasibility",
+  "main_imaging_runs": 0,
+  "max_registered_main_matrix_runs": 42,
+  "reference_floor_H_norm": 1e-12,
+  "reference_error_floor_final_material": 1e-06,
+  "claims_not_supported": [
+    "nonlinear reconstruction parity",
+    "20 percent deployment acceleration",
+    "OPM superiority to all generic ROMs",
+    "blind/generalization performance",
+    "universal failure of OPM-related representations"
+  ],
+  "physics_source_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea",
+  "offline_gate_source_commit": "b6e922fe7e68ed7d773dcd80701cfe0692972af4",
+  "original_automatic_gate_preserved": "results/REPRESENTATION_GATE_AUTOMATIC_ORIGINAL.json",
+  "budget": {
+    "charged_CPU_seconds": 5292.784925999999,
+    "charged_GPU_occupation_seconds": 5375.937419600001,
+    "CPU_limit_seconds": 7200,
+    "GPU_limit_seconds": 43200,
+    "within_budget": true,
+    "includes_failed_launch_allowance": true,
+    "failed_launch_CPU_GPU_allowance_each_seconds": 501.975,
+    "preparation_transport_publication_CPU_allowance_seconds": 120.0,
+    "CPU_is_process_CPU_including_GPU_host_work": true,
+    "GPU_is_exclusive_job_elapsed_not_kernel_time": true,
+    "measurement": "Measured job/worker CPU plus explicitly conservative allowances; uninstrumented overhead allowance is not claimed exact."
+  },
+  "publication_status_artifact": "results/PUBLICATION.json"
+}

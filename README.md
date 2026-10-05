@@ -1,3 +1,9 @@
-# A20 OPM material imaging
+# A20 OPM imaging: bounded pilot archive
 
-请从 [START_HERE.md](START_HERE.md) 开始。协议、实现、历史暴露运行输入、隔离离线标签和逐动作成本证据均保存在本仓库；科学 gates 与公开发布状态分别记录。
+Read [START_HERE.md](START_HERE.md) for the actual result, reproduction inputs and evidence.
+
+Registered backend checks passed; six historically exposed 3D vector-Maxwell objects were attempted at two frozen states each. The current implementation does not advance to nonlinear imaging: both voxel references failed KKT validation, and the five Gaussian parents have large late-state H-step errors. Complete-cohort representation screening is **HOLD**; progression is **NO_GO**. Nonlinear quality and deployment acceleration are **NOT_RUN**.
+
+No neural training or Maxwell solver acceleration was performed. All reference, failed and audit work is charged within the fixed two-hour CPU and twelve-hour GPU limits. Runtime inputs and offline labels are separate. Historical SHA256 fields are retained without new checks.
+
+See [Chinese report](RESEARCH_REPORT_ZH.md), [gate decision](results/GATE_DECISION.json), [reproduction](docs/REPRODUCE.md), [backend map](docs/BACKEND_MAP.md), and [publication receipt](results/PUBLICATION.json).

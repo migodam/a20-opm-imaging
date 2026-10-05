@@ -74,8 +74,8 @@ G0_LOCAL 的最大配对伴随相对误差为 1.445×10⁻¹⁴，最大已报 F
 
 A20 `material.solve_quadratic` 将物料边界放在二次模型内部，并在返回前检查 normal/KKT 与可行性；FULL_GN、OPM 及普通 ROM 对照共用该入口。G0_LOCAL 已报 Gaussian 和 voxel 两种 chart 的约束检查通过。旧 proposal 的投影前证书仍不能移植到投影后步骤。
 
-## 尚待实验覆盖
+## 本轮实验覆盖与缺口
 
-真实对象跨频大规模 pilot、原六对象 replay 的 paired degree/rank/action frontiers、A1/A2 成像 fidelity、含全物理与 refresh/acceptance/stop 的总部署成本，以及噪声/held-receiver/warm-timing 的适用性仍需相应报告。本文未核验或宣告 replay/G1/G2 完成，也没有从 G0 推出 degree 必然单调改善或总体加速。
+六对象12 states的replay已完成尝试；degree/rank/action观测前沿及合规paired bootstrap见[replay报告](../REPLAY_REPORT.md)。voxel参考与部分QP失败保留，完整H-step gate为HOLD，当前实现进阶NO_GO；不得从G0或有限子集推断成像成功。真实对象跨频大规模pilot、A1/A2成像fidelity、含全物理与refresh/acceptance/stop的总部署成本，以及噪声/held-receiver/warm-timing均没有完成。本文不从G0推出degree必然单调改善或总体加速。
 
 本次更新只读取既有报告与源码，不改源码、协议、测试或 results，不新增物理计算。历史失败与 costs 原件仍由原报告保留；GPU 大规模路径不在本文所引 G0_LOCAL 的 CPU tiny 验证范围内。

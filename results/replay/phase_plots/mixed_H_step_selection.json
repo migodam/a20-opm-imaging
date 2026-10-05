@@ -1,0 +1,1118 @@
+{
+  "parents": [
+    2001,
+    2005,
+    2003,
+    2007,
+    2010,
+    2013
+  ],
+  "iterations": [
+    0,
+    17
+  ],
+  "degrees": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "registered_threshold": 0.05,
+  "registered_H_denominator_floor": 1e-12,
+  "run_id_filter": null,
+  "ignored_rows": 858,
+  "off_grid_mixed_rows": [],
+  "gate_recomputed": false,
+  "missing_values_substituted_with_zero": false,
+  "input_parse_issue_count": 0,
+  "input_path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/replay.jsonl",
+  "config_path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/configs/frozen.json",
+  "input_parse_issues": [],
+  "cells": [
+    {
+      "iteration": 0,
+      "parent_object_id": 2001,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.02184201409527977,
+      "raw_row_count": 1,
+      "source_lines": [
+        5
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_0_mixed_0"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2001,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.0189766164774007,
+      "raw_row_count": 1,
+      "source_lines": [
+        6
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_0_mixed_1"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2001,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.015046647107439859,
+      "raw_row_count": 1,
+      "source_lines": [
+        7
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_0_mixed_2"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2001,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.01324707023497228,
+      "raw_row_count": 1,
+      "source_lines": [
+        8
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_0_mixed_3"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2001,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.01252823105569006,
+      "raw_row_count": 1,
+      "source_lines": [
+        9
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_0_mixed_4"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2001,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.010753279187618132,
+      "raw_row_count": 1,
+      "source_lines": [
+        10
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_0_mixed_5"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2005,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.042679128569347066,
+      "raw_row_count": 1,
+      "source_lines": [
+        160
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_0_mixed_0"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2005,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.03892938141680048,
+      "raw_row_count": 1,
+      "source_lines": [
+        161
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_0_mixed_1"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2005,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.025927825574341458,
+      "raw_row_count": 1,
+      "source_lines": [
+        162
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_0_mixed_2"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2005,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.022500067147404556,
+      "raw_row_count": 1,
+      "source_lines": [
+        163
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_0_mixed_3"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2005,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.019218896174259235,
+      "raw_row_count": 1,
+      "source_lines": [
+        164
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_0_mixed_4"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2005,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.015698558399226025,
+      "raw_row_count": 1,
+      "source_lines": [
+        165
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_0_mixed_5"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2003,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.02528990331352254,
+      "raw_row_count": 1,
+      "source_lines": [
+        315
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_0_mixed_0"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2003,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.021403472892629682,
+      "raw_row_count": 1,
+      "source_lines": [
+        316
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_0_mixed_1"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2003,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.01465045213455076,
+      "raw_row_count": 1,
+      "source_lines": [
+        317
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_0_mixed_2"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2003,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.011104197092219891,
+      "raw_row_count": 1,
+      "source_lines": [
+        318
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_0_mixed_3"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2003,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.00864587705616746,
+      "raw_row_count": 1,
+      "source_lines": [
+        319
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_0_mixed_4"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2003,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.007749060194090609,
+      "raw_row_count": 1,
+      "source_lines": [
+        320
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_0_mixed_5"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2007,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.0346370100980737,
+      "raw_row_count": 1,
+      "source_lines": [
+        470
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_0_mixed_0"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2007,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.03412885697832624,
+      "raw_row_count": 1,
+      "source_lines": [
+        471
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_0_mixed_1"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2007,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.02588842864149726,
+      "raw_row_count": 1,
+      "source_lines": [
+        472
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_0_mixed_2"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2007,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.023192654030187557,
+      "raw_row_count": 1,
+      "source_lines": [
+        473
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_0_mixed_3"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2007,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.021068590620346894,
+      "raw_row_count": 1,
+      "source_lines": [
+        474
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_0_mixed_4"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2007,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.017614966915235498,
+      "raw_row_count": 1,
+      "source_lines": [
+        475
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_0_mixed_5"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2010,
+      "degree": 0,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        625
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_0_mixed_0"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2010,
+      "degree": 1,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        626
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_0_mixed_1"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2010,
+      "degree": 2,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        627
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_0_mixed_2"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2010,
+      "degree": 3,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        628
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_0_mixed_3"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2010,
+      "degree": 4,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        629
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_0_mixed_4"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2010,
+      "degree": 5,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        630
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_0_mixed_5"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2013,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.03561526362200619,
+      "raw_row_count": 1,
+      "source_lines": [
+        780
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_0_mixed_0"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2013,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.03129914976410251,
+      "raw_row_count": 1,
+      "source_lines": [
+        781
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_0_mixed_1"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2013,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.02479721974644194,
+      "raw_row_count": 1,
+      "source_lines": [
+        782
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_0_mixed_2"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2013,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.022439041606178572,
+      "raw_row_count": 1,
+      "source_lines": [
+        783
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_0_mixed_3"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2013,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.019393330568491712,
+      "raw_row_count": 1,
+      "source_lines": [
+        784
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_0_mixed_4"
+      ]
+    },
+    {
+      "iteration": 0,
+      "parent_object_id": 2013,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 0.013250694592937639,
+      "raw_row_count": 1,
+      "source_lines": [
+        785
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_0_mixed_5"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2001,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 4.127244585045161,
+      "raw_row_count": 1,
+      "source_lines": [
+        82
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_17_mixed_0"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2001,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.114818326985325,
+      "raw_row_count": 1,
+      "source_lines": [
+        83
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_17_mixed_1"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2001,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 2.8026709651761883,
+      "raw_row_count": 1,
+      "source_lines": [
+        84
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_17_mixed_2"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2001,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 2.695060239644571,
+      "raw_row_count": 1,
+      "source_lines": [
+        85
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_17_mixed_3"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2001,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 2.570417102294003,
+      "raw_row_count": 1,
+      "source_lines": [
+        86
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_17_mixed_4"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2001,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 2.463268976322091,
+      "raw_row_count": 1,
+      "source_lines": [
+        87
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2001_17_mixed_5"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2005,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 6.573211883535582,
+      "raw_row_count": 1,
+      "source_lines": [
+        237
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_17_mixed_0"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2005,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 5.113195435982987,
+      "raw_row_count": 1,
+      "source_lines": [
+        238
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_17_mixed_1"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2005,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 4.704389368516216,
+      "raw_row_count": 1,
+      "source_lines": [
+        239
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_17_mixed_2"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2005,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 4.49688065497439,
+      "raw_row_count": 1,
+      "source_lines": [
+        240
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_17_mixed_3"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2005,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 4.506540168453662,
+      "raw_row_count": 1,
+      "source_lines": [
+        241
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_17_mixed_4"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2005,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 4.416471394074735,
+      "raw_row_count": 1,
+      "source_lines": [
+        242
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2005_17_mixed_5"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2003,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 2.042183396575713,
+      "raw_row_count": 1,
+      "source_lines": [
+        392
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_17_mixed_0"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2003,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.6388538718032895,
+      "raw_row_count": 1,
+      "source_lines": [
+        393
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_17_mixed_1"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2003,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.5379191321935968,
+      "raw_row_count": 1,
+      "source_lines": [
+        394
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_17_mixed_2"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2003,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.4615655132883139,
+      "raw_row_count": 1,
+      "source_lines": [
+        395
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_17_mixed_3"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2003,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.4640025085404833,
+      "raw_row_count": 1,
+      "source_lines": [
+        396
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_17_mixed_4"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2003,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.436782475603188,
+      "raw_row_count": 1,
+      "source_lines": [
+        397
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2003_17_mixed_5"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2007,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.986573787496384,
+      "raw_row_count": 1,
+      "source_lines": [
+        547
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_17_mixed_0"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2007,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.7404473350119374,
+      "raw_row_count": 1,
+      "source_lines": [
+        548
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_17_mixed_1"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2007,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.4071804040050346,
+      "raw_row_count": 1,
+      "source_lines": [
+        549
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_17_mixed_2"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2007,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.3645175889607017,
+      "raw_row_count": 1,
+      "source_lines": [
+        550
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_17_mixed_3"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2007,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.134082213753716,
+      "raw_row_count": 1,
+      "source_lines": [
+        551
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_17_mixed_4"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2007,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 3.0905374536062165,
+      "raw_row_count": 1,
+      "source_lines": [
+        552
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2007_17_mixed_5"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2010,
+      "degree": 0,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        702
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_17_mixed_0"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2010,
+      "degree": 1,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        703
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_17_mixed_1"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2010,
+      "degree": 2,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        704
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_17_mixed_2"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2010,
+      "degree": 3,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        705
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_17_mixed_3"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2010,
+      "degree": 4,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        706
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_17_mixed_4"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2010,
+      "degree": 5,
+      "display_class": "invalid",
+      "display_reason": "recorded status=FAILED",
+      "plotted_H_step_error": null,
+      "raw_row_count": 1,
+      "source_lines": [
+        707
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2010_17_mixed_5"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2013,
+      "degree": 0,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 2.4264466222701397,
+      "raw_row_count": 1,
+      "source_lines": [
+        857
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_17_mixed_0"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2013,
+      "degree": 1,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.7057155726304543,
+      "raw_row_count": 1,
+      "source_lines": [
+        858
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_17_mixed_1"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2013,
+      "degree": 2,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.65691350547777,
+      "raw_row_count": 1,
+      "source_lines": [
+        859
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_17_mixed_2"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2013,
+      "degree": 3,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.5649374280612458,
+      "raw_row_count": 1,
+      "source_lines": [
+        860
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_17_mixed_3"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2013,
+      "degree": 4,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.5118750141777877,
+      "raw_row_count": 1,
+      "source_lines": [
+        861
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_17_mixed_4"
+      ]
+    },
+    {
+      "iteration": 17,
+      "parent_object_id": 2013,
+      "degree": 5,
+      "display_class": "valid",
+      "display_reason": "unique recorded OK row with a nonzero verified reference",
+      "plotted_H_step_error": 1.500354338228488,
+      "raw_row_count": 1,
+      "source_lines": [
+        862
+      ],
+      "row_ids": [
+        "20261005T082521_71339a28_2013_17_mixed_5"
+      ]
+    }
+  ],
+  "raw_csv_scope": "all and only actual input rows contributing to the plotted 72 cells; no missing-row placeholders",
+  "cell_numbers": "four significant figures in figure; full recorded precision in raw CSV",
+  "threshold_scope": "registered pooled replay screening threshold shown as context; no gate recomputation"
+}

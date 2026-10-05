@@ -1,0 +1,85 @@
+counters,event,events,exclusive_wall_seconds,failed_events,job,phase
+{},physical_geometry_setup,2,12.180834800001321,0,g0-real-02,G0_physical_integrity
+"{""full_forward_calls"": 18.0, ""full_forward_RHS"": 108.0, ""full_LU_factorizations"": 18.0, ""full_state_backward_residual_L_rhs"": 108.0, ""full_state_receiver_rhs"": 108.0, ""full_state_Goff_rhs"": 108.0}",full_forward,18,72.44969029999629,0,g0-real-02,G0_physical_integrity
+"{""material_operator_refreshes"": 46.0}",material_operator_refresh,46,47.74664809998649,0,g0-real-02,G0_physical_integrity
+"{""full_tangent_calls"": 2.0, ""full_tangent_RHS"": 12.0, ""full_tangent_receiver_rhs"": 12.0}",full_tangent,2,0.07124219999968773,0,g0-real-02,G0_physical_integrity
+"{""full_adjoint_calls"": 2.0, ""full_adjoint_RHS"": 12.0, ""full_adjoint_receiver_rhs"": 12.0}",full_adjoint,2,0.1576271000012639,0,g0-real-02,G0_physical_integrity
+"{""full_tangent_RHS"": 12.0, ""full_tangent_calls"": 2.0}",original_native_tangent_equivalence,2,0.06734549999964656,0,g0-real-02,G0_physical_integrity
+"{""full_adjoint_RHS"": 12.0, ""full_adjoint_calls"": 2.0}",original_native_adjoint_equivalence,2,0.15525520000301185,0,g0-real-02,G0_physical_integrity
+"{""L_actions"": 1196.0, ""Maxwell_matvec_rhs"": 1196.0}",L,44,3.0196923000039533,0,g0-real-02,G0_physical_integrity
+"{""L_adjoint_actions"": 52.0, ""Maxwell_matvec_rhs"": 52.0}",L_adjoint,4,0.13725960000010673,0,g0-real-02,G0_physical_integrity
+"{""F_actions"": 88.0, ""Maxwell_matvec_rhs"": 88.0}",F,12,0.29716979999648174,0,g0-real-02,G0_physical_integrity
+"{""F_adjoint_actions"": 32.0, ""Maxwell_matvec_rhs"": 32.0}",F_adjoint,8,0.16751789999761968,0,g0-real-02,G0_physical_integrity
+"{""S_actions"": 1000.0}",S,38,0.8705843000134337,0,g0-real-02,G0_physical_integrity
+"{""S_adjoint_actions"": 64.0}",S_adjoint,6,0.11580339999636635,0,g0-real-02,G0_physical_integrity
+"{""B_rhs"": 96.0}",B,10,0.02712210000754567,0,g0-real-02,G0_physical_integrity
+"{""B_adjoint_rhs"": 24.0}",B_adjoint,4,0.008940499996242579,0,g0-real-02,G0_physical_integrity
+"{""receiver_SVD_builds"": 2.0}",receiver_geometry_SVD,2,1.4881123999984993,0,g0-real-02,G0_physical_integrity
+"{""retained_factorizations"": 2.0}",retained_core_factorization,2,0.0009445000032428652,0,g0-real-02,G0_physical_integrity
+"{""forcing_rhs"": 192.0}",illumination_forcing,32,0.04055020000305376,0,g0-real-02,G0_physical_integrity
+"{""seed_O_input_rhs"": 48.0}",seed_O_compression,2,0.08020870000109426,0,g0-real-02,G0_physical_integrity
+"{""seed_P_input_rhs"": 12.0}",seed_P_compression,2,0.014943500002118526,0,g0-real-02,G0_physical_integrity
+"{""seed_M_input_rhs"": 48.0}",seed_M_compression,2,0.08167089999915333,0,g0-real-02,G0_physical_integrity
+{},joint_orthogonalization,4,0.07640780000656378,0,g0-real-02,G0_physical_integrity
+{},native_stream_orthogonalization,6,0.025547500004904578,0,g0-real-02,G0_physical_integrity
+"{""projected_factorizations"": 30.0}",projected_core_factorization,30,0.008394999993470265,0,g0-real-02,G0_physical_integrity
+"{""reduced_core_rhs"": 228.0}",reduced_core_solve,38,0.00965139999971143,0,g0-real-02,G0_physical_integrity
+"{""reduced_forward_RHS"": 168.0, ""reduced_state_Goff_rhs"": 168.0}",reduced_forward,28,8.927401499986445,0,g0-real-02,G0_physical_integrity
+"{""reduced_core_rhs"": 12.0}",reduced_core_adjoint_solve,2,0.0004897999970125966,0,g0-real-02,G0_physical_integrity
+{},G0_frozen_test_Petrov_QR,2,0.056314800000109244,0,g0-real-02,G0_physical_integrity
+{},saved_chart_expansion_check,2,0.07153810000090743,0,g0-real-02,offline_G0_saved_chart_audit
+{},supplied_algebra_checks,1,0.12019279098603874,0,local-algebra-01,algebra_audit
+{},physical_geometry_setup,6,33.98649430000296,0,replay-01,online
+{},replay_object_geometry_setup,6,0.24393330000020796,0,replay-01,online
+"{""full_forward_calls"": 12.0, ""full_forward_RHS"": 72.0, ""full_LU_factorizations"": 12.0, ""full_state_backward_residual_L_rhs"": 72.0, ""full_state_receiver_rhs"": 72.0, ""full_state_Goff_rhs"": 72.0}",full_forward,12,46.71434539999973,0,replay-01,online
+"{""material_operator_refreshes"": 12.0}",material_operator_refresh,12,1.3813557000030414,0,replay-01,online
+"{""full_tangent_calls"": 353.0, ""full_tangent_RHS"": 5298.0, ""full_tangent_receiver_rhs"": 5298.0}",full_tangent,353,31.28457900002104,0,replay-01,offline_reference
+{},replay_cached_full_state_and_residual,12,0.12256369999522576,0,replay-01,online
+"{""small_material_H_assemblies"": 7.0}",small_material_H_assembly,7,0.009093399999983376,0,replay-01,offline_reference
+{},Gaussian_constrained_quadratic,7,30.351168300006975,0,replay-01,offline_reference
+"{""material_subproblems"": 9.0}",material_subproblem,9,0.1542498999988311,2,replay-01,offline_reference
+{},replay_reference_evaluation_and_generation,12,0.5147739999993064,0,replay-01,offline_reference
+"{""receiver_SVD_builds"": 6.0}",receiver_geometry_SVD,84,4.7497738000056415,0,replay-01,online
+"{""F_actions"": 2736.0, ""Maxwell_matvec_rhs"": 2736.0}",F,672,24.951627999922493,0,replay-01,online
+"{""F_adjoint_actions"": 816.0, ""Maxwell_matvec_rhs"": 816.0}",F_adjoint,252,14.397666299992125,0,replay-01,online
+"{""retained_factorizations"": 12.0}",retained_core_factorization,12,0.002663100003701402,0,replay-01,online
+{},replay_retained_Schur_setup,12,9.64042480000353,0,replay-01,online
+"{""B_rhs"": 1080.0}",B,60,0.2838721000116493,0,replay-01,online
+"{""L_actions"": 34488.0, ""Maxwell_matvec_rhs"": 34488.0}",L,972,70.92966029997842,0,replay-01,online
+"{""S_adjoint_actions"": 1152.0}",S_adjoint,60,1.5395913000029395,0,replay-01,online
+"{""L_adjoint_actions"": 1152.0, ""Maxwell_matvec_rhs"": 1152.0}",L_adjoint,60,2.6955407000059495,0,replay-01,online
+"{""forcing_rhs"": 288.0}",illumination_forcing,48,0.05882540001766756,0,replay-01,online
+"{""seed_O_input_rhs"": 1152.0}",seed_O_compression,84,1.8035210000016377,0,replay-01,online
+"{""seed_P_input_rhs"": 288.0}",seed_P_compression,84,0.3517812999962189,0,replay-01,online
+"{""seed_M_input_rhs"": 1080.0}",seed_M_compression,84,1.7156982999877073,0,replay-01,online
+{},replay_hierarchy_seed,96,4.342841799945745,0,replay-01,online
+{},joint_orthogonalization,576,9.448047599991696,0,replay-01,online
+{},replay_hierarchy_extend,576,26.07452500018553,0,replay-01,online
+"{""S_actions"": 33120.0}",S,864,27.632552900093287,0,replay-01,online
+"{""projected_factorizations"": 864.0}",projected_core_factorization,864,0.31656290005048504,0,replay-01,online
+{},replay_projection,864,719.9756351998767,0,replay-01,online
+"{""compressed_B_current_columns"": 198720.0}",compressed_injection,864,32.40234299997974,0,replay-01,online
+"{""reduced_core_rhs"": 3219264.0}",reduced_core_solve,864,17.423774899965792,0,replay-01,online
+"{""compressed_material_columns"": 536544.0}",reduced_material_data_matrix,864,125.08678030006558,0,replay-01,online
+"{""small_material_H_assemblies"": 720.0}",small_material_H_assembly,720,0.9090571999877284,0,replay-01,online
+{},Gaussian_constrained_quadratic,563,2661.8429483000073,0,replay-01,online
+"{""material_subproblems"": 864.0}",material_subproblem,864,19.005293900012475,128,replay-01,online
+{},replay_material_QP,864,2.2061901000270154,128,replay-01,online
+"{""B_rhs"": 8832.0}",B,736,2.3436314999962633,0,replay-01,offline_audit
+"{""reduced_core_rhs"": 8832.0}",reduced_core_solve,736,0.19855559999632533,0,replay-01,offline_audit
+"{""L_actions"": 8832.0, ""Maxwell_matvec_rhs"": 8832.0}",L,736,119.64397899995674,0,replay-01,offline_audit
+"{""S_adjoint_actions"": 8832.0}",S_adjoint,736,15.022034199984773,0,replay-01,offline_audit
+"{""reduced_core_rhs"": 8832.0}",reduced_core_adjoint_solve,736,0.23630310002045007,0,replay-01,offline_audit
+"{""L_adjoint_actions"": 8832.0, ""Maxwell_matvec_rhs"": 8832.0}",L_adjoint,736,34.24451550001686,0,replay-01,offline_audit
+{},replay_full_audit,736,43.17799719998584,0,replay-01,offline_audit
+{},native_stream_orthogonalization,900,5.989153499918757,0,replay-01,online
+"{""independent_current_probe_columns"": 144.0}",independent_current_probe_compression,12,0.17696100000102888,0,replay-01,online
+{},rank_control_orthogonalization,288,8.748092599966185,0,replay-01,online
+{},replay_rank_control_extend,288,10.799779999961174,0,replay-01,online
+"{""constrained_KKT_polishes"": 4.0}",Gaussian_KKT_polish,4,0.030844499997328967,0,replay-01,offline_reference
+"{""constrained_KKT_polishes"": 152.0}",Gaussian_KKT_polish,152,0.8481551999866497,0,replay-01,online
+"{""full_adjoint_calls"": 347.0, ""full_adjoint_RHS"": 2082.0, ""full_adjoint_receiver_rhs"": 2082.0}",full_adjoint,347,26.942517400035285,0,replay-01,offline_reference
+{},voxel_bound_quadratic,2,4.2523531999468105,0,replay-01,offline_reference
+{},voxel_bound_quadratic,144,441.103707700011,0,replay-01,online
+"{""full_tangent_calls"": 16.0, ""full_tangent_RHS"": 96.0, ""full_tangent_receiver_rhs"": 96.0}",full_tangent,16,1.6352933999987727,0,replay-01,offline_audit
+"{""full_adjoint_calls"": 16.0, ""full_adjoint_RHS"": 96.0, ""full_adjoint_receiver_rhs"": 96.0}",full_adjoint,16,3.7563884999945003,0,replay-01,offline_audit

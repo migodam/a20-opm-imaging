@@ -1,0 +1,8 @@
+{
+  "status": "ENDED_IDLE",
+  "GPU_compute_processes": 0,
+  "A20_python_processes": 0,
+  "A20_lock_present": false,
+  "verification": "Read-only scheduler/device inventory after final replay receipt; no physics",
+  "charged_scope": "shared preparation/transport/publication allowance"
+}

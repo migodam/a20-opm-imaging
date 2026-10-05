@@ -1,0 +1,5 @@
+{
+  "status": "NOT_RUN",
+  "reason": "No degree 0–3 has a complete passing replay gate; voxel reference missing and method QP failures.",
+  "physical_runs": 0
+}

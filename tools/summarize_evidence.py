@@ -585,6 +585,7 @@ def make_plots(rows, degrees, frontiers, figure_dir, check_cpu):
         ax.axhline(.05, color="black", linestyle="--", linewidth=1, label="prespecified 0.05 screening line")
         ax.set(xlabel="Feedback degree", ylabel="Relative H-step error", title=f"Degree comparison: {kind}")
         ax.set_yscale("symlog", linthresh=.001)
+        ax.set_ylim(bottom=0.)  # H-norm errors are nonnegative; retain true zeros.
         ax.grid(alpha=.2)
         ax.legend(fontsize=7)
         subset = [r for r in rows if r["parameterization"] == kind]
@@ -617,6 +618,7 @@ def make_plots(rows, degrees, frontiers, figure_dir, check_cpu):
                 ax.axhline(.05, color="gray", linestyle="--", linewidth=.7)
                 ax.set(title=f"parent {parent}, state {state}", xlabel=FRONTIER_LABELS[axis], ylabel="Relative H-step error")
                 ax.set_yscale("symlog", linthresh=.001)
+                ax.set_ylim(bottom=0.)
                 ax.grid(alpha=.2)
             for ax in list(axes.flat)[len(scenes):]:
                 ax.set_visible(False)
@@ -646,6 +648,8 @@ def update_receipt(root, record):
     previous.update(process_cpu_seconds=sum(r.get("process_cpu_seconds", 0.) for r in previous["runs"]),
                     cpu_budget_seconds=60., gpu_occupation_seconds=0., network_requests=0,
                     physics_runs=0, sha256_checks=0,
+                    real_replay_run="NOT_RUN_BY_SUMMARY_TOOL_NO_PHYSICS",
+                    real_replay_evidence_read=any(r.get("run_type")=="summarize" and r.get("status")=="COMPLETE" for r in previous["runs"]),
                     measurement="Actual process CPU for each recorded run; process startup/imports included; no network wall charged")
     path.write_text(json.dumps(previous, indent=2, ensure_ascii=False, allow_nan=False)+"\n")
 

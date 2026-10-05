@@ -1,0 +1,13 @@
+{
+  "charged_CPU_seconds": 5292.784925999999,
+  "charged_GPU_occupation_seconds": 5375.937419600001,
+  "CPU_limit_seconds": 7200,
+  "GPU_limit_seconds": 43200,
+  "within_budget": true,
+  "includes_failed_launch_allowance": true,
+  "failed_launch_CPU_GPU_allowance_each_seconds": 501.975,
+  "preparation_transport_publication_CPU_allowance_seconds": 120.0,
+  "CPU_is_process_CPU_including_GPU_host_work": true,
+  "GPU_is_exclusive_job_elapsed_not_kernel_time": true,
+  "measurement": "Measured job/worker CPU plus explicitly conservative allowances; uninstrumented overhead allowance is not claimed exact."
+}

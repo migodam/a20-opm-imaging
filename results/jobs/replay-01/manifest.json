@@ -1,0 +1,112 @@
+{
+  "experiment_id": "replay-01",
+  "source_commit": "68ab91576c2f457e8afec0a2a9537ca5134018ea",
+  "backend_declared_historical_commit": "e17f9de3469964c8f4cd1b1c967d2e2f14b3d277",
+  "backend_origin": "preserved A17 EXCHANGE_R1 vendor A9 DenseDDA; parent source is not a Git checkout",
+  "precision": "complex128/float64",
+  "dataset_exposure": "historically_exposed_feasibility",
+  "python": "3.10.9",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "device": "cuda",
+  "threads": 1,
+  "stage": "replay",
+  "frozen_config": {
+    "schema": "a20.route_a.frozen.v1",
+    "precision": "complex128/float64",
+    "parents": [
+      2001,
+      2005,
+      2003,
+      2007,
+      2010,
+      2013
+    ],
+    "replay_iterations": [
+      0,
+      17
+    ],
+    "stress_parents": [
+      2007,
+      2010
+    ],
+    "master_seed": 20261005,
+    "random_control_seeds": [
+      20261005,
+      20261006,
+      20261007
+    ],
+    "retained_rank": 8,
+    "seed_rank_O": 4,
+    "seed_rank_P": 4,
+    "seed_rank_M": 4,
+    "replay_degrees": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "live_degrees": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "orthogonal_rank_rtol": 1e-10,
+    "core_relative_sigma_floor": 1e-10,
+    "core_absolute_scaled_sigma_floor": 1e-10,
+    "core_condition_cap": 10000000000.0,
+    "fallbacks": [
+      "frozen_test_petrov_qr",
+      "full"
+    ],
+    "prior": 1e-05,
+    "lm0": 0.01,
+    "lm_decay": 0.3,
+    "lm_decay_period": 3,
+    "max_updates": 18,
+    "real_lower": -0.5,
+    "imag_lower": 0.0,
+    "feasibility_tolerance": 1e-08,
+    "qp_kkt_rtol": 1e-08,
+    "qp_maxiter": 200,
+    "armijo": 0.0001,
+    "backtracking": 0.5,
+    "line_trials": 24,
+    "common_full_kkt_rtol": 1e-06,
+    "small_step": 1e-06,
+    "small_step_first_iteration": 9,
+    "reference_error_floor": 1e-06,
+    "imaginary_denominator_floor_fraction": 1e-12,
+    "replay_H_relative_floor": 1e-12,
+    "replay_median_H_error_gate": 0.05,
+    "final_median_excess_gate": 0.05,
+    "final_worst_excess_gate": 0.15,
+    "rank_fraction_target": 0.35,
+    "deployment_wall_ratio_gate": 0.8,
+    "budget_gpu_wall_seconds": 43200,
+    "budget_cpu_seconds": 7200,
+    "cpu_epilogue_reserve_seconds": 300,
+    "gpu_preoperation_reserve_seconds": 120,
+    "gpu_memory_warning_fraction": 0.8,
+    "gpu_memory_stop_fraction": 0.9,
+    "dataset_exposure": "historically_exposed_feasibility",
+    "data_scale_scope": "original measured-data norm normalization; not calibrated noise covariance",
+    "new_sha256_checks": false,
+    "no_NN_or_solver_acceleration": true
+  },
+  "selected_parents": null,
+  "selected_iterations": null,
+  "commands": [
+    "PYTHONPATH=src python -m a20.cli replay --device cuda --job replay-01"
+  ],
+  "new_SHA256_checks": 0,
+  "NN_training": false,
+  "solver_acceleration": false,
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_memory_bytes": 8585216000
+}

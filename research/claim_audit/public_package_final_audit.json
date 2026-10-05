@@ -1,0 +1,596 @@
+{
+  "audit_kind": "BOUNDED_FINAL_PUBLICATION_STATIC_AUDIT",
+  "generated_utc": "2026-10-05T10:08:40Z",
+  "scope": {
+    "repo_only": true,
+    "full_text_to_eof": true,
+    "npz_key_only": true,
+    "network": false,
+    "ssh": false,
+    "physics": false,
+    "sha_or_hash": false,
+    "scientific_gate_recomputed": false,
+    "historical_prefinal_audit": "research/claim_audit/public_package_audit.json",
+    "publication_receipt_pending_allowed": true,
+    "output_policy": "paths_counts_classifications_only_no_secret_matches"
+  },
+  "completion": "COMPLETE_AT_FINAL_WORKING_TREE_SNAPSHOT",
+  "inventory": {
+    "working_tree_regular_files": 1274,
+    "tracked_file_paths": 320,
+    "untracked_nonignored_file_paths": 950,
+    "ignored_file_paths": 4,
+    "publishable_regular_files_at_snapshot": 1270,
+    "excluded_regular_files": 4,
+    "excluded_directory_counts": {
+      ".git": 1
+    },
+    "symlink_count": 0,
+    "tracked_untracked_ignored_counts_are_snapshot_only": true,
+    "new_final_audit_artifacts_created_after_snapshot": 3
+  },
+  "text_scan": {
+    "mode": "FULL_FILE_READ_TO_EOF_NO_PREFIX_CAP",
+    "text_files_scanned": 351,
+    "text_bytes_scanned": 69087879,
+    "text_targets_at_snapshot": 351,
+    "failed_file_count": 0,
+    "changed_size_count": 0,
+    "core_replay_cost": [
+      {
+        "path": "results/replay/replay.jsonl",
+        "bytes_read": 17124397,
+        "stat_bytes_after_read": 17124397,
+        "read_to_eof": true,
+        "snapshot_size_stable": true
+      },
+      {
+        "path": "results/jobs/replay-01/cost.jsonl",
+        "bytes_read": 10699916,
+        "stat_bytes_after_read": 10699916,
+        "read_to_eof": true,
+        "snapshot_size_stable": true
+      }
+    ],
+    "complete_at_snapshot": true
+  },
+  "npz_scan": {
+    "mode": "ZIP_MEMBER_NAMES_ONLY_NO_ARRAY_BYTES",
+    "counts": {
+      "files_scanned": 912,
+      "member_keys_scanned": 1080
+    },
+    "groups": {
+      "offline_labels": {
+        "files": 6,
+        "keys": 60
+      },
+      "result_arrays": {
+        "files": 888,
+        "keys": 888
+      },
+      "runtime": {
+        "files": 18,
+        "keys": 132
+      }
+    },
+    "runtime_whitelist_source_found": true,
+    "state_whitelist_source_found": true,
+    "runtime_whitelist_key_count": 14,
+    "state_whitelist_key_count": 4,
+    "matrix_key_candidates": [],
+    "runtime_boundary_candidates": [],
+    "unknown_semantics": "Key-only checks do not inspect numerical array content."
+  },
+  "findings": [
+    {
+      "classification": "EXTERNAL_ENV_CONNECTION_OR_SECRET_REFERENCE",
+      "occurrence_count": 2,
+      "path_count": 1,
+      "paths": [
+        {
+          "path": "tools/remote_jobs.py",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "classification": "LOCAL_ABSOLUTE_PATH_PRIVACY_CONTEXT",
+      "occurrence_count": 24494,
+      "path_count": 39,
+      "paths": [
+        {
+          "path": "docs/G0_TEST_INVENTORY.md",
+          "count": 2
+        },
+        {
+          "path": "figures/frontier_raw.csv",
+          "count": 2160
+        },
+        {
+          "path": "research/claim_audit/cpu_ledger.json",
+          "count": 2
+        },
+        {
+          "path": "research/claim_audit/robustness_worker_receipt.json",
+          "count": 1
+        },
+        {
+          "path": "results/G0_LOCAL.json",
+          "count": 31
+        },
+        {
+          "path": "results/replay/phase_plots/mixed_H_step_selection.json",
+          "count": 2
+        },
+        {
+          "path": "results/replay/phase_plots/plot_receipt.json",
+          "count": 5
+        },
+        {
+          "path": "results/summary/FRONTIER_MATCHED_PAIRS.csv",
+          "count": 18040
+        },
+        {
+          "path": "results/summary/FRONTIER_RAW.csv",
+          "count": 2160
+        },
+        {
+          "path": "results/summary/GATE_SNAPSHOT.csv",
+          "count": 103
+        },
+        {
+          "path": "results/summary/JOB_RECEIPTS.csv",
+          "count": 5
+        },
+        {
+          "path": "results/summary/NON_METHOD_RECORDS.csv",
+          "count": 42
+        },
+        {
+          "path": "results/summary/PAIRED_STATE_DETAILS.csv",
+          "count": 24
+        },
+        {
+          "path": "results/summary/REPLAY_ROWS.csv",
+          "count": 1776
+        },
+        {
+          "path": "results/summary/SUMMARY.json",
+          "count": 11
+        },
+        {
+          "path": "results/tests/G0_EVIDENCE_INVENTORY.json",
+          "count": 10
+        },
+        {
+          "path": "results/tests/G0_LOCAL.json",
+          "count": 31
+        },
+        {
+          "path": "results/tests/LATEST.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/REPLAY_INTERFACE_REVIEW.json",
+          "count": 24
+        },
+        {
+          "path": "results/tests/attempt_001/cases.jsonl",
+          "count": 5
+        },
+        {
+          "path": "results/tests/attempt_001/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_001/stdout_stderr.log",
+          "count": 5
+        },
+        {
+          "path": "results/tests/attempt_001/suite.json",
+          "count": 5
+        },
+        {
+          "path": "results/tests/attempt_002/cases.jsonl",
+          "count": 3
+        },
+        {
+          "path": "results/tests/attempt_002/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_002/stdout_stderr.log",
+          "count": 3
+        },
+        {
+          "path": "results/tests/attempt_002/suite.json",
+          "count": 3
+        },
+        {
+          "path": "results/tests/attempt_003/cases.jsonl",
+          "count": 6
+        },
+        {
+          "path": "results/tests/attempt_003/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_003/stdout_stderr.log",
+          "count": 6
+        },
+        {
+          "path": "results/tests/attempt_003/suite.json",
+          "count": 6
+        },
+        {
+          "path": "results/tests/attempt_004/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_005/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_006/cases.jsonl",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_006/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_006/stdout_stderr.log",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_006/suite.json",
+          "count": 2
+        },
+        {
+          "path": "results/tests/attempt_007/receipt.json",
+          "count": 2
+        },
+        {
+          "path": "tests/summarize_integrity.py",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "documentation": {
+    "final_documents_checked": [
+      {
+        "path": "START_HERE.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      },
+      {
+        "path": "README.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      },
+      {
+        "path": "REPLAY_REPORT.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      },
+      {
+        "path": "RESEARCH_REPORT_ZH.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      },
+      {
+        "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      },
+      {
+        "path": "docs/BACKEND_MAP.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      },
+      {
+        "path": "docs/REPRODUCE.md",
+        "classification": "FINAL_DOCUMENT_BODY_AND_LINKS_SCANNED"
+      }
+    ],
+    "relative_link_counts": {
+      "relative_or_fragment_links_checked": 105,
+      "external_or_app_link_skipped": 3
+    },
+    "link_issue_count": 0,
+    "link_issues": [],
+    "status_language_review_candidates": [],
+    "status_language_candidate_count": 0,
+    "frozen_protocol_entry": "protocol/START_HERE.md",
+    "frozen_protocol_old_planned_language_not_treated_as_final_status": true,
+    "boundary_presence": {
+      "runtime_whitelist_documented": {
+        "paths": [
+          "REPLAY_REPORT.md",
+          "docs/PUBLIC_PACKAGE_INDEX.md",
+          "docs/REPRODUCE.md"
+        ],
+        "classification": "DOCUMENTATION_BOUNDARY_PRESENT"
+      },
+      "offline_labels_independent_evaluation": {
+        "paths": [
+          "START_HERE.md",
+          "RESEARCH_REPORT_ZH.md",
+          "docs/PUBLIC_PACKAGE_INDEX.md",
+          "docs/REPRODUCE.md"
+        ],
+        "classification": "DOCUMENTATION_BOUNDARY_PRESENT"
+      },
+      "chart_Q_history_support_limit": {
+        "paths": [
+          "START_HERE.md",
+          "RESEARCH_REPORT_ZH.md",
+          "docs/BACKEND_MAP.md",
+          "docs/PUBLIC_PACKAGE_INDEX.md"
+        ],
+        "classification": "DOCUMENTATION_BOUNDARY_PRESENT"
+      },
+      "unknown_shape_claim_restricted": {
+        "paths": [
+          "START_HERE.md",
+          "docs/PUBLIC_PACKAGE_INDEX.md"
+        ],
+        "classification": "DOCUMENTATION_BOUNDARY_PRESENT"
+      },
+      "held_receiver_geometry_NOT_RUN": {
+        "paths": [
+          "RESEARCH_REPORT_ZH.md"
+        ],
+        "classification": "DOCUMENTATION_BOUNDARY_PRESENT"
+      },
+      "thirdparty_fulltext_boundary": {
+        "paths": [
+          "docs/PUBLIC_PACKAGE_INDEX.md"
+        ],
+        "classification": "DOCUMENTATION_BOUNDARY_PRESENT"
+      }
+    },
+    "publication_pending_is_expected_not_obsolete_waiting_for_experiments": true
+  },
+  "provided_flags": [
+    {
+      "path": "results/A1/QUALITY_GATE.json",
+      "classification": "EMPTY_PLACEHOLDER_NO_SCIENTIFIC_FLAG",
+      "enum_counts": {},
+      "selected_provided_flags": [],
+      "pending_allowed": false,
+      "top_level_object_field_count": 0,
+      "authoritative_final_stage_source": "results/GATE_DECISION.json"
+    },
+    {
+      "path": "results/A2/QUALITY_GATE.json",
+      "classification": "EMPTY_PLACEHOLDER_NO_SCIENTIFIC_FLAG",
+      "enum_counts": {},
+      "selected_provided_flags": [],
+      "pending_allowed": false,
+      "top_level_object_field_count": 0,
+      "authoritative_final_stage_source": "results/GATE_DECISION.json"
+    },
+    {
+      "path": "results/G0_ALGEBRA.json",
+      "classification": "SOURCE_PROVIDED_SCIENTIFIC_STATUS_NO_RECOMPUTATION",
+      "enum_counts": {
+        "ALL ASSERTIONS PASSED": 1
+      },
+      "selected_provided_flags": [
+        {
+          "field_path": "/status",
+          "provided_enum": "ALL ASSERTIONS PASSED"
+        }
+      ],
+      "pending_allowed": false,
+      "enum_counts_include_historical_failure_entries_when_present": true
+    },
+    {
+      "path": "results/G0_LOCAL.json",
+      "classification": "SOURCE_PROVIDED_SCIENTIFIC_STATUS_NO_RECOMPUTATION",
+      "enum_counts": {
+        "PASS": 25,
+        "ERROR": 3,
+        "FAIL": 2
+      },
+      "selected_provided_flags": [
+        {
+          "field_path": "/status",
+          "provided_enum": "PASS"
+        }
+      ],
+      "pending_allowed": false,
+      "enum_counts_include_historical_failure_entries_when_present": true
+    },
+    {
+      "path": "results/G0_REAL.json",
+      "classification": "SOURCE_PROVIDED_SCIENTIFIC_STATUS_NO_RECOMPUTATION",
+      "enum_counts": {
+        "PASS": 3
+      },
+      "selected_provided_flags": [
+        {
+          "field_path": "/status",
+          "provided_enum": "PASS"
+        }
+      ],
+      "pending_allowed": false,
+      "enum_counts_include_historical_failure_entries_when_present": true
+    },
+    {
+      "path": "results/GATE_DECISION.json",
+      "classification": "SOURCE_PROVIDED_SCIENTIFIC_STATUS_NO_RECOMPUTATION",
+      "enum_counts": {
+        "NO_GO_FOR_CURRENT_IMPLEMENTATION_ADVANCEMENT": 1,
+        "HOLD": 6,
+        "PASS_REGISTERED_BACKEND_CHECKS": 1,
+        "FAIL": 4,
+        "OBSERVED_NEGATIVE_FIDELITY_EVIDENCE_NOT_COMPLETE_REGISTERED_GATE": 1,
+        "NO_GO": 1,
+        "NOT_RUN_GATE_CLOSED": 1
+      },
+      "selected_provided_flags": [
+        {
+          "field_path": "/decision",
+          "provided_enum": "NO_GO_FOR_CURRENT_IMPLEMENTATION_ADVANCEMENT"
+        },
+        {
+          "field_path": "/complete_registered_replay_H_gate",
+          "provided_enum": "HOLD"
+        },
+        {
+          "field_path": "/G0/status",
+          "provided_enum": "PASS_REGISTERED_BACKEND_CHECKS"
+        },
+        {
+          "field_path": "/replay/status",
+          "provided_enum": "HOLD"
+        },
+        {
+          "field_path": "/Gaussian_subset/status",
+          "provided_enum": "OBSERVED_NEGATIVE_FIDELITY_EVIDENCE_NOT_COMPLETE_REGISTERED_GATE"
+        },
+        {
+          "field_path": "/production_QP_validation/status",
+          "provided_enum": "NO_GO"
+        },
+        {
+          "field_path": "/noise",
+          "provided_enum": "NOT_RUN_GATE_CLOSED"
+        },
+        {
+          "field_path": "/budget/includes_failed_launch_allowance",
+          "provided_boolean": true
+        }
+      ],
+      "pending_allowed": false,
+      "enum_counts_include_historical_failure_entries_when_present": true
+    },
+    {
+      "path": "results/REPRESENTATION_GATE.json",
+      "classification": "SOURCE_PROVIDED_SCIENTIFIC_STATUS_NO_RECOMPUTATION",
+      "enum_counts": {
+        "HOLD": 5,
+        "FAIL": 4
+      },
+      "selected_provided_flags": [
+        {
+          "field_path": "/status",
+          "provided_enum": "HOLD"
+        }
+      ],
+      "pending_allowed": false,
+      "enum_counts_include_historical_failure_entries_when_present": true
+    }
+  ],
+  "limitations": [
+    "静态检查不确认物理、性能、新颖性或实验 gate；所有 phase/G0 状态均按现有文件记录。",
+    "NPZ 只读取 ZIP 成员键名，不读取标签或矩阵数值；键名无异常不能证明数组内容的科学语义。",
+    "外部 URL 未联网验证；仅验证包内相对链接及可解析 Markdown 锚点。",
+    "未反序列化任意二进制或依赖/缓存文件；Git 内部及本地依赖不属于公开内容。",
+    "publication receipt 的 PENDING 为授权的预期状态；发布后其状态仍需更新。",
+    "当前 publishable 文本中保留本地绝对路径：39 个文件、24494 处，分类为隐私/来源上下文，不是凭据匹配；是否公开由发布者决定。"
+  ],
+  "failures": [],
+  "persisted_binary_and_fulltext": {
+    "cache_filename_candidates": [],
+    "binary_artifact_count": 912,
+    "standalone_npy_count": 0,
+    "opaque_serialized_model_count": 0,
+    "bundled_pdf_count": 1,
+    "thirdparty_fulltext_candidates": [],
+    "source_operator_functions_are_not_persisted_cache_artifacts": true,
+    "generated_phase_heatmap_pdf_parent_provenance": [
+      {
+        "path": "results/replay/phase_plots/mixed_H_step_by_state.pdf",
+        "classification": "GENERATED_RESEARCH_FIGURE",
+        "provenance": "parent_confirmed_self_generated_phase_heatmap_and_visual_review",
+        "independent_visual_review_by_this_worker": false
+      }
+    ],
+    "thirdparty_fulltext_candidate_count_after_provenance_classification": 0
+  },
+  "cpu_budget_seconds": 8,
+  "snapshot_note": "最终文本扫描完成时的工作树快照；本报告生成后新增/变动文件不属于此快照。",
+  "historical_test_status_sources": [
+    {
+      "path": "results/tests/G0_EVIDENCE_INVENTORY.json",
+      "classification": "HISTORICAL_TEST_EVIDENCE_STATUS_SOURCE",
+      "enum_counts": {
+        "COMPLETE_EVIDENCE_INVENTORY": 1,
+        "FAIL": 8,
+        "ERROR": 6,
+        "PASS": 73,
+        "FAILED_LAUNCH": 2,
+        "NOT_RUN": 1,
+        "COMPLETE": 1,
+        "ALL ASSERTIONS PASSED": 1,
+        "FAILED": 1
+      }
+    },
+    {
+      "path": "results/tests/G0_EVIDENCE_INVENTORY_RECEIPT.json",
+      "classification": "HISTORICAL_TEST_EVIDENCE_STATUS_SOURCE",
+      "enum_counts": {
+        "PASS": 35
+      }
+    },
+    {
+      "path": "results/tests/G0_LOCAL.json",
+      "classification": "HISTORICAL_TEST_EVIDENCE_STATUS_SOURCE",
+      "enum_counts": {
+        "PASS": 25,
+        "ERROR": 3,
+        "FAIL": 2
+      }
+    }
+  ],
+  "phase_flags_from_final_decision": [
+    {
+      "source": "results/GATE_DECISION.json",
+      "field_path": "/A1",
+      "provided_enum": "NOT_RUN_GATE_CLOSED",
+      "classification": "PROVIDED_PHASE_STATUS_NO_RECOMPUTATION"
+    },
+    {
+      "source": "results/GATE_DECISION.json",
+      "field_path": "/A2",
+      "provided_enum": "NOT_RUN_GATE_CLOSED",
+      "classification": "PROVIDED_PHASE_STATUS_NO_RECOMPUTATION"
+    }
+  ],
+  "excluded_local_artifacts": [
+    {
+      "path": ".mplconfig/phase/fontlist-v3.11.0.json",
+      "classification": "IGNORED_PLOT_FONT_CACHE_NOT_PUBLISHABLE"
+    },
+    {
+      "path": ".mplconfig/summary/fontlist-v3.11.0.json",
+      "classification": "IGNORED_PLOT_FONT_CACHE_NOT_PUBLISHABLE"
+    },
+    {
+      "path": "configs/SOURCE_COMMIT.txt",
+      "classification": "IGNORED_HISTORICAL_SOURCE_METADATA_NOT_PUBLISHABLE_NO_HASH_CHECK"
+    },
+    {
+      "path": "private/release-notes.md",
+      "classification": "IGNORED_PRIVATE_RELEASE_NOTE_NOT_PUBLISHABLE_CONTENT_NOT_SCANNED"
+    }
+  ],
+  "fixture_declaration_check": {
+    "path": "tests/review_replay_interface.py",
+    "historical_prefinal_classification": "NON_SECRET_FIXTURE_PLACEHOLDER_DECLARATION",
+    "current_full_scan_literal_credential_candidate_count": 0,
+    "current_ast_sensitive_name_declaration_string_count": 0,
+    "classification": "NO_CREDENTIAL_CANDIDATE_IN_CURRENT_SCAN_HISTORICAL_FIXTURE_DECLARATION_NOT_SECRET"
+  },
+  "expected_publication_receipt": {
+    "provided_scope_state": "PENDING",
+    "classification": "EXPECTED_PREPUBLICATION_STATE",
+    "source": "parent_task_instruction",
+    "publication_action_not_part_of_audit": true
+  },
+  "aggregate_scientific_status_note": "只抄录最终 GATE_DECISION/G0/REPRESENTATION 状态；A1/A2 QUALITY_GATE 文件为空，未填补或重新判决。enum_counts 可能包含已保存的历史失败记录，不用于推断当前 gate。",
+  "post_snapshot_annotation": {
+    "classification": "PARENT_PROVENANCE_ANNOTATION_ONLY_NO_RESCAN",
+    "new_physics": false,
+    "new_full_text_or_npz_scan": false
+  }
+}

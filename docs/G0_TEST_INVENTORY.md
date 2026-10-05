@@ -108,3 +108,7 @@ g0-real-01 没有 Python/physics manifest，保存的 scientific_status 为 NOT_
 - Current test line locations are an inventory of present test source. Local attempt receipts record commands/env but no immutable test/source revision stamp. The CUDA job has a declared source_commit. No new content-hash check was performed.
 
 可逐项读取 [机器清单](../results/tests/G0_EVIDENCE_INVENTORY.json)、[本地报告](../results/tests/G0_LOCAL.json)、[代数报告](../results/G0_ALGEBRA.json)、[原尺寸报告](../results/G0_REAL.json) 与 [本次整理 CPU 回执](../results/tests/G0_EVIDENCE_INVENTORY_RECEIPT.json)。此页及 JSON 没有新增物理、测试、SSH、hash 或 gate judgment。
+
+## 后续离线 gate 回归
+
+在上述 G0 证据形成后，另执行五项无物理 reference-completeness 回归，均 PASS（`results/tests/REFERENCE_GATE_REGRESSION.json`）。它们检查缺参考与真实 QP 失败同时出现时的 HOLD/FAIL 区分，以及重复、缺 state 的拒绝；不增加原26项物理/代数 suite的历史计数，不替代原尺寸 voxel KKT 验证。当前复现 runner 默认发现所有 `test_*.py`，因此新拷贝还会发现这五项检查。

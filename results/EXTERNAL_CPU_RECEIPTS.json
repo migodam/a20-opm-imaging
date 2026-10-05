@@ -91,5 +91,32 @@
     "scope": "missing reference versus actual method failure gate regression; imports included",
     "process_cpu_seconds": 0.081017,
     "receipt": "results/tests/REFERENCE_GATE_REGRESSION.json"
+  },
+  {
+    "scope": "final offline evidence tables, 2000-parent bootstrap and plots",
+    "process_cpu_seconds": 8.445789000000001,
+    "receipt": "research/claim_audit/summary_worker_receipt.json",
+    "includes_visual_revision_and_repeat": true
+  },
+  {
+    "scope": "final state-separated plot rendering",
+    "process_cpu_seconds": 0.9756980000000001,
+    "receipt": "results/replay/phase_plots/plot_receipt.json"
+  },
+  {
+    "scope": "final mixed descriptive metrics",
+    "process_cpu_seconds": 0.151216,
+    "receipt": "results/MIXED_DESCRIPTIVE_METRICS.json"
+  },
+  {
+    "scope": "final report 82 mechanical consistency checks",
+    "process_cpu_seconds": 0.53365,
+    "receipt": "results/tests/FINAL_REPORT_CONSISTENCY_RECEIPT.json"
+  },
+  {
+    "scope": "final full-text public package audit and metadata classification corrections",
+    "process_cpu_seconds": 1.8540400000000001,
+    "measurement": "inclusive measured CPU plus explicit epilogue allowances",
+    "receipt": "research/claim_audit/public_package_final_audit_receipt.json"
   }
 ]

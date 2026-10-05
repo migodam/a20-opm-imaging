@@ -1,0 +1,26 @@
+{
+  "status": "ARTIFACTS_WRITTEN",
+  "gate_recomputed": false,
+  "physics_actions": 0,
+  "run_id_filter": null,
+  "artifacts": {
+    "raw_csv": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/phase_plots/mixed_H_step_raw_rows.csv",
+    "cells_csv": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/phase_plots/mixed_H_step_cells.csv",
+    "selection_json": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/phase_plots/mixed_H_step_selection.json",
+    "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/phase_plots/mixed_H_step_by_state.png",
+    "pdf": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/results/replay/phase_plots/mixed_H_step_by_state.pdf"
+  },
+  "input_parse_issues": 0,
+  "raw_contributing_rows": 72,
+  "displayed_cells": 72,
+  "registered_threshold": 0.05,
+  "display_counts": {
+    "valid": 60,
+    "missing": 0,
+    "invalid": 12,
+    "duplicate": 0,
+    "zero_reference": 0
+  },
+  "process_cpu_seconds": 0.9756980000000001,
+  "wall_seconds": 9.587695958092809
+}

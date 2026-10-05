@@ -1,0 +1,1092 @@
+{
+  "schema": "a20.final_report.mechanical_consistency.v1",
+  "status": "CONSISTENT",
+  "created_utc": "2026-10-05T10:04:31.438076+00:00",
+  "scope": "Mechanical count, schema, arithmetic, rounded-unit and saved-status checks only. No physical rerun, bootstrap redraw, new test or scientific gate judgment.",
+  "checks": [
+    {
+      "check": "raw count partition",
+      "status": "CONSISTENT",
+      "expected": {
+        "raw_total": 930,
+        "shared": 42,
+        "method": 888,
+        "attempted_candidates": 864,
+        "NOT_RUN": 24,
+        "metric_valid": 720,
+        "method_QP_failures": 128,
+        "QP_valid_no_full_reference": 16,
+        "full_reference_failures": 2
+      },
+      "observed": {
+        "raw_total": 930,
+        "shared": 42,
+        "method": 888,
+        "attempted_candidates": 864,
+        "NOT_RUN": 24,
+        "metric_valid": 720,
+        "method_QP_failures": 128,
+        "QP_valid_no_full_reference": 16,
+        "full_reference_failures": 2
+      },
+      "sources": [
+        "results/replay/replay.jsonl"
+      ]
+    },
+    {
+      "check": "930=42+888 and 864=720+128+16",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "report raw counts stated without extra physical attempts",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true,
+      "sources": [
+        "RESEARCH_REPORT_ZH.md"
+      ]
+    },
+    {
+      "check": "GATE method/reference failure counts",
+      "status": "CONSISTENT",
+      "expected": {
+        "method": 128,
+        "reference": 2
+      },
+      "observed": {
+        "method": 128,
+        "reference": 2
+      }
+    },
+    {
+      "check": "final raw/summary CSV sizes",
+      "status": "CONSISTENT",
+      "expected": {
+        "raw": 930,
+        "method": 888,
+        "non_method": 42
+      },
+      "observed": {
+        "raw": 930,
+        "method": 888,
+        "non_method": 42
+      }
+    },
+    {
+      "check": "raw CSV status/key multiset equals immutable JSON",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "summary status distribution matches raw methods",
+      "status": "CONSISTENT",
+      "expected": {
+        "OK": 720,
+        "NOT_RUN": 24,
+        "FAILED": 128,
+        "OK_WITHOUT_CONSTRAINED_REFERENCE": 16
+      },
+      "observed": {
+        "OK": 720,
+        "NOT_RUN": 24,
+        "FAILED": 128,
+        "OK_WITHOUT_CONSTRAINED_REFERENCE": 16
+      }
+    },
+    {
+      "check": "720 metric_valid summary rows",
+      "status": "CONSISTENT",
+      "expected": 720,
+      "observed": 720
+    },
+    {
+      "check": "all summary relative-H values agree with raw rows",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "unique method cells and zero oracle/duplicate/reference flags",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "130 retained QPFailure records",
+      "status": "CONSISTENT",
+      "expected": 130,
+      "observed": 130
+    },
+    {
+      "check": "failure types are QPFailure and all failed states are voxel 2010",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "3 saved plus 7 new valid and 2 failed new references",
+      "status": "CONSISTENT",
+      "expected": {
+        "audited_saved_valid": 3,
+        "new_valid": 7,
+        "new_failed": 2,
+        "new_attempted": 9
+      },
+      "observed": {
+        "audited_saved_valid": 3,
+        "new_valid": 7,
+        "new_failed": 2,
+        "new_attempted": 9
+      }
+    },
+    {
+      "check": "5 Gaussian parents/10 reference states; 2 missing voxel states",
+      "status": "CONSISTENT",
+      "expected": {
+        "parents": [
+          2001,
+          2003,
+          2005,
+          2007,
+          2013
+        ],
+        "states": 10,
+        "missing": [
+          [
+            2010,
+            0
+          ],
+          [
+            2010,
+            17
+          ]
+        ]
+      },
+      "observed": {
+        "parents": [
+          2001,
+          2003,
+          2005,
+          2007,
+          2013
+        ],
+        "states": 10,
+        "missing": [
+          [
+            2010,
+            0
+          ],
+          [
+            2010,
+            17
+          ]
+        ]
+      }
+    },
+    {
+      "check": "GATE Gaussian population",
+      "status": "CONSISTENT",
+      "expected": {
+        "parents": 5,
+        "states": 10
+      },
+      "observed": {
+        "parents": 5,
+        "states": 10
+      }
+    },
+    {
+      "check": "failed reference numeric 0",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "failed reference numeric 17",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "reported voxel KKT rounded numbers",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "all 864 candidates Galerkin, zero full fallback",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "saved dimension/precision/frequency claims",
+      "status": "CONSISTENT",
+      "expected": [
+        [
+          "gaussian",
+          54,
+          5184,
+          [
+            2.0
+          ]
+        ],
+        [
+          "voxel",
+          3456,
+          5184,
+          [
+            2.0
+          ]
+        ]
+      ],
+      "observed": [
+        [
+          "gaussian",
+          54,
+          5184,
+          [
+            2.0
+          ]
+        ],
+        [
+          "voxel",
+          3456,
+          5184,
+          [
+            2.0
+          ]
+        ]
+      ]
+    },
+    {
+      "check": "precision complex128/float64 in every raw record",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "report degree table has exactly 0-5",
+      "status": "CONSISTENT",
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "check": "degree 0 report rank and percent arithmetic",
+      "status": "CONSISTENT",
+      "expected": [
+        20,
+        "3.46",
+        "398.66",
+        "104.24",
+        "657.32"
+      ],
+      "observed": [
+        20,
+        "3.46",
+        "398.66",
+        "104.24",
+        "657.32"
+      ]
+    },
+    {
+      "check": "degree 0 GATE subset metrics equal raw",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 0 final summary median/worst",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 1 report rank and percent arithmetic",
+      "status": "CONSISTENT",
+      "expected": [
+        32,
+        "3.13",
+        "311.48",
+        "83.89",
+        "511.32"
+      ],
+      "observed": [
+        32,
+        "3.13",
+        "311.48",
+        "83.89",
+        "511.32"
+      ]
+    },
+    {
+      "check": "degree 1 GATE subset metrics equal raw",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 1 final summary median/worst",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 2 report rank and percent arithmetic",
+      "status": "CONSISTENT",
+      "expected": [
+        44,
+        "2.48",
+        "280.27",
+        "78.19",
+        "470.44"
+      ],
+      "observed": [
+        44,
+        "2.48",
+        "280.27",
+        "78.19",
+        "470.44"
+      ]
+    },
+    {
+      "check": "degree 2 GATE subset metrics equal raw",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 2 final summary median/worst",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 3 report rank and percent arithmetic",
+      "status": "CONSISTENT",
+      "expected": [
+        56,
+        "2.24",
+        "269.51",
+        "74.24",
+        "449.69"
+      ],
+      "observed": [
+        56,
+        "2.24",
+        "269.51",
+        "74.24",
+        "449.69"
+      ]
+    },
+    {
+      "check": "degree 3 GATE subset metrics equal raw",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 3 final summary median/worst",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 4 report rank and percent arithmetic",
+      "status": "CONSISTENT",
+      "expected": [
+        68,
+        "1.92",
+        "257.04",
+        "74.25",
+        "450.65"
+      ],
+      "observed": [
+        68,
+        "1.92",
+        "257.04",
+        "74.25",
+        "450.65"
+      ]
+    },
+    {
+      "check": "degree 4 GATE subset metrics equal raw",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 4 final summary median/worst",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 5 report rank and percent arithmetic",
+      "status": "CONSISTENT",
+      "expected": [
+        80,
+        "1.33",
+        "246.33",
+        "72.72",
+        "441.65"
+      ],
+      "observed": [
+        80,
+        "1.33",
+        "246.33",
+        "72.72",
+        "441.65"
+      ]
+    },
+    {
+      "check": "degree 5 GATE subset metrics equal raw",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "degree 5 final summary median/worst",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "START_HERE d3/d5 rounded percentages",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "rank fraction percent 80/5184 ->1.54%",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "late reference/absolute H-error rounded ranges",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "saved reference floor value",
+      "status": "CONSISTENT",
+      "expected": 1e-12,
+      "observed": 1e-12
+    },
+    {
+      "check": "2005 degree4 vs degree3 nonmonotonic example",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "132 bootstrap groups = 12 estimable +120 not estimable",
+      "status": "CONSISTENT",
+      "expected": {
+        "total": 132,
+        "estimable": 12,
+        "not_estimable": 120
+      },
+      "observed": {
+        "total": 132,
+        "estimable": 12,
+        "not_estimable": 120
+      }
+    },
+    {
+      "check": "12 Gaussian rank/seed-matched groups exactly",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "120 unestimable groups execute zero draws and have no fabricated interval",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean OPM_forward_total12 d0",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean ordinary_right_block_Krylov12 d0",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean OPM_forward_total12 d1",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean ordinary_right_block_Krylov12 d1",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean OPM_forward_total12 d2",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean ordinary_right_block_Krylov12 d2",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean OPM_forward_total12 d3",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean ordinary_right_block_Krylov12 d3",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean OPM_forward_total12 d4",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean ordinary_right_block_Krylov12 d4",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean OPM_forward_total12 d5",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "bootstrap saved mean ordinary_right_block_Krylov12 d5",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "reported d3 bootstrap rounded values ordinary_right_block_Krylov12",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "reported d3 bootstrap rounded values OPM_forward_total12",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "report bootstrap counts and draws stated",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "144 missing grid cells are only two NOT_RUN baseline placeholders",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "complete 12-state H gate HOLD with missing median and separate actual method FAIL",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "report and entry distinguish subset/current implementation from universal representation judgment",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "A1 saved NOT_RUN/0 physical runs",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "A2 saved NOT_RUN/0 physical runs",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "noise saved NOT_RUN/0 physical runs",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "timing saved NOT_RUN/0 physical runs",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "nonlinear/deployment NOT_RUN explicitly retained",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "actual local/algebra G0 scopes and counts",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "original G0 two states/single k=2/5184 complex current coordinates",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "report G0 numbers/scopes and no real-multifrequency claim",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "GATE G0 reproduces saved status/scope",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "GATE and final budget agree exactly",
+      "status": "CONSISTENT",
+      "expected": {
+        "charged_CPU_seconds": 5286.578165,
+        "charged_GPU_occupation_seconds": 5375.937419600001,
+        "CPU_limit_seconds": 7200,
+        "GPU_limit_seconds": 43200,
+        "within_budget": true,
+        "includes_failed_launch_allowance": true,
+        "failed_launch_CPU_GPU_allowance_each_seconds": 501.975,
+        "preparation_transport_publication_CPU_allowance_seconds": 120.0,
+        "CPU_is_process_CPU_including_GPU_host_work": true,
+        "GPU_is_exclusive_job_elapsed_not_kernel_time": true,
+        "measurement": "Measured job/worker CPU plus explicitly conservative allowances; uninstrumented overhead allowance is not claimed exact."
+      },
+      "observed": {
+        "charged_CPU_seconds": 5286.578165,
+        "charged_GPU_occupation_seconds": 5375.937419600001,
+        "CPU_limit_seconds": 7200,
+        "GPU_limit_seconds": 43200,
+        "within_budget": true,
+        "includes_failed_launch_allowance": true,
+        "failed_launch_CPU_GPU_allowance_each_seconds": 501.975,
+        "preparation_transport_publication_CPU_allowance_seconds": 120.0,
+        "CPU_is_process_CPU_including_GPU_host_work": true,
+        "GPU_is_exclusive_job_elapsed_not_kernel_time": true,
+        "measurement": "Measured job/worker CPU plus explicitly conservative allowances; uninstrumented overhead allowance is not claimed exact."
+      }
+    },
+    {
+      "check": "replay CPU/GPU reported seconds match inclusive receipt",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "GPU seconds/minutes, CPU below90min, and fixed limits arithmetic",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "decimal GB memory arithmetic consistent with bytes",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "allowance and occupation units are not represented as exact kernel/CPU observations",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "declared physics source IDs agree without hash verification",
+      "status": "CONSISTENT",
+      "expected": [
+        "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+      ],
+      "observed": [
+        "68ab91576c2f457e8afec0a2a9537ca5134018ea"
+      ]
+    },
+    {
+      "check": "START_HERE declared replay ID matches record",
+      "status": "CONSISTENT",
+      "expected": true,
+      "observed": true
+    }
+  ],
+  "defects": [],
+  "internal_failure": null,
+  "observations": {
+    "raw_counts": {
+      "raw_total": 930,
+      "shared": 42,
+      "method": 888,
+      "attempted_candidates": 864,
+      "NOT_RUN": 24,
+      "metric_valid": 720,
+      "method_QP_failures": 128,
+      "QP_valid_no_full_reference": 16,
+      "full_reference_failures": 2
+    },
+    "method_status_distribution": {
+      "OK": 720,
+      "NOT_RUN": 24,
+      "FAILED": 128,
+      "OK_WITHOUT_CONSTRAINED_REFERENCE": 16
+    },
+    "reference_counts": {
+      "audited_saved_valid": 3,
+      "new_valid": 7,
+      "new_failed": 2,
+      "new_attempted": 9
+    },
+    "Gaussian_parent_ids": [
+      2001,
+      2003,
+      2005,
+      2007,
+      2013
+    ],
+    "missing_reference_states": [
+      [
+        2010,
+        0
+      ],
+      [
+        2010,
+        17
+      ]
+    ],
+    "degree_arithmetic": [
+      {
+        "degree": 0,
+        "rank": [
+          20
+        ],
+        "valid_states": 10,
+        "early_median": 0.0346370100980737,
+        "late_median": 3.986573787496384,
+        "ten_state_median": 1.0424312625725298,
+        "worst": 6.573211883535582,
+        "early_below_5percent": 5,
+        "late_above_5percent": 5
+      },
+      {
+        "degree": 1,
+        "rank": [
+          32
+        ],
+        "valid_states": 10,
+        "early_median": 0.03129914976410251,
+        "late_median": 3.114818326985325,
+        "ten_state_median": 0.838891626610045,
+        "worst": 5.113195435982987,
+        "early_below_5percent": 5,
+        "late_above_5percent": 5
+      },
+      {
+        "degree": 2,
+        "rank": [
+          44
+        ],
+        "valid_states": 10,
+        "early_median": 0.02479721974644194,
+        "late_median": 2.8026709651761883,
+        "ten_state_median": 0.7819234788839691,
+        "worst": 4.704389368516216,
+        "early_below_5percent": 5,
+        "late_above_5percent": 5
+      },
+      {
+        "degree": 3,
+        "rank": [
+          56
+        ],
+        "valid_states": 10,
+        "early_median": 0.022439041606178572,
+        "late_median": 2.695060239644571,
+        "ten_state_median": 0.7423790836592508,
+        "worst": 4.49688065497439,
+        "early_below_5percent": 5,
+        "late_above_5percent": 5
+      },
+      {
+        "degree": 4,
+        "rank": [
+          68
+        ],
+        "valid_states": 10,
+        "early_median": 0.019218896174259235,
+        "late_median": 2.570417102294003,
+        "ten_state_median": 0.7425355495804151,
+        "worst": 4.506540168453662,
+        "early_below_5percent": 5,
+        "late_above_5percent": 5
+      },
+      {
+        "degree": 5,
+        "rank": [
+          80
+        ],
+        "valid_states": 10,
+        "early_median": 0.013250694592937639,
+        "late_median": 2.463268976322091,
+        "ten_state_median": 0.7271987212592117,
+        "worst": 4.416471394074735,
+        "early_below_5percent": 5,
+        "late_above_5percent": 5
+      }
+    ],
+    "late_reference_H_norm_range": [
+      0.0005797300940382867,
+      0.0036323859117022026
+    ],
+    "late_absolute_H_error_range": [
+      0.0017569788902124413,
+      0.007417998198833772
+    ],
+    "bootstrap_total_groups": 132,
+    "bootstrap_estimable_groups": 12,
+    "bootstrap_unestimable_groups": 120,
+    "bootstrap_saved_mean_checks": [
+      {
+        "control": "OPM_forward_total12",
+        "degree": 0,
+        "saved_mean_difference": 0.0,
+        "arithmetically_recomputed_mean": 0.0,
+        "lower_95": 0.0,
+        "upper_95": 0.0,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "ordinary_right_block_Krylov12",
+        "degree": 0,
+        "saved_mean_difference": -3.2064721035698263,
+        "arithmetically_recomputed_mean": -3.2064721035698263,
+        "lower_95": -4.542485711213997,
+        "upper_95": -1.910889305748276,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "OPM_forward_total12",
+        "degree": 1,
+        "saved_mean_difference": -0.016031440771525428,
+        "arithmetically_recomputed_mean": -0.01603144077152543,
+        "lower_95": -0.09948559591083414,
+        "upper_95": 0.08164034578495638,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "ordinary_right_block_Krylov12",
+        "degree": 1,
+        "saved_mean_difference": -3.5111037613907827,
+        "arithmetically_recomputed_mean": -3.511103761390782,
+        "lower_95": -4.7944036827737495,
+        "upper_95": -2.2002051192495786,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "OPM_forward_total12",
+        "degree": 2,
+        "saved_mean_difference": -0.04524692805655685,
+        "arithmetically_recomputed_mean": -0.045246928056556855,
+        "lower_95": -0.09369301201877722,
+        "upper_95": 0.008389874776563009,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "ordinary_right_block_Krylov12",
+        "degree": 2,
+        "saved_mean_difference": -3.5942635056137364,
+        "arithmetically_recomputed_mean": -3.5942635056137364,
+        "lower_95": -4.882709350988988,
+        "upper_95": -2.277259398396351,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "OPM_forward_total12",
+        "degree": 3,
+        "saved_mean_difference": -0.017871902423722556,
+        "arithmetically_recomputed_mean": -0.017871902423722552,
+        "lower_95": -0.06717904501715775,
+        "upper_95": 0.04995716891327573,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "ordinary_right_block_Krylov12",
+        "degree": 3,
+        "saved_mean_difference": -3.641990981847144,
+        "arithmetically_recomputed_mean": -3.641990981847144,
+        "lower_95": -4.888904203073833,
+        "upper_95": -2.294613153215027,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "OPM_forward_total12",
+        "degree": 4,
+        "saved_mean_difference": -0.0014507914989760015,
+        "arithmetically_recomputed_mean": -0.0014507914989760006,
+        "lower_95": -0.03392187655922137,
+        "upper_95": 0.04301298947499246,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "ordinary_right_block_Krylov12",
+        "degree": 4,
+        "saved_mean_difference": -3.645401060957279,
+        "arithmetically_recomputed_mean": -3.645401060957279,
+        "lower_95": -5.016108970754812,
+        "upper_95": -2.280220738615755,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "OPM_forward_total12",
+        "degree": 5,
+        "saved_mean_difference": 0.018360072383204938,
+        "arithmetically_recomputed_mean": 0.018360072383204938,
+        "lower_95": -0.001654456760328119,
+        "upper_95": 0.04736999563096541,
+        "saved_draws_executed": 2000
+      },
+      {
+        "control": "ordinary_right_block_Krylov12",
+        "degree": 5,
+        "saved_mean_difference": -3.5097832122553116,
+        "arithmetically_recomputed_mean": -3.509783212255311,
+        "lower_95": -4.726048870838055,
+        "upper_95": -2.1958171298063274,
+        "saved_draws_executed": 2000
+      }
+    ],
+    "degree3_bootstrap_report_display": {
+      "ordinary_right_block_Krylov12": [
+        "-3.642",
+        "-4.889",
+        "-2.295"
+      ],
+      "OPM_forward_total12": [
+        "-0.0179",
+        "-0.0672",
+        "0.0500"
+      ]
+    },
+    "missing_grid_cells": 144,
+    "saved_G0_statuses": {
+      "LOCAL": "PASS",
+      "ALGEBRA": "ALL ASSERTIONS PASSED",
+      "REAL": "PASS"
+    },
+    "G0_scope": {
+      "tiny_current_dimension": 24,
+      "tiny_frequencies": [
+        0.9,
+        1.25
+      ],
+      "original_current_dimension": 5184,
+      "original_states": [
+        [
+          2001,
+          0
+        ],
+        [
+          2005,
+          0
+        ]
+      ],
+      "original_frequencies": [
+        2.0
+      ],
+      "original_max_recorded_adjoint_or_equivalence": 6.225983201653807e-13
+    },
+    "saved_stage_statuses": {
+      "A1": {
+        "status": "NOT_RUN",
+        "reason": "No degree 0–3 has a complete passing replay gate; voxel reference missing and method QP failures.",
+        "physical_runs": 0
+      },
+      "A2": {
+        "status": "NOT_RUN",
+        "reason": "A1 quality did not run/pass.",
+        "physical_runs": 0
+      },
+      "noise": {
+        "status": "NOT_RUN",
+        "reason": "No A1/A2 quality survivor.",
+        "physical_runs": 0
+      },
+      "timing": {
+        "status": "NOT_RUN",
+        "reason": "No matched-quality imaging survivor; replay wall cannot substitute for deployment.",
+        "physical_runs": 0
+      }
+    },
+    "saved_gate_statuses": {
+      "decision": "NO_GO_FOR_CURRENT_IMPLEMENTATION_ADVANCEMENT",
+      "complete_H_gate": "HOLD",
+      "G1": "NOT_RUN",
+      "G2": "NOT_RUN"
+    },
+    "budget_unit_arithmetic": {
+      "charged_CPU_minutes": 88.10963608333333,
+      "charged_GPU_job_elapsed_minutes": 89.59895699333335,
+      "decimal_GB_memory": [
+        4.728389632,
+        1.809234432,
+        2.162163712
+      ]
+    }
+  },
+  "CSV_refresh_note": "Final comparisons read after parent confirmed offline summarizer refresh complete; raw replay used as immutable numerical source.",
+  "new_actions": {
+    "physics": 0,
+    "tests": 0,
+    "SSH": 0,
+    "hash_checks": 0,
+    "NPZ_values_read": 0,
+    "doc_source_config_edits": 0,
+    "agents": 0
+  }
+}

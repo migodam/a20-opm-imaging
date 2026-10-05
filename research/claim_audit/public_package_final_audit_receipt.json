@@ -1,0 +1,70 @@
+{
+  "task": "final_bounded_public_package_static_audit",
+  "actual_measured_cpu_seconds_inclusive": 1.8340400000000001,
+  "prior_metadata_probe_cpu_seconds": 0.04890699999999999,
+  "main_process_and_child_cpu_seconds": 1.648228,
+  "unmeasured_shell_builtin_probe_allowance_seconds": 0.01,
+  "final_receipt_write_epilogue_allowance_seconds": 0.01,
+  "inclusive_budget_charge_seconds": 1.8540400000000001,
+  "hard_cpu_budget_seconds": 8,
+  "cpu_guard_soft_seconds_main": 6,
+  "cpu_guard_hard_seconds_main": 7,
+  "within_budget": true,
+  "measurement": "resource.getrusage SELF+CHILDREN for metadata probe, full scan, all schema verification and finalization; includes Python imports, Git children, reads and report generation. Shell built-in/last receipt epilogue conservatively charged separately.",
+  "wall_seconds": 1.8671851250110194,
+  "failed_attempt_count": 0,
+  "attempts": [
+    {
+      "kind": "metadata_inventory_probe",
+      "status": "OK",
+      "cpu_seconds": 0.04890699999999999
+    },
+    {
+      "kind": "cwd_shell_builtin_probe",
+      "status": "OK",
+      "cpu_measurement": "not_instrumented",
+      "budget_allowance_seconds": 0.01
+    },
+    {
+      "kind": "full_final_static_audit",
+      "status": "OK",
+      "failure_count": 0,
+      "cpu_instrumentation": "resource_self_plus_children_inclusive"
+    },
+    {
+      "kind": "phase_fixture_ignored_schema_verification",
+      "status": "OK",
+      "cpu_seconds": 0.050676,
+      "scientific_gate_recomputed": false
+    },
+    {
+      "kind": "empty_A1_A2_quality_schema_confirmation",
+      "status": "OK",
+      "cpu_seconds": 0.031113999999999996,
+      "classification": "EMPTY_SAVED_OBJECTS_CONFIRMED_NO_FLAG_INFERRED"
+    },
+    {
+      "kind": "aggregate_finalize",
+      "status": "OK",
+      "cpu_seconds": 0.027566
+    },
+    {
+      "kind": "parent_generated_figure_provenance_and_placeholder_annotation",
+      "status": "OK",
+      "cpu_seconds": 0.027548999999999997,
+      "new_scan": false,
+      "physics": false
+    }
+  ],
+  "physics_runs": 0,
+  "network_calls": 0,
+  "ssh_calls": 0,
+  "hash_checks": 0,
+  "writes": [
+    "research/claim_audit/public_package_final_audit.json",
+    "research/claim_audit/public_package_final_audit.md",
+    "research/claim_audit/public_package_final_audit_receipt.json"
+  ],
+  "completion": "COMPLETE_AT_FINAL_WORKING_TREE_SNAPSHOT",
+  "publication_action": false
+}
