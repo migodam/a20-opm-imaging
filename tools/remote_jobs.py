@@ -54,6 +54,10 @@ def deploy():
             for path in (ROOT/'results/jobs').glob('local-*/*'):
                 if path.is_file():
                     z.write(path,path.relative_to(ROOT).as_posix())
+            # The transport failure never created a remote CLI receipt.
+            for path in (ROOT/'results/jobs/g0-real-01').glob('*'):
+                if path.is_file():
+                    z.write(path,path.relative_to(ROOT).as_posix())
         shell(f"New-Item -ItemType Directory -Force '{REMOTE}' | Out-Null")
         copy(archive,f'{target}:{REMOTE}/upload.zip')
         script=f"import zipfile; z=zipfile.ZipFile(r'{REMOTE}/upload.zip'); z.extractall(r'{REMOTE}'); print('DEPLOYED',len(z.namelist()))"
@@ -148,6 +152,8 @@ Get-Content '{REMOTE}/runs/{job}.stderr' -Tail 12 -ErrorAction SilentlyContinue
 
 def pull():
     target,_=connection()
+    registry=ROOT/'results/EXTERNAL_CPU_RECEIPTS.json'
+    local_external=json.loads(registry.read_text()) if registry.exists() else []
     script=f"import zipfile,pathlib; r=pathlib.Path(r'{REMOTE}'); z=zipfile.ZipFile(r/'results_download.zip','w',zipfile.ZIP_DEFLATED); [z.write(p,p.relative_to(r).as_posix()) for p in (r/'results').rglob('*') if p.is_file()]; z.close(); print('ARCHIVED')"
     encoded=base64.b64encode(script.encode()).decode()
     print(shell(f"& '{PYTHON}' -c \"import base64; exec(base64.b64decode('{encoded}'))\""))
@@ -156,6 +162,22 @@ def pull():
         copy(f'{target}:{REMOTE}/results_download.zip',dest)
         with zipfile.ZipFile(dest) as z:
             z.extractall(ROOT)
+    remote_external=json.loads(registry.read_text()) if registry.exists() else []
+    merged={}
+    for row in remote_external+local_external:
+        key=row['scope']
+        if key not in merged or row['process_cpu_seconds']>merged[key]['process_cpu_seconds']:
+            merged[key]=row
+    registry.write_text(json.dumps(list(merged.values()),indent=2)+'\n')
+    # A remote ledger cannot erase earlier local/failure receipts.
+    ledger=[]
+    for path in sorted((ROOT/'results/jobs').glob('*/job_receipt.json')):
+        row=json.loads(path.read_text())
+        result=path.parent/'result.json'
+        if result.exists():
+            row['result']=json.loads(result.read_text())
+        ledger.append(row)
+    (ROOT/'results/JOB_LEDGER.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in ledger))
     print('RESULTS_SAVED')
 
 

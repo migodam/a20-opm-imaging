@@ -77,22 +77,42 @@ def eligibility(root, config):
     if not rows:
         rows = read_rows(root/'results/replay/replay.jsonl')
     # Accept both documented worker schema names; never infer missing rows.
-    answer = {'status': 'HOLD', 'eligible': [], 'degrees': {}, 'expected_states': 12}
+    expected={(int(p),int(i)) for p in config['parents'] for i in config['replay_iterations']}
+    answer = {'status': 'HOLD', 'eligible': [], 'degrees': {}, 'expected_states': len(expected)}
     for degree in config['live_degrees']:
         subset = [r for r in rows if r.get('method') in ('mixed', 'OPM', 'OPM_MIXED', 'mixed_default')
                   and r.get('degree')==degree]
-        good = [r for r in subset if r.get('status') in ('OK', 'PASS', 'COMPLETE')
-                and r.get('relative_H_step_error') is not None]
+        groups={key:[] for key in expected}
+        unexpected=[]
+        for row in subset:
+            key=(row.get('parent_object_id',row.get('parent_id')),row.get('iteration'))
+            if key in groups:
+                groups[key].append(row)
+            else:
+                unexpected.append(key)
+        duplicates=[key for key,value in groups.items() if len(value)>1]
+        missing=[key for key,value in groups.items() if not value]
+        unique=[value[0] for value in groups.values() if len(value)==1]
+        good = [r for r in unique if r.get('status') in ('OK', 'PASS', 'COMPLETE')
+                and r.get('relative_H_step_error') is not None
+                and np.isfinite(r['relative_H_step_error'])
+                and not r.get('full_fallback_used',r.get('fullfallback_used',False))]
         vals = [r['relative_H_step_error'] for r in good]
-        if len(good)==12:
-            median = float(np.median(vals))
-            ok = median<=config['replay_median_H_error_gate']
+        observed_failures=[r for r in unique if r.get('status') in ('FAILED','FAIL','INVALID')
+                           or r.get('full_fallback_used',r.get('fullfallback_used',False))]
+        unresolved=[r for r in unique if r not in good and r not in observed_failures]
+        if not missing and not duplicates and not unexpected and not unresolved:
+            median = float(np.median(vals)) if vals else None
+            ok = not observed_failures and median is not None and median<=config['replay_median_H_error_gate']
             decision = 'PASS' if ok else 'FAIL'
             if ok:
                 answer['eligible'].append(degree)
         else:
             median, decision = None, 'HOLD'
         answer['degrees'][str(degree)] = {'status': decision, 'valid_states': len(good),
+            'missing_states':sorted(missing),'duplicate_states':sorted(duplicates),
+            'unexpected_states':unexpected,'observed_failures':len(observed_failures),
+            'unresolved_reference_or_floor':len(unresolved),
             'median_relative_H_step_error': median, 'worst_relative_H_step_error': float(max(vals)) if vals else None}
     if all(r['status']!='HOLD' for r in answer['degrees'].values()):
         answer['status'] = 'PASS' if answer['eligible'] else 'FAIL'
@@ -239,7 +259,8 @@ def main():
                 torch.set_num_threads(1)
             manifest=metadata(root,args,config)
             write_json(jobdir/'manifest.json',manifest)
-            book.metadata={'job':args.job,'source_commit':manifest['source_commit']}
+            book.metadata={'job':args.job,'experiment_id':args.job,'source_commit':manifest['source_commit'],
+                           'backend_declared_historical_commit':manifest['backend_declared_historical_commit']}
             book.check()
             if args.stage=='algebra':
                 spec=importlib.util.spec_from_file_location('a20_theory_check',root/'protocol/experiments/check_theory.py')
@@ -273,7 +294,10 @@ def main():
                 result=run_optional(root,config,book,args)
             else:
                 result={'replay':eligibility(root,config),'A1':quality_gate(root,config,'A1'),'A2':quality_gate(root,config,'A2')}
-            status='COMPLETE'
+            if result.get('status')=='STOPPED_PARTIAL':
+                status='BUDGET_STOP' if str(result.get('stopped_reason','')).startswith('BudgetExceeded:') else 'FAILED'
+            else:
+                status='COMPLETE'
     except BudgetExceeded as exc:
         result={'status':'HOLD','reason':str(exc),'missing':'Unfinished actions retained; no borrowing or uncharged restart'}
         status='BUDGET_STOP'

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "cases": 4,
+  "scope": "unique-state eligibility, real failure versus missing reference, duplicate exclusion; no physics",
+  "process_cpu_seconds": 0.056078
+}

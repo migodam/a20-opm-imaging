@@ -1,0 +1,42 @@
+{
+  "task": "BACKEND_MAP_saved_G0_evidence_update",
+  "status": "DOCUMENT_UPDATED_STATIC_CHECKS_PASS",
+  "output": "docs/BACKEND_MAP.md",
+  "inputs": [
+    "results/G0_LOCAL.json",
+    "results/G0_REAL.json",
+    "results/G0_ALGEBRA.json",
+    "results/tests/LATEST.json",
+    "results/tests/ELIGIBILITY_VALIDATION.json",
+    "src/a20/backend.py",
+    "src/a20/opm.py",
+    "src/a20/material.py",
+    "src/a20/imaging.py"
+  ],
+  "checks": {
+    "removed_unborn_head": true,
+    "removed_obsolete_voxel_bug": true,
+    "local_count_matches_report": true,
+    "real_two_states_match_report": true,
+    "synthetic_scope_matches_report": true,
+    "historic_identifier_preserved_without_new_hash": true,
+    "scope_limits_explicit": true,
+    "required_formula_mapping_present": true
+  },
+  "measured_CPU_seconds_before_receipt": 0.087777,
+  "unmeasured_setup_CPU_charge_seconds": 1,
+  "unmeasured_setup_note": "One initial truncated read could not return its precise CPU field; a conservative 1 second is charged for it and inventory/setup/file editing. No parallel compute, physics, network, or GPU ran.",
+  "CPU_budget_seconds": 20,
+  "no_source_results_tests_config_edits": true,
+  "real_physics_runs": 0,
+  "network_calls": 0,
+  "GPU_seconds": 0,
+  "hash_checks": 0,
+  "historical_hash_policy": "preserved existing historical identifier verbatim; no new hash computation",
+  "scope": "Saved-report G0 evidence mapping only; no replay/G1/G2 determination; real cross-frequency large pilot remains uncovered",
+  "scientific_judgment": "PARENT_OWNED",
+  "measured_CPU_seconds": 0.113618,
+  "process_cpu_seconds": 1.113618,
+  "process_cpu_seconds_is_conservative_charge": true,
+  "CPU_budget_respected": true
+}

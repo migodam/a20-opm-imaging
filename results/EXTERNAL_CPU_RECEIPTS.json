@@ -35,5 +35,21 @@
   {
     "scope": "final source syntax and ledger assembly",
     "process_cpu_seconds": 0.013227999999999997
+  },
+  {
+    "scope": "unique-state eligibility, real failure versus missing reference, duplicate exclusion; no physics",
+    "process_cpu_seconds": 0.056078
+  },
+  {
+    "scope": "all replay module validations and failed attempts",
+    "process_cpu_seconds": 5.054684999999999,
+    "measurement": "measured plus explicitly recorded conservative charge",
+    "receipt": "results/replay_worker_receipt.json"
+  },
+  {
+    "scope": "backend map saved-evidence update",
+    "process_cpu_seconds": 1.113618,
+    "measurement": "measured plus explicitly recorded conservative charge",
+    "receipt": "research/claim_audit/backend_map_update_receipt.json"
   }
 ]
