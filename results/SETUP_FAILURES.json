@@ -4,5 +4,11 @@
     "error": "KeyError process_cpu_seconds; worker used worker_actual_CPU_seconds",
     "resolution": "Schema corrected; original worker receipt preserved",
     "CPU_scope": "included in conservative overhead allowance"
+  },
+  {
+    "stage": "external CPU ledger assembly",
+    "error": "external ledger assembly KeyError process_cpu_seconds; doc receipt uses inclusive_measured_process_cpu_seconds",
+    "resolution": "Corrected field mapping; original documentation receipt preserved",
+    "CPU_scope": "included in shared conservative preparation allowance"
   }
 ]

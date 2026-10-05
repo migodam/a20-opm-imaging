@@ -61,5 +61,15 @@
     "scope": "public input index and key-only schema audit",
     "process_cpu_seconds": 0.148929,
     "receipt": "research/claim_audit/package_index_receipt.json"
+  },
+  {
+    "scope": "final summary schema alignment",
+    "process_cpu_seconds": 0.170684,
+    "receipt": "research/claim_audit/summary_alignment_receipt.json"
+  },
+  {
+    "scope": "reproduction documentation validation",
+    "process_cpu_seconds": 0.134934,
+    "receipt": "results/tests/REPRODUCE_DOC_RECEIPT.json"
   }
 ]
