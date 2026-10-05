@@ -1,0 +1,202 @@
+{
+  "schema": "a20.evidence.G0_EVIDENCE_INVENTORY_RECEIPT.v1",
+  "status": "PASS",
+  "operation": "saved-evidence read, AST name/line mapping, JSON/Markdown inventory write",
+  "read_process_receipts": [
+    {
+      "read": 1,
+      "self_cpu_seconds": 0.033213,
+      "children_cpu_seconds": 0.00656,
+      "wall_seconds": 0.020627834019251168
+    },
+    {
+      "read": 2,
+      "self_cpu_seconds": 0.038897,
+      "children_cpu_seconds": 0,
+      "wall_seconds": 0.023404791951179504
+    },
+    {
+      "read": 3,
+      "self_cpu_seconds": 0.03872,
+      "children_cpu_seconds": 0,
+      "wall_seconds": 0.016986667062155902
+    }
+  ],
+  "writer_self_process_cpu_seconds": 0.047088,
+  "writer_waited_child_cpu_seconds": 0.0,
+  "inclusive_measured_process_cpu_seconds": 0.225869,
+  "writer_wall_seconds": 0.02753670804668218,
+  "read_measured_wall_seconds": 0.061019293032586575,
+  "cpu_limit_seconds": 8,
+  "writer_RLIMIT_CPU_soft_hard": [
+    7,
+    8
+  ],
+  "receipt_measurement": "Startup/import CPU included; samples precede final receipt/stdout serialization. Tool/editor/reasoning CPU is outside measured subprocess CPU.",
+  "failed_attempts_this_task": [],
+  "all_measured_read_and_write_attempt_CPU_included": true,
+  "consistency_checks": [
+    {
+      "check": "latest suite case names match saved test definitions",
+      "status": "PASS"
+    },
+    {
+      "check": "root and tests G0_LOCAL reports agree as parsed JSON",
+      "status": "PASS"
+    },
+    {
+      "check": "all local attempt CPU matches saved summary",
+      "status": "PASS"
+    },
+    {
+      "check": "all saved failed occurrences retained",
+      "status": "PASS"
+    },
+    {
+      "check": "root real G0 has exactly one matching saved job result",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: complex_L_F_S",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: real_B",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: native_jvp_vjp",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: full_FD",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: frozen_Galerkin",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: frozen_Petrov",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: moving_Galerkin",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: moving_LS",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: A1_A2_contract",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: Schur",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: multi_source_packing",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: multi_frequency",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: whitening",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: material_metric_gauge",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: current_gauge",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: zero_empty",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: hierarchy",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: unsafe_core",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: KKT",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: offline_guard",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: cache",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: full_state_guards",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: budget_failure_cost",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: two_update_smoke",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: synthetic_algebra",
+      "status": "PASS"
+    },
+    {
+      "check": "all saved latest tests are mapped",
+      "status": "PASS"
+    },
+    {
+      "check": "inventory artifact round-trip preserves statuses",
+      "status": "PASS"
+    },
+    {
+      "check": "both requested artifacts written",
+      "status": "PASS"
+    },
+    {
+      "check": "B owner guard is mapped to actual saved foreign-model test definition",
+      "status": "PASS"
+    }
+  ],
+  "written_artifacts": [
+    "results/tests/G0_EVIDENCE_INVENTORY.json",
+    "docs/G0_TEST_INVENTORY.md"
+  ],
+  "physical_actions": 0,
+  "new_test_execution": 0,
+  "SSH": 0,
+  "hash_checks": 0,
+  "src_config_modifications": 0,
+  "new_agents": 0,
+  "scientific_status": "Only existing G0 statuses copied; no new gate verdict",
+  "followup_inspection_receipts": [
+    {
+      "purpose": "verify precise B owner-guard function attribution",
+      "process_cpu_seconds": 0.035904,
+      "wall_seconds": 0.01328695798292756
+    }
+  ],
+  "followup_edit_receipts": [
+    {
+      "purpose": "precise original-size presence labels, B owner-guard attribution and unrecorded-dimension cleanup",
+      "process_cpu_seconds": 0.025487,
+      "wall_seconds": 0.004908625036478043,
+      "new_physical_or_test_execution": 0
+    }
+  ]
+}

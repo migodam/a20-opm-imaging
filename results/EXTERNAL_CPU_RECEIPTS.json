@@ -71,5 +71,20 @@
     "scope": "reproduction documentation validation",
     "process_cpu_seconds": 0.134934,
     "receipt": "results/tests/REPRODUCE_DOC_RECEIPT.json"
+  },
+  {
+    "scope": "static public package audit",
+    "process_cpu_seconds": 1.019925,
+    "receipt": "research/claim_audit/public_package_audit_receipt.json"
+  },
+  {
+    "scope": "saved G0 evidence inventory",
+    "process_cpu_seconds": 0.225869,
+    "receipt": "results/tests/G0_EVIDENCE_INVENTORY_RECEIPT.json"
+  },
+  {
+    "scope": "phase separated plot tool validation",
+    "process_cpu_seconds": 0.031074,
+    "receipt": "results/plot_replay_states_worker_receipt.json"
   }
 ]

@@ -1,0 +1,2003 @@
+{
+  "schema": "a20.evidence.G0_EVIDENCE_INVENTORY.v1",
+  "status": "COMPLETE_EVIDENCE_INVENTORY",
+  "created_utc": "2026-10-05T09:19:15.976497+00:00",
+  "authority": "Evidence-only transcription and mapping. Existing G0 statuses are copied without threshold reevaluation or a new scientific gate decision.",
+  "saved_G0_statuses": {
+    "G0_LOCAL": "PASS",
+    "G0_ALGEBRA": "ALL ASSERTIONS PASSED",
+    "G0_REAL": "PASS"
+  },
+  "sources": {
+    "local_summary": "results/tests/G0_LOCAL.json",
+    "root_local": "results/G0_LOCAL.json",
+    "latest_suite": "results/tests/attempt_007/suite.json",
+    "local_test_source": "tests/test_backend_integrity.py",
+    "algebra": "results/G0_ALGEBRA.json",
+    "algebra_job": "results/jobs/local-algebra-01",
+    "real": "results/G0_REAL.json",
+    "real_matching_job": "g0-real-02"
+  },
+  "tiny_Maxwell": {
+    "fixture": {
+      "grid": [
+        2,
+        2,
+        2
+      ],
+      "n_current": 24,
+      "p_material_chart": 6,
+      "p_material_voxel": 16,
+      "source_count": 3,
+      "receiver_count": 4,
+      "complex_channels_per_source": 8,
+      "real_data_dimension_per_frequency": 48,
+      "frequencies": [
+        0.9,
+        1.25
+      ],
+      "precision": "complex128/float64",
+      "device": "cpu",
+      "seed": 2026100501,
+      "synthetic_parent_id": 9020,
+      "whitening_scope": "scalar normalization and non-diagonal real map; no calibrated covariance claim"
+    },
+    "latest_attempt": "attempt_007",
+    "tests": 26,
+    "passed": 26,
+    "numerical_summary_copied": {
+      "maximum_paired_adjoint_relative_error": 1.4445379933460153e-14,
+      "maximum_FD_relative_error": 8.350215490309828e-11,
+      "all_FD_errors": {
+        "frozen_Galerkin_fd": 3.0426238586408956e-11,
+        "frozen_Petrov_fd": 4.83621001377752e-11,
+        "moving_LS_correct_fd": 8.350215490309828e-11,
+        "full_tangent_fd": 2.7196014570807446e-11,
+        "full_objective_fd": 8.44542364086848e-12,
+        "full_objective_nonzero_prior_fd": 1.915174887460151e-11,
+        "moving_Galerkin_correct_fd": 3.7265658640731264e-11
+      },
+      "moving_Galerkin_missing_term_relative_error": 0.021034365512581137,
+      "moving_LS_missing_term_relative_error": 0.058037922912576666,
+      "Schur_Galerkin_equivalence_relative_error": 5.986093449085816e-16,
+      "constrained_chart_KKT_relative": 7.260671250204045e-17,
+      "voxel_KKT_relative": 2.5649983693797325e-09
+    },
+    "all_attempts": [
+      {
+        "attempt": "attempt_001",
+        "status": "FAIL",
+        "tests": 23,
+        "passed": 21,
+        "failures": 2,
+        "errors": 1,
+        "inclusive_process_cpu_seconds": 0.438793,
+        "wall_seconds": 0.882527207955718,
+        "receipt_path": "results/tests/attempt_001/receipt.json",
+        "suite_path": "results/tests/attempt_001/suite.json",
+        "failed_cases": [
+          {
+            "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+            "status": "ERROR"
+          },
+          {
+            "test": "test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state",
+            "status": "FAIL"
+          }
+        ]
+      },
+      {
+        "attempt": "attempt_002",
+        "status": "FAIL",
+        "tests": 24,
+        "passed": 23,
+        "failures": 0,
+        "errors": 1,
+        "inclusive_process_cpu_seconds": 0.42679,
+        "wall_seconds": 0.6570691670058295,
+        "receipt_path": "results/tests/attempt_002/receipt.json",
+        "suite_path": "results/tests/attempt_002/suite.json",
+        "failed_cases": [
+          {
+            "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "attempt": "attempt_003",
+        "status": "FAIL",
+        "tests": 25,
+        "passed": 24,
+        "failures": 2,
+        "errors": 2,
+        "inclusive_process_cpu_seconds": 0.39201400000000003,
+        "wall_seconds": 0.3973521669395268,
+        "receipt_path": "results/tests/attempt_003/receipt.json",
+        "suite_path": "results/tests/attempt_003/suite.json",
+        "failed_cases": [
+          {
+            "test": "test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states",
+            "status": "FAIL"
+          }
+        ]
+      },
+      {
+        "attempt": "attempt_004",
+        "status": "PASS",
+        "tests": 26,
+        "passed": 26,
+        "failures": 0,
+        "errors": 0,
+        "inclusive_process_cpu_seconds": 0.39875099999999997,
+        "wall_seconds": 0.40371654101181775,
+        "receipt_path": "results/tests/attempt_004/receipt.json",
+        "suite_path": "results/tests/attempt_004/suite.json",
+        "failed_cases": []
+      },
+      {
+        "attempt": "attempt_005",
+        "status": "PASS",
+        "tests": 26,
+        "passed": 26,
+        "failures": 0,
+        "errors": 0,
+        "inclusive_process_cpu_seconds": 0.39927399999999996,
+        "wall_seconds": 0.40477504197042435,
+        "receipt_path": "results/tests/attempt_005/receipt.json",
+        "suite_path": "results/tests/attempt_005/suite.json",
+        "failed_cases": []
+      },
+      {
+        "attempt": "attempt_006",
+        "status": "FAIL",
+        "tests": 26,
+        "passed": 25,
+        "failures": 0,
+        "errors": 1,
+        "inclusive_process_cpu_seconds": 0.410364,
+        "wall_seconds": 0.3957761669298634,
+        "receipt_path": "results/tests/attempt_006/receipt.json",
+        "suite_path": "results/tests/attempt_006/suite.json",
+        "failed_cases": [
+          {
+            "test": "test_backend_integrity.IntegrityTests.test_seed_zero_budgets_and_zero_deflated_blocks",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "attempt": "attempt_007",
+        "status": "PASS",
+        "tests": 26,
+        "passed": 26,
+        "failures": 0,
+        "errors": 0,
+        "inclusive_process_cpu_seconds": 0.403322,
+        "wall_seconds": 0.4368525000754744,
+        "receipt_path": "results/tests/attempt_007/receipt.json",
+        "suite_path": "results/tests/attempt_007/suite.json",
+        "failed_cases": []
+      }
+    ],
+    "historical_failed_occurrences": [
+      {
+        "attempt": "attempt_001",
+        "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+        "status": "ERROR",
+        "traceback_tail": [
+          "  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 106, in _solve_quadratic",
+          "    raise error",
+          "a20.material.QPFailure: Constrained QP did not meet registered KKT/feasibility tolerance"
+        ],
+        "subtest_failures": [],
+        "saved_failure_metrics": {
+          "scope": "2^3 real vector-Maxwell algebra only",
+          "precision": "complex128/float64",
+          "seed": 2026100501
+        },
+        "latest_same_test_status": "PASS",
+        "resolution_evidence": "same named test status in latest saved suite, not a new execution"
+      },
+      {
+        "attempt": "attempt_001",
+        "test": "test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state",
+        "status": "FAIL",
+        "traceback_tail": [],
+        "subtest_failures": [
+          {
+            "subtest": "test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_tangent_action')",
+            "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state\n    with self.assertRaisesRegex(ValueError, 'mismatch'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+          },
+          {
+            "subtest": "test_full_tangent_and_adjoint_refuse_wrong_material_state (test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state) (action='full_adjoint_action')",
+            "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 569, in test_full_tangent_and_adjoint_refuse_wrong_material_state\n    with self.assertRaisesRegex(ValueError, 'mismatch'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+          }
+        ],
+        "saved_failure_metrics": {
+          "scope": "2^3 real vector-Maxwell algebra only",
+          "precision": "complex128/float64",
+          "seed": 2026100501
+        },
+        "latest_same_test_status": "PASS",
+        "resolution_evidence": "same named test status in latest saved suite, not a new execution"
+      },
+      {
+        "attempt": "attempt_002",
+        "test": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+        "status": "ERROR",
+        "traceback_tail": [
+          "  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/material.py\", line 106, in _solve_quadratic",
+          "    raise error",
+          "a20.material.QPFailure: Constrained QP did not meet registered KKT/feasibility tolerance"
+        ],
+        "subtest_failures": [],
+        "saved_failure_metrics": {
+          "scope": "2^3 real vector-Maxwell algebra only",
+          "precision": "complex128/float64",
+          "seed": 2026100501,
+          "QP_failure_result": {
+            "success": true,
+            "iterations": 4,
+            "message": "Optimization terminated successfully",
+            "solver": "SLSQP-common-quadratic",
+            "kkt_relative": 4.11880052231142e-08,
+            "feasibility_violation": 0.0,
+            "complementarity": 5.551115123971483e-20,
+            "active_constraints": 8,
+            "multiplier_source": "nonnegative active constraint least-squares; validated residual",
+            "no_post_clipping": true,
+            "objective_scale": 0.5,
+            "quadratic_value": -0.00041124791122026624,
+            "gradient_norm": 0.027028985938573193
+          },
+          "QP_failure_step_error": 2.1085011699100875e-09
+        },
+        "latest_same_test_status": "PASS",
+        "resolution_evidence": "same named test status in latest saved suite, not a new execution"
+      },
+      {
+        "attempt": "attempt_003",
+        "test": "test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states",
+        "status": "FAIL",
+        "traceback_tail": [],
+        "subtest_failures": [
+          {
+            "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_tangent_action')",
+            "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 587, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    getattr(self.a, name)(self.x, state, argument)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py\", line 276, in full_tangent_action\n    out = state.jvp(self.chart.expand(d))\n          ^^^^^^^^^\nAttributeError: 'ReducedState' object has no attribute 'jvp'\n"
+          },
+          {
+            "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_adjoint_action')",
+            "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 587, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    getattr(self.a, name)(self.x, state, argument)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/src/a20/backend.py\", line 289, in full_adjoint_action\n    return self.chart.adjoint(state.vjp(z))\n                              ^^^^^^^^^\nAttributeError: 'ReducedState' object has no attribute 'vjp'\n"
+          },
+          {
+            "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='adapter', action='full_objective')",
+            "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 589, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    with self.assertRaisesRegex(ValueError, 'full state'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+          },
+          {
+            "subtest": "test_full_physics_contract_refuses_native_and_adapter_reduced_states (test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states) (state='native', action='full_objective')",
+            "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py\", line 556, in subTest\n    yield\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A20/opm-imaging-route-a/tests/test_backend_integrity.py\", line 589, in test_full_physics_contract_refuses_native_and_adapter_reduced_states\n    with self.assertRaisesRegex(ValueError, 'full state'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n"
+          }
+        ],
+        "saved_failure_metrics": {
+          "scope": "2^3 real vector-Maxwell algebra only",
+          "precision": "complex128/float64",
+          "seed": 2026100501
+        },
+        "latest_same_test_status": "PASS",
+        "resolution_evidence": "same named test status in latest saved suite, not a new execution"
+      },
+      {
+        "attempt": "attempt_006",
+        "test": "test_backend_integrity.IntegrityTests.test_seed_zero_budgets_and_zero_deflated_blocks",
+        "status": "ERROR",
+        "traceback_tail": [
+          "    coeff = self.projection.solve(b.transpose(1, 0, 2).reshape(self.projection.Z.shape[1], -1))",
+          "                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "ValueError: cannot reshape array of size 0 into shape (0,newaxis)"
+        ],
+        "subtest_failures": [],
+        "saved_failure_metrics": {
+          "scope": "2^3 real vector-Maxwell algebra only",
+          "precision": "complex128/float64",
+          "seed": 2026100501,
+          "zero_seed_diagnostics": {
+            "O": {
+              "input_columns": 3,
+              "rank": 0,
+              "deflated": 3,
+              "scale": 0.0,
+              "threshold": 0.0,
+              "singular_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "source_count": 3,
+              "requested_rank": 1,
+              "provenance": "measured residual plus independent whitened data probes, C*",
+              "original_column_norms": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "no_truth_or_reference_step": true
+            },
+            "P": {
+              "input_columns": 3,
+              "rank": 0,
+              "deflated": 3,
+              "scale": 0.0,
+              "threshold": 0.0,
+              "singular_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "source_count": 3,
+              "requested_rank": 1,
+              "provenance": "all known illumination forcing, Kb",
+              "original_column_norms": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "no_truth_or_reference_step": true
+            },
+            "M": {
+              "input_columns": 3,
+              "rank": 0,
+              "deflated": 3,
+              "scale": 0.0,
+              "threshold": 0.0,
+              "singular_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "source_count": 3,
+              "requested_rank": 1,
+              "provenance": "real physical-L2 material probes and prior accepted step, KB",
+              "original_column_norms": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "no_truth_or_reference_step": true
+            }
+          },
+          "empty_projection_apply": 0.0,
+          "empty_projection_adjoint": 0.0,
+          "empty_projection_state": 0.0
+        },
+        "latest_same_test_status": "PASS",
+        "resolution_evidence": "same named test status in latest saved suite, not a new execution"
+      }
+    ],
+    "pre_execution_parent_fix_notes_copied": [
+      "small voxel chart.Q=None solver branching",
+      "same-material cached full_state source selection",
+      "ReducedJacobian.matrix cache checks Projection material version"
+    ]
+  },
+  "original_size_CUDA_Maxwell": {
+    "saved_scope": "two original historical states; not imaging fidelity or speed",
+    "manifest_copied": {
+      "experiment_id": "g0-real-02",
+      "source_commit": "cfaab9cd74a0956c7fc17302a6be2187183f6d1d",
+      "backend_declared_historical_commit": "e17f9de3469964c8f4cd1b1c967d2e2f14b3d277",
+      "backend_origin": "preserved A17 EXCHANGE_R1 vendor A9 DenseDDA; parent source is not a Git checkout",
+      "precision": "complex128/float64",
+      "dataset_exposure": "historically_exposed_feasibility",
+      "python": "3.10.9",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "device": "cuda",
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "threads": 1
+    },
+    "models": [
+      {
+        "parent_object_id": 2001,
+        "iteration": 0,
+        "status": "PASS",
+        "N_voxels": 1728,
+        "n_current": 5184,
+        "n_current_derivation": "three vector-current coordinates per saved model_init voxel",
+        "source_count": 6,
+        "receiver_positions": 64,
+        "complex_channels_per_source": 128,
+        "real_data_dimension": 1536,
+        "k": 2.0,
+        "device": "cuda",
+        "precision": "complex128/float64",
+        "degree": 1,
+        "rank": 32
+      },
+      {
+        "parent_object_id": 2005,
+        "iteration": 0,
+        "status": "PASS",
+        "N_voxels": 1728,
+        "n_current": 5184,
+        "n_current_derivation": "three vector-current coordinates per saved model_init voxel",
+        "source_count": 6,
+        "receiver_positions": 64,
+        "complex_channels_per_source": 128,
+        "real_data_dimension": 1536,
+        "k": 2.0,
+        "device": "cuda",
+        "precision": "complex128/float64",
+        "degree": 1,
+        "rank": 32
+      }
+    ],
+    "metrics": {
+      "checks": {
+        "full_real_J_adjoint": {
+          "maximum": 2.3235531345767736e-15,
+          "by_parent": {
+            "2001": 1.9946677273329194e-16,
+            "2005": 2.3235531345767736e-15
+          }
+        },
+        "original_J_equivalence": {
+          "maximum": 0.0,
+          "by_parent": {
+            "2001": 0.0,
+            "2005": 0.0
+          }
+        },
+        "original_adjoint_equivalence": {
+          "maximum": 0.0,
+          "by_parent": {
+            "2001": 0.0,
+            "2005": 0.0
+          }
+        },
+        "L_adjoint": {
+          "maximum": 8.443670202300104e-15,
+          "by_parent": {
+            "2001": 3.7581009861117416e-15,
+            "2005": 8.443670202300104e-15
+          }
+        },
+        "F_adjoint": {
+          "maximum": 6.225983201653807e-13,
+          "by_parent": {
+            "2001": 6.339570271274459e-14,
+            "2005": 6.225983201653807e-13
+          }
+        },
+        "S_adjoint": {
+          "maximum": 1.260659033524558e-15,
+          "by_parent": {
+            "2001": 7.101034868536434e-16,
+            "2005": 1.260659033524558e-15
+          }
+        },
+        "B_real_adjoint": {
+          "maximum": 6.653518802819345e-14,
+          "by_parent": {
+            "2001": 2.032326705934322e-15,
+            "2005": 6.653518802819345e-14
+          }
+        },
+        "Schur_operator_equivalence": {
+          "maximum": 4.1008498310604297e-16,
+          "by_parent": {
+            "2001": 4.1008498310604297e-16,
+            "2005": 4.000650884641558e-16
+          }
+        },
+        "Schur_Galerkin_resolvent_equivalence": {
+          "maximum": 1.0681319588826165e-15,
+          "by_parent": {
+            "2001": 9.274697896219405e-16,
+            "2005": 1.0681319588826165e-15
+          }
+        },
+        "Schur_feedback_adjoint": {
+          "maximum": 2.675491732759097e-13,
+          "by_parent": {
+            "2001": 4.7022541178457674e-14,
+            "2005": 2.675491732759097e-13
+          }
+        },
+        "reduced_J_real_adjoint": {
+          "maximum": 4.526614107709136e-15,
+          "by_parent": {
+            "2001": 4.526614107709136e-15,
+            "2005": 2.981202275900078e-15
+          }
+        },
+        "moving_Galerkin_correct_extra_terms": {
+          "maximum": 1.9490545696196973e-11,
+          "by_parent": {
+            "2001": 1.6161441963382538e-11,
+            "2005": 1.9490545696196973e-11
+          }
+        },
+        "frozen_test_Petrov_FD": {
+          "maximum": 2.27944457538725e-11,
+          "by_parent": {
+            "2001": 2.27944457538725e-11,
+            "2005": 2.1987129854897154e-11
+          }
+        }
+      },
+      "maximum_recorded_adjoint_or_equivalence_relative_error": 6.225983201653807e-13,
+      "full_FD": {
+        "maximum_over_all_recorded_h": 8.610676269784731e-08,
+        "maximum_of_each_state_best_h_error": 1.7070394454121995e-11,
+        "curves_by_parent": {
+          "2001": [
+            {
+              "h": 0.001,
+              "relative_error": 8.610676269784731e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 8.610818773520634e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 1.5939382350692504e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 1.2633557089899066e-10
+            }
+          ],
+          "2005": [
+            {
+              "h": 0.001,
+              "relative_error": 6.762963540112659e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 6.763902488674523e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 1.7070394454121995e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 1.620048700228491e-10
+            }
+          ]
+        }
+      },
+      "frozen_reduced_FD": {
+        "maximum_over_all_recorded_h": 7.316121707752491e-08,
+        "maximum_of_each_state_best_h_error": 2.4344499332338222e-11,
+        "curves_by_parent": {
+          "2001": [
+            {
+              "h": 0.001,
+              "relative_error": 7.316121707752491e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 7.317519652878739e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 1.771877408147486e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 1.8914158538862316e-10
+            }
+          ],
+          "2005": [
+            {
+              "h": 0.001,
+              "relative_error": 5.607101149977984e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 5.60627561232239e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 2.4344499332338222e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 2.201156233061102e-10
+            }
+          ]
+        }
+      },
+      "maximum_correct_moving_Galerkin_FD_error": 1.9490545696196973e-11,
+      "maximum_frozen_Petrov_FD_error": 2.27944457538725e-11,
+      "moving_Galerkin_omitted_term_errors": {
+        "2001": 0.00030020614528764933,
+        "2005": 0.0003633016765008687
+      },
+      "saved_step_physical_chart_relative_errors": {
+        "2001": 0.0,
+        "2005": 0.0
+      },
+      "basis_orthogonality_errors": {
+        "2001": 8.446265151149157e-15,
+        "2005": 8.593666146784269e-15
+      },
+      "recorded_thresholds_copied_without_reevaluation": {
+        "adjoint_equivalence": 1e-09,
+        "FD_platform": 1e-05
+      }
+    },
+    "job_attempts": [
+      {
+        "job": "g0-real-01",
+        "receipt_path": "results/jobs/g0-real-01/job_receipt.json",
+        "result_path": "results/jobs/g0-real-01/result.json",
+        "receipt_status": "FAILED_LAUNCH",
+        "saved_result_status": "FAILED_LAUNCH",
+        "scientific_status": "NOT_RUN",
+        "process_cpu_seconds": 501.975,
+        "gpu_occupation_seconds": 501.975,
+        "wall_seconds": 501.975,
+        "resource_measurement": "conservative charged allowance from PID-file creation until verified ended; no process receipt exists",
+        "observations": "PID returned, empty stdout/stderr, no CLI manifest or physics receipt, no Python process at inspection",
+        "cause": "unresolved Windows SSH child lifetime; subsequent jobs keep foreground SSH alive",
+        "failure_tail": [
+          "Detached Windows Start-Process ended without a Python/physics manifest. Exact CPU occupation unavailable; 501.975 s CPU and GPU are charged as conservative allowances. Retry uses a new ID and attached foreground SSH."
+        ],
+        "matches_root_G0_REAL": false,
+        "manifest": null
+      },
+      {
+        "job": "g0-real-02",
+        "receipt_path": "results/jobs/g0-real-02/job_receipt.json",
+        "result_path": "results/jobs/g0-real-02/result.json",
+        "receipt_status": "COMPLETE",
+        "saved_result_status": "PASS",
+        "scientific_status": "PASS",
+        "process_cpu_seconds": 171.90625,
+        "gpu_occupation_seconds": 185.84689910000088,
+        "wall_seconds": 185.84689040000012,
+        "resource_measurement": "recorded CLI inclusive process CPU and job GPU occupancy",
+        "observations": null,
+        "cause": null,
+        "failure_tail": [],
+        "matches_root_G0_REAL": true,
+        "manifest": {
+          "experiment_id": "g0-real-02",
+          "source_commit": "cfaab9cd74a0956c7fc17302a6be2187183f6d1d",
+          "backend_declared_historical_commit": "e17f9de3469964c8f4cd1b1c967d2e2f14b3d277",
+          "backend_origin": "preserved A17 EXCHANGE_R1 vendor A9 DenseDDA; parent source is not a Git checkout",
+          "precision": "complex128/float64",
+          "dataset_exposure": "historically_exposed_feasibility",
+          "python": "3.10.9",
+          "numpy": "2.2.6",
+          "scipy": "1.15.3",
+          "device": "cuda",
+          "torch": "2.6.0+cu124",
+          "cuda": "12.4",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "threads": 1
+        }
+      }
+    ],
+    "measurement_note": "Saved remote results read locally; no SSH or new physics in this inventory."
+  },
+  "supplied_finite_dimensional_algebra": {
+    "saved_status": "ALL ASSERTIONS PASSED",
+    "saved_scope": "Synthetic finite-dimensional algebra only. Not A17/A18/A19 replay, not a 3-D Maxwell reconstruction benchmark.",
+    "random_trials": 20,
+    "manifest_precision": "complex128/float64",
+    "matrix_sizes": "Not recorded in saved JSON report; not inferred from Maxwell fixtures.",
+    "identity_error_maxima": {
+      "schur_feedback_identity": 5.394273004581926e-16,
+      "full_resolvent_schur_identity": 9.695387715447352e-16,
+      "dual_residual_defect_identity": 1.2248183369632969e-15,
+      "galerkin_schur_equivalence": 7.233224146244421e-16,
+      "gn_stationarity_defect_identity": 1.334341132940771e-15,
+      "gn_exact_gap_relative_error": 3.2516644759261495e-16,
+      "degree_step_innovation_identity": 6.4083961571508195e-15,
+      "unitary_gauge_resolvent_identity": 5.378460284393547e-16
+    },
+    "bound_ratios_are_not_identity_errors": {
+      "dual_residual_bound_ratio": 0.2968154176192359,
+      "hessian_relative_bound_ratio": 0.321125596202834,
+      "prior_safe_restricted_bound_ratio": 0.9637296151024387
+    },
+    "frozen_basis_derivative_relative_error": 3.091430283932506e-10,
+    "moving_basis_omitted_term_relative_error": 0.41247486969197433,
+    "two_sided_moment_relative_errors_k_0_to_8": [
+      2.9671879933913647e-15,
+      3.4735638091641822e-15,
+      3.918663231122729e-15,
+      4.69860415234019e-15,
+      6.161291914735989e-15,
+      3.730429514271141e-15,
+      0.6050333035713522,
+      1.0052361772151173,
+      0.8240530054039591
+    ],
+    "counterexample_evidence": {
+      "delayed_feedback": [
+        {
+          "degree": 0,
+          "rank": 2,
+          "J": 0.0,
+          "step": 0.0
+        },
+        {
+          "degree": 1,
+          "rank": 4,
+          "J": 0.0,
+          "step": 0.0
+        },
+        {
+          "degree": 2,
+          "rank": 6,
+          "J": 0.0,
+          "step": 0.0
+        },
+        {
+          "degree": 3,
+          "rank": 7,
+          "J": 0.26214400000000015,
+          "step": 1.5537269618858762
+        }
+      ],
+      "delayed_feedback_full_J": 0.2621440000000001,
+      "nonnormal_counterexample": {
+        "spectral_radius": 0.0,
+        "resolvent_norm": 100.00999900019995
+      },
+      "galerkin_breakdown": {
+        "full_determinant": 1.0,
+        "reduced_entry": 0.0
+      },
+      "global_norm_counterexample": {
+        "task_error": 0.0,
+        "operator_error": 1.0
+      },
+      "false_weak_counterexample": {
+        "reduced_data_change": 0.0,
+        "full_data_change": 1.0
+      },
+      "scalar_bias_variance_counterexample": [
+        {
+          "a_m": 0.1,
+          "bias_squared": 0.00826446280991736,
+          "variance": 0.008264462809917356,
+          "risk": 0.016528925619834718
+        },
+        {
+          "a_m": 0.2,
+          "bias_squared": 0.18367346938775514,
+          "variance": 0.020408163265306124,
+          "risk": 0.20408163265306126
+        },
+        {
+          "a_m": 0.4,
+          "bias_squared": 0.28994082840236696,
+          "variance": 0.023668639053254444,
+          "risk": 0.3136094674556214
+        },
+        {
+          "a_m": 0.8,
+          "bias_squared": 0.006574141709276818,
+          "variance": 0.01168736303871439,
+          "risk": 0.01826150474799121
+        },
+        {
+          "a_m": 1.0,
+          "bias_squared": 0.00826446280991736,
+          "variance": 0.008264462809917356,
+          "risk": 0.016528925619834718
+        }
+      ]
+    }
+  },
+  "category_map": [
+    {
+      "category": "complex_L_F_S",
+      "requested_category": "L/F/S 复杂伴随",
+      "tiny_saved_tests": [
+        {
+          "name": "test_complex_current_adjoints_and_metric",
+          "full_id": "test_backend_integrity.IntegrityTests.test_complex_current_adjoints_and_metric",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 106,
+          "end_line": 118
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_complex_current_adjoints_and_metric": {
+          "L_adjoint": 5.664136755022399e-16,
+          "F_adjoint": 1.8561769869676627e-15,
+          "S_adjoint": 8.473068927560111e-16
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "L/F/S max 1.856177e-15",
+      "original_size_saved_checks": {
+        "L_adjoint": {
+          "maximum": 8.443670202300104e-15,
+          "by_parent": {
+            "2001": 3.7581009861117416e-15,
+            "2005": 8.443670202300104e-15
+          }
+        },
+        "F_adjoint": {
+          "maximum": 6.225983201653807e-13,
+          "by_parent": {
+            "2001": 6.339570271274459e-14,
+            "2005": 6.225983201653807e-13
+          }
+        },
+        "S_adjoint": {
+          "maximum": 1.260659033524558e-15,
+          "by_parent": {
+            "2001": 7.101034868536434e-16,
+            "2005": 1.260659033524558e-15
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "tiny 与两个原尺寸状态均有伴随记录。"
+    },
+    {
+      "category": "real_B",
+      "requested_category": "B 实材料坐标伴随与压缩 B",
+      "tiny_saved_tests": [
+        {
+          "name": "test_real_material_B_adjoint_batched_and_compressed",
+          "full_id": "test_backend_integrity.IntegrityTests.test_real_material_B_adjoint_batched_and_compressed",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 120,
+          "end_line": 137
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_real_material_B_adjoint_batched_and_compressed": {
+          "B_real_adjoint": 0.0,
+          "B_vector_batched_equivalence": 2.9851956148715245e-17,
+          "compressed_B": 2.1280238829703897e-16
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "B 伴随 0；compressed B 2.128024e-16",
+      "original_size_saved_checks": {
+        "B_real_adjoint": {
+          "maximum": 6.653518802819345e-14,
+          "by_parent": {
+            "2001": 2.032326705934322e-15,
+            "2005": 6.653518802819345e-14
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "原尺寸有 B 实伴随；压缩/批方向显式等价仅 tiny。"
+    },
+    {
+      "category": "native_jvp_vjp",
+      "requested_category": "原 jvp/vjp 与 adapter、独立因子作用等价",
+      "tiny_saved_tests": [
+        {
+          "name": "test_original_jvp_vjp_equal_adapter_and_factored_actions",
+          "full_id": "test_backend_integrity.IntegrityTests.test_original_jvp_vjp_equal_adapter_and_factored_actions",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 139,
+          "end_line": 156
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_original_jvp_vjp_equal_adapter_and_factored_actions": {
+          "native_adapter_jvp": 0.0,
+          "native_adapter_vjp": 0.0,
+          "L_inverse_B_S_factorization": 1.3635332237548815e-16,
+          "full_realified_J_adjoint": 1.3870290763551531e-15
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "native 两项 0；独立因子 1.363533e-16",
+      "original_size_saved_checks": {
+        "original_J_equivalence": {
+          "maximum": 0.0,
+          "by_parent": {
+            "2001": 0.0,
+            "2005": 0.0
+          }
+        },
+        "original_adjoint_equivalence": {
+          "maximum": 0.0,
+          "by_parent": {
+            "2001": 0.0,
+            "2005": 0.0
+          }
+        },
+        "full_real_J_adjoint": {
+          "maximum": 2.3235531345767736e-15,
+          "by_parent": {
+            "2001": 1.9946677273329194e-16,
+            "2005": 2.3235531345767736e-15
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "原尺寸 adapter/native 等价为 0；独立 L^-1 B / S 因子核对有 tiny 记录。"
+    },
+    {
+      "category": "full_FD",
+      "requested_category": "完整 tangent 与 objective 有限差分",
+      "tiny_saved_tests": [
+        {
+          "name": "test_full_tangent_and_full_objective_finite_difference",
+          "full_id": "test_backend_integrity.IntegrityTests.test_full_tangent_and_full_objective_finite_difference",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 158,
+          "end_line": 176
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_full_tangent_and_full_objective_finite_difference": {
+          "full_tangent_fd": 2.7196014570807446e-11,
+          "full_objective_fd": 8.44542364086848e-12,
+          "full_objective_nonzero_prior_fd": 1.915174887460151e-11
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "tangent 2.719601e-11；objective 两项 max 1.915175e-11",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "FULL_TANGENT_FD_CURVES_RECORDED_OBJECTIVE_FD_NOT_RECORDED",
+      "scope_or_gap": "原尺寸只记录 full tangent FD 曲线；objective/非零 prior FD 仅 tiny。",
+      "original_size_full_FD": {
+        "maximum_over_all_recorded_h": 8.610676269784731e-08,
+        "maximum_of_each_state_best_h_error": 1.7070394454121995e-11,
+        "curves_by_parent": {
+          "2001": [
+            {
+              "h": 0.001,
+              "relative_error": 8.610676269784731e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 8.610818773520634e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 1.5939382350692504e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 1.2633557089899066e-10
+            }
+          ],
+          "2005": [
+            {
+              "h": 0.001,
+              "relative_error": 6.762963540112659e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 6.763902488674523e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 1.7070394454121995e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 1.620048700228491e-10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "frozen_Galerkin",
+      "requested_category": "冻结 Galerkin 导数、native reduced 等价",
+      "tiny_saved_tests": [
+        {
+          "name": "test_fixed_galerkin_reduced_state_derivative_and_native_equivalence",
+          "full_id": "test_backend_integrity.IntegrityTests.test_fixed_galerkin_reduced_state_derivative_and_native_equivalence",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 241,
+          "end_line": 257
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_fixed_galerkin_reduced_state_derivative_and_native_equivalence": {
+          "frozen_Galerkin_fd": 3.0426238586408956e-11,
+          "reduced_real_adjoint": 1.2043302844487345e-16,
+          "native_reduced_jvp": 8.259634431183828e-16,
+          "native_reduced_vjp": 1.0363165177478904e-15
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "FD 3.042624e-11",
+      "original_size_saved_checks": {
+        "reduced_J_real_adjoint": {
+          "maximum": 4.526614107709136e-15,
+          "by_parent": {
+            "2001": 4.526614107709136e-15,
+            "2005": 2.981202275900078e-15
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "原尺寸 frozen_reduced_FD 完整曲线保留；native reduced jvp/vjp 显式等价仅 tiny。",
+      "original_size_frozen_reduced_FD": {
+        "maximum_over_all_recorded_h": 7.316121707752491e-08,
+        "maximum_of_each_state_best_h_error": 2.4344499332338222e-11,
+        "curves_by_parent": {
+          "2001": [
+            {
+              "h": 0.001,
+              "relative_error": 7.316121707752491e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 7.317519652878739e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 1.771877408147486e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 1.8914158538862316e-10
+            }
+          ],
+          "2005": [
+            {
+              "h": 0.001,
+              "relative_error": 5.607101149977984e-08
+            },
+            {
+              "h": 0.0001,
+              "relative_error": 5.60627561232239e-10
+            },
+            {
+              "h": 1e-05,
+              "relative_error": 2.4344499332338222e-11
+            },
+            {
+              "h": 1e-06,
+              "relative_error": 2.201156233061102e-10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "frozen_Petrov",
+      "requested_category": "冻结 test 的 Petrov 导数",
+      "tiny_saved_tests": [
+        {
+          "name": "test_frozen_petrov_derivative_and_moving_least_squares_term",
+          "full_id": "test_backend_integrity.IntegrityTests.test_frozen_petrov_derivative_and_moving_least_squares_term",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 259,
+          "end_line": 298
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_frozen_petrov_derivative_and_moving_least_squares_term": {
+          "frozen_Petrov_fd": 4.83621001377752e-11,
+          "frozen_Petrov_adjoint": 5.054066206343729e-16,
+          "frozen_Petrov_matrix": 3.574474578412382e-16
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "FD 4.836210e-11",
+      "original_size_saved_checks": {
+        "frozen_test_Petrov_FD": {
+          "maximum": 2.27944457538725e-11,
+          "by_parent": {
+            "2001": 2.27944457538725e-11,
+            "2005": 2.1987129854897154e-11
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "两个原尺寸状态也有固定 test Petrov FD。"
+    },
+    {
+      "category": "moving_Galerkin",
+      "requested_category": "移动 Galerkin 的显式基底导数项",
+      "tiny_saved_tests": [
+        {
+          "name": "test_moving_galerkin_basis_requires_explicit_basis_derivative",
+          "full_id": "test_backend_integrity.IntegrityTests.test_moving_galerkin_basis_requires_explicit_basis_derivative",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 300,
+          "end_line": 326
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_moving_galerkin_basis_requires_explicit_basis_derivative": {
+          "moving_Galerkin_correct_fd": 3.7265658640731264e-11,
+          "moving_Galerkin_omitted_term_error": 0.021034365512581137
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "正确 FD 3.726566e-11；遗漏项差 2.103437e-02",
+      "original_size_saved_checks": {
+        "moving_Galerkin_correct_extra_terms": {
+          "maximum": 1.9490545696196973e-11,
+          "by_parent": {
+            "2001": 1.6161441963382538e-11,
+            "2005": 1.9490545696196973e-11
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "原尺寸有正确 extra terms FD 与遗漏项非零差；遗漏项不是通过检查的误差。",
+      "original_size_omitted_term_errors": {
+        "2001": 0.00030020614528764933,
+        "2005": 0.0003633016765008687
+      }
+    },
+    {
+      "category": "moving_LS",
+      "requested_category": "移动 LS 的 residual 项与冻结 Petrov 的区分",
+      "tiny_saved_tests": [
+        {
+          "name": "test_frozen_petrov_derivative_and_moving_least_squares_term",
+          "full_id": "test_backend_integrity.IntegrityTests.test_frozen_petrov_derivative_and_moving_least_squares_term",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 259,
+          "end_line": 298
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_frozen_petrov_derivative_and_moving_least_squares_term": {
+          "moving_LS_correct_fd": 8.350215490309828e-11,
+          "moving_LS_omitted_term_error": 0.058037922912576666
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "正确 FD 8.350215e-11；遗漏项差 5.803792e-02",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "原尺寸 G0 未记录 moving-LS residual extra term 测试。"
+    },
+    {
+      "category": "A1_A2_contract",
+      "requested_category": "A1/A2 tangent 合同区分",
+      "tiny_saved_tests": [
+        {
+          "name": "test_A1_full_state_tangent_distinguished_from_A2_derivative",
+          "full_id": "test_backend_integrity.IntegrityTests.test_A1_full_state_tangent_distinguished_from_A2_derivative",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 328,
+          "end_line": 338
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_A1_full_state_tangent_distinguished_from_A2_derivative": {
+          "A2_is_frozen_reduced_derivative": 3.0426238586408956e-11,
+          "A1_is_not_A2_derivative": 0.02003156078683013
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "A2 FD 3.042624e-11；A1/A2 差 2.003156e-02",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "tiny 对照显示 A1 tangent 与 A2 derivative 有非零差；没有原尺寸同名 G0 检查。"
+    },
+    {
+      "category": "Schur",
+      "requested_category": "Schur/Galerkin、resolvent 与伴随",
+      "tiny_saved_tests": [
+        {
+          "name": "test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence",
+          "full_id": "test_backend_integrity.IntegrityTests.test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 358,
+          "end_line": 390
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence": {
+          "Schur_adjoint_pair": 1.4445379933460153e-14,
+          "full_Schur_resolvent": 4.615431980745288e-16,
+          "Schur_Galerkin_equivalence": 5.986093449085816e-16,
+          "empty_U_F": 0.0,
+          "empty_U_T": 0.0,
+          "empty_U_K": 0.0,
+          "empty_U_R": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "Schur/Galerkin 5.986093e-16",
+      "original_size_saved_checks": {
+        "Schur_operator_equivalence": {
+          "maximum": 4.1008498310604297e-16,
+          "by_parent": {
+            "2001": 4.1008498310604297e-16,
+            "2005": 4.000650884641558e-16
+          }
+        },
+        "Schur_Galerkin_resolvent_equivalence": {
+          "maximum": 1.0681319588826165e-15,
+          "by_parent": {
+            "2001": 9.274697896219405e-16,
+            "2005": 1.0681319588826165e-15
+          }
+        },
+        "Schur_feedback_adjoint": {
+          "maximum": 2.675491732759097e-13,
+          "by_parent": {
+            "2001": 4.7022541178457674e-14,
+            "2005": 2.675491732759097e-13
+          }
+        }
+      },
+      "original_size_named_check_presence": "RECORDED",
+      "scope_or_gap": "原尺寸有 Schur 算子、resolvent 与反馈伴随；empty U 仅 tiny。"
+    },
+    {
+      "category": "multi_source_packing",
+      "requested_category": "多源 Re/Im packing 与批探针",
+      "tiny_saved_tests": [
+        {
+          "name": "test_packing_whitening_multiple_sources_and_probe_columns",
+          "full_id": "test_backend_integrity.IntegrityTests.test_packing_whitening_multiple_sources_and_probe_columns",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 178,
+          "end_line": 196
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_packing_whitening_multiple_sources_and_probe_columns": {
+          "packing_explicit_illumination_major": 0.0,
+          "packing_inverse": 0.0,
+          "packing_probe_columns": 0.0,
+          "packing_batched_inverse": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "显式 packing/inverse/probe/batch 均 0",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "SIX_SOURCE_ACTION_SHAPES_RECORDED_NO_SEPARATE_ELEMENTWISE_PACKING_CHECK",
+      "scope_or_gap": "tiny 显式 packing 四项为 0；原尺寸是六源作用/伴随，不另记录逐元素 packing 等价。",
+      "original_size_source_shapes": [
+        {
+          "parent_object_id": 2001,
+          "iteration": 0,
+          "status": "PASS",
+          "N_voxels": 1728,
+          "n_current": 5184,
+          "n_current_derivation": "three vector-current coordinates per saved model_init voxel",
+          "source_count": 6,
+          "receiver_positions": 64,
+          "complex_channels_per_source": 128,
+          "real_data_dimension": 1536,
+          "k": 2.0,
+          "device": "cuda",
+          "precision": "complex128/float64",
+          "degree": 1,
+          "rank": 32
+        },
+        {
+          "parent_object_id": 2005,
+          "iteration": 0,
+          "status": "PASS",
+          "N_voxels": 1728,
+          "n_current": 5184,
+          "n_current_derivation": "three vector-current coordinates per saved model_init voxel",
+          "source_count": 6,
+          "receiver_positions": 64,
+          "complex_channels_per_source": 128,
+          "real_data_dimension": 1536,
+          "k": 2.0,
+          "device": "cuda",
+          "precision": "complex128/float64",
+          "degree": 1,
+          "rank": 32
+        }
+      ]
+    },
+    {
+      "category": "multi_frequency",
+      "requested_category": "多频 stacking 与共用材料 pullback",
+      "tiny_saved_tests": [
+        {
+          "name": "test_multi_frequency_stack_uses_distinct_physics_shared_material",
+          "full_id": "test_backend_integrity.IntegrityTests.test_multi_frequency_stack_uses_distinct_physics_shared_material",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 198,
+          "end_line": 218
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_multi_frequency_stack_uses_distinct_physics_shared_material": {
+          "frequency_stack_adjoint": 2.8175329943955287e-16,
+          "frequency_stack_material_map": 2.7880985381669145e-16,
+          "source_selection_0": 0.0,
+          "source_selection_1": 0.0,
+          "source_selection_2": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "stack 伴随 2.817533e-16",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "仅 tiny k=0.9/1.25 两个真实 DenseDDA 核的显式 concatenate/sum；没有 production 多频 driver 或真实多频数据。",
+      "tiny_frequency_values": [
+        0.9,
+        1.25
+      ],
+      "original_size_frequency_values": [
+        2.0
+      ]
+    },
+    {
+      "category": "whitening",
+      "requested_category": "白化与其转置配对",
+      "tiny_saved_tests": [
+        {
+          "name": "test_packing_whitening_multiple_sources_and_probe_columns",
+          "full_id": "test_backend_integrity.IntegrityTests.test_packing_whitening_multiple_sources_and_probe_columns",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 178,
+          "end_line": 196
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_packing_whitening_multiple_sources_and_probe_columns": {
+          "non_diagonal_whitening": 0.0,
+          "non_diagonal_whitened_adjoint": 1.885942752510171e-16,
+          "whitening_pair": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "非对角白化作用 0；伴随 1.885943e-16",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "非对角实映射为合成 tiny 测试；数据范数归一化不等于校准噪声协方差。",
+      "original_size_declared_data_scale_scope": "original measured-data norm normalization; not calibrated noise covariance"
+    },
+    {
+      "category": "material_metric_gauge",
+      "requested_category": "材料物理 metric 与实 gauge",
+      "tiny_saved_tests": [
+        {
+          "name": "test_material_metric_and_real_gauge_covariance",
+          "full_id": "test_backend_integrity.IntegrityTests.test_material_metric_and_real_gauge_covariance",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 220,
+          "end_line": 239
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_material_metric_and_real_gauge_covariance": {
+          "material_norm_False": 1.3930347854836684e-16,
+          "material_norm_True": 3.27550910754301e-16,
+          "material_adjoint_False": 2.5978303512395073e-15,
+          "material_adjoint_True": 1.4139044331720266e-15,
+          "material_gauge_physical": 4.42787995639647e-16,
+          "material_gauge_J": 4.458903885252712e-16,
+          "material_gauge_pullback": 1.8548373631903253e-16
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "材料 gauge J 4.458904e-16",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "SAVED_CHART_EXPANSION_RECORDED_NO_MATERIAL_GAUGE_CHECK",
+      "scope_or_gap": "原尺寸仅 saved chart/physical step 展开误差 0，未记录材料 gauge 或小 voxel KKT。",
+      "original_size_chart_expansion": {
+        "2001": 0.0,
+        "2005": 0.0
+      }
+    },
+    {
+      "category": "current_gauge",
+      "requested_category": "投影伴随与 current unitary gauge",
+      "tiny_saved_tests": [
+        {
+          "name": "test_projection_complex_adjoint_and_current_unitary_gauge",
+          "full_id": "test_backend_integrity.IntegrityTests.test_projection_complex_adjoint_and_current_unitary_gauge",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 340,
+          "end_line": 356
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_projection_complex_adjoint_and_current_unitary_gauge": {
+          "projection_adjoint_False": 3.8055069929439026e-16,
+          "projection_adjoint_True": 2.5103096206730435e-16,
+          "current_gauge_projection_False": 3.54829825634762e-16,
+          "current_gauge_projection_True": 5.142728164997477e-16,
+          "current_gauge_state_False": 3.829980455246813e-16,
+          "current_gauge_state_True": 5.151301265759685e-16,
+          "current_gauge_tangent_False": 3.0007258117029423e-16,
+          "current_gauge_tangent_True": 5.508074370571863e-16
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "gauge 作用/state/tangent max 5.508074e-16",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "Galerkin 与 Petrov 的 current gauge 都是 tiny；独立代数报告另有 unitary gauge 身份。"
+    },
+    {
+      "category": "zero_empty",
+      "requested_category": "零 seed、零预算、empty Z/零 Jacobian",
+      "tiny_saved_tests": [
+        {
+          "name": "test_seed_zero_budgets_and_zero_deflated_blocks",
+          "full_id": "test_backend_integrity.IntegrityTests.test_seed_zero_budgets_and_zero_deflated_blocks",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 392,
+          "end_line": 432
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_seed_zero_budgets_and_zero_deflated_blocks": {}
+      },
+      "tiny_selected_nested_metrics": {
+        "test_seed_zero_budgets_and_zero_deflated_blocks": {
+          "empty_projection_apply": 0.0,
+          "empty_projection_adjoint": 0.0,
+          "empty_projection_state": 0.0,
+          "empty_projection_J_matrix": 0.0,
+          "empty_projection_J_action": 0.0,
+          "empty_projection_J_batched_action": 0.0,
+          "empty_projection_J_pullback": 0.0,
+          "empty_projected_core_shape": [
+            0,
+            0
+          ]
+        }
+      },
+      "tiny_description": "empty projection/J 零作用；qualitative assertions PASS",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "实核 fixture 上检验空投影与 J 矩阵/作用/伴随为零；原尺寸 G0 未做空基底。"
+    },
+    {
+      "category": "hierarchy",
+      "requested_category": "nested O/P/M streams、deflation 与 breakdown",
+      "tiny_saved_tests": [
+        {
+          "name": "test_real_physical_hierarchy_nested_streams_and_breakdown",
+          "full_id": "test_backend_integrity.IntegrityTests.test_real_physical_hierarchy_nested_streams_and_breakdown",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 434,
+          "end_line": 457
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_real_physical_hierarchy_nested_streams_and_breakdown": {
+          "nested_prefix_0": 0.0,
+          "nested_prefix_1": 0.0,
+          "nested_prefix_2": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "nested prefix 三项 0",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "DEGREE_ONE_BASIS_DIAGNOSTICS_RECORDED_NO_NESTED_PREFIX_COMPARISON",
+      "scope_or_gap": "tiny 记录 degree 0/1/2 prefix 为 0 与真实核 breakdown；原尺寸记录 degree 1/rank 32 的三独立 recurrence。",
+      "original_size_basis_diagnostics": {
+        "2001": {
+          "degree": 1,
+          "rank": 32,
+          "orthogonality_error": 8.446265151149157e-15,
+          "joint_core_is_single_Hessenberg": false,
+          "recorded_steps_per_separate_stream": {
+            "O": 1,
+            "P": 1,
+            "M": 1
+          }
+        },
+        "2005": {
+          "degree": 1,
+          "rank": 32,
+          "orthogonality_error": 8.593666146784269e-15,
+          "joint_core_is_single_Hessenberg": false,
+          "recorded_steps_per_separate_stream": {
+            "O": 1,
+            "P": 1,
+            "M": 1
+          }
+        }
+      }
+    },
+    {
+      "category": "unsafe_core",
+      "requested_category": "奇异及绝对尺度过小 core、命名 Petrov fallback",
+      "tiny_saved_tests": [
+        {
+          "name": "test_singular_and_absolute_small_cores_rejected_and_fallback_named",
+          "full_id": "test_backend_integrity.IntegrityTests.test_singular_and_absolute_small_cores_rejected_and_fallback_named",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 459,
+          "end_line": 483
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_singular_and_absolute_small_cores_rejected_and_fallback_named": {
+          "singular_physical_projected_sigma": 2.6846511477385785e-17,
+          "absolute_small_physical_projected_sigma": 9.595923789976091e-13
+        }
+      },
+      "tiny_selected_nested_metrics": {
+        "well_conditioned_absolute_small_core": {
+          "safe": false,
+          "sigma_min": 1e-12,
+          "sigma_max": 1e-12,
+          "condition": 1.0,
+          "relative_sigma_min": 1.0,
+          "absolute_scaled_sigma_min": 1e-12,
+          "scale_definition": "max(1, full L Frobenius norm)"
+        }
+      },
+      "tiny_description": "拒绝/命名 fallback assertions PASS；sigma 是结构值，不是精度误差",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "tiny 包括 condition=1 但绝对尺度不足的拒绝及计费 fallback；原尺寸未记录此类人为边界。"
+    },
+    {
+      "category": "KKT",
+      "requested_category": "受约束 chart/voxel KKT 与 full-gap bounds",
+      "tiny_saved_tests": [
+        {
+          "name": "test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+          "full_id": "test_backend_integrity.IntegrityTests.test_constrained_chart_quadratic_KKT_and_full_gap_bound",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 485,
+          "end_line": 516
+        },
+        {
+          "name": "test_tiny_voxel_quadratic_KKT_and_constraints",
+          "full_id": "test_backend_integrity.IntegrityTests.test_tiny_voxel_quadratic_KKT_and_constraints",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 518,
+          "end_line": 535
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_constrained_chart_quadratic_KKT_and_full_gap_bound": {
+          "constrained_known_step": 8.586253536532671e-17
+        },
+        "test_tiny_voxel_quadratic_KKT_and_constraints": {
+          "voxel_known_step": 4.782119356656691e-09
+        }
+      },
+      "tiny_selected_nested_metrics": {
+        "test_constrained_chart_quadratic_KKT_and_full_gap_bound.constrained_result": {
+          "success": true,
+          "iterations": 4,
+          "message": "Optimization terminated successfully",
+          "solver": "SLSQP-common-quadratic+validated-active-equations",
+          "KKT_polish": {
+            "initial_KKT_relative": 4.11880052231142e-08,
+            "accepted": true,
+            "active_equations": 8,
+            "independent_equations": 3,
+            "no_ridge_or_pseudoinverse": true,
+            "candidate_KKT_relative": 7.260671250204045e-17
+          },
+          "kkt_relative": 7.260671250204045e-17,
+          "feasibility_violation": 0.0,
+          "complementarity": 0.0,
+          "active_constraints": 8,
+          "multiplier_source": "nonnegative active constraint least-squares; validated residual",
+          "no_post_clipping": true,
+          "objective_scale": 0.5,
+          "quadratic_value": -0.00041124791122026754,
+          "gradient_norm": 0.027028985938573193
+        },
+        "test_constrained_chart_quadratic_KKT_and_full_gap_bound.full_constrained_audit": {
+          "relative_H_step_error": 0.19999999999999993,
+          "absolute_H_step_error": 0.0027018202933617548,
+          "reference_H_energy": 0.0001824958224405351,
+          "full_quadratic_gap": 6.764991644881075e-05,
+          "half_H_error_energy": 3.6499164488107e-06,
+          "full_stationarity_defect_norm": 0.019176369621702362,
+          "KKT_bound_H_error": 0.027119481996090898,
+          "KKT_bound_quadratic_gap": 0.00036773315186814927,
+          "identity_scope": "unconstrained equality only; constrained normal yields upper bounds"
+        },
+        "test_tiny_voxel_quadratic_KKT_and_constraints.voxel_result": {
+          "success": true,
+          "iterations": 4,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "solver": "L-BFGS-B-common-quadratic",
+          "kkt_relative": 2.5649983693797325e-09,
+          "feasibility_violation": 0.0,
+          "complementarity": 0.0,
+          "active_constraints": 8,
+          "multiplier_source": "nonnegative active constraint least-squares; validated residual",
+          "no_post_clipping": true,
+          "objective_scale": 0.5,
+          "quadratic_value": -0.00024899200778175535,
+          "gradient_norm": 0.018301137514123517
+        }
+      },
+      "tiny_description": "chart KKT 7.260671e-17；voxel KKT 2.564998e-09",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "边界已知解、可行性、KKT 与受约束 upper bounds 均 tiny；G0_REAL 没有原尺寸 QP/KKT 结果。"
+    },
+    {
+      "category": "offline_guard",
+      "requested_category": "offline/teacher 字段和在线 loader/capability 拒绝",
+      "tiny_saved_tests": [
+        {
+          "name": "test_online_payload_and_basis_capability_reject_offline_fields",
+          "full_id": "test_backend_integrity.IntegrityTests.test_online_payload_and_basis_capability_reject_offline_fields",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 537,
+          "end_line": 565
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_online_payload_and_basis_capability_reject_offline_fields": {
+          "online_chart_preserved": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "deny assertions PASS；合法 chart 还原误差 0",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "tiny loader 实际拒绝含 teacher/truth/full J/H/reference/unregistered 的 NPZ；capability 拒绝字段。不是 OS 文件隔离证明。"
+    },
+    {
+      "category": "cache",
+      "requested_category": "材料刷新与缓存失效",
+      "tiny_saved_tests": [
+        {
+          "name": "test_material_refresh_invalidates_projection_and_cached_reduced_matrix",
+          "full_id": "test_backend_integrity.IntegrityTests.test_material_refresh_invalidates_projection_and_cached_reduced_matrix",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 567,
+          "end_line": 589
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_material_refresh_invalidates_projection_and_cached_reduced_matrix": {
+          "fresh_trial_after_invalidated_cache": 0.0,
+          "full_cache_source_selection": 0.0
+        }
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "fresh trial 与 source cache 两项 0；拒绝 assertions PASS",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "tiny 检查 stale Projection/J matrix 拒绝与同材料 source 选择；原尺寸没有单独 negative-cache 检查。"
+    },
+    {
+      "category": "full_state_guards",
+      "requested_category": "full API 的材料、reduced state、频率/几何 owner guards",
+      "tiny_saved_tests": [
+        {
+          "name": "test_full_tangent_and_adjoint_refuse_wrong_material_state",
+          "full_id": "test_backend_integrity.IntegrityTests.test_full_tangent_and_adjoint_refuse_wrong_material_state",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 591,
+          "end_line": 596
+        },
+        {
+          "name": "test_full_physics_contract_refuses_native_and_adapter_reduced_states",
+          "full_id": "test_backend_integrity.IntegrityTests.test_full_physics_contract_refuses_native_and_adapter_reduced_states",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 598,
+          "end_line": 611
+        },
+        {
+          "name": "test_full_physics_rejects_foreign_frequency_and_geometry_models",
+          "full_id": "test_backend_integrity.IntegrityTests.test_full_physics_rejects_foreign_frequency_and_geometry_models",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 613,
+          "end_line": 634
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_full_tangent_and_adjoint_refuse_wrong_material_state": {},
+        "test_full_physics_contract_refuses_native_and_adapter_reduced_states": {},
+        "test_full_physics_rejects_foreign_frequency_and_geometry_models": {}
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "异常拒绝 assertions PASS；无标量误差",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "上述异常合同为 tiny assertions；B/B* foreign owner guard 位于 test_full_physics_rejects_foreign_frequency_and_geometry_models，没有原尺寸同名拒绝检查。"
+    },
+    {
+      "category": "budget_failure_cost",
+      "requested_category": "预算拒绝与失败 action 成本",
+      "tiny_saved_tests": [
+        {
+          "name": "test_budget_rejection_and_failed_action_accounting",
+          "full_id": "test_backend_integrity.IntegrityTests.test_budget_rejection_and_failed_action_accounting",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 636,
+          "end_line": 655
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_budget_rejection_and_failed_action_accounting": {}
+      },
+      "tiny_selected_nested_metrics": {
+        "failed_action_receipt": {
+          "event": "injected_failed_action",
+          "phase": "online",
+          "counters": {
+            "rejected_trials": 1
+          },
+          "status": "FAILED",
+          "test": "test_backend_integrity.IntegrityTests.test_budget_rejection_and_failed_action_accounting",
+          "grid": "2^3",
+          "error": "RuntimeError: injected test failure",
+          "wall_seconds": 9.51660331338644e-05,
+          "exclusive_wall_seconds": 9.129103273153305e-05,
+          "process_cpu_seconds": 9.500000000001174e-05
+        }
+      },
+      "tiny_description": "CPU_LIMIT 拒绝；FAILED action CPU>0，排他 wall 不重复累计",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "FAILED_LAUNCH_COST_RECEIPT_RECORDED_NO_FORCED_CPU_LIMIT_BOUNDARY_CHECK",
+      "scope_or_gap": "tiny 用已有 CPU 超限拒绝 Adapter、并注入计费失败；远端实际 failed launch 是保守 allowance，不是精确 CPU 测量。"
+    },
+    {
+      "category": "two_update_smoke",
+      "requested_category": "FULL_GN/A1/A2 两次更新 smoke",
+      "tiny_saved_tests": [
+        {
+          "name": "test_tiny_two_update_nonlinear_full_A1_A2_smoke",
+          "full_id": "test_backend_integrity.IntegrityTests.test_tiny_two_update_nonlinear_full_A1_A2_smoke",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 657,
+          "end_line": 675
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_tiny_two_update_nonlinear_full_A1_A2_smoke": {}
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "三方法 tiny smoke assertions PASS",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "仅 tiny max_updates=2；本项没有六对象成像质量、部署速度或 NN 训练证据。"
+    },
+    {
+      "category": "synthetic_algebra",
+      "requested_category": "供给代数身份及反例 regression",
+      "tiny_saved_tests": [
+        {
+          "name": "test_frozen_protocol_algebra_and_counterexample_regressions",
+          "full_id": "test_backend_integrity.SuppliedCounterexamples.test_frozen_protocol_algebra_and_counterexample_regressions",
+          "saved_status": "PASS",
+          "path": "tests/test_backend_integrity.py",
+          "line": 679,
+          "end_line": 689
+        }
+      ],
+      "tiny_observed_scalar_metrics": {
+        "test_frozen_protocol_algebra_and_counterexample_regressions": {}
+      },
+      "tiny_selected_nested_metrics": {},
+      "tiny_description": "20 random trials；saved status ALL ASSERTIONS PASSED",
+      "original_size_saved_checks": {},
+      "original_size_named_check_presence": "NO_MATCHING_NAMED_CHECK_IN_G0_REAL",
+      "scope_or_gap": "独立 synthetic finite-dimensional checks；不当作 Maxwell 状态、盲留出、成像质量或速度。"
+    }
+  ],
+  "explicit_gaps": [
+    {
+      "id": "GAP_REAL_SCOPE",
+      "detail": "Original-size G0 covers only parents 2001/2005 at iteration 0 and k=2. It does not record six-parent imaging, all 12 replay states, nonlinear quality or deployment speed."
+    },
+    {
+      "id": "GAP_MULTIFREQUENCY",
+      "detail": "Two-frequency coverage uses tiny synthetic observations and real DenseDDA kernels at k=.9/1.25, with explicit stack and summed pullback. No production multifrequency driver or real multifrequency dataset has a saved G0 test."
+    },
+    {
+      "id": "GAP_REMOTE_ADVERSARIAL",
+      "detail": "Original-size G0 has no named moving-LS residual-term, empty Z, forced unsafe core, gauge rotation, negative-cache, owner-refusal, forced budget-boundary or KKT check. The relevant saved evidence is tiny tests, mapped individually above."
+    },
+    {
+      "id": "GAP_QP_SCALE",
+      "detail": "Known-boundary chart p=6 and voxel p=16 KKT checks are tiny. No original-size voxel quadratic/KKT result is present in these G0 receipts."
+    },
+    {
+      "id": "GAP_WHITENING",
+      "detail": "Non-diagonal real whitening is a tiny constructed map. Real data uses measured-data norm normalization; no calibrated noise covariance claim."
+    },
+    {
+      "id": "GAP_LEAKAGE_PROOF",
+      "detail": "Tiny field/capability and NPZ whitelist rejection checks exist. They are not a proof of OS-level file isolation or arbitrary malicious source-code access prevention."
+    },
+    {
+      "id": "GAP_EXPOSURE",
+      "detail": "The original-size manifest labels historically_exposed_feasibility; these are not a newly blind holdout."
+    },
+    {
+      "id": "GAP_SOURCE_BINDING",
+      "detail": "Current test line locations are an inventory of present test source. Local attempt receipts record commands/env but no immutable test/source revision stamp. The CUDA job has a declared source_commit. No new content-hash check was performed."
+    }
+  ],
+  "saved_cost_receipt_summary": {
+    "tiny_inclusive_cpu_seconds_all_attempts": 2.869308,
+    "tiny_wall_seconds_all_attempts": 3.5780687918886542,
+    "standalone_algebra_CPU_seconds": 0.139742,
+    "standalone_algebra_wall_seconds": 0.23739804199431092,
+    "original_G0_jobs_charged_CPU_seconds_including_failed_launch": 673.88125,
+    "original_G0_jobs_charged_GPU_occupation_seconds_including_failed_launch": 687.8218991000009,
+    "sum_of_listed_G0_test_and_job_CPU_receipts_seconds": 676.8903,
+    "scope": "Only listed evidence receipts; not the complete A20 campaign ledger. Never add prior_cpu or nested case/row spans again.",
+    "failed_launch_measurement": "501.975 CPU and GPU seconds are a conservative charged allowance, not a claimed exact observation."
+  },
+  "new_actions": {
+    "physical": 0,
+    "test_execution": 0,
+    "SSH": 0,
+    "hash_checks": 0,
+    "source_config_modification": 0,
+    "new_agents": 0
+  },
+  "inventory_consistency_checks": [
+    {
+      "check": "latest suite case names match saved test definitions",
+      "status": "PASS"
+    },
+    {
+      "check": "root and tests G0_LOCAL reports agree as parsed JSON",
+      "status": "PASS"
+    },
+    {
+      "check": "all local attempt CPU matches saved summary",
+      "status": "PASS"
+    },
+    {
+      "check": "all saved failed occurrences retained",
+      "status": "PASS"
+    },
+    {
+      "check": "root real G0 has exactly one matching saved job result",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: complex_L_F_S",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: real_B",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: native_jvp_vjp",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: full_FD",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: frozen_Galerkin",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: frozen_Petrov",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: moving_Galerkin",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: moving_LS",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: A1_A2_contract",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: Schur",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: multi_source_packing",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: multi_frequency",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: whitening",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: material_metric_gauge",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: current_gauge",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: zero_empty",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: hierarchy",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: unsafe_core",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: KKT",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: offline_guard",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: cache",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: full_state_guards",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: budget_failure_cost",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: two_update_smoke",
+      "status": "PASS"
+    },
+    {
+      "check": "category references existing saved cases: synthetic_algebra",
+      "status": "PASS"
+    },
+    {
+      "check": "all saved latest tests are mapped",
+      "status": "PASS"
+    }
+  ],
+  "final_inventory_text_corrections": [
+    "B foreign-owner guard attribution corrected by reading saved test definition; no test executed.",
+    "Original full FD, chart-expansion and degree-1 diagnostics labeled as recorded non-checks fields instead of implying absence.",
+    "No original material coordinate count inferred without a saved chart-dimension field."
+  ]
+}

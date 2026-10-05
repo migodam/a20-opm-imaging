@@ -1,0 +1,4671 @@
+{
+  "classification": "STATIC_ONLY_LIVE_RESULTS_RECHECK_REQUIRED",
+  "inventory_counts": [
+    {
+      "path": ".",
+      "count": 61,
+      "classification": "AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": ".",
+      "count": 493,
+      "classification": "DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": ".",
+      "count": 1,
+      "classification": "IGNORED"
+    },
+    {
+      "path": ".",
+      "count": 6,
+      "classification": "OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": ".",
+      "count": 18,
+      "classification": "STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": ".",
+      "count": 310,
+      "classification": "TRACKED"
+    },
+    {
+      "path": ".",
+      "count": 267,
+      "classification": "UNTRACKED_NOT_IGNORED"
+    },
+    {
+      "path": ".",
+      "count": 2,
+      "classification": "ENVIRONMENT_SUPPLIED_CONNECTION_OR_SECRET_FIELD"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "FULLTEXT_FILE_CANDIDATE_NOT_ATTRIBUTION_VERIFIED"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "INLINE_CREDENTIAL_TOKEN_PATTERN_CANDIDATE"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "INLINE_PRIVATE_KEY_MARKER_CANDIDATE"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "LARGE_FULLTEXT_FIELD_CANDIDATE"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "LOCAL_CACHE_OR_UNSAFE_SERIALIZATION_CANDIDATE"
+    },
+    {
+      "path": ".",
+      "count": 154,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "LOCAL_OS_CACHE_NOT_PUBLISHABLE"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "POTENTIAL_PERSISTED_J_H_MATRIX_KEY_CANDIDATE_NO_VALUES_READ"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "PRIVATE_CONFIG_OR_KEY_FILE_CANDIDATE_NOT_CONTENT_SCANNED"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "RUNTIME_OFFLINE_FIELD_KEY_CANDIDATE"
+    },
+    {
+      "path": ".",
+      "count": 2,
+      "classification": "TEXT_PREFIX_ONLY_SCAN_RECHECK_REQUIRED"
+    },
+    {
+      "path": ".",
+      "count": 1,
+      "classification": "VCS_METADATA_EXCLUDED_FROM_PUBLISHABLE_INVENTORY"
+    },
+    {
+      "path": ".",
+      "count": 0,
+      "classification": "FAILED_ATTEMPTS_INCLUDED_IN_CPU_RECEIPT"
+    },
+    {
+      "path": "tests/review_replay_interface.py",
+      "count": 1,
+      "classification": "NON_SECRET_FIXTURE_PLACEHOLDER_DECLARATION"
+    }
+  ],
+  "file_inventory": [
+    {
+      "path": ".gitignore",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "LICENSE",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "NOTICE.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "README.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "START_HERE.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "configs/SOURCE_COMMIT.txt",
+      "count": 1,
+      "classification": "IGNORED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "configs/frozen.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "configs/parents.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "data/offline/2001/labels.npz",
+      "count": 1,
+      "classification": "TRACKED__OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": "data/offline/2003/labels.npz",
+      "count": 1,
+      "classification": "TRACKED__OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": "data/offline/2005/labels.npz",
+      "count": 1,
+      "classification": "TRACKED__OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": "data/offline/2007/labels.npz",
+      "count": 1,
+      "classification": "TRACKED__OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": "data/offline/2010/labels.npz",
+      "count": 1,
+      "classification": "TRACKED__OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": "data/offline/2013/labels.npz",
+      "count": 1,
+      "classification": "TRACKED__OFFLINE_EVALUATION_ONLY_INPUT_SEPARATED"
+    },
+    {
+      "path": "data/runtime/2001/problem.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2001/state_00.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2001/state_17.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2003/problem.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2003/state_00.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2003/state_17.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2005/problem.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2005/state_00.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2005/state_17.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2007/problem.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2007/state_00.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2007/state_17.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2010/problem.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2010/state_00.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2010/state_17.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2013/problem.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2013/state_00.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "data/runtime/2013/state_17.npz",
+      "count": 1,
+      "classification": "TRACKED__STATIC_RUNTIME_INPUT_SCHEMA_AUDITED"
+    },
+    {
+      "path": "docs/BACKEND_MAP.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "docs/CLOSEST_PRIOR_AUDIT.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "docs/PROTOCOL_CONFLICTS.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "docs/REPRODUCE.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/ADAPTIVE_DEGREE_THEORY.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/CODEX_ROUTE_A_OPM_IMAGING.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/GO_NO_GO_GATES.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/LIGHTWEIGHT_EXPERIMENT_SPEC.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/NOVELTY_AUDIT.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/OPM_GN_DBIM_ALGORITHM.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/OPM_IMAGING_THEORY.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/OPM_RESOLVENT_APPROXIMATION.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/REFERENCES.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/START_HERE.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/THEOREM_COUNTEREXAMPLE_LEDGER.md",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "protocol/experiments/check_theory.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "pyproject.toml",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/CLAIM_LEDGER.csv",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/backend_map_update_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/cpu_ledger.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/package_index_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/robustness_worker_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/scholarqa_collect.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/scholarqa_collect.stderr.txt",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/scholarqa_verify.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/scholarqa_verify.stderr.txt",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/search_log.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/source_access.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/summary_alignment_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/summary_worker_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/verified_sources.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "research/claim_audit/worker_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "results/EXTERNAL_CPU_RECEIPTS.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/G0_ALGEBRA.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/G0_LOCAL.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/G0_REAL.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/JOB_LEDGER.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/PARENT_SYNTAX_RECEIPT.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/SETUP_FAILURES.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/SETUP_RECEIPT.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/STAGE_ORDER_DECLARATION.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/g0_real/2001.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/g0_real/2005.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-01/failure.txt",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-01/job_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-01/result.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-02/cost.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-02/job_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-02/manifest.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/g0-real-02/result.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/local-algebra-01/cost.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/local-algebra-01/job_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/local-algebra-01/manifest.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/local-algebra-01/result.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/replay-01/cost.jsonl",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/jobs/replay-01/manifest.json",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/failures.jsonl",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/replay.jsonl",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_0.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_1.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_2.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_3.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_4.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_5.npz",
+      "count": 1,
+      "classification": "UNTRACKED_NOT_IGNORED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/replay_worker_receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/ELIGIBILITY_VALIDATION.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/G0_LOCAL.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/LATEST.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/REPLAY_INTERFACE_REVIEW.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/REPLAY_INTERFACE_REVIEW_RECEIPT.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/REPRODUCE_DOC_RECEIPT.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_001/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_002/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_full_physics_contract_refuses_native_and_adapter_reduced_states.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_003/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_full_physics_contract_refuses_native_and_adapter_reduced_states.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_full_physics_rejects_foreign_frequency_and_geometry_models.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_004/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_full_physics_contract_refuses_native_and_adapter_reduced_states.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_full_physics_rejects_foreign_frequency_and_geometry_models.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_005/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_full_physics_contract_refuses_native_and_adapter_reduced_states.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_full_physics_rejects_foreign_frequency_and_geometry_models.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_006/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_complex_current_adjoints_and_metric.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_full_physics_contract_refuses_native_and_adapter_reduced_states.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_full_physics_rejects_foreign_frequency_and_geometry_models.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_material_metric_and_real_gauge_covariance.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/cases.jsonl",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/receipt.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/stdout_stderr.log",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "results/tests/attempt_007/suite.json",
+      "count": 1,
+      "classification": "TRACKED__DEFER_LIVE_EVIDENCE_FINAL_RECHECK"
+    },
+    {
+      "path": "src/a20/__init__.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/backend.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/cli.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/costs.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/imaging.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/material.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/opm.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/real_g0.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/replay.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "src/a20/robustness.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "tests/review_replay_interface.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "tests/run_integrity.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "tests/summarize_integrity.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "tests/test_backend_integrity.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "tools/remote_jobs.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "tools/summarize_evidence.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "vendor/a17/UPSTREAM_PROVENANCE.json",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "vendor/a17/a9_engine.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "vendor/a17/experiment_support.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    },
+    {
+      "path": "vendor/a17/feasible_step.py",
+      "count": 1,
+      "classification": "TRACKED__AUTHORED_SOURCE_DOCUMENTATION_OR_PROVENANCE_CANDIDATE"
+    }
+  ],
+  "path_classification_findings": [
+    {
+      "path": ".git/",
+      "count": 1,
+      "classification": "VCS_METADATA_EXCLUDED_FROM_PUBLISHABLE_INVENTORY"
+    },
+    {
+      "path": "research/claim_audit/cpu_ledger.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "research/claim_audit/robustness_worker_receipt.json",
+      "count": 1,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/G0_LOCAL.json",
+      "count": 31,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/jobs/replay-01/cost.jsonl",
+      "count": 1,
+      "classification": "TEXT_PREFIX_ONLY_SCAN_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/replay.jsonl",
+      "count": 1,
+      "classification": "TEXT_PREFIX_ONLY_SCAN_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/tests/G0_LOCAL.json",
+      "count": 31,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/LATEST.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/REPLAY_INTERFACE_REVIEW.json",
+      "count": 24,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_001/cases.jsonl",
+      "count": 5,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_001/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_001/stdout_stderr.log",
+      "count": 5,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_001/suite.json",
+      "count": 5,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_002/cases.jsonl",
+      "count": 3,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_002/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_002/stdout_stderr.log",
+      "count": 3,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_002/suite.json",
+      "count": 3,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_003/cases.jsonl",
+      "count": 6,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_003/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_003/stdout_stderr.log",
+      "count": 6,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_003/suite.json",
+      "count": 6,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_004/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_005/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_006/cases.jsonl",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_006/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_006/stdout_stderr.log",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_006/suite.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "results/tests/attempt_007/receipt.json",
+      "count": 2,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "tests/review_replay_interface.py",
+      "count": 1,
+      "classification": "NON_SECRET_FIXTURE_PLACEHOLDER_DECLARATION"
+    },
+    {
+      "path": "tests/summarize_integrity.py",
+      "count": 1,
+      "classification": "LOCAL_FILESYSTEM_PATH_LITERAL"
+    },
+    {
+      "path": "tools/remote_jobs.py",
+      "count": 2,
+      "classification": "ENVIRONMENT_SUPPLIED_CONNECTION_OR_SECRET_FIELD"
+    }
+  ],
+  "archive_key_only_checks": [
+    {
+      "path": "data/offline/2001/labels.npz",
+      "count": 10,
+      "classification": "OFFLINE_EVALUATION_LABEL_ARCHIVE_KEYS_ONLY_NO_VALUES_READ"
+    },
+    {
+      "path": "data/offline/2003/labels.npz",
+      "count": 10,
+      "classification": "OFFLINE_EVALUATION_LABEL_ARCHIVE_KEYS_ONLY_NO_VALUES_READ"
+    },
+    {
+      "path": "data/offline/2005/labels.npz",
+      "count": 10,
+      "classification": "OFFLINE_EVALUATION_LABEL_ARCHIVE_KEYS_ONLY_NO_VALUES_READ"
+    },
+    {
+      "path": "data/offline/2007/labels.npz",
+      "count": 10,
+      "classification": "OFFLINE_EVALUATION_LABEL_ARCHIVE_KEYS_ONLY_NO_VALUES_READ"
+    },
+    {
+      "path": "data/offline/2010/labels.npz",
+      "count": 10,
+      "classification": "OFFLINE_EVALUATION_LABEL_ARCHIVE_KEYS_ONLY_NO_VALUES_READ"
+    },
+    {
+      "path": "data/offline/2013/labels.npz",
+      "count": 10,
+      "classification": "OFFLINE_EVALUATION_LABEL_ARCHIVE_KEYS_ONLY_NO_VALUES_READ"
+    },
+    {
+      "path": "data/runtime/2001/problem.npz",
+      "count": 14,
+      "classification": "RUNTIME_PROBLEM_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2001/state_00.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2001/state_17.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2003/problem.npz",
+      "count": 14,
+      "classification": "RUNTIME_PROBLEM_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2003/state_00.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2003/state_17.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2005/problem.npz",
+      "count": 14,
+      "classification": "RUNTIME_PROBLEM_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2005/state_00.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2005/state_17.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2007/problem.npz",
+      "count": 14,
+      "classification": "RUNTIME_PROBLEM_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2007/state_00.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2007/state_17.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2010/problem.npz",
+      "count": 14,
+      "classification": "RUNTIME_PROBLEM_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2010/state_00.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2010/state_17.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2013/problem.npz",
+      "count": 14,
+      "classification": "RUNTIME_PROBLEM_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2013/state_00.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "data/runtime/2013/state_17.npz",
+      "count": 4,
+      "classification": "RUNTIME_STATE_EXACT_WHITELIST_KEY_ONLY_PASS"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_M_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_forward_total12_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_O_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_P_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_mixed_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_ordinary_right_block_Krylov12_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261005_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261006_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_random_current_rank_control_20261007_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_0_receiver_SOM_rank_control_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_M_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_forward_total12_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_O_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_P_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_ordinary_right_block_Krylov12_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261005_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261006_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_random_current_rank_control_20261007_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2001_17_receiver_SOM_rank_control_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_M_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_forward_total12_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_O_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_P_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_mixed_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_ordinary_right_block_Krylov12_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261005_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261006_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_random_current_rank_control_20261007_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_0_receiver_SOM_rank_control_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_M_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_forward_total12_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_forward_total12_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_forward_total12_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_OPM_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_O_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_P_total4_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_full_GN_reference_None.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_full_GN_reference_None_historical.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_0.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_1.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_2.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_3.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_4.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    },
+    {
+      "path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_5.npz",
+      "count": 1,
+      "classification": "LIVE_RESULT_ARCHIVE_KEY_ONLY_SCAN_LATER_RECHECK_REQUIRED"
+    }
+  ],
+  "current_documentation_boundary_checks": [
+    {
+      "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+      "count": 1,
+      "classification": "DOCUMENTED_RUNTIME_OFFLINE_USAGE_BOUNDARY"
+    },
+    {
+      "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+      "count": 1,
+      "classification": "DOCUMENTED_HISTORICAL_Q_SUPPORT_LIMIT"
+    },
+    {
+      "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+      "count": 1,
+      "classification": "DOCUMENTED_HELD_RECEIVER_GEOMETRY_GAP"
+    },
+    {
+      "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+      "count": 1,
+      "classification": "DOCUMENTED_NO_THIRDPARTY_FULLTEXT_POLICY"
+    },
+    {
+      "path": "docs/PUBLIC_PACKAGE_INDEX.md",
+      "count": 1,
+      "classification": "DOCUMENTED_LIVE_RESULT_SCOPE_LIMIT"
+    },
+    {
+      "path": "docs/REPRODUCE.md",
+      "count": 1,
+      "classification": "DOCUMENTED_RUNTIME_OFFLINE_USAGE_BOUNDARY"
+    },
+    {
+      "path": "docs/REPRODUCE.md",
+      "count": 1,
+      "classification": "DOCUMENTED_PRIOR_RESULTS_AND_NEW_RUN_LEDGER_BOUNDARY"
+    },
+    {
+      "path": "docs/BACKEND_MAP.md",
+      "count": 1,
+      "classification": "DOCUMENTED_G0_SCOPE_AND_CROSS_FREQUENCY_GAP"
+    },
+    {
+      "path": "docs/BACKEND_MAP.md",
+      "count": 1,
+      "classification": "DOCUMENTED_NO_REPLAY_G1_G2_COMPLETION_CLAIM"
+    },
+    {
+      "path": "NOTICE.md",
+      "count": 1,
+      "classification": "DOCUMENTED_NO_THIRDPARTY_FULLTEXT_POLICY"
+    },
+    {
+      "path": "NOTICE.md",
+      "count": 1,
+      "classification": "DOCUMENTED_HISTORICAL_HASH_FIELDS_NOT_RECHECKED"
+    }
+  ],
+  "failed_attempts": [],
+  "mandatory_later_recheck": [
+    {
+      "path": "results/",
+      "count": 1,
+      "classification": "LIVE_REPLAY_FINAL_RESULT_FILES_NEED_LATER_SHORT_RECHECK"
+    },
+    {
+      "path": "research/claim_audit/public_package_audit.json",
+      "count": 1,
+      "classification": "THIS_AUDIT_NOT_A_SCIENTIFIC_GATE_OR_NOVELTY_JUDGMENT"
+    }
+  ]
+}

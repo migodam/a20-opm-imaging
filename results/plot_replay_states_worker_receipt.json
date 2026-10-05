@@ -1,0 +1,61 @@
+{
+  "worker": "plot_replay_states",
+  "status": "PASS",
+  "process_cpu_seconds": 0.031074,
+  "wall_seconds": 0.059828042,
+  "CPU_limit_seconds": 8,
+  "attempts": [
+    {
+      "attempt": "syntax, stdlib import and tiny offline selection fixtures",
+      "status": "PASS",
+      "phases": [
+        {
+          "phase": "validation_stdlib_imports",
+          "process_cpu_seconds": 0.018747
+        },
+        {
+          "phase": "tool_syntax_and_stdlib_import",
+          "process_cpu_seconds": 0.004392
+        },
+        {
+          "phase": "tiny_stdlib_fixtures_and_exports",
+          "process_cpu_seconds": 0.007892999999999997
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "syntax": true,
+    "matplotlib_not_imported": true,
+    "exact_72_cells": true,
+    "frozen_parent_state_degree_order": true,
+    "missing_gray": true,
+    "duplicates_not_selected": true,
+    "failed_gray": true,
+    "zero_reference_gray": true,
+    "full_fallback_gray": true,
+    "true_numeric_zero_retained": true,
+    "nonfinite_metric_invalid": true,
+    "bad_integer_axis_invalid": true,
+    "off_grid_ignored_explicitly": true,
+    "parse_issue_retained": true,
+    "no_zero_substitution": true,
+    "threshold_preserved_no_gate": true,
+    "explicit_labels": true,
+    "raw_csv_exact_contributors": true,
+    "missing_cell_csv_no_fake_number": true,
+    "epoch_filter_explicit": true,
+    "stdlib_only_cli": true,
+    "CPU_below_8_seconds": true
+  },
+  "real_replay_read": false,
+  "real_plot_rendered": false,
+  "matplotlib_imported": false,
+  "physics_actions": 0,
+  "SSH_calls": 0,
+  "SHA_checks": 0,
+  "only_project_writes": [
+    "tools/plot_replay_states.py",
+    "results/plot_replay_states_worker_receipt.json"
+  ]
+}

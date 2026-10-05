@@ -1,0 +1,37 @@
+{
+  "classification": "STATIC_ONLY_LIVE_RESULTS_RECHECK_REQUIRED",
+  "worker_actual_CPU_seconds": 1.019925,
+  "CPU_budget_seconds": 10.0,
+  "CPU_budget_respected": true,
+  "wall_seconds": 0.8501073330407962,
+  "measurement_classification": "SELF_AND_CHILD_USER_SYSTEM_CPU_INCLUDES_FAILED_ATTEMPTS",
+  "failed_attempt_count": 0,
+  "physics_runs": 0,
+  "SSH_calls": 0,
+  "network_calls": 0,
+  "hash_checks": 0,
+  "source_tools_configs_results_edits": 0,
+  "NPZ_array_values_read": 0,
+  "credential_values_reported": 0,
+  "paths": [
+    {
+      "path": "research/claim_audit/public_package_audit.json",
+      "count": 1,
+      "classification": "STATIC_AUDIT_JSON"
+    },
+    {
+      "path": "research/claim_audit/public_package_audit.md",
+      "count": 1,
+      "classification": "STATIC_AUDIT_MARKDOWN"
+    }
+  ],
+  "scan_process_CPU_seconds": 0.784281,
+  "report_verification_process_CPU_seconds": 0.026483,
+  "field_reference_supplement_process_CPU_seconds": 0.096678,
+  "non_secret_declaration_context_review_CPU_seconds": 0.022975,
+  "declaration_context_diagnostic_CPU_seconds": 0.029519999999999998,
+  "declaration_parent_diagnostic_CPU_seconds": 0.029110999999999998,
+  "fixture_literal_confirmation_CPU_seconds": 0.030877,
+  "declaration_context_check_attempt_count": 4,
+  "initial_annotation_heuristic_classification": "INCONCLUSIVE_NO_MATCH"
+}
