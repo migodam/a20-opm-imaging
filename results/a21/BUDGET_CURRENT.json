@@ -1,9 +1,9 @@
 {
-  "a21_cpu": 369.31311200000005,
+  "a21_cpu": 373.55128600000006,
   "a21_gpu": 281.6618149999995,
-  "new_CPU_seconds": 369.31311200000005,
+  "new_CPU_seconds": 373.55128600000006,
   "new_GPU_seconds": 281.6618149999995,
-  "global_cpu": 5975.929163,
+  "global_cpu": 5980.167337,
   "global_gpu": 5943.4406739999995,
   "historical_CPU_seconds": 5606.616051,
   "historical_GPU_seconds": 5661.778859,
@@ -17,8 +17,15 @@
     "a21-local-report-regression-03",
     "a21-local-targeted-02",
     "a21-local-validate-01",
+    "a21-publish-anonymous-01",
+    "a21-publish-anonymous-02",
+    "a21-publish-assets-01",
     "a21-publish-prepare-01",
+    "a21-publish-push-01",
+    "a21-publish-release-01",
+    "a21-publish-release-live-01",
     "a21-publish-snapshot-01",
+    "a21-publish-snapshot-02",
     "a21-xinan-preflight-01"
   ],
   "external_scopes": [

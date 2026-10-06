@@ -1,27 +1,16 @@
 {
   "schema": "a21.publication_verification.v1",
   "status": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
-  "repository": "https://github.com/migodam/a20-opm-imaging",
-  "release_tag": "v0.3.0-a21-two-sided-anatomy",
-  "release_url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.3.0-a21-two-sided-anatomy",
-  "raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
-  "offline_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip",
-  "original_public_main": "3b3b17b5f4cf5d37b26602ead2dfe7c913b37e23",
-  "local_full_snapshot_commit": "5de7e1b9081a8bd166bda56985b3dfa92089f98d",
-  "physics_source_commit": "5c6bcb02bb4ab88f7b46f07bca4ca3f4e38a067c",
-  "scientific_status": "LATE_GN_TWO_SIDED_FIDELITY_CONFIRMED",
-  "evidence_scope": "ORACLE_OFFLINE_FROZEN_QUADRATIC",
-  "no_new_physics": true,
-  "new_SHA256_checks": 0,
-  "old_releases_retained": true,
-  "release_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
-  "scientific_runs": "STOPPED_AFTER_FIVE_STATE_ANATOMY",
-  "local_original_receipts_unchanged": true,
-  "large_arrays_in_separate_offline_asset": true,
   "checked_at_UTC": "2026-10-06T05:27:40.412185+00:00",
   "verified_remote_main_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
+  "release_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
+  "release_tag": "v0.3.0-a21-two-sided-anatomy",
   "repository_url": "https://github.com/migodam/a20-opm-imaging",
+  "release_url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.3.0-a21-two-sided-anatomy",
+  "raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
   "immutable_raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4/START_HERE.md",
+  "scientific_status": "LATE_GN_TWO_SIDED_FIDELITY_CONFIRMED",
+  "evidence_scope": "ORACLE_OFFLINE_FROZEN_QUADRATIC",
   "assets": [
     {
       "name": "a20-opm-imaging-v0.3.0-a21-two-sided-anatomy.zip",
@@ -40,6 +29,7 @@
       "verification": "ANONYMOUS_PREFIX_AND_CENTRAL_DIRECTORY_BYTE_EQUALITY; LOCAL_FULL_ZIP_CRC"
     }
   ],
+  "old_releases_retained": true,
   "checks": [
     {
       "name": "repository",
@@ -172,7 +162,6 @@
       "cookies": false
     }
   ],
-  "remote_commit_observation": "main at release verification; later metadata commit recorded by final asset",
-  "final_remote_verification_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_FINAL_REMOTE_VERIFICATION.json",
-  "publication_closeout_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_PUBLICATION_CLOSEOUT.json"
+  "no_new_physics": true,
+  "new_SHA256_checks": 0
 }

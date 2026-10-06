@@ -1,0 +1,1 @@
+{"campaign": "A21", "job": "a21-publish-snapshot-02", "stage": "PUBLICATION_ONLY", "status": "COMPLETE", "returncode": 0, "new_physics": false, "inclusive_CPU_seconds": 0.241883, "wall_seconds": 0.2155143750132993, "GPU_seconds": 0, "nested_spans_not_additive": true}

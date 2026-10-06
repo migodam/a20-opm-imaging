@@ -17,3 +17,5 @@
 At scientific closeout, inclusive budget: A21 CPU 349.157858 s /1200 s; GPU 281.661815 s /1200 s. Historical carry included: CPU 5955.773909 s /7200 s; GPU 5943.440674 s /43200 s.
 
 Publication CPU is charged separately in [BUDGET_PUBLICATION.json](BUDGET_PUBLICATION.json); the scientific-closeout receipt above is retained.
+
+Publication status: **PUBLISHED_AND_ANONYMOUSLY_VERIFIED**. [A21 release](https://github.com/migodam/a20-opm-imaging/releases/tag/v0.3.0-a21-two-sided-anatomy) and [publication receipt](PUBLICATION.json). All later publication/verification CPU receipts are included in the [final closeout asset](https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_PUBLICATION_CLOSEOUT.json).
