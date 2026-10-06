@@ -282,17 +282,19 @@ def _merge_jobs(archive, root):
 
 def pull():
     target, _ = connection()
+    archive_name = 'a21-results-' + uuid.uuid4().hex[:12] + '.zip'
     code = f"""import json,pathlib,time,zipfile
 r=pathlib.Path(r'{REMOTE}')
 meta=dict(status='FAILED')
 try:
- with zipfile.ZipFile(r/'a21-results.zip','w',zipfile.ZIP_DEFLATED) as z:
+ with zipfile.ZipFile(r/'{archive_name}','x',zipfile.ZIP_STORED) as z:
   paths=list((r/'results/a21').rglob('*'))
   paths+=list((r/'results/jobs').glob('a21-*/*'))
   for p in paths:
    if time.process_time()>25: raise RuntimeError('Bounded archive CPU allowance exceeded')
    if p.is_file(): z.write(p,p.relative_to(r).as_posix())
- meta.update(status='A21_ARCHIVED',archive_bytes=(r/'a21-results.zip').stat().st_size)
+ meta.update(status='A21_ARCHIVED',archive_bytes=(r/'{archive_name}').stat().st_size,
+             archive_name='{archive_name}',compression='STORED',prior_archive_preserved=True)
 except BaseException as error:
  meta['error_type']=type(error).__name__
 finally:
@@ -307,7 +309,7 @@ finally:
         raise error
     with tempfile.TemporaryDirectory() as directory:
         archive = Path(directory) / 'a21-results.zip'
-        copy(target + ':' + REMOTE + '/a21-results.zip', archive)
+        copy(target + ':' + REMOTE + '/' + archive_name, archive)
         _merge_jobs(archive, ROOT)
     from a21.budget import history
     (ROOT / 'results/a21/BUDGET_CURRENT.json').write_text(json.dumps(history(ROOT), indent=2, allow_nan=False) + '\n', encoding='utf-8')
