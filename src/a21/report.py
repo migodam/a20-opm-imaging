@@ -292,9 +292,29 @@ def annotate_rows(rows, config, *, artifact_audits=None):
             issues.append("REFERENCE_NOT_VALIDATED")
         if _get(row, "bound_consistent") is not True:
             issues.append("BOUND_CONSISTENCY_NOT_VALIDATED")
-        identity_error = _number(_get(row, "identity_relative_error"))
-        if identity_error is None or identity_error > config.get("identity_rtol", 1e-9):
+        identity_absolute = _number(_get(row, "identity_error_norm"))
+        identity_allowance = _number(_get(row, "identity_allowance"))
+        if identity_absolute is not None and identity_allowance is not None:
+            # Use the outcome-independent allowance frozen by diagnostics.
+            # A relative quotient is not a valid gate when eta approaches zero.
+            identity_valid = 0 <= identity_absolute <= identity_allowance
+            row["identity_validation_source"] = "SAVED_ABSOLUTE_ERROR_AND_FROZEN_ALLOWANCE"
+        else:
+            identity_error = _number(_get(row, "identity_relative_error"))
+            identity_valid = (identity_absolute is None and identity_allowance is None
+                              and identity_error is not None
+                              and 0 <= identity_error <= config.get("identity_rtol", 1e-9))
+            row["identity_validation_source"] = "LEGACY_RELATIVE_ONLY_SYNTHETIC_RECORD"
+        if not identity_valid:
             issues.append("DEFECT_IDENTITY_NOT_VALIDATED")
+        measured_error = _number(_get(row, "absolute_H_step_error"))
+        adjusted_bound = _number(_get(row, "normal_adjusted_bound_HF"))
+        floating_allowance = _number(_get(row, "bound_floating_allowance"))
+        extended_bound = (adjusted_bound + floating_allowance
+                          if adjusted_bound is not None and floating_allowance is not None else None)
+        row["extended_bound_ratio"] = (measured_error / extended_bound
+                                       if measured_error is not None and extended_bound is not None
+                                       and extended_bound > 0 else None)
         reference_scale = _number(_get(row, "reference_H_norm"))
         well_scaled = _get(row, "well_scaled_reference") is True
         if reference_scale is None or reference_scale <= config.get("reference_H_norm_floor", 1e-12):
