@@ -619,7 +619,16 @@ def _figures(rows, output, config):
                             transform=ax.get_xaxis_transform(), ha="center", rotation=90, fontsize=6, va="top")
             if gate_line:
                 ax.axhline(config.get("scientific_H_error_target", .05), color="tab:red", linestyle="--", label="5% scientific gate")
-            ax.set_yscale("symlog", linthresh=1e-12)
+            values = [_number(row.get(key)) for row in state.values() for key, _ in fields]
+            defined = [value for value in values if value is not None]
+            if name == "A21_BASIS_MEMORY":
+                ax.set_yscale("linear")
+            elif defined and all(value > 0 for value in defined):
+                # Positive defects can be below 1e-12; preserve their actual
+                # magnitudes rather than drawing them in a linear zero band.
+                ax.set_yscale("log")
+            else:
+                ax.set_yscale("symlog", linthresh=1e-12)
             ax.set_xticks(range(len(ARMS)), ARMS, rotation=45, fontsize=7)
             ax.set_title(f"State {parent}, iteration {iteration}")
             ax.set_ylabel(ylabel, fontsize=8)
@@ -629,7 +638,7 @@ def _figures(rows, output, config):
         if figure.axes:
             handles, labels = figure.axes[0].get_legend_handles_labels()
             figure.legend(handles, labels, loc="lower right", fontsize=8)
-        figure.suptitle(name.replace("A21_", "A21 ").replace("_", " ")+" — ORACLE/OFFLINE; review required", fontsize=12)
+        figure.suptitle(name.replace("A21_", "A21 ").replace("_", " ")+" — ORACLE/OFFLINE frozen-state anatomy", fontsize=12)
         paths = []
         for extension in ("png", "svg"):
             path = output/(name+"."+extension)
