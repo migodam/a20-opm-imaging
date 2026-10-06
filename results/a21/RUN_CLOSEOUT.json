@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "safe_queue_output": [
+    "SHARED_LOCK=False"
+  ],
+  "shared_lock_released": true,
+  "no_new_physics_started": true,
+  "GPU_seconds": 0,
+  "bill_authority": "setup and final metadata allowances"
+}

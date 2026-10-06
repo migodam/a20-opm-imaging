@@ -1,0 +1,8 @@
+test_exact_oracle_small_absolute_defect_survives_relative_quotient (test_a21_report_allowance.ReportAllowanceTests.test_exact_oracle_small_absolute_defect_survives_relative_quotient) ... ok
+test_raw_and_allowance_adjusted_ratios_remain_distinct (test_a21_report_allowance.ReportAllowanceTests.test_raw_and_allowance_adjusted_ratios_remain_distinct) ... ok
+test_relative_quotient_cannot_hide_absolute_allowance_violation (test_a21_report_allowance.ReportAllowanceTests.test_relative_quotient_cannot_hide_absolute_allowance_violation) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

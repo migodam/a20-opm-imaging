@@ -1,0 +1,37 @@
+{
+  "a21_cpu": 336.80684900000006,
+  "a21_gpu": 281.6618149999995,
+  "new_CPU_seconds": 336.80684900000006,
+  "new_GPU_seconds": 281.6618149999995,
+  "global_cpu": 5943.4229,
+  "global_gpu": 5943.4406739999995,
+  "historical_CPU_seconds": 5606.616051,
+  "historical_GPU_seconds": 5661.778859,
+  "jobs": [
+    "a21-anatomy-01",
+    "a21-local-array-review-01",
+    "a21-local-preflight-01",
+    "a21-local-report-01",
+    "a21-local-report-final-02",
+    "a21-local-report-regression-03",
+    "a21-local-targeted-02",
+    "a21-local-validate-01",
+    "a21-xinan-preflight-01"
+  ],
+  "external_scopes": [
+    "A21 bounded setup, read-only planning checks, transport and metadata overhead",
+    "A21 final metadata and unmeasured setup margin",
+    "A21 measured transport overage transport-dd6f66e585ed",
+    "a21-engine-real-output-audit-20261006-unique01",
+    "a21-tests-report-tiny-tests-20261006-attempt01",
+    "a21-tests-report-tiny-tests-20261006-attempt02"
+  ],
+  "billing_authority": "inclusive A21 job receipts + unique external scopes + frozen historical carry",
+  "nested_spans_not_additive": true,
+  "status": "WITHIN_ALL_CAPS_DELIVERY_METADATA_PENDING",
+  "CPU_cap_seconds": 1200,
+  "GPU_cap_seconds": 1200,
+  "global_CPU_cap_seconds": 7200,
+  "global_GPU_cap_seconds": 43200,
+  "additional_scientific_runs": "STOPPED_AFTER_FIVE_STATE_ANATOMY"
+}

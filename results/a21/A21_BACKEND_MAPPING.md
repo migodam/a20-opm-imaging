@@ -60,3 +60,7 @@ again and does not run an early state to repair that earlier conflict.
 No new SHA256 checks are performed. Existing Git identities, immutable input
 IDs and historical hash fields provide provenance; new execution metadata
 records the actual A21 implementation commit and exact commands.
+
+## Executed A21 verification
+
+Five late references passed without repair; real T0 (2001/2003/2013) passed. All35 arms and independent saved-array review passed. Physical source `5c6bcb02bb4ab88f7b46f07bca4ca3f4e38a067c`; final review and exact numerical evidence: `A21_ORACLE_REPORT_ZH.md`, `A21_FROZEN_MANIFEST.json`, `INDEPENDENT_ARRAY_REVIEW.json`. No new SHA256 checks.

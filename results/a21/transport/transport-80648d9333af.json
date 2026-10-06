@@ -1,0 +1,21 @@
+{
+  "scope": "transport-80648d9333af",
+  "action": "run",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.062226,
+  "remote_archive_CPU_seconds": 0,
+  "remote_extract_CPU_seconds": 0,
+  "wall_seconds": 285.687608,
+  "GPU_seconds": 0,
+  "billing": "covered by frozen 30-second setup/transport allowance; measured overage additionally billed",
+  "measurement": "local controller including imports + local child CPU + remote archive process CPU",
+  "details": {
+    "stage": "anatomy",
+    "job": "a21-anatomy-01",
+    "device": "cuda",
+    "runtime_phase": "all",
+    "shared_lock": "existing A20 runs/gpu.lock",
+    "foreground": true
+  },
+  "new_SHA256_checks": 0
+}

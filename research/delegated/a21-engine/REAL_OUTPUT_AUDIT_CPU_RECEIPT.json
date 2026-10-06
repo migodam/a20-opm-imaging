@@ -1,0 +1,52 @@
+{
+  "schema": "a21.external_readonly_cpu.v1",
+  "scope": "a21-engine-real-output-audit-20261006-unique01",
+  "CPU_seconds": 14.147201,
+  "GPU_seconds": 0,
+  "measurement": "unique aggregate scope: measured cumulative user+system CPU for completed read-only processes plus 14 s conservative soft-cap charge for one failed accounting follow-up; interpreter/import CPU included",
+  "CPU_cap_seconds": 15,
+  "status": "PASS_WITH_ACCOUNTING_NOTE",
+  "physics_runs": 0,
+  "QP_runs": 0,
+  "test_runs": 0,
+  "new_SHA256_checks": 0,
+  "written_artifacts": [
+    "research/delegated/a21-engine/REAL_OUTPUT_AUDIT.md",
+    "research/delegated/a21-engine/REAL_OUTPUT_AUDIT_CPU_RECEIPT.json"
+  ],
+  "audit_issue_count": 0,
+  "utc": "2026-10-06T03:16:40.701695+00:00",
+  "measured_CPU_seconds": 0.147201,
+  "audit_process_count": 3,
+  "CPU_process_components": [
+    {
+      "status": "COMPLETED",
+      "CPU_seconds": 0.10960500000000001,
+      "measurement": "cumulative user+system including imports"
+    },
+    {
+      "status": "ASSERTION_FAILED",
+      "CPU_seconds": 14.0,
+      "measurement": "conservative full soft-CPU-cap charge; process CPU snapshot unavailable; default SIGXCPU disposition; no physics"
+    },
+    {
+      "status": "COMPLETED",
+      "CPU_seconds": 0.037596,
+      "measurement": "cumulative user+system including imports"
+    }
+  ],
+  "accounting_notes": {
+    "L_upload_bytes": {
+      "cost_event_sum": 0,
+      "job_receipt": 2149908480
+    },
+    "material_optimizer_iterations": {
+      "cost_event_sum": 0,
+      "job_receipt": 1893
+    },
+    "operator_transfer_bytes": {
+      "cost_event_sum": 0,
+      "job_receipt": 177168384
+    }
+  }
+}
