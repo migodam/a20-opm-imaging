@@ -76,3 +76,5 @@ PRIMAL的加权solver项最多只是dual项的3.05e-11；其法锥allowance对1e
 [图表](figures/)及[rawdata](rawdata/)包括全部五态误差/界、加权stationarity、曲率、normal work和双基内存。各项指标、余下完整向量及六源capture在[A21_METRICS.csv](A21_METRICS.csv)、[per_state](per_state/)和缓存中。
 
 结论是冻结受约束GN任务的**双侧保真机制得到验证**，并非在线算法或非线性成像已完成。T2、degree扩展、NN、nonlinear reconstruction、solver acceleration和发布均NOT_RUN；完成五-state anatomy后停止。
+
+Final inclusive budget: A21 CPU 349.157858 s /1200 s; GPU 281.661815 s /1200 s. Historical carry included: CPU 5955.773909 s /7200 s; GPU 5943.440674 s /43200 s.

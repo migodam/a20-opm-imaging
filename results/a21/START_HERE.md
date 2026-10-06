@@ -13,3 +13,5 @@
 物理冻结源码 `5c6bcb02bb4ab88f7b46f07bca4ca3f4e38a067c`；报告源码见冻结manifest和独立job receipts。参考未缩放、未修复；原A20/R1源码、账本、结果、release保持原样，未重新计算SHA256。
 
 实验已经停止。NN、nonlinear reconstruction、degree增加、solver acceleration、T2和A21发布均NOT_RUN。
+
+Final inclusive budget: A21 CPU 349.157858 s /1200 s; GPU 281.661815 s /1200 s. Historical carry included: CPU 5955.773909 s /7200 s; GPU 5943.440674 s /43200 s.
