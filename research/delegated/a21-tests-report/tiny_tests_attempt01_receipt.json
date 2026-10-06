@@ -1,0 +1,20 @@
+{
+  "scope": "a21-tests-report-tiny-tests-20261006-attempt01",
+  "status": "PASS",
+  "GPU_seconds": 0,
+  "bounded_CPU_limit_seconds": 30,
+  "no_Maxwell": true,
+  "no_truth": true,
+  "no_online_benchmark": true,
+  "python": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+  "command_scope": "owned synthetic unittest files only",
+  "measurement": "inclusive single-process CPU since Python startup; imports, tests, failure/report handling included",
+  "tests_run": 27,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_cases": [],
+  "process_cpu_seconds": 0.338769,
+  "wall_seconds": 0.7497089169919491,
+  "completed_UTC": "2026-10-06T02:52:31.323257+00:00"
+}

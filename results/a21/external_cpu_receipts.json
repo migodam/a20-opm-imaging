@@ -1,0 +1,25 @@
+[
+  {
+    "scope": "A21 bounded setup, read-only planning checks, transport and metadata overhead",
+    "process_cpu_seconds": 30.0,
+    "status": "CONSERVATIVE_ALLOWANCE",
+    "includes": "initial setup, read-only inspections, remote transport, final index metadata; measured jobs separately additive",
+    "GPU_seconds": 0
+  },
+  {
+    "scope": "a21-tests-report-tiny-tests-20261006-attempt01",
+    "process_cpu_seconds": 0.338769,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-tests-report/tiny_tests_attempt01_receipt.json",
+    "measurement": "inclusive measured controller CPU",
+    "status": "PASS"
+  },
+  {
+    "scope": "a21-tests-report-tiny-tests-20261006-attempt02",
+    "process_cpu_seconds": 0.382866,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-tests-report/tiny_tests_attempt02_receipt.json",
+    "measurement": "inclusive measured controller CPU",
+    "status": "PASS"
+  }
+]

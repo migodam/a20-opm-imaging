@@ -1,0 +1,22 @@
+{
+  "a21_cpu": 34.149966,
+  "a21_gpu": 0.0,
+  "new_CPU_seconds": 34.149966,
+  "new_GPU_seconds": 0.0,
+  "global_cpu": 5640.766017,
+  "global_gpu": 5661.778859,
+  "historical_CPU_seconds": 5606.616051,
+  "historical_GPU_seconds": 5661.778859,
+  "jobs": [
+    "a21-local-preflight-01",
+    "a21-local-targeted-02",
+    "a21-local-validate-01"
+  ],
+  "external_scopes": [
+    "A21 bounded setup, read-only planning checks, transport and metadata overhead",
+    "a21-tests-report-tiny-tests-20261006-attempt01",
+    "a21-tests-report-tiny-tests-20261006-attempt02"
+  ],
+  "billing_authority": "inclusive A21 job receipts + unique external scopes + frozen historical carry",
+  "nested_spans_not_additive": true
+}

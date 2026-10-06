@@ -7,4 +7,5 @@ runs/
 private/
 dist/
 configs/SOURCE_COMMIT.txt
+configs/A21_SOURCE_COMMIT.txt
 *.log.tmp

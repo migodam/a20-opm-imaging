@@ -1,0 +1,132 @@
+{
+  "scope": "synthetic complex linear systems with real material variables, active box constraints; not A20 data",
+  "random_problems": 17,
+  "configurations": 85,
+  "summary": {
+    "BASE_G": {
+      "cases": 17,
+      "max_primal_relative": 1.0729753732490457,
+      "max_dual_relative": 2.1941575432879756,
+      "max_HF_step_relative": 1.3115635049265175,
+      "median_HF_step_relative": 0.74702390133837,
+      "median_J_relative": 0.8845511342343774,
+      "max_core_condition": 1.4312822212201097
+    },
+    "BOTH_G": {
+      "cases": 17,
+      "max_primal_relative": 5.268313966450484e-16,
+      "max_dual_relative": 8.033166237445515e-16,
+      "max_HF_step_relative": 1.0209106140902323e-15,
+      "median_HF_step_relative": 6.161675012211401e-16,
+      "median_J_relative": 0.6779208666199179,
+      "max_core_condition": 1.4657669818251637
+    },
+    "BOTH_PG": {
+      "cases": 17,
+      "max_primal_relative": 4.214719976808366e-15,
+      "max_dual_relative": 9.512165373493431e-15,
+      "max_HF_step_relative": 1.5268502313548494e-15,
+      "median_HF_step_relative": 6.27236747501994e-16,
+      "median_J_relative": 1.422801200350899,
+      "max_core_condition": 55.66701946541822
+    },
+    "DUAL_G": {
+      "cases": 17,
+      "max_primal_relative": 0.935980207979005,
+      "max_dual_relative": 1.2874597091898537e-15,
+      "max_HF_step_relative": 0.3254985719866139,
+      "median_HF_step_relative": 0.07240378662980593,
+      "median_J_relative": 0.7861067671473752,
+      "max_core_condition": 1.5132772509308898
+    },
+    "PRIMAL_G": {
+      "cases": 17,
+      "max_primal_relative": 5.1065353697316445e-16,
+      "max_dual_relative": 2.113689421496885,
+      "max_HF_step_relative": 1.6599377425686723,
+      "median_HF_step_relative": 0.8141675452612163,
+      "median_J_relative": 0.7509043990704162,
+      "max_core_condition": 1.4831131396752155
+    }
+  },
+  "max_defect_identity_abs": 2.684617262846877e-15,
+  "max_real_pullback_abs": 7.447602459741819e-16,
+  "max_tied_adjoint_rel": 1.0467717573916394e-15,
+  "max_schur_petrov_relative": 7.933961196195544e-15,
+  "counterexamples": {
+    "primal_exact_step_wrong": {
+      "sf": [
+        1.0,
+        0.0
+      ],
+      "sr": [
+        1.0,
+        -4.0
+      ],
+      "delta_p": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delta_d": [
+        0.0,
+        8.0
+      ],
+      "relative_HF_error": 4.0
+    },
+    "pre_step_residual_is_wrong_dual_target": {
+      "primal_error": 0.0,
+      "pre_step_pullback_error": 0.0,
+      "correct_post_step_dual_error": 1.0,
+      "sf": [
+        1.0,
+        0.0
+      ],
+      "sr": [
+        1.1428571428571428,
+        -0.2857142857142857
+      ],
+      "relative_HF_error": 0.3194382824999699
+    },
+    "small_relative_errors_large_step": {
+      "primal_relative": 0.0,
+      "dual_relative": 1e-06,
+      "mu": 2e-12,
+      "relative_HF_error": 353553.3905934505,
+      "absolute_HF_error": 500000.00000025,
+      "certified_HF_bound": 500000.00000025006,
+      "sr": [
+        1.0,
+        -500000.0
+      ],
+      "beta": 500000000000.5002
+    },
+    "captured_but_singular_PG": {
+      "primal_capture": 1.0,
+      "dual_capture": 1.0,
+      "core": 0.0
+    },
+    "constrained_full_gap_normal_work": {
+      "sf": 0.0,
+      "sr": 0.5,
+      "HF": 2.0,
+      "nf": -1.0,
+      "full_gap": 0.75,
+      "half_squared_HF_error": 0.25,
+      "normal_work": 0.5
+    },
+    "two_sided_sufficient_not_necessary": {
+      "JF": 1.0,
+      "JR": 2.0,
+      "r": 1.0,
+      "Lambda": 1.0,
+      "sf": 0.0,
+      "sr": 0.0,
+      "nf": -1.0,
+      "nr": -2.0,
+      "delta_p": 0.0,
+      "delta_d": 1.0
+    }
+  }
+}
+All algebra, KKT, norm-bound, and gap assertions passed.
