@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "main_commit": "70452720ab9042bd76b3ad044d80d9c5da8f67b0",
+  "release_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
+  "anonymous_final_assets": [
+    {
+      "asset": "A21_FINAL_REMOTE_VERIFICATION.json",
+      "HTTP": 200,
+      "bytes": 6207,
+      "byte_equality": "PASS",
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "asset": "A21_PUBLICATION_CLOSEOUT.json",
+      "HTTP": 200,
+      "bytes": 20601,
+      "byte_equality": "PASS",
+      "authorization_header": false,
+      "cookies": false
+    }
+  ],
+  "no_new_physics": true,
+  "billed_CPU_seconds": 374.24412400000006,
+  "billed_GPU_seconds": 281.6618149999995
+}

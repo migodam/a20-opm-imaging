@@ -1,0 +1,1 @@
+{"campaign": "A21", "job": "a21-publish-closeout-01", "stage": "PUBLICATION_ONLY", "status": "COMPLETE", "returncode": 0, "new_physics": false, "inclusive_CPU_seconds": 0.321266, "wall_seconds": 2.352434040978551, "GPU_seconds": 0, "nested_spans_not_additive": true}

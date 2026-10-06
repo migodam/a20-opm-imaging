@@ -1,9 +1,9 @@
 {
-  "a21_cpu": 373.55128600000006,
+  "a21_cpu": 374.24412400000006,
   "a21_gpu": 281.6618149999995,
-  "new_CPU_seconds": 373.55128600000006,
+  "new_CPU_seconds": 374.24412400000006,
   "new_GPU_seconds": 281.6618149999995,
-  "global_cpu": 5980.167337,
+  "global_cpu": 5980.860175,
   "global_gpu": 5943.4406739999995,
   "historical_CPU_seconds": 5606.616051,
   "historical_GPU_seconds": 5661.778859,
@@ -20,6 +20,8 @@
     "a21-publish-anonymous-01",
     "a21-publish-anonymous-02",
     "a21-publish-assets-01",
+    "a21-publish-closeout-01",
+    "a21-publish-final-anonymous-01",
     "a21-publish-prepare-01",
     "a21-publish-push-01",
     "a21-publish-release-01",
@@ -42,11 +44,10 @@
   "billing_authority": "inclusive A21 job receipts + unique external scopes + frozen historical carry",
   "nested_spans_not_additive": true,
   "status": "COMPLETE_WITHIN_ALL_CAPS",
+  "publication": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
   "CPU_cap_seconds": 1200,
   "GPU_cap_seconds": 1200,
   "global_CPU_cap_seconds": 7200,
   "global_GPU_cap_seconds": 43200,
-  "additional_scientific_runs": "STOPPED_AFTER_FIVE_STATE_ANATOMY",
-  "publication": "IN_PROGRESS",
-  "billing_notes": "inclusive jobs + unique external scopes; publication failures included"
+  "additional_scientific_runs": "STOPPED_AFTER_FIVE_STATE_ANATOMY"
 }

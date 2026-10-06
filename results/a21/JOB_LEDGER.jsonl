@@ -17,3 +17,5 @@
 {"job": "a21-publish-release-live-01", "stage": "PUBLICATION_ONLY", "status": "COMPLETE", "receipt": "results/jobs/a21-publish-release-live-01/job_receipt.json", "new_physics": false}
 {"job": "a21-publish-anonymous-01", "stage": "PUBLICATION_ONLY", "status": "FAILED", "receipt": "results/jobs/a21-publish-anonymous-01/job_receipt.json", "new_physics": false}
 {"job": "a21-publish-anonymous-02", "stage": "PUBLICATION_ONLY", "status": "COMPLETE", "receipt": "results/jobs/a21-publish-anonymous-02/job_receipt.json", "new_physics": false}
+{"job": "a21-publish-closeout-01", "stage": "PUBLICATION_ONLY", "status": "COMPLETE", "receipt": "results/jobs/a21-publish-closeout-01/job_receipt.json", "new_physics": false}
+{"job": "a21-publish-final-anonymous-01", "stage": "PUBLICATION_ONLY", "status": "COMPLETE", "receipt": "results/jobs/a21-publish-final-anonymous-01/job_receipt.json", "new_physics": false}
