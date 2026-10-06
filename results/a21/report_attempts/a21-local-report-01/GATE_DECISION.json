@@ -1,0 +1,478 @@
+{
+  "schema": "a21.report_gates.v1",
+  "status": "FULL_MEASURED_SUPPORT_PENDING_CODEX_REVIEW",
+  "T0": {
+    "status": "PASS",
+    "synthetic": {
+      "status": "PASS",
+      "job": "a21-local-validate-01",
+      "real_5184_current_physics": false,
+      "online_descent_experiment": "NOT_RUN",
+      "new_SHA256_checks": 0,
+      "original_package_validation_evidence_preserved": true,
+      "maximum_controller_plus_child_CPU_seconds": 120,
+      "maximum_wall_seconds": 120,
+      "children": [
+        {
+          "command": [
+            "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+            "-B",
+            "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/validation/a21-local-validate-01/validate_two_sided.py"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.3275965000502765,
+          "process_cpu_seconds": 0.27614299999999997,
+          "measurement": "terminated child user + system CPU, including imports",
+          "status": "PASS",
+          "log": "results/a21/validation/a21-local-validate-01/child_1.log",
+          "GPU_seconds": 0
+        },
+        {
+          "command": [
+            "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_*.py",
+            "-v"
+          ],
+          "returncode": 0,
+          "wall_seconds": 1.6788237920263782,
+          "process_cpu_seconds": 1.550296,
+          "measurement": "terminated child user + system CPU, including imports",
+          "status": "PASS",
+          "log": "results/a21/validation/a21-local-validate-01/child_2.log",
+          "GPU_seconds": 0
+        }
+      ],
+      "complete_unittest_discovery": true,
+      "test_pattern": "test_*.py",
+      "controller_plus_child_CPU_seconds": 1.9036689999999998,
+      "copied_synthetic_results": "results/a21/validation/a21-local-validate-01/results.json",
+      "source_commit": null,
+      "source_freeze": "3b3b17b5f4cf5d37b26602ead2dfe7c913b37e23",
+      "attempt": "results/a21/validation/a21-local-validate-01",
+      "receipt_path": "D:\\AI\\A21_TWO_SIDED_ANATOMY\\results\\a21\\validation\\T0.json",
+      "source": "protocol/a21/validation/validate_two_sided.py",
+      "reused_existing_T0": true,
+      "new_child_jobs": 0,
+      "new_child_CPU_seconds": 0.0,
+      "copied_synthetic_result_locally_present": false
+    },
+    "backend": {
+      "2001": {
+        "status": "PASS",
+        "parent_id": 2001,
+        "iteration": 17,
+        "seed": [
+          20261006,
+          2001,
+          17,
+          2191
+        ],
+        "checks": {
+          "pack_unpack": 0.0,
+          "source_permutation": 0.0,
+          "whitening_transpose": 3.8802234527809776e-18,
+          "real_material_chart_adjoint": 9.73391623838937e-18,
+          "volume_material_metric": 1.569203052895211e-16,
+          "B_real_adjoint": 1.7283237484674087e-18,
+          "S_conjugate_adjoint": 1.6603592653585507e-16,
+          "L_conjugate_adjoint": 2.9699108408670315e-17,
+          "F_conjugate_adjoint": 2.6448619060088085e-16,
+          "full_real_dot": 9.354100507371429e-17,
+          "full_J_action_assembly": 3.5082091899965547e-15,
+          "full_J_adjoint_assembly": 2.7892843643193525e-15,
+          "primal_oracle_solve_residual": 5.871679034733104e-15,
+          "dual_oracle_solve_residual": 3.287612263648543e-15,
+          "primal_oracle_endpoint": 3.0548612023970716e-14,
+          "dual_oracle_endpoint": 1.1716729493207424e-13,
+          "retained_Schur_full_core_identity": 1.0483330990074347e-15
+        },
+        "backend_consistency_rtol": 1e-09,
+        "full_oracle_backward_rtol": 1e-09,
+        "material_coordinates": 54,
+        "sources": 6,
+        "complex_receivers_per_source": 128,
+        "real_measurements": 1536,
+        "physical_actions_charged": true,
+        "source_layout": "source-major Re128 then Im128",
+        "no_additional_QP": true,
+        "cost": {
+          "counts": {
+            "full_tangent_calls": 2,
+            "full_tangent_RHS": 12,
+            "full_tangent_receiver_rhs": 12,
+            "F_actions": 1,
+            "Maxwell_matvec_rhs": 16,
+            "operator_transfer_bytes": 2654208,
+            "F_adjoint_actions": 1,
+            "B_rhs": 6,
+            "L_actions": 7,
+            "S_adjoint_actions": 1,
+            "L_adjoint_actions": 7,
+            "S_actions": 7,
+            "B_adjoint_rhs": 12,
+            "full_adjoint_calls": 2,
+            "full_adjoint_RHS": 12,
+            "full_adjoint_receiver_rhs": 12
+          },
+          "exclusive_walls": {
+            "full_tangent": 0.07143149999319576,
+            "F": 0.002744499986874871,
+            "F_adjoint": 0.006353999997372739,
+            "B": 0.0017737000016495585,
+            "L": 0.04198169999290258,
+            "S_adjoint": 0.010021900001447648,
+            "L_adjoint": 0.04203029998461716,
+            "S": 0.009853099996689707,
+            "B_adjoint": 0.004366499983007088,
+            "full_adjoint": 0.15947059998870827,
+            "a21_real_backend_validation": 0.18292120007390622
+          },
+          "inclusive_wall_seconds": 0.5378061999945203,
+          "process_cpu_seconds": 0.53125
+        }
+      },
+      "2003": {
+        "status": "PASS",
+        "parent_id": 2003,
+        "iteration": 17,
+        "seed": [
+          20261006,
+          2003,
+          17,
+          2191
+        ],
+        "checks": {
+          "pack_unpack": 0.0,
+          "source_permutation": 0.0,
+          "whitening_transpose": 0.0,
+          "real_material_chart_adjoint": 8.346812372770289e-18,
+          "volume_material_metric": 2.4114431583461747e-16,
+          "B_real_adjoint": 6.098065825505321e-18,
+          "S_conjugate_adjoint": 8.30761998637588e-17,
+          "L_conjugate_adjoint": 1.6358524340288465e-17,
+          "F_conjugate_adjoint": 1.3785359596716203e-17,
+          "full_real_dot": 6.593780631798051e-17,
+          "full_J_action_assembly": 3.181696464013895e-15,
+          "full_J_adjoint_assembly": 3.242125858631706e-15,
+          "primal_oracle_solve_residual": 5.930397239074185e-15,
+          "dual_oracle_solve_residual": 3.4607105585828608e-15,
+          "primal_oracle_endpoint": 1.3503006111303044e-14,
+          "dual_oracle_endpoint": 6.813152908453015e-15,
+          "retained_Schur_full_core_identity": 1.1094330436674219e-15
+        },
+        "backend_consistency_rtol": 1e-09,
+        "full_oracle_backward_rtol": 1e-09,
+        "material_coordinates": 54,
+        "sources": 6,
+        "complex_receivers_per_source": 128,
+        "real_measurements": 1536,
+        "physical_actions_charged": true,
+        "source_layout": "source-major Re128 then Im128",
+        "no_additional_QP": true,
+        "cost": {
+          "counts": {
+            "full_tangent_calls": 2,
+            "full_tangent_RHS": 12,
+            "full_tangent_receiver_rhs": 12,
+            "F_actions": 1,
+            "Maxwell_matvec_rhs": 16,
+            "operator_transfer_bytes": 2654208,
+            "F_adjoint_actions": 1,
+            "B_rhs": 6,
+            "L_actions": 7,
+            "S_adjoint_actions": 1,
+            "L_adjoint_actions": 7,
+            "S_actions": 7,
+            "B_adjoint_rhs": 12,
+            "full_adjoint_calls": 2,
+            "full_adjoint_RHS": 12,
+            "full_adjoint_receiver_rhs": 12
+          },
+          "exclusive_walls": {
+            "full_tangent": 0.06908910001220647,
+            "F": 0.0029657999984920025,
+            "F_adjoint": 0.0063458000076934695,
+            "B": 0.0018188000103691593,
+            "L": 0.022846799998660572,
+            "S_adjoint": 0.008557700013625436,
+            "L_adjoint": 0.026528599992161617,
+            "S": 0.008695099997567013,
+            "B_adjoint": 0.004082999992533587,
+            "full_adjoint": 0.15609250000852626,
+            "a21_real_backend_validation": 0.1815686999761965
+          },
+          "inclusive_wall_seconds": 0.4930378999997629,
+          "process_cpu_seconds": 0.453125
+        }
+      },
+      "2013": {
+        "status": "PASS",
+        "parent_id": 2013,
+        "iteration": 17,
+        "seed": [
+          20261006,
+          2013,
+          17,
+          2191
+        ],
+        "checks": {
+          "pack_unpack": 0.0,
+          "source_permutation": 0.0,
+          "whitening_transpose": 2.1957285222174586e-18,
+          "real_material_chart_adjoint": 6.8749999221617494e-18,
+          "volume_material_metric": 4.814045828015566e-16,
+          "B_real_adjoint": 1.897472875107923e-17,
+          "S_conjugate_adjoint": 6.605021242266084e-17,
+          "L_conjugate_adjoint": 2.936763274865382e-17,
+          "F_conjugate_adjoint": 2.4165332088477913e-16,
+          "full_real_dot": 6.422464476465034e-17,
+          "full_J_action_assembly": 4.252369431341935e-15,
+          "full_J_adjoint_assembly": 2.4606735689878417e-15,
+          "primal_oracle_solve_residual": 5.8380683887738066e-15,
+          "dual_oracle_solve_residual": 2.9098337947004134e-15,
+          "primal_oracle_endpoint": 6.746441015934969e-14,
+          "dual_oracle_endpoint": 9.350611876762167e-14,
+          "retained_Schur_full_core_identity": 1.0890327474474261e-15
+        },
+        "backend_consistency_rtol": 1e-09,
+        "full_oracle_backward_rtol": 1e-09,
+        "material_coordinates": 54,
+        "sources": 6,
+        "complex_receivers_per_source": 128,
+        "real_measurements": 1536,
+        "physical_actions_charged": true,
+        "source_layout": "source-major Re128 then Im128",
+        "no_additional_QP": true,
+        "cost": {
+          "counts": {
+            "full_tangent_calls": 2,
+            "full_tangent_RHS": 12,
+            "full_tangent_receiver_rhs": 12,
+            "F_actions": 1,
+            "Maxwell_matvec_rhs": 16,
+            "operator_transfer_bytes": 2654208,
+            "F_adjoint_actions": 1,
+            "B_rhs": 6,
+            "L_actions": 7,
+            "S_adjoint_actions": 1,
+            "L_adjoint_actions": 7,
+            "S_actions": 7,
+            "B_adjoint_rhs": 12,
+            "full_adjoint_calls": 2,
+            "full_adjoint_RHS": 12,
+            "full_adjoint_receiver_rhs": 12
+          },
+          "exclusive_walls": {
+            "full_tangent": 0.07021740000345744,
+            "F": 0.002601100000902079,
+            "F_adjoint": 0.006384799999068491,
+            "B": 0.001830100009101443,
+            "L": 0.023017099985736422,
+            "S_adjoint": 0.009303700004238635,
+            "L_adjoint": 0.027111000003060326,
+            "S": 0.008166400002664886,
+            "B_adjoint": 0.004412299982504919,
+            "full_adjoint": 0.15573120000772178,
+            "a21_real_backend_validation": 0.18856930000765715
+          },
+          "inclusive_wall_seconds": 0.5020383999944897,
+          "process_cpu_seconds": 0.453125
+        }
+      }
+    },
+    "reported_pass": true
+  },
+  "T1": {
+    "states": [
+      {
+        "parent_id": 2001,
+        "iteration": 17,
+        "status": "MEASURED_GALERKIN_CAUSAL_PATTERN_PRESENT_REVIEW_REQUIRED",
+        "BOTH_G_pass": true,
+        "PRIMAL_G_relevant_dual_contribution": true,
+        "RANDOM_G_independent_protected_additions_matched": true,
+        "RANDOM_G_does_not_explain_result": true,
+        "full_causal_pattern": true,
+        "alternative_explanations": [],
+        "petrov_instance_status": "PG_INSTANCE_PASSES_WITH_RANDOM_DISCRIMINATION",
+        "RANDOM_PG_independent_protected_additions_matched": true,
+        "petrov_advantage": "NOT_ESTABLISHED_BY_FROZEN_ORACLE_FIDELITY",
+        "final_scientific_review": "CODEX_REVIEW_REQUIRED"
+      },
+      {
+        "parent_id": 2005,
+        "iteration": 17,
+        "status": "MEASURED_GALERKIN_CAUSAL_PATTERN_PRESENT_REVIEW_REQUIRED",
+        "BOTH_G_pass": true,
+        "PRIMAL_G_relevant_dual_contribution": true,
+        "RANDOM_G_independent_protected_additions_matched": true,
+        "RANDOM_G_does_not_explain_result": true,
+        "full_causal_pattern": true,
+        "alternative_explanations": [],
+        "petrov_instance_status": "PG_INSTANCE_PASSES_WITH_RANDOM_DISCRIMINATION",
+        "RANDOM_PG_independent_protected_additions_matched": true,
+        "petrov_advantage": "NOT_ESTABLISHED_BY_FROZEN_ORACLE_FIDELITY",
+        "final_scientific_review": "CODEX_REVIEW_REQUIRED"
+      },
+      {
+        "parent_id": 2003,
+        "iteration": 17,
+        "status": "MEASURED_GALERKIN_CAUSAL_PATTERN_PRESENT_REVIEW_REQUIRED",
+        "BOTH_G_pass": true,
+        "PRIMAL_G_relevant_dual_contribution": true,
+        "RANDOM_G_independent_protected_additions_matched": true,
+        "RANDOM_G_does_not_explain_result": true,
+        "full_causal_pattern": true,
+        "alternative_explanations": [],
+        "petrov_instance_status": "PG_INSTANCE_PASSES_WITH_RANDOM_DISCRIMINATION",
+        "RANDOM_PG_independent_protected_additions_matched": true,
+        "petrov_advantage": "NOT_ESTABLISHED_BY_FROZEN_ORACLE_FIDELITY",
+        "final_scientific_review": "CODEX_REVIEW_REQUIRED"
+      },
+      {
+        "parent_id": 2007,
+        "iteration": 17,
+        "status": "MEASURED_GALERKIN_CAUSAL_PATTERN_PRESENT_REVIEW_REQUIRED",
+        "BOTH_G_pass": true,
+        "PRIMAL_G_relevant_dual_contribution": true,
+        "RANDOM_G_independent_protected_additions_matched": true,
+        "RANDOM_G_does_not_explain_result": true,
+        "full_causal_pattern": true,
+        "alternative_explanations": [],
+        "petrov_instance_status": "PG_INSTANCE_PASSES_WITH_RANDOM_DISCRIMINATION",
+        "RANDOM_PG_independent_protected_additions_matched": true,
+        "petrov_advantage": "NOT_ESTABLISHED_BY_FROZEN_ORACLE_FIDELITY",
+        "final_scientific_review": "CODEX_REVIEW_REQUIRED"
+      },
+      {
+        "parent_id": 2013,
+        "iteration": 17,
+        "status": "MEASURED_GALERKIN_CAUSAL_PATTERN_PRESENT_REVIEW_REQUIRED",
+        "BOTH_G_pass": true,
+        "PRIMAL_G_relevant_dual_contribution": true,
+        "RANDOM_G_independent_protected_additions_matched": true,
+        "RANDOM_G_does_not_explain_result": true,
+        "full_causal_pattern": true,
+        "alternative_explanations": [],
+        "petrov_instance_status": "PG_INSTANCE_PASSES_WITH_RANDOM_DISCRIMINATION",
+        "RANDOM_PG_independent_protected_additions_matched": true,
+        "petrov_advantage": "NOT_ESTABLISHED_BY_FROZEN_ORACLE_FIDELITY",
+        "final_scientific_review": "CODEX_REVIEW_REQUIRED"
+      }
+    ],
+    "all_five_BOTH_G_pass": true,
+    "all_five_causal_pattern": true,
+    "target_relative_HF_error": 0.05
+  },
+  "provisional_label": "LATE_GN_TWO_SIDED_FIDELITY_CONFIRMED",
+  "final_scientific_status": "CODEX_REVIEW_REQUIRED",
+  "T2": "NOT_RUN_NOT_AUTHORIZED",
+  "online_speedup": "NOT_MEASURED_NO_CLAIM",
+  "nonlinear_imaging_success": "NOT_MEASURED_NO_CLAIM",
+  "truth_evaluation": "NOT_ACCESSED",
+  "evidence_scope": "ORACLE_OFFLINE_FROZEN_QUADRATIC",
+  "dataset_exposure": "historically_exposed_feasibility",
+  "local_driver_validation": {
+    "path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/validation/T0.json",
+    "result": {
+      "status": "PASS",
+      "job": "a21-local-validate-01",
+      "real_5184_current_physics": false,
+      "online_descent_experiment": "NOT_RUN",
+      "new_SHA256_checks": 0,
+      "original_package_validation_evidence_preserved": true,
+      "maximum_controller_plus_child_CPU_seconds": 120,
+      "maximum_wall_seconds": 120,
+      "children": [
+        {
+          "command": [
+            "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+            "-B",
+            "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/validation/a21-local-validate-01/validate_two_sided.py"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.3275965000502765,
+          "process_cpu_seconds": 0.27614299999999997,
+          "measurement": "terminated child user + system CPU, including imports",
+          "status": "PASS",
+          "log": "results/a21/validation/a21-local-validate-01/child_1.log",
+          "GPU_seconds": 0
+        },
+        {
+          "command": [
+            "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_*.py",
+            "-v"
+          ],
+          "returncode": 0,
+          "wall_seconds": 1.6788237920263782,
+          "process_cpu_seconds": 1.550296,
+          "measurement": "terminated child user + system CPU, including imports",
+          "status": "PASS",
+          "log": "results/a21/validation/a21-local-validate-01/child_2.log",
+          "GPU_seconds": 0
+        }
+      ],
+      "complete_unittest_discovery": true,
+      "test_pattern": "test_*.py",
+      "controller_plus_child_CPU_seconds": 1.9036689999999998,
+      "copied_synthetic_results": "results/a21/validation/a21-local-validate-01/results.json",
+      "source_commit": null,
+      "source_freeze": "3b3b17b5f4cf5d37b26602ead2dfe7c913b37e23",
+      "attempt": "results/a21/validation/a21-local-validate-01"
+    },
+    "context": "LOCAL_SYNTHETIC_DRIVER_CHECK_SEPARATE_FROM_CACHED_REAL_STATE_T0"
+  },
+  "engine_summary_status": "COMPLETE",
+  "execution_limitations": {
+    "stopped_reason": null,
+    "status_counts": {
+      "OK": 35
+    },
+    "missing_or_blocked_rows": []
+  },
+  "input_issues": [],
+  "complete_output_count": 35,
+  "expected_state_arm_count": 35,
+  "figure_status": "GENERATED_FROM_SAVED_MEASUREMENTS",
+  "figures": {
+    "A21_HF_ERROR_AND_BOUNDS": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_HF_ERROR_AND_BOUNDS.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_HF_ERROR_AND_BOUNDS.svg"
+    ],
+    "A21_WEIGHTED_STATIONARITY": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_WEIGHTED_STATIONARITY.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_WEIGHTED_STATIONARITY.svg"
+    ],
+    "A21_ENDPOINTS_AND_SCALE": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_ENDPOINTS_AND_SCALE.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_ENDPOINTS_AND_SCALE.svg"
+    ],
+    "A21_CONDITIONING": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_CONDITIONING.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_CONDITIONING.svg"
+    ],
+    "A21_NORMAL_WORK": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_NORMAL_WORK.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_NORMAL_WORK.svg"
+    ],
+    "A21_BASIS_MEMORY": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_BASIS_MEMORY.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_BASIS_MEMORY.svg"
+    ]
+  }
+}

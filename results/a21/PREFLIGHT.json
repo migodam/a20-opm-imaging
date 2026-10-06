@@ -1,0 +1,716 @@
+{
+  "status": "PASS",
+  "scope": "runtime headers, small scalars, immutable IDs and unique canonical rows only",
+  "real_5184_current_physics": false,
+  "full_KKT_revalidation": "NOT_RUN",
+  "states": [
+    {
+      "parent_id": 2001,
+      "iteration": 17,
+      "runtime_problem": "data/runtime/2001/problem.npz",
+      "runtime_state": "data/runtime/2001/state_17.npz",
+      "problem_headers": {
+        "points": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            3
+          ],
+          "fortran_order": false
+        },
+        "volume": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "data0": {
+          "dtype": "<c16",
+          "shape": [
+            6,
+            128
+          ],
+          "fortran_order": false
+        },
+        "scale": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "init": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "Q": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            27
+          ],
+          "fortran_order": false
+        },
+        "kind": {
+          "dtype": "<U8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "dirs": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "pols": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "receivers": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            3
+          ],
+          "fortran_order": false
+        },
+        "obs_basis": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            2,
+            3
+          ],
+          "fortran_order": false
+        },
+        "k": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "parent_id": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "historical_exposed": {
+          "dtype": "|b1",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "state_headers": {
+        "chi": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "lambda_total": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "ell": {
+          "dtype": "<f8",
+          "shape": [
+            54
+          ],
+          "fortran_order": false
+        },
+        "iteration": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "canonical_inputs": [
+        {
+          "kind": "reference",
+          "canonical_line": 80,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2001_17_full_GN_reference_None.npz"
+        },
+        {
+          "kind": "baseline",
+          "canonical_line": 85,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2001_17_mixed_3.npz"
+        }
+      ]
+    },
+    {
+      "parent_id": 2005,
+      "iteration": 17,
+      "runtime_problem": "data/runtime/2005/problem.npz",
+      "runtime_state": "data/runtime/2005/state_17.npz",
+      "problem_headers": {
+        "points": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            3
+          ],
+          "fortran_order": false
+        },
+        "volume": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "data0": {
+          "dtype": "<c16",
+          "shape": [
+            6,
+            128
+          ],
+          "fortran_order": false
+        },
+        "scale": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "init": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "Q": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            27
+          ],
+          "fortran_order": false
+        },
+        "kind": {
+          "dtype": "<U8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "dirs": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "pols": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "receivers": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            3
+          ],
+          "fortran_order": false
+        },
+        "obs_basis": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            2,
+            3
+          ],
+          "fortran_order": false
+        },
+        "k": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "parent_id": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "historical_exposed": {
+          "dtype": "|b1",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "state_headers": {
+        "chi": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "lambda_total": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "ell": {
+          "dtype": "<f8",
+          "shape": [
+            54
+          ],
+          "fortran_order": false
+        },
+        "iteration": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "canonical_inputs": [
+        {
+          "kind": "reference",
+          "canonical_line": 235,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2005_17_full_GN_reference_None.npz"
+        },
+        {
+          "kind": "baseline",
+          "canonical_line": 240,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2005_17_mixed_3.npz"
+        }
+      ]
+    },
+    {
+      "parent_id": 2003,
+      "iteration": 17,
+      "runtime_problem": "data/runtime/2003/problem.npz",
+      "runtime_state": "data/runtime/2003/state_17.npz",
+      "problem_headers": {
+        "points": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            3
+          ],
+          "fortran_order": false
+        },
+        "volume": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "data0": {
+          "dtype": "<c16",
+          "shape": [
+            6,
+            128
+          ],
+          "fortran_order": false
+        },
+        "scale": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "init": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "Q": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            27
+          ],
+          "fortran_order": false
+        },
+        "kind": {
+          "dtype": "<U8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "dirs": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "pols": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "receivers": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            3
+          ],
+          "fortran_order": false
+        },
+        "obs_basis": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            2,
+            3
+          ],
+          "fortran_order": false
+        },
+        "k": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "parent_id": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "historical_exposed": {
+          "dtype": "|b1",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "state_headers": {
+        "chi": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "lambda_total": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "ell": {
+          "dtype": "<f8",
+          "shape": [
+            54
+          ],
+          "fortran_order": false
+        },
+        "iteration": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "canonical_inputs": [
+        {
+          "kind": "reference",
+          "canonical_line": 390,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2003_17_full_GN_reference_None.npz"
+        },
+        {
+          "kind": "baseline",
+          "canonical_line": 395,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2003_17_mixed_3.npz"
+        }
+      ]
+    },
+    {
+      "parent_id": 2007,
+      "iteration": 17,
+      "runtime_problem": "data/runtime/2007/problem.npz",
+      "runtime_state": "data/runtime/2007/state_17.npz",
+      "problem_headers": {
+        "points": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            3
+          ],
+          "fortran_order": false
+        },
+        "volume": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "data0": {
+          "dtype": "<c16",
+          "shape": [
+            6,
+            128
+          ],
+          "fortran_order": false
+        },
+        "scale": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "init": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "Q": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            27
+          ],
+          "fortran_order": false
+        },
+        "kind": {
+          "dtype": "<U8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "dirs": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "pols": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "receivers": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            3
+          ],
+          "fortran_order": false
+        },
+        "obs_basis": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            2,
+            3
+          ],
+          "fortran_order": false
+        },
+        "k": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "parent_id": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "historical_exposed": {
+          "dtype": "|b1",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "state_headers": {
+        "chi": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "lambda_total": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "ell": {
+          "dtype": "<f8",
+          "shape": [
+            54
+          ],
+          "fortran_order": false
+        },
+        "iteration": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "canonical_inputs": [
+        {
+          "kind": "reference",
+          "canonical_line": 545,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2007_17_full_GN_reference_None.npz"
+        },
+        {
+          "kind": "baseline",
+          "canonical_line": 550,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2007_17_mixed_3.npz"
+        }
+      ]
+    },
+    {
+      "parent_id": 2013,
+      "iteration": 17,
+      "runtime_problem": "data/runtime/2013/problem.npz",
+      "runtime_state": "data/runtime/2013/state_17.npz",
+      "problem_headers": {
+        "points": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            3
+          ],
+          "fortran_order": false
+        },
+        "volume": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "data0": {
+          "dtype": "<c16",
+          "shape": [
+            6,
+            128
+          ],
+          "fortran_order": false
+        },
+        "scale": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "init": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "Q": {
+          "dtype": "<f8",
+          "shape": [
+            1728,
+            27
+          ],
+          "fortran_order": false
+        },
+        "kind": {
+          "dtype": "<U8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "dirs": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "pols": {
+          "dtype": "<f8",
+          "shape": [
+            6,
+            3
+          ],
+          "fortran_order": false
+        },
+        "receivers": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            3
+          ],
+          "fortran_order": false
+        },
+        "obs_basis": {
+          "dtype": "<f8",
+          "shape": [
+            64,
+            2,
+            3
+          ],
+          "fortran_order": false
+        },
+        "k": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "parent_id": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "historical_exposed": {
+          "dtype": "|b1",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "state_headers": {
+        "chi": {
+          "dtype": "<c16",
+          "shape": [
+            1728
+          ],
+          "fortran_order": false
+        },
+        "lambda_total": {
+          "dtype": "<f8",
+          "shape": [],
+          "fortran_order": false
+        },
+        "ell": {
+          "dtype": "<f8",
+          "shape": [
+            54
+          ],
+          "fortran_order": false
+        },
+        "iteration": {
+          "dtype": "<i8",
+          "shape": [],
+          "fortran_order": false
+        }
+      },
+      "canonical_inputs": [
+        {
+          "kind": "reference",
+          "canonical_line": 855,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2013_17_full_GN_reference_None.npz"
+        },
+        {
+          "kind": "baseline",
+          "canonical_line": 860,
+          "step_path": "results/replay/steps/20261005T082521_71339a28_2013_17_mixed_3.npz"
+        }
+      ]
+    }
+  ],
+  "source_commit": "5c6bcb02bb4ab88f7b46f07bca4ca3f4e38a067c",
+  "run_commit": "5c6bcb02bb4ab88f7b46f07bca4ca3f4e38a067c",
+  "source_freeze": "3b3b17b5f4cf5d37b26602ead2dfe7c913b37e23",
+  "original_A20_R1_source_freeze": "e29f345ae5aea170a18cca1b79defe57e878ab29",
+  "source_identity_source": "ignored A21_SOURCE_COMMIT.txt",
+  "new_SHA256_checks": 0,
+  "new_physics": false,
+  "dataset_exposure": "historically_exposed_feasibility"
+}

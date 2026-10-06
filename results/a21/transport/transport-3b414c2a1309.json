@@ -1,0 +1,21 @@
+{
+  "scope": "transport-3b414c2a1309",
+  "action": "run",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.056198,
+  "remote_archive_CPU_seconds": 0,
+  "remote_extract_CPU_seconds": 0,
+  "wall_seconds": 1.406235541,
+  "GPU_seconds": 0,
+  "billing": "covered by frozen 30-second setup/transport allowance; measured overage additionally billed",
+  "measurement": "local controller including imports + local child CPU + remote archive process CPU",
+  "details": {
+    "stage": "preflight",
+    "job": "a21-xinan-preflight-01",
+    "device": "cpu",
+    "runtime_phase": "all",
+    "shared_lock": "existing A20 runs/gpu.lock",
+    "foreground": true
+  },
+  "new_SHA256_checks": 0
+}

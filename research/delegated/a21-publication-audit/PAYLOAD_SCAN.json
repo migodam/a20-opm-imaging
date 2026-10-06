@@ -1,0 +1,815 @@
+{
+  "schema": "a21.publication_payload_audit.v1",
+  "scope": "specified A21 additive payload only; originals read-only",
+  "payload_file_count": 208,
+  "text_file_count": 196,
+  "binary_file_count": 12,
+  "payload_total_bytes": 16758299,
+  "payload_files": [
+    "configs/a21.json",
+    "protocol/a21/APPROXIMATE_ERROR_BOUND.md",
+    "protocol/a21/CLOSEST_PRIOR_AUDIT.md",
+    "protocol/a21/CODEX_TWO_SIDED_ANATOMY.md",
+    "protocol/a21/COMPLETE_A21_MEMO.md",
+    "protocol/a21/GO_NO_GO_GATES.md",
+    "protocol/a21/MANIFEST_SHA256.txt",
+    "protocol/a21/MAXWELL_PRIMAL_DUAL_INTERPRETATION.md",
+    "protocol/a21/ONLINE_ALGORITHM_CANDIDATES.md",
+    "protocol/a21/OPM_PRIMAL_DUAL_ARCHITECTURE.md",
+    "protocol/a21/ORACLE_ANATOMY_SPEC.md",
+    "protocol/a21/PETROV_GALERKIN_TASK_INTERPOLATION.md",
+    "protocol/a21/REFERENCES.md",
+    "protocol/a21/START_HERE.md",
+    "protocol/a21/TWO_SIDED_GN_THEOREM.md",
+    "protocol/a21/VALIDATION_REPORT.md",
+    "protocol/a21/validation/environment.json",
+    "protocol/a21/validation/online_descent_results.json",
+    "protocol/a21/validation/online_descent_run.log",
+    "protocol/a21/validation/results.json",
+    "protocol/a21/validation/run.log",
+    "protocol/a21/validation/validate_online_descent.py",
+    "protocol/a21/validation/validate_two_sided.py",
+    "results/a21/A21_BACKEND_MAPPING.md",
+    "results/a21/A21_FROZEN_MANIFEST.json",
+    "results/a21/A21_METRICS.csv",
+    "results/a21/A21_NUMERICAL_CONVENTIONS.md",
+    "results/a21/A21_ORACLE_REPORT.md",
+    "results/a21/A21_ORACLE_REPORT_ZH.md",
+    "results/a21/ACTION_ACCOUNTING.md",
+    "results/a21/BUDGET_CURRENT.json",
+    "results/a21/BUDGET_FINAL.json",
+    "results/a21/COST_LEDGER.jsonl",
+    "results/a21/ENVIRONMENT_PROBE.json",
+    "results/a21/FAILURE_LEDGER.jsonl",
+    "results/a21/GATE_DECISION.json",
+    "results/a21/INDEPENDENT_ARRAY_REVIEW.json",
+    "results/a21/JOB_LEDGER.jsonl",
+    "results/a21/PREFLIGHT.json",
+    "results/a21/REPORT_MANIFEST.json",
+    "results/a21/REPRODUCE.md",
+    "results/a21/RUNTIME_ENVIRONMENT.json",
+    "results/a21/RUN_CLOSEOUT.json",
+    "results/a21/START_HERE.md",
+    "results/a21/anatomy/frozen_inputs.json",
+    "results/a21/anatomy/rows.jsonl",
+    "results/a21/anatomy/states/2001_17.json",
+    "results/a21/anatomy/states/2003_17.json",
+    "results/a21/anatomy/states/2005_17.json",
+    "results/a21/anatomy/states/2007_17.json",
+    "results/a21/anatomy/states/2013_17.json",
+    "results/a21/anatomy/summary.json",
+    "results/a21/anatomy/validation/synthetic_receipt_reuse.json",
+    "results/a21/external_cpu_receipts.json",
+    "results/a21/figures/A21_BASIS_MEMORY.png",
+    "results/a21/figures/A21_BASIS_MEMORY.svg",
+    "results/a21/figures/A21_CONDITIONING.png",
+    "results/a21/figures/A21_CONDITIONING.svg",
+    "results/a21/figures/A21_ENDPOINTS_AND_SCALE.png",
+    "results/a21/figures/A21_ENDPOINTS_AND_SCALE.svg",
+    "results/a21/figures/A21_HF_ERROR_AND_BOUNDS.png",
+    "results/a21/figures/A21_HF_ERROR_AND_BOUNDS.svg",
+    "results/a21/figures/A21_NORMAL_WORK.png",
+    "results/a21/figures/A21_NORMAL_WORK.svg",
+    "results/a21/figures/A21_WEIGHTED_STATIONARITY.png",
+    "results/a21/figures/A21_WEIGHTED_STATIONARITY.svg",
+    "results/a21/per_state/2001_17.json",
+    "results/a21/per_state/2003_17.json",
+    "results/a21/per_state/2005_17.json",
+    "results/a21/per_state/2007_17.json",
+    "results/a21/per_state/2013_17.json",
+    "results/a21/rawdata/A21_BASIS_MEMORY.csv",
+    "results/a21/rawdata/A21_CONDITIONING.csv",
+    "results/a21/rawdata/A21_ENDPOINTS_AND_SCALE.csv",
+    "results/a21/rawdata/A21_HF_ERROR_AND_BOUNDS.csv",
+    "results/a21/rawdata/A21_NORMAL_WORK.csv",
+    "results/a21/rawdata/A21_WEIGHTED_STATIONARITY.csv",
+    "results/a21/rawdata/ENGINE_SUMMARY.json",
+    "results/a21/rawdata/LOCAL_DRIVER_T0.json",
+    "results/a21/rawdata/OUTPUT_COMPLETENESS.json",
+    "results/a21/rawdata/RUNTIME_RECEIPTS.json",
+    "results/a21/rawdata/SOURCE_ROWS.csv",
+    "results/a21/rawdata/SOURCE_ROWS.json",
+    "results/a21/report_attempts/a21-local-report-01/A21_METRICS.csv",
+    "results/a21/report_attempts/a21-local-report-01/A21_ORACLE_REPORT.md",
+    "results/a21/report_attempts/a21-local-report-01/GATE_DECISION.json",
+    "results/a21/report_attempts/a21-local-report-01/REPORT_MANIFEST.json",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_BASIS_MEMORY.png",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_BASIS_MEMORY.svg",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_CONDITIONING.png",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_CONDITIONING.svg",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_ENDPOINTS_AND_SCALE.png",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_ENDPOINTS_AND_SCALE.svg",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_HF_ERROR_AND_BOUNDS.png",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_HF_ERROR_AND_BOUNDS.svg",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_NORMAL_WORK.png",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_NORMAL_WORK.svg",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_WEIGHTED_STATIONARITY.png",
+    "results/a21/report_attempts/a21-local-report-01/figures/A21_WEIGHTED_STATIONARITY.svg",
+    "results/a21/transport/transport-01318e3eb9eb.json",
+    "results/a21/transport/transport-3b414c2a1309.json",
+    "results/a21/transport/transport-5f5c8244ecab.json",
+    "results/a21/transport/transport-80648d9333af.json",
+    "results/a21/transport/transport-ce29b72f255c.json",
+    "results/a21/transport/transport-dd6f66e585ed.json",
+    "results/a21/transport/transport-e2a196399cfa.json",
+    "results/a21/validation/T0.json",
+    "results/a21/validation/a21-local-report-regression-03/T0.json",
+    "results/a21/validation/a21-local-report-regression-03/attempt.json",
+    "results/a21/validation/a21-local-report-regression-03/child_1.json",
+    "results/a21/validation/a21-local-report-regression-03/child_1.log",
+    "results/a21/validation/a21-local-report-regression-03/child_2.json",
+    "results/a21/validation/a21-local-report-regression-03/child_2.log",
+    "results/a21/validation/a21-local-report-regression-03/results.json",
+    "results/a21/validation/a21-local-report-regression-03/validate_two_sided.py",
+    "results/a21/validation/a21-local-targeted-02/T0.json",
+    "results/a21/validation/a21-local-targeted-02/attempt.json",
+    "results/a21/validation/a21-local-targeted-02/child_1.json",
+    "results/a21/validation/a21-local-targeted-02/child_1.log",
+    "results/a21/validation/a21-local-targeted-02/child_2.json",
+    "results/a21/validation/a21-local-targeted-02/child_2.log",
+    "results/a21/validation/a21-local-targeted-02/results.json",
+    "results/a21/validation/a21-local-targeted-02/validate_two_sided.py",
+    "results/a21/validation/a21-local-validate-01/T0.json",
+    "results/a21/validation/a21-local-validate-01/attempt.json",
+    "results/a21/validation/a21-local-validate-01/child_1.json",
+    "results/a21/validation/a21-local-validate-01/child_1.log",
+    "results/a21/validation/a21-local-validate-01/child_2.json",
+    "results/a21/validation/a21-local-validate-01/child_2.log",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_A1_full_state_tangent_distinguished_from_A2_derivative.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_budget_rejection_and_failed_action_accounting.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_complex_current_adjoints_and_metric.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_constrained_chart_quadratic_KKT_and_full_gap_bound.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_exact_schur_actions_adjoint_resolvent_and_galerkin_equivalence.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_fixed_galerkin_reduced_state_derivative_and_native_equivalence.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_frozen_petrov_derivative_and_moving_least_squares_term.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_full_physics_contract_refuses_native_and_adapter_reduced_states.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_full_physics_rejects_foreign_frequency_and_geometry_models.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_full_tangent_and_adjoint_refuse_wrong_material_state.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_full_tangent_and_full_objective_finite_difference.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_material_metric_and_real_gauge_covariance.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_material_refresh_invalidates_projection_and_cached_reduced_matrix.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_moving_galerkin_basis_requires_explicit_basis_derivative.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_multi_frequency_stack_uses_distinct_physics_shared_material.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_online_payload_and_basis_capability_reject_offline_fields.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_original_jvp_vjp_equal_adapter_and_factored_actions.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_packing_whitening_multiple_sources_and_probe_columns.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_projection_complex_adjoint_and_current_unitary_gauge.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_real_material_B_adjoint_batched_and_compressed.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_real_physical_hierarchy_nested_streams_and_breakdown.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_seed_zero_budgets_and_zero_deflated_blocks.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_singular_and_absolute_small_cores_rejected_and_fallback_named.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_tiny_two_update_nonlinear_full_A1_A2_smoke.jsonl",
+    "results/a21/validation/a21-local-validate-01/legacy_test_actions/test_tiny_voxel_quadratic_KKT_and_constraints.jsonl",
+    "results/a21/validation/a21-local-validate-01/results.json",
+    "results/a21/validation/a21-local-validate-01/validate_two_sided.py",
+    "results/jobs/a21-anatomy-01/cost.jsonl",
+    "results/jobs/a21-anatomy-01/job_receipt.json",
+    "results/jobs/a21-anatomy-01/manifest.json",
+    "results/jobs/a21-anatomy-01/result.json",
+    "results/jobs/a21-local-array-review-01/cost.jsonl",
+    "results/jobs/a21-local-array-review-01/job_receipt.json",
+    "results/jobs/a21-local-array-review-01/result.json",
+    "results/jobs/a21-local-delivery-01/cost.jsonl",
+    "results/jobs/a21-local-delivery-01/job_receipt.json",
+    "results/jobs/a21-local-delivery-01/result.json",
+    "results/jobs/a21-local-preflight-01/job_receipt.json",
+    "results/jobs/a21-local-preflight-01/manifest.json",
+    "results/jobs/a21-local-preflight-01/result.json",
+    "results/jobs/a21-local-report-01/cost.jsonl",
+    "results/jobs/a21-local-report-01/job_receipt.json",
+    "results/jobs/a21-local-report-01/manifest.json",
+    "results/jobs/a21-local-report-01/result.json",
+    "results/jobs/a21-local-report-final-02/cost.jsonl",
+    "results/jobs/a21-local-report-final-02/job_receipt.json",
+    "results/jobs/a21-local-report-final-02/manifest.json",
+    "results/jobs/a21-local-report-final-02/result.json",
+    "results/jobs/a21-local-report-regression-03/cost.jsonl",
+    "results/jobs/a21-local-report-regression-03/job_receipt.json",
+    "results/jobs/a21-local-report-regression-03/manifest.json",
+    "results/jobs/a21-local-report-regression-03/result.json",
+    "results/jobs/a21-local-targeted-02/cost.jsonl",
+    "results/jobs/a21-local-targeted-02/job_receipt.json",
+    "results/jobs/a21-local-targeted-02/manifest.json",
+    "results/jobs/a21-local-targeted-02/result.json",
+    "results/jobs/a21-local-validate-01/cost.jsonl",
+    "results/jobs/a21-local-validate-01/job_receipt.json",
+    "results/jobs/a21-local-validate-01/manifest.json",
+    "results/jobs/a21-local-validate-01/result.json",
+    "results/jobs/a21-xinan-preflight-01/job_receipt.json",
+    "results/jobs/a21-xinan-preflight-01/manifest.json",
+    "results/jobs/a21-xinan-preflight-01/result.json",
+    "src/a21/__init__.py",
+    "src/a21/anatomy.py",
+    "src/a21/budget.py",
+    "src/a21/cli.py",
+    "src/a21/core.py",
+    "src/a21/diagnostics.py",
+    "src/a21/report.py",
+    "src/a21/validation.py",
+    "tests/test_a21_budget.py",
+    "tests/test_a21_core.py",
+    "tests/test_a21_flow.py",
+    "tests/test_a21_report_allowance.py",
+    "tests/test_a21_two_sided.py",
+    "tools/a21_integrity.py",
+    "tools/a21_remote_jobs.py",
+    "tools/a21_review.py"
+  ],
+  "excluded_offline_files": [
+    "results/a21/anatomy/caches/2001_17.json",
+    "results/a21/anatomy/caches/2001_17.npz",
+    "results/a21/anatomy/caches/2003_17.json",
+    "results/a21/anatomy/caches/2003_17.npz",
+    "results/a21/anatomy/caches/2005_17.json",
+    "results/a21/anatomy/caches/2005_17.npz",
+    "results/a21/anatomy/caches/2007_17.json",
+    "results/a21/anatomy/caches/2007_17.npz",
+    "results/a21/anatomy/caches/2013_17.json",
+    "results/a21/anatomy/caches/2013_17.npz",
+    "results/a21/anatomy/diagnostics/2001_17_BASE_G.npz",
+    "results/a21/anatomy/diagnostics/2001_17_BOTH_G.npz",
+    "results/a21/anatomy/diagnostics/2001_17_BOTH_PG.npz",
+    "results/a21/anatomy/diagnostics/2001_17_DUAL_G.npz",
+    "results/a21/anatomy/diagnostics/2001_17_PRIMAL_G.npz",
+    "results/a21/anatomy/diagnostics/2001_17_RANDOM_G.npz",
+    "results/a21/anatomy/diagnostics/2001_17_RANDOM_PG.npz",
+    "results/a21/anatomy/diagnostics/2003_17_BASE_G.npz",
+    "results/a21/anatomy/diagnostics/2003_17_BOTH_G.npz",
+    "results/a21/anatomy/diagnostics/2003_17_BOTH_PG.npz",
+    "results/a21/anatomy/diagnostics/2003_17_DUAL_G.npz",
+    "results/a21/anatomy/diagnostics/2003_17_PRIMAL_G.npz",
+    "results/a21/anatomy/diagnostics/2003_17_RANDOM_G.npz",
+    "results/a21/anatomy/diagnostics/2003_17_RANDOM_PG.npz",
+    "results/a21/anatomy/diagnostics/2005_17_BASE_G.npz",
+    "results/a21/anatomy/diagnostics/2005_17_BOTH_G.npz",
+    "results/a21/anatomy/diagnostics/2005_17_BOTH_PG.npz",
+    "results/a21/anatomy/diagnostics/2005_17_DUAL_G.npz",
+    "results/a21/anatomy/diagnostics/2005_17_PRIMAL_G.npz",
+    "results/a21/anatomy/diagnostics/2005_17_RANDOM_G.npz",
+    "results/a21/anatomy/diagnostics/2005_17_RANDOM_PG.npz",
+    "results/a21/anatomy/diagnostics/2007_17_BASE_G.npz",
+    "results/a21/anatomy/diagnostics/2007_17_BOTH_G.npz",
+    "results/a21/anatomy/diagnostics/2007_17_BOTH_PG.npz",
+    "results/a21/anatomy/diagnostics/2007_17_DUAL_G.npz",
+    "results/a21/anatomy/diagnostics/2007_17_PRIMAL_G.npz",
+    "results/a21/anatomy/diagnostics/2007_17_RANDOM_G.npz",
+    "results/a21/anatomy/diagnostics/2007_17_RANDOM_PG.npz",
+    "results/a21/anatomy/diagnostics/2013_17_BASE_G.npz",
+    "results/a21/anatomy/diagnostics/2013_17_BOTH_G.npz",
+    "results/a21/anatomy/diagnostics/2013_17_BOTH_PG.npz",
+    "results/a21/anatomy/diagnostics/2013_17_DUAL_G.npz",
+    "results/a21/anatomy/diagnostics/2013_17_PRIMAL_G.npz",
+    "results/a21/anatomy/diagnostics/2013_17_RANDOM_G.npz",
+    "results/a21/anatomy/diagnostics/2013_17_RANDOM_PG.npz"
+  ],
+  "excluded_offline_npz_count": 40,
+  "excluded_cache_JSON_count": 5,
+  "ignored_bytecode_count": 0,
+  "symlinks": [],
+  "secret_candidates": [],
+  "operational_metadata_locations": [
+    {
+      "file": "protocol/a21/COMPLETE_A21_MEMO.md",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 15,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "protocol/a21/REFERENCES.md",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 15,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/A21_FROZEN_MANIFEST.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 29,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/A21_METRICS.csv",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 315,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/GATE_DECISION.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 20,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/JOB_LEDGER.jsonl",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 16,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/REPORT_MANIFEST.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 34,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/REPRODUCE.md",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/frozen_inputs.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 25,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/rows.jsonl",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 70,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/states/2001_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 14,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/states/2003_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 14,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/states/2005_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 14,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/states/2007_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 14,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/states/2013_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 14,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/summary.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 78,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/anatomy/validation/synthetic_receipt_reuse.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 4,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/figures/A21_BASIS_MEMORY.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/figures/A21_CONDITIONING.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/figures/A21_ENDPOINTS_AND_SCALE.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/figures/A21_HF_ERROR_AND_BOUNDS.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/figures/A21_NORMAL_WORK.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/figures/A21_WEIGHTED_STATIONARITY.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/per_state/2001_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 63,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/per_state/2003_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 63,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/per_state/2005_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 63,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/per_state/2007_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 63,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/per_state/2013_17.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 63,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/rawdata/ENGINE_SUMMARY.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 78,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/rawdata/LOCAL_DRIVER_T0.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 4,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/rawdata/OUTPUT_COMPLETENESS.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 40,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/rawdata/RUNTIME_RECEIPTS.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 24,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/rawdata/SOURCE_ROWS.csv",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 70,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/rawdata/SOURCE_ROWS.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 70,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/A21_METRICS.csv",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 315,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/GATE_DECISION.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 20,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/REPORT_MANIFEST.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 34,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/figures/A21_BASIS_MEMORY.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/figures/A21_CONDITIONING.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/figures/A21_ENDPOINTS_AND_SCALE.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/figures/A21_HF_ERROR_AND_BOUNDS.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/figures/A21_NORMAL_WORK.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/report_attempts/a21-local-report-01/figures/A21_WEIGHTED_STATIONARITY.svg",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 8,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/T0.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-report-regression-03/T0.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-report-regression-03/attempt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-report-regression-03/child_1.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 2,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-report-regression-03/child_2.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-targeted-02/T0.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-targeted-02/attempt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-targeted-02/child_1.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 2,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-targeted-02/child_2.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-validate-01/T0.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-validate-01/attempt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-validate-01/child_1.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 2,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/a21/validation/a21-local-validate-01/child_2.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-anatomy-01/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 5,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-anatomy-01/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 5,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-anatomy-01/result.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 78,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-preflight-01/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-preflight-01/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-01/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-01/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-01/result.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 53,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-final-02/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-final-02/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-final-02/result.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 53,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-regression-03/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-regression-03/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-report-regression-03/result.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-targeted-02/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-targeted-02/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-targeted-02/result.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-validate-01/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-validate-01/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-local-validate-01/result.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-xinan-preflight-01/job_receipt.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 5,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "results/jobs/a21-xinan-preflight-01/manifest.json",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 5,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "tests/test_a21_budget.py",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 1,
+      "values": "NOT_COPIED"
+    },
+    {
+      "file": "tools/a21_remote_jobs.py",
+      "category": "LOCAL_ABSOLUTE_PATH",
+      "occurrences": 3,
+      "values": "NOT_COPIED"
+    }
+  ],
+  "boundary_presence": {
+    "results/a21/START_HERE.md": {
+      "exposed_scope": true,
+      "offline_oracle": true,
+      "deployment_scope": true,
+      "not_run": true
+    },
+    "results/a21/A21_ORACLE_REPORT_ZH.md": {
+      "exposed_scope": true,
+      "offline_oracle": true,
+      "deployment_scope": true,
+      "not_run": true
+    },
+    "results/a21/A21_ORACLE_REPORT.md": {
+      "exposed_scope": true,
+      "offline_oracle": true,
+      "deployment_scope": true,
+      "not_run": true
+    },
+    "results/a21/REPRODUCE.md": {
+      "exposed_scope": false,
+      "offline_oracle": true,
+      "deployment_scope": true,
+      "not_run": false
+    },
+    "results/a21/GATE_DECISION.json": {
+      "exposed_scope": true,
+      "offline_oracle": true,
+      "deployment_scope": true,
+      "not_run": true
+    },
+    "results/a21/RUN_CLOSEOUT.json": {
+      "exposed_scope": false,
+      "offline_oracle": false,
+      "deployment_scope": false,
+      "not_run": false
+    },
+    "results/a21/A21_FROZEN_MANIFEST.json": {
+      "exposed_scope": true,
+      "offline_oracle": true,
+      "deployment_scope": true,
+      "not_run": true
+    }
+  },
+  "prepublication_status_lines": [
+    {
+      "file": "results/a21/START_HERE.md",
+      "line": 15,
+      "category": "PRE_PUBLICATION_STATUS_REQUIRES_ADDENDUM"
+    }
+  ],
+  "main_links_targeting_separate_assets": [
+    "results/a21/START_HERE.md",
+    "results/a21/REPRODUCE.md"
+  ],
+  "third_party_media_or_document_files": [],
+  "license_title": "MIT License",
+  "existing_NOTICE_present": true,
+  "claim_review": "wording scope only; no new scientific judgement",
+  "outputs_mutated": false,
+  "hash_checks": 0,
+  "physics_runs": 0,
+  "tests_run": 0
+}

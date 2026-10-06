@@ -1,0 +1,15 @@
+{
+  "scope": "A21 environment probe attempts",
+  "status": "PASS",
+  "returncode": 0,
+  "GPU_seconds": 0,
+  "additive_budget_charge": false,
+  "billing_scope": "setup/transport30sallowance",
+  "failed_probe_1": "Windows stderr UTF8 decoding error; no Maxwell launch",
+  "environment_output": [
+    "SSH_OPENSSH_CONNECTED",
+    "{\"python\": \"3.10.9\", \"cpu_seconds\": 0.03125}",
+    "A20_SHARED_LOCK=False",
+    "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB"
+  ]
+}

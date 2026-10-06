@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "safe_output": [
+    "{\"python\": \"3.10.9\", \"numpy\": \"2.2.6\", \"scipy\": \"1.15.3\", \"torch\": \"2.6.0+cu124\", \"compiled_CUDA\": \"12.4\", \"probe_CPU_seconds\": 1.015625, \"cuda_context_created\": false}",
+    "A20_SHARED_LOCK=False"
+  ],
+  "GPU_seconds": 0,
+  "additive_budget_charge": false,
+  "billing_scope": "setup/transport30sallowance",
+  "controller_CPU_seconds": 0.049493
+}

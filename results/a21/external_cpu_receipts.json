@@ -1,0 +1,73 @@
+[
+  {
+    "scope": "A21 bounded setup, read-only planning checks, transport and metadata overhead",
+    "process_cpu_seconds": 30.0,
+    "status": "CONSERVATIVE_ALLOWANCE",
+    "includes": "initial setup, read-only inspections, remote transport, final index metadata; measured jobs separately additive",
+    "GPU_seconds": 0
+  },
+  {
+    "scope": "a21-tests-report-tiny-tests-20261006-attempt01",
+    "process_cpu_seconds": 0.338769,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-tests-report/tiny_tests_attempt01_receipt.json",
+    "measurement": "inclusive measured controller CPU",
+    "status": "PASS"
+  },
+  {
+    "scope": "a21-tests-report-tiny-tests-20261006-attempt02",
+    "process_cpu_seconds": 0.382866,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-tests-report/tiny_tests_attempt02_receipt.json",
+    "measurement": "inclusive measured controller CPU",
+    "status": "PASS"
+  },
+  {
+    "scope": "A21 measured transport overage transport-dd6f66e585ed",
+    "process_cpu_seconds": 3.2283940000000015,
+    "GPU_seconds": 0.0,
+    "receipt": "results/a21/transport/transport-dd6f66e585ed.json",
+    "measurement": "inclusive measured controller CPU",
+    "status": "MEASURED"
+  },
+  {
+    "scope": "a21-engine-real-output-audit-20261006-unique01",
+    "process_cpu_seconds": 14.147201,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-engine/REAL_OUTPUT_AUDIT_CPU_RECEIPT.json",
+    "measurement": "unique aggregate scope: measured cumulative user+system CPU for completed read-only processes plus 14 s conservative soft-cap charge for one failed accounting follow-up; interpreter/import CPU included",
+    "status": "PASS_WITH_ACCOUNTING_NOTE"
+  },
+  {
+    "scope": "A21 final metadata and unmeasured setup margin",
+    "process_cpu_seconds": 10.0,
+    "GPU_seconds": 0.0,
+    "receipt": null,
+    "measurement": "additional conservative allowance for non-job file inspections, environment probes, final documentation and small Git metadata operations; transport max-accounting can consume the original 30s scope",
+    "status": "CONSERVATIVE_ALLOWANCE"
+  },
+  {
+    "scope": "A21 publication unmetered setup and final metadata allowance",
+    "process_cpu_seconds": 15.0,
+    "GPU_seconds": 0.0,
+    "receipt": null,
+    "measurement": "conservative allowance for read-only checks, script preparation, Git metadata and final receipt writes outside measured publication jobs",
+    "status": "CONSERVATIVE_ALLOWANCE"
+  },
+  {
+    "scope": "a21-publication-audit-20261006-unique01",
+    "process_cpu_seconds": 2.833521,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-publication-audit/CPU_RECEIPT.json",
+    "measurement": "whole-process cumulative user+system plus terminated child CPU, including startup/imports; no reset; prior failed invocation separately charged conservatively",
+    "status": "COMPLETE"
+  },
+  {
+    "scope": "a21-publication-followup-20261006-unique01",
+    "process_cpu_seconds": 1.633189,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-publication-audit/FOLLOWUP_CPU_RECEIPT.json",
+    "measurement": "whole-process cumulative user+system plus terminated child CPU including interpreter startup/imports; no reset",
+    "status": "COMPLETE"
+  }
+]

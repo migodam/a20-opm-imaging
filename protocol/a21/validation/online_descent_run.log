@@ -1,0 +1,11 @@
+{
+  "cases": 32,
+  "max_primal_error": 3.4283179029686514e-16,
+  "max_gradient_error": 9.238896857051836e-16,
+  "max_value_error": 7.105427357601002e-15,
+  "max_whitening_adjoint_error": 1.0295784775289034e-15,
+  "max_descent_violation": -3.3306690738754696e-16,
+  "min_alpha": 0.7289434492424407,
+  "max_full_quadratic_change": -0.02824179869372047
+}
+PASS: all first-order interpolation, whitening and feasible descent checks

@@ -1,0 +1,1 @@
+{"campaign": "A21", "event": "a21_delivery_git_snapshot", "phase": "online", "counters": {"local_artifact_snapshots": 1}, "status": "OK", "wall_seconds": 12.568382665980607, "exclusive_wall_seconds": 12.568382665980607, "process_cpu_seconds": 0.0016170000000000004}

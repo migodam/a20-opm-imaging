@@ -1,0 +1,63 @@
+{
+  "schema": "a21.report_manifest.v1",
+  "status": "STATIC_LOCAL_REPORT_WRITTEN",
+  "paths": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/per_state/2001_17.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/per_state/2005_17.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/per_state/2003_17.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/per_state/2007_17.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/per_state/2013_17.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/A21_METRICS.csv",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/GATE_DECISION.json",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/A21_ORACLE_REPORT.md",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_HF_ERROR_AND_BOUNDS.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_HF_ERROR_AND_BOUNDS.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_WEIGHTED_STATIONARITY.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_WEIGHTED_STATIONARITY.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_ENDPOINTS_AND_SCALE.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_ENDPOINTS_AND_SCALE.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_CONDITIONING.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_CONDITIONING.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_NORMAL_WORK.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_NORMAL_WORK.svg",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_BASIS_MEMORY.png",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_BASIS_MEMORY.svg",
+    "results/a21/START_HERE.md",
+    "results/a21/A21_ORACLE_REPORT_ZH.md",
+    "results/a21/A21_FROZEN_MANIFEST.json",
+    "results/a21/INDEPENDENT_ARRAY_REVIEW.json"
+  ],
+  "source_rows": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/anatomy/rows.jsonl",
+  "source_summary": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/anatomy/summary.json",
+  "figures": {
+    "A21_HF_ERROR_AND_BOUNDS": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_HF_ERROR_AND_BOUNDS.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_HF_ERROR_AND_BOUNDS.svg"
+    ],
+    "A21_WEIGHTED_STATIONARITY": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_WEIGHTED_STATIONARITY.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_WEIGHTED_STATIONARITY.svg"
+    ],
+    "A21_ENDPOINTS_AND_SCALE": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_ENDPOINTS_AND_SCALE.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_ENDPOINTS_AND_SCALE.svg"
+    ],
+    "A21_CONDITIONING": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_CONDITIONING.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_CONDITIONING.svg"
+    ],
+    "A21_NORMAL_WORK": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_NORMAL_WORK.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_NORMAL_WORK.svg"
+    ],
+    "A21_BASIS_MEMORY": [
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_BASIS_MEMORY.png",
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/figures/A21_BASIS_MEMORY.svg"
+    ]
+  },
+  "figure_status": "GENERATED_FROM_SAVED_MEASUREMENTS",
+  "no_physics_rerun": true,
+  "truth_access": false,
+  "scientific_judgment": "LATE_GN_TWO_SIDED_FIDELITY_CONFIRMED",
+  "final_review_source": "A21_ORACLE_REPORT_ZH.md"
+}

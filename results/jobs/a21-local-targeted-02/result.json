@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "job": "a21-local-targeted-02",
+  "real_5184_current_physics": false,
+  "online_descent_experiment": "NOT_RUN",
+  "new_SHA256_checks": 0,
+  "original_package_validation_evidence_preserved": true,
+  "source_protocol_script": "protocol/a21/validation/validate_two_sided.py",
+  "copied_synthetic_script": "results/a21/validation/a21-local-targeted-02/validate_two_sided.py",
+  "copied_synthetic_results": "results/a21/validation/a21-local-targeted-02/results.json",
+  "maximum_controller_plus_child_CPU_seconds": 120,
+  "maximum_wall_seconds": 120,
+  "children": [
+    {
+      "command": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+        "-B",
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A21/a21-two-sided-anatomy/results/a21/validation/a21-local-targeted-02/validate_two_sided.py"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.33863595803268254,
+      "process_cpu_seconds": 0.288732,
+      "measurement": "terminated child user + system CPU, including imports",
+      "status": "PASS",
+      "log": "results/a21/validation/a21-local-targeted-02/child_1.log",
+      "GPU_seconds": 0
+    },
+    {
+      "command": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_a21_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1.1374147080350667,
+      "process_cpu_seconds": 1.000911,
+      "measurement": "terminated child user + system CPU, including imports",
+      "status": "PASS",
+      "log": "results/a21/validation/a21-local-targeted-02/child_2.log",
+      "GPU_seconds": 0
+    }
+  ],
+  "complete_unittest_discovery": false,
+  "test_pattern": "test_a21_*.py",
+  "controller_plus_child_CPU_seconds": 1.376408,
+  "source_commit": null,
+  "source_freeze": "3b3b17b5f4cf5d37b26602ead2dfe7c913b37e23"
+}

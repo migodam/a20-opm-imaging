@@ -1,0 +1,22 @@
+{
+  "scope": "transport-dd6f66e585ed",
+  "action": "pull",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 6.465588,
+  "remote_archive_CPU_seconds": 0.78125,
+  "remote_extract_CPU_seconds": 0,
+  "wall_seconds": 42.835732292,
+  "GPU_seconds": 0,
+  "billing": "covered by frozen 30-second setup/transport allowance; measured overage additionally billed",
+  "measurement": "local controller including imports + local child CPU + remote archive process CPU",
+  "details": {
+    "status": "A21_ARCHIVED",
+    "archive_bytes": 592538853,
+    "archive_name": "a21-results-5229e4dae4eb.zip",
+    "compression": "STORED",
+    "prior_archive_preserved": true,
+    "archive_CPU_seconds": 0.78125,
+    "original_A20_written": false
+  },
+  "new_SHA256_checks": 0
+}

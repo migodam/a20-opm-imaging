@@ -1,0 +1,16 @@
+{
+  "scope": "transport-01318e3eb9eb",
+  "action": "pull",
+  "status": "FAILED",
+  "process_cpu_seconds": 26.014648,
+  "remote_archive_CPU_seconds": 25.953125,
+  "remote_extract_CPU_seconds": 0,
+  "wall_seconds": 29.106653875,
+  "GPU_seconds": 0,
+  "billing": "covered by frozen 30-second setup/transport allowance; measured overage additionally billed",
+  "measurement": "local controller including imports + local child CPU + remote archive process CPU",
+  "details": {
+    "archive_CPU_seconds": 25.953125
+  },
+  "new_SHA256_checks": 0
+}

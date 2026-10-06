@@ -1,0 +1,19 @@
+# Primary Sources and Access Scope
+
+The audit was checked against public primary sources during this response. These sources establish prior art; the new algebraic derivations and synthetic tests are identified separately. This is a targeted closest-prior audit, not a claim to have exhausted every publication.
+
+**R1.** U. Baur, C. Beattie, P. Benner, S. Gugercin. *Interpolatory Projection Methods for Parameterized Model Reduction*. SIAM Journal on Scientific Computing 33(5), 2489-2518 (2011). DOI: 10.1137/090776925. Primary manuscript: https://vtechworks.lib.vt.edu/bitstream/handle/10919/48155/090776925.pdf . Access: full manuscript; Theorem 3.1 on printed pages 2493-2494 visually checked, with parameter-derivative interpolation context.
+
+**R2.** E. de Sturler, S. Gugercin, M. E. Kilmer, S. Chaturantabut, C. Beattie, M. O'Connell. *Nonlinear Parametric Inversion Using Interpolatory Model Reduction*. SIAM Journal on Scientific Computing (2015). DOI: 10.1137/130946320. https://arxiv.org/abs/1311.0922 ; full HTML https://arxiv.org/html/1311.0922 . Access: full-text sections on inverse-problem transfer functions, Jacobian preservation and projection conditions.
+
+**R3.** T. Keil, L. Mechelli, M. Ohlberger, F. Schindler, S. Volkwein. *A non-conforming dual approach for adaptive Trust-Region reduced basis approximation of PDE-constrained parameter optimization*. ESAIM: M2AN 55(3), 1239-1269 (2021). DOI: 10.1051/m2an/2021019. https://www.numdam.org/articles/10.1051/m2an/2021019/ ; https://arxiv.org/html/2006.09297 . Access: full-text theory and overview, including bilateral constraints and separate primal/dual spaces.
+
+**R4.** T. Keil, M. Ohlberger. *Model Reduction for Large Scale Systems*. 2021 preprint. https://arxiv.org/abs/2105.01433 ; https://arxiv.org/html/2105.01433 . Access: full text, especially Section 2 equations (7)-(9) and the discussion of Petrov stability. This is one of the closest architectural precedents.
+
+**R5.** E. Qian, M. Grepl, K. Veroy, K. Willcox. *A Certified Trust Region Reduced Basis Approach to PDE-Constrained Optimization*. SIAM Journal on Scientific Computing 39(5), S434-S460 (2017). DOI: 10.1137/16M1081981. Primary author manuscript: https://kiwi.oden.utexas.edu/papers/multifidelity-optimization-adaptive-reduced-model-qian-grepl-veroy-willcox.pdf . Also archived at https://dspace.mit.edu/bitstream/handle/1721.1/116912/16m1081981.pdf?sequence=1 . Access: abstract and indexed primary-text passages on cost/gradient error bounds, adaptive high-fidelity updates and first-order consistency; no claim of a complete proof-by-proof audit.
+
+**R6.** M. Billaud-Friess, A. Nouy, O. Zahm. *Projection based model order reduction methods for the estimation of vector-valued variables of interest*. 2016 preprint. https://arxiv.org/abs/1603.00336 ; https://arxiv.org/html/1603.00336 . Access: full text on vector-valued goals, primal/test/dual spaces and saddle-point formulations.
+
+**R7.** S. Gugercin, A. C. Antoulas, C. Beattie. *H2 Model Reduction for Large-Scale Linear Dynamical Systems*. SIAM Journal on Matrix Analysis and Applications 30(2), 609-638 (2008). DOI: 10.1137/060666123. https://vtechworks.lib.vt.edu/bitstream/10919/48145/1/060666123.pdf . Access: primary manuscript indexed text, interpolation optimality conditions and iterative rational Krylov description.
+
+**R8.** L. Borcea, Y. Liu, J. Zimmerling. *Electromagnetic inverse wave scattering in anisotropic media via reduced order modeling*. Journal of Computational Physics (2024). https://arxiv.org/abs/2403.03844 ; https://arxiv.org/html/2403.03844 ; publisher record https://www.sciencedirect.com/science/article/pii/S0021999124005205 . Access: full-text Maxwell/data-driven ROM formulation and scope. The method applies in principle to 3D; the reported setup is reduced to two dimensions using an orthotropic cylindrical configuration. It is not the same frozen GN current-ROM construction as A21.

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_a21_report_allowance.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "wall_seconds": 0.3544442079728469,
+  "process_cpu_seconds": 0.280273,
+  "measurement": "terminated child user + system CPU, including imports",
+  "status": "PASS",
+  "log": "results/a21/validation/a21-local-report-regression-03/child_2.log",
+  "GPU_seconds": 0
+}
