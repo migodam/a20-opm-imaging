@@ -41,12 +41,13 @@
   ],
   "billing_authority": "inclusive A21 job receipts + unique external scopes + frozen historical carry",
   "nested_spans_not_additive": true,
-  "status": "COMPLETE_WITHIN_ALL_CAPS",
+  "status": "WITHIN_ALL_CAPS",
+  "snapshot": "AT_RELEASE_VERIFICATION_BEFORE_FINAL_METADATA_JOB",
+  "publication": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
+  "no_new_physics": true,
+  "final_inclusive_budget_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_PUBLICATION_CLOSEOUT.json",
   "CPU_cap_seconds": 1200,
   "GPU_cap_seconds": 1200,
   "global_CPU_cap_seconds": 7200,
-  "global_GPU_cap_seconds": 43200,
-  "additional_scientific_runs": "STOPPED_AFTER_FIVE_STATE_ANATOMY",
-  "publication": "IN_PROGRESS",
-  "billing_notes": "inclusive jobs + unique external scopes; publication failures included"
+  "global_GPU_cap_seconds": 43200
 }

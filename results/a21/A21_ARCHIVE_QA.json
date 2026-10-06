@@ -1,0 +1,24 @@
+{
+  "schema": "a21.release_archive_qa.v1",
+  "status": "PASS",
+  "public_source_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
+  "release_tag": "v0.3.0-a21-two-sided-anatomy",
+  "assets": [
+    {
+      "name": "a20-opm-imaging-v0.3.0-a21-two-sided-anatomy.zip",
+      "bytes": 24495995,
+      "members": 1666,
+      "ZIP_CRC": "PASS"
+    },
+    {
+      "name": "a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip",
+      "bytes": 588521688,
+      "members": 47,
+      "ZIP_CRC": "PASS"
+    }
+  ],
+  "offline_arrays": 45,
+  "no_new_physics": true,
+  "old_releases_unchanged": true,
+  "new_SHA256_checks": 0
+}

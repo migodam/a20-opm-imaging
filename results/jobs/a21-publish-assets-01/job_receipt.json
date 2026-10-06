@@ -1,0 +1,47 @@
+{
+  "wall_seconds": 2.211369042051956,
+  "process_cpu_seconds": 1.144289,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "publication_operations": 1
+  },
+  "exclusive_walls": {
+    "publication_operation": 2.183595541981049
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 19939328,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "controller_process_cpu_seconds": 0.065575,
+  "child_process_cpu_seconds": 1.078714,
+  "prior_A21_CPU_seconds": 369.58267300000006,
+  "prior_A21_GPU_seconds": 281.6618149999995,
+  "historical_CPU_seconds": 5606.616051,
+  "historical_GPU_seconds": 5661.778859,
+  "A21_CPU_cap": 1200,
+  "A21_GPU_cap": 1200,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "measurement": "inclusive controller process CPU since startup + terminated child CPU; imports and failures included",
+  "new_SHA256_checks": 0,
+  "job": "a21-publish-assets-01",
+  "stage": "PUBLICATION_ONLY",
+  "status": "COMPLETE",
+  "returncode": 0,
+  "no_new_physics": true,
+  "command": [
+    "../../.venv_nn/bin/python",
+    "-B",
+    "tools/a21_release_assets.py",
+    "--public-root",
+    "../a21-publication",
+    "--evidence-root",
+    ".",
+    "--output",
+    "dist/a21-release"
+  ]
+}

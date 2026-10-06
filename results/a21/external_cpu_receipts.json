@@ -45,5 +45,29 @@
     "receipt": null,
     "measurement": "additional conservative allowance for non-job file inspections, environment probes, final documentation and small Git metadata operations; transport max-accounting can consume the original 30s scope",
     "status": "CONSERVATIVE_ALLOWANCE"
+  },
+  {
+    "scope": "A21 publication unmetered setup and final metadata allowance",
+    "process_cpu_seconds": 15.0,
+    "GPU_seconds": 0.0,
+    "receipt": null,
+    "measurement": "conservative allowance for read-only checks, script preparation, Git metadata and final receipt writes outside measured publication jobs",
+    "status": "CONSERVATIVE_ALLOWANCE"
+  },
+  {
+    "scope": "a21-publication-audit-20261006-unique01",
+    "process_cpu_seconds": 2.833521,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-publication-audit/CPU_RECEIPT.json",
+    "measurement": "whole-process cumulative user+system plus terminated child CPU, including startup/imports; no reset; prior failed invocation separately charged conservatively",
+    "status": "COMPLETE"
+  },
+  {
+    "scope": "a21-publication-followup-20261006-unique01",
+    "process_cpu_seconds": 1.633189,
+    "GPU_seconds": 0.0,
+    "receipt": "research/delegated/a21-publication-audit/FOLLOWUP_CPU_RECEIPT.json",
+    "measurement": "whole-process cumulative user+system plus terminated child CPU including interpreter startup/imports; no reset",
+    "status": "COMPLETE"
   }
 ]

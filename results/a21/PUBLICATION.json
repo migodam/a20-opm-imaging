@@ -1,0 +1,178 @@
+{
+  "schema": "a21.publication_verification.v1",
+  "status": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
+  "repository": "https://github.com/migodam/a20-opm-imaging",
+  "release_tag": "v0.3.0-a21-two-sided-anatomy",
+  "release_url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.3.0-a21-two-sided-anatomy",
+  "raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+  "offline_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip",
+  "original_public_main": "3b3b17b5f4cf5d37b26602ead2dfe7c913b37e23",
+  "local_full_snapshot_commit": "5de7e1b9081a8bd166bda56985b3dfa92089f98d",
+  "physics_source_commit": "5c6bcb02bb4ab88f7b46f07bca4ca3f4e38a067c",
+  "scientific_status": "LATE_GN_TWO_SIDED_FIDELITY_CONFIRMED",
+  "evidence_scope": "ORACLE_OFFLINE_FROZEN_QUADRATIC",
+  "no_new_physics": true,
+  "new_SHA256_checks": 0,
+  "old_releases_retained": true,
+  "release_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
+  "scientific_runs": "STOPPED_AFTER_FIVE_STATE_ANATOMY",
+  "local_original_receipts_unchanged": true,
+  "large_arrays_in_separate_offline_asset": true,
+  "checked_at_UTC": "2026-10-06T05:27:40.412185+00:00",
+  "verified_remote_main_commit": "6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4",
+  "repository_url": "https://github.com/migodam/a20-opm-imaging",
+  "immutable_raw_start_here_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4/START_HERE.md",
+  "assets": [
+    {
+      "name": "a20-opm-imaging-v0.3.0-a21-two-sided-anatomy.zip",
+      "bytes": 24495995,
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a20-opm-imaging-v0.3.0-a21-two-sided-anatomy.zip",
+      "members": 1666,
+      "local_ZIP_CRC": "PASS",
+      "verification": "ANONYMOUS_FULL_DOWNLOAD_BYTE_EQUALITY_AND_ZIP_CRC"
+    },
+    {
+      "name": "a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip",
+      "bytes": 588521688,
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip",
+      "members": 47,
+      "local_ZIP_CRC": "PASS",
+      "verification": "ANONYMOUS_PREFIX_AND_CENTRAL_DIRECTORY_BYTE_EQUALITY; LOCAL_FULL_ZIP_CRC"
+    }
+  ],
+  "checks": [
+    {
+      "name": "repository",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging",
+      "HTTP": 200,
+      "read_bytes": 5456,
+      "content_length": "5456",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "remote-main",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/git/ref/heads/main",
+      "HTTP": 200,
+      "read_bytes": 344,
+      "content_length": "344",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "release-api",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.3.0-a21-two-sided-anatomy",
+      "HTTP": 200,
+      "read_bytes": 8116,
+      "content_length": "8116",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "release-tag",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/git/ref/tags/v0.3.0-a21-two-sided-anatomy",
+      "HTTP": 200,
+      "read_bytes": 423,
+      "content_length": "423",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "release-page",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/tag/v0.3.0-a21-two-sided-anatomy",
+      "HTTP": 200,
+      "read_bytes": 205110,
+      "content_length": null,
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "old-release-v0.1.0-pilot",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.1.0-pilot",
+      "HTTP": 200,
+      "read_bytes": 5153,
+      "content_length": "5153",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "old-release-v0.2.0-r1-mechanism",
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/releases/tags/v0.2.0-r1-mechanism",
+      "HTTP": 200,
+      "read_bytes": 9402,
+      "content_length": "9402",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "raw-start-here",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/main/START_HERE.md",
+      "HTTP": 200,
+      "read_bytes": 2628,
+      "content_length": "2628",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "raw-release-start-here",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/6896b3bd785dae5e9ddbc51f5afd39b3cb631cc4/START_HERE.md",
+      "HTTP": 200,
+      "read_bytes": 2628,
+      "content_length": "2628",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "reproducibility-archive",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a20-opm-imaging-v0.3.0-a21-two-sided-anatomy.zip",
+      "HTTP": 200,
+      "read_bytes": 24495995,
+      "content_length": "24495995",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "offline-diagnostics-prefix",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip",
+      "HTTP": 206,
+      "read_bytes": 4096,
+      "content_length": "4096",
+      "content_range": "bytes 0-4095/588521688",
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "offline-diagnostics-directory",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip?a21_probe=tail-explicit",
+      "HTTP": 206,
+      "read_bytes": 65536,
+      "content_length": "65536",
+      "content_range": "bytes 588456152-588521687/588521688",
+      "authorization_header": false,
+      "cookies": false
+    },
+    {
+      "name": "archive-QA",
+      "url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_ARCHIVE_QA.json",
+      "HTTP": 200,
+      "read_bytes": 620,
+      "content_length": "620",
+      "content_range": null,
+      "authorization_header": false,
+      "cookies": false
+    }
+  ],
+  "remote_commit_observation": "main at release verification; later metadata commit recorded by final asset",
+  "final_remote_verification_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_FINAL_REMOTE_VERIFICATION.json",
+  "publication_closeout_asset_url": "https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/A21_PUBLICATION_CLOSEOUT.json"
+}

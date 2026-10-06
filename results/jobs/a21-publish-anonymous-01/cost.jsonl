@@ -1,0 +1,1 @@
+{"campaign": "A21", "job": "a21-publish-anonymous-01", "stage": "PUBLICATION_ONLY", "status": "FAILED", "returncode": 1, "new_physics": false, "inclusive_CPU_seconds": 0.34706799999999993, "wall_seconds": 7.784582458087243, "GPU_seconds": 0, "nested_spans_not_additive": true}

@@ -36,4 +36,11 @@ python3 tools/a21_remote_jobs.py pull
 
 CLI report生成自动初审，最终科学判断由Codex阅读完整向量、对照、curvature、normal及solver defects后写入GATE_DECISION和中文报告。初审状态保留，不被当成自动科学批准。首次报告/图表快照保存在 `report_attempts/`。失效bound、full KKT或adjoint会停止；本次这些停止条件均未触发。
 
-没有运行T2、非线性成像、NN、degree扩展、solver acceleration或A21公开发布。
+没有运行T2、非线性成像、NN、degree扩展、solver acceleration。公开发布另记于 [PUBLICATION.json](PUBLICATION.json)，不产生新的科学实验。
+
+
+## 公开复核包
+
+[A21 release](https://github.com/migodam/a20-opm-imaging/releases/tag/v0.3.0-a21-two-sided-anatomy) 提供完整代码/证据快照和 [离线数组包](https://github.com/migodam/a20-opm-imaging/releases/download/v0.3.0-a21-two-sided-anatomy/a21-offline-diagnostics-v0.3.0-a21-two-sided-anatomy.zip)。将离线数组包解压到仓库根目录，再执行 saved-array review；这一步不生成新 Maxwell 解或 QP。该资产明确为 ORACLE / OFFLINE / DIAGNOSTIC ONLY，包含 full J/H 和 task currents，禁止用于在线算法。
+
+本地完整研究快照为 `5de7e1b9081a8bd166bda56985b3dfa92089f98d`；公开快照采用原公共 main 的增量提交，较大的原始数组移至 release 资产。原物理执行 commit 与全部历史 provenance 字段保持原样。公开 commit、匿名访问和资产检查以 [PUBLICATION.json](PUBLICATION.json) 为准。
