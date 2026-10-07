@@ -68,6 +68,15 @@ def main():
              frozen_source_changes=changed,public_pushes=0,NN='NOT_RUN',new_physical_actions=0,
              old_scalar_reproduction='FAILED_RETAINED',scientific_case=gate['scientific_case'])
         write_json(ROOT/'results/a22_r1/DELIVERY_MANIFEST.json',result)
+        manifest_path=ROOT/'results/a22_r1/SOURCE_AND_COMMAND_MANIFEST.json'
+        manifest=json.loads(manifest_path.read_text())
+        manifest['implementation_source_commit']=source_commit
+        manifest['delivery_artifact_manifest']='results/a22_r1/DELIVERY_MANIFEST.json'
+        write_json(manifest_path,manifest)
+        start=ROOT/'A22_R1_START_HERE.md'
+        text=start.read_text();marker='\n## 本地代码与压缩证据\n'
+        text=text.split(marker)[0]
+        start.write_text(text+marker+f'\n实现代码commit：`{source_commit}`。大型逐case原始记录保留在本地；Git保存其字节一致的gzip副本，完整向量另有NPZ。路径与实际字节数见[DELIVERY_MANIFEST](results/a22_r1/DELIVERY_MANIFEST.json)。report入口可以直接读gzip缓存。\n',encoding='utf-8')
         status='COMPLETE'
     except BaseException as error:
         result.update(error=str(error),traceback=traceback.format_exc())

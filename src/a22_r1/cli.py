@@ -16,7 +16,7 @@ from .accounting import R1Book
 
 def main(argv=None):
     p = argparse.ArgumentParser()
-    p.add_argument('stage', choices=('freeze', 'replay', 'replay-cached', 'unit', 'report'))
+    p.add_argument('stage', choices=('freeze', 'replay', 'replay-cached', 'unit', 'report', 'runtime'))
     p.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[2])
     p.add_argument('--job', required=True)
     p.add_argument('--device', choices=('cpu', 'cuda'), default='cpu')
@@ -53,6 +53,9 @@ def main(argv=None):
                 detail = dict(tests=result.testsRun, failures=len(result.failures), errors=len(result.errors), skipped=len(result.skipped))
                 if not result.wasSuccessful():
                     raise AssertionError('R1_UNIT_TESTS_FAILED')
+            elif args.stage=='runtime':
+                from .runtime import run_runtime
+                detail=run_runtime(root,config,book)
             else:
                 from .report import generate_report
                 with book.span('r1_report_and_plots', report_generations=1):
