@@ -31,7 +31,8 @@ METRICS = ("nrmse_phys", "nrmse_prior", "s_sep", "f_error_phys", "f_error_prior"
 FOOTER = ("Four historically exposed scene clusters: 2001, 2003, 2014, 2009. "
           "Known background χ₀ = 0.1 + 0.04i; fixed 32D material chart.\n"
           "All plotted errors and energy fractions are in-chart. "
-          "FULL-J is an OFFLINE diagnostic only; no formal validation is implied.")
+          "FULL-J is an OFFLINE diagnostic only; no formal validation is implied.\n"
+          "A1/A2/A3 select the same direction sets in this screening; coincident markers are retained.")
 
 
 def _number(value):

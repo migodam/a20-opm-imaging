@@ -315,7 +315,7 @@ def _write_documents(root,config,summary,gate,scenes,comparison,chart,paid):
         m=gate['methods'][method];branch.append('| '+method+' | '+_fmt(m['median_restricted_over_common'])+' | '+m['S4']+' |')
     interpretation={
       'CASE_A_A3_SPLIT_WORKS':'冻结A3支持图内分离筛查，并满足相对A2的预注册增量与受限分支条件。它仍不能证明新对象上可靠，也不能启动本实验中的NN。',
-      'CASE_C_A2_MATCHES_OR_BEATS_A3':'在本筛查中，A2达到有用分离，而A3没有达到预注册15%的增量；不能把O/P/M标签宣称为构造该split所必需。停止NN，保留更简单的物理编码对照。',
+      'CASE_C_A2_MATCHES_OR_BEATS_A3':'在本筛查中，A2达到相对分离筛查阈值，而A3没有达到预注册15%的增量；不能把O/P/M标签宣称为构造该split所必需。停止NN，保留更简单的物理编码对照。',
       'CASE_B_SPLIT_EXISTS_A3_DOES_NOT_FIND_IT':'冻结full-J离线诊断支持有用分离，但A3未达到完整条件。分离并非因此被否定；当前廉价A3估计器的作用不足。停止NN。',
       'CASE_D_NO_USEFUL_SUBSPACE_SEPARATION':'在当前背景、有限幅度/噪声/校准条件、32维图及同一候选坐标中，注册的split未共同满足分离、信号覆盖与稳定受限恢复。停止把这个hard split交给prior-only NN；这不等于证明所有物理/先验分解在所有状态上不可能。',
       'INCOMPLETE':'前置数值或覆盖条件不足，不能强行选取支持性结论或宣判普遍失败；停止并保留缺口。'}[case]
@@ -435,6 +435,8 @@ Test A先读取整组固定共同解；Test B保持同一个物理目标/原lamb
 这些比例是原对象相对已知背景的material energy，不是重建成功率。finite cases继承原材料并加W内扰动，因此覆盖会变化，但图外部分保持原样。audit共有4个原对象+32个finite labels，projection、orthogonality和能量identity一致。原始值见[CHART_EXTERIOR_RAW.csv](results/a22_r1/CHART_EXTERIOR_RAW.csv)及[JSON](results/a22_r1/CHART_EXTERIOR_RAW.json)。
 
 完整finite材料向量未独立保存；这里按已保存的original_material与perturbation_coefficients生成规则核验，没有声称这是独立新full-wave证据。它只隔离已有chart外误差，不对图内split提供额外评分或使用truth选方向。
+
+已有full-wave data仍包含原对象的chart-exterior材料。把它的能量排除出V_prior指标，不能消除它对测量和图内恢复的散射影响；这里没有生成W-only新labels来隔离这种污染。因此结果属于实际既有有限幅度/噪声/校准条件下的图内恢复，不是消除了所有图外nuisance的内在可识别性定理。
 
 Gaussian chart只覆盖约46–49%，2014约5.8%，shell约13.4%；即使一个图内split有效也不能据此宣称完整原对象成像有效。图外能量不能被算作V_prior失败，任何完整图像主张需另行扩展材料chart并独立验证；本experiment不自动做这件事。
 ''',encoding='utf-8')
