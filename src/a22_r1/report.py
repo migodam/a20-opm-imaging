@@ -201,6 +201,8 @@ def cost_summary(root, config):
         cumulative_A22_GPU_seconds=config['historical_a22_gpu_seconds']+paid['gpu'],
         background_predictions=paid['backgrounds'],new_fullwave_labels=paid['new_labels'],
         unique_inclusive_receipt_count=len(paid['receipts']),counts=dict(counts),
+        cache_replay_new_Maxwell_actions=0,
+        physical_work_scope='Four background/descriptor rebuilds have paid nonzero F/Fstar/L/Lstar and solve actions. The new_Maxwell_actions=0 counter in cached jobs applies only to cached replay, not to the entire R1 experiment.',
         action_aggregation='F/Fstar/L/Lstar are exclusive; Maxwell_matvec_rhs is their aggregate and is not added again',
         nested_spans_additive=False,failed_receipts_retained=True,
         complete_deployment_time='NOT_MEASURED',rank_speedup_claim='NOT_ESTABLISHED')
