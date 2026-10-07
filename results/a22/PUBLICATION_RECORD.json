@@ -1,0 +1,19 @@
+{
+  "schema": "a22.publication.v1",
+  "status": "PREPARED_FOR_PUBLIC_BRANCH",
+  "trigger": "User requested a URL readable by GPT after local delivery",
+  "repository": "https://github.com/migodam/a20-opm-imaging",
+  "branch": "a22-three-fold-opm",
+  "scientific_delivery_commit": "153e326b14062aacb696c5e466eeac6fc01162a1",
+  "entry_file": "A22_GPT_HANDOFF.md",
+  "historical_manifest_preserved": true,
+  "scientific_gates_unchanged": true,
+  "new_experiment": false,
+  "release_created": false,
+  "privacy_review": {
+    "sensitive_tracked_paths": 0,
+    "secret_marker_matches_in_A22_delta": 0,
+    "oversize_files_over_50MB": 0
+  },
+  "verification": "Pending anonymous read after push"
+}

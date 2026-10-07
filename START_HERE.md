@@ -2,7 +2,9 @@
 
 **Gate A：PARTIAL，按冻结规则停止。** 四个历史暴露场景的 Maxwell screening 已完成：32个clean标签、2112个有效恢复案例、actual current rank32。130项本地测试及随包/真实tiny验证通过。A3中位相关性0.5069，但相对较强A2的MAE改善为−0.1263%，2000次scene-cluster区间跨零。
 
-完整24场景、one-shot physics image、prior-only NN 均 **NOT_RUN**。Gate T **NOT_ESTABLISHED**。本交付不发布，不自动开展下一阶段。
+完整24场景、one-shot physics image、prior-only NN 均 **NOT_RUN**。Gate T **NOT_ESTABLISHED**。The completed evidence is now shared on the independent public A22 branch following the user's link request. No follow-on experiment is started.
+
+GPT entry: [combined report](A22_GPT_HANDOFF.md). The original LOCAL_ONLY manifest records the earlier local-delivery status.
 
 建议按顺序阅读：
 

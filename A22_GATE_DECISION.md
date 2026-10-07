@@ -28,4 +28,4 @@ A2 MAE为0.0375231，A3为0.0375705；A3−A2的变化不能支持结构化 reco
 
 四对象均超出声明逐点先验，asymmetric/shell 的 W 能量覆盖很低。这些事实限定当前经验指标和材料模型的适用性；不把宽 raw budget 的100%覆盖包装成严格证书，不通过扩大rank/degree/先验或网络救场延续实验。
 
-本地代码、配置、输入、原始结果、表图、失败与费用全部保留。后续路线条件驱动仍未冻结，研究状态不是三阶段全部实施成功。**此次不发布，不自动启动下一阶段。**
+本地代码、配置、输入、原始结果、表图、失败与费用全部保留。后续路线条件驱动仍未冻结，研究状态不是三阶段全部实施成功。The experiment stopped at local delivery. The completed evidence is subsequently shared on an independent A22 public branch following the user's link request. Scientific gates remain unchanged; no follow-on stage is started. The original LOCAL_ONLY manifest is preserved as a historical record.

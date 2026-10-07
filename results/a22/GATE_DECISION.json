@@ -139,6 +139,8 @@
   },
   "trained_NN": false,
   "nonlinear_reconstruction": false,
-  "publication": "NOT_REQUESTED_LOCAL_ONLY",
-  "original_theory_and_A17_A21_unchanged": true
+  "publication": "PUBLIC_BRANCH_REQUESTED_AFTER_LOCAL_DELIVERY",
+  "original_theory_and_A17_A21_unchanged": true,
+  "original_local_delivery_commit": "153e326b14062aacb696c5e466eeac6fc01162a1",
+  "publication_record": "PUBLICATION_RECORD.json"
 }
