@@ -12,6 +12,7 @@ from contextlib import nullcontext
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import csv
+import gzip
 import itertools
 import json
 from pathlib import Path
@@ -608,7 +609,11 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any, *, cached
                            ('solver_tolerance_change','score_change','physics_change'))):
                 raise ReplayContractError('CACHED_COMMON_ADDENDUM_NOT_FROZEN')
             with _scope(book,'offline_evaluation'), book.span('r1_cached_common_archive_read',cached_common_archive_reads=1):
-                source_rows=[json.loads(line) for line in (root/cached_common).read_text().splitlines() if line.strip()]
+                source_path=root/cached_common
+                stream=(source_path.open(encoding='utf-8') if source_path.exists()
+                        else gzip.open(str(source_path)+'.gz','rt',encoding='utf-8'))
+                with stream:
+                    source_rows=[json.loads(line) for line in stream if line.strip()]
             source_records={record['case_key']: record for record in source_rows}
             if len(source_rows)!=2112 or len(source_records)!=2112:
                 raise ReplayContractError('CACHED_COMMON_ARCHIVE_MUST_HAVE_ALL_2112_UNIQUE_CASES')

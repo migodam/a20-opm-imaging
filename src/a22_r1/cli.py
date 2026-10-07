@@ -64,6 +64,9 @@ def main(argv=None):
     finally:
         write_json(book.directory/'outcome.json', dict(status=status, detail=detail))
         receipt = book.finish(status, detail)
+        if args.stage == 'report' and status == 'COMPLETE':
+            from .report import cost_summary
+            cost_summary(root,config)
     print(json.dumps(plain({'status': status, 'job': args.job, 'CPU_seconds': receipt['process_cpu_seconds'],
                           'GPU_seconds': receipt['gpu_occupation_seconds'], 'detail': detail}), allow_nan=False))
     return 0 if status == 'COMPLETE' else 1

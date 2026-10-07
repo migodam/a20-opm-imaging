@@ -9,3 +9,10 @@ dist/
 configs/SOURCE_COMMIT.txt
 configs/A21_SOURCE_COMMIT.txt
 *.log.tmp
+
+# Preserve complete large raw R1 records locally and commit byte-identical gzip.
+results/a22_r1/replay/*/PER_CASE_SPLIT_METRICS.jsonl
+results/a22_r1/replay/*/PER_CASE_SPLIT_METRICS.csv
+results/a22_r1/replay/*/RESTRICTED_SOLUTION_VECTORS.jsonl
+results/a22_r1/replay/*/COMMON_32D_CASES.jsonl
+results/a22_r1/replay/*/COMMON_32D_CASES.csv
