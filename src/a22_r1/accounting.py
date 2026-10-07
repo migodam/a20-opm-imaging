@@ -72,7 +72,7 @@ class R1Book(CostBook):
             raise BudgetExceeded('R1_NEW_FULL_WAVE_LABELS_FORBIDDEN')
         if self.prior['backgrounds'] + self.counts.get('full_forward_calls', 0) + counters.get('full_forward_calls', 0) > self.config['known_background_rebuild_cap']:
             raise BudgetExceeded('R1_FOUR_KNOWN_BACKGROUND_CAP')
-        if self.phase == 'online' and any(value and ('full_J' in key or 'full_jacobian' in key or 'full_tangent' in key or 'full_adjoint_solve' in key) for key, value in counters.items()):
+        if self.phase == 'online' and any(value and ('full_J' in key or 'full_jacobian' in key or 'full_H' in key or 'full_hessian' in key or 'full_tangent' in key or 'full_adjoint' in key or key in ('offline_J_builds', 'offline_label_reads')) for key, value in counters.items()):
             raise BudgetExceeded('R1_ONLINE_FULL_DERIVATIVE_FORBIDDEN')
         with super().span(label, **counters) as row:
             yield row
