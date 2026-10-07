@@ -1,6 +1,6 @@
 {
   "schema": "a22.publication.v1",
-  "status": "PREPARED_FOR_PUBLIC_BRANCH",
+  "status": "PUBLISHED_PUBLIC_BRANCH",
   "trigger": "User requested a URL readable by GPT after local delivery",
   "repository": "https://github.com/migodam/a20-opm-imaging",
   "branch": "a22-three-fold-opm",
@@ -15,5 +15,39 @@
     "secret_marker_matches_in_A22_delta": 0,
     "oversize_files_over_50MB": 0
   },
-  "verification": "Pending anonymous read after push"
+  "verification": "Anonymous HTTP 200; entry bytes match local; public repository and remote branch commit verified",
+  "anonymous_checks": {
+    "gpt_entry": {
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-three-fold-opm/A22_GPT_HANDOFF.md",
+      "HTTP_status": 200,
+      "bytes": 25500,
+      "authentication": false
+    },
+    "start_here": {
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-three-fold-opm/START_HERE.md",
+      "HTTP_status": 200,
+      "bytes": 2313,
+      "authentication": false
+    },
+    "scientific_source": {
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/153e326b14062aacb696c5e466eeac6fc01162a1/results/a22/SCREENING_DECISION.json",
+      "HTTP_status": 200,
+      "bytes": 3343,
+      "authentication": false
+    },
+    "public_repository": {
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging",
+      "HTTP_status": 200,
+      "bytes": 5456,
+      "authentication": false
+    },
+    "branch_commit": {
+      "url": "https://api.github.com/repos/migodam/a20-opm-imaging/branches/a22-three-fold-opm",
+      "HTTP_status": 200,
+      "bytes": 3742,
+      "authentication": false
+    }
+  },
+  "verified_entry_commit": "d09d114cf813e3846b787b706e02f8f062a55010",
+  "verified_at_UTC": "2026-10-07T16:00:03.992110+00:00"
 }
