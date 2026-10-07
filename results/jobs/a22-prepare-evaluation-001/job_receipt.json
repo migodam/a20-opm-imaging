@@ -1,0 +1,226 @@
+{
+  "wall_seconds": 0.18838441700063413,
+  "process_cpu_seconds": 0.216965,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "offline_screening_truth_reads": 4,
+    "offline_label_reads": 4,
+    "offline_bundle_conflict_checks": 1,
+    "offline_evaluation_asset_writes": 4,
+    "offline_evaluation_manifest_writes": 1
+  },
+  "exclusive_walls": {
+    "a22_separate_offline_label_read": 0.0022407920041587204,
+    "truth": 0.011970623992965557,
+    "a22_offline_evaluator_existing_bundle_check": 0.000265041999227833,
+    "a22_offline_evaluator_asset_write": 0.0035326249999343418,
+    "a22_offline_evaluator_manifest_write": 0.0007554170006187633
+  },
+  "events": 14,
+  "peak_cpu_rss_bytes": 53968896,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "campaign": "A22",
+  "job_id": "a22-prepare-evaluation-001",
+  "stage": "screen_health",
+  "active_stage": "screen_health",
+  "stage_gpu_seconds": {
+    "screen_health": 0.0,
+    "features": 0.0,
+    "direction": 0.0,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "checkpoint_perf_counter": 48577.016204583,
+  "controller_process_cpu_seconds": 0.216965,
+  "child_process_cpu_seconds": 0.0,
+  "live_child_process_cpu_seconds": 0.0,
+  "corrections": {},
+  "role": "online",
+  "status": "COMPLETE",
+  "CPU_cap": null,
+  "gpu_wall_cap_seconds": 32400.0,
+  "stage_gpu_cap_seconds": 1800.0,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "CPU_and_GPU_resources_not_summed": true,
+  "historical_A21_costs": "record only; excluded from A22 limits",
+  "measurement": "inclusive measured process CPU + child CPU; CUDA job inclusive wall",
+  "new_SHA256_checks": 0,
+  "outcome": {
+    "stage": "prepare-evaluation",
+    "schema": "a22.offline_screening_evaluation.v1",
+    "status": "PREPARED_OFFLINE_EVALUATOR_INPUTS",
+    "capability": "OFFLINE_EVALUATOR_ONLY",
+    "online_use_allowed": false,
+    "asset_root_relative": "data/a22/offline_eval",
+    "scene_ids": [
+      2001,
+      2003,
+      2014,
+      2009
+    ],
+    "allowed_npz_members": [
+      "truth"
+    ],
+    "input_capability": "assets.load_offline_scene",
+    "output_capability": "offline_assets.load_evaluation_truth",
+    "deployment_route": "explicit evaluator-input transfer; excluded from online data whitelist",
+    "finite_perturbation_center": "actual_object_solver_grid_material",
+    "online_anchor": "uniform_known_background_0.1+0.04i",
+    "historically_exposed": true,
+    "blind_holdout": false,
+    "physics_actions": 0,
+    "new_integrity_hash_checks": 0,
+    "original_mixed_npz_transferred": false,
+    "scientific_gates_adjudicated": false,
+    "scenes": [
+      {
+        "scene_id": 2001,
+        "family": "gaussian",
+        "source": "scene_2001.npz",
+        "source_archive_relative": "EXCHANGE_R1/inputs/object_2001/common_data.npz",
+        "source_selected_members": [
+          "truth"
+        ],
+        "target_label_members": [
+          "truth"
+        ],
+        "target_label_origin": "original_A17_object_material_on_solver_grid",
+        "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+        "online_anchor_origin": "known_geometry_owned_uniform_background",
+        "online_anchor_background": [
+          0.1,
+          0.04
+        ],
+        "solver_n": 12,
+        "solver_cell_count": 1728,
+        "saved_truth_shape": [
+          1728
+        ],
+        "saved_truth_dtype": "complex128",
+        "data_generation_n_declared": 14,
+        "data_generation_cell_count_declared": 2744,
+        "discretization_mismatch": true,
+        "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+        "historical_exposure": "historically_exposed_feasibility",
+        "blind_holdout": false,
+        "online_use_allowed": false,
+        "source_archive_copied": false,
+        "held_truth_loaded": false,
+        "old_material_chart_loaded": false
+      },
+      {
+        "scene_id": 2003,
+        "family": "gaussian",
+        "source": "scene_2003.npz",
+        "source_archive_relative": "CLOSURE_R1/inputs/object_2003/common_data.npz",
+        "source_selected_members": [
+          "truth"
+        ],
+        "target_label_members": [
+          "truth"
+        ],
+        "target_label_origin": "original_A17_object_material_on_solver_grid",
+        "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+        "online_anchor_origin": "known_geometry_owned_uniform_background",
+        "online_anchor_background": [
+          0.1,
+          0.04
+        ],
+        "solver_n": 12,
+        "solver_cell_count": 1728,
+        "saved_truth_shape": [
+          1728
+        ],
+        "saved_truth_dtype": "complex128",
+        "data_generation_n_declared": 14,
+        "data_generation_cell_count_declared": 2744,
+        "discretization_mismatch": true,
+        "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+        "historical_exposure": "historically_exposed_feasibility",
+        "blind_holdout": false,
+        "online_use_allowed": false,
+        "source_archive_copied": false,
+        "held_truth_loaded": false,
+        "old_material_chart_loaded": false
+      },
+      {
+        "scene_id": 2014,
+        "family": "asymmetric",
+        "source": "scene_2014.npz",
+        "source_archive_relative": "EXCHANGE_R1/inputs/object_2014/common_data.npz",
+        "source_selected_members": [
+          "truth"
+        ],
+        "target_label_members": [
+          "truth"
+        ],
+        "target_label_origin": "original_A17_object_material_on_solver_grid",
+        "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+        "online_anchor_origin": "known_geometry_owned_uniform_background",
+        "online_anchor_background": [
+          0.1,
+          0.04
+        ],
+        "solver_n": 12,
+        "solver_cell_count": 1728,
+        "saved_truth_shape": [
+          1728
+        ],
+        "saved_truth_dtype": "complex128",
+        "data_generation_n_declared": 14,
+        "data_generation_cell_count_declared": 2744,
+        "discretization_mismatch": true,
+        "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+        "historical_exposure": "historically_exposed_feasibility",
+        "blind_holdout": false,
+        "online_use_allowed": false,
+        "source_archive_copied": false,
+        "held_truth_loaded": false,
+        "old_material_chart_loaded": false
+      },
+      {
+        "scene_id": 2009,
+        "family": "shell",
+        "source": "scene_2009.npz",
+        "source_archive_relative": "CLOSURE_R1/inputs/object_2009/common_data.npz",
+        "source_selected_members": [
+          "truth"
+        ],
+        "target_label_members": [
+          "truth"
+        ],
+        "target_label_origin": "original_A17_object_material_on_solver_grid",
+        "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+        "online_anchor_origin": "known_geometry_owned_uniform_background",
+        "online_anchor_background": [
+          0.1,
+          0.04
+        ],
+        "solver_n": 12,
+        "solver_cell_count": 1728,
+        "saved_truth_shape": [
+          1728
+        ],
+        "saved_truth_dtype": "complex128",
+        "data_generation_n_declared": 14,
+        "data_generation_cell_count_declared": 2744,
+        "discretization_mismatch": true,
+        "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+        "historical_exposure": "historically_exposed_feasibility",
+        "blind_holdout": false,
+        "online_use_allowed": false,
+        "source_archive_copied": false,
+        "held_truth_loaded": false,
+        "old_material_chart_loaded": false
+      }
+    ]
+  }
+}

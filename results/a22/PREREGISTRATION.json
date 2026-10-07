@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN_BEFORE_LARGE_GRID_EXPERIMENT",
+  "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "labels": "actual original scene material plus target and full-complement nuisance in fixed W",
+  "online": "known background only; no object material or full tangent read by predictors",
+  "priors": "0.25 pointwise declared indicator scale, never realized truth norm",
+  "validation": "component bounds may be valid locally, but project forecasts remain empirical indicators",
+  "external_W": "reported separately; not smuggled into V_prior",
+  "mesh": "new finite labels on n12 solver grid; old observed data generated on n14 kept distinct",
+  "predictor_calibration": "same single nonnegative LS scale for A0/A1/A2/A3, LOSO screening",
+  "gates": "unchanged accepted Gate A/B/C/D/T thresholds",
+  "screening": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "degree": 1,
+  "current_rank_cap": 32,
+  "material_real_dimension": 32,
+  "perturbation_cap": 192,
+  "GPU_cap_seconds": 32400,
+  "new_SHA256_checks": 0
+}

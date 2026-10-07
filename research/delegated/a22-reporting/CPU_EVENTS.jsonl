@@ -1,0 +1,2 @@
+{"operation": "read_reporting_contracts", "scope": "implementation only, no report/data/physics execution", "process_cpu_seconds": 0.0010900000000000007, "child_process_cpu_seconds": 0.0, "wall_seconds": 0.00622937500156695, "unmeasured_shell_overhead_allowance_seconds": 1.0}
+{"scope": "a22-reporting", "operation": "write_source_handoff_and_expected_schema", "process_cpu_seconds": 0.0003569999999999997, "child_process_cpu_seconds": 0.0, "wall_seconds": 0.0003558750031515956, "unmeasured_shell_overhead_allowance_seconds": 1.0, "data_work_executed": false}

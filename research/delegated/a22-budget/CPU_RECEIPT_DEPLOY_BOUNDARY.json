@@ -1,0 +1,18 @@
+{
+  "scope": "A22 delegated transport online-only boundary patch 2026-10-07",
+  "campaign": "A22",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 5.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "New local file review, transport-only edits, AST parsing, and read-only deployment member inventory; conservative upper allowance",
+  "observed_static_review_process_CPU_seconds": 0.017058999999999998,
+  "prior_30_second_scope": "EXCLUDED; do not register it again",
+  "unit_tests": "NOT_RUN",
+  "remote_connection_or_execution": "NOT_RUN",
+  "GPU_execution": "NOT_RUN",
+  "new_SHA256_checks": 0,
+  "legacy_runtime_deployment_members": 0,
+  "online_deployment_members": 0,
+  "billing_instruction": "Register this new scope once: 5 CPU seconds, 0 GPU seconds"
+}

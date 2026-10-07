@@ -1,0 +1,24 @@
+{
+  "scope": "a22-transport-62832735f2f34993a91288a494b57a7c",
+  "action": "preflight",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 5.270587,
+  "wall_seconds": 26.708810916999937,
+  "remote_process_cpu_seconds": 5.203125,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "A22_REMOTE_PREFLIGHT",
+    "python": "3.10.9",
+    "runtime_versions": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "torch": "2.6.0+cu124"
+    },
+    "shared_lock_exists": false,
+    "GPU_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "queue_busy": false,
+    "remote_process_cpu_seconds": 5.203125
+  },
+  "new_SHA256_checks": 0
+}

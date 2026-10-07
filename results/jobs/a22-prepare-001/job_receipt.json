@@ -1,0 +1,364 @@
+{
+  "wall_seconds": 0.17043900000135181,
+  "process_cpu_seconds": 0.194261,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "portable_prepare_calls": 1,
+    "online_asset_reads": 4,
+    "material_basis_builds": 4,
+    "portable_layout_checks": 4,
+    "portable_online_asset_writes": 4,
+    "portable_manifest_writes": 1,
+    "portable_config_writes": 1
+  },
+  "exclusive_walls": {
+    "a22_portable_preparation_setup": 0.000534582999534905,
+    "a22_selected_online_asset_read": 0.002837334010109771,
+    "a22_known_geometry_patch_chart": 0.0024798340018605813,
+    "a22_portable_online_asset_layout": 0.000977374002104625,
+    "a22_portable_online_asset_write": 0.004319084000599105,
+    "a22_portable_metadata_write": 0.0009619999982533045
+  },
+  "events": 18,
+  "peak_cpu_rss_bytes": 55640064,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "campaign": "A22",
+  "job_id": "a22-prepare-001",
+  "stage": "screen_health",
+  "active_stage": "screen_health",
+  "stage_gpu_seconds": {
+    "screen_health": 0.0,
+    "features": 0.0,
+    "direction": 0.0,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "checkpoint_perf_counter": 47963.120904416,
+  "controller_process_cpu_seconds": 0.194261,
+  "child_process_cpu_seconds": 0.0,
+  "live_child_process_cpu_seconds": 0.0,
+  "corrections": {},
+  "role": "online",
+  "status": "COMPLETE",
+  "CPU_cap": null,
+  "gpu_wall_cap_seconds": 32400.0,
+  "stage_gpu_cap_seconds": 1800.0,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "CPU_and_GPU_resources_not_summed": true,
+  "historical_A21_costs": "record only; excluded from A22 limits",
+  "measurement": "inclusive measured process CPU + child CPU; CUDA job inclusive wall",
+  "new_SHA256_checks": 0,
+  "outcome": {
+    "stage": "prepare",
+    "orthogonal_rank_rtol": 1e-10,
+    "core_relative_sigma_floor": 1e-10,
+    "core_absolute_scaled_sigma_floor": 1e-10,
+    "core_condition_cap": 10000000000.0,
+    "feasibility_tolerance": 1e-08,
+    "qp_kkt_rtol": 1e-08,
+    "qp_maxiter": 200,
+    "real_lower": -0.5,
+    "imag_lower": 0.0,
+    "schema": "a22.three_fold.v1",
+    "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+    "master_seed": 20261007,
+    "precision": "complex128/float64",
+    "material_dimension": 32,
+    "background": [
+      0.1,
+      0.04
+    ],
+    "retained_rank": 8,
+    "seed_rank_O": 4,
+    "seed_rank_P": 4,
+    "seed_rank_M": 4,
+    "degree": 1,
+    "current_rank": 32,
+    "allow_petrov_fallback": false,
+    "allow_full_fallback": false,
+    "measurement_dependent_Q": false,
+    "screening_scenes": [
+      2001,
+      2003,
+      2014,
+      2009
+    ],
+    "finite_screening_directions": 4,
+    "finite_expansion_directions": 3,
+    "total_direction_descriptors": 8,
+    "noise_levels": [
+      0.0,
+      1.0,
+      3.0
+    ],
+    "noise_reference_fraction": 0.01,
+    "noise_draws": 16,
+    "noise_type": "proper_complex_Gaussian",
+    "noise_scale_origin": "known_background_data_RMS_not_truth",
+    "whitening_type": "sqrt2_over_sigma_complex_reference",
+    "amplitude_fractions": [
+      0.2,
+      1.0
+    ],
+    "physical_amplitude_max": 0.25,
+    "feasible_amplitude_fraction": 0.8,
+    "nuisance_fraction": 0.35,
+    "material_absolute_floor": 1e-06,
+    "interventions": [
+      "nominal",
+      "source_amplitude_5pct_receiver_gain_3pct"
+    ],
+    "tikhonov_relative": 0.0001,
+    "split_ranks": [
+      4,
+      8,
+      16
+    ],
+    "correction_events": 0,
+    "new_sha256_checks": false,
+    "gpu_wall_cap_seconds": 32400,
+    "stage_gpu_caps_seconds": {
+      "screen_health": 1800,
+      "features": 3600,
+      "direction": 7200,
+      "image": 5400,
+      "runtime": 7200,
+      "train": 5400,
+      "exception": 1800
+    },
+    "perturbation_evaluation_cap": 192,
+    "bootstrap_repetitions": 2000,
+    "gate_A_correlation": 0.5,
+    "gate_A_mae_improvement": 0.15,
+    "gate_B_physics_error": 0.2,
+    "gate_B_standardized_ratio": 0.5,
+    "gate_B_energy_fraction": 0.2,
+    "gate_C_coarse_error": 0.3,
+    "gate_BC_required_successes": 9,
+    "gate_BC_test_count": 12,
+    "gate_D_violation_reduction": 0.2,
+    "gate_D_material_degradation": 0.05,
+    "gate_T_time_ratio": 0.5,
+    "phase_entry": {
+      "stage_B": [
+        "A_PASS",
+        "split_screen_positive"
+      ],
+      "stage_C": [
+        "A_PASS",
+        "B_PASS",
+        "C_PASS",
+        "legal_existing_training_cache"
+      ]
+    },
+    "prior_decoder": {
+      "hidden": [
+        128,
+        128
+      ],
+      "lr": 0.001,
+      "weight_decay": 1e-05,
+      "epochs": 200,
+      "patience": 20,
+      "batch_size": 8,
+      "seeds": [
+        202610071,
+        202610072,
+        202610073
+      ],
+      "train_sizes": [
+        6,
+        9
+      ]
+    },
+    "paths": {
+      "asset_root": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/data/a22/online",
+      "theory_package": "protocol/a22",
+      "remote_root": "D:/AI/A22_THREE_FOLD_OPM",
+      "shared_lock_root": "D:/AI/A20_OPM_IMAGING"
+    },
+    "splits": {
+      "development": [
+        2001,
+        2003,
+        2005,
+        2013,
+        2014,
+        2016,
+        2009,
+        2010,
+        2011
+      ],
+      "calibration": [
+        2007,
+        2020,
+        2012
+      ],
+      "evaluation": [
+        2002,
+        2004,
+        2006,
+        2008,
+        2021,
+        2022,
+        2023,
+        2024,
+        2031,
+        2032,
+        2033,
+        2034
+      ]
+    },
+    "new_scenes": [
+      {
+        "id": 2020,
+        "family": "asymmetric",
+        "seed": 202610072020
+      },
+      {
+        "id": 2021,
+        "family": "asymmetric",
+        "seed": 202610072021
+      },
+      {
+        "id": 2022,
+        "family": "asymmetric",
+        "seed": 202610072022
+      },
+      {
+        "id": 2023,
+        "family": "asymmetric",
+        "seed": 202610072023
+      },
+      {
+        "id": 2024,
+        "family": "asymmetric",
+        "seed": 202610072024
+      },
+      {
+        "id": 2031,
+        "family": "shell",
+        "seed": 202610072031
+      },
+      {
+        "id": 2032,
+        "family": "shell",
+        "seed": 202610072032
+      },
+      {
+        "id": 2033,
+        "family": "shell",
+        "seed": 202610072033
+      },
+      {
+        "id": 2034,
+        "family": "shell",
+        "seed": 202610072034
+      }
+    ],
+    "scene_sources": {
+      "2001": {
+        "family": "gaussian",
+        "rotation": 3.7107292183472715,
+        "n": 12,
+        "truth_n": 14,
+        "edge": 1.5,
+        "wavenumber": 2.0,
+        "background": [
+          0.1,
+          0.04
+        ],
+        "init": [
+          0.1,
+          0.04
+        ],
+        "partial": false,
+        "source_split": "validation",
+        "receiver_count": 64,
+        "source": "scene_2001.npz"
+      },
+      "2003": {
+        "family": "gaussian",
+        "rotation": 1.7496260542933944,
+        "n": 12,
+        "truth_n": 14,
+        "edge": 1.5,
+        "wavenumber": 2.0,
+        "background": [
+          0.1,
+          0.04
+        ],
+        "init": [
+          0.1,
+          0.04
+        ],
+        "partial": false,
+        "source_split": "validation",
+        "receiver_count": 64,
+        "source": "scene_2003.npz"
+      },
+      "2014": {
+        "family": "asymmetric",
+        "rotation": 2.1650255968898984,
+        "n": 12,
+        "truth_n": 14,
+        "edge": 1.5,
+        "wavenumber": 2.0,
+        "background": [
+          0.1,
+          0.04
+        ],
+        "init": [
+          0.1,
+          0.04
+        ],
+        "partial": false,
+        "source_split": "validation",
+        "receiver_count": 64,
+        "source": "scene_2014.npz"
+      },
+      "2009": {
+        "family": "shell",
+        "rotation": 2.560051713861531,
+        "n": 12,
+        "truth_n": 14,
+        "edge": 1.5,
+        "wavenumber": 2.0,
+        "background": [
+          0.1,
+          0.04
+        ],
+        "init": [
+          0.1,
+          0.04
+        ],
+        "partial": false,
+        "source_split": "validation",
+        "receiver_count": 64,
+        "source": "scene_2009.npz"
+      }
+    },
+    "portable_assets": {
+      "scope": "four_screening_scenes_online_only",
+      "asset_root_relative": "data/a22/online",
+      "manifest_relative": "data/a22/online/MANIFEST.json",
+      "config_relative": "configs/a22_portable.json",
+      "scene_ids": [
+        2001,
+        2003,
+        2014,
+        2009
+      ],
+      "offline_labels_deployed": false,
+      "requires_asset_root_relocation_on_remote": true
+    }
+  }
+}

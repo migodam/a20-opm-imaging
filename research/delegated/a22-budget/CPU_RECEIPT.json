@@ -1,0 +1,21 @@
+{
+  "scope": "A22 delegated budget transport implementation and static review",
+  "campaign": "A22",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 30.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "Conservative upper allowance for local delegated shell reads, source edits, and AST-only review; exact whole-tool CPU was unavailable",
+  "observed_AST_review_CPU_seconds_first": 0.035258,
+  "unit_tests": "NOT_RUN; no future test CPU prepaid",
+  "physics": "NOT_RUN",
+  "remote_connection_or_execution": "NOT_RUN",
+  "GPU_execution": "NOT_RUN",
+  "new_SHA256_checks": 0,
+  "owned_files": [
+    "Gaussian/A22/three_fold_opm/implementation/src/a22/budget.py",
+    "Gaussian/A22/three_fold_opm/implementation/tools/a22_remote_jobs.py",
+    "Gaussian/A22/three_fold_opm/implementation/tests/test_a22_budget.py"
+  ],
+  "billing_instruction": "Register this scope once in the parent A22 external ledger; 30 CPU seconds and 0 GPU seconds"
+}

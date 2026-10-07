@@ -1,0 +1,23 @@
+{
+  "accounting_note": "Measured own process/child CPU excludes unknown external tool-service overhead. Conservative allowances cover four implementation/read/write shells (1s each) and one source apply_patch call (5s); they are explicit bookkeeping reserves, not observed CPU or physics cost. Receipt-writing tail is covered by its shell allowance. Scope is unique and must be incorporated once into the parent A22 ledger.",
+  "allowances_are_measurements": false,
+  "charged_cpu_seconds_conservative": 9.001223,
+  "counts_include_source_only_shells": true,
+  "data_arrays_loaded": 0,
+  "events_file": "research/delegated/a22-core-tests/CPU_EVENTS.jsonl",
+  "hashes_computed": 0,
+  "measured_process_and_child_cpu_seconds": 0.0012230000000000019,
+  "owned_sources": [
+    "tests/test_a22_core.py"
+  ],
+  "pending_execution": "Parent metered unittest invocation only; no result or gate outcome supplied.",
+  "physics_runs": 0,
+  "plots_rendered": 0,
+  "remote_calls": 0,
+  "reports_rendered": 0,
+  "scope": "a22-core-tests",
+  "status": "IMPLEMENTED_SOURCE_ONLY_NOT_RUN",
+  "test_cases_written": 13,
+  "test_runs": 0,
+  "unmeasured_conservative_allowance_seconds": 9.0
+}

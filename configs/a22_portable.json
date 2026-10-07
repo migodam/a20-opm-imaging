@@ -1,0 +1,308 @@
+{
+  "allow_full_fallback": false,
+  "allow_petrov_fallback": false,
+  "amplitude_fractions": [
+    0.2,
+    1.0
+  ],
+  "background": [
+    0.1,
+    0.04
+  ],
+  "bootstrap_repetitions": 2000,
+  "core_absolute_scaled_sigma_floor": 1e-10,
+  "core_condition_cap": 10000000000.0,
+  "core_relative_sigma_floor": 1e-10,
+  "correction_events": 0,
+  "current_rank": 32,
+  "degree": 1,
+  "feasibility_tolerance": 1e-08,
+  "feasible_amplitude_fraction": 0.8,
+  "finite_expansion_directions": 3,
+  "finite_screening_directions": 4,
+  "gate_A_correlation": 0.5,
+  "gate_A_mae_improvement": 0.15,
+  "gate_BC_required_successes": 9,
+  "gate_BC_test_count": 12,
+  "gate_B_energy_fraction": 0.2,
+  "gate_B_physics_error": 0.2,
+  "gate_B_standardized_ratio": 0.5,
+  "gate_C_coarse_error": 0.3,
+  "gate_D_material_degradation": 0.05,
+  "gate_D_violation_reduction": 0.2,
+  "gate_T_time_ratio": 0.5,
+  "gpu_wall_cap_seconds": 32400,
+  "imag_lower": 0.0,
+  "interventions": [
+    "nominal",
+    "source_amplitude_5pct_receiver_gain_3pct"
+  ],
+  "master_seed": 20261007,
+  "material_absolute_floor": 1e-06,
+  "material_dimension": 32,
+  "measurement_dependent_Q": false,
+  "new_scenes": [
+    {
+      "family": "asymmetric",
+      "id": 2020,
+      "seed": 202610072020
+    },
+    {
+      "family": "asymmetric",
+      "id": 2021,
+      "seed": 202610072021
+    },
+    {
+      "family": "asymmetric",
+      "id": 2022,
+      "seed": 202610072022
+    },
+    {
+      "family": "asymmetric",
+      "id": 2023,
+      "seed": 202610072023
+    },
+    {
+      "family": "asymmetric",
+      "id": 2024,
+      "seed": 202610072024
+    },
+    {
+      "family": "shell",
+      "id": 2031,
+      "seed": 202610072031
+    },
+    {
+      "family": "shell",
+      "id": 2032,
+      "seed": 202610072032
+    },
+    {
+      "family": "shell",
+      "id": 2033,
+      "seed": 202610072033
+    },
+    {
+      "family": "shell",
+      "id": 2034,
+      "seed": 202610072034
+    }
+  ],
+  "new_sha256_checks": false,
+  "noise_draws": 16,
+  "noise_levels": [
+    0.0,
+    1.0,
+    3.0
+  ],
+  "noise_reference_fraction": 0.01,
+  "noise_scale_origin": "known_background_data_RMS_not_truth",
+  "noise_type": "proper_complex_Gaussian",
+  "nuisance_fraction": 0.35,
+  "orthogonal_rank_rtol": 1e-10,
+  "paths": {
+    "asset_root": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/data/a22/online",
+    "remote_root": "D:/AI/A22_THREE_FOLD_OPM",
+    "shared_lock_root": "D:/AI/A20_OPM_IMAGING",
+    "theory_package": "protocol/a22"
+  },
+  "perturbation_evaluation_cap": 192,
+  "phase_entry": {
+    "stage_B": [
+      "A_PASS",
+      "split_screen_positive"
+    ],
+    "stage_C": [
+      "A_PASS",
+      "B_PASS",
+      "C_PASS",
+      "legal_existing_training_cache"
+    ]
+  },
+  "physical_amplitude_max": 0.25,
+  "portable_assets": {
+    "asset_root_relative": "data/a22/online",
+    "config_relative": "configs/a22_portable.json",
+    "manifest_relative": "data/a22/online/MANIFEST.json",
+    "offline_labels_deployed": false,
+    "requires_asset_root_relocation_on_remote": true,
+    "scene_ids": [
+      2001,
+      2003,
+      2014,
+      2009
+    ],
+    "scope": "four_screening_scenes_online_only"
+  },
+  "precision": "complex128/float64",
+  "prior_decoder": {
+    "batch_size": 8,
+    "epochs": 200,
+    "hidden": [
+      128,
+      128
+    ],
+    "lr": 0.001,
+    "patience": 20,
+    "seeds": [
+      202610071,
+      202610072,
+      202610073
+    ],
+    "train_sizes": [
+      6,
+      9
+    ],
+    "weight_decay": 1e-05
+  },
+  "qp_kkt_rtol": 1e-08,
+  "qp_maxiter": 200,
+  "real_lower": -0.5,
+  "retained_rank": 8,
+  "scene_sources": {
+    "2001": {
+      "background": [
+        0.1,
+        0.04
+      ],
+      "edge": 1.5,
+      "family": "gaussian",
+      "init": [
+        0.1,
+        0.04
+      ],
+      "n": 12,
+      "partial": false,
+      "receiver_count": 64,
+      "rotation": 3.7107292183472715,
+      "source": "scene_2001.npz",
+      "source_split": "validation",
+      "truth_n": 14,
+      "wavenumber": 2.0
+    },
+    "2003": {
+      "background": [
+        0.1,
+        0.04
+      ],
+      "edge": 1.5,
+      "family": "gaussian",
+      "init": [
+        0.1,
+        0.04
+      ],
+      "n": 12,
+      "partial": false,
+      "receiver_count": 64,
+      "rotation": 1.7496260542933944,
+      "source": "scene_2003.npz",
+      "source_split": "validation",
+      "truth_n": 14,
+      "wavenumber": 2.0
+    },
+    "2009": {
+      "background": [
+        0.1,
+        0.04
+      ],
+      "edge": 1.5,
+      "family": "shell",
+      "init": [
+        0.1,
+        0.04
+      ],
+      "n": 12,
+      "partial": false,
+      "receiver_count": 64,
+      "rotation": 2.560051713861531,
+      "source": "scene_2009.npz",
+      "source_split": "validation",
+      "truth_n": 14,
+      "wavenumber": 2.0
+    },
+    "2014": {
+      "background": [
+        0.1,
+        0.04
+      ],
+      "edge": 1.5,
+      "family": "asymmetric",
+      "init": [
+        0.1,
+        0.04
+      ],
+      "n": 12,
+      "partial": false,
+      "receiver_count": 64,
+      "rotation": 2.1650255968898984,
+      "source": "scene_2014.npz",
+      "source_split": "validation",
+      "truth_n": 14,
+      "wavenumber": 2.0
+    }
+  },
+  "schema": "a22.three_fold.v1",
+  "screening_scenes": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "seed_rank_M": 4,
+  "seed_rank_O": 4,
+  "seed_rank_P": 4,
+  "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "split_ranks": [
+    4,
+    8,
+    16
+  ],
+  "splits": {
+    "calibration": [
+      2007,
+      2020,
+      2012
+    ],
+    "development": [
+      2001,
+      2003,
+      2005,
+      2013,
+      2014,
+      2016,
+      2009,
+      2010,
+      2011
+    ],
+    "evaluation": [
+      2002,
+      2004,
+      2006,
+      2008,
+      2021,
+      2022,
+      2023,
+      2024,
+      2031,
+      2032,
+      2033,
+      2034
+    ]
+  },
+  "stage_gpu_caps_seconds": {
+    "direction": 7200,
+    "exception": 1800,
+    "features": 3600,
+    "image": 5400,
+    "runtime": 7200,
+    "screen_health": 1800,
+    "train": 5400
+  },
+  "tikhonov_relative": 0.0001,
+  "total_direction_descriptors": 8,
+  "whitening_type": "sqrt2_over_sigma_complex_reference",
+  "finite_label_center": "original_scene_material_OFFLINE_ONLY",
+  "descriptor_material_pointwise_prior": 0.25,
+  "descriptor_W_external": "analytic_known_anchor_voxel_injection_budget",
+  "scientific_correction": "Uniform-background-only patch labels do not distinguish the four requested object families."
+}

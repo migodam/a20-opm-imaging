@@ -1,0 +1,33 @@
+{
+  "accounting_note": "Source work only: three implementation/read/write shells with 1s reserve each, and two apply_patch calls with 5s reserve each. The explicit reserve covers unknown tool-service/shell overhead and receipt-writing tail; it is not observed physics/test CPU. Incorporate this unique scope once into the parent A22 implementation ledger. The future preparation invocation must be metered independently.",
+  "allowances_are_measurements": false,
+  "charged_cpu_seconds_conservative": 13.000741,
+  "counts_include_source_only_shells": true,
+  "data_arrays_loaded": 0,
+  "events_file": "research/delegated/a22-prepare/CPU_EVENTS.jsonl",
+  "hashes_computed": 0,
+  "measured_process_and_child_cpu_seconds": 0.0007409999999999986,
+  "owned_sources": [
+    "src/a22/prepare.py",
+    "tests/test_a22_prepare.py"
+  ],
+  "pending_execution": "Parent metered preparation and optional independent unittest invocation; no outcome supplied.",
+  "physics_runs": 0,
+  "portable_configuration_created": false,
+  "portable_data_files_created": 0,
+  "preparation_runs": 0,
+  "public_api": "prepare_screening(root, config, book) -> portable config",
+  "remote_calls": 0,
+  "scene_ids": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "scope": "a22-prepare",
+  "source_npz_files_opened": 0,
+  "status": "IMPLEMENTED_SOURCE_ONLY_NOT_RUN",
+  "test_cases_written": 3,
+  "test_runs": 0,
+  "unmeasured_conservative_allowance_seconds": 13.0
+}

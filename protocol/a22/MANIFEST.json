@@ -1,0 +1,133 @@
+{
+  "research_date": "2026-10-07",
+  "package": "Three-Fold OPM Physics-Prior Imaging",
+  "required_markdown_files": 17,
+  "total_markdown_files": 19,
+  "project_imaging_gates": "NOT_RUN",
+  "neural_training": "NOT_RUN",
+  "diffusion_campaign": "NOT_AUTHORIZED",
+  "verification_scope": "Finite-matrix algebra and 8-particle 3D vector coupled-dipole sanity checks only",
+  "priority_claim": "None; proofs here do not establish novelty or publication priority",
+  "files": [
+    {
+      "path": "CODEX_ROUTE_A_RECOVERABILITY.md",
+      "bytes": 3026,
+      "sha256": "55698db3a700328b69a10ec425dbc9cb36faf3909c41028210d81e7e14851a17"
+    },
+    {
+      "path": "CODEX_ROUTE_B_ONE_SHOT.md",
+      "bytes": 2320,
+      "sha256": "6de13aff2f4cbd088db855898102db9df5003e90c5583d135460f8dfe44505d1"
+    },
+    {
+      "path": "CODEX_ROUTE_C_PRIOR_DECODER.md",
+      "bytes": 2488,
+      "sha256": "0682c1e312c2ef66e683b426e968e817615210739a5a34dbc5025d1d23abbde9"
+    },
+    {
+      "path": "EARLY_EXIT_CLASSIFIER.md",
+      "bytes": 3064,
+      "sha256": "6b60bf0ee08cb00ba6ff01483999ed50c179264436a1c00d7337f3d99452ab66"
+    },
+    {
+      "path": "GO_NO_GO_GATES.md",
+      "bytes": 5300,
+      "sha256": "43f8c4ab3570f6e41d79b94c30b5f032d96fd5a18f78530c9eb137c0af4a9f60"
+    },
+    {
+      "path": "LIGHTWEIGHT_EXPERIMENT_SPEC.md",
+      "bytes": 7257,
+      "sha256": "809e83a2fed54968820ad8220256c874e9459adfff2c387741706a3415abb837"
+    },
+    {
+      "path": "MATERIAL_PHYSICS_PRIOR_SPLIT.md",
+      "bytes": 7398,
+      "sha256": "fd631ecf71e483eacdb3e29d0976c383e7e42da6f0b8fed54247125a32e1a508"
+    },
+    {
+      "path": "NOVELTY_AUDIT.md",
+      "bytes": 8514,
+      "sha256": "eb5a93ca504bd93cf01fa17919b2d814d472712fa4bbd3526dfb9a9deb3c552a"
+    },
+    {
+      "path": "ONE_SHOT_OPM_IMAGING.md",
+      "bytes": 9038,
+      "sha256": "901f1117fb250c6cf80824247f175a94c33534a6d760c9fd18b554f1bbbea537"
+    },
+    {
+      "path": "OPM_PHYSICS_ENCODER.md",
+      "bytes": 4712,
+      "sha256": "ca36ea776e60790a69af447c4dce2af8d7fc2329e085e5441364ad83b06b7ddd"
+    },
+    {
+      "path": "PRIOR_ONLY_NEURAL_DECODER.md",
+      "bytes": 6145,
+      "sha256": "34dbded7f71d6f58cd1822ccd1084419cfd82deed74be7d32370106f9d4485dd"
+    },
+    {
+      "path": "PRIOR_SUBSPACE_DIFFUSION.md",
+      "bytes": 6028,
+      "sha256": "3dc19cfbb4681f437718cfb73192d23fed97c02cfbc18923fafa8d8f321a71fd"
+    },
+    {
+      "path": "REFERENCES.md",
+      "bytes": 10385,
+      "sha256": "d72a402d6e84d3b7f74b86a12fff813ef9a898f86ff3f0cc1f216ee37e3f55f6"
+    },
+    {
+      "path": "SOURCE_TASK.txt",
+      "bytes": 29605,
+      "sha256": "8fc0da41763ff5d54a71b10d75ecdcafff35a9ea965e4eaeab3f99bc1753c3d0"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 6002,
+      "sha256": "514ed2d68057c067c10d4c39b4f493f02c6d6c2c47542ac0829d614ba9b88a09"
+    },
+    {
+      "path": "THEOREM_COUNTEREXAMPLE_LEDGER.md",
+      "bytes": 5997,
+      "sha256": "518e16e10d8641b6d7cb0bbc1a97318621193529685e50bb70426a73ef6b0c0c"
+    },
+    {
+      "path": "THREE_FOLD_RECOVERABILITY_THEORY.md",
+      "bytes": 9696,
+      "sha256": "90ed7dd17f1125161708ccddfad65c9d907c4b16e8d8406b78c8ce094a1e66c6"
+    },
+    {
+      "path": "TIME_TO_IMAGE_ANALYSIS.md",
+      "bytes": 4494,
+      "sha256": "08f1e2ba7fb8799c7c515cf18a1d2ef8c49d390d93ec081b646d2457c258a9f7"
+    },
+    {
+      "path": "TWO_SIDED_RECOVERABILITY.md",
+      "bytes": 5862,
+      "sha256": "d4f614447f42942a2b8b07901778f5d63c34d8b19b9b5f4f253aaa123789ddfd"
+    },
+    {
+      "path": "VERIFICATION_REPORT.md",
+      "bytes": 3984,
+      "sha256": "d2d1b45e1a4ae590cf6c0738aa5051b3f6757f857bd017c9211d9d0ab6c1d7b6"
+    },
+    {
+      "path": "verification/additional_results.json",
+      "bytes": 1438,
+      "sha256": "917a9592414009bae681afdcee5ce44ce9942d2892c11934cf121d33b909e2ed"
+    },
+    {
+      "path": "verification/results.json",
+      "bytes": 3791,
+      "sha256": "8811677064d55520bf6226744c2fc95b5712f247fb4fb0156a0c57d4c8118a8a"
+    },
+    {
+      "path": "verification/verify_additional.py",
+      "bytes": 5764,
+      "sha256": "9cdbb3f1f4932bdbc6332b7441898ce50cc7c8215b492f3e51116300c0c6c81f"
+    },
+    {
+      "path": "verification/verify_theory.py",
+      "bytes": 9413,
+      "sha256": "21ce6082607124cc304efa450358a1b5c0e18be4e8c0786aa91d77aa70e44d45"
+    }
+  ]
+}

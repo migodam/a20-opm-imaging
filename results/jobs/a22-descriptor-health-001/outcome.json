@@ -1,0 +1,8 @@
+{
+  "error_type": "NameError",
+  "error": "name 'adapter' is not defined",
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/cli.py\", line 117, in main\n    detail = run_descriptor_health(root,config,book,device=args.device)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/descriptor_health.py\", line 32, in run_descriptor_health\n    desc = direction_descriptor(context, v, config)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/features.py\", line 183, in direction_descriptor\n    with book.span('a22_W_external_injection_pullback', B_adjoint_voxel_rhs=adapter.P):\n                                                                            ^^^^^^^\nNameError: name 'adapter' is not defined\n",
+  "test_summary": null,
+  "status": "FAILED",
+  "stage": "descriptor-validate"
+}

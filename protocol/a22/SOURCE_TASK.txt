@@ -1,0 +1,1578 @@
+# New Theory Task
+# Three-Fold OPM Physics-Prior Imaging
+# One-Shot Material Recoverability Decomposition,
+# Physics Reconstruction, and Prior-Only Neural Completion
+
+你现在负责当前 OPM / Maxwell inverse-scattering 项目的下一阶段核心理论研究。
+
+这次不要继续把重点放在：
+
+- current selection；
+- current exchange；
+- 每一步 GN 的 reduced-model fidelity；
+- PCG / GMRES / Krylov solver acceleration；
+- 用 ROM 把每个 nonlinear GN step 做便宜；
+- 继续扩大 OPM polynomial degree；
+- 继续优化 A21 oracle two-sided GN 本身。
+
+最终目标始终是：
+
+    fast material imaging.
+
+我现在更关心：
+
+> Can the O/P/M feedback structure provide a one-shot
+> physics-native decomposition of material space into
+> directions that can be reconstructed directly from measurements
+> and directions that genuinely require prior knowledge?
+
+目标架构是：
+
+    measurement
+        ->
+    cheap OPM physics encoder
+        ->
+    material recoverability split
+        ->
+    physics-recoverable dimensions:
+        analytic / one-shot reconstruction
+    prior-dependent dimensions:
+        NN / encoder-decoder / diffusion / classifier
+        ->
+    final image
+
+重点不是“每一步 GN 更便宜”，
+而是：
+
+    minimize total time-to-image.
+
+============================================================
+0. 当前必须接受的研究背景
+============================================================
+
+当前项目已经有以下结果。
+
+------------------------------------------------------------
+A17
+------------------------------------------------------------
+
+Full-wave material tangent：
+
+    J = S L^{-1} B.
+
+current-space quality 不能仅按 receiver visibility
+或 current energy 判断。
+
+material relevance 至少涉及：
+
+    material excitation
+        ->
+    internal feedback / multiple scattering
+        ->
+    receiver observation.
+
+A17 已证明 current visibility 与
+material-update relevance 并不等价。
+
+------------------------------------------------------------
+A18/A19
+------------------------------------------------------------
+
+基于三类 physical seeds：
+
+    O = observation
+    P = propagation / feedback
+    M = material excitation
+
+构造 shallow orthogonal feedback hierarchy：
+
+    b
+    F_eff b
+    F_eff^2 b
+    ...
+
+development 中曾观察：
+
+    degree0 coverage ≈ 0.892
+    degree1 coverage ≈ 0.966
+    degree2 coverage ≈ 0.993
+
+这说明很浅的 O/P/M feedback coordinates
+能包含大量 material-relevant structure。
+
+但：
+
+    NN coefficient predictor失败；
+    local polynomial/current proposal失败；
+    current selection不再作为主线。
+
+------------------------------------------------------------
+A20
+------------------------------------------------------------
+
+尝试直接用 OPM 做 reduced GN imaging。
+
+结果：
+
+    early state:
+        low-rank OPM 对 full-GN step fidelity很好
+
+    late state:
+        fixed-seed OPM GN fidelity严重崩溃。
+
+因此：
+
+    reduced model inside every GN iteration
+
+未必是最佳 time-to-image strategy。
+
+特别需要考虑：
+
+    ROM 每步更便宜
+        !=
+    final reconstruction 更快.
+
+因为 reduced-model bias
+可能增加 nonlinear outer iterations、
+line-search失败或改变 basin。
+
+------------------------------------------------------------
+A21
+------------------------------------------------------------
+
+A21 得到一个重要理论机制：
+
+对于 full frozen GN optimum s_F，
+若 reduced Jacobian同时满足：
+
+    J_R s_F = J_F s_F
+
+以及：
+
+    J_R^T e_F = J_F^T e_F,
+
+其中：
+
+    e_F = r + J_F s_F,
+
+则 constrained regularized GN optimum
+可以被精确恢复。
+
+五个 late Gaussian states 中：
+
+    primal-only:
+        GN step仍很差
+
+    dual-only:
+        GN step仍很差
+
+    primal + dual:
+        full-GN optimum恢复到数值精度。
+
+这说明：
+
+    inverse imaging information is inherently two-sided.
+
+但 A21 是 ORACLE frozen quadratic mechanism，
+不是 online algorithm，也不是 fast imaging result。
+
+本任务可以把 A21 当理论背景，
+但不要把主研究重新变成
+“如何在线复现 full GN iteration”。
+
+============================================================
+1. 新的核心 framing
+============================================================
+
+我希望重新解释 O/P/M。
+
+定义一个低维 OPM current representation Q。
+
+material injection：
+
+    M_Q = Q^* B.
+
+internal feedback：
+
+    P_Q = (Q^* L Q)^(-1)
+
+或更适合当前 Schur / non-normal OPM 的
+严格等价 reduced propagation operator。
+
+receiver observation：
+
+    O_Q = S Q.
+
+则低维 material-to-data map：
+
+    J_Q
+      =
+    O_Q P_Q M_Q.
+
+请不要只把 J_Q 当成 reduced Jacobian。
+
+重点研究：
+
+    M_Q:
+        which material perturbations
+        actually excite accessible current structure?
+
+    P_Q:
+        which excited current structures
+        survive / amplify / mix under multiple scattering?
+
+    O_Q:
+        which propagated structures
+        finally reach the measurement system?
+
+因此每个 material direction v
+都可以有一个 three-fold physical fingerprint：
+
+    alpha(v)
+      =
+    ||M_Q v||
+
+    beta(v)
+      =
+    ||P_Q M_Q v||
+      /
+    (||M_Q v|| + eps)
+
+    gamma(v)
+      =
+    ||O_Q P_Q M_Q v||
+      /
+    (||P_Q M_Q v|| + eps).
+
+但不要预设这三个 norm 就是最终正确定义。
+
+请自由研究更合理的：
+
+- normalized transfer quantities
+- signed transfer
+- singular-direction quantities
+- principal-angle quantities
+- adjoint/two-sided quantities
+- frequency-aggregated quantities
+- uncertainty-calibrated quantities.
+
+============================================================
+2. 核心科学问题
+============================================================
+
+最终要回答：
+
+> Can the three-fold O/P/M structure identify
+> which material dimensions should be reconstructed
+> directly by physics and which dimensions should be
+> delegated to prior inference?
+
+即希望形成：
+
+    material space
+      =
+    V_phys
+      direct-sum
+    V_prior.
+
+其中：
+
+    V_phys
+
+是 measurement / Maxwell physics
+足以可靠恢复的 material subspace；
+
+    V_prior
+
+是 measurement 本身不足、
+需要结构先验 / learned prior 的部分。
+
+注意：
+
+这不是简单的：
+
+    small singular value of J
+        ->
+    prior.
+
+必须研究：
+
+    why a material direction is weak.
+
+例如：
+
+A.
+Injection-weak：
+
+    M weak.
+
+材料变化本身几乎不能激发可用 current response。
+
+B.
+Feedback-weak：
+
+    M strong
+    P weak / unstable.
+
+材料能激发 current，
+但多重散射传播以后不稳定或被压制。
+
+C.
+Observation-weak：
+
+    M strong
+    P strong
+    O weak.
+
+内部物理结构存在，
+但 receiver 看不到。
+
+D.
+Physics-strong：
+
+    M/P/O all sufficiently informative.
+
+这种方向应该尽量由 physics 直接还原，
+NN 不应随意修改。
+
+============================================================
+3. 不要把 H = J^T J 作为唯一中心
+============================================================
+
+允许使用：
+
+    H
+    Fisher information
+    posterior covariance
+    LIS
+    generalized eigenvectors
+
+作为比较或验证。
+
+但是主理论不要退化成：
+
+    compute H
+        ->
+    take eigenvectors
+        ->
+    call weak eigenvectors prior-space.
+
+我希望 O/P/M decomposition
+能比 H-Gram 给出更多机制信息：
+
+    information is weak because of
+    injection?
+    propagation?
+    observation?
+    or two-sided mismatch?
+
+研究：
+
+> Can two material directions have similar
+> total information strength
+> but fundamentally different O/P/M failure mechanisms?
+
+如果可以，
+这就是 three-fold decomposition 的真正价值。
+
+============================================================
+4. Route A
+# One-Shot Physics Reconstruction
+============================================================
+
+研究一个不依赖多轮 GN 的
+one-shot / very-few-shot physics reconstruction。
+
+给定 V_phys：
+
+    delta_chi_phys
+      =
+    V_phys a_phys.
+
+求：
+
+    a_phys
+      =
+    argmin_a
+      ||r + J_Q V_phys a||^2
+      + lambda ||a||^2.
+
+如果维度低，
+可以直接用：
+
+    small SVD
+    generalized eigenproblem
+    closed-form Tikhonov
+    or small constrained solve.
+
+要求：
+
+- no nonlinear GN loop if avoidable；
+- one OPM construction；
+- one small material solve；
+- optional one full-wave consistency correction at most.
+
+核心目标：
+
+    measurement
+        ->
+    OPM
+        ->
+    one-shot coarse/physics image.
+
+请研究：
+
+1.
+这种 one-shot image
+在什么 regime 下合理？
+
+2.
+是否需要：
+    Born-like initialization
+    distorted-Born background
+    current-state linearization
+    multi-frequency continuation
+
+3.
+是否能得到：
+
+    coarse structure
+    location
+    support
+    low-frequency material content
+
+而把高-frequency/detail
+留给 prior branch？
+
+============================================================
+5. Route B
+# Physics / Prior Material-Space Split
+============================================================
+
+这是本任务最核心路线。
+
+设计一个 material basis：
+
+    V = [V_phys, V_prior].
+
+V_phys 需要满足：
+
+    data-supported
+    Maxwell-supported
+    relatively stable
+    low hallucination risk.
+
+V_prior 是：
+
+    insufficiently determined
+    ambiguous
+    weakly observed
+    or unstable.
+
+请研究至少以下构造方式：
+
+A.
+three-fold thresholding
+
+B.
+joint generalized eigenproblem
+
+C.
+block SVD of:
+
+    M_Q
+    P_Q M_Q
+    O_Q P_Q M_Q
+
+D.
+multi-object / distributional stable subspaces
+
+E.
+two-sided OPM task coordinates
+
+F.
+frequency-consistent material directions
+
+G.
+posterior-calibrated three-fold directions.
+
+关键要求：
+
+split 必须能预测：
+
+    actual reconstruction difficulty.
+
+不能只数学上漂亮。
+
+============================================================
+6. Recoverability score
+============================================================
+
+尝试定义一个真正可计算的：
+
+    material recoverability score.
+
+例如：
+
+    R(v)
+      =
+    f(
+      injection,
+      propagation,
+      observation,
+      noise,
+      regularization,
+      prior-independent stability
+    ).
+
+但不要随便线性加权。
+
+研究是否可以从：
+
+    perturbation bounds
+    Bayesian posterior variance
+    minimax error
+    Cramer-Rao style quantity
+    task-conditioned stability
+
+推导 score。
+
+目标是：
+
+    R(v) high
+        -> physics branch
+
+    R(v) low
+        -> prior branch.
+
+如果不能得到 scalar score，
+允许输出：
+
+    vector-valued recoverability signature
+
+并让 classifier 使用。
+
+============================================================
+7. 与 A21 two-sided mechanism 的结合
+============================================================
+
+A21 已表明：
+
+    primal-only fidelity
+    不够；
+
+    dual-only fidelity
+    也不够。
+
+因此研究 three-fold split 时，
+不要只看 forward：
+
+    v
+      ->
+    Bv
+      ->
+    L^-1 Bv
+      ->
+    S L^-1 Bv.
+
+还要研究 dual consistency：
+
+    measurement residual direction
+      ->
+    S*
+      ->
+    L^-*
+      ->
+    B*.
+
+请探索一个：
+
+    primal-three-fold
+    +
+    dual-three-fold
+
+的 recoverability descriptor。
+
+但是不要因此重新构造完整 H。
+
+目标仍然是：
+
+    cheap physical diagnostics.
+
+一个可能对象：
+
+    forward support
+        +
+    backward attribution support.
+
+例如某方向 v：
+
+    forward:
+        how much it changes data
+
+    backward:
+        how uniquely measurement residual
+        can attribute change back to v.
+
+研究：
+
+> Is recoverability essentially the overlap
+> between forward material excitation
+> and backward residual attribution?
+
+如果能得到新 theorem，
+大胆发展。
+
+============================================================
+8. Route C
+# Prior-Only Neural Decoder
+============================================================
+
+如果 V_phys / V_prior split有效：
+
+physics branch：
+
+    chi_phys
+      =
+    chi_0 + V_phys a_phys.
+
+NN 不允许重建整个 material image。
+
+只预测：
+
+    a_prior.
+
+最终：
+
+    chi_hat
+      =
+    chi_phys
+      +
+    V_prior a_prior_theta.
+
+网络输入可以包括：
+
+- chi_phys
+- OPM coefficients
+- O/P/M fingerprints
+- measurement residual
+- geometry
+- frequency
+- receiver encoding
+- V_prior descriptors.
+
+比较：
+
+A.
+MLP latent decoder
+
+B.
+small transformer / set encoder
+
+C.
+convolutional decoder
+
+D.
+graph decoder
+
+E.
+operator decoder.
+
+首先从最简单模型开始。
+
+如果 MLP 已足够，
+不要为了“NN-native”强行用 GNN/Transformer。
+
+============================================================
+9. Route D
+# Diffusion / Flow Only in Prior Subspace
+============================================================
+
+不要在整个 voxel/image space
+训练 diffusion。
+
+只在：
+
+    V_prior
+
+坐标中训练：
+
+    p_theta(
+      a_prior
+      |
+      measurements,
+      chi_phys,
+      OPM latent
+    ).
+
+例如：
+
+    q = dim(V_prior)
+
+若：
+
+    q << p_material
+
+则 diffusion / flow 的目标
+从 full image generation
+变成：
+
+    low-dimensional conditional posterior completion.
+
+研究：
+
+- DDPM
+- score model
+- rectified flow
+- flow matching
+- conditional normalizing flow
+
+哪种最适合。
+
+但只有存在：
+
+    real posterior ambiguity / multimodality
+
+时才允许 diffusion。
+
+如果 posterior 大体单峰，
+deterministic decoder 更合理。
+
+============================================================
+10. Route E
+# OPM Physics Encoder + Neural Decoder
+============================================================
+
+研究 O/P/M × polynomial degree
+是否本身可以作为一个 physics latent tensor。
+
+例如：
+
+    Z =
+    {
+      O_0,...,O_m,
+      P_0,...,P_m,
+      M_0,...,M_m
+    }.
+
+每个 token 有：
+
+- family label
+- degree
+- norm
+- phase
+- feedback coupling
+- receiver coupling
+- material coupling
+- singular / recurrence diagnostics.
+
+构造：
+
+    h_phys
+      =
+    Encoder_OPM(Z).
+
+然后：
+
+    deterministic decoder
+    or
+    prior latent decoder.
+
+重点研究：
+
+> Can OPM replace a generic neural encoder?
+
+也就是说：
+
+    physics produces latent representation,
+    NN only decodes missing material information.
+
+这比：
+
+    raw y -> CNN encoder
+
+更有 physics-native 意义。
+
+============================================================
+11. Route F
+# Classifier / Early Exit
+============================================================
+
+用户明确希望考虑：
+
+    classifier is enough if useful.
+
+设计：
+
+    c_theta(OPM latent)
+      ->
+    scene difficulty / prior necessity.
+
+例如输出：
+
+    physics_only
+    small_decoder
+    diffusion_needed.
+
+整个 pipeline：
+
+    measurement
+        ->
+    OPM one-shot image
+        ->
+    classifier.
+
+如果 physics 已足够：
+
+    return immediately.
+
+否则：
+
+    run deterministic prior decoder.
+
+若 uncertainty / ambiguity 很高：
+
+    run diffusion posterior.
+
+形成：
+
+    easy:
+        OPM only
+
+    medium:
+        OPM + small NN
+
+    hard:
+        OPM + probabilistic prior.
+
+最终优化的是：
+
+    expected time-to-acceptable-image.
+
+============================================================
+12. 评价指标必须重新定义
+============================================================
+
+不要再以：
+
+    current rank
+    candidate coverage
+    per-GN-step fidelity
+
+作为最终 primary metric。
+
+真正 primary：
+
+1.
+final reconstruction error
+
+2.
+time-to-image
+
+3.
+data consistency
+
+4.
+uncertainty calibration
+
+5.
+prior hallucination rate
+
+6.
+physics-supported direction preservation
+
+7.
+number of full-wave solves / operator actions.
+
+特别比较：
+
+    Full GN / DBIM total runtime
+
+    OPM iterative GN total runtime
+
+    one-shot OPM
+
+    one-shot OPM + NN
+
+    one-shot OPM + diffusion prior.
+
+============================================================
+13. 必须验证 iterative ROM 的隐患
+============================================================
+
+用户特别担心：
+
+    ROM makes each step cheaper
+    but increases number of outer iterations.
+
+请系统验证：
+
+    T_total
+      =
+    N_outer
+    x
+    T_step.
+
+比较：
+
+    full GN
+
+与：
+
+    OPM-GN.
+
+记录：
+
+- outer iterations
+- line-search trials
+- failed descent directions
+- final error
+- total time.
+
+如果 reduced GN
+确实显著增加 outer iteration count，
+明确把 iterative OPM-ROM
+降为次要路线。
+
+不要因为：
+
+    time per iteration lower
+
+就声称 acceleration。
+
+============================================================
+14. 最关键的验证实验
+============================================================
+
+第一轮不要训练 diffusion。
+
+先回答：
+
+> Does three-fold OPM actually predict
+> which material directions are recoverable?
+
+构造 material directions v_i。
+
+可以来自：
+
+- canonical coordinates
+- wavelets
+- Fourier modes
+- learned PCA
+- generalized eigenvectors
+- random orthogonal basis
+- Gaussian parameter tangent
+- voxel patches.
+
+对每个 v_i 计算：
+
+    O/P/M recoverability signature.
+
+然后独立测量：
+
+A.
+one-shot reconstruction error along v_i
+
+B.
+posterior variance / ambiguity along v_i
+
+C.
+full nonlinear reconstruction uncertainty
+
+D.
+noise sensitivity
+
+E.
+truth perturbation recovery.
+
+然后问：
+
+    does three-fold signature
+    predict actual recoverability?
+
+这是第一核心 gate。
+
+============================================================
+15. 第二核心实验
+# Physics / Prior split
+============================================================
+
+构造：
+
+    V_phys
+    V_prior.
+
+然后分别统计：
+
+    error_phys
+      =
+    ||P_phys(chi_hat-chi_true)||
+
+    error_prior
+      =
+    ||P_prior(chi_hat-chi_true)||.
+
+希望看到：
+
+    physics-only one-shot image
+    在 V_phys 中已经很准确，
+
+而主要误差集中在：
+
+    V_prior.
+
+如果误差并没有这样分离：
+
+    kill physics/prior decomposition.
+
+============================================================
+16. 第三核心实验
+# Prior-only decoder
+============================================================
+
+只有前两个 gate PASS 才训练小 NN。
+
+比较：
+
+A.
+NN reconstruct whole image.
+
+B.
+NN reconstruct only V_prior coefficients.
+
+C.
+OPM physics image + residual CNN.
+
+D.
+OPM physics image + prior latent decoder.
+
+primary question：
+
+> Does restricting NN to V_prior
+> improve data consistency,
+> sample efficiency,
+> robustness,
+> and hallucination control?
+
+============================================================
+17. Diffusion gate
+============================================================
+
+只有满足：
+
+    posterior on V_prior is genuinely multimodal
+
+或：
+
+    deterministic decoder error ceiling is clear
+
+才允许使用 diffusion / flow.
+
+否则：
+
+    no diffusion.
+
+如果启动：
+
+仅在 low-dimensional V_prior latent
+进行 generative modeling。
+
+不要训练 full-resolution image diffusion
+作为第一方案。
+
+============================================================
+18. One-shot / few-shot algorithm candidates
+============================================================
+
+请至少提出 3 个真正不同的算法。
+
+------------------------------------------------------------
+Algorithm A
+Three-Fold One-Shot Tikhonov
+------------------------------------------------------------
+
+    OPM
+      ->
+    V_phys
+      ->
+    analytic inverse
+      ->
+    chi_phys.
+
+------------------------------------------------------------
+Algorithm B
+Physics + Deterministic Prior Decoder
+------------------------------------------------------------
+
+    chi_phys
+    +
+    V_prior a_theta.
+
+------------------------------------------------------------
+Algorithm C
+Physics + Conditional Prior Posterior
+------------------------------------------------------------
+
+    chi_phys
+    +
+    V_prior a
+
+where:
+
+    a ~ p_theta(a | OPM latent, data).
+
+允许再提出：
+
+Algorithm D
+early-exit classifier
+
+Algorithm E
+one OPM shot + one full-wave correction.
+
+============================================================
+19. 与 encoder-decoder 的关系
+============================================================
+
+重点探索：
+
+    OPM as encoder.
+
+而不是：
+
+    NN encoder learns everything from raw field.
+
+可以定义：
+
+    Encoder_physics(y)
+      =
+    [
+      material injection tokens,
+      feedback tokens,
+      observation tokens,
+      recoverability tokens
+    ].
+
+Neural decoder负责：
+
+    material prior completion.
+
+研究：
+
+> Can the physics encoder reduce training data requirement?
+
+> Can it improve out-of-distribution geometry/material robustness?
+
+> Can it avoid learning Maxwell propagation from scratch?
+
+============================================================
+20. Material basis 不应局限于 voxel canonical axes
+============================================================
+
+请比较：
+
+- voxel
+- wavelet
+- Fourier
+- Gaussian manifold
+- learned PCA
+- multiscale basis
+- edge/detail basis.
+
+可能出现：
+
+    low-frequency directions -> physics
+    high-frequency details -> prior.
+
+但不要预设。
+
+如果 three-fold decomposition
+在 wavelet / multiscale basis中更清晰，
+优先使用。
+
+============================================================
+21. Multi-frequency direction
+============================================================
+
+研究多频是否天然形成：
+
+    low frequency:
+        physics-supported coarse structure
+
+    high frequency:
+        finer but less stable details.
+
+考虑：
+
+    frequency
+        ×
+    O/P/M
+        ×
+    material scale.
+
+最终可能得到：
+
+    physics reconstructs stable coarse scales,
+    prior completes unstable fine scales.
+
+如果成立，
+这可能非常适合 one-shot imaging。
+
+============================================================
+22. Theory targets
+============================================================
+
+尽量争取以下理论中的至少一个。
+
+Theorem A:
+Three-fold recoverability bound
+
+给定 material direction v，
+由：
+
+    injection
+    propagation
+    observation
+
+的量推导其 measurement sensitivity
+或 reconstruction error bound。
+
+------------------------------------------------------------
+Theorem B:
+Physics-prior split stability
+
+若 V_phys 满足某个 three-fold lower bound，
+证明在 noise 下：
+
+    reconstruction error on V_phys
+
+受控。
+
+------------------------------------------------------------
+Theorem C:
+Prior-safe correction
+
+若：
+
+    Delta chi_theta in V_prior,
+
+证明不会一阶破坏
+V_phys 上已被 measurement 支持的成分。
+
+------------------------------------------------------------
+Theorem D:
+Two-sided recoverability
+
+结合 A21，
+给出 forward-support
+与 backward-attribution
+共同决定 material recoverability 的条件。
+
+------------------------------------------------------------
+Theorem E:
+Dimension reduction for posterior learning
+
+证明 / 推导：
+
+    posterior learning in V_prior
+
+比 full material space
+具有更低 intrinsic dimension
+或更好的 sample complexity proxy。
+
+如果严格 theorem 太强，
+给可检验 proposition。
+
+============================================================
+23. Novelty audit
+============================================================
+
+必须广泛审计：
+
+- SOM / TSOM / SOM-Net
+- Born / DBIM / CSI
+- subspace optimization methods
+- current-based imaging
+- LIS
+- active subspaces
+- posterior-informed dimension reduction
+- likelihood-informed subspaces
+- task-aware ROM
+- goal-oriented ROM
+- Bayesian inverse problems
+- PnP / RED / learned proximal
+- deep image prior
+- diffusion posterior sampling
+- score-based inverse solvers
+- conditional flow matching
+- neural operators
+- learned encoders
+- hybrid physics/ML inverse imaging
+- multiscale inverse reconstruction
+- observable / unobservable subspace splitting.
+
+特别检查：
+
+> Has anyone explicitly decomposed the material space
+> according to separate
+> injection / propagation / observation mechanisms
+> and used this split to decide
+> physics reconstruction vs learned prior completion?
+
+不要轻易 claim first。
+
+============================================================
+24. 不允许犯的错误
+============================================================
+
+不要：
+
+- 把 small singular values 重新包装成 OPM；
+- 用 full J / full H 作为 online feature
+  然后声称方法 cheap；
+- 让 NN secretly learn full inverse solver；
+- 在 V_phys 中让 NN 任意 hallucinate；
+- 用 truth 定义 online split；
+- 只看 Gaussian family 就宣称 general；
+- 只比较 per-step runtime；
+- 继续 current-selection narrative；
+- 先训练 diffusion 再问有没有 ambiguity。
+
+============================================================
+25. 第一阶段实验要非常轻
+============================================================
+
+当前只有一台 RTX 4060 laptop。
+
+第一阶段优先：
+
+- cached/full-wave OPM features
+- small material bases
+- one-shot inverse
+- recoverability correlations
+- physics/prior split
+- small classifier / MLP only if gate passes.
+
+暂时不要：
+
+- full diffusion
+- large U-Net
+- huge new dataset
+- >10 GPU hour campaign.
+
+============================================================
+26. GO / NO-GO gates
+============================================================
+
+Gate A:
+RECOVERABILITY PREDICTION
+
+three-fold score/signature
+必须显著预测真实 material-direction recovery difficulty。
+
+若不能：
+
+    kill three-fold split.
+
+------------------------------------------------------------
+Gate B:
+PHYSICS-PRIOR SEPARATION
+
+V_phys 中 one-shot physics reconstruction
+必须明显比 V_prior 更准确、更稳定。
+
+若误差均匀分布：
+
+    kill split.
+
+------------------------------------------------------------
+Gate C:
+ONE-SHOT HEADROOM
+
+one-shot OPM physics image
+必须在总结构上已经有实用价值：
+
+例如位置/support/低频材料
+达到可接受质量。
+
+否则：
+
+    neural completion没有可靠 physics backbone.
+
+------------------------------------------------------------
+Gate D:
+PRIOR-ONLY NN ADVANTAGE
+
+prior-only decoder
+必须相对 full-image NN 至少在以下一项有明显优势：
+
+- sample efficiency
+- data consistency
+- robustness
+- hallucination
+- runtime
+- OOD.
+
+否则：
+
+    不强行保留 subspace NN.
+
+------------------------------------------------------------
+Gate E:
+DIFFUSION NECESSITY
+
+只有 multimodality / uncertainty
+确实存在时才启动 diffusion.
+
+============================================================
+27. 最终必须给出的路线裁决
+============================================================
+
+最终请给：
+
+PRIMARY ROUTE
+
+    one-shot OPM physics
+    +
+    material recoverability split.
+
+SECONDARY ROUTE
+
+    prior-only deterministic decoder.
+
+HIGH-RISK ROUTE
+
+    prior-subspace diffusion / flow.
+
+OPTIONAL ROUTE
+
+    early-exit classifier
+    +
+    adaptive compute.
+
+KILLED ROUTES
+
+明确写出哪些不值得继续。
+
+============================================================
+28. 最终必须回答的问题
+============================================================
+
+1.
+O/P/M three-fold structure
+能否真正定义 material recoverability？
+
+2.
+它比 J^T J / Fisher / LIS
+多提供了什么？
+
+3.
+能否得到一个稳定的：
+
+    V_phys ⊕ V_prior ?
+
+4.
+V_phys 能否 one-shot 快速重建？
+
+5.
+V_prior 是否真的包含
+大部分 remaining image error？
+
+6.
+OPM 能否作为 physics encoder？
+
+7.
+NN 最适合预测：
+
+    prior coefficients
+    residual image
+    classifier
+    regularizer
+    diffusion latent
+
+中的哪一个？
+
+8.
+diffusion 是否真的必要？
+
+9.
+这种架构是否能减少总 time-to-image？
+
+10.
+是否比 iterative OPM-GN 更合理？
+
+11.
+最小可行实验是什么？
+
+12.
+哪些结果会直接杀死整个方向？
+
+============================================================
+29. 最终输出
+============================================================
+
+至少生成：
+
+1. START_HERE.md
+2. THREE_FOLD_RECOVERABILITY_THEORY.md
+3. MATERIAL_PHYSICS_PRIOR_SPLIT.md
+4. ONE_SHOT_OPM_IMAGING.md
+5. TWO_SIDED_RECOVERABILITY.md
+6. OPM_PHYSICS_ENCODER.md
+7. PRIOR_ONLY_NEURAL_DECODER.md
+8. PRIOR_SUBSPACE_DIFFUSION.md
+9. EARLY_EXIT_CLASSIFIER.md
+10. TIME_TO_IMAGE_ANALYSIS.md
+11. NOVELTY_AUDIT.md
+12. THEOREM_COUNTEREXAMPLE_LEDGER.md
+13. LIGHTWEIGHT_EXPERIMENT_SPEC.md
+14. GO_NO_GO_GATES.md
+
+并生成：
+
+    CODEX_ROUTE_A_RECOVERABILITY.md
+    CODEX_ROUTE_B_ONE_SHOT.md
+    CODEX_ROUTE_C_PRIOR_DECODER.md
+
+若 diffusion 暂时不应运行，
+不要生成训练 campaign，
+只保留理论 specification。
+
+============================================================
+30. 最重要的研究态度
+============================================================
+
+不要把 OPM 当成：
+
+    一个更小的 current space.
+
+更大胆地研究它是否是：
+
+    a physics-native factorization
+    of inverse-scattering information.
+
+我真正想知道的是：
+
+    which dimensions are already determined by Maxwell physics?
+
+    which dimensions are only weakly constrained by measurements?
+
+    where exactly is information lost:
+        injection,
+        feedback propagation,
+        observation,
+        or attribution?
+
+然后：
+
+    physics reconstructs what it knows;
+
+    neural prior completes only what physics does not know.
+
+最终目标不是
+更漂亮的 ROM，
+而是：
+
+    fast,
+    interpretable,
+    prior-aware,
+    near-one-shot electromagnetic imaging.

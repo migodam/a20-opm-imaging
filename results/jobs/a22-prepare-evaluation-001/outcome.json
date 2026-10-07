@@ -1,0 +1,170 @@
+{
+  "schema": "a22.offline_screening_evaluation.v1",
+  "status": "COMPLETE",
+  "capability": "OFFLINE_EVALUATOR_ONLY",
+  "online_use_allowed": false,
+  "asset_root_relative": "data/a22/offline_eval",
+  "scene_ids": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "allowed_npz_members": [
+    "truth"
+  ],
+  "input_capability": "assets.load_offline_scene",
+  "output_capability": "offline_assets.load_evaluation_truth",
+  "deployment_route": "explicit evaluator-input transfer; excluded from online data whitelist",
+  "finite_perturbation_center": "actual_object_solver_grid_material",
+  "online_anchor": "uniform_known_background_0.1+0.04i",
+  "historically_exposed": true,
+  "blind_holdout": false,
+  "physics_actions": 0,
+  "new_integrity_hash_checks": 0,
+  "original_mixed_npz_transferred": false,
+  "scientific_gates_adjudicated": false,
+  "scenes": [
+    {
+      "scene_id": 2001,
+      "family": "gaussian",
+      "source": "scene_2001.npz",
+      "source_archive_relative": "EXCHANGE_R1/inputs/object_2001/common_data.npz",
+      "source_selected_members": [
+        "truth"
+      ],
+      "target_label_members": [
+        "truth"
+      ],
+      "target_label_origin": "original_A17_object_material_on_solver_grid",
+      "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+      "online_anchor_origin": "known_geometry_owned_uniform_background",
+      "online_anchor_background": [
+        0.1,
+        0.04
+      ],
+      "solver_n": 12,
+      "solver_cell_count": 1728,
+      "saved_truth_shape": [
+        1728
+      ],
+      "saved_truth_dtype": "complex128",
+      "data_generation_n_declared": 14,
+      "data_generation_cell_count_declared": 2744,
+      "discretization_mismatch": true,
+      "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+      "historical_exposure": "historically_exposed_feasibility",
+      "blind_holdout": false,
+      "online_use_allowed": false,
+      "source_archive_copied": false,
+      "held_truth_loaded": false,
+      "old_material_chart_loaded": false
+    },
+    {
+      "scene_id": 2003,
+      "family": "gaussian",
+      "source": "scene_2003.npz",
+      "source_archive_relative": "CLOSURE_R1/inputs/object_2003/common_data.npz",
+      "source_selected_members": [
+        "truth"
+      ],
+      "target_label_members": [
+        "truth"
+      ],
+      "target_label_origin": "original_A17_object_material_on_solver_grid",
+      "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+      "online_anchor_origin": "known_geometry_owned_uniform_background",
+      "online_anchor_background": [
+        0.1,
+        0.04
+      ],
+      "solver_n": 12,
+      "solver_cell_count": 1728,
+      "saved_truth_shape": [
+        1728
+      ],
+      "saved_truth_dtype": "complex128",
+      "data_generation_n_declared": 14,
+      "data_generation_cell_count_declared": 2744,
+      "discretization_mismatch": true,
+      "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+      "historical_exposure": "historically_exposed_feasibility",
+      "blind_holdout": false,
+      "online_use_allowed": false,
+      "source_archive_copied": false,
+      "held_truth_loaded": false,
+      "old_material_chart_loaded": false
+    },
+    {
+      "scene_id": 2014,
+      "family": "asymmetric",
+      "source": "scene_2014.npz",
+      "source_archive_relative": "EXCHANGE_R1/inputs/object_2014/common_data.npz",
+      "source_selected_members": [
+        "truth"
+      ],
+      "target_label_members": [
+        "truth"
+      ],
+      "target_label_origin": "original_A17_object_material_on_solver_grid",
+      "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+      "online_anchor_origin": "known_geometry_owned_uniform_background",
+      "online_anchor_background": [
+        0.1,
+        0.04
+      ],
+      "solver_n": 12,
+      "solver_cell_count": 1728,
+      "saved_truth_shape": [
+        1728
+      ],
+      "saved_truth_dtype": "complex128",
+      "data_generation_n_declared": 14,
+      "data_generation_cell_count_declared": 2744,
+      "discretization_mismatch": true,
+      "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+      "historical_exposure": "historically_exposed_feasibility",
+      "blind_holdout": false,
+      "online_use_allowed": false,
+      "source_archive_copied": false,
+      "held_truth_loaded": false,
+      "old_material_chart_loaded": false
+    },
+    {
+      "scene_id": 2009,
+      "family": "shell",
+      "source": "scene_2009.npz",
+      "source_archive_relative": "CLOSURE_R1/inputs/object_2009/common_data.npz",
+      "source_selected_members": [
+        "truth"
+      ],
+      "target_label_members": [
+        "truth"
+      ],
+      "target_label_origin": "original_A17_object_material_on_solver_grid",
+      "target_label_role": "offline_finite_perturbation_center_and_evaluation_target_only",
+      "online_anchor_origin": "known_geometry_owned_uniform_background",
+      "online_anchor_background": [
+        0.1,
+        0.04
+      ],
+      "solver_n": 12,
+      "solver_cell_count": 1728,
+      "saved_truth_shape": [
+        1728
+      ],
+      "saved_truth_dtype": "complex128",
+      "data_generation_n_declared": 14,
+      "data_generation_cell_count_declared": 2744,
+      "discretization_mismatch": true,
+      "discretization_note": "Observed data declares a truth-generation grid n=14; the original saved truth member is checked to be material on solver n=12. These inputs preserve that distinction and do not regenerate measurements.",
+      "historical_exposure": "historically_exposed_feasibility",
+      "blind_holdout": false,
+      "online_use_allowed": false,
+      "source_archive_copied": false,
+      "held_truth_loaded": false,
+      "old_material_chart_loaded": false
+    }
+  ],
+  "stage": "prepare-evaluation"
+}

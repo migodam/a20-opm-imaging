@@ -1,0 +1,35 @@
+{
+  "code_base": "A21 local Git 8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "backend": [
+    "vendor/a17/a9_engine.py",
+    "src/a20/backend.py",
+    "src/a20/opm.py",
+    "src/a20/material.py"
+  ],
+  "cached_online_members": [
+    "points",
+    "data0",
+    "init"
+  ],
+  "offline_evaluator_members": [
+    "truth"
+  ],
+  "split_namespace": {
+    "online": "data/a22/online",
+    "offline": "data/a22/offline_eval"
+  },
+  "scene_ids": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "excluded": [
+    "A21 oracle cache",
+    "A20 GN optimum",
+    "full_J/H in online features",
+    "A18 action labels"
+  ],
+  "original_sources_modified": false,
+  "new_SHA256_checks": 0
+}

@@ -1,0 +1,8 @@
+{
+  "error_type": "FileExistsError",
+  "error": "A22_VALIDATION_OUTPUT_ALREADY_EXISTS:/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/validation",
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/cli.py\", line 108, in main\n    detail = run_validation(root, config, book, device=args.device)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/validation.py\", line 451, in run_validation\n    raise FileExistsError(\"A22_VALIDATION_OUTPUT_ALREADY_EXISTS:\"+str(directory))\nFileExistsError: A22_VALIDATION_OUTPUT_ALREADY_EXISTS:/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/validation\n",
+  "test_summary": null,
+  "status": "FAILED",
+  "stage": "validate"
+}

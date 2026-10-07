@@ -1,0 +1,23 @@
+{
+  "schema": "a22.delegated.implementation_cpu.v1",
+  "scope": "reporting_source_only",
+  "created_utc": "2026-10-07T04:28:01.532673+00:00",
+  "measured_process_cpu_seconds": 0.0014470000000000004,
+  "measured_shell_python_events": 2,
+  "apply_patch_calls": 2,
+  "unmeasured_shell_and_apply_patch_accounting_allowance_seconds": 12.0,
+  "charged_conservative_cpu_seconds": 12.001447,
+  "allowance_is_accounting_reserve_not_measured_timing": true,
+  "physics_runs": 0,
+  "test_runs": 0,
+  "report_runs": 0,
+  "plot_runs": 0,
+  "remote_calls": 0,
+  "hash_computations": 0,
+  "artifacts": [
+    "src/a22/reporting.py",
+    "research/delegated/a22-reporting/SUMMARY.md",
+    "research/delegated/a22-reporting/EXPECTED_METRICS_SCHEMA.json"
+  ],
+  "runtime_report_CPU_owner": "parent metered generate_reports call"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "FAILED",
+  "stage": "unit",
+  "tests": 59,
+  "unit_result": "PASS",
+  "orchestration_failure": "CLI outcome duplicate status keyword after 59 passing unit tests"
+}

@@ -1,0 +1,332 @@
+{
+  "allowed_geometry_fields": [
+    "family",
+    "rotation",
+    "n",
+    "truth_n",
+    "edge",
+    "wavenumber",
+    "background",
+    "init",
+    "partial",
+    "source_split",
+    "receiver_count"
+  ],
+  "allowed_npz_members": [
+    "points",
+    "data0",
+    "init"
+  ],
+  "asset_root_relative": "data/a22/online",
+  "historical_exposure": "historically_exposed_feasibility",
+  "input_capability": "assets.load_online_scene",
+  "local_asset_root_absolute": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/data/a22/online",
+  "new_integrity_hash_checks": 0,
+  "offline_labels_deployed": false,
+  "physics_actions": 0,
+  "portable_config_relative": "configs/a22_portable.json",
+  "remote_relocation": "Set config.paths.asset_root to execution_root/data/a22/online before loading",
+  "scene_ids": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "scenes": [
+    {
+      "blind_holdout": false,
+      "discretization_mismatch": true,
+      "discretization_note": "Original acquisition declares truth_n=14, while the portable solver points use n=12. Preparation preserves this forward-model discretization difference; no truth array or truth simulation was used to prepare the asset.",
+      "family": "gaussian",
+      "historical_exposure": "historically_exposed_feasibility",
+      "layout": {
+        "complex_channels_per_source": 128,
+        "data0": {
+          "dtype": "complex128",
+          "shape": [
+            6,
+            128
+          ]
+        },
+        "data_order": "illumination-major; each source real channels then imaginary channels",
+        "init": {
+          "dtype": "complex128",
+          "shape": [
+            1728
+          ]
+        },
+        "material_basis_rebuilt_from_known_points_only": true,
+        "material_order": "16 real patch coefficients followed by 16 imaginary patch coefficients",
+        "material_real_dimension": 32,
+        "packed_real_dimension": 1536,
+        "points": {
+          "dtype": "float64",
+          "shape": [
+            1728,
+            3
+          ]
+        },
+        "polarizations_per_receiver": 2,
+        "receiver_positions": 64,
+        "solver_complex_current_dimension": 5184,
+        "source_count": 6,
+        "source_order": "for i in range(3), for j in range(3), i != j"
+      },
+      "offline_labels_deployed": false,
+      "offline_members_loaded": [],
+      "public_geometry": {
+        "background": [
+          0.1,
+          0.04
+        ],
+        "edge": 1.5,
+        "family": "gaussian",
+        "init": [
+          0.1,
+          0.04
+        ],
+        "n": 12,
+        "partial": false,
+        "receiver_count": 64,
+        "rotation": 3.7107292183472715,
+        "source_split": "validation",
+        "truth_n": 14,
+        "wavenumber": 2.0
+      },
+      "scene_id": 2001,
+      "selected_online_members": [
+        "points",
+        "data0",
+        "init"
+      ],
+      "solver_cell_count": 1728,
+      "solver_n": 12,
+      "source": "scene_2001.npz",
+      "source_archive_copied": false,
+      "truth_cell_count_declared": 2744,
+      "truth_n": 14
+    },
+    {
+      "blind_holdout": false,
+      "discretization_mismatch": true,
+      "discretization_note": "Original acquisition declares truth_n=14, while the portable solver points use n=12. Preparation preserves this forward-model discretization difference; no truth array or truth simulation was used to prepare the asset.",
+      "family": "gaussian",
+      "historical_exposure": "historically_exposed_feasibility",
+      "layout": {
+        "complex_channels_per_source": 128,
+        "data0": {
+          "dtype": "complex128",
+          "shape": [
+            6,
+            128
+          ]
+        },
+        "data_order": "illumination-major; each source real channels then imaginary channels",
+        "init": {
+          "dtype": "complex128",
+          "shape": [
+            1728
+          ]
+        },
+        "material_basis_rebuilt_from_known_points_only": true,
+        "material_order": "16 real patch coefficients followed by 16 imaginary patch coefficients",
+        "material_real_dimension": 32,
+        "packed_real_dimension": 1536,
+        "points": {
+          "dtype": "float64",
+          "shape": [
+            1728,
+            3
+          ]
+        },
+        "polarizations_per_receiver": 2,
+        "receiver_positions": 64,
+        "solver_complex_current_dimension": 5184,
+        "source_count": 6,
+        "source_order": "for i in range(3), for j in range(3), i != j"
+      },
+      "offline_labels_deployed": false,
+      "offline_members_loaded": [],
+      "public_geometry": {
+        "background": [
+          0.1,
+          0.04
+        ],
+        "edge": 1.5,
+        "family": "gaussian",
+        "init": [
+          0.1,
+          0.04
+        ],
+        "n": 12,
+        "partial": false,
+        "receiver_count": 64,
+        "rotation": 1.7496260542933944,
+        "source_split": "validation",
+        "truth_n": 14,
+        "wavenumber": 2.0
+      },
+      "scene_id": 2003,
+      "selected_online_members": [
+        "points",
+        "data0",
+        "init"
+      ],
+      "solver_cell_count": 1728,
+      "solver_n": 12,
+      "source": "scene_2003.npz",
+      "source_archive_copied": false,
+      "truth_cell_count_declared": 2744,
+      "truth_n": 14
+    },
+    {
+      "blind_holdout": false,
+      "discretization_mismatch": true,
+      "discretization_note": "Original acquisition declares truth_n=14, while the portable solver points use n=12. Preparation preserves this forward-model discretization difference; no truth array or truth simulation was used to prepare the asset.",
+      "family": "asymmetric",
+      "historical_exposure": "historically_exposed_feasibility",
+      "layout": {
+        "complex_channels_per_source": 128,
+        "data0": {
+          "dtype": "complex128",
+          "shape": [
+            6,
+            128
+          ]
+        },
+        "data_order": "illumination-major; each source real channels then imaginary channels",
+        "init": {
+          "dtype": "complex128",
+          "shape": [
+            1728
+          ]
+        },
+        "material_basis_rebuilt_from_known_points_only": true,
+        "material_order": "16 real patch coefficients followed by 16 imaginary patch coefficients",
+        "material_real_dimension": 32,
+        "packed_real_dimension": 1536,
+        "points": {
+          "dtype": "float64",
+          "shape": [
+            1728,
+            3
+          ]
+        },
+        "polarizations_per_receiver": 2,
+        "receiver_positions": 64,
+        "solver_complex_current_dimension": 5184,
+        "source_count": 6,
+        "source_order": "for i in range(3), for j in range(3), i != j"
+      },
+      "offline_labels_deployed": false,
+      "offline_members_loaded": [],
+      "public_geometry": {
+        "background": [
+          0.1,
+          0.04
+        ],
+        "edge": 1.5,
+        "family": "asymmetric",
+        "init": [
+          0.1,
+          0.04
+        ],
+        "n": 12,
+        "partial": false,
+        "receiver_count": 64,
+        "rotation": 2.1650255968898984,
+        "source_split": "validation",
+        "truth_n": 14,
+        "wavenumber": 2.0
+      },
+      "scene_id": 2014,
+      "selected_online_members": [
+        "points",
+        "data0",
+        "init"
+      ],
+      "solver_cell_count": 1728,
+      "solver_n": 12,
+      "source": "scene_2014.npz",
+      "source_archive_copied": false,
+      "truth_cell_count_declared": 2744,
+      "truth_n": 14
+    },
+    {
+      "blind_holdout": false,
+      "discretization_mismatch": true,
+      "discretization_note": "Original acquisition declares truth_n=14, while the portable solver points use n=12. Preparation preserves this forward-model discretization difference; no truth array or truth simulation was used to prepare the asset.",
+      "family": "shell",
+      "historical_exposure": "historically_exposed_feasibility",
+      "layout": {
+        "complex_channels_per_source": 128,
+        "data0": {
+          "dtype": "complex128",
+          "shape": [
+            6,
+            128
+          ]
+        },
+        "data_order": "illumination-major; each source real channels then imaginary channels",
+        "init": {
+          "dtype": "complex128",
+          "shape": [
+            1728
+          ]
+        },
+        "material_basis_rebuilt_from_known_points_only": true,
+        "material_order": "16 real patch coefficients followed by 16 imaginary patch coefficients",
+        "material_real_dimension": 32,
+        "packed_real_dimension": 1536,
+        "points": {
+          "dtype": "float64",
+          "shape": [
+            1728,
+            3
+          ]
+        },
+        "polarizations_per_receiver": 2,
+        "receiver_positions": 64,
+        "solver_complex_current_dimension": 5184,
+        "source_count": 6,
+        "source_order": "for i in range(3), for j in range(3), i != j"
+      },
+      "offline_labels_deployed": false,
+      "offline_members_loaded": [],
+      "public_geometry": {
+        "background": [
+          0.1,
+          0.04
+        ],
+        "edge": 1.5,
+        "family": "shell",
+        "init": [
+          0.1,
+          0.04
+        ],
+        "n": 12,
+        "partial": false,
+        "receiver_count": 64,
+        "rotation": 2.560051713861531,
+        "source_split": "validation",
+        "truth_n": 14,
+        "wavenumber": 2.0
+      },
+      "scene_id": 2009,
+      "selected_online_members": [
+        "points",
+        "data0",
+        "init"
+      ],
+      "solver_cell_count": 1728,
+      "solver_n": 12,
+      "source": "scene_2009.npz",
+      "source_archive_copied": false,
+      "truth_cell_count_declared": 2744,
+      "truth_n": 14
+    }
+  ],
+  "schema": "a22.portable_screening_online.v1",
+  "scientific_gate_status": "NOT_ASSESSED_BY_PREPARATION",
+  "status": "PREPARED_ONLINE_ASSETS_ONLY"
+}

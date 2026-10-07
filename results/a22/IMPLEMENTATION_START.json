@@ -1,0 +1,10 @@
+{
+  "schema": "a22.start.v1",
+  "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "protocol_copied_bytewise": true,
+  "new_sha256_checks": false,
+  "current_stage": "IMPLEMENTATION",
+  "previous_experiments_not_rerun": true,
+  "preimplementation_plan_accepted": true,
+  "root_setup_CPU_seconds": 0.006780000000000001
+}

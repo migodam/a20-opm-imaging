@@ -1,0 +1,18 @@
+{
+  "scope": "A22 delegated scene statistics implementation 2026-10-07",
+  "campaign": "A22",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 15.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "New source/schema/configuration reads, statistics implementation, prepared unittest source, portable-config whitelist patch, and AST-only parsing; conservative upper allowance",
+  "observed_final_AST_process_CPU_seconds": 0.009778000000000002,
+  "statistics_execution": "NOT_RUN",
+  "unit_tests": "NOT_RUN",
+  "prepared_unit_tests": 19,
+  "SSH_or_remote_execution": "NOT_RUN",
+  "GPU_execution": "NOT_RUN",
+  "new_SHA256_checks": 0,
+  "previous_worker_CPU_scopes": "Excluded; do not register the previous 30 or 5 second scopes again",
+  "billing_instruction": "Register this new statistics scope once: 15 CPU seconds and 0 GPU seconds"
+}

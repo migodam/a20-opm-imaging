@@ -1,0 +1,212 @@
+{
+  "orthogonal_rank_rtol": 1e-10,
+  "core_relative_sigma_floor": 1e-10,
+  "core_absolute_scaled_sigma_floor": 1e-10,
+  "core_condition_cap": 10000000000.0,
+  "feasibility_tolerance": 1e-08,
+  "qp_kkt_rtol": 1e-08,
+  "qp_maxiter": 200,
+  "real_lower": -0.5,
+  "imag_lower": 0.0,
+  "schema": "a22.three_fold.v1",
+  "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "master_seed": 20261007,
+  "precision": "complex128/float64",
+  "material_dimension": 32,
+  "background": [
+    0.1,
+    0.04
+  ],
+  "retained_rank": 8,
+  "seed_rank_O": 4,
+  "seed_rank_P": 4,
+  "seed_rank_M": 4,
+  "degree": 1,
+  "current_rank": 32,
+  "allow_petrov_fallback": false,
+  "allow_full_fallback": false,
+  "measurement_dependent_Q": false,
+  "screening_scenes": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "finite_screening_directions": 4,
+  "finite_expansion_directions": 3,
+  "total_direction_descriptors": 8,
+  "noise_levels": [
+    0.0,
+    1.0,
+    3.0
+  ],
+  "noise_reference_fraction": 0.01,
+  "noise_draws": 16,
+  "noise_type": "proper_complex_Gaussian",
+  "noise_scale_origin": "known_background_data_RMS_not_truth",
+  "whitening_type": "sqrt2_over_sigma_complex_reference",
+  "amplitude_fractions": [
+    0.2,
+    1.0
+  ],
+  "physical_amplitude_max": 0.25,
+  "feasible_amplitude_fraction": 0.8,
+  "nuisance_fraction": 0.35,
+  "material_absolute_floor": 1e-06,
+  "interventions": [
+    "nominal",
+    "source_amplitude_5pct_receiver_gain_3pct"
+  ],
+  "tikhonov_relative": 0.0001,
+  "split_ranks": [
+    4,
+    8,
+    16
+  ],
+  "correction_events": 0,
+  "new_sha256_checks": false,
+  "gpu_wall_cap_seconds": 32400,
+  "stage_gpu_caps_seconds": {
+    "screen_health": 1800,
+    "features": 3600,
+    "direction": 7200,
+    "image": 5400,
+    "runtime": 7200,
+    "train": 5400,
+    "exception": 1800
+  },
+  "perturbation_evaluation_cap": 192,
+  "bootstrap_repetitions": 2000,
+  "gate_A_correlation": 0.5,
+  "gate_A_mae_improvement": 0.15,
+  "gate_B_physics_error": 0.2,
+  "gate_B_standardized_ratio": 0.5,
+  "gate_B_energy_fraction": 0.2,
+  "gate_C_coarse_error": 0.3,
+  "gate_BC_required_successes": 9,
+  "gate_BC_test_count": 12,
+  "gate_D_violation_reduction": 0.2,
+  "gate_D_material_degradation": 0.05,
+  "gate_T_time_ratio": 0.5,
+  "phase_entry": {
+    "stage_B": [
+      "A_PASS",
+      "split_screen_positive"
+    ],
+    "stage_C": [
+      "A_PASS",
+      "B_PASS",
+      "C_PASS",
+      "legal_existing_training_cache"
+    ]
+  },
+  "prior_decoder": {
+    "hidden": [
+      128,
+      128
+    ],
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "epochs": 200,
+    "patience": 20,
+    "batch_size": 8,
+    "seeds": [
+      202610071,
+      202610072,
+      202610073
+    ],
+    "train_sizes": [
+      6,
+      9
+    ]
+  },
+  "paths": {
+    "asset_root": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A17",
+    "theory_package": "protocol/a22",
+    "remote_root": "D:/AI/A22_THREE_FOLD_OPM",
+    "shared_lock_root": "D:/AI/A20_OPM_IMAGING"
+  },
+  "splits": {
+    "development": [
+      2001,
+      2003,
+      2005,
+      2013,
+      2014,
+      2016,
+      2009,
+      2010,
+      2011
+    ],
+    "calibration": [
+      2007,
+      2020,
+      2012
+    ],
+    "evaluation": [
+      2002,
+      2004,
+      2006,
+      2008,
+      2021,
+      2022,
+      2023,
+      2024,
+      2031,
+      2032,
+      2033,
+      2034
+    ]
+  },
+  "new_scenes": [
+    {
+      "id": 2020,
+      "family": "asymmetric",
+      "seed": 202610072020
+    },
+    {
+      "id": 2021,
+      "family": "asymmetric",
+      "seed": 202610072021
+    },
+    {
+      "id": 2022,
+      "family": "asymmetric",
+      "seed": 202610072022
+    },
+    {
+      "id": 2023,
+      "family": "asymmetric",
+      "seed": 202610072023
+    },
+    {
+      "id": 2024,
+      "family": "asymmetric",
+      "seed": 202610072024
+    },
+    {
+      "id": 2031,
+      "family": "shell",
+      "seed": 202610072031
+    },
+    {
+      "id": 2032,
+      "family": "shell",
+      "seed": 202610072032
+    },
+    {
+      "id": 2033,
+      "family": "shell",
+      "seed": 202610072033
+    },
+    {
+      "id": 2034,
+      "family": "shell",
+      "seed": 202610072034
+    }
+  ],
+  "finite_label_center": "original_scene_material_OFFLINE_ONLY",
+  "descriptor_material_pointwise_prior": 0.25,
+  "descriptor_W_external": "analytic_known_anchor_voxel_injection_budget",
+  "scientific_correction": "Uniform-background-only patch labels do not distinguish the four requested object families."
+}

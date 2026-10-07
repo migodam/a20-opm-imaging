@@ -1,0 +1,31 @@
+{
+  "schema": "a22.static_implementation_cpu.v1",
+  "scope": "a22-validation-code-implementation",
+  "status": "CODE_WRITTEN_NOT_EXECUTED",
+  "created_utc": "2026-10-07T04:45:19.890186+00:00",
+  "process_cpu_seconds": 60.039691,
+  "measured_process_cpu_seconds": 0.029691,
+  "child_process_cpu_seconds": 0.0,
+  "conservative_unmetered_static_read_patch_allowance_seconds": 60.0,
+  "finalization_reserve_seconds": 0.01,
+  "measurement": "standard-library finalization process CPU plus child CPU; static shell reads and patch writes covered by separately disclosed conservative 60-second allowance",
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "Maxwell_actions": 0,
+  "full_RHS": 0,
+  "QP_calls": 0,
+  "tests_executed": 0,
+  "model_modules_imported": 0,
+  "full_arrays_loaded": false,
+  "raw_truth_loaded": false,
+  "integrity_hash_checks": 0,
+  "remote_calls": 0,
+  "changed_paths": [
+    "src/a22/validation.py",
+    "tests/test_a22_online.py",
+    "research/delegated/a22-online/VALIDATION_CPU_RECEIPT.json"
+  ],
+  "old_source_modified": false,
+  "validation": "NOT_RUN",
+  "physics_generation": "NOT_RUN"
+}

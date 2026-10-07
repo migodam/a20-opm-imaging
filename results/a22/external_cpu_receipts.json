@@ -1,0 +1,167 @@
+[
+  {
+    "scope": "a22-transport-62832735f2f34993a91288a494b57a7c",
+    "process_cpu_seconds": 5.270587,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 26.708810916999937,
+    "stage": null,
+    "counts": {},
+    "receipt": "results/a22/transport/a22-transport-62832735f2f34993a91288a494b57a7c.json",
+    "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+    "status": "COMPLETE"
+  },
+  {
+    "scope": "source-a22-prepare",
+    "process_cpu_seconds": 13.000741,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-prepare/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "source-reporting_source_only",
+    "process_cpu_seconds": 12.001447,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-reporting/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "source-a22-core-tests",
+    "process_cpu_seconds": 9.001223,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-core-tests/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "source-a22-online-assets-implementation",
+    "process_cpu_seconds": 30.041171000000002,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-online/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "source-A22 delegated budget transport implementation and static review",
+    "process_cpu_seconds": 30.0,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-budget/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "source-A22 delegated transport online-only boundary patch 2026-10-07",
+    "process_cpu_seconds": 5.0,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-budget/CPU_RECEIPT_DEPLOY_BOUNDARY.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "a22-receipt-repair-unit001",
+    "process_cpu_seconds": 0.080656,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": null,
+    "measurement": "measured repair process CPU plus 0.02s finalization allowance",
+    "status": "ACCOUNTING_REPAIR"
+  },
+  {
+    "scope": "a22-preflight-query-CPU-gap",
+    "process_cpu_seconds": 1.0,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": null,
+    "measurement": "conservative 1s allowance for two unmetered nvidia-smi query children in first preflight",
+    "status": "UNMETERED_ALLOWANCE"
+  },
+  {
+    "scope": "source-a22-validation-code-implementation",
+    "process_cpu_seconds": 60.039691,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-online/VALIDATION_CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "a22-unit-output-directory-repair",
+    "process_cpu_seconds": 0.079163,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": null,
+    "measurement": "measured local relocation CPU plus finalization allowance",
+    "status": "MEASURED"
+  },
+  {
+    "scope": "source-A22 delegated scene statistics implementation 2026-10-07",
+    "process_cpu_seconds": 15.0,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-statistics/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "source-a22-features-audit",
+    "process_cpu_seconds": 20.003754,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": "research/delegated/a22-features-audit/CPU_RECEIPT.json",
+    "measurement": "worker measured CPU plus explicitly conservative allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "a22-root-source-and-preregistration",
+    "process_cpu_seconds": 60.061286,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": null,
+    "measurement": "measured preregistration CPU plus explicit conservative 60s uninstrumented parent read/edit allowance",
+    "status": "SOURCE_WORK_CONSERVATIVE"
+  },
+  {
+    "scope": "a22-handoff-copy-and-inventory",
+    "process_cpu_seconds": 0.083414,
+    "gpu_occupation_seconds": 0.0,
+    "wall_seconds": 0.0,
+    "stage": null,
+    "counts": {},
+    "receipt": null,
+    "measurement": "measured copy/inventory CPU plus finalization allowance",
+    "status": "MEASURED"
+  }
+]

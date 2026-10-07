@@ -1,0 +1,6 @@
+{
+  "original_directory": "results/a22/validation",
+  "archived_as": "results/a22/unit_validation",
+  "reason": "Separate unit and physical health outputs; unit001 result and failed wrapper preserved",
+  "physics_outputs_moved": 0
+}

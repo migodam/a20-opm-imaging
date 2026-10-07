@@ -1,0 +1,145 @@
+{
+  "name": "verify_theory",
+  "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/protocol/a22/verification/verify_theory.py",
+  "output_directory": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/validation/theory/verify_theory",
+  "execution_device": "cpu",
+  "status": "PASS",
+  "original_protocol_result_preserved": true,
+  "result_path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/validation/theory/verify_theory/results.json",
+  "result": {
+    "seed": 20261007,
+    "algebra": {
+      "two_sided_defect_relative_error": 4.903945963776634e-16,
+      "RLR_relative_error": 2.652068838691768e-16,
+      "two_sided_defect_bound_ratio": 0.34490064989588354,
+      "same_information_distinct_mechanisms": {
+        "alpha": [
+          0.001,
+          1.0,
+          1.0
+        ],
+        "beta": [
+          1.0,
+          0.001,
+          1.0
+        ],
+        "gamma": [
+          1.0,
+          1.0,
+          0.001
+        ],
+        "singular_values": [
+          0.001,
+          0.001,
+          0.001
+        ],
+        "delta_M_1e-3_output_diagonal": [
+          0.001,
+          1e-06,
+          1e-06
+        ],
+        "delta_O_1e-3_output_diagonal": [
+          1e-06,
+          1e-06,
+          0.001
+        ]
+      },
+      "gauge_same_product_error": 0.0,
+      "gauge_raw_injection_change": 0.01,
+      "gauge_metric_injection_error": 0.0,
+      "aliasing": {
+        "column_norms": [
+          1.0,
+          1.000000499999875
+        ],
+        "profile_sensitivity": 0.000999999500000375,
+        "witness": [
+          0.9999999998278325,
+          -1000.0000000000001
+        ],
+        "witness_attribution_error": 2.434817121110181e-10,
+        "predicted_variance": 1.000001,
+        "empirical_variance": 0.9979546129171384
+      },
+      "frequency_shared_nuisance": {
+        "single_profile_sensitivity": [
+          0.0,
+          0.0
+        ],
+        "stack_profile_sensitivity": 1.414213562373095
+      },
+      "factor_finite_perturbation_bound_ratio": 0.14831183450792623,
+      "common_dual_one_shot_max_error": 0.0,
+      "nonlinear_prior_leak": {
+        "protected_coordinate_change": 0.0,
+        "first_order_leak": 0.0,
+        "correction_norm": 0.5,
+        "actual_data_change": 0.25
+      },
+      "one_shot_curvature_failure": {
+        "truth": 1.0,
+        "data": 1.6666666666666667,
+        "J0": 1.0,
+        "one_shot": 1.6666666666666667,
+        "absolute_error": 0.6666666666666667,
+        "final_forward_residual": 3.333333333333335
+      },
+      "rom_weak_is_not_physics_weak": {
+        "reduced_sensitivity": 0.0,
+        "full_sensitivity": 1.0
+      },
+      "intermediate_gram_commutator_norm": 4.751757569573599
+    },
+    "maxwell_tiny": {
+      "n_particles": 8,
+      "complex_current_dimension": 24,
+      "complex_data_dimension": 54,
+      "opm_rank": 18,
+      "derivative_relative_error": 6.122121962874188e-11,
+      "two_sided_defect_relative_error": 3.001433068670518e-15,
+      "reduced_J_relative_error": 0.15817711981243165,
+      "singular_values_reduced_real_J": [
+        0.0027153325083160004,
+        0.0013628771596874369,
+        0.00096148602522502,
+        0.0009212790159702688,
+        0.0006200393287932464,
+        0.0004079377480692912,
+        0.00036644998578863196,
+        0.0001674417051226482
+      ],
+      "one_shot_tests": [
+        {
+          "amplitude": 0.005,
+          "tangent_remainder": 6.380384174484842e-09,
+          "physics_coefficient_error": 0.0001829026285842656,
+          "one_shot_bound": 0.001098448499615689,
+          "bound_ratio": 0.16650997169940804
+        },
+        {
+          "amplitude": 0.02,
+          "tangent_remainder": 1.0228837996199366e-07,
+          "physics_coefficient_error": 0.0007341708787685705,
+          "one_shot_bound": 0.004477120376176032,
+          "bound_ratio": 0.16398283206216482
+        },
+        {
+          "amplitude": 0.08,
+          "tangent_remainder": 1.649698362313002e-06,
+          "physics_coefficient_error": 0.0030226452762385694,
+          "one_shot_bound": 0.019255027796283904,
+          "bound_ratio": 0.15697953325322753
+        },
+        {
+          "amplitude": 0.32,
+          "tangent_remainder": 2.727053606746821e-05,
+          "physics_coefficient_error": 0.015959410974112756,
+          "one_shot_bound": 0.09945820242554576,
+          "bound_ratio": 0.1604634970761707
+        }
+      ],
+      "warning": "Algebra/derivative sanity checks only; not evidence that project imaging Gates A-C pass."
+    }
+  },
+  "count_origin": "source-static complete execution counts, conservatively prepaid"
+}

@@ -1,0 +1,43 @@
+{
+  "seed": 20261008,
+  "task_curvature_t10": {
+    "seed": 20261010,
+    "identity_relative_error": 3.6110431297761495e-14,
+    "nonlinear_witness_magnitude": 0.014147685045775056,
+    "exact_pairing_bound": 0.05851595370302452,
+    "residual_bound": 0.17864914532631837,
+    "actual_over_exact_bound": 0.24177483490359317,
+    "actual_over_residual_bound": 0.07919257055460895,
+    "t_exact": 0.05462664920089411,
+    "t_upper": 0.07216005911523793,
+    "warning": "Full alpha_L and chosen delta_X are evaluation inputs, not free online certificates."
+  },
+  "profiled_tikhonov": [
+    {
+      "lambda": 0.0,
+      "error": 0.004665733149932134,
+      "bound": 0.040839474529114086,
+      "ratio": 0.1142456704874098,
+      "nuisance_leak": 4.2347952080768236e-16
+    },
+    {
+      "lambda": 0.01,
+      "error": 0.012036557518245606,
+      "bound": 0.05290802114070331,
+      "ratio": 0.22749967318255296,
+      "nuisance_leak": 6.116672965710121e-16
+    },
+    {
+      "lambda": 0.5,
+      "error": 0.2904605115224145,
+      "bound": 0.4801131891039872,
+      "ratio": 0.6049834041520237,
+      "nuisance_leak": 3.2424186663186467e-16
+    }
+  ],
+  "compressed_likelihood_relative_error": 1.5444299198629802e-16,
+  "prior_safe_radius": 0.17320508075688773,
+  "prior_data_change_at_radius": 0.03,
+  "schur_complete_map_relative_error": 2.1565598891852085e-16,
+  "warning": "Algebra checks only. Project imaging gates remain NOT_RUN."
+}
