@@ -1,6 +1,7 @@
 """Foreground R1 transport using the existing private A22 SSH implementation."""
 import argparse
 import importlib.util
+import io
 import json
 from pathlib import Path
 import sys
@@ -8,6 +9,7 @@ import tempfile
 import time
 import uuid
 import zipfile
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('a22_existing_transport', ROOT/'tools/a22_remote_jobs.py')
@@ -108,6 +110,23 @@ def pull(connection):
                     raise ValueError('INVALID_R1_RESULT_MEMBER')
                 p=ROOT/n; incoming=z.read(n)
                 if p.exists() and p.read_bytes()!=incoming:
+                    # Windows CRLF and ZIP metadata are not changes to a freeze.
+                    # Scientific values must still agree exactly; no tolerance
+                    # or replacement of different arrays is permitted here.
+                    if n.endswith('.json'):
+                        if json.loads(p.read_text()) == json.loads(incoming.decode()):
+                            continue
+                    if n.endswith('.npz'):
+                        with np.load(p, allow_pickle=False) as old, np.load(io.BytesIO(incoming), allow_pickle=False) as new:
+                            same = set(old.files) == set(new.files)
+                            if same:
+                                for member in old.files:
+                                    a,b=old[member],new[member]
+                                    equal=(np.array_equal(a,b,equal_nan=True) if a.dtype.kind not in 'US'
+                                           else np.array_equal(a,b))
+                                    if a.shape!=b.shape or a.dtype!=b.dtype or not equal:
+                                        same=False;break
+                            if same: continue
                     if n.endswith('COST_LEDGER.jsonl') or n.endswith('FAILURE_LEDGER.jsonl'):
                         local=[json.loads(line) for line in p.read_text().splitlines() if line.strip()]
                         incoming_rows=[json.loads(line) for line in incoming.decode().splitlines() if line.strip()]
@@ -118,6 +137,14 @@ def pull(connection):
                             rows[key]=item
                         combined=('\n'.join(json.dumps(item) for item in rows.values())+'\n').encode()
                         plan.append((p,combined));continue
+                    if n.startswith('results/a22_r1/offline/') or n == 'results/a22_r1/OFFLINE_SPLIT_FREEZE.json':
+                        # Retain a platform variant for audit. It cannot replace
+                        # the frozen local diagnostic or any online split.
+                        variant=ROOT/'results/a22_r1/platform_variants/windows'/n
+                        if variant.exists() and variant.read_bytes()!=incoming:
+                            raise ValueError('R1_PLATFORM_VARIANT_CONFLICT:'+n)
+                        if not variant.exists(): plan.append((variant,incoming))
+                        continue
                     raise ValueError('R1_IMMUTABLE_RESULT_CONFLICT:'+n)
                 if not p.exists(): plan.append((p,incoming))
             for p,data in plan: p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)

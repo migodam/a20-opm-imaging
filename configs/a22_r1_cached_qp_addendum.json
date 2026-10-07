@@ -1,0 +1,13 @@
+{
+  "schema": "a22_r1.cached_common_qp_addendum.v1",
+  "registered_before_split_outcome_metrics": true,
+  "common_cases": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+  "common_platform": "original_Windows",
+  "restricted_platform": "macOS",
+  "historical_scalar_reproduction": "FAILED_RETAINED",
+  "acceptance": "same_frozen_quadratic_original_KKT_and_feasibility",
+  "solver_tolerance_change": false,
+  "score_change": false,
+  "physics_change": false,
+  "common_solution_selection": "entire_fixed_Windows_archive_no_per_case_selection"
+}
