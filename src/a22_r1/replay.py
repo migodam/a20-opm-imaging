@@ -21,10 +21,11 @@ import uuid
 
 import numpy as np
 from scipy import linalg as la
+from scipy.optimize import nnls
 
 from a20.backend import MaterialChart, pack
 from a20.costs import plain
-from a20.material import QPFailure
+from a20.material import QPFailure, constraint_map
 from a22.core import constrained_material_solve
 from a22.evaluate import _calibrate_data, stage_a_case_key
 from .metrics import subspace_metrics
@@ -498,7 +499,56 @@ def _expected_conditions(original: Mapping[str, Any]) -> list[dict[str, Any]]:
                 original["noise_levels"], original["interventions"])]
 
 
-def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[str, Any]:
+def _cached_quadratic_validation(record, row, label, cache, original, d, geometry):
+    """Audit a saved original-solver point, without solving another image.
+
+    The normal is saved from the original solve, not set to minus its gradient.
+    Cone membership uses exact duplicate constraint rows only; no objective or
+    tolerance changes. This path requires an explicit pre-outcome addendum.
+    """
+    if (record.get('case_key') != _identity(row)['case_key'] or record.get('status') != 'OK'
+            or record.get('lambda_value') != cache.lam):
+        raise ReplayContractError('CACHED_COMMON_CASE_OR_LAMBDA_CHANGED')
+    x, truth, normal = (np.asarray(record[name], float) for name in ('x_hat','x_true','material_normal'))
+    if any(a.shape != (32,) or not np.all(np.isfinite(a)) for a in (x, truth, normal)):
+        raise ReplayContractError('CACHED_COMMON_VECTOR_INVALID')
+    if not np.array_equal(truth, label.truth):
+        raise ReplayContractError('CACHED_COMMON_TRUTH_COEFFICIENTS_CHANGED')
+    H, C, lower = geometry
+    g = -cache.AW.T @ d
+    slack = C @ x-lower
+    feasibility = max(0., float(-np.min(slack)))
+    gradient = H @ x+g
+    relative = float(la.norm(gradient+normal))/max(float(la.norm(g)), 1e-12)
+    ftol, ktol = float(original.get('feasibility_tolerance',1e-8)), float(original.get('qp_kkt_rtol',1e-8))
+    active = np.flatnonzero(slack <= ftol)
+    if len(active):
+        mu, cone_error = nnls(C[active].T, -normal, maxiter=max(200,10*len(active)))
+        complementarity = float(np.max(abs(mu*slack[active])))
+    else:
+        cone_error, complementarity = float(la.norm(normal)), 0.
+    cone_relative = float(cone_error)/max(1.,float(la.norm(normal)))
+    quadratic = float(.5*x@H@x+g@x)
+    saved = float(record['qp']['quadratic_value'])
+    qdiff = abs(quadratic-saved)/max(1.,abs(saved))
+    valid = (feasibility <= ftol and relative <= ktol
+             and float(record['qp']['kkt_relative']) <= ktol
+             and float(record['qp']['feasibility_violation']) <= ftol
+             and cone_relative <= 1e-9 and qdiff <= 1e-9)
+    audit = dict(status='VALID' if valid else 'INVALID', feasibility_violation=feasibility,
+                 kkt_relative=relative, normal_cone_relative=cone_relative,
+                 complementarity=complementarity, quadratic=quadratic,
+                 saved_quadratic=saved, quadratic_relative_difference=qdiff,
+                 normal_source='original_saved_solver_normal_not_minus_gradient',
+                 unchanged_original_KKT_tolerance=ktol, unchanged_feasibility_tolerance=ftol)
+    if not valid:
+        error=ReplayContractError('CACHED_COMMON_FROZEN_QP_VALIDATION_FAILED')
+        error.result=audit
+        raise error
+    return x, audit
+
+
+def run_replay(root: str | Path, config: Mapping[str, Any], book: Any, *, cached_common=None) -> dict[str, Any]:
     """Execute the registered cache-only tests after all online freezes exist.
 
     Only a successful immutable REPLAY_SUMMARY can be reused automatically.
@@ -522,6 +572,8 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
             saved = _json(summary_path)
             if saved.get("status") != "COMPLETE" or saved.get("config") != plain(dict(config)):
                 raise ReplayContractError("EXISTING_REPLAY_SUMMARY_HAS_DIFFERENT_OR_INCOMPLETE_CONTRACT")
+            if saved.get('common_reproduction',{}).get('common_source') != cached_common:
+                raise ReplayContractError('EXISTING_REPLAY_HAS_DIFFERENT_COMMON_ACCEPTANCE_CONTRACT')
             return dict(saved, cached_complete_replay=True)
     except BaseException as exc:
         _failure(root, dict(phase="PRE_REPLAY_CONTRACT", common_cases_attempted=0,
@@ -546,6 +598,31 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
         # Both online and offline split manifests now exist. Original errors
         # below are used exclusively for reproducibility, never for rankings.
         rows = _registered_rows(root, original, ids)
+        source_records, geometries = {}, {}
+        if cached_common is not None:
+            addendum = _json(root/'configs/a22_r1_cached_qp_addendum.json')
+            if (not addendum.get('registered_before_split_outcome_metrics')
+                    or addendum['common_cases'] != str(cached_common)
+                    or addendum['historical_scalar_reproduction'] != 'FAILED_RETAINED'
+                    or any(addendum.get(name) is not False for name in
+                           ('solver_tolerance_change','score_change','physics_change'))):
+                raise ReplayContractError('CACHED_COMMON_ADDENDUM_NOT_FROZEN')
+            with _scope(book,'offline_evaluation'), book.span('r1_cached_common_archive_read',cached_common_archive_reads=1):
+                source_rows=[json.loads(line) for line in (root/cached_common).read_text().splitlines() if line.strip()]
+            source_records={record['case_key']: record for record in source_rows}
+            if len(source_rows)!=2112 or len(source_records)!=2112:
+                raise ReplayContractError('CACHED_COMMON_ARCHIVE_MUST_HAVE_ALL_2112_UNIQUE_CASES')
+            for sid, cache in caches.items():
+                C, lower=constraint_map(cache.chart,cache.anchor)
+                _, first=np.unique(np.column_stack((C,lower)),axis=0,return_index=True)
+                first=np.sort(first)
+                H=cache.AW.T@cache.AW+cache.lam*np.eye(32)
+                if la.eigvalsh(H)[0] <= 0:
+                    raise ReplayContractError('CACHED_COMMON_HESSIAN_NOT_SPD')
+                geometries[sid]=(H,C[first],lower[first])
+            _immutable_json(out/'EXPLICIT_CACHED_QP_ADDENDUM.json',dict(addendum,
+                source_common_cases=cached_common, no_common_QP_rerun=True,
+                historical_scalar_gate='FAILED_RETAINED', validation='original_frozen_QP_contract'))
         for row in rows:
             book.check()
             sid = int(row["scene_id"])
@@ -558,7 +635,17 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
             record = dict(_identity(row), test="COMMON_32D_REPRODUCTION", method="COMMON_32D",
                           k=32, lambda_value=cache.lam, x_true=label.truth.tolist())
             try:
-                solution, qp, normal, wall, solve_cpu = _solve(cache.AW, d, cache, original, book)
+                if cached_common is None:
+                    solution, qp, normal, wall, solve_cpu = _solve(cache.AW, d, cache, original, book)
+                else:
+                    start, start_cpu=time.perf_counter(),time.process_time()
+                    with _scope(book,'offline_evaluation'),book.span('r1_saved_common_QP_validation',cached_common_validations=1):
+                        source=source_records[record['case_key']]
+                        solution, audit=_cached_quadratic_validation(source,row,label,cache,original,d,geometries[sid])
+                    qp, normal=source['qp'],np.asarray(source['material_normal'],float)
+                    wall, solve_cpu=time.perf_counter()-start,time.process_time()-start_cpu
+                    record.update(cached_QP_validation=audit,common_solution_source=cached_common,
+                                  new_common_QP_solve=False)
                 actual, reproduction = _reproduce(solution, label, row,
                     float(config.get("reproduction_atol_scale", config.get("reproduction_atol", 1e-8))))
                 record.update(status="OK", x_hat=solution.tolist(), qp=qp, material_normal=normal.tolist(),
@@ -567,7 +654,7 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
                     reproduction=reproduction, **actual)
                 key = stage_a_case_key(row)
                 estimates[key], qp_full[key] = solution, qp
-                if reproduction["status"] != "MATCH":
+                if reproduction["status"] != "MATCH" and cached_common is None:
                     _append(root / "results/a22_r1/FAILURE_LEDGER.jsonl", dict(_identity(row),
                         status="REPRODUCTION_MISMATCH", terminal=True, method="COMMON_32D", test="REPRODUCTION",
                         reproduction=reproduction, no_Test_B_before_global_reproduction=True))
@@ -600,8 +687,15 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
                 ("signed_target_error", "material_error", "raw_target_coefficient", "coefficient_error")},
             full_solution_archive=_rel(out / "COMMON_32D_SOLUTIONS.npz", root),
             Test_B_started=False, split_tuning=False)
+        if cached_common is not None:
+            reproduction_summary.update(historical_scalar_gate='FAILED_RETAINED',
+                explicit_pre_outcome_addendum='REPRODUCTION_CONFLICT_ADDENDUM.md',
+                cached_QP_contract='ALL_2112_VALID', new_common_QP_solves=0,
+                common_source=cached_common,
+                validation_maxima={name:max(value['cached_QP_validation'][name] for value in full_records)
+                    for name in ('kkt_relative','feasibility_violation','normal_cone_relative','quadratic_relative_difference')})
         _immutable_json(out / "COMMON_REPRODUCTION.json", reproduction_summary)
-        if reproduction_summary["status"] != "MATCH":
+        if reproduction_summary["status"] != "MATCH" and cached_common is None:
             raise ReplayReproductionError(dict(reproduction_summary, attempt_path=_rel(out, root)))
         # Test A and B see the same selected bases, observations and true chart
         # coefficients. No full 32D solve is repeated in this second pass.
@@ -615,7 +709,8 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
             for selected in splits[cache.scene]:
                 book.check()
                 common = _metric_record(row, selected, "A", full, label.truth, config)
-                common.update(lambda_value=cache.lam, qp=qp_full[key], reproduction_status="MATCH",
+                common.update(lambda_value=cache.lam, qp=qp_full[key],
+                              reproduction_status='MATCH' if cached_common is None else 'STRICT_SCALAR_FAIL_FROZEN_QP_VALID',
                               common_full_solution_shared=True, prior_filled_by_NN=False)
                 metric_records.append(common)
                 _append(out / "PER_CASE_SPLIT_METRICS.jsonl", common)
@@ -670,6 +765,8 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
         summary = dict(schema="a22_r1.replay_summary.v1", status="COMPLETE", config=dict(config),
             run_id=attempt_id, attempt_path=_rel(out, root), scenes=list(ids),
             common_32D_solves=len(full_records), common_reproduction=reproduction_summary,
+            new_common_32D_solves=len(full_records) if cached_common is None else 0,
+            cached_common_32D_reuses=len(full_records) if cached_common is not None else 0,
             restricted_physics_solves=sum(len(values) for values in restricted_rows.values()),
             invalid_restricted_QPs=invalid_restricted, split_metric_rows=len(metric_records),
             metric_rows_per_case=2 * len(splits[ids[0]]), expected_conditions=_expected_conditions(original),

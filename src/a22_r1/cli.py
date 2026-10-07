@@ -16,7 +16,7 @@ from .accounting import R1Book
 
 def main(argv=None):
     p = argparse.ArgumentParser()
-    p.add_argument('stage', choices=('freeze', 'replay', 'unit', 'report'))
+    p.add_argument('stage', choices=('freeze', 'replay', 'replay-cached', 'unit', 'report'))
     p.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[2])
     p.add_argument('--job', required=True)
     p.add_argument('--device', choices=('cpu', 'cuda'), default='cpu')
@@ -40,9 +40,12 @@ def main(argv=None):
                 detail['scenes'] = []
                 for sid in config['scenes']:
                     detail['scenes'].append(freeze_scene(root, sid, original, book, device=args.device))
-            elif args.stage == 'replay':
+            elif args.stage in ('replay','replay-cached'):
                 from .replay import run_replay
-                detail = run_replay(root, config, book)
+                source=None
+                if args.stage=='replay-cached':
+                    source=json.loads((root/'configs/a22_r1_cached_qp_addendum.json').read_text())['common_cases']
+                detail = run_replay(root, config, book, cached_common=source)
             elif args.stage == 'unit':
                 suite = unittest.defaultTestLoader.discover(str(root/'tests'), pattern=args.pattern)
                 with (book.directory/'tests.log').open('w') as stream, book.span('r1_unit_tests', unit_suites=1):
