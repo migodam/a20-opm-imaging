@@ -47,23 +47,37 @@ def deploy(connection):
     return row
 
 
-def run(connection, job):
+def run(connection, job, stage='freeze'):
     config = json.loads((ROOT/'configs/a22_r1.json').read_text())
     prior = paid_history(ROOT)
-    seconds = max(0., config['gpu_occupation_cap_seconds']-prior['gpu']-10.)
-    if seconds < 30: raise ValueError('R1_GPU_BUDGET_REFUSED')
+    device='cuda' if stage=='freeze' else 'cpu'
+    seconds = max(0., (config['gpu_occupation_cap_seconds']-prior['gpu']-10.) if device=='cuda'
+                  else config['cpu_cap_seconds']-prior['cpu']-20.)
+    if seconds < 30: raise ValueError('R1_RESOURCE_BUDGET_REFUSED')
     code = f"""import json,os,pathlib,subprocess,time,sys
 {transport._windows_cpu_source()}
-r=pathlib.Path({REMOTE!r}); job={job!r}; origin=time.perf_counter()
+r=pathlib.Path({REMOTE!r}); job={job!r}; origin=time.perf_counter(); stage={stage!r}
 if pathlib.Path({transport.SHARED_LOCK!r}).exists(): raise RuntimeError('SHARED_LOCK_EXISTS')
 query=subprocess.Popen(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 qout,qerr=query.communicate(timeout=8); queue_cpu=measured_cpu(query)
 if query.returncode or qout.strip(): raise RuntimeError('GPU_QUEUE_NOT_CLEAR')
+if stage=='replay':
+ # Byte transfer of existing evaluator inputs, after all online scores exist.
+ for sid in (2001,2003,2014,2009):
+  if json.loads((r/f'results/a22_r1/online/scene_{{sid}}.json').read_text()).get('status')!='COMPLETE': raise RuntimeError('ONLINE_FREEZE_MISSING')
+ old=pathlib.Path('D:/AI/A22_THREE_FOLD_OPM/results/a22/stage_a')
+ files=[old/'direction_metrics.jsonl']
+ for sid in (2001,2003,2014,2009):
+  folder=old/f'scene_{{sid}}';files+=list(folder.glob('OFFLINE_label_*.npz'))+[folder/'OFFLINE_J_benchmark.npz']
+ for source in files:
+  dest=r/'results/a22/stage_a'/source.relative_to(old); data=source.read_bytes()
+  if dest.exists() and dest.read_bytes()!=data: raise RuntimeError('IMMUTABLE_OFFLINE_CACHE_CONFLICT')
+  if not dest.exists(): dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
 env=os.environ.copy();env.update(PYTHONPATH=str(r/'src'),PYTHONDONTWRITEBYTECODE='1',OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='1',MKL_NUM_THREADS='1')
 (r/'runs').mkdir(parents=True,exist_ok=True)
 timed_out=False
 with (r/'runs'/(job+'.stdout')).open('wb') as out,(r/'runs'/(job+'.stderr')).open('wb') as err:
- child=subprocess.Popen([{transport.PYTHON!r},'-B','-u','-m','a22_r1.cli','freeze','--root',{REMOTE!r},'--job',job,'--device','cuda','--lock-root',{transport.SHARED!r}],cwd=r,env=env,stdout=out,stderr=err)
+ child=subprocess.Popen([{transport.PYTHON!r},'-B','-u','-m','a22_r1.cli',stage,'--root',{REMOTE!r},'--job',job,'--device',{device!r},'--lock-root',{transport.SHARED!r}],cwd=r,env=env,stdout=out,stderr=err)
  try:
   child.wait(timeout={seconds!r})
  except subprocess.TimeoutExpired:
@@ -115,6 +129,7 @@ def main():
     p.add_argument('action',choices=('preflight','deploy','run','pull'))
     p.add_argument('--private-config',required=True)
     p.add_argument('--job',default='a22-r1-freeze-001')
+    p.add_argument('--stage',choices=('freeze','replay'),default='freeze')
     args=p.parse_args()
     connection=transport.connection(args.private_config,root=ROOT)
     cpu,wall=time.process_time(),time.perf_counter()
@@ -122,7 +137,7 @@ def main():
     try:
         if args.action=='preflight': row=transport.preflight(args.private_config,root=ROOT)
         elif args.action=='deploy': row=deploy(connection)
-        elif args.action=='run': row=run(connection,args.job)
+        elif args.action=='run': row=run(connection,args.job,args.stage)
         else: row=pull(connection)
         status='COMPLETE' if row['status'] not in ('FAILED','FAILED_REMOTE_BOOTSTRAP') else 'FAILED'
     except BaseException as error:
@@ -135,12 +150,16 @@ def main():
     gpu_tail=0.;child_tail=0.
     if args.action=='run':
         paid=row.get('job_receipt') or {}
-        gpu_tail=max(0.,row.get('controller_wall_seconds',0.)-paid.get('gpu_occupation_seconds',0.))
+        gpu_tail=max(0.,row.get('controller_wall_seconds',0.)-paid.get('gpu_occupation_seconds',0.)) if args.stage=='freeze' else 0.
         child_tail=max(0.,row.get('measured_child_cpu_seconds',0.)-paid.get('process_cpu_seconds',0.))
     external_receipt(ROOT,identity,cpu=time.process_time()-cpu+remote_cpu+child_tail,
         wall=time.perf_counter()-wall,gpu=gpu_tail,status=status,
         measurement='local transport CPU + remote controller/query CPU + measured unbilled child CPU tail',detail={'action':args.action,'row':str((directory/(identity+'.json')).relative_to(ROOT))})
-    print(json.dumps(dict(status=status,action=args.action,detail=row)))
+    visible=dict(row)
+    if 'job_receipt' in visible:
+        paid=visible['job_receipt'] or {}
+        visible['job_receipt']={key:paid.get(key) for key in ('status','wall_seconds','process_cpu_seconds','gpu_occupation_seconds','counts')}
+    print(json.dumps(dict(status=status,action=args.action,detail=visible)))
     return 0 if status=='COMPLETE' else 1
 
 

@@ -88,6 +88,11 @@ def _json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _rel(path: Path, root: Path) -> str:
+    """Portable artifact references, independent of the solve platform."""
+    return path.relative_to(root).as_posix()
+
+
 def _encoded(value: Any) -> str:
     return json.dumps(plain(value), sort_keys=True, allow_nan=False)
 
@@ -305,8 +310,8 @@ def _freeze_online_splits(root: Path, config: Mapping[str, Any], book: Any):
                         indices_phys=selected.order[:k].tolist(), indices_prior=selected.order[k:].tolist(),
                         random_seed=selected.seed, score_orientation="ascending" if method != "RANDOM" else None,
                         tie_breaker="common_basis_index", selection_uses_truth=False,
-                        selection_uses_full_J=False, online_cache=str(cache.cache_path.relative_to(root)),
-                        online_manifest=str(cache.manifest_path.relative_to(root))))
+                        selection_uses_full_J=False, online_cache=_rel(cache.cache_path, root),
+                        online_manifest=_rel(cache.manifest_path, root)))
             _immutable_npz(root / f"results/a22_r1/online/splits/scene_{sid}.npz", arrays)
         freeze = dict(schema="a22_r1.split_freeze.v1", status="COMPLETE", scenes=list(ids),
             k_values=list(k_values), primary_k=16, common_basis="exact_saved_online_split16_columns",
@@ -350,7 +355,7 @@ def _freeze_offline_splits(root: Path, config: Mapping[str, Any], book: Any,
                 arrays[f"V_phys_k{k}"], arrays[f"V_prior_k{k}"] = selected.phys, selected.prior
                 records.append(dict(scene=sid, method=OFFLINE_METHOD, k=int(k), scope="OFFLINE_ORACLE_DIAGNOSTIC",
                     indices_phys=order[:int(k)].tolist(), indices_prior=order[int(k):].tolist(),
-                    source=str(path.relative_to(root)), selection_uses_truth=False,
+                    source=_rel(path, root), selection_uses_truth=False,
                     selection_uses_full_J=True, amplitude=0., noise_level=1., intervention="nominal",
                     full_scene_lambda=cache.lam, declared_object_radius=cache.declared_object_radius))
             _immutable_npz(root / f"results/a22_r1/offline/scene_{sid}_split.npz", arrays)
@@ -526,8 +531,8 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
     out = root / "results/a22_r1/replay" / attempt_id
     out.mkdir(parents=True, exist_ok=False)
     _immutable_json(out / "REPLAY_CONTRACT.json", dict(config=dict(config), original_config=original,
-        online_split_freeze=str(online_freeze.relative_to(root)),
-        offline_split_freeze=str(offline_freeze.relative_to(root)) if offline_freeze else None,
+        online_split_freeze=_rel(online_freeze, root),
+        offline_split_freeze=_rel(offline_freeze, root) if offline_freeze else None,
         no_new_Maxwell_actions=True, no_new_labels=True, full_scene_lambda_for_every_solve=True,
         one_common_32D_solution_per_case=True, split_freeze_before_original_errors=True))
     full_records: list[dict[str, Any]] = []
@@ -593,11 +598,11 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
             max_absolute_differences={quantity: max((record["reproduction"].get("absolute_differences", {}).get(quantity, 0.)
                 for record in full_records), default=None) for quantity in
                 ("signed_target_error", "material_error", "raw_target_coefficient", "coefficient_error")},
-            full_solution_archive=str((out / "COMMON_32D_SOLUTIONS.npz").relative_to(root)),
+            full_solution_archive=_rel(out / "COMMON_32D_SOLUTIONS.npz", root),
             Test_B_started=False, split_tuning=False)
         _immutable_json(out / "COMMON_REPRODUCTION.json", reproduction_summary)
         if reproduction_summary["status"] != "MATCH":
-            raise ReplayReproductionError(dict(reproduction_summary, attempt_path=str(out.relative_to(root))))
+            raise ReplayReproductionError(dict(reproduction_summary, attempt_path=_rel(out, root)))
         # Test A and B see the same selected bases, observations and true chart
         # coefficients. No full 32D solve is repeated in this second pass.
         for row in rows:
@@ -663,17 +668,17 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
                            for sid in ids for selected in splits[sid] for test in ("A", "B")]
         invalid_restricted = sum(record["test"] == "B" and record["status"] != "OK" for record in metric_records)
         summary = dict(schema="a22_r1.replay_summary.v1", status="COMPLETE", config=dict(config),
-            run_id=attempt_id, attempt_path=str(out.relative_to(root)), scenes=list(ids),
+            run_id=attempt_id, attempt_path=_rel(out, root), scenes=list(ids),
             common_32D_solves=len(full_records), common_reproduction=reproduction_summary,
             restricted_physics_solves=sum(len(values) for values in restricted_rows.values()),
             invalid_restricted_QPs=invalid_restricted, split_metric_rows=len(metric_records),
             metric_rows_per_case=2 * len(splits[ids[0]]), expected_conditions=_expected_conditions(original),
-            expected_groups=expected_groups, case_metric_path=str((out / "PER_CASE_SPLIT_METRICS.jsonl").relative_to(root)),
-            case_metric_csv=str((out / "PER_CASE_SPLIT_METRICS.csv").relative_to(root)),
-            full_solution_path=str((out / "COMMON_32D_SOLUTIONS.npz").relative_to(root)),
-            restricted_vector_jsonl=str((out / "RESTRICTED_SOLUTION_VECTORS.jsonl").relative_to(root)),
-            online_split_freeze=str(online_freeze.relative_to(root)),
-            offline_split_freeze=str(offline_freeze.relative_to(root)) if offline_freeze else None,
+            expected_groups=expected_groups, case_metric_path=_rel(out / "PER_CASE_SPLIT_METRICS.jsonl", root),
+            case_metric_csv=_rel(out / "PER_CASE_SPLIT_METRICS.csv", root),
+            full_solution_path=_rel(out / "COMMON_32D_SOLUTIONS.npz", root),
+            restricted_vector_jsonl=_rel(out / "RESTRICTED_SOLUTION_VECTORS.jsonl", root),
+            online_split_freeze=_rel(online_freeze, root),
+            offline_split_freeze=_rel(offline_freeze, root) if offline_freeze else None,
             costs=dict(online_split_wall_seconds=split_seconds, offline_split_wall_seconds=offline_seconds,
                        cached_replay_wall_seconds=time.perf_counter() - started,
                        cached_replay_process_cpu_seconds=time.process_time() - cpu,
@@ -683,7 +688,7 @@ def run_replay(root: str | Path, config: Mapping[str, Any], book: Any) -> dict[s
         _immutable_json(summary_path, summary)
         return summary
     except BaseException as exc:
-        failure = dict(status="FAILED", run_id=attempt_id, attempt_path=str(out.relative_to(root)),
+        failure = dict(status="FAILED", run_id=attempt_id, attempt_path=_rel(out, root),
             common_cases_attempted=len(full_records), split_metric_rows_recorded=len(metric_records),
             error_type=type(exc).__name__, error=str(exc),
             replay_wall_seconds=time.perf_counter() - started,
