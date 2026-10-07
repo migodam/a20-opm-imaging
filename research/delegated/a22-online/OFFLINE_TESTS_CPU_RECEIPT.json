@@ -1,0 +1,31 @@
+{
+  "schema": "a22.static_implementation_cpu.v1",
+  "scope": "a22-offline-assets-unit-tests-source",
+  "status": "SOURCE_WRITTEN_NOT_EXECUTED",
+  "created_utc": "2026-10-07T05:04:27.030415+00:00",
+  "process_cpu_seconds": 20.041346,
+  "measured_process_cpu_seconds": 0.031346,
+  "child_process_cpu_seconds": 0.0,
+  "conservative_unmetered_static_read_patch_allowance_seconds": 20.0,
+  "finalization_reserve_seconds": 0.01,
+  "measurement": "standard-library receipt CPU plus child CPU; static reads and source patch covered by disclosed conservative 20-second allowance",
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "Maxwell_actions": 0,
+  "full_RHS": 0,
+  "tests_executed": 0,
+  "test_methods_written": 4,
+  "model_modules_imported": 0,
+  "raw_truth_loaded": false,
+  "full_arrays_loaded": false,
+  "private_config_read": false,
+  "remote_calls": 0,
+  "integrity_hash_checks": 0,
+  "scientific_source_modified": false,
+  "tools_modified": false,
+  "changed_paths": [
+    "tests/test_a22_offline_assets.py",
+    "research/delegated/a22-online/OFFLINE_TESTS_CPU_RECEIPT.json"
+  ],
+  "validation": "NOT_RUN"
+}

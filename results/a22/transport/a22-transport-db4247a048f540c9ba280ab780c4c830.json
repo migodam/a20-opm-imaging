@@ -1,0 +1,24 @@
+{
+  "scope": "a22-transport-db4247a048f540c9ba280ab780c4c830",
+  "action": "stop",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.625838,
+  "wall_seconds": 3.353393124998547,
+  "remote_process_cpu_seconds": 0.515625,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "A22_OWN_SCREEN_STOPPED",
+    "job_id": "a22-cuda-screen-001",
+    "owner_identity_confirmed": true,
+    "already_ended_paid_job": true,
+    "child_stop_confirmed": true,
+    "gpu_queue_empty": true,
+    "stale_own_lock_removed": true,
+    "reason": "exact redundant material-constraint representation and cached continuation; no physics protocol change",
+    "remote_process_cpu_seconds": 0.515625,
+    "control_query_CPU_seconds": 0.4375,
+    "child_CPU_measurement_available": true
+  },
+  "new_SHA256_checks": 0
+}

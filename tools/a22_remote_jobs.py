@@ -23,9 +23,10 @@ REMOTE = 'D:/AI/A22_THREE_FOLD_OPM'
 SHARED = 'D:/AI/A20_OPM_IMAGING'
 SHARED_LOCK = SHARED + '/runs/gpu.lock'
 PYTHON = 'D:/python/python.exe'
+MAX_INLINE_COMMAND_CHARS = 7000
 CLI_STAGES = {
     'preflight': 'screen_health', 'validate': 'screen_health',
-    'screen': 'direction', 'pilot': 'direction', 'one-shot': 'image',
+    'screen': 'direction', 'screen-resume': 'direction', 'pilot': 'direction', 'one-shot': 'image',
     'train': 'train', 'report': 'exception',
 }
 sys.path.insert(0, str(ROOT / 'src'))
@@ -33,6 +34,11 @@ sys.path.insert(0, str(ROOT / 'src'))
 
 class TransportFailure(RuntimeError):
     """Messages deliberately contain no command arguments or connection values."""
+
+
+def _powershell_command(script):
+    encoded = base64.b64encode(("$ProgressPreference='SilentlyContinue';\n" + script).encode('utf-16le')).decode()
+    return 'powershell.exe -NoProfile -EncodedCommand ' + encoded
 
 
 def _job(value):
@@ -80,10 +86,9 @@ class PrivateTransport:
         return output.decode('utf-8', errors='replace') if isinstance(output, bytes) else str(output or '')
 
     def shell(self, script, *, timeout=None):
-        encoded = base64.b64encode(("$ProgressPreference='SilentlyContinue';\n" + script).encode('utf-16le')).decode()
         return self._checked(['ssh', '-i', self._key, '-o', 'BatchMode=yes',
                               '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=yes',
-                              self._target, 'powershell.exe -NoProfile -EncodedCommand ' + encoded],
+                              self._target, _powershell_command(script)],
                              category='Remote command', timeout=timeout).strip()
 
     def copy_to(self, source, remote_name):
@@ -103,18 +108,43 @@ def connection(private_config, *, root=ROOT):
     return PrivateTransport(private_config, root=root)
 
 
-def _python(transport, code, *, timeout=None):
+def _controller_error_source():
+    """Only fixed function names and numeric OS codes may cross the boundary."""
+    return """def controller_failure(error,function=None):
+ trace=error.__traceback__
+ while trace is not None and trace.tb_next is not None: trace=trace.tb_next
+ name=trace.tb_frame.f_code.co_name if trace is not None else function
+ return dict(error_type=type(error).__name__,error_function=name or 'foreground_controller',error_operation=getattr(error,'_a22_controller_function',None),error_errno=getattr(error,'errno',None) if isinstance(getattr(error,'errno',None),int) else None,error_winerror=getattr(error,'winerror',None) if isinstance(getattr(error,'winerror',None),int) else None)
+"""
+
+
+def _python(transport, code, *, timeout=None, force_file=False):
     encoded = base64.b64encode(code.encode('utf-8')).decode()
     bootstrap = """import time
 _a22_remote_process_origin=time.perf_counter()
 import base64,json
+%s
 try:
  exec(base64.b64decode('%s'))
 except BaseException as error:
- print(json.dumps(dict(status='FAILED_REMOTE_BOOTSTRAP',error_type=type(error).__name__,remote_process_cpu_seconds=time.process_time(),remote_wall_seconds=time.perf_counter()-_a22_remote_process_origin)))
-""" % encoded
+ failed=controller_failure(error)
+ failed.update(status='FAILED_REMOTE_BOOTSTRAP',remote_process_cpu_seconds=time.process_time(),remote_wall_seconds=time.perf_counter()-_a22_remote_process_origin)
+ print(json.dumps(failed))
+""" % (_controller_error_source(), encoded)
     wrapped = base64.b64encode(bootstrap.encode('utf-8')).decode()
-    output = transport.shell("& '" + PYTHON + "' -B -c \"import base64; exec(base64.b64decode('" + wrapped + "'))\"", timeout=timeout)
+    inline = "& '" + PYTHON + "' -B -c \"import base64; exec(base64.b64decode('" + wrapped + "'))\""
+    # Compare the command actually delivered to Windows, after PowerShell's
+    # UTF-16/base64 expansion. The short Python source itself is not the limit.
+    if force_file or len(_powershell_command(inline)) > MAX_INLINE_COMMAND_CHARS:
+        name = 'a22-transport-code-' + uuid.uuid4().hex + '.py'
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / name
+            source.write_text(bootstrap, encoding='utf-8')
+            transport.shell("$ErrorActionPreference='Stop'; New-Item -ItemType Directory -Force '" + REMOTE + "' | Out-Null")
+            transport.copy_to(source, name)
+            output = transport.shell("& '" + PYTHON + "' -B '" + REMOTE + '/' + name + "'; exit $LASTEXITCODE", timeout=timeout)
+    else:
+        output = transport.shell(inline, timeout=timeout)
     try:
         # Child output stays in job logs. Only this small sanitized JSON crosses
         # the display boundary; warnings/banners are never printed by the helper.
@@ -183,6 +213,93 @@ def measured_cpu(process):
   pass
  child_cpu_measurement_available=False
  return 0.0
+"""
+
+
+def _checkpoint_reader_source():
+    """Native Windows delete-sharing reads plus bounded stale-snapshot fallback."""
+    return _controller_error_source() + """last_checkpoint=None
+checkpoint_read_conflicts=0
+checkpoint_unreadable_since=None
+checkpoint_last_read_failure=None
+CHECKPOINT_UNREADABILITY_SECONDS=2.0
+def reject_nonfinite_json(value):
+ raise ValueError('CHECKPOINT_NONFINITE_JSON')
+def checkpoint_bytes(path):
+ if os.name!='nt': return pathlib.Path(path).read_bytes()
+ from ctypes import wintypes
+ kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+ create,read,close=kernel.CreateFileW,kernel.ReadFile,kernel.CloseHandle
+ create.argtypes=[wintypes.LPCWSTR,wintypes.DWORD,wintypes.DWORD,ctypes.c_void_p,wintypes.DWORD,wintypes.DWORD,wintypes.HANDLE]
+ create.restype=wintypes.HANDLE
+ read.argtypes=[wintypes.HANDLE,ctypes.c_void_p,wintypes.DWORD,ctypes.POINTER(wintypes.DWORD),ctypes.c_void_p]
+ read.restype=wintypes.BOOL
+ close.argtypes=[wintypes.HANDLE]
+ close.restype=wintypes.BOOL
+ def failure(function):
+  error=ctypes.WinError(ctypes.get_last_error())
+  error._a22_controller_function=function
+  return error
+ FILE_SHARE_READ,FILE_SHARE_WRITE,FILE_SHARE_DELETE=1,2,4
+ handle=create(str(path),0x80000000,FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE,None,3,0x80,None)
+ if handle in (-1,ctypes.c_void_p(-1).value): raise failure('CreateFileW')
+ failed=True
+ try:
+  buffer=ctypes.create_string_buffer(65536)
+  chunks=[]
+  while True:
+   count=wintypes.DWORD()
+   if not read(handle,buffer,len(buffer),ctypes.byref(count),None): raise failure('ReadFile')
+   if count.value==0: break
+   chunks.append(buffer.raw[:count.value])
+  payload=b''.join(chunks)
+  failed=False
+  return payload
+ finally:
+  if not close(handle) and not failed: raise failure('CloseHandle')
+def checkpoint():
+ global last_checkpoint,checkpoint_read_conflicts,checkpoint_unreadable_since,checkpoint_last_read_failure
+ path=r/'results/jobs'/job/'accounting_checkpoint.json'
+ try:
+  payload=checkpoint_bytes(path)
+ except OSError as error:
+  missing=isinstance(error,FileNotFoundError)
+  # A not-yet-created startup checkpoint is still protected by inclusive wall
+  # caps. Once any snapshot/error appears, missing reads are bounded too.
+  if missing and last_checkpoint is None and checkpoint_unreadable_since is None: return None
+  transient=missing or getattr(error,'winerror',None) in (5,32,33) or os.name=='nt' and getattr(error,'errno',None)==13
+  if not transient: raise
+  checkpoint_read_conflicts+=1
+  checkpoint_last_read_failure=controller_failure(error,'checkpoint_bytes')
+  now=time.perf_counter()
+  if checkpoint_unreadable_since is None: checkpoint_unreadable_since=now
+  if now-checkpoint_unreadable_since>=CHECKPOINT_UNREADABILITY_SECONDS:
+   expired=TimeoutError('CHECKPOINT_UNREADABLE_FOR_2_SECONDS')
+   expired._a22_controller_function='checkpoint'
+   expired.errno=getattr(error,'errno',None)
+   expired.winerror=getattr(error,'winerror',None)
+   raise expired from error
+  return last_checkpoint
+ try:
+  saved=json.loads(payload,parse_constant=reject_nonfinite_json)
+  if not isinstance(saved,dict): raise ValueError('CHECKPOINT_MUST_BE_JSON_OBJECT')
+ except (ValueError,UnicodeError) as error:
+  error._a22_controller_function='checkpoint_json'
+  raise
+ last_checkpoint=saved
+ checkpoint_unreadable_since=None
+ return last_checkpoint
+def live_usage(now,saved=None):
+ saved=last_checkpoint if saved is None else saved
+ if not saved: return {main_stage:max(0.0,now-origin)}
+ usage=dict(saved.get('stage_gpu_seconds',{main_stage:saved.get('gpu_occupation_seconds',0)}))
+ active=saved.get('active_stage',main_stage)
+ usage[active]=usage.get(active,0)+max(0.0,now-saved.get('checkpoint_perf_counter',now))
+ return usage
+def watchdog_exceeded(usage,active):
+ total=prior['a22_gpu']+sum(usage.values())
+ exceeded=total>=config['gpu_wall_cap_seconds']-2
+ return exceeded or any((usage.get(stage,0)>0 or stage==active) and prior['stage_gpu_seconds'][stage]+usage.get(stage,0)>=config['stage_gpu_caps_seconds'][stage]-2 for stage in STAGE_GPU_CAPS)
 """
 
 
@@ -400,21 +517,8 @@ row=dict(status='FAILED',job_id=job,device=device,stage=main_stage)
 child=None
 child_cpu=0.0
 launch_query_cpu=0.0
-last_checkpoint=None
 {_windows_cpu_source()}
-def checkpoint():
- global last_checkpoint
- p=r/'results/jobs'/job/'accounting_checkpoint.json'
- if p.exists():
-  last_checkpoint=json.loads(p.read_text())
- return last_checkpoint
-def live_usage(now,saved=None):
- saved=checkpoint() if saved is None else saved
- if not saved: return {{main_stage:max(0.0,now-origin)}}
- usage=dict(saved.get('stage_gpu_seconds',{{main_stage:saved.get('gpu_occupation_seconds',0)}}))
- active=saved.get('active_stage',main_stage)
- usage[active]=usage.get(active,0)+max(0.0,now-saved.get('checkpoint_perf_counter',now))
- return usage
+{_checkpoint_reader_source()}
 try:
  if pathlib.Path(r'{SHARED_LOCK}').exists(): raise RuntimeError('SHARED_LOCK_EXISTS')
  if (r/'results/jobs'/job/'accounting_started.json').exists() or (r/'results/jobs'/job/'job_receipt.json').exists(): raise RuntimeError('JOB_ID_ALREADY_RESERVED')
@@ -437,11 +541,10 @@ try:
   while child.poll() is None:
    child_cpu=max(child_cpu,measured_cpu(child))
    if device=='cuda':
-    usage=live_usage(time.perf_counter())
-    total=prior['a22_gpu']+sum(usage.values())
-    exceeded=total>=config['gpu_wall_cap_seconds']-2
-    active=(checkpoint() or {{}}).get('active_stage',main_stage)
-    exceeded=exceeded or any((usage.get(s,0)>0 or s==active) and prior['stage_gpu_seconds'][s]+usage.get(s,0)>=config['stage_gpu_caps_seconds'][s]-2 for s in STAGE_GPU_CAPS)
+    saved_checkpoint=checkpoint()
+    usage=live_usage(time.perf_counter(),saved_checkpoint)
+    active=(saved_checkpoint or {{}}).get('active_stage',main_stage)
+    exceeded=watchdog_exceeded(usage,active)
     if exceeded:
      child.kill()
      child.wait(timeout=2)
@@ -452,7 +555,7 @@ try:
   row['exit_status']=child.returncode
   if row['status']!='TIMEOUT': row['status']='COMPLETE' if child.returncode==0 else 'FAILED'
 except BaseException as error:
- row['error_type']=type(error).__name__
+ row.update(controller_failure(error))
  if child is not None and child.poll() is None:
   child_cpu=max(child_cpu,measured_cpu(child))
   try:
@@ -466,9 +569,10 @@ finally:
  receipt_path=r/'results/jobs'/job/'job_receipt.json'
  try:
   saved=checkpoint()
- except BaseException:
+ except BaseException as error:
   saved=last_checkpoint
   row['checkpoint_read_error']=True
+  row['checkpoint_read_failure']=controller_failure(error,'checkpoint')
  child_ended=child is None or child.poll() is not None
  if child is not None and child_ended and not receipt_path.exists():
   saved=saved or dict(campaign='A22',job_id=job,stage=main_stage,device=device,counts={{}},corrections={{}},process_cpu_seconds=0)
@@ -484,12 +588,14 @@ finally:
  if receipt_path.exists() and child is not None:
   paid=json.loads(receipt_path.read_text())
   overhead=max(0.0,now-origin-paid.get('gpu_occupation_seconds',0)) if device=='cuda' else 0.0
-  register_external(r,'remote-launch-'+job,time.process_time()+launch_query_cpu,gpu_seconds=overhead,wall_seconds=max(0.0,now-origin-paid.get('wall_seconds',0)),stage=main_stage,status=row['status'],measurement='remote foreground controller + queue-query CPU; GPU inclusive tail beyond job receipt')
+  child_tail=max(0.0,child_cpu-paid.get('process_cpu_seconds',0))
+  register_external(r,'remote-launch-'+job,time.process_time()+launch_query_cpu+child_tail,gpu_seconds=overhead,wall_seconds=max(0.0,now-origin-paid.get('wall_seconds',0)),stage=main_stage,status=row['status'],measurement='remote foreground controller + queue-query CPU + measured child CPU tail; GPU inclusive tail beyond job receipt')
+  row.update(child_CPU_tail_seconds=child_tail,child_CPU_tail_already_billed=True)
  elif not child_ended:
   register_external(r,'remote-controller-'+job,time.process_time()+launch_query_cpu,status='STOP_UNCONFIRMED',measurement='remote controller + queue-query CPU; live GPU/child CPU retained in checkpoint')
  else:
   register_external(r,'remote-attempt-'+uuid.uuid4().hex,time.process_time()+launch_query_cpu,gpu_seconds=now-origin if device=='cuda' else 0,wall_seconds=now-origin,stage=main_stage,status=row['status'],measurement='failed remote foreground preflight/controller + queue-query CPU and associated GPU wall')
- row.update(remote_process_cpu_seconds=time.process_time()+launch_query_cpu,remote_controller_CPU_already_billed=True,foreground=True,shared_lock='common A20 GPU lock',child_process_CPU_seconds=child_cpu,queue_query_CPU_seconds=launch_query_cpu,child_CPU_measurement_available=child_cpu_measurement_available,child_stop_confirmed=child_ended)
+ row.update(remote_process_cpu_seconds=time.process_time()+launch_query_cpu,remote_controller_CPU_already_billed=True,foreground=True,shared_lock='common A20 GPU lock',child_process_CPU_seconds=child_cpu,queue_query_CPU_seconds=launch_query_cpu,child_CPU_measurement_available=child_cpu_measurement_available,child_stop_confirmed=child_ended,checkpoint_transient_read_conflicts=checkpoint_read_conflicts,checkpoint_last_read_failure=checkpoint_last_read_failure,checkpoint_unreadable_seconds=max(0.0,time.perf_counter()-checkpoint_unreadable_since) if checkpoint_unreadable_since is not None else 0.0,checkpoint_unreadability_limit_seconds=CHECKPOINT_UNREADABILITY_SECONDS,checkpoint_reader='windows-share-read-write-delete' if os.name=='nt' else 'posix-read-bytes')
  print(json.dumps(row))
 """
 
@@ -511,7 +617,7 @@ def run(stage, job, device, private_config, *, root=ROOT, budget_stage=None):
         from a20.costs import BudgetExceeded
         raise BudgetExceeded('A22_REMOTE_PREFLIGHT_GPU_BUDGET_REFUSAL')
     transport = connection(private_config, root=root)
-    row = _python(transport, _launch_code(stage, job, device, budget_stage))
+    row = _python(transport, _launch_code(stage, job, device, budget_stage), force_file=True)
     if row['status'] != 'COMPLETE':
         if row['status'] == 'FAILED_REMOTE_BOOTSTRAP' and device == 'cuda':
             row.update(remote_unbilled_GPU_seconds=row.get('remote_wall_seconds', 0),
@@ -534,12 +640,108 @@ if path.exists():
  row.update(status=saved.get('status'),stage=saved.get('stage'),process_cpu_seconds=saved.get('process_cpu_seconds'),gpu_occupation_seconds=saved.get('gpu_occupation_seconds'),counts=saved.get('counts',{{}}))
 elif (r/'results/jobs'/{job!r}/'accounting_checkpoint.json').exists():
  row['status']='STARTED_RECEIPT_NOT_FINAL'
+ saved=json.loads((r/'results/jobs'/{job!r}/'accounting_checkpoint.json').read_text())
+ row.update(stage=saved.get('active_stage'),process_cpu_seconds=saved.get('process_cpu_seconds'),gpu_occupation_seconds=saved.get('gpu_occupation_seconds'),counts=saved.get('counts',{{}}))
+progress=r/'results/a22/stage_a/progress.jsonl'
+if progress.exists():
+ lines=progress.read_text().splitlines()
+ if lines: row['stage_a_latest_progress']=json.loads(lines[-1])
 row['remote_process_cpu_seconds']=time.process_time()
 print(json.dumps(row))
 """
     row = _python(transport, code, timeout=30)
     if row.get('status') == 'FAILED_REMOTE_BOOTSTRAP':
         error = TransportFailure('Remote status failed; paid import CPU receipt preserved')
+        error.accounting = row
+        raise error
+    return row
+
+
+def _screen_owner_matches(line, root, job):
+    import shlex
+    try:
+        args = [part.strip('"') for part in shlex.split(line, posix=False)]
+        module = args.index('-m')
+        return (args[module+1] == 'a22.cli' and args[module+2] in ('screen','screen-resume')
+                and args[args.index('--job')+1] == job
+                and args[args.index('--root')+1].replace(chr(92),'/').casefold()
+                    == str(root).replace(chr(92),'/').casefold())
+    except (ValueError, IndexError):
+        return False
+
+
+def stop(job, private_config, *, root=ROOT):
+    """Stop only a confirmed A22 lock owner; never clear an unknown lock."""
+    _job(job)
+    import inspect
+    transport = connection(private_config, root=root)
+    code = f'''import json,pathlib,subprocess,time
+r=pathlib.Path(r'{REMOTE}')
+lock=pathlib.Path(r'{SHARED_LOCK}')
+job={job!r}
+row=dict(status='REFUSED',job_id=job)
+query_cpu=0.0
+{_windows_cpu_source()}
+{inspect.getsource(_screen_owner_matches)}
+def command(args):
+ global query_cpu
+ p=subprocess.Popen(args,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+ try:
+  out,err=p.communicate(timeout=10)
+ except subprocess.TimeoutExpired:
+  p.kill()
+  p.communicate()
+  raise RuntimeError('CONTROL_QUERY_TIMEOUT')
+ finally:
+  query_cpu+=measured_cpu(p)
+ if p.returncode: raise RuntimeError('CONTROL_QUERY_FAILED')
+ return out.decode('utf-8-sig',errors='replace').strip()
+try:
+ if not lock.exists(): raise RuntimeError('NO_LOCK_TO_STOP')
+ owner=json.loads(lock.read_text())
+ pid=int(owner['pid'])
+ probe=command(['powershell.exe','-NoProfile','-Command',f'Get-CimInstance Win32_Process -Filter "ProcessId = {{pid}}" | Select-Object ProcessId,CommandLine | ConvertTo-Json -Compress'])
+ process=json.loads(probe) if probe else None
+ line=(process or {{}}).get('CommandLine','').replace(chr(92),'/')
+ if process:
+  if not _screen_owner_matches(line,r,job): raise RuntimeError('LOCK_OWNER_IS_NOT_REQUESTED_A22_SCREEN')
+  row['owner_identity_confirmed']=True
+  command(['taskkill.exe','/PID',str(pid),'/T','/F'])
+ else:
+  started=json.loads((r/'results/jobs'/job/'accounting_started.json').read_text())
+  paid=json.loads((r/'results/jobs'/job/'job_receipt.json').read_text())
+  if started.get('pid')!=pid or paid.get('job_id')!=job or paid.get('status') not in ('FAILED','TIMEOUT','BUDGET_REFUSED'): raise RuntimeError('ENDED_JOB_AND_LOCK_IDENTITY_NOT_CONFIRMED')
+  row.update(owner_identity_confirmed=True,already_ended_paid_job=True)
+ ended=False
+ for attempt in range(30):
+  probe=command(['powershell.exe','-NoProfile','-Command',f'Get-CimInstance Win32_Process -Filter "ProcessId = {{pid}}" | Select-Object ProcessId | ConvertTo-Json -Compress'])
+  if not probe or probe=='null':
+   ended=True
+   break
+  time.sleep(.1)
+ if not ended: raise RuntimeError('REQUESTED_CHILD_STOP_UNCONFIRMED')
+ deadline=time.perf_counter()+20
+ while True:
+  queue=command(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'])
+  if not queue: break
+  if any(line.strip()!=str(pid) for line in queue.splitlines()): raise RuntimeError('OTHER_GPU_OWNER_AFTER_STOP')
+  if time.perf_counter()>=deadline: raise RuntimeError('GPU_QUEUE_NOT_CLEAR_AFTER_STOP')
+  time.sleep(.1)
+ if json.loads(lock.read_text())!=owner: raise RuntimeError('LOCK_OWNER_CHANGED')
+ lock.unlink()
+ row.update(status='A22_OWN_SCREEN_STOPPED',child_stop_confirmed=True,gpu_queue_empty=True,stale_own_lock_removed=True,
+   reason='exact redundant material-constraint representation and cached continuation; no physics protocol change')
+except BaseException as error:
+ row['error_type']=type(error).__name__
+ if isinstance(error,RuntimeError): row['error_code']=str(error)
+finally:
+ row.update(remote_process_cpu_seconds=time.process_time()+query_cpu,control_query_CPU_seconds=query_cpu,
+            child_CPU_measurement_available=child_cpu_measurement_available)
+ print(json.dumps(row))
+'''
+    row = _python(transport, code, force_file=True)
+    if row['status'] != 'A22_OWN_SCREEN_STOPPED':
+        error = TransportFailure('Requested A22 stop was not confirmed; lock preserved')
         error.accounting = row
         raise error
     return row
@@ -612,7 +814,7 @@ def _record_transport(root, action, details, status_value, started, child_before
 def main(argv=None):
     started, child_before = time.perf_counter(), _child_usage()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=('preflight', 'deploy', 'run', 'status', 'pull'))
+    parser.add_argument('action', choices=('preflight', 'deploy', 'run', 'status', 'stop', 'pull'))
     parser.add_argument('--private-config', required=True)
     parser.add_argument('--root', type=Path, default=ROOT)
     parser.add_argument('--stage', choices=tuple(CLI_STAGES))
@@ -622,14 +824,14 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.action == 'run' and (args.stage is None or args.job is None or args.device is None):
         parser.error('run requires explicit --stage, --job and --device')
-    if args.action == 'status' and args.job is None:
-        parser.error('status requires --job')
+    if args.action in ('status','stop') and args.job is None:
+        parser.error('status/stop requires --job')
     details, result = {}, 'FAILED'
     try:
         if args.action == 'run':
             details = run(args.stage, args.job, args.device, args.private_config, root=args.root, budget_stage=args.budget_stage)
-        elif args.action == 'status':
-            details = status(args.job, args.private_config, root=args.root)
+        elif args.action in ('status','stop'):
+            details = globals()[args.action](args.job, args.private_config, root=args.root)
         else:
             details = globals()[args.action](args.private_config, root=args.root)
         result = 'COMPLETE'

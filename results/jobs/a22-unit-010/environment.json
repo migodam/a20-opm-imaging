@@ -1,0 +1,14 @@
+{
+  "python": "3.13.13 (main, Apr  7 2026, 18:19:01) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "executable": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+  "platform": "darwin",
+  "fixed_source": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "source_identity": "frozen Git base plus saved A22 source",
+  "new_SHA256_checks": 0,
+  "thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null
+  }
+}

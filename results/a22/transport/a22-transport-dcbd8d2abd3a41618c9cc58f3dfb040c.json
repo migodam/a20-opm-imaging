@@ -1,0 +1,26 @@
+{
+  "scope": "a22-transport-dcbd8d2abd3a41618c9cc58f3dfb040c",
+  "action": "run",
+  "status": "FAILED",
+  "process_cpu_seconds": 0.129135,
+  "wall_seconds": 441.301137208,
+  "remote_process_cpu_seconds": 0.0,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "FAILED",
+    "job_id": "a22-cuda-screen-001",
+    "device": "cuda",
+    "stage": "screen_health",
+    "error_type": "PermissionError",
+    "remote_process_cpu_seconds": 9.96875,
+    "remote_controller_CPU_already_billed": true,
+    "foreground": true,
+    "shared_lock": "common A20 GPU lock",
+    "child_process_CPU_seconds": 414.375,
+    "queue_query_CPU_seconds": 0.03125,
+    "child_CPU_measurement_available": true,
+    "child_stop_confirmed": true
+  },
+  "new_SHA256_checks": 0
+}

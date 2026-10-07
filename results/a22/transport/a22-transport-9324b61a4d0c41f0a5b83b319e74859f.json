@@ -1,0 +1,19 @@
+{
+  "scope": "a22-transport-9324b61a4d0c41f0a5b83b319e74859f",
+  "action": "stop",
+  "status": "FAILED",
+  "process_cpu_seconds": 0.343466,
+  "wall_seconds": 1.8717043330034357,
+  "remote_process_cpu_seconds": 0.234375,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "REFUSED",
+    "job_id": "a22-cuda-screen-001",
+    "error_type": "RuntimeError",
+    "remote_process_cpu_seconds": 0.234375,
+    "control_query_CPU_seconds": 0.203125,
+    "child_CPU_measurement_available": true
+  },
+  "new_SHA256_checks": 0
+}

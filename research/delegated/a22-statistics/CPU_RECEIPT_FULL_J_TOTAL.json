@@ -1,0 +1,23 @@
+{
+  "scope": "A22 delegated FULL_J_TOTAL statistics source patch 2026-10-07",
+  "campaign": "A22",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 3.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "Independent conservative allowance for targeted source reads, offline comparator and synthetic test edits, AST parsing, coordination, and receipt preparation",
+  "observed_AST_process_CPU_seconds": 0.039589,
+  "new_prepared_unit_tests": 3,
+  "prepared_statistics_tests": 22,
+  "AST_check": "PASS",
+  "statistics_execution": "NOT_RUN",
+  "unit_tests": "NOT_RUN",
+  "SSH": "NOT_RUN",
+  "physics": "NOT_RUN",
+  "GPU": "NOT_RUN",
+  "science_label_reads": "NONE",
+  "new_SHA256_checks": 0,
+  "previous_statistics_scope_rebilled": false,
+  "previous_worker_and_remote_scopes_rebilled": false,
+  "register_exactly_once": true
+}

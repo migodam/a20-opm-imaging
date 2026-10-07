@@ -1,0 +1,14 @@
+{
+  "event_id": "a22-cuda-screen-002-controller-read-failure",
+  "campaign": "A22",
+  "job_id": "a22-cuda-screen-002",
+  "status": "INFRASTRUCTURE_FAILURE",
+  "error_type": "PermissionError",
+  "cause": "Windows watchdog checkpoint read; retry handler required native delete-sharing reader",
+  "committed_rows": 337,
+  "invalid_QPs": 0,
+  "source_archive": "results/a22/attempt_archive/a22-cuda-screen-002/stage_a",
+  "scientific_gate_failure": false,
+  "paid_receipt": "results/jobs/a22-cuda-screen-002/job_receipt.json",
+  "restart_reuses_cached_labels": true
+}

@@ -1,0 +1,48 @@
+{
+  "wall_seconds": 0.506473207999079,
+  "process_cpu_seconds": 0.522452,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "unit_test_suites": 1
+  },
+  "exclusive_walls": {
+    "a22_unit_test_suite": 0.2632202090026112
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 82132992,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "campaign": "A22",
+  "job_id": "a22-unit-010",
+  "stage": "screen_health",
+  "active_stage": "screen_health",
+  "stage_gpu_seconds": {
+    "screen_health": 0.0,
+    "features": 0.0,
+    "direction": 0.0,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "checkpoint_perf_counter": 51657.008161291,
+  "controller_process_cpu_seconds": 0.522452,
+  "child_process_cpu_seconds": 0.0,
+  "live_child_process_cpu_seconds": 0.0,
+  "corrections": {},
+  "role": "online",
+  "status": "RUNNING",
+  "CPU_cap": null,
+  "gpu_wall_cap_seconds": 32400.0,
+  "stage_gpu_cap_seconds": 1800.0,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "CPU_and_GPU_resources_not_summed": true,
+  "historical_A21_costs": "record only; excluded from A22 limits",
+  "measurement": "inclusive measured process CPU + child CPU; CUDA job inclusive wall",
+  "new_SHA256_checks": 0
+}

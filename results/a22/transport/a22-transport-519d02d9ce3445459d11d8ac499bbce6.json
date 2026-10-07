@@ -1,0 +1,26 @@
+{
+  "scope": "a22-transport-519d02d9ce3445459d11d8ac499bbce6",
+  "action": "run",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.136707,
+  "wall_seconds": 13.63396416699834,
+  "remote_process_cpu_seconds": 0.0,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "COMPLETE",
+    "job_id": "a22-cuda-validate-002",
+    "device": "cuda",
+    "stage": "screen_health",
+    "exit_status": 0,
+    "remote_process_cpu_seconds": 0.234375,
+    "remote_controller_CPU_already_billed": true,
+    "foreground": true,
+    "shared_lock": "common A20 GPU lock",
+    "child_process_CPU_seconds": 8.3125,
+    "queue_query_CPU_seconds": 0.015625,
+    "child_CPU_measurement_available": true,
+    "child_stop_confirmed": true
+  },
+  "new_SHA256_checks": 0
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "a22.delegated.cpu_receipt.v1",
+  "scope": "a22-report-discovery",
+  "status": "SOURCE_ONLY_COMPLETE",
+  "process_cpu_seconds": 6.000743,
+  "gpu_occupation_seconds": 0.0,
+  "conservative_cpu_charge_seconds": 6.000743,
+  "measured_python_process_cpu_seconds": 0.0007430000000000023,
+  "implementation_patch_cpu_allowance_seconds": 5.0,
+  "implementation_shell_cpu_allowance_seconds": 1.0,
+  "allowances_are_measured": false,
+  "measurement": "measured Python own CPU plus explicit nonmeasurement implementation reserves",
+  "wall_seconds": "NOT_MEASURED",
+  "executed": {
+    "source_edit": true,
+    "test_source_creation": true,
+    "source_text_read": true,
+    "tests": false,
+    "imports": false,
+    "syntax_checks": false,
+    "reports": false,
+    "statistics": false,
+    "data_reads": false,
+    "plots": false,
+    "physics": false,
+    "remote": false,
+    "GPU": false,
+    "hashes": false
+  },
+  "scientific_gates": "NOT_ASSESSED",
+  "timing_limit": "Python startup/final serialization are covered conservatively by shell reserve, not claimed measured."
+}

@@ -62,6 +62,10 @@ for _method in METHODS:
         "predicted_error_" + _method, _method + "_prediction_error",
         "pred_" + _method.lower(), _method.lower() + "_predicted_error",
     )
+ALIASES["pred_full_J"] = ("pred_full_J", "prediction_full_J", "full_J_prediction",
+                          "full_J_predicted_error", "predicted_error_full_J", "pred_fullJ", "pred_J_full")
+ALIASES["pred_full_J_total"] = ("pred_full_J_total", "prediction_full_J_total", "full_J_total_prediction",
+                                "full_J_total_predicted_error", "predicted_error_full_J_total", "pred_fullJ_total")
 
 SCHEMA = {
     "schema": "a22.reporting.input.v1",
@@ -70,12 +74,16 @@ SCHEMA = {
         "canonical_columns": [
             "scene_id", "direction_id", "amplitude", "noise_draw", "noise_level",
             "intervention", "true_error", "relative_true_error", "pred_A0",
-            "pred_A1", "pred_A2", "pred_A3", "alpha", "beta", "gamma",
+            "pred_A1", "pred_A2", "pred_A3", "pred_full_J", "pred_full_J_total", "alpha", "beta", "gamma",
             "attribution", "profile_g", "actual_rank", "certificate_type",
             "feature_origin", "label_origin", "truth_origin", "anchor_provenance",
             "evidence_scope", "historical_exposure", "status",
         ],
         "prediction_semantics": "pred_A0..pred_A3 predict coefficient error; they are not residuals of that prediction",
+        "offline_benchmark_semantics": {
+            "pred_full_J": "offline nuisance-profiled full-J witness",
+            "pred_full_J_total": "offline total response/sensitivity ridge baseline",
+            "method_scope": "offline_full_J; neither baseline enters formal A3 versus A1/A2 bootstrap"},
     },
     "split_metrics": {
         "canonical_columns": ["scene_id", "method", "physics_rank", "actual_rank",
@@ -394,12 +402,12 @@ def _plots(root: Path, tables: Mapping[str, Any], stats: list[dict[str, Any]], s
                 count += len(pairs)
         total_pairs += count
         if count:
-            ax.set(title=method + f" ({count} paired rows)", xlabel="Actual coefficient error", ylabel="Predicted coefficient error")
+            ax.set(title=method + f" raw diagnostic ({count} paired rows)", xlabel="Actual coefficient error", ylabel="Raw predicted coefficient error")
             ax.legend(fontsize=8)
             ax.grid(alpha=.2)
         else:
             _blocked(ax, method, "Actual/predicted coefficient-error pairs unavailable")
-    save(fig, "prediction_vs_coefficient_error", [tables["direction_metrics"]["path"]], "RECORDED" if total_pairs else "NOT_RUN", "Raw error pairs; oracle-only and unclassified evidence remain separate. Repeated rows are not independent scenes.")
+    save(fig, "prediction_vs_coefficient_error", [tables["direction_metrics"]["path"]], "RECORDED_DESCRIPTIVE" if total_pairs else "NOT_RUN", "Raw descriptive error pairs, without noise-draw averaging or calibrated scales. Repeated rows are not independent scenes; use separate statistical figures for calibrated evidence.")
 
     fig, axes = plt.subplots(1, 3, figsize=(14, 4.6), squeeze=False)
     valid = 0
@@ -437,7 +445,7 @@ def _plots(root: Path, tables: Mapping[str, Any], stats: list[dict[str, Any]], s
         ax.set(xlabel=field.replace("_", " "), ylabel="Actual coefficient error")
         ax.legend(fontsize=6)
         ax.grid(alpha=.2)
-    save(fig, "error_vs_amplitude_noise", [tables["direction_metrics"]["path"]], "RECORDED" if valid else "NOT_RUN", "Raw finite-amplitude/noise observations; failures with missing errors are retained in the source ledger, not converted to zero.")
+    save(fig, "error_vs_amplitude_noise", [tables["direction_metrics"]["path"]], "RECORDED_DESCRIPTIVE" if valid else "NOT_RUN", "Raw descriptive finite-amplitude/noise observations; correlated draws are not independent scenes. Failures with missing errors remain in the source ledger.")
 
     splits = tables["split_metrics"]["rows"]
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
@@ -524,13 +532,11 @@ def generate_reports(root: str | Path | None = None, gate_path: str | Path | Non
         supplied.setdefault("configuration", config)
 
     def locate(name: str) -> Path:
-        first, second = screen / (name + ".csv"), a22 / (name + ".csv")
-        return first if first.is_file() or not second.is_file() else second
+        candidates = [a22 / "stage_a" / (name + ".csv"), screen / (name + ".csv"), a22 / (name + ".csv")]
+        return next((path for path in candidates if path.is_file()), candidates[0])
 
     tables = {name: _read_table(locate(name)) for name in ("direction_metrics", "split_metrics", "scene_metrics")}
-    manifest_path = a22 / "scene_manifest.csv"
-    if not manifest_path.is_file() and (screen / "scene_manifest.csv").is_file():
-        manifest_path = screen / "scene_manifest.csv"
+    manifest_path = locate("scene_manifest")
     tables["scene_manifest"] = _read_table(manifest_path)
     scene_metadata = tables["scene_manifest"]["rows"] + tables["scene_metrics"]["rows"]
     for name in ("direction_metrics", "split_metrics"):
@@ -682,3 +688,264 @@ def _format(value: Any) -> str:
 
 report = generate_reports
 render_report = generate_reports
+
+
+def _statistical_plot_rows(document: Mapping[str, Any]) -> list[dict[str, Any]]:
+    """Expose saved averaged units; do not aggregate, fit, or score raw rows."""
+    output = []
+    methods = list(METHODS)
+    methods.extend(method for method in ("full_J", "full_J_total") if method in document.get("methods", []))
+    members = document.get("evaluated_units", [])
+    for index, unit in enumerate(members if isinstance(members, list) else []):
+        if not isinstance(unit, Mapping):
+            continue
+        forecasts = unit.get("calibrated_predictions", {})
+        raw = unit.get("raw_predictions", {})
+        eligible = unit.get("method_eligible", {})
+        draws = unit.get("paired_draw_rows", {})
+        for method in methods:
+            row = {name: unit.get(name) for name in (
+                "scene_id", "direction_id", "amplitude", "noise_level", "intervention",
+                "family", "evidence_scope", "evaluation_split", "calibration_fold", "in_sample",
+                "input_rows", "invalid_rows", "missing_target_rows", "group_fields_complete",
+                "true_error", "certificate_types", "status_values")}
+            row.update(source_unit=index, method=method,
+                method_scope="offline_full_J" if method in ("full_J", "full_J_total") else unit.get("evidence_scope"),
+                raw_prediction=raw.get(method) if isinstance(raw, Mapping) else None,
+                calibrated_prediction=forecasts.get(method) if isinstance(forecasts, Mapping) else None,
+                method_eligible=eligible.get(method) if isinstance(eligible, Mapping) else None,
+                paired_draw_rows=draws.get(method) if isinstance(draws, Mapping) else None)
+            output.append(row)
+    return output
+
+
+def generate_statistical_plots(root: str | Path | None = None,
+                               evidence: Mapping[str, Any] | str | Path | None = None,
+                               output_dir: str | Path | None = None, *, make_plots: bool = True,
+                               evidence_scope: str = "deployable", noise_branch: str = "all",
+                               evaluation_split: str | None = None) -> dict[str, Any]:
+    """Plot saved statistics.py evidence without recomputing statistical results.
+
+    This entry point is separate from the raw descriptive ``generate_reports``.
+    The default facet is family ALL, deployable, all noise levels, and held_scene
+    for screening or evaluation for formal evidence. Each scatter point is a
+    saved noise-draw-averaged unit. Intervals come only from saved paired-scene
+    bootstrap records; this function never fits scales or reruns a bootstrap.
+    The calling parent must meter the complete invocation. No gate is read,
+    inferred, or written, and no main report document is overwritten.
+    """
+    root = Path(root).resolve() if root is not None else Path(__file__).resolve().parents[2]
+    a22 = root / "results" / "a22"
+    out = Path(output_dir).resolve() if output_dir is not None else a22 / "reporting" / "statistical"
+    if not out.is_relative_to(a22.resolve()):
+        raise ValueError("A22_STATISTICAL_OUTPUT_MUST_BE_INSIDE_RESULTS_A22")
+    if noise_branch not in ("all", "noise_zero", "noise_positive"):
+        raise ValueError("UNREGISTERED_STATISTICAL_NOISE_BRANCH")
+    if evidence_scope not in SCOPES:
+        raise ValueError("UNREGISTERED_STATISTICAL_EVIDENCE_SCOPE")
+    source = "SUPPLIED_MAPPING"
+    source_error = None
+    if isinstance(evidence, Mapping):
+        document = _plain(evidence)
+    else:
+        if evidence is None:
+            candidates = [a22 / "statistics" / "STATISTICS_EVIDENCE.json",
+                          a22 / "screening" / "STATISTICS_EVIDENCE.json", a22 / "STATISTICS_EVIDENCE.json"]
+            path = next((candidate for candidate in candidates if candidate.is_file()), candidates[0])
+        else:
+            path = Path(evidence)
+            if not path.is_absolute():
+                path = root / path
+        path = path.resolve()
+        if not path.is_relative_to(a22.resolve()):
+            raise ValueError("A22_STATISTICAL_INPUT_MUST_BE_INSIDE_RESULTS_A22")
+        source = str(path)
+        document, source_error = _read_json(path)
+    if document is not None and document.get("schema") != "a22.statistics.evidence.v1":
+        source_error = "UNRECOGNIZED_STATISTICS_SCHEMA"
+        document = None
+    supplied = document or {}
+    split = evaluation_split or ("held_scene" if supplied.get("mode") == "screen" else "evaluation")
+    if split not in ("held_scene", "development", "calibration", "evaluation"):
+        raise ValueError("UNREGISTERED_STATISTICAL_EVALUATION_SPLIT")
+
+    def records(key: str) -> list[dict[str, Any]]:
+        rows = supplied.get(key, [])
+        return [dict(row) for row in rows if isinstance(row, Mapping)] if isinstance(rows, list) else []
+
+    def csv_copy(name: str, rows: list[Mapping[str, Any]]) -> str:
+        path = raw_dir / (name + ".csv")
+        columns = sorted({str(key) for row in rows for key in row}) or ["status"]
+        plain_rows = [{str(key): json.dumps(_plain(value), ensure_ascii=False) if isinstance(value, (Mapping, list, tuple)) else value
+                       for key, value in row.items()} for row in rows]
+        _write_csv(path, plain_rows, columns)
+        return str(path)
+
+    out.mkdir(parents=True, exist_ok=True)
+    raw_dir = out / "rawdata"
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    _write_json(out / "SUPPLIED_STATISTICS_EVIDENCE.json", supplied)
+    sections = ("aggregated_units", "evaluated_units", "calibration_scales", "per_scene_statistics",
+                "summaries", "paired_scene_bootstrap")
+    raw_paths = {key: csv_copy(key, records(key)) for key in sections}
+    plot_rows = _statistical_plot_rows(supplied)
+    raw_paths["calibrated_unit_plot_rows"] = csv_copy("calibrated_unit_plot_rows", plot_rows)
+    primary = supplied.get("primary_incrementality")
+    _write_json(raw_dir / "PRIMARY_INCREMENTALITY.json", primary if isinstance(primary, Mapping) else None)
+    _write_json(raw_dir / "STATISTICS_INPUT_AUDIT.json", supplied.get("input_audit", {}))
+
+    def facet(row: Mapping[str, Any], *, unit: bool = False) -> bool:
+        if row.get("evaluation_split") != split or row.get("evidence_scope") != evidence_scope:
+            return False
+        if not unit:
+            return row.get("family") == "ALL" and row.get("noise_branch") == noise_branch
+        noise = _number(row.get("noise_level"))
+        return noise_branch == "all" or noise_branch == "noise_zero" and noise == 0 or noise_branch == "noise_positive" and noise is not None and noise > 0
+
+    def finite_pair(row: Mapping[str, Any]) -> bool:
+        actual, prediction = _number(row.get("true_error")), _number(row.get("calibrated_prediction"))
+        return _truthy(row.get("method_eligible")) is True and actual is not None and actual >= 0 and prediction is not None and prediction >= 0
+
+    units = [row for row in plot_rows if facet(row, unit=True) and finite_pair(row)]
+    scene_stats = [row for row in records("per_scene_statistics") if facet(row)]
+    bootstrap_records = [row for row in records("paired_scene_bootstrap") if facet(row)]
+    bootstrap = bootstrap_records[0] if len(bootstrap_records) == 1 else None
+    figures, plot_error = [], None
+    selectors = dict(family="ALL", evidence_scope=evidence_scope, noise_branch=noise_branch, evaluation_split=split)
+    figure_dir = root / "figures" / "a22" / "statistical" if output_dir is None else out / "figures"
+    stem = "_".join((split, evidence_scope, noise_branch))
+    if make_plots:
+        try:
+            import matplotlib
+            matplotlib.use("Agg", force=True)
+            import matplotlib.pyplot as plt
+            figure_dir.mkdir(parents=True, exist_ok=True)
+
+            def save(fig: Any, name: str, available: bool, caption: str) -> None:
+                fig.text(.5, .015, caption, ha="center", va="bottom", fontsize=8, wrap=True)
+                fig.tight_layout(rect=(0, .11, 1, 1))
+                png, svg = figure_dir / (stem + "_" + name + ".png"), figure_dir / (stem + "_" + name + ".svg")
+                fig.savefig(png, dpi=160, bbox_inches="tight")
+                fig.savefig(svg, bbox_inches="tight")
+                plt.close(fig)
+                figures.append(dict(name=name, png=str(png), svg=str(svg),
+                    status="RECORDED_STATISTICAL_EVIDENCE" if available else "NOT_RUN_OR_UNDEFINED",
+                    sources=[source], selectors=selectors, caption=caption))
+
+            note = f"{split}; {evidence_scope}; {noise_branch}. Saved averaged units and frozen scales; correlated units are not independent scenes."
+            fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+            available = False
+            for ax, method in zip(axes.ravel(), METHODS):
+                chosen = [row for row in units if row["method"] == method]
+                for scene in sorted({str(row.get("scene_id")) for row in chosen}):
+                    group = [row for row in chosen if str(row.get("scene_id")) == scene]
+                    ax.scatter([float(row["true_error"]) for row in group], [float(row["calibrated_prediction"]) for row in group], s=16, alpha=.65, label=scene)
+                if chosen:
+                    ax.set(title=method, xlabel="Mean actual coefficient error", ylabel="Calibrated predicted error")
+                    ax.legend(fontsize=7)
+                    ax.grid(alpha=.2)
+                    available = True
+                else:
+                    _blocked(ax, method, "Complete averaged units and saved calibrated forecasts unavailable")
+            save(fig, "calibrated_prediction_vs_coefficient_error", available, note)
+
+            for field, label, suffix in (("spearman", "Within-scene calibrated Spearman", "per_scene_spearman"),
+                                         ("MAE", "Within-scene calibrated MAE", "per_scene_mae")):
+                fig, ax = plt.subplots(figsize=(10, 4.8))
+                chosen = [row for row in scene_stats if row.get("method") in METHODS and _number(row.get(field)) is not None]
+                scenes = sorted({str(row.get("scene_id")) for row in chosen})
+                if chosen:
+                    for offset, method in enumerate(METHODS):
+                        group = [row for row in chosen if row.get("method") == method]
+                        if group:
+                            ax.scatter([scenes.index(str(row["scene_id"])) + (offset-1.5)*.12 for row in group], [float(row[field]) for row in group], label=method)
+                    ax.set_xticks(range(len(scenes)), scenes, rotation=35, ha="right")
+                    ax.set(ylabel=label, title="Saved per-scene statistics; family ALL")
+                    if field == "spearman":
+                        ax.set_ylim(-1.05, 1.05)
+                    ax.legend(fontsize=8)
+                    ax.grid(alpha=.2)
+                else:
+                    _blocked(ax, label, "Requested per-scene statistical values unavailable or undefined")
+                save(fig, suffix, bool(chosen), note + " One displayed value per scene/method; no draw-count inference.")
+
+            fig, axes = plt.subplots(1, 2, figsize=(11, 4.8))
+            available = False
+            for ax, field in zip(axes, ("amplitude", "noise_level")):
+                # One target copy per saved averaged unit, not one per method.
+                target_rows = {}
+                for row in units:
+                    if row["method"] in METHODS and _number(row.get(field)) is not None:
+                        target_rows.setdefault(row["source_unit"], row)
+                if target_rows:
+                    ax.scatter([float(row[field]) for row in target_rows.values()], [float(row["true_error"]) for row in target_rows.values()], s=20, color="black", marker="x", label="Mean actual error")
+                    for method in METHODS:
+                        group = [row for row in units if row["method"] == method and _number(row.get(field)) is not None]
+                        if group:
+                            ax.scatter([float(row[field]) for row in group], [float(row["calibrated_prediction"]) for row in group], s=12, alpha=.5, label=method)
+                    ax.set(xlabel=field.replace("_", " "), ylabel="Absolute coefficient error")
+                    ax.legend(fontsize=7)
+                    ax.grid(alpha=.2)
+                    available = True
+                else:
+                    _blocked(ax, "Error versus " + field, "Complete averaged units unavailable")
+            save(fig, "grouped_error_vs_amplitude_noise", available, note + " Raw observation multiplicities are absent from plotted points.")
+
+            fig, axes = plt.subplots(1, 2, figsize=(12, 4.8))
+            paired = bootstrap.get("paired_scene_MAE", []) if bootstrap else []
+            paired = [row for row in paired if isinstance(row, Mapping)] if isinstance(paired, list) else []
+            scenes = [str(row.get("scene_id")) for row in paired]
+            for offset, method in enumerate(("A1", "A2", "A3")):
+                group = [(index, _number(row.get(method))) for index, row in enumerate(paired)]
+                group = [(index, value) for index, value in group if value is not None]
+                if group:
+                    axes[0].scatter([index+(offset-1)*.12 for index, _ in group], [value for _, value in group], label=method)
+            if paired:
+                axes[0].set_xticks(range(len(scenes)), scenes, rotation=35, ha="right")
+                axes[0].set(ylabel="Calibrated MAE on common complete units", title="Saved paired-scene errors")
+                axes[0].legend(fontsize=8)
+            else:
+                _blocked(axes[0], "Paired-scene errors", "Common A1/A2/A3 paired-scene records unavailable")
+            point = _number(bootstrap.get("absolute_MAE_improvement")) if bootstrap else None
+            interval = bootstrap.get("absolute_95_percent_interval") if bootstrap else None
+            recorded_interval = bootstrap is not None and bootstrap.get("status") == "RECORDED_SCENE_CLUSTER_BOOTSTRAP" and isinstance(interval, list) and len(interval) == 2 and all(_number(value) is not None for value in interval)
+            if point is not None:
+                axes[1].scatter([0], [point], label="Saved point estimate")
+                if recorded_interval:
+                    axes[1].vlines(0, float(interval[0]), float(interval[1]), color="black", linewidth=2, label="Saved scene-cluster 95% interval")
+                axes[1].set_xticks([0], ["Stronger A1/A2 minus A3"])
+                axes[1].set(ylabel="Absolute MAE difference", title=f"Paired scenes: {bootstrap.get('paired_scenes', 'UNDECLARED')}")
+                axes[1].legend(fontsize=7)
+            else:
+                _blocked(axes[1], "Saved scene-cluster improvement", "Point estimate or uniquely matching bootstrap record unavailable")
+            interval_note = bootstrap.get("interval_scope", "No recorded scene-cluster interval") if bootstrap else "No uniquely matching saved bootstrap record"
+            save(fig, "paired_scene_incrementality", point is not None, note + " Positive means lower A3 MAE. " + str(interval_note) + "; no gate judgment.")
+
+            for method, label in (("full_J", "Nuisance-profiled full-J witness"),
+                                  ("full_J_total", "Full-J total response/sensitivity ridge baseline")):
+                if method not in supplied.get("methods", []):
+                    continue
+                fig, ax = plt.subplots(figsize=(7, 5))
+                chosen = [row for row in units if row["method"] == method]
+                if chosen:
+                    ax.scatter([float(row["true_error"]) for row in chosen], [float(row["calibrated_prediction"]) for row in chosen], s=20)
+                    ax.set(xlabel="Mean actual coefficient error", ylabel="Calibrated offline prediction", title=label)
+                    ax.grid(alpha=.2)
+                else:
+                    _blocked(ax, label, "Complete offline benchmark units unavailable")
+                save(fig, "offline_" + method + "_prediction", bool(chosen), note + " " + label + " is an offline benchmark and is excluded from deployable A0–A3 plots.")
+        except (ImportError, OSError, ValueError, RuntimeError) as exc:
+            plot_error = str(exc)
+    else:
+        plot_error = "NOT_RUN: plot generation disabled by caller"
+    result = dict(schema="a22.statistical_reporting.result.v1",
+        status="STATISTICAL_REPORTING_WRITTEN" if document is not None else "NOT_RUN",
+        source=source, source_error=source_error, selectors=selectors,
+        report_directory=str(out), rawdata=raw_paths, figure_directory=str(figure_dir),
+        figure_count=len(figures), figures=figures, figure_error=plot_error,
+        complete_calibrated_unit_method_pairs=len(units),
+        saved_scene_statistic_rows=len(scene_stats), uniquely_matching_bootstrap=bootstrap is not None,
+        statistical_results_recomputed=False, gate_decisions_evaluated_by_reporter=False,
+        physics_executed=False, CPU_accounting="Caller must meter this entire invocation.")
+    _write_json(out / (stem + "_STATISTICAL_FIGURE_MANIFEST.json"), result)
+    return result

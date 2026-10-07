@@ -1,0 +1,18 @@
+{
+  "scope": "a22-transport-e49737f4370e42f6bc37ef02247e6cd8",
+  "action": "pull",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.289667,
+  "wall_seconds": 2.6384706250028103,
+  "remote_process_cpu_seconds": 0.078125,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "A22_RESULTS_SAVED",
+    "archive_bytes": 3599415,
+    "remote_process_cpu_seconds": 0.078125,
+    "merged_files": 60,
+    "original_A20_A21_written": false
+  },
+  "new_SHA256_checks": 0
+}

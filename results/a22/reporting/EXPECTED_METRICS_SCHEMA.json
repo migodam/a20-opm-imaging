@@ -1,0 +1,335 @@
+{
+  "schema": "a22.reporting.input.v1",
+  "direction_metrics": {
+    "row_unit": "scene/direction/amplitude/noise_draw/noise_level/intervention",
+    "canonical_columns": [
+      "scene_id",
+      "direction_id",
+      "amplitude",
+      "noise_draw",
+      "noise_level",
+      "intervention",
+      "true_error",
+      "relative_true_error",
+      "pred_A0",
+      "pred_A1",
+      "pred_A2",
+      "pred_A3",
+      "pred_full_J",
+      "pred_full_J_total",
+      "alpha",
+      "beta",
+      "gamma",
+      "attribution",
+      "profile_g",
+      "actual_rank",
+      "certificate_type",
+      "feature_origin",
+      "label_origin",
+      "truth_origin",
+      "anchor_provenance",
+      "evidence_scope",
+      "historical_exposure",
+      "status"
+    ],
+    "prediction_semantics": "pred_A0..pred_A3 predict coefficient error; they are not residuals of that prediction",
+    "offline_benchmark_semantics": {
+      "pred_full_J": "offline nuisance-profiled full-J witness",
+      "pred_full_J_total": "offline total response/sensitivity ridge baseline",
+      "method_scope": "offline_full_J; neither baseline enters formal A3 versus A1/A2 bootstrap"
+    }
+  },
+  "split_metrics": {
+    "canonical_columns": [
+      "scene_id",
+      "method",
+      "physics_rank",
+      "actual_rank",
+      "physics_projected_error",
+      "complement_projected_error",
+      "physics_per_coordinate_error",
+      "complement_per_coordinate_error",
+      "physics_relative_error",
+      "complement_relative_error",
+      "retained_truth_energy",
+      "feature_origin",
+      "label_origin",
+      "anchor_provenance",
+      "evidence_scope",
+      "historical_exposure",
+      "certificate_type",
+      "status"
+    ]
+  },
+  "scene_metrics": {
+    "canonical_columns": [
+      "scene_id",
+      "method",
+      "family",
+      "split",
+      "anchor_provenance",
+      "feature_origin",
+      "label_origin",
+      "evidence_scope",
+      "historical_exposure",
+      "full_material_error",
+      "full_wave_discrepancy",
+      "support_iou",
+      "location_error",
+      "protected_drift",
+      "success",
+      "first_hit_time",
+      "total_wall_seconds",
+      "status"
+    ]
+  },
+  "cost_ledger": {
+    "canonical_columns": [
+      "scene_id",
+      "method",
+      "stage",
+      "operation",
+      "actual_rank",
+      "operator_actions",
+      "forward_RHS",
+      "adjoint_RHS",
+      "Q_builds",
+      "outer_iterations",
+      "line_search_trials",
+      "rejected_steps",
+      "wall_seconds",
+      "wall_scope",
+      "process_cpu_seconds",
+      "temperature",
+      "status"
+    ],
+    "wall_rule": "nested span walls are never summed or presented as end-to-end time"
+  },
+  "aliases": {
+    "scene_id": [
+      "scene_id",
+      "parent_id",
+      "object_id",
+      "scene"
+    ],
+    "direction_id": [
+      "direction_id",
+      "direction",
+      "probe_id"
+    ],
+    "method": [
+      "method",
+      "diagnostic",
+      "arm",
+      "algorithm"
+    ],
+    "amplitude": [
+      "amplitude",
+      "perturbation_amplitude",
+      "delta",
+      "step_size"
+    ],
+    "noise_level": [
+      "noise_level",
+      "noise_fraction",
+      "noise",
+      "sigma"
+    ],
+    "noise_draw": [
+      "noise_draw",
+      "noise_seed",
+      "realization",
+      "draw"
+    ],
+    "intervention": [
+      "intervention",
+      "perturbation_type",
+      "condition"
+    ],
+    "true_error": [
+      "true_error",
+      "true_coefficient_error",
+      "coefficient_error",
+      "recovery_error"
+    ],
+    "relative_true_error": [
+      "relative_true_error",
+      "relative_coefficient_error",
+      "relative_recovery_error"
+    ],
+    "physics_projected_error": [
+      "physics_projected_error",
+      "projected_physics_error",
+      "physics_error",
+      "physics_abs_error",
+      "phys_projected_error",
+      "vp_error",
+      "error_phys"
+    ],
+    "complement_projected_error": [
+      "complement_projected_error",
+      "projected_complement_error",
+      "complement_error",
+      "complement_abs_error",
+      "remaining_abs_error",
+      "rem_projected_error",
+      "prior_error",
+      "vn_error",
+      "error_rem"
+    ],
+    "physics_per_coordinate_error": [
+      "physics_per_coordinate_error",
+      "physics_per_dimension_error",
+      "physics_normalized_error",
+      "vp_per_coordinate_error"
+    ],
+    "complement_per_coordinate_error": [
+      "complement_per_coordinate_error",
+      "complement_per_dimension_error",
+      "complement_normalized_error",
+      "vn_per_coordinate_error"
+    ],
+    "physics_relative_error": [
+      "physics_relative_error",
+      "relative_physics_error",
+      "vp_relative_error"
+    ],
+    "complement_relative_error": [
+      "complement_relative_error",
+      "relative_complement_error",
+      "vn_relative_error"
+    ],
+    "retained_truth_energy": [
+      "retained_truth_energy",
+      "relative_retained_truth_energy",
+      "physics_truth_energy_fraction"
+    ],
+    "actual_rank": [
+      "actual_rank",
+      "current_rank",
+      "q_rank",
+      "rank",
+      "Q_rank"
+    ],
+    "physics_rank": [
+      "physics_rank",
+      "r",
+      "rank_phys",
+      "vp_rank"
+    ],
+    "operator_actions": [
+      "operator_actions",
+      "operator_action_count",
+      "operator_rhs",
+      "Maxwell_matvec_rhs",
+      "online_Maxwell_vector_actions"
+    ],
+    "wall_seconds": [
+      "total_wall_seconds",
+      "total_time",
+      "total_wall_time",
+      "wall_total_seconds",
+      "wall_seconds",
+      "wall_time"
+    ],
+    "process_cpu_seconds": [
+      "process_cpu_seconds",
+      "cpu_seconds",
+      "cpu_time"
+    ],
+    "feature_origin": [
+      "feature_origin",
+      "feature_source",
+      "feature_provenance"
+    ],
+    "label_origin": [
+      "label_origin",
+      "truth_origin",
+      "label_source",
+      "truth_source"
+    ],
+    "anchor_provenance": [
+      "anchor_provenance",
+      "anchor_origin",
+      "anchor_type",
+      "anchor_kind"
+    ],
+    "evidence_scope": [
+      "evidence_scope",
+      "deployment_scope",
+      "feature_scope",
+      "scope"
+    ],
+    "historical_exposure": [
+      "historical_exposure",
+      "historical_exposed",
+      "historically_exposed",
+      "dataset_exposure",
+      "data_exposure"
+    ],
+    "status": [
+      "status",
+      "run_status",
+      "outcome"
+    ],
+    "pred_A0": [
+      "pred_A0",
+      "prediction_A0",
+      "A0_prediction",
+      "A0_predicted_error",
+      "predicted_error_A0",
+      "A0_prediction_error",
+      "pred_a0",
+      "a0_predicted_error"
+    ],
+    "pred_A1": [
+      "pred_A1",
+      "prediction_A1",
+      "A1_prediction",
+      "A1_predicted_error",
+      "predicted_error_A1",
+      "A1_prediction_error",
+      "pred_a1",
+      "a1_predicted_error"
+    ],
+    "pred_A2": [
+      "pred_A2",
+      "prediction_A2",
+      "A2_prediction",
+      "A2_predicted_error",
+      "predicted_error_A2",
+      "A2_prediction_error",
+      "pred_a2",
+      "a2_predicted_error"
+    ],
+    "pred_A3": [
+      "pred_A3",
+      "prediction_A3",
+      "A3_prediction",
+      "A3_predicted_error",
+      "predicted_error_A3",
+      "A3_prediction_error",
+      "pred_a3",
+      "a3_predicted_error"
+    ],
+    "pred_full_J": [
+      "pred_full_J",
+      "prediction_full_J",
+      "full_J_prediction",
+      "full_J_predicted_error",
+      "predicted_error_full_J",
+      "pred_fullJ",
+      "pred_J_full"
+    ],
+    "pred_full_J_total": [
+      "pred_full_J_total",
+      "prediction_full_J_total",
+      "full_J_total_prediction",
+      "full_J_total_predicted_error",
+      "predicted_error_full_J_total",
+      "pred_fullJ_total"
+    ]
+  },
+  "missing_rule": "unavailable metric -> NOT_RUN or UNDEFINED, never an invented zero",
+  "gate_source": "parent-supplied results/a22/GATE_DECISION.json only"
+}

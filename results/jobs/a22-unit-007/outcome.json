@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "pattern": "test_a22_core.py",
+  "log": "results/a22/unit_validation/unit_tests/a22-unit-007.log",
+  "scope": "unit and tiny identity fixtures; not Maxwell campaign acceptance",
+  "stage": "unit"
+}

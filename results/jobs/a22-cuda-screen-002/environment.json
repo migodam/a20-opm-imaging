@@ -1,0 +1,14 @@
+{
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "executable": "D:\\python\\python.exe",
+  "platform": "win32",
+  "fixed_source": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "source_identity": "frozen Git base plus saved A22 source",
+  "new_SHA256_checks": 0,
+  "thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": null
+  }
+}

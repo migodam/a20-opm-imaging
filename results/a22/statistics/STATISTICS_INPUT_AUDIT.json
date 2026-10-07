@@ -1,0 +1,165 @@
+{
+  "scene_metadata": {
+    "2001": {
+      "family": "gaussian",
+      "supplied_family_values": [
+        "gaussian"
+      ],
+      "supplied_split_values": [
+        "screening"
+      ],
+      "historical_exposure": []
+    },
+    "2003": {
+      "family": "gaussian",
+      "supplied_family_values": [
+        "gaussian"
+      ],
+      "supplied_split_values": [
+        "screening"
+      ],
+      "historical_exposure": []
+    },
+    "2014": {
+      "family": "asymmetric",
+      "supplied_family_values": [
+        "asymmetric"
+      ],
+      "supplied_split_values": [
+        "screening"
+      ],
+      "historical_exposure": []
+    },
+    "2009": {
+      "family": "shell",
+      "supplied_family_values": [
+        "shell"
+      ],
+      "supplied_split_values": [
+        "screening"
+      ],
+      "historical_exposure": []
+    }
+  },
+  "input_rows": 2112,
+  "invalid_input_rows": 0,
+  "missing_group_fields": {},
+  "certificate_types": [
+    {
+      "value": "empirical_indicator",
+      "count": 2112
+    }
+  ],
+  "historical_exposure": [
+    {
+      "value": "True",
+      "count": 2112
+    }
+  ],
+  "feature_origins": [
+    {
+      "value": "ONLINE known-background shallow OPM residuals only",
+      "count": 2112
+    }
+  ],
+  "label_origins": [
+    {
+      "value": "OFFLINE original object finite Maxwell data, nuisance joint 32-coordinate solve",
+      "count": 2112
+    }
+  ],
+  "requested_scene_splits": {
+    "held_scene": [
+      "2001",
+      "2003",
+      "2014",
+      "2009"
+    ]
+  },
+  "observed_scene_ids": [
+    "2001",
+    "2003",
+    "2009",
+    "2014"
+  ],
+  "unused_scene_ids": [],
+  "aggregation_unit": "scene/scope/direction/amplitude/noise_level/intervention; mean across draws",
+  "incomplete_units_policy": "retained in audit; not counted as a paired success or coverage success",
+  "classification_policy": "explicit failure/success labels only; mixed draw labels retained as fractions",
+  "covariance_or_confidence_coverage_claim": false,
+  "source_path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/direction_metrics.csv",
+  "source_status": "AVAILABLE",
+  "supplied_columns": [
+    "W_external_material_norm",
+    "actual_current_rank",
+    "actual_rank",
+    "alpha",
+    "amplitude",
+    "amplitude_level",
+    "attribution",
+    "attribution_bias_budget",
+    "beta",
+    "candidate_index",
+    "certificate_type",
+    "coefficient_error",
+    "coefficient_signed_error",
+    "declared_object_material_radius",
+    "declared_object_prior_contains_center",
+    "direction_id",
+    "dual_defect",
+    "evidence_scope",
+    "family",
+    "feasibility",
+    "feature_origin",
+    "finite_domain_feasible",
+    "full_J_attribution",
+    "full_J_profile_g",
+    "full_J_scope",
+    "full_J_tangent_error",
+    "full_J_total_gain",
+    "full_model_uniform_certificate",
+    "full_reference_or_true_error_used",
+    "gamma",
+    "historical_exposed",
+    "intervention",
+    "kkt_relative",
+    "label_origin",
+    "material_error",
+    "material_radius",
+    "noise_draw",
+    "noise_level",
+    "noise_sd",
+    "noise_seed",
+    "online_predictions_frozen_before_offline_full_J",
+    "original_material_norm",
+    "paired_ROM_budget",
+    "paired_W_external_budget",
+    "paired_nonlinear_budget",
+    "perturbation_amplitude",
+    "pred_A0",
+    "pred_A1",
+    "pred_A2",
+    "pred_A3",
+    "pred_full_J",
+    "pred_full_J_total",
+    "profile_g",
+    "raw_target_coefficient",
+    "receiver_or_source_actual_signs_used",
+    "region_model_components_valid",
+    "relative_true_error",
+    "resume_label_cache_hit",
+    "resume_legacy_label_cache",
+    "scene_id",
+    "split",
+    "status",
+    "structured_factor_budget",
+    "true_error",
+    "truth_origin",
+    "uniform_certificate_limitation",
+    "unstructured_ROM_budget",
+    "unstructured_W_external_budget",
+    "unstructured_factor_budget",
+    "unstructured_nonlinear_budget"
+  ],
+  "scene_manifest_status": "AVAILABLE"
+}

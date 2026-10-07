@@ -1,0 +1,31 @@
+{
+  "scope": "a22-evaluation-inputs-transport-b1f320cdf5854869836015903cc794d5",
+  "action": "offline_evaluation_inputs_deploy",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.232386,
+  "controller_process_cpu_seconds": 0.064318,
+  "local_child_process_cpu_seconds": 0.095568,
+  "remote_process_cpu_seconds": 0.0625,
+  "finalization_reserve_seconds": 0.01,
+  "wall_seconds": 3.0700872499946854,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "details": {
+    "capability": "OFFLINE_EVALUATOR_ONLY",
+    "online_use_allowed": false,
+    "remote_namespace": "data/a22/offline_eval",
+    "member_count": 5,
+    "private_files_transferred": false,
+    "original_mixed_npz_transferred": false,
+    "new_integrity_hash_checks": 0,
+    "arrays_loaded": false,
+    "compressed_bytes": 54631,
+    "status": "A22_OFFLINE_EVALUATION_INPUTS_DEPLOYED",
+    "members": 5,
+    "files_written": 5,
+    "files_reused": 0,
+    "remote_process_cpu_seconds": 0.0625
+  },
+  "measurement": "local startup/import CPU plus local child CPU and both remote Python transport receipts",
+  "new_integrity_hash_checks": 0
+}

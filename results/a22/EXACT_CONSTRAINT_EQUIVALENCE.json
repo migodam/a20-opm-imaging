@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "proof": "Identical inequality row and lower bound imply identical half-space. Removing only exact repeated half-spaces leaves the intersection unchanged. H is SPD under the unchanged positive ridge, so the optimum is unique. Every accepted answer is still audited on all original rows.",
+  "scenes": [
+    {
+      "scene_id": 2001,
+      "original_inequalities": 3456,
+      "unique_inequalities": 32,
+      "exact_row_and_bound_reconstruction": true,
+      "changed_objective": false,
+      "changed_feasible_set": false,
+      "full_voxel_KKT_required": true
+    },
+    {
+      "scene_id": 2003,
+      "original_inequalities": 3456,
+      "unique_inequalities": 32,
+      "exact_row_and_bound_reconstruction": true,
+      "changed_objective": false,
+      "changed_feasible_set": false,
+      "full_voxel_KKT_required": true
+    },
+    {
+      "scene_id": 2014,
+      "original_inequalities": 3456,
+      "unique_inequalities": 32,
+      "exact_row_and_bound_reconstruction": true,
+      "changed_objective": false,
+      "changed_feasible_set": false,
+      "full_voxel_KKT_required": true
+    },
+    {
+      "scene_id": 2009,
+      "original_inequalities": 3456,
+      "unique_inequalities": 32,
+      "exact_row_and_bound_reconstruction": true,
+      "changed_objective": false,
+      "changed_feasible_set": false,
+      "full_voxel_KKT_required": true
+    }
+  ]
+}

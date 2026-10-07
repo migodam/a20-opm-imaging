@@ -1,0 +1,22 @@
+{
+  "scope": "A22 delegated native checkpoint watcher source patch 2026-10-07",
+  "campaign": "A22",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 3.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "Independent conservative allowance for transport/evidence source reads, native sharing reader and adapted fake test source, generated-source AST parsing, receipt preparation and unsuccessful patch preparation",
+  "observed_generated_AST_process_CPU_seconds": 0.037566,
+  "prepared_reader_tests": 8,
+  "AST_check": "PASS",
+  "unit_tests": "NOT_RUN",
+  "SSH": "NOT_RUN",
+  "physics": "NOT_RUN",
+  "GPU": "NOT_RUN",
+  "science_label_reads": "NONE",
+  "new_SHA256_checks": 0,
+  "previous_worker_scopes_rebilled": false,
+  "screen_002_paid_work_rebilled": false,
+  "future_reader_test_or_resume_CPU_prepaid": false,
+  "register_exactly_once": true
+}

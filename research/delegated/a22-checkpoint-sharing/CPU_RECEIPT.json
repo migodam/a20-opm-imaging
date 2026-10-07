@@ -1,0 +1,20 @@
+{
+  "scope": "A22 delegated bounded checkpoint sharing retry source patch 2026-10-07",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 3.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "Conservative independent allowance for local source reads, edits, AST parsing, and receipt preparation; no scientific runtime or tests executed",
+  "observed_AST_process_cpu_seconds": 0.039637,
+  "prepared_unit_tests": 5,
+  "AST_check": "PASS",
+  "unit_tests": "NOT_RUN",
+  "experiments": "NOT_RUN",
+  "SSH": "NOT_RUN",
+  "GPU": "NOT_RUN",
+  "science_label_reads": "NONE",
+  "new_SHA256_checks": 0,
+  "prior_receipts_rebilled": false,
+  "failed_remote_validation_rebilled": false,
+  "register_exactly_once": true
+}

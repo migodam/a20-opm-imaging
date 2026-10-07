@@ -1,0 +1,31 @@
+{
+  "GPU_runs": 0,
+  "accounting_note": "Source-only scope: three read/write shells with 1s allowance each and one apply_patch with 5s allowance. Allowances are explicit unmeasured overhead/tail reserves, not observed numerical or physics cost. Parent-reported 95 PASS tests, including this test module, were run independently and are outside this worker receipt. Incorporate this unique scope once.",
+  "allowances_are_measurements": false,
+  "charged_cpu_seconds_conservative": 8.003135,
+  "data_arrays_loaded": 0,
+  "events_file": "research/delegated/a22-cost-summary/CPU_EVENTS.jsonl",
+  "hashes_computed": 0,
+  "measured_process_and_child_cpu_seconds": 0.003134999999999992,
+  "owned_sources": [
+    "src/a22/cost_summary.py",
+    "tests/test_a22_cost_summary.py"
+  ],
+  "parent_reported_validation": "95 PASS including cost tests; source unchanged after that message; worker did not independently run/verify the tests.",
+  "physics_runs": 0,
+  "public_apis": [
+    "summarize_costs(root) -> dict",
+    "export_cost_csv(root) -> dict"
+  ],
+  "remote_calls": 0,
+  "scope": "a22-cost-summary",
+  "source_npz_files_opened": 0,
+  "status": "IMPLEMENTED_SOURCE_ONLY",
+  "target_module_imports": 0,
+  "target_module_syntax_checks": 0,
+  "test_cases_written": 3,
+  "unmeasured_conservative_allowance_seconds": 8.0,
+  "worker_export_runs": 0,
+  "worker_summary_runs": 0,
+  "worker_test_runs": 0
+}

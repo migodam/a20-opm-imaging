@@ -1,0 +1,12 @@
+{
+  "scope": "a22-transport-3e5f6dd39aef44439c545aea950d82e8",
+  "action": "deploy",
+  "status": "FAILED",
+  "process_cpu_seconds": 0.13741799999999998,
+  "wall_seconds": 1.3947150419990066,
+  "remote_process_cpu_seconds": 0.0,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {},
+  "new_SHA256_checks": 0
+}

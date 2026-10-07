@@ -1,0 +1,8 @@
+test_initial_missing_file_still_charges_all_elapsed (test_a22_checkpoint_reader.CheckpointReaderTests.test_initial_missing_file_still_charges_all_elapsed) ... ok
+test_transient_permission_retains_ledger_and_elapsed_charge (test_a22_checkpoint_reader.CheckpointReaderTests.test_transient_permission_retains_ledger_and_elapsed_charge) ... ok
+test_unrelated_error_is_fatal (test_a22_checkpoint_reader.CheckpointReaderTests.test_unrelated_error_is_fatal) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

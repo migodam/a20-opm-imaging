@@ -1,0 +1,82 @@
+{
+  "schema": "a22.reporting.result.v1",
+  "status": "REPORTS_WRITTEN",
+  "gate_decisions_evaluated_by_reporter": false,
+  "physics_executed": false,
+  "report_paths": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/A22_IMPLEMENTATION_REPORT.md",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/A22_RESULTS_LEDGER.md",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/A22_GATE_DECISION.md",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/STAGE_A_REPORT.md",
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/GATE_REPORT.md"
+  ],
+  "report_directory": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting",
+  "rawdata_directory": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/rawdata",
+  "figure_count": 7,
+  "figure_error": null,
+  "source_coverage": [
+    [
+      "direction_metrics",
+      "RECORDED",
+      2112,
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/direction_metrics.csv",
+      ""
+    ],
+    [
+      "split_metrics",
+      "RECORDED",
+      12,
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/split_metrics.csv",
+      ""
+    ],
+    [
+      "scene_metrics",
+      "RECORDED",
+      4,
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/scene_metrics.csv",
+      ""
+    ],
+    [
+      "scene_manifest",
+      "RECORDED",
+      4,
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/scene_manifest.csv",
+      ""
+    ],
+    [
+      "cost_ledger_0",
+      "RECORDED",
+      3592,
+      "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/COST_LEDGER.jsonl",
+      ""
+    ]
+  ],
+  "gate_source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/GATE_DECISION.json",
+  "gate_source_error": null,
+  "stage_status": {
+    "A": [
+      "SCREENING_COMPLETE",
+      "parent-supplied stage status"
+    ],
+    "B": [
+      "NOT_RUN",
+      "parent-supplied stage status"
+    ],
+    "C": [
+      "NOT_RUN",
+      "parent-supplied stage status"
+    ]
+  },
+  "direction_scenes": [
+    "2001",
+    "2003",
+    "2009",
+    "2014"
+  ],
+  "direction_scope_counts": {
+    "deployable": 2112
+  },
+  "prediction_rows": 16,
+  "undefined_spearman_rows": 0,
+  "CPU_accounting": "Caller must meter the entire generate_reports invocation including source reads and figure writes."
+}

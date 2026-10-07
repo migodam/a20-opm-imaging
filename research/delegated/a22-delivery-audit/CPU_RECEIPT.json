@@ -1,0 +1,41 @@
+{
+  "schema": "a22.delegated.cpu_receipt.v1",
+  "scope": "a22-delivery-audit",
+  "status": "SOURCE_ONLY_DOCUMENTATION_COMPLETE",
+  "process_cpu_seconds": 9.007853,
+  "gpu_occupation_seconds": 0.0,
+  "conservative_cpu_charge_seconds": 9.007853,
+  "measured_python_process_and_child_cpu_seconds": 0.007853000000000006,
+  "implementation_shell_cpu_allowance_seconds": 9.0,
+  "implementation_patch_cpu_allowance_seconds": 0.0,
+  "allowances_are_measured": false,
+  "measurement": "known Python own CPU plus explicit conservative per-shell nonmeasurement reserve",
+  "wall_seconds": "NOT_MEASURED",
+  "events": 9,
+  "source_read_whitelist": [
+    "src/a22/*.py",
+    "configs/a22*.json",
+    "results/a22/PREREGISTRATION.json"
+  ],
+  "executed": {
+    "source_config_reads": true,
+    "documentation_writes": true,
+    "tests": false,
+    "imports": false,
+    "syntax_checks": false,
+    "analysis": false,
+    "data_array_reads": false,
+    "physics": false,
+    "plots": false,
+    "report_generation": false,
+    "training": false,
+    "remote": false,
+    "SSH_private": false,
+    "GPU": false,
+    "hashes": false
+  },
+  "runtime_progress": "337 first-scene rows and incomplete four-scene screening supplied by parent, not independently verified",
+  "scientific_gate_decisions": "NOT_ASSESSED",
+  "separate_source_scope": "a22-report-discovery, source patch/test fixture CPU not included here",
+  "timing_limit": "Initial rg shell CPU unknown; Python startup/final serialization not measured. Per-shell reserves cover these source-work costs conservatively."
+}

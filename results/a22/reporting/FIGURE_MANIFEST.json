@@ -1,0 +1,99 @@
+{
+  "schema": "a22.static_figures.v1",
+  "figures": [
+    {
+      "name": "prediction_vs_coefficient_error",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/prediction_vs_coefficient_error.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/prediction_vs_coefficient_error.svg",
+      "status": "RECORDED_DESCRIPTIVE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/direction_metrics.csv"
+      ],
+      "caption": "Raw descriptive error pairs, without noise-draw averaging or calibrated scales. Repeated rows are not independent scenes; use separate statistical figures for calibrated evidence."
+    },
+    {
+      "name": "per_scene_spearman",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/per_scene_spearman.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/per_scene_spearman.svg",
+      "status": "RECORDED_DESCRIPTIVE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/direction_metrics.csv"
+      ],
+      "caption": "Correlation is descriptive and pooled within each scene/scope. No p-values, scene-independent noise-draw counts, or invented confidence intervals."
+    },
+    {
+      "name": "error_vs_amplitude_noise",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/error_vs_amplitude_noise.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/error_vs_amplitude_noise.svg",
+      "status": "RECORDED_DESCRIPTIVE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/direction_metrics.csv"
+      ],
+      "caption": "Raw descriptive finite-amplitude/noise observations; correlated draws are not independent scenes. Failures with missing errors remain in the source ledger."
+    },
+    {
+      "name": "physics_complement_projected_errors",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/physics_complement_projected_errors.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/physics_complement_projected_errors.svg",
+      "status": "NOT_RUN",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/split_metrics.csv"
+      ],
+      "caption": "Saved projected errors only. Rank, retained truth energy, W-external error, and certificate credibility must be reviewed separately; no separation gate is inferred."
+    },
+    {
+      "name": "rank_operator_wall_cost",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/rank_operator_wall_cost.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/rank_operator_wall_cost.svg",
+      "status": "RECORDED",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/COST_LEDGER.jsonl"
+      ],
+      "caption": "Recorded rows are not summed. Nested span wall, cold/warm, and end-to-end time remain distinct; this figure establishes no speedup."
+    },
+    {
+      "name": "stage_b_status",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/stage_b_status.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/stage_b_status.svg",
+      "status": "NOT_RUN",
+      "sources": [],
+      "caption": "Status card only; no synthetic curve, image, learned output, or zero-valued measurement."
+    },
+    {
+      "name": "stage_c_status",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/stage_c_status.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/stage_c_status.svg",
+      "status": "NOT_RUN",
+      "sources": [],
+      "caption": "Status card only; no synthetic curve, image, learned output, or zero-valued measurement."
+    }
+  ],
+  "error": null,
+  "rawdata": [
+    {
+      "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/direction_metrics.csv",
+      "copy": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/rawdata/direction_metrics.csv",
+      "source_status": "RECORDED"
+    },
+    {
+      "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/split_metrics.csv",
+      "copy": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/rawdata/split_metrics.csv",
+      "source_status": "RECORDED"
+    },
+    {
+      "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/scene_metrics.csv",
+      "copy": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/rawdata/scene_metrics.csv",
+      "source_status": "RECORDED"
+    },
+    {
+      "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/stage_a/scene_manifest.csv",
+      "copy": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/rawdata/scene_manifest.csv",
+      "source_status": "RECORDED"
+    },
+    {
+      "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/COST_LEDGER.jsonl",
+      "copy": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/rawdata/cost_ledger_0.jsonl",
+      "source_status": "RECORDED"
+    }
+  ]
+}

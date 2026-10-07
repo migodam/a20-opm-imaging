@@ -221,6 +221,90 @@ class RestrictedMaterialQuadraticChecks(unittest.TestCase):
         self.assertEqual(audit['lambda_value'], lam)
         self.assertTrue(audit['no_jitter_or_pseudoinverse'])
 
+    def test_exact_duplicate_solver_rows_preserve_strict_convex_optimum_and_full_kkt(self):
+        chart = _PairedChart(1)
+        unique_C = np.array([[1., 0.], [0., 1.], [-1., -1.]])
+        unique_lower = np.array([.25, -.5, -1.])
+        repetitions = np.array([0, 1, 2, 0, 2, 1, 0, 2])
+        C, lower = unique_C[repetitions], unique_lower[repetitions]
+        A, data, lam = np.diag([2., 1.]), np.array([-4., 1.5]), .5
+        H, g = A.T @ A + lam * np.eye(2), -A.T @ data
+        config = {'feasibility_tolerance': 1e-8, 'qp_kkt_rtol': 1e-8, 'qp_maxiter': 300}
+        with mock.patch.object(core, 'constraint_map', return_value=(C, lower)):
+            with mock.patch.object(core, 'minimize', wraps=core.minimize) as optimizer:
+                with mock.patch.object(core, '_normal', wraps=core._normal) as normal_audit:
+                    step, result, normal = constrained_material_solve(
+                        A, data, chart, np.zeros(1, complex), config, _Book(), lam=lam)
+        # H is SPD, and both x >= .25 and x+y <= 1 are binding, so the
+        # strict-convex minimizer is independently [.25,.75].
+        np.testing.assert_allclose(step, [.25, .75], atol=2e-8)
+        sent = optimizer.call_args.kwargs['constraints'][0]
+        np.testing.assert_array_equal(sent.A, unique_C)
+        np.testing.assert_array_equal(sent.lb, unique_lower)
+        np.testing.assert_array_equal(optimizer.call_args.args[1], np.zeros(2))
+        self.assertEqual(optimizer.call_args.kwargs['method'], 'SLSQP')
+        self.assertEqual(optimizer.call_args.kwargs['options'], {'ftol': 1e-16, 'maxiter': 300})
+        self.assertEqual(result['original_inequality_count'], 8)
+        self.assertEqual(result['solver_inequality_count'], 3)
+        self.assertEqual(result['lambda_value'], lam)
+        for call in normal_audit.call_args_list:
+            np.testing.assert_array_equal(call.args[0], C)
+            np.testing.assert_array_equal(call.args[1], lower)
+        full_normal, full = core._normal(C, lower, step, H @ step + g, config['feasibility_tolerance'])
+        self.assertEqual(len(full['multipliers']), len(lower))
+        self.assertGreaterEqual(float(np.min(full['multipliers'])), 0.)
+        self.assertLessEqual(full['violation'], config['feasibility_tolerance'])
+        self.assertLessEqual(full['complementarity'], config['feasibility_tolerance'])
+        np.testing.assert_allclose(H @ step + g + full_normal, 0., atol=2e-7)
+        np.testing.assert_allclose(normal, full_normal, atol=2e-7)
+        self.assertLessEqual(result['kkt_relative'], config['qp_kkt_rtol'])
+        scale = max(float(np.linalg.norm(g)), lam, 1e-12)
+        reference = core.minimize(
+            lambda x: float(.5 * x @ H @ x + g @ x) / scale,
+            np.zeros(2), jac=lambda x: (H @ x + g) / scale,
+            constraints=[core.LinearConstraint(C, lower, np.inf)], method='SLSQP',
+            options={'ftol': 1e-16, 'maxiter': 300})
+        np.testing.assert_allclose(step, reference.x, atol=2e-8)
+        self.assertAlmostEqual(result['quadratic_value'], float(.5 * step @ H @ step + g @ step), places=10)
+
+    def test_near_duplicate_rows_and_distinct_lower_bounds_reach_solver_unchanged(self):
+        chart = _PairedChart(1)
+        C = np.array([[1., 0.], [1., 0.],
+                      [np.nextafter(1., np.inf), 0.], [1., 1e-12], [1., 0.]])
+        lower = np.array([.25, .25, .25, .25, np.nextafter(.25, np.inf)])
+        config = {'feasibility_tolerance': 1e-8, 'qp_kkt_rtol': 1e-8}
+        with mock.patch.object(core, 'constraint_map', return_value=(C, lower)):
+            with mock.patch.object(core, 'minimize', wraps=core.minimize) as optimizer:
+                step, result, _ = constrained_material_solve(
+                    np.eye(2), np.array([-1., 1.]), chart,
+                    np.zeros(1, complex), config, _Book(), lam=.25)
+        sent = optimizer.call_args.kwargs['constraints'][0]
+        retained = np.array([0, 2, 3, 4])
+        np.testing.assert_array_equal(sent.A, C[retained])
+        np.testing.assert_array_equal(sent.lb, lower[retained])
+        self.assertEqual(result['original_inequality_count'], 5)
+        self.assertEqual(result['solver_inequality_count'], 4)
+        self.assertLessEqual(float(np.max(lower - C @ step)), config['feasibility_tolerance'])
+        self.assertLessEqual(result['kkt_relative'], config['qp_kkt_rtol'])
+
+    def test_direct_spd_path_keeps_full_checks_and_reports_no_solver_inequalities(self):
+        chart = _PairedChart(1)
+        C = np.tile(np.eye(2), (3, 1))
+        lower = np.full(6, -2.)
+        with mock.patch.object(core, 'constraint_map', return_value=(C, lower)):
+            with mock.patch.object(core, 'minimize') as optimizer:
+                with mock.patch.object(core, '_normal', wraps=core._normal) as normal_audit:
+                    step, result, _ = constrained_material_solve(
+                        np.eye(2), np.array([.25, .75]), chart,
+                        np.zeros(1, complex), {}, _Book(), lam=.5)
+        optimizer.assert_not_called()
+        self.assertEqual(result['solver'], 'direct-SPD')
+        self.assertEqual(result['original_inequality_count'], 6)
+        self.assertEqual(result['solver_inequality_count'], 0)
+        np.testing.assert_allclose(step, np.array([.25, .75]) / 1.5, atol=1e-12)
+        np.testing.assert_array_equal(normal_audit.call_args.args[0], C)
+        np.testing.assert_array_equal(normal_audit.call_args.args[1], lower)
+
 
 class DirectionSelectionChecks(unittest.TestCase):
     def test_selection_is_deterministic_and_independent_of_truth_or_recovery_labels(self):

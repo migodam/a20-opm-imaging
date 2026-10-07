@@ -1,0 +1,17 @@
+{
+  "error_type": "AssertionError",
+  "error": "A22_UNIT_TESTS_FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/cli.py\", line 109, in main\n    detail = units(root, config, book, args.pattern)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/src/a22/cli.py\", line 56, in units\n    raise error\nAssertionError: A22_UNIT_TESTS_FAILED\n",
+  "test_summary": {
+    "status": "FAIL",
+    "tests_run": 130,
+    "failures": 3,
+    "errors": 0,
+    "skipped": 0,
+    "pattern": "test_a22_*.py",
+    "log": "results/a22/unit_validation/unit_tests/a22-unit-012.log",
+    "scope": "unit and tiny identity fixtures; not Maxwell campaign acceptance"
+  },
+  "status": "FAILED",
+  "stage": "unit"
+}

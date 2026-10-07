@@ -8,6 +8,7 @@ import tempfile
 import unittest
 
 from a22.statistics import (
+    FULL_J, FULL_J_TOTAL,
     aggregate_direction_rows, analyze_direction_metrics, analyze_rows,
     failure_auc, fit_nonnegative_scale, paired_scene_bootstrap,
 )
@@ -80,6 +81,33 @@ class CalibrationTests(unittest.TestCase):
         self.assertTrue(all(abs(value-2)<1e-12 for value in first_scales))
         self.assertEqual(first['primary_incrementality']['evaluation_split'],'evaluation')
         self.assertFalse(any(item['evaluation_split']=='development' for item in first['paired_scene_bootstrap']))
+
+    def test_full_j_total_formal_scale_is_development_only_and_capacity_matched(self):
+        rows = [row(scene,direction,error=(2 if scene in (1,2) else 100)*direction,
+                    draw=draw,pred_full_J=direction,
+                    pred_full_J_total=multiplier*direction)
+                for scene in range(1,6) for direction in (1,2,3)
+                for draw,multiplier in ((0,0.5),(1,1.5))]
+        first = analyze_rows(rows,config(),mode='formal',bootstrap_repetitions=20,seed=7)
+        changed = [dict(item,true_error=1000000,pred_full_J_total=5000000)
+                   if item['scene_id'] in (3,4,5) else item for item in rows]
+        second = analyze_rows(changed,config(),mode='formal',bootstrap_repetitions=20,seed=7)
+        fits = [item for item in first['calibration_scales'] if item['method']==FULL_J_TOTAL]
+        self.assertEqual(len(fits),3)
+        self.assertEqual([item['scale'] for item in fits],
+                         [item['scale'] for item in second['calibration_scales'] if item['method']==FULL_J_TOTAL])
+        for fit in fits:
+            self.assertAlmostEqual(fit['scale'],2)
+            self.assertEqual(fit['fit_scene_ids'],['1','2'])
+            self.assertEqual(fit['fit_units'],6)
+            self.assertEqual(fit['parameter_count'],1)
+            self.assertEqual(fit['intercept'],0)
+            self.assertEqual(fit['method_scope'],'offline_full_J')
+        self.assertAlmostEqual(find_scene(first,3,FULL_J_TOTAL,split='calibration')['MAE'],196)
+        online = [{key:value for key,value in item.items() if key!='pred_full_J_total'} for item in rows]
+        reference = analyze_rows(online,config(),mode='formal',bootstrap_repetitions=20,seed=7)
+        self.assertEqual(first['paired_scene_bootstrap'],reference['paired_scene_bootstrap'])
+        self.assertEqual(first['primary_incrementality'],reference['primary_incrementality'])
 
     def test_frozen_scene_split_overlap_is_rejected(self):
         cfg = config()
@@ -164,6 +192,64 @@ class UnitAndScopeTests(unittest.TestCase):
         self.assertTrue(all(item['value']==certificate for item in observed['certificate_types']))
         self.assertIn(evidence['primary_incrementality']['stronger_point_baseline'],('A1','A2'))
         self.assertFalse(evidence['input_audit']['covariance_or_confidence_coverage_claim'])
+
+    def test_full_j_total_loso_averages_draws_and_preserves_official_incrementality(self):
+        rows = [row(scene,direction,error=4*direction,draw=draw,noise=noise,
+                    family='shell' if scene==4 else 'gaussian',
+                    pred_A1=scene*direction,pred_A2=direction+scene,
+                    pred_A3=2*direction,pred_full_J=2*direction)
+                for scene in (1,2,3,4) for direction in (1,2,3)
+                for noise in (0,1) for draw in (0,1)]
+        reference = analyze_rows(rows,config(),bootstrap_repetitions=20,seed=11)
+        augmented = [dict(item,pred_full_J_total=(0.5 if item['noise_draw']==0 else 1.5)*item['direction_id'])
+                     for item in rows]
+        evidence = analyze_rows(augmented,config(),bootstrap_repetitions=20,seed=11)
+        self.assertEqual(evidence['methods'],['A0','A1','A2','A3',FULL_J,FULL_J_TOTAL])
+        self.assertEqual(len(evidence['aggregated_units']),24)
+        held = next(item for item in evidence['calibration_scales']
+                    if item['fold']=='4' and item['method']==FULL_J_TOTAL)
+        # Draw-level LS would yield 3.2 here; mean-before-fit gives 4.
+        self.assertAlmostEqual(held['scale'],4)
+        self.assertEqual(held['fit_units'],18)
+        self.assertEqual(held['fit_scene_ids'],['1','2','3'])
+        self.assertEqual(held['parameter_count'],1)
+        observed = find_scene(evidence,4,FULL_J_TOTAL,family='shell')
+        self.assertEqual(observed['paired_units'],6)
+        self.assertAlmostEqual(observed['MAE'],0)
+        self.assertEqual(observed['spearman'],1)
+        self.assertEqual(observed['coverage'],1)
+        for branch in ('noise_zero','noise_positive'):
+            self.assertEqual(find_scene(evidence,4,FULL_J_TOTAL,branch=branch,family='shell')['paired_units'],3)
+        for table in ('calibration_scales','per_scene_statistics','summaries'):
+            offline = [item for item in evidence[table] if item['method'] in (FULL_J,FULL_J_TOTAL)]
+            self.assertTrue(offline)
+            self.assertTrue(all(item['method_scope']=='offline_full_J' for item in offline))
+        self.assertEqual(evidence['paired_scene_bootstrap'],reference['paired_scene_bootstrap'])
+        self.assertEqual(evidence['primary_incrementality'],reference['primary_incrementality'])
+        self.assertIsNone(evidence['gate_decisions'])
+
+    def test_missing_total_draw_does_not_drop_profiled_witness_or_online_pairs(self):
+        rows = [row(scene,direction,error=2*direction,draw=draw,pred_full_J=direction)
+                for scene in (1,2,3,4) for direction in (1,2,3) for draw in (0,1)]
+        reference = analyze_rows(rows,config(),bootstrap_repetitions=20,seed=13)
+        augmented = [dict(item,pred_full_J_total=10*item['direction_id']) for item in rows]
+        augmented[0]['pred_full_J_total'] = None
+        evidence = analyze_rows(augmented,config(),bootstrap_repetitions=20,seed=13)
+        total = find_scene(evidence,1,FULL_J_TOTAL)
+        self.assertEqual(total['units'],3)
+        self.assertEqual(total['paired_units'],2)
+        self.assertEqual(total['missing_or_invalid_units'],1)
+        self.assertEqual(find_scene(evidence,1,FULL_J)['paired_units'],3)
+        unit = next(item for item in evidence['aggregated_units']
+                    if item['scene_id']=='1' and item['direction_id']=='1')
+        self.assertEqual(unit['raw_predictions'][FULL_J],1)
+        self.assertEqual(unit['raw_predictions'][FULL_J_TOTAL],10)
+        self.assertFalse(unit['method_eligible'][FULL_J_TOTAL])
+        self.assertTrue(unit['method_eligible'][FULL_J])
+        self.assertEqual(evidence['paired_scene_bootstrap'],reference['paired_scene_bootstrap'])
+        self.assertEqual(evidence['primary_incrementality'],reference['primary_incrementality'])
+        only_total = [{key:value for key,value in item.items() if key!='pred_full_J'} for item in augmented]
+        self.assertEqual(aggregate_direction_rows(only_total)['methods'],['A0','A1','A2','A3',FULL_J_TOTAL])
 
     def test_oracle_features_do_not_calibrate_deployable_features(self):
         deployable = [row(scene,direction,error=2*direction)

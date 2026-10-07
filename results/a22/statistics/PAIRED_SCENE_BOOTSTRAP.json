@@ -1,0 +1,758 @@
+[
+  {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003",
+      "2009",
+      "2014"
+    ],
+    "paired_scenes": 4,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -4.739881870784862e-05,
+    "relative_MAE_improvement": -0.0012631898821082968,
+    "absolute_95_percent_interval": [
+      -0.006145784265758427,
+      0.0018125453237960026
+    ],
+    "relative_95_percent_interval": [
+      -0.35781448889657325,
+      0.027737055509634952
+    ],
+    "improvement_probability": 0.352,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 494,
+      "A2": 1506
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.0407266522913616,
+      "A2": 0.03752311459995132,
+      "A3": 0.03757051341865917
+    },
+    "reason": null,
+    "family": "ALL",
+    "noise_branch": "all",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003",
+      "2014",
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 48,
+        "A1": 0.018155797285218083,
+        "A2": 0.02840054152824414,
+        "A3": 0.027770728077657438
+      },
+      {
+        "scene_id": "2003",
+        "units": 48,
+        "A1": 0.11473379724679512,
+        "A2": 0.10161442159404845,
+        "A3": 0.09863800279542896
+      },
+      {
+        "scene_id": "2009",
+        "units": 48,
+        "A1": 0.015780824532853396,
+        "A2": 0.011782035591891756,
+        "A3": 0.013898788015254864
+      },
+      {
+        "scene_id": "2014",
+        "units": 48,
+        "A1": 0.014236190100579773,
+        "A2": 0.008295459685620956,
+        "A3": 0.009974534786295414
+      }
+    ]
+  },
+  {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003",
+      "2009",
+      "2014"
+    ],
+    "paired_scenes": 4,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -4.768723865591212e-05,
+    "relative_MAE_improvement": -0.0012694933592985163,
+    "absolute_95_percent_interval": [
+      -0.00615119392320412,
+      0.0018000255873443227
+    ],
+    "relative_95_percent_interval": [
+      -0.3564921104000299,
+      0.027529959268798695
+    ],
+    "improvement_probability": 0.352,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 494,
+      "A2": 1506
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.0407515264388934,
+      "A2": 0.037563992207302804,
+      "A3": 0.037611679445958716
+    },
+    "reason": null,
+    "family": "ALL",
+    "noise_branch": "noise_zero",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003",
+      "2014",
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 16,
+        "A1": 0.018225905288264555,
+        "A2": 0.028508315439378786,
+        "A3": 0.02787850194379711
+      },
+      {
+        "scene_id": "2003",
+        "units": 16,
+        "A1": 0.11468762256132453,
+        "A2": 0.10159611601374646,
+        "A3": 0.09864415981073339
+      },
+      {
+        "scene_id": "2009",
+        "units": 16,
+        "A1": 0.015751162701631193,
+        "A2": 0.011818902705175752,
+        "A3": 0.013935655098732229
+      },
+      {
+        "scene_id": "2014",
+        "units": 16,
+        "A1": 0.014341415204353312,
+        "A2": 0.008332634670910225,
+        "A3": 0.009988400930572123
+      }
+    ]
+  },
+  {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003",
+      "2009",
+      "2014"
+    ],
+    "paired_scenes": 4,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -4.725460873381687e-05,
+    "relative_MAE_improvement": -0.0012600329904595702,
+    "absolute_95_percent_interval": [
+      -0.006143079437035577,
+      0.0018188051920218357
+    ],
+    "relative_95_percent_interval": [
+      -0.35848024380003224,
+      0.027840710550048272
+    ],
+    "improvement_probability": 0.352,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 494,
+      "A2": 1506
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.04071421521759569,
+      "A2": 0.037502675796275586,
+      "A3": 0.0375499304050094
+    },
+    "reason": null,
+    "family": "ALL",
+    "noise_branch": "noise_positive",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003",
+      "2014",
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 32,
+        "A1": 0.018120743283694847,
+        "A2": 0.028346654572676818,
+        "A3": 0.027716841144587598
+      },
+      {
+        "scene_id": "2003",
+        "units": 32,
+        "A1": 0.11475688458953041,
+        "A2": 0.10162357438419944,
+        "A3": 0.09863492428777676
+      },
+      {
+        "scene_id": "2009",
+        "units": 32,
+        "A1": 0.015795655448464493,
+        "A2": 0.011763602035249758,
+        "A3": 0.013880354473516182
+      },
+      {
+        "scene_id": "2014",
+        "units": 32,
+        "A1": 0.014183577548693004,
+        "A2": 0.008276872192976322,
+        "A3": 0.009967601714157061
+      }
+    ]
+  },
+  {
+    "status": "UNDEFINED",
+    "scene_ids": [
+      "2014"
+    ],
+    "paired_scenes": 1,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 0,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -0.0016790751006744587,
+    "relative_MAE_improvement": -0.20240892781203018,
+    "absolute_95_percent_interval": null,
+    "relative_95_percent_interval": null,
+    "improvement_probability": null,
+    "relative_valid_draws": 0,
+    "baseline_selection_counts": {
+      "A1": 0,
+      "A2": 0
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.014236190100579773,
+      "A2": 0.008295459685620956,
+      "A3": 0.009974534786295414
+    },
+    "reason": "AT_LEAST_TWO_PAIRED_SCENES_AND_POSITIVE_REPETITIONS_REQUIRED",
+    "family": "asymmetric",
+    "noise_branch": "all",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2014"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2014",
+        "units": 48,
+        "A1": 0.014236190100579773,
+        "A2": 0.008295459685620956,
+        "A3": 0.009974534786295414
+      }
+    ]
+  },
+  {
+    "status": "UNDEFINED",
+    "scene_ids": [
+      "2014"
+    ],
+    "paired_scenes": 1,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 0,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -0.0016557662596618974,
+    "relative_MAE_improvement": -0.19870861078816837,
+    "absolute_95_percent_interval": null,
+    "relative_95_percent_interval": null,
+    "improvement_probability": null,
+    "relative_valid_draws": 0,
+    "baseline_selection_counts": {
+      "A1": 0,
+      "A2": 0
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.014341415204353312,
+      "A2": 0.008332634670910225,
+      "A3": 0.009988400930572123
+    },
+    "reason": "AT_LEAST_TWO_PAIRED_SCENES_AND_POSITIVE_REPETITIONS_REQUIRED",
+    "family": "asymmetric",
+    "noise_branch": "noise_zero",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2014"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2014",
+        "units": 16,
+        "A1": 0.014341415204353312,
+        "A2": 0.008332634670910225,
+        "A3": 0.009988400930572123
+      }
+    ]
+  },
+  {
+    "status": "UNDEFINED",
+    "scene_ids": [
+      "2014"
+    ],
+    "paired_scenes": 1,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 0,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -0.0016907295211807394,
+    "relative_MAE_improvement": -0.20427155110785414,
+    "absolute_95_percent_interval": null,
+    "relative_95_percent_interval": null,
+    "improvement_probability": null,
+    "relative_valid_draws": 0,
+    "baseline_selection_counts": {
+      "A1": 0,
+      "A2": 0
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.014183577548693004,
+      "A2": 0.008276872192976322,
+      "A3": 0.009967601714157061
+    },
+    "reason": "AT_LEAST_TWO_PAIRED_SCENES_AND_POSITIVE_REPETITIONS_REQUIRED",
+    "family": "asymmetric",
+    "noise_branch": "noise_positive",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2014"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2014",
+        "units": 32,
+        "A1": 0.014183577548693004,
+        "A2": 0.008276872192976322,
+        "A3": 0.009967601714157061
+      }
+    ]
+  },
+  {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003"
+    ],
+    "paired_scenes": 2,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": 0.0018031161246030852,
+    "relative_MAE_improvement": 0.027737055509634952,
+    "absolute_95_percent_interval": [
+      -0.009614930792439354,
+      0.0029764187986194846
+    ],
+    "relative_95_percent_interval": [
+      -0.5295791003498121,
+      0.029291302867523416
+    ],
+    "improvement_probability": 0.7505,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 499,
+      "A2": 1501
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.0664447972660066,
+      "A2": 0.06500748156114629,
+      "A3": 0.0632043654365432
+    },
+    "reason": null,
+    "family": "gaussian",
+    "noise_branch": "all",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 48,
+        "A1": 0.018155797285218083,
+        "A2": 0.02840054152824414,
+        "A3": 0.027770728077657438
+      },
+      {
+        "scene_id": "2003",
+        "units": 48,
+        "A1": 0.11473379724679512,
+        "A2": 0.10161442159404845,
+        "A3": 0.09863800279542896
+      }
+    ]
+  },
+  {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003"
+    ],
+    "paired_scenes": 2,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": 0.001790884849297375,
+    "relative_MAE_improvement": 0.027529959268798695,
+    "absolute_95_percent_interval": [
+      -0.009652596655532555,
+      0.0029519562030130703
+    ],
+    "relative_95_percent_interval": [
+      -0.529608625901713,
+      0.029055797788703416
+    ],
+    "improvement_probability": 0.7505,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 499,
+      "A2": 1501
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.06645676392479455,
+      "A2": 0.06505221572656263,
+      "A3": 0.06326133087726525
+    },
+    "reason": null,
+    "family": "gaussian",
+    "noise_branch": "noise_zero",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 16,
+        "A1": 0.018225905288264555,
+        "A2": 0.028508315439378786,
+        "A3": 0.02787850194379711
+      },
+      {
+        "scene_id": "2003",
+        "units": 16,
+        "A1": 0.11468762256132453,
+        "A2": 0.10159611601374646,
+        "A3": 0.09864415981073339
+      }
+    ]
+  },
+  {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003"
+    ],
+    "paired_scenes": 2,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": 0.0018092317622559473,
+    "relative_MAE_improvement": 0.027840710550048272,
+    "absolute_95_percent_interval": [
+      -0.00959609786089275,
+      0.0029886500964226848
+    ],
+    "relative_95_percent_interval": [
+      -0.5295642518995,
+      0.029409023590567226
+    ],
+    "improvement_probability": 0.7505,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 499,
+      "A2": 1501
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.06643881393661263,
+      "A2": 0.06498511447843813,
+      "A3": 0.06317588271618219
+    },
+    "reason": null,
+    "family": "gaussian",
+    "noise_branch": "noise_positive",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 32,
+        "A1": 0.018120743283694847,
+        "A2": 0.028346654572676818,
+        "A3": 0.027716841144587598
+      },
+      {
+        "scene_id": "2003",
+        "units": 32,
+        "A1": 0.11475688458953041,
+        "A2": 0.10162357438419944,
+        "A3": 0.09863492428777676
+      }
+    ]
+  },
+  {
+    "status": "UNDEFINED",
+    "scene_ids": [
+      "2009"
+    ],
+    "paired_scenes": 1,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 0,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -0.002116752423363108,
+    "relative_MAE_improvement": -0.17965931327009652,
+    "absolute_95_percent_interval": null,
+    "relative_95_percent_interval": null,
+    "improvement_probability": null,
+    "relative_valid_draws": 0,
+    "baseline_selection_counts": {
+      "A1": 0,
+      "A2": 0
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.015780824532853396,
+      "A2": 0.011782035591891756,
+      "A3": 0.013898788015254864
+    },
+    "reason": "AT_LEAST_TWO_PAIRED_SCENES_AND_POSITIVE_REPETITIONS_REQUIRED",
+    "family": "shell",
+    "noise_branch": "all",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2009",
+        "units": 48,
+        "A1": 0.015780824532853396,
+        "A2": 0.011782035591891756,
+        "A3": 0.013898788015254864
+      }
+    ]
+  },
+  {
+    "status": "UNDEFINED",
+    "scene_ids": [
+      "2009"
+    ],
+    "paired_scenes": 1,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 0,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -0.002116752393556477,
+    "relative_MAE_improvement": -0.1790988932187,
+    "absolute_95_percent_interval": null,
+    "relative_95_percent_interval": null,
+    "improvement_probability": null,
+    "relative_valid_draws": 0,
+    "baseline_selection_counts": {
+      "A1": 0,
+      "A2": 0
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.015751162701631193,
+      "A2": 0.011818902705175752,
+      "A3": 0.013935655098732229
+    },
+    "reason": "AT_LEAST_TWO_PAIRED_SCENES_AND_POSITIVE_REPETITIONS_REQUIRED",
+    "family": "shell",
+    "noise_branch": "noise_zero",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2009",
+        "units": 16,
+        "A1": 0.015751162701631193,
+        "A2": 0.011818902705175752,
+        "A3": 0.013935655098732229
+      }
+    ]
+  },
+  {
+    "status": "UNDEFINED",
+    "scene_ids": [
+      "2009"
+    ],
+    "paired_scenes": 1,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 0,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -0.0021167524382664244,
+    "relative_MAE_improvement": -0.17994084056257204,
+    "absolute_95_percent_interval": null,
+    "relative_95_percent_interval": null,
+    "improvement_probability": null,
+    "relative_valid_draws": 0,
+    "baseline_selection_counts": {
+      "A1": 0,
+      "A2": 0
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.015795655448464493,
+      "A2": 0.011763602035249758,
+      "A3": 0.013880354473516182
+    },
+    "reason": "AT_LEAST_TWO_PAIRED_SCENES_AND_POSITIVE_REPETITIONS_REQUIRED",
+    "family": "shell",
+    "noise_branch": "noise_positive",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2009",
+        "units": 32,
+        "A1": 0.015795655448464493,
+        "A2": 0.011763602035249758,
+        "A3": 0.013880354473516182
+      }
+    ]
+  }
+]

@@ -20,5 +20,13 @@
   "material_real_dimension": 32,
   "perturbation_cap": 192,
   "GPU_cap_seconds": 32400,
-  "new_SHA256_checks": 0
+  "new_SHA256_checks": 0,
+  "screening_entry_rule": {
+    "positive": "A3 median scene Spearman>=0.5 AND LOSO equal-scene MAE improvement versus stronger A1/A2>=0.15",
+    "clear_negative": "A3 median scene Spearman<0.5 AND scene-bootstrap upper MAE improvement<=0",
+    "other": "PARTIAL; do not enter B/C; expansion needs positive point screening signal",
+    "screening_never_formal_PASS": true,
+    "full_A_PASS_requires_24_scenes": true
+  },
+  "scope_notes": "Original object materials are offline finite-label centers. Their W-external remainder is explicitly scored. Four-scene LOSO is screening; old objects remain exposed."
 }

@@ -16,7 +16,7 @@ import re
 import time
 import uuid
 
-from a20.costs import BudgetExceeded, CostBook, plain, write_json
+from a20.costs import BudgetExceeded, CostBook, plain
 
 
 GPU_WALL_CAP = 32400.0
@@ -43,6 +43,35 @@ COUNTER_ALIASES = {
     'generation_F_calls': 'data_generation_F_calls',
     'new_labels': 'new_teacher_labels',
 }
+
+# A watchdog reader can temporarily deny delete/rename sharing on Windows.
+# Five attempts have at most 0.15 seconds of backoff, included in job wall time.
+_WINDOWS_REPLACE_ERRORS = frozenset({5, 32, 33})
+_ATOMIC_REPLACE_RETRY_SECONDS = (0.01, 0.02, 0.04, 0.08)
+
+
+def write_json(path, value):
+    """Atomically publish A22 accounting with bounded Windows sharing retries.
+
+    Readers see an entire old or new snapshot; the target is never unlinked.
+    A unique same-directory temporary file also isolates concurrent writers.
+    Exhausted or unrelated errors propagate with the old target and temporary
+    snapshot intact, retaining the attempted counters as diagnostic evidence.
+    """
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + '.' + uuid.uuid4().hex + '.tmp')
+    temporary.write_text(json.dumps(plain(value), indent=2, allow_nan=False) + '\n',
+                         encoding='utf-8')
+    for attempt in range(len(_ATOMIC_REPLACE_RETRY_SECONDS) + 1):
+        try:
+            temporary.replace(path)
+            return
+        except PermissionError as error:
+            if (getattr(error, 'winerror', None) not in _WINDOWS_REPLACE_ERRORS
+                    or attempt == len(_ATOMIC_REPLACE_RETRY_SECONDS)):
+                raise
+            time.sleep(_ATOMIC_REPLACE_RETRY_SECONDS[attempt])
 
 
 def _seconds(value, name):

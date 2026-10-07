@@ -1,0 +1,12 @@
+{
+  "label_center": "actual original scene material on solver grid, offline only",
+  "base_material_norm": 0.3819534926938811,
+  "W_external_material_norm": 0.37077961332177806,
+  "W_retained_energy_fraction": 0.057653280567735034,
+  "declared_prior_contains_original_center": false,
+  "maximum_original_material_perturbation": 2.1023087903540714,
+  "absolute_32_coordinate_errors_are_labels": true,
+  "object_observation_generation_grid": 14,
+  "new_finite_label_grid": 12,
+  "original_cached_data_not_used_as_exact_same_grid_label": true
+}

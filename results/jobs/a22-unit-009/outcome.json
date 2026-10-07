@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "tests_run": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "pattern": "test_a22_checkpoint_reader.py",
+  "log": "results/a22/unit_validation/unit_tests/a22-unit-009.log",
+  "scope": "unit and tiny identity fixtures; not Maxwell campaign acceptance",
+  "stage": "unit"
+}

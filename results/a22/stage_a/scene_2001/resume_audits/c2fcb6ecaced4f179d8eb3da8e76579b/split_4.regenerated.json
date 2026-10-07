@@ -1,0 +1,17 @@
+{
+  "scene_id": 2001,
+  "family": "gaussian",
+  "split_rank": 4,
+  "status": "TANGENT_CANDIDATE",
+  "actual_current_rank": 32,
+  "sigma_min": 12225.327443072552,
+  "sigma_max": 19992.568950610013,
+  "regularization": 39970.2813244895,
+  "noise_gain": 8.177553054613035e-05,
+  "nuisance_leakage": 1.9665536501848895e-16,
+  "attribution_error": 0.00040368445363775195,
+  "orthogonality": 1.0128420408323855e-15,
+  "nuisance_rank": 28,
+  "full_model_certified": false,
+  "certificate_type": "empirical_indicator"
+}

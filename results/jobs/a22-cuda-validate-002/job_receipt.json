@@ -1,0 +1,1068 @@
+{
+  "wall_seconds": 11.175933699996676,
+  "process_cpu_seconds": 7.3125,
+  "gpu_occupation_seconds": 11.175933699996676,
+  "counts": {
+    "validation_runs": 1,
+    "provided_verifier_runs": 2,
+    "provided_toy_state_evaluations": 7,
+    "provided_toy_full_LU_factorizations": 31,
+    "provided_toy_forward_RHS": 21,
+    "provided_toy_material_RHS": 168,
+    "provided_toy_defect_RHS": 24,
+    "F_calls": 6,
+    "data_generation_F_calls": 11,
+    "backend_health_runs": 1,
+    "anchor_constructions": 2,
+    "full_forward_calls": 7,
+    "full_forward_RHS": 42,
+    "full_LU_factorizations": 7,
+    "full_state_backward_residual_L_rhs": 42,
+    "full_state_receiver_rhs": 42,
+    "full_state_Goff_rhs": 42,
+    "material_operator_refreshes": 2,
+    "L_upload_bytes": 1179648,
+    "noise_reference_predictions": 2,
+    "opm_constructions": 3,
+    "receiver_SVD_builds": 2,
+    "F_actions": 80,
+    "Maxwell_matvec_rhs": 1247,
+    "operator_transfer_bytes": 7661568,
+    "F_adjoint_actions": 44,
+    "retained_factorizations": 3,
+    "fixed_probe_bank_builds": 3,
+    "B_rhs": 474,
+    "L_actions": 1016,
+    "S_adjoint_actions": 81,
+    "L_adjoint_actions": 107,
+    "forcing_rhs": 18,
+    "seed_O_input_rhs": 72,
+    "seed_P_input_rhs": 18,
+    "seed_M_input_rhs": 72,
+    "S_actions": 707,
+    "projected_factorizations": 3,
+    "material_feature_builds": 4,
+    "compressed_B_current_columns": 768,
+    "reduced_core_rhs": 1388,
+    "full_tangent_calls": 2,
+    "full_tangent_RHS": 384,
+    "full_tangent_receiver_rhs": 384,
+    "full_adjoint_calls": 1,
+    "full_adjoint_RHS": 6,
+    "full_adjoint_receiver_rhs": 6,
+    "B_adjoint_rhs": 24,
+    "health_Schur_factorizations": 1,
+    "health_Schur_core_rhs": 192,
+    "health_reference_full_RHS": 384,
+    "health_reference_backward_residual_L_rhs": 192,
+    "expected_invalid_core_probes": 2,
+    "material_subproblems": 4,
+    "material_optimizer_iterations": 9,
+    "descriptor_cache_builds": 1,
+    "direction_descriptor_builds": 1,
+    "B_adjoint_voxel_rhs": 6,
+    "descriptor_predictions": 3,
+    "health_reference_receiver_RHS": 192,
+    "health_reference_residual_L_rhs": 192
+  },
+  "exclusive_walls": {
+    "perturbation_forward": 0.20791590004228055,
+    "a22_provided_verify_theory": 0.018792100017890334,
+    "full_J": 0.2061047999886796,
+    "a22_provided_verify_additional": 0.0025292999926023185,
+    "physical_geometry_setup": 0.04001820003031753,
+    "full_forward": 0.07046219994663261,
+    "material_operator_refresh": 0.005212099989876151,
+    "a22_known_background_noise_reference": 0.004456499998923391,
+    "a22_geometry_owned_anchor": 0.31573410000419244,
+    "receiver_geometry_SVD": 0.037725200003478676,
+    "F": 0.15811069999472238,
+    "F_adjoint": 0.027099600032670423,
+    "retained_core_factorization": 0.008668299939017743,
+    "a22_measurement_independent_probe_bank": 0.009424700023373589,
+    "B": 0.14761970000108704,
+    "L": 0.0776074999012053,
+    "S_adjoint": 0.025827000004937872,
+    "L_adjoint": 0.03914720000466332,
+    "illumination_forcing": 0.01990509996539913,
+    "seed_O_compression": 0.037017199996626005,
+    "seed_P_compression": 0.01007640000898391,
+    "seed_M_compression": 0.029873299994505942,
+    "joint_orthogonalization": 0.061461999983293936,
+    "native_stream_orthogonalization": 0.10470400002668612,
+    "S": 0.08154989997274242,
+    "projected_core_factorization": 0.009097800008021295,
+    "compressed_injection": 0.02118700003484264,
+    "reduced_core_solve": 0.07122519996482879,
+    "a22_material_factor_actions": 0.26259099997696467,
+    "a22_fixed_shallow_opm": 3.0102006000524852,
+    "full_tangent": 0.06631349999224767,
+    "full_adjoint": 0.0018877999973483384,
+    "B_adjoint": 0.004660200007492676,
+    "a22_health_Schur_core": 0.0007794999983161688,
+    "a22_health_full_defect_solve": 0.009330500033684075,
+    "a22_expected_projected_core_rejection": 0.10674779998953454,
+    "a22_expected_retained_core_rejection": 0.10793669999111444,
+    "a22_material_subproblem": 0.026750899996841326,
+    "a22_backend_health": 0.4189372001274023,
+    "a22_validation": 0.040488600003300235,
+    "a22_descriptor_residual_cache": 0.20342570001957938,
+    "reduced_core_adjoint_solve": 0.003713299985975027,
+    "a22_W_external_injection_pullback": 0.004329499992309138,
+    "a22_direction_descriptor": 0.23408760002348572,
+    "a22_budget_prediction": 0.03659709997009486,
+    "a22_descriptor_health_defect_reference": 0.1115531999967061,
+    "a22_offline_finite_label": 0.03297879997990094
+  },
+  "events": 170,
+  "peak_cpu_rss_bytes": 695443456,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 12656128,
+  "peak_gpu_reserved_bytes": 27262976,
+  "device": "cuda",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "campaign": "A22",
+  "job_id": "a22-cuda-validate-002",
+  "stage": "screen_health",
+  "active_stage": "screen_health",
+  "stage_gpu_seconds": {
+    "screen_health": 11.175933699996676,
+    "features": 0.0,
+    "direction": 0.0,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "checkpoint_perf_counter": 180072.9441555,
+  "controller_process_cpu_seconds": 7.3125,
+  "child_process_cpu_seconds": 0.0,
+  "live_child_process_cpu_seconds": 0.0,
+  "corrections": {},
+  "role": "online",
+  "status": "COMPLETE",
+  "CPU_cap": null,
+  "gpu_wall_cap_seconds": 32400.0,
+  "stage_gpu_cap_seconds": 1800.0,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "CPU_and_GPU_resources_not_summed": true,
+  "historical_A21_costs": "record only; excluded from A22 limits",
+  "measurement": "inclusive measured process CPU + child CPU; CUDA job inclusive wall",
+  "new_SHA256_checks": 0,
+  "outcome": {
+    "stage": "validate",
+    "schema": "a22.validation.v1",
+    "status": "PASS",
+    "device": "cuda",
+    "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+    "scientific_gates_adjudicated": false,
+    "claim": "implementation health only; no continuum or recovery acceptance",
+    "theory": [
+      {
+        "name": "verify_theory",
+        "source": "D:\\AI\\A22_THREE_FOLD_OPM\\protocol\\a22\\verification\\verify_theory.py",
+        "output_directory": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\a22-cuda-validate-002\\theory\\verify_theory",
+        "execution_device": "cpu",
+        "status": "PASS",
+        "original_protocol_result_preserved": true,
+        "result_path": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\a22-cuda-validate-002\\theory\\verify_theory\\results.json",
+        "result": {
+          "seed": 20261007,
+          "algebra": {
+            "two_sided_defect_relative_error": 5.095316678508289e-16,
+            "RLR_relative_error": 2.98547403127112e-16,
+            "two_sided_defect_bound_ratio": 0.34490064989588354,
+            "same_information_distinct_mechanisms": {
+              "alpha": [
+                0.001,
+                1.0,
+                1.0
+              ],
+              "beta": [
+                1.0,
+                0.001,
+                1.0
+              ],
+              "gamma": [
+                1.0,
+                1.0,
+                0.001
+              ],
+              "singular_values": [
+                0.001,
+                0.001,
+                0.001
+              ],
+              "delta_M_1e-3_output_diagonal": [
+                0.001,
+                1e-06,
+                1e-06
+              ],
+              "delta_O_1e-3_output_diagonal": [
+                1e-06,
+                1e-06,
+                0.001
+              ]
+            },
+            "gauge_same_product_error": 0.0,
+            "gauge_raw_injection_change": 0.01,
+            "gauge_metric_injection_error": 0.0,
+            "aliasing": {
+              "column_norms": [
+                1.0,
+                1.000000499999875
+              ],
+              "profile_sensitivity": 0.000999999500000375,
+              "witness": [
+                0.9999999998278325,
+                -1000.0000000000001
+              ],
+              "witness_attribution_error": 2.434817740119453e-10,
+              "predicted_variance": 1.000001,
+              "empirical_variance": 0.9979546129171386
+            },
+            "frequency_shared_nuisance": {
+              "single_profile_sensitivity": [
+                0.0,
+                0.0
+              ],
+              "stack_profile_sensitivity": 1.414213562373095
+            },
+            "factor_finite_perturbation_bound_ratio": 0.14831183450792776,
+            "common_dual_one_shot_max_error": 0.0,
+            "nonlinear_prior_leak": {
+              "protected_coordinate_change": 0.0,
+              "first_order_leak": 0.0,
+              "correction_norm": 0.5,
+              "actual_data_change": 0.25
+            },
+            "one_shot_curvature_failure": {
+              "truth": 1.0,
+              "data": 1.6666666666666667,
+              "J0": 1.0,
+              "one_shot": 1.6666666666666667,
+              "absolute_error": 0.6666666666666667,
+              "final_forward_residual": 3.333333333333335
+            },
+            "rom_weak_is_not_physics_weak": {
+              "reduced_sensitivity": 0.0,
+              "full_sensitivity": 1.0
+            },
+            "intermediate_gram_commutator_norm": 4.751757569573599
+          },
+          "maxwell_tiny": {
+            "n_particles": 8,
+            "complex_current_dimension": 24,
+            "complex_data_dimension": 54,
+            "opm_rank": 18,
+            "derivative_relative_error": 5.605392273944613e-11,
+            "two_sided_defect_relative_error": 3.115113003805786e-15,
+            "reduced_J_relative_error": 0.15817711981243132,
+            "singular_values_reduced_real_J": [
+              0.0027153325083159987,
+              0.0013628771596874373,
+              0.0009614860252250209,
+              0.0009212790159702707,
+              0.0006200393287932473,
+              0.00040793774806929133,
+              0.0003664499857886311,
+              0.00016744170512264815
+            ],
+            "one_shot_tests": [
+              {
+                "amplitude": 0.005,
+                "tangent_remainder": 6.380384176470532e-09,
+                "physics_coefficient_error": 0.0001829026285850812,
+                "one_shot_bound": 0.0010984484996178433,
+                "bound_ratio": 0.16650997169982398
+              },
+              {
+                "amplitude": 0.02,
+                "tangent_remainder": 1.0228837996313996e-07,
+                "physics_coefficient_error": 0.0007341708787689676,
+                "one_shot_bound": 0.004477120376177273,
+                "bound_ratio": 0.16398283206220807
+              },
+              {
+                "amplitude": 0.08,
+                "tangent_remainder": 1.6496983623140583e-06,
+                "physics_coefficient_error": 0.003022645276239418,
+                "one_shot_bound": 0.01925502779628503,
+                "bound_ratio": 0.15697953325326244
+              },
+              {
+                "amplitude": 0.32,
+                "tangent_remainder": 2.7270536067468046e-05,
+                "physics_coefficient_error": 0.0159594109741128,
+                "one_shot_bound": 0.0994582024255455,
+                "bound_ratio": 0.16046349707617158
+              }
+            ],
+            "warning": "Algebra/derivative sanity checks only; not evidence that project imaging Gates A-C pass."
+          }
+        },
+        "count_origin": "source-static complete execution counts, conservatively prepaid"
+      },
+      {
+        "name": "verify_additional",
+        "source": "D:\\AI\\A22_THREE_FOLD_OPM\\protocol\\a22\\verification\\verify_additional.py",
+        "output_directory": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\a22-cuda-validate-002\\theory\\verify_additional",
+        "execution_device": "cpu",
+        "status": "PASS",
+        "original_protocol_result_preserved": true,
+        "result_path": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\a22-cuda-validate-002\\theory\\verify_additional\\additional_results.json",
+        "result": {
+          "seed": 20261008,
+          "task_curvature_t10": {
+            "seed": 20261010,
+            "identity_relative_error": 4.20098542644006e-14,
+            "nonlinear_witness_magnitude": 0.014147685045774896,
+            "exact_pairing_bound": 0.0585159537030245,
+            "residual_bound": 0.17864914532631818,
+            "actual_over_exact_bound": 0.24177483490359053,
+            "actual_over_residual_bound": 0.07919257055460814,
+            "t_exact": 0.0546266492008941,
+            "t_upper": 0.07216005911523786,
+            "warning": "Full alpha_L and chosen delta_X are evaluation inputs, not free online certificates."
+          },
+          "profiled_tikhonov": [
+            {
+              "lambda": 0.0,
+              "error": 0.004665733149931819,
+              "bound": 0.040839474529114066,
+              "ratio": 0.11424567048740215,
+              "nuisance_leak": 8.935028228915295e-16
+            },
+            {
+              "lambda": 0.01,
+              "error": 0.012036557518244402,
+              "bound": 0.052908021140703275,
+              "ratio": 0.22749967318253037,
+              "nuisance_leak": 6.200960866199864e-16
+            },
+            {
+              "lambda": 0.5,
+              "error": 0.2904605115224117,
+              "bound": 0.4801131891039868,
+              "ratio": 0.6049834041520185,
+              "nuisance_leak": 2.5537502661287905e-16
+            }
+          ],
+          "compressed_likelihood_relative_error": 1.5444299198629802e-16,
+          "prior_safe_radius": 0.17320508075688773,
+          "prior_data_change_at_radius": 0.03,
+          "schur_complete_map_relative_error": 2.5598662962430027e-16,
+          "warning": "Algebra checks only. Project imaging gates remain NOT_RUN."
+        },
+        "count_origin": "source-static complete execution counts, conservatively prepaid"
+      }
+    ],
+    "backend": {
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "health_fixture_dimensions",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS",
+          "physical_cells": 64,
+          "complex_current_dimension": 192,
+          "real_material_dimension": 32,
+          "sources": 6,
+          "complex_channels_per_source": 128
+        },
+        {
+          "name": "volume_material_metric",
+          "error": 8.934962174028456e-16,
+          "tolerance": 1e-10,
+          "status": "PASS"
+        },
+        {
+          "name": "no_projection_fallback",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "source_major_real_imag_pack",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "pack_unpack_three_columns",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "pack_unpack_one_column",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "source_permutation_pack",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "source_permutation_whitening",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS",
+          "whitening": "diagonal real data fixture"
+        },
+        {
+          "name": "legacy_pack_explicit_permutation",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "proper_complex_real_variance_half",
+          "error": 0.005006727638487973,
+          "tolerance": 0.02,
+          "status": "PASS",
+          "empirical_variance": 0.497496636180756,
+          "samples": 100000
+        },
+        {
+          "name": "proper_complex_imag_variance_half",
+          "error": 0.0024242350783328925,
+          "tolerance": 0.02,
+          "status": "PASS",
+          "empirical_variance": 0.49878788246083355,
+          "samples": 100000
+        },
+        {
+          "name": "proper_complex_cross_moment",
+          "error": 0.0013016270045956705,
+          "tolerance": 0.02,
+          "status": "PASS",
+          "empirical_cross_moment": 0.0006508135022978352
+        },
+        {
+          "name": "proper_complex_whitening_scale",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "status": "PASS",
+          "reference_origin": "known_background_predicted_complex_data_RMS"
+        },
+        {
+          "name": "whitened_real_variance_one",
+          "error": 0.00500672763848764,
+          "tolerance": 0.02,
+          "status": "PASS"
+        },
+        {
+          "name": "whitened_imag_variance_one",
+          "error": 0.0024242350783326705,
+          "tolerance": 0.02,
+          "status": "PASS"
+        },
+        {
+          "name": "full_JVP_VJP_real_dot",
+          "error": 9.54597060669227e-18,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "full_material_central_FD",
+          "error": 1.9112389246671506e-11,
+          "tolerance": 1e-05,
+          "status": "PASS",
+          "coefficient_step": 1e-05,
+          "perturbation_forwards": 2
+        },
+        {
+          "name": "FD_preserves_anchor_operator_cache",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "L_complex_adjoint_dot",
+          "error": 5.112608477027448e-17,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "S_complex_adjoint_dot",
+          "error": 4.3975506385772653e-17,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "B_real_material_adjoint_dot",
+          "error": 1.1183545826328996e-17,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "compressed_material_injection",
+          "error": 2.440353235175881e-16,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "material_factors_equal_action_product",
+          "error": 9.3838568452489e-16,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "RLR_equals_R",
+          "error": 8.527956882190438e-16,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "nonempty_declared_Schur_complement",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "Schur_equals_full_Galerkin_retaining_direct_path",
+          "error": 1.6644750470630443e-15,
+          "tolerance": 1e-09,
+          "status": "PASS",
+          "retained_direct_norm": 4.957654189044969,
+          "retained_rank": 8
+        },
+        {
+          "name": "full_defect_solve_backward_residual",
+          "error": 7.838215378580792e-16,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "two_sided_defect_identity",
+          "error": 9.145421548781909e-15,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "full_J_vs_shallow_ROM_relative_error",
+          "value": 0.12709298157039994,
+          "status": "RECORDED",
+          "accuracy_gate": false,
+          "label": "descriptive finite-DDA tangent metric; no reconstruction accuracy gate"
+        },
+        {
+          "name": "material_gauge_product_covariance",
+          "error": 5.066701025944526e-16,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "fixed_O_probes_independent_of_observed_data",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS",
+          "probe_seed": [
+            20261007,
+            9022
+          ]
+        },
+        {
+          "name": "fixed_M_probes_independent_of_observed_data",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "fixed_probe_seed_independent_of_data",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "current_subspace_independent_of_observed_data",
+          "error": 0.0,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "zero_seed_deflates_without_floor",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "zero_core_is_unsafe",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "invalid_cores_propagate_without_fallback",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS",
+          "expected_unsafe_core_rejections": 2,
+          "empty_U_fallback_used": false
+        },
+        {
+          "name": "no_Petrov_fallback_charged",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_full_J",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_full_H",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_teacher",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_truth",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_full_state",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_full_tangent_action",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "restricted_builder_denies_full_adjoint_action",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "whitening_change_invalidates_factors",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "anchor_material_change_invalidates_factors",
+          "error": 0.0,
+          "tolerance": 0.0,
+          "status": "PASS"
+        },
+        {
+          "name": "coefficient_QP_active_bound",
+          "error": 1.5959455978986625e-16,
+          "tolerance": 1e-09,
+          "status": "PASS",
+          "coefficient_lower_bound": -0.025980762113533163,
+          "bound_active": true
+        },
+        {
+          "name": "coefficient_QP_KKT",
+          "error": 1.0553836799695674e-16,
+          "tolerance": 1e-08,
+          "status": "PASS",
+          "audit": {
+            "iterations": 9,
+            "solver": "SLSQP-common-quadratic",
+            "solver_success": false,
+            "kkt_relative": 1.0553836799695674e-16,
+            "feasibility_violation": 2.42861286636753e-16,
+            "complementarity": 1.577430328674017e-16,
+            "lambda_value": 1.0,
+            "quadratic_value": -0.026655762113533325,
+            "no_post_clipping": true,
+            "no_jitter_or_pseudoinverse": true
+          },
+          "coefficient_normal": [
+            -0.9999999999999998
+          ]
+        },
+        {
+          "name": "coefficient_QP_physical_feasibility",
+          "error": 2.42861286636753e-16,
+          "tolerance": 1e-08,
+          "status": "PASS"
+        }
+      ],
+      "fixture": {
+        "geometry": {
+          "n": 4,
+          "edge": 1.5,
+          "wavenumber": 2.0,
+          "rotation": 0.37,
+          "receiver_count": 64,
+          "partial": false,
+          "background": [
+            0.1,
+            0.04
+          ]
+        },
+        "material_chart": {
+          "basis_source": "known_mesh_only",
+          "spatial_columns": 16,
+          "real_dimension": 32,
+          "order": "octants0:8,x_details8:16; real_then_imag",
+          "octant_cell_counts": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "physical_metric": "volume * Q.T @ Q = I",
+          "physical_metric_error": 4.528512496935673e-16,
+          "coarse_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "truth_fitting": false,
+          "data_fitting": false
+        },
+        "fixture": "known_geometry_only_DenseDDA_4x4x4",
+        "labels_used": false
+      },
+      "rank": 32,
+      "factor_shapes": {
+        "MW": [
+          6,
+          32,
+          32
+        ],
+        "PMW": [
+          6,
+          32,
+          32
+        ],
+        "AW": [
+          1536,
+          32
+        ]
+      },
+      "anchor_provenance": {
+        "anchor_origin": "known_geometry_owned_uniform_background",
+        "background": [
+          0.1,
+          0.04
+        ],
+        "late_state_oracle_used": false,
+        "truth_or_labels_read": false,
+        "full_derivatives_used": false,
+        "noise_reference_origin": "known_background_predicted_complex_data_RMS",
+        "reference_complex_data_RMS": 0.00725805200487865,
+        "noise_reference_fraction": 0.01,
+        "sigma_complex_reference": 7.25805200487865e-05,
+        "noise_definition": "E[abs(n_complex)^2]=sigma_complex_reference^2",
+        "real_noise_variance": 2.63396594527615e-09,
+        "whitening": "sqrt(2)/sigma_complex_reference",
+        "data_RMS_from_observations_used": false,
+        "source_count": 6,
+        "data_pack": "per source real channels then imaginary; source-major",
+        "current_units": "c = dipole / sqrt(cell_volume), Euclidean current metric",
+        "material_units": "volume-orthonormal fixed mesh patch coefficients, real then imaginary",
+        "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+        "new_integrity_hash_checks": 0
+      },
+      "count_delta": {
+        "validation_runs": 0,
+        "provided_verifier_runs": 0,
+        "provided_toy_state_evaluations": 0,
+        "provided_toy_full_LU_factorizations": 0,
+        "provided_toy_forward_RHS": 0,
+        "provided_toy_material_RHS": 0,
+        "provided_toy_defect_RHS": 0,
+        "F_calls": 0,
+        "data_generation_F_calls": 2,
+        "backend_health_runs": 1,
+        "anchor_constructions": 1,
+        "full_forward_calls": 3,
+        "full_forward_RHS": 18,
+        "full_LU_factorizations": 3,
+        "full_state_backward_residual_L_rhs": 18,
+        "full_state_receiver_rhs": 18,
+        "full_state_Goff_rhs": 18,
+        "material_operator_refreshes": 1,
+        "L_upload_bytes": 589824,
+        "noise_reference_predictions": 1,
+        "opm_constructions": 2,
+        "receiver_SVD_builds": 1,
+        "F_actions": 64,
+        "Maxwell_matvec_rhs": 1101,
+        "operator_transfer_bytes": 6764544,
+        "F_adjoint_actions": 32,
+        "retained_factorizations": 2,
+        "fixed_probe_bank_builds": 2,
+        "B_rhs": 258,
+        "L_actions": 954,
+        "S_adjoint_actions": 51,
+        "L_adjoint_actions": 51,
+        "forcing_rhs": 12,
+        "seed_O_input_rhs": 48,
+        "seed_P_input_rhs": 12,
+        "seed_M_input_rhs": 48,
+        "S_actions": 483,
+        "projected_factorizations": 2,
+        "material_feature_builds": 3,
+        "compressed_B_current_columns": 576,
+        "reduced_core_rhs": 966,
+        "full_tangent_calls": 1,
+        "full_tangent_RHS": 192,
+        "full_tangent_receiver_rhs": 192,
+        "full_adjoint_calls": 1,
+        "full_adjoint_RHS": 6,
+        "full_adjoint_receiver_rhs": 6,
+        "B_adjoint_rhs": 18,
+        "health_Schur_factorizations": 1,
+        "health_Schur_core_rhs": 192,
+        "health_reference_full_RHS": 192,
+        "health_reference_backward_residual_L_rhs": 192,
+        "expected_invalid_core_probes": 2,
+        "material_subproblems": 1,
+        "material_optimizer_iterations": 9
+      },
+      "native_DDA": {
+        "totals": {
+          "kernel_build_blocks": 1,
+          "kernel_entries": 36864,
+          "full_L_materializations": 3,
+          "lu_factorizations": 3,
+          "lu_factorizations_full": 3,
+          "solve_calls": 6,
+          "solve_rhs": 408,
+          "solve_rhs_full_forward": 18,
+          "solve_rhs_full": 408,
+          "goff_rhs": 18,
+          "gs_svd": 1,
+          "jvp_calls": 1,
+          "solve_rhs_full_tangent": 192,
+          "jvp_rhs": 192,
+          "vjp_calls": 1,
+          "solve_rhs_full_adjoint": 6,
+          "solve_rhs_adjoint": 6,
+          "solve_rhs_full_health_defect": 192
+        },
+        "timings_s": {
+          "kernel_build_s": 0.0011635,
+          "observation_build_s": 0.0021081,
+          "state_material_s": 5.3e-05,
+          "state_matrix_s": 0.0003466,
+          "solve_factorize_s": 0.0424677,
+          "solve_s": 0.018252,
+          "state_exciting_s": 0.0002974,
+          "state_field_s": 0.0002509,
+          "gs_svd_s": 0.0036103,
+          "jvp_s": 0.002495,
+          "field_jvp_s": 0.0059916,
+          "vjp_s": 0.0013319
+        },
+        "event_count": 5,
+        "events": [
+          {
+            "kind": "solver_init",
+            "device": "cuda",
+            "torch": true
+          },
+          {
+            "kind": "model_init",
+            "N": 64,
+            "P": 6,
+            "R": 64,
+            "m": 128,
+            "volume": 0.052734375,
+            "k": 2.0,
+            "device": "cuda",
+            "wall_s": 0.0033968999923672527
+          },
+          {
+            "kind": "state",
+            "reduced": false,
+            "rstate": 0,
+            "wall_s": 0.05285020000883378,
+            "field_shape": [
+              6,
+              128
+            ]
+          },
+          {
+            "kind": "state",
+            "reduced": false,
+            "rstate": 0,
+            "wall_s": 0.002243599999928847,
+            "field_shape": [
+              6,
+              128
+            ]
+          },
+          {
+            "kind": "state",
+            "reduced": false,
+            "rstate": 0,
+            "wall_s": 0.002162699995096773,
+            "field_shape": [
+              6,
+              128
+            ]
+          }
+        ]
+      },
+      "scientific_gates_adjudicated": false,
+      "expected_unsafe_core_rejections": 2
+    },
+    "inclusive_wall_seconds": 4.8633371999894734,
+    "controller_process_cpu_seconds": 3.546875,
+    "CPU_accounting": "caller ledger includes child CPU and all nested work",
+    "count_delta": {
+      "validation_runs": 1,
+      "provided_verifier_runs": 2,
+      "provided_toy_state_evaluations": 7,
+      "provided_toy_full_LU_factorizations": 31,
+      "provided_toy_forward_RHS": 21,
+      "provided_toy_material_RHS": 168,
+      "provided_toy_defect_RHS": 24,
+      "F_calls": 6,
+      "data_generation_F_calls": 8,
+      "backend_health_runs": 1,
+      "anchor_constructions": 1,
+      "full_forward_calls": 3,
+      "full_forward_RHS": 18,
+      "full_LU_factorizations": 3,
+      "full_state_backward_residual_L_rhs": 18,
+      "full_state_receiver_rhs": 18,
+      "full_state_Goff_rhs": 18,
+      "material_operator_refreshes": 1,
+      "L_upload_bytes": 589824,
+      "noise_reference_predictions": 1,
+      "opm_constructions": 2,
+      "receiver_SVD_builds": 1,
+      "F_actions": 64,
+      "Maxwell_matvec_rhs": 1101,
+      "operator_transfer_bytes": 6764544,
+      "F_adjoint_actions": 32,
+      "retained_factorizations": 2,
+      "fixed_probe_bank_builds": 2,
+      "B_rhs": 258,
+      "L_actions": 954,
+      "S_adjoint_actions": 51,
+      "L_adjoint_actions": 51,
+      "forcing_rhs": 12,
+      "seed_O_input_rhs": 48,
+      "seed_P_input_rhs": 12,
+      "seed_M_input_rhs": 48,
+      "S_actions": 483,
+      "projected_factorizations": 2,
+      "material_feature_builds": 3,
+      "compressed_B_current_columns": 576,
+      "reduced_core_rhs": 966,
+      "full_tangent_calls": 1,
+      "full_tangent_RHS": 192,
+      "full_tangent_receiver_rhs": 192,
+      "full_adjoint_calls": 1,
+      "full_adjoint_RHS": 6,
+      "full_adjoint_receiver_rhs": 6,
+      "B_adjoint_rhs": 18,
+      "health_Schur_factorizations": 1,
+      "health_Schur_core_rhs": 192,
+      "health_reference_full_RHS": 192,
+      "health_reference_backward_residual_L_rhs": 192,
+      "expected_invalid_core_probes": 2,
+      "material_subproblems": 1,
+      "material_optimizer_iterations": 9
+    },
+    "caller_book_finished": false,
+    "descriptor_health": {
+      "status": "PASS",
+      "evidence": "tiny DenseDDA only, no project gate",
+      "checks": [
+        {
+          "name": "actual_two_sided_defect_identity",
+          "relative_error": 9.163236511366815e-15,
+          "tolerance": 1e-09,
+          "status": "PASS"
+        },
+        {
+          "name": "actual_polarizability_second_derivative",
+          "relative_error": 2.6784376808773924e-11,
+          "tolerance": 1e-07,
+          "status": "PASS"
+        }
+      ],
+      "predictions_frozen_before_J": true,
+      "current_rank": 32,
+      "nonlinear_measurements": [
+        {
+          "amplitude": 0.001,
+          "task_remainder": 3.0898005141192406e-07,
+          "paired_nonlinear_budget": 3.367728272056846,
+          "certificate_type": "empirical_indicator"
+        },
+        {
+          "amplitude": 0.004,
+          "task_remainder": 4.9403543464270236e-06,
+          "paired_nonlinear_budget": 3.588975120357826,
+          "certificate_type": "empirical_indicator"
+        },
+        {
+          "amplitude": 0.01,
+          "task_remainder": 3.083567576953254e-05,
+          "paired_nonlinear_budget": 4.059216637004743,
+          "certificate_type": "empirical_indicator"
+        }
+      ],
+      "region_uniform_project_certificate": false,
+      "context_provenance": {
+        "origin": "known_background_OPM_and_residual_actions",
+        "full_J_full_H_full_adjoint_or_truth_used": false,
+        "IR_definition": "B - L Q (Q* L Q)^-1 Q* B, six source blocks",
+        "OR_dual_definition": "S_white* h - L* Q (Q* L Q)^-* Q* S_white* h",
+        "full_L_margin_origin": "1 - sqrt(norm1(F) normInf(F)), sufficient only",
+        "full_L_minimum_bound": 0.6942577445209785,
+        "background_F_norm_bound": 0.3057422554790215,
+        "missing_positive_margin": false,
+        "polarizability_nonlinearity_included": true,
+        "certificate_type": "empirical_indicator",
+        "model_component_certificate_type": "deterministic_bound",
+        "physical_calibration_budget": "source amplitude 5%, receiver gain 3%, same Maxwell source/receiver layout",
+        "regularization": 39796.706263240005,
+        "declared_material_pointwise_prior": 0.25,
+        "declared_material_radius": 0.4592793267718459,
+        "W_external_response": "known-background voxel injection residual, no truth projection used",
+        "calibration_capacity": "one nonnegative multiplicative coefficient per method, same fit scenes"
+      }
+    }
+  }
+}

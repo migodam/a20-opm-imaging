@@ -1,0 +1,22 @@
+{
+  "scope": "A22 delegated exact SLSQP inequality deduplication source patch 2026-10-07",
+  "campaign": "A22",
+  "status": "ACCOUNTED_CONSERVATIVE",
+  "process_cpu_seconds": 3.0,
+  "GPU_seconds": 0.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "Independent conservative allowance for core/test source reads, exact duplicate solver-input patch, synthetic regression source, AST parsing, and receipt preparation",
+  "observed_AST_process_CPU_seconds": 0.031871,
+  "new_prepared_unit_tests": 3,
+  "prepared_core_tests": 16,
+  "AST_check": "PASS",
+  "unit_tests": "NOT_RUN",
+  "physics": "NOT_RUN",
+  "SSH": "NOT_RUN",
+  "GPU": "NOT_RUN",
+  "science_data_reads": "NONE",
+  "new_SHA256_checks": 0,
+  "prior_worker_scopes_rebilled": false,
+  "active_remote_screening_rebilled": false,
+  "register_exactly_once": true
+}

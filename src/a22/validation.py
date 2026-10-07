@@ -377,10 +377,10 @@ _PROVIDED = (
 )
 
 
-def _run_provided(root, book):
+def _run_provided(root, book, *, output_directory=None):
     """Run unchanged supplied verifier entrypoints with output globals redirected."""
     root = Path(root)
-    destination = root/"results/a22/validation/theory"
+    destination = (Path(output_directory) if output_directory is not None else root/"results/a22/validation")/"theory"
     rows = []
     for name, output_global, result_name in _PROVIDED:
         source = root/"protocol/a22/verification"/(name+".py")
@@ -446,7 +446,8 @@ def run_validation(root, config, book, device="cpu") -> dict:
     is refused so that a retry cannot conceal or overwrite its predecessor.
     """
     root = Path(root)
-    directory = root/"results/a22/validation"
+    directory = (root/"results/a22/validation_cuda"/book.job_id if device == "cuda"
+                 else root/"results/a22/validation")
     if directory.exists():
         raise FileExistsError("A22_VALIDATION_OUTPUT_ALREADY_EXISTS:"+str(directory))
     before_counts = dict(book.counts)
@@ -459,7 +460,7 @@ def run_validation(root, config, book, device="cpu") -> dict:
     try:
         with book.scope("health"), book.action_guard("a22_validation", role="health", validation_runs=1):
             directory.mkdir(parents=True, exist_ok=False)
-            report["theory"] = _run_provided(root, book)
+            report["theory"] = _run_provided(root, book, output_directory=directory)
             report["backend"] = run_backend_health(config, book, device=device)
             report["status"] = "PASS"
             return report

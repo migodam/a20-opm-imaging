@@ -1,0 +1,13 @@
+test_native_handle_allows_read_write_delete_sharing_and_always_closes (test_a22_checkpoint_reader.CheckpointReaderTests.test_native_handle_allows_read_write_delete_sharing_and_always_closes) ... ok
+test_native_read_failure_closes_handle_and_records_api_plus_last_frame (test_a22_checkpoint_reader.CheckpointReaderTests.test_native_read_failure_closes_handle_and_records_api_plus_last_frame) ... ok
+test_persistent_unreadability_times_out_at_two_seconds_with_safe_origin (test_a22_checkpoint_reader.CheckpointReaderTests.test_persistent_unreadability_times_out_at_two_seconds_with_safe_origin) ... ok
+test_stage_and_global_caps_keep_advancing_during_stale_reads (test_a22_checkpoint_reader.CheckpointReaderTests.test_stage_and_global_caps_keep_advancing_during_stale_reads) ... ok
+test_startup_missing_still_bills_elapsed_but_later_missing_is_bounded (test_a22_checkpoint_reader.CheckpointReaderTests.test_startup_missing_still_bills_elapsed_but_later_missing_is_bounded) ... ok
+test_transient_permission_retains_ledger_and_elapsed_charge (test_a22_checkpoint_reader.CheckpointReaderTests.test_transient_permission_retains_ledger_and_elapsed_charge) ... ok
+test_unrelated_posix_permission_and_corrupted_json_are_fatal (test_a22_checkpoint_reader.CheckpointReaderTests.test_unrelated_posix_permission_and_corrupted_json_are_fatal) ... ok
+test_windows_errno_13_without_winerror_recovers_and_resets_timeout (test_a22_checkpoint_reader.CheckpointReaderTests.test_windows_errno_13_without_winerror_recovers_and_resets_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.006s
+
+OK

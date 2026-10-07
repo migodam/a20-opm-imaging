@@ -14,7 +14,7 @@ import zipfile
 from a20.costs import BudgetExceeded, CostBook
 from a22.budget import (
     A22Book, GPU_WALL_CAP, STAGE_GPU_CAPS, history, merge_receipt,
-    normalize_config, register_external,
+    normalize_config, register_external, write_json,
 )
 
 
@@ -61,6 +61,130 @@ def load_transport():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def windows_sharing_error(code=5):
+    error = PermissionError('simulated Windows sharing or delete access denial')
+    error.winerror = code
+    return error
+
+
+class AtomicAccountingTests(unittest.TestCase):
+    def test_transient_windows_reader_contention_keeps_complete_snapshots(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = Path(directory) / 'accounting_checkpoint.json'
+            old, new = {'counts': {'F_calls': 1}}, {'counts': {'F_calls': 2}}
+            target.write_text(json.dumps(old))
+            original_replace = Path.replace
+            attempts = []
+
+            def held_reader(temporary, destination):
+                # The simulated reader observes the original complete document
+                # until a successful atomic replacement; no truncated target.
+                self.assertEqual(json.loads(target.read_text()), old)
+                self.assertEqual(json.loads(temporary.read_text()), new)
+                attempts.append(temporary)
+                if len(attempts) < 3:
+                    raise windows_sharing_error(5 if len(attempts) == 1 else 32)
+                return original_replace(temporary, destination)
+
+            with patch.object(Path, 'replace', held_reader), patch('a22.budget.time.sleep') as sleep:
+                write_json(target, new)
+            self.assertEqual(json.loads(target.read_text()), new)
+            self.assertEqual(len(attempts), 3)
+            self.assertEqual(len(set(attempts)), 1)
+            self.assertFalse(attempts[0].exists())
+            self.assertEqual(sleep.call_count, 2)
+
+    def test_persistent_windows_contention_is_bounded_and_retains_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = Path(directory) / 'accounting_checkpoint.json'
+            target.write_text('{"counts":{"F_calls":1}}')
+            failure = windows_sharing_error(33)
+            with patch.object(Path, 'replace', side_effect=failure) as replace, patch('a22.budget.time.sleep') as sleep:
+                with self.assertRaises(PermissionError) as raised:
+                    write_json(target, {'counts': {'F_calls': 2}})
+            self.assertIs(raised.exception, failure)
+            self.assertEqual(replace.call_count, 5)
+            self.assertEqual(sleep.call_count, 4)
+            self.assertLessEqual(sum(call.args[0] for call in sleep.call_args_list), 0.151)
+            self.assertEqual(json.loads(target.read_text()), {'counts': {'F_calls': 1}})
+            pending = list(target.parent.glob(target.name + '.*.tmp'))
+            self.assertEqual(len(pending), 1)
+            self.assertEqual(json.loads(pending[0].read_text()), {'counts': {'F_calls': 2}})
+            # A subsequent writer has its own temporary path and cannot erase
+            # the exhausted attempt's diagnostic snapshot.
+            write_json(target, {'counts': {'F_calls': 3}})
+            self.assertTrue(pending[0].exists())
+            self.assertEqual(json.loads(target.read_text()), {'counts': {'F_calls': 3}})
+
+    def test_unrelated_filesystem_errors_are_not_retried(self):
+        for error in (PermissionError('actual permission denial'), FileNotFoundError('missing directory')):
+            with self.subTest(error=type(error).__name__), tempfile.TemporaryDirectory() as directory:
+                target = Path(directory) / 'accounting_checkpoint.json'
+                target.write_text('{"old":true}')
+                with patch.object(Path, 'replace', side_effect=error) as replace, patch('a22.budget.time.sleep') as sleep:
+                    with self.assertRaises(type(error)):
+                        write_json(target, {'new': True})
+                self.assertEqual(replace.call_count, 1)
+                sleep.assert_not_called()
+                self.assertEqual(json.loads(target.read_text()), {'old': True})
+
+    def test_retry_does_not_repeat_failed_physics_or_reset_call_cap(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = root_files(Path(directory), config(perturbation_evaluation_cap=1))
+            book = A22Book(root, job_id='a22-checkpoint-retry')
+            original_replace = Path.replace
+            attempts, physical_calls = [], []
+
+            def held_checkpoint(temporary, destination):
+                attempts.append(temporary)
+                if len(attempts) <= 2:
+                    raise windows_sharing_error()
+                return original_replace(temporary, destination)
+
+            with patch.object(Path, 'replace', held_checkpoint), patch('a22.budget.time.sleep'):
+                with self.assertRaisesRegex(RuntimeError, 'physical failure'):
+                    with book.action_guard('data_generation', F_calls=1):
+                        physical_calls.append('attempt')
+                        raise RuntimeError('physical failure')
+            with self.assertRaises(BudgetExceeded):
+                with book.action_guard('data_generation', F_calls=1):
+                    self.fail('Sharing retry reset the paid failed-call cap')
+            paid = book.finish('FAILED')
+            self.assertEqual(physical_calls, ['attempt'])
+            self.assertEqual(paid['counts']['F_calls'], 1)
+            self.assertEqual(paid['counts']['data_generation_F_calls'], 1)
+            self.assertEqual(history(root)['counts']['data_generation_F_calls'], 1)
+
+    def test_retry_backoff_remains_paid_gpu_wall_and_cannot_extend_stage_cap(self):
+        with tempfile.TemporaryDirectory() as directory:
+            caps = dict(STAGE_GPU_CAPS, direction=0.02)
+            root = root_files(Path(directory), config(stage_gpu_caps_seconds=caps))
+            wall = [100.0]
+            original_replace = Path.replace
+            attempts = []
+
+            def held_checkpoint(temporary, destination):
+                attempts.append(temporary)
+                if len(attempts) <= 2:
+                    raise windows_sharing_error()
+                return original_replace(temporary, destination)
+
+            def elapsed_backoff(seconds):
+                wall[0] += seconds
+
+            with gpu_unit_clock(wall):
+                book = A22Book(root, job_id='a22-checkpoint-wall', stage='direction', device='cuda')
+                with patch.object(Path, 'replace', held_checkpoint), patch('a22.budget.time.sleep', side_effect=elapsed_backoff):
+                    book._checkpoint()
+                with self.assertRaises(BudgetExceeded):
+                    book.check()
+                paid = book.finish('BUDGET_REFUSED')
+            self.assertAlmostEqual(paid['gpu_occupation_seconds'], 0.03)
+            self.assertAlmostEqual(paid['stage_gpu_seconds']['direction'], 0.03)
+            self.assertEqual(paid['process_cpu_seconds'], 0)
+            self.assertAlmostEqual(history(root)['a22_gpu'], 0.03)
 
 
 class BudgetTests(unittest.TestCase):

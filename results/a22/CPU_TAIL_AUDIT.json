@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "corrections": [
+    {
+      "job_id": "a22-cuda-validate-001",
+      "CPU_seconds": 0.375
+    },
+    {
+      "job_id": "a22-cuda-validate-002",
+      "CPU_seconds": 1.0
+    }
+  ],
+  "old_receipts_rewritten": false
+}

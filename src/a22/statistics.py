@@ -23,6 +23,12 @@ FULL_J = 'full_J'
 FULL_J_ALIASES = ('pred_full_J', 'prediction_full_J', 'full_J_prediction',
                   'full_J_predicted_error', 'predicted_error_full_J',
                   'pred_fullJ', 'pred_J_full')
+FULL_J_TOTAL = 'full_J_total'
+FULL_J_TOTAL_ALIASES = ('pred_full_J_total', 'prediction_full_J_total',
+                       'full_J_total_prediction', 'full_J_total_predicted_error',
+                       'predicted_error_full_J_total', 'pred_fullJ_total',
+                       'pred_J_full_total')
+OFFLINE_FULL_J_METHODS = {FULL_J: FULL_J_ALIASES, FULL_J_TOTAL: FULL_J_TOTAL_ALIASES}
 NOISE_BRANCHES = ('all', 'noise_zero', 'noise_positive')
 
 
@@ -63,9 +69,9 @@ def _invalid(row):
 
 
 def _prediction(row, method):
-    if method == FULL_J:
+    if method in OFFLINE_FULL_J_METHODS:
         folded = {str(key).casefold(): value for key, value in row.items()}
-        value = next((folded[key.casefold()] for key in FULL_J_ALIASES
+        value = next((folded[key.casefold()] for key in OFFLINE_FULL_J_METHODS[method]
                       if key.casefold() in folded and str(folded[key.casefold()]).strip()), None)
     else:
         value = _field(row, 'pred_' + method)
@@ -192,9 +198,11 @@ def aggregate_direction_rows(rows, *, scene_manifest=None):
     rows = [dict(row) for row in rows]
     metadata = _scene_metadata(rows, scene_manifest)
     methods = list(METHODS)
-    if any(any(str(key).casefold() in {name.casefold() for name in FULL_J_ALIASES} for key in row)
-           or str(_field(row, 'method', '')).casefold() == FULL_J.casefold() for row in rows):
-        methods.append(FULL_J)
+    for method, aliases in OFFLINE_FULL_J_METHODS.items():
+        columns = {name.casefold() for name in aliases}
+        if any(any(str(key).casefold() in columns for key in row)
+               or str(_field(row, 'method', '')).casefold() == method.casefold() for row in rows):
+            methods.append(method)
     grouped = defaultdict(list)
     missing_group_fields = Counter()
     for index, row in enumerate(rows):
@@ -289,7 +297,7 @@ def _calibrate(units, methods, frozen, mode):
                     fit_units = [unit for unit in members if unit['scene_id'] in fit_scenes and unit['method_eligible'][method]]
                     fit = fit_nonnegative_scale((unit['raw_predictions'][method], unit['true_error']) for unit in fit_units)
                     fit.update(method=method, evidence_scope=scope,
-                               method_scope='offline_full_J' if method==FULL_J else scope,
+                               method_scope='offline_full_J' if method in OFFLINE_FULL_J_METHODS else scope,
                                fit_scene_ids=sorted({unit['scene_id'] for unit in fit_units}),
                                requested_fit_scene_ids=list(fit_scenes),
                                missing_fit_scene_ids=sorted(set(fit_scenes)-{unit['scene_id'] for unit in fit_units}),
@@ -330,7 +338,7 @@ def _scene_stats(members, method, **labels):
     classification = [unit for unit in valid if unit['failure_label_complete'] and unit['failure_fraction'] is not None]
     auc = failure_auc([unit['calibrated_predictions'][method] for unit in classification],
                       [unit['failure_fraction'] for unit in classification])
-    return dict(labels, method=method, method_scope='offline_full_J' if method==FULL_J else labels['evidence_scope'],
+    return dict(labels, method=method, method_scope='offline_full_J' if method in OFFLINE_FULL_J_METHODS else labels['evidence_scope'],
                 units=len(members), paired_units=len(valid), raw_paired_units=len(raw_valid), missing_or_invalid_units=len(members)-len(valid),
                 invalid_units=sum(unit['invalid_rows']>0 for unit in members),
                 spearman=_spearman(target, forecast), raw_spearman=_spearman(raw_target, raw),
@@ -456,7 +464,7 @@ def analyze_rows(rows, config, *, mode='screen', scene_manifest=None,
                         pooled_auc = failure_auc([unit['calibrated_predictions'][method] for unit in classification],
                             [unit['failure_fraction'] for unit in classification],
                             unit_weights=[1/scene_counts[unit['scene_id']] for unit in classification])
-                        summary.append(dict(method=method, method_scope='offline_full_J' if method==FULL_J else scope,
+                        summary.append(dict(method=method, method_scope='offline_full_J' if method in OFFLINE_FULL_J_METHODS else scope,
                             family=family, noise_branch=branch, evidence_scope=scope,evaluation_split=split,
                             requested_scene_ids=expected, available_scene_ids=[item['scene_id'] for item in available],
                             missing_scene_ids=sorted(set(expected)-{item['scene_id'] for item in available}),

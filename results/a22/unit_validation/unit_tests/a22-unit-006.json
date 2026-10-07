@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests_run": 106,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "pattern": "test_a22_*.py",
+  "log": "results/a22/unit_validation/unit_tests/a22-unit-006.log",
+  "scope": "unit and tiny identity fixtures; not Maxwell campaign acceptance"
+}

@@ -1,0 +1,320 @@
+{
+  "wall_seconds": 0.28350350000255276,
+  "process_cpu_seconds": 0.308922,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "evidence_audits": 1
+  },
+  "exclusive_walls": {
+    "saved_screening_completeness_and_noise_audit": 0.050206125000840984
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 73695232,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "campaign": "A22",
+  "job_id": "a22-evidence-audit-001",
+  "stage": "exception",
+  "active_stage": "exception",
+  "stage_gpu_seconds": {
+    "screen_health": 0.0,
+    "features": 0.0,
+    "direction": 0.0,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "checkpoint_perf_counter": 53881.322828625,
+  "controller_process_cpu_seconds": 0.308922,
+  "child_process_cpu_seconds": 0.0,
+  "live_child_process_cpu_seconds": 0.0,
+  "corrections": {},
+  "role": "offline_evaluation",
+  "status": "COMPLETE",
+  "CPU_cap": null,
+  "gpu_wall_cap_seconds": 32400.0,
+  "stage_gpu_cap_seconds": 1800.0,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "CPU_and_GPU_resources_not_summed": true,
+  "historical_A21_costs": "record only; excluded from A22 limits",
+  "measurement": "inclusive measured process CPU + child CPU; CUDA job inclusive wall",
+  "new_SHA256_checks": 0,
+  "outcome": {
+    "status": "COMPLETE",
+    "raw_rows": 2112,
+    "unique_case_keys": 2112,
+    "rows_by_scene": {
+      "2001": 528,
+      "2003": 528,
+      "2014": 528,
+      "2009": 528
+    },
+    "expected_rows_per_scene": 528,
+    "invalid_QPs": 0,
+    "actual_current_ranks": [
+      32
+    ],
+    "historical_exposed_rows": 2112,
+    "full_model_uniform_certificate_rows": 0,
+    "absolute_target_below_relative_floor": 0,
+    "primary_metric": "absolute directional coefficient error; no relative floor in Gate A",
+    "covariance_model": "proper complex Gaussian: Re/Im variance sigma_complex^2/2",
+    "noise_groups": 128,
+    "noise_incomplete_groups": 0,
+    "scene_model_audits": {
+      "2001": {
+        "label_center": "actual original scene material on solver grid, offline only",
+        "base_material_norm": 0.26999967527875135,
+        "W_external_material_norm": 0.19750440265659228,
+        "W_retained_energy_fraction": 0.46490969963671186,
+        "declared_prior_contains_original_center": false,
+        "maximum_original_material_perturbation": 0.8333477135718612,
+        "absolute_32_coordinate_errors_are_labels": true,
+        "object_observation_generation_grid": 14,
+        "new_finite_label_grid": 12,
+        "original_cached_data_not_used_as_exact_same_grid_label": true
+      },
+      "2003": {
+        "label_center": "actual original scene material on solver grid, offline only",
+        "base_material_norm": 0.9826591374026865,
+        "W_external_material_norm": 0.7018949489533073,
+        "W_retained_energy_fraction": 0.48980236572980707,
+        "declared_prior_contains_original_center": false,
+        "maximum_original_material_perturbation": 2.3425758620974344,
+        "absolute_32_coordinate_errors_are_labels": true,
+        "object_observation_generation_grid": 14,
+        "new_finite_label_grid": 12,
+        "original_cached_data_not_used_as_exact_same_grid_label": true
+      },
+      "2014": {
+        "label_center": "actual original scene material on solver grid, offline only",
+        "base_material_norm": 0.3819534926938811,
+        "W_external_material_norm": 0.37077961332177806,
+        "W_retained_energy_fraction": 0.057653280567735034,
+        "declared_prior_contains_original_center": false,
+        "maximum_original_material_perturbation": 2.1023087903540714,
+        "absolute_32_coordinate_errors_are_labels": true,
+        "object_observation_generation_grid": 14,
+        "new_finite_label_grid": 12,
+        "original_cached_data_not_used_as_exact_same_grid_label": true
+      },
+      "2009": {
+        "label_center": "actual original scene material on solver grid, offline only",
+        "base_material_norm": 0.6359136412907712,
+        "W_external_material_norm": 0.5918684596342699,
+        "W_retained_energy_fraction": 0.13372832982105157,
+        "declared_prior_contains_original_center": false,
+        "maximum_original_material_perturbation": 2.2023632761195415,
+        "absolute_32_coordinate_errors_are_labels": true,
+        "object_observation_generation_grid": 14,
+        "new_finite_label_grid": 12,
+        "original_cached_data_not_used_as_exact_same_grid_label": true
+      }
+    },
+    "finite_label_cache": [
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d0_a0.npz",
+        "numerical_backward_residual": null,
+        "numerical_residual_status": "LEGACY_NOT_RECORDED",
+        "source_contract_status": "LEGACY_AW_AND_FREEZE_VALIDATED"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d0_a1.npz",
+        "numerical_backward_residual": null,
+        "numerical_residual_status": "LEGACY_NOT_RECORDED",
+        "source_contract_status": "LEGACY_AW_AND_FREEZE_VALIDATED"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d1_a0.npz",
+        "numerical_backward_residual": null,
+        "numerical_residual_status": "LEGACY_NOT_RECORDED",
+        "source_contract_status": "LEGACY_AW_AND_FREEZE_VALIDATED"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d1_a1.npz",
+        "numerical_backward_residual": null,
+        "numerical_residual_status": "LEGACY_NOT_RECORDED",
+        "source_contract_status": "LEGACY_AW_AND_FREEZE_VALIDATED"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d2_a0.npz",
+        "numerical_backward_residual": 4.912628978919808e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d2_a1.npz",
+        "numerical_backward_residual": 4.771120228714285e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d3_a0.npz",
+        "numerical_backward_residual": 4.910617751199602e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2001/OFFLINE_label_d3_a1.npz",
+        "numerical_backward_residual": 4.848236105822244e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d0_a0.npz",
+        "numerical_backward_residual": 5.071301836598287e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d0_a1.npz",
+        "numerical_backward_residual": 5.15681927646924e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d1_a0.npz",
+        "numerical_backward_residual": 5.174315662000428e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d1_a1.npz",
+        "numerical_backward_residual": 5.061704056866661e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d2_a0.npz",
+        "numerical_backward_residual": 5.235449858648185e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d2_a1.npz",
+        "numerical_backward_residual": 5.162424171989589e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d3_a0.npz",
+        "numerical_backward_residual": 5.117764766537707e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2003/OFFLINE_label_d3_a1.npz",
+        "numerical_backward_residual": 5.179179317755397e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d0_a0.npz",
+        "numerical_backward_residual": 5.040842028095092e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d0_a1.npz",
+        "numerical_backward_residual": 4.942757714731252e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d1_a0.npz",
+        "numerical_backward_residual": 4.983812161794156e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d1_a1.npz",
+        "numerical_backward_residual": 4.9448619342782815e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d2_a0.npz",
+        "numerical_backward_residual": 4.938301187467369e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d2_a1.npz",
+        "numerical_backward_residual": 4.737347658793761e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d3_a0.npz",
+        "numerical_backward_residual": 4.897003262553762e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2009/OFFLINE_label_d3_a1.npz",
+        "numerical_backward_residual": 4.95439144297884e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d0_a0.npz",
+        "numerical_backward_residual": 4.869420038571651e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d0_a1.npz",
+        "numerical_backward_residual": 4.77408934697464e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d1_a0.npz",
+        "numerical_backward_residual": 4.823515898935403e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d1_a1.npz",
+        "numerical_backward_residual": 5.055474398151455e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d2_a0.npz",
+        "numerical_backward_residual": 4.927180826825901e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d2_a1.npz",
+        "numerical_backward_residual": 4.768395957481829e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d3_a0.npz",
+        "numerical_backward_residual": 4.9648824172607285e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      },
+      {
+        "path": "results/a22/stage_a/scene_2014/OFFLINE_label_d3_a1.npz",
+        "numerical_backward_residual": 4.887077336285384e-15,
+        "numerical_residual_status": "RECORDED",
+        "source_contract_status": "CURRENT_CONTRACT"
+      }
+    ],
+    "cached_clean_label_count": 32,
+    "new_physics_calls": 0,
+    "directional_array": "results/a22/stage_a/directional_reconstructions.npz",
+    "full_32_solution_vectors": "NOT_RECORDED",
+    "Stage_B_spatial_images": "NOT_RUN"
+  }
+}

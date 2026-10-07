@@ -1,0 +1,33 @@
+{
+  "scope": "a22-transport-85ca23acf02d464c88eccf87113a0d74",
+  "action": "run",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.138194,
+  "wall_seconds": 803.8629858749991,
+  "remote_process_cpu_seconds": 0.0,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "COMPLETE",
+    "job_id": "a22-cuda-screen-003",
+    "device": "cuda",
+    "stage": "screen_health",
+    "exit_status": 0,
+    "child_CPU_tail_seconds": 0.9375,
+    "child_CPU_tail_already_billed": true,
+    "remote_process_cpu_seconds": 11.625,
+    "remote_controller_CPU_already_billed": true,
+    "foreground": true,
+    "shared_lock": "common A20 GPU lock",
+    "child_process_CPU_seconds": 747.625,
+    "queue_query_CPU_seconds": 0.015625,
+    "child_CPU_measurement_available": true,
+    "child_stop_confirmed": true,
+    "checkpoint_transient_read_conflicts": 0,
+    "checkpoint_last_read_failure": null,
+    "checkpoint_unreadable_seconds": 0.0,
+    "checkpoint_unreadability_limit_seconds": 2.0,
+    "checkpoint_reader": "windows-share-read-write-delete"
+  },
+  "new_SHA256_checks": 0
+}

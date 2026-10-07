@@ -1,0 +1,82 @@
+{
+  "schema": "a22.local.delivery.v1",
+  "source_base": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "branch": "a22-three-fold-opm",
+  "status": "COMPLETE_LOCAL_STOP_AT_PARTIAL_GATE_A",
+  "gates": {
+    "A": {
+      "status": "PARTIAL",
+      "reason": "formal 24-scene evidence absent; screening cannot award PASS",
+      "evidence": "results/a22/statistics/STATISTICS_EVIDENCE.json",
+      "screening": "PARTIAL"
+    },
+    "B": {
+      "status": "NOT_RUN",
+      "reason": "A is not formal PASS"
+    },
+    "C": {
+      "status": "NOT_RUN",
+      "reason": "one-shot stage not entered"
+    },
+    "D": {
+      "status": "NOT_RUN",
+      "reason": "A/B/C not all PASS; NN forbidden"
+    },
+    "T": {
+      "status": "NOT_ESTABLISHED",
+      "reason": "no same-quality end-to-end timing comparison"
+    }
+  },
+  "exposure": "four historically exposed scenes; not a blind validation",
+  "known_background": [
+    0.1,
+    0.04
+  ],
+  "material_real_dimension": 32,
+  "degree": 1,
+  "actual_current_rank": 32,
+  "scenes": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "clean_labels": 32,
+  "recovery_case_rows": 2112,
+  "statistical_scene_clusters": 4,
+  "empirical_indicator": true,
+  "full_model_uniform_certificate": false,
+  "original_theory_and_backend_frozen": true,
+  "full_32_solution_vectors": "NOT_RECORDED",
+  "spatial_one_shot_reconstructions": "NOT_RUN",
+  "cost_summary_status": "RECORDED_ONLY",
+  "live_accounting_jobs": [],
+  "accounting_issues": [],
+  "unresolved_accounting_records": [],
+  "charged_CPU_seconds": 1838.8613120000007,
+  "CUDA_related_occupation_seconds": 1350.713879900024,
+  "CUDA_occupation_limit_seconds": 32400.0,
+  "stage_GPU_seconds": {
+    "screen_health": 200.80115189994103,
+    "features": 0.0,
+    "direction": 1149.912728000083,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "generation_full_wave_evaluations": 60,
+  "generation_full_wave_limit": 192,
+  "new_scene_labels": 0,
+  "CPU_contains_explicit_conservative_allowances": true,
+  "CPU_and_GPU_are_not_added_together": true,
+  "nested_spans_not_additive": true,
+  "old_A20_A21_costs_excluded": true,
+  "publication": "LOCAL_ONLY",
+  "trained_NN": false,
+  "nonlinear_reconstruction": false,
+  "operator_action_details": "ACTION_ACCOUNTING.json",
+  "post_receipt_CPU_allowance_seconds": 10.0,
+  "measured_post_receipt_export_CPU_seconds": 0.11484,
+  "delivery_commit_reference": "Git HEAD after local delivery commit; actual SHA in final response"
+}

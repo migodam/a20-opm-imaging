@@ -1,0 +1,107 @@
+{
+  "schema": "a22.screening.decision.v1",
+  "status": "PARTIAL",
+  "screening_signal_positive": false,
+  "complete_screening": true,
+  "median_scene_spearman": 0.5068931828050369,
+  "relative_MAE_improvement": -0.0012631898821082968,
+  "absolute_95_percent_interval": [
+    -0.006145784265758427,
+    0.0018125453237960026
+  ],
+  "pair": {
+    "status": "RECORDED_SCENE_CLUSTER_BOOTSTRAP",
+    "scene_ids": [
+      "2001",
+      "2003",
+      "2009",
+      "2014"
+    ],
+    "paired_scenes": 4,
+    "repetitions_requested": 2000,
+    "repetitions_performed": 2000,
+    "seed": 20261909,
+    "sampling_unit": "scene, paired across A1/A2/A3",
+    "scene_weighting": "equal scene mean MAE on common complete units",
+    "sign": "positive differences mean lower A3 MAE",
+    "baseline_rule": "min(mean A1 MAE, mean A2 MAE), reselected in every bootstrap sample",
+    "calibration_refit_in_bootstrap": false,
+    "interval_scope": "conditional on saved LOSO/development fits; retraining uncertainty is not included",
+    "absolute_MAE_improvement": -4.739881870784862e-05,
+    "relative_MAE_improvement": -0.0012631898821082968,
+    "absolute_95_percent_interval": [
+      -0.006145784265758427,
+      0.0018125453237960026
+    ],
+    "relative_95_percent_interval": [
+      -0.35781448889657325,
+      0.027737055509634952
+    ],
+    "improvement_probability": 0.352,
+    "relative_valid_draws": 2000,
+    "baseline_selection_counts": {
+      "A1": 494,
+      "A2": 1506
+    },
+    "inferential_claim": "pilot scene-cluster interval; no gate decision",
+    "stronger_point_baseline": "A2",
+    "paired_equal_scene_MAE": {
+      "A1": 0.0407266522913616,
+      "A2": 0.03752311459995132,
+      "A3": 0.03757051341865917
+    },
+    "reason": null,
+    "family": "ALL",
+    "noise_branch": "all",
+    "evidence_scope": "deployable",
+    "evaluation_split": "held_scene",
+    "requested_scene_ids": [
+      "2001",
+      "2003",
+      "2014",
+      "2009"
+    ],
+    "missing_scene_ids": [],
+    "paired_scene_MAE": [
+      {
+        "scene_id": "2001",
+        "units": 48,
+        "A1": 0.018155797285218083,
+        "A2": 0.02840054152824414,
+        "A3": 0.027770728077657438
+      },
+      {
+        "scene_id": "2003",
+        "units": 48,
+        "A1": 0.11473379724679512,
+        "A2": 0.10161442159404845,
+        "A3": 0.09863800279542896
+      },
+      {
+        "scene_id": "2009",
+        "units": 48,
+        "A1": 0.015780824532853396,
+        "A2": 0.011782035591891756,
+        "A3": 0.013898788015254864
+      },
+      {
+        "scene_id": "2014",
+        "units": 48,
+        "A1": 0.014236190100579773,
+        "A2": 0.008295459685620956,
+        "A3": 0.009974534786295414
+      }
+    ]
+  },
+  "frozen_rule": {
+    "positive": "A3 median scene Spearman>=0.5 AND LOSO equal-scene MAE improvement versus stronger A1/A2>=0.15",
+    "clear_negative": "A3 median scene Spearman<0.5 AND scene-bootstrap upper MAE improvement<=0",
+    "other": "PARTIAL; do not enter B/C; expansion needs positive point screening signal",
+    "screening_never_formal_PASS": true,
+    "full_A_PASS_requires_24_scenes": true
+  },
+  "formal_24_scene_gate": "NOT_RUN",
+  "formal_A_PASS": false,
+  "scope": "four exposed scenes; LOSO screening only, conditional-on-fit scene bootstrap",
+  "next_action": "STOP before expansion, one-shot imaging and NN"
+}

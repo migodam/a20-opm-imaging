@@ -1,0 +1,62 @@
+{
+  "wall_seconds": 0.1519141659955494,
+  "process_cpu_seconds": 0.169607,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "archive_copies": 1
+  },
+  "exclusive_walls": {
+    "preserve_failed_attempt_artifacts": 0.015889291003986727
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 51380224,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "campaign": "A22",
+  "job_id": "a22-preserve-partial-002",
+  "stage": "exception",
+  "active_stage": "exception",
+  "stage_gpu_seconds": {
+    "screen_health": 0.0,
+    "features": 0.0,
+    "direction": 0.0,
+    "image": 0.0,
+    "runtime": 0.0,
+    "train": 0.0,
+    "exception": 0.0
+  },
+  "checkpoint_perf_counter": 52305.988814041,
+  "controller_process_cpu_seconds": 0.169608,
+  "child_process_cpu_seconds": 0.0,
+  "live_child_process_cpu_seconds": 0.0,
+  "corrections": {},
+  "role": "online",
+  "status": "COMPLETE",
+  "CPU_cap": null,
+  "gpu_wall_cap_seconds": 32400.0,
+  "stage_gpu_cap_seconds": 1800.0,
+  "nested_spans_not_additive": true,
+  "failed_imports_included": true,
+  "CPU_and_GPU_resources_not_summed": true,
+  "historical_A21_costs": "record only; excluded from A22 limits",
+  "measurement": "inclusive measured process CPU + child CPU; CUDA job inclusive wall",
+  "new_SHA256_checks": 0,
+  "outcome": {
+    "event_id": "a22-cuda-screen-002-controller-read-failure",
+    "campaign": "A22",
+    "job_id": "a22-cuda-screen-002",
+    "status": "INFRASTRUCTURE_FAILURE",
+    "error_type": "PermissionError",
+    "cause": "Windows watchdog checkpoint read; retry handler required native delete-sharing reader",
+    "committed_rows": 337,
+    "invalid_QPs": 0,
+    "source_archive": "results/a22/attempt_archive/a22-cuda-screen-002/stage_a",
+    "scientific_gate_failure": false,
+    "paid_receipt": "results/jobs/a22-cuda-screen-002/job_receipt.json",
+    "restart_reuses_cached_labels": true
+  }
+}

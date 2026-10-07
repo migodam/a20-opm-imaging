@@ -68,7 +68,7 @@ def portable_config(root, config):
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument('stage', choices=['preflight','prepare','prepare-evaluation','unit','validate','descriptor-validate','screen','pilot',
+    parser.add_argument('stage', choices=['preflight','prepare','prepare-evaluation','unit','validate','descriptor-validate','screen','screen-resume','pilot',
                                         'one-shot','train','report'])
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument('--device', choices=['cpu','cuda'], default='cpu')
@@ -79,7 +79,7 @@ def main(argv=None):
     root = args.root.resolve()
     config = load_config(root/'configs/a22.json')
     stage_map = dict(preflight='screen_health', prepare='screen_health', unit='screen_health',
-                     validate='screen_health', screen='screen_health', pilot='features',
+                     validate='screen_health', screen='screen_health', **{'screen-resume':'screen_health'}, pilot='features',
                      **{'one-shot':'image'}, train='train', report='exception')
     stage_map.update({'prepare-evaluation':'screen_health','descriptor-validate':'screen_health'})
     stage = os.environ.get('A22_BUDGET_STAGE', stage_map[args.stage])
@@ -115,14 +115,14 @@ def main(argv=None):
             elif args.stage=='descriptor-validate':
                 from .descriptor_health import run_descriptor_health
                 detail = run_descriptor_health(root,config,book,device=args.device)
-            elif args.stage in ('screen','pilot'):
+            elif args.stage in ('screen','screen-resume','pilot'):
                 from .evaluate import run_stage_a
                 if args.stage=='pilot':
                     decision = json.loads((root/'results/a22/SCREENING_DECISION.json').read_text())
                     if decision.get('screening_signal_positive') is not True:
                         raise BudgetExceeded('A22_EXPANSION_REQUIRES_POSITIVE_SCREENING_DECISION')
                 detail = run_stage_a(root, portable_config(root, config), book, device=args.device,
-                                     screening=args.stage=='screen')
+                                     screening=args.stage!='pilot', resume=args.stage=='screen-resume')
             elif args.stage in ('one-shot','train'):
                 decision = json.loads((root/'results/a22/GATE_DECISION.json').read_text())
                 gates = decision.get('gates', {})

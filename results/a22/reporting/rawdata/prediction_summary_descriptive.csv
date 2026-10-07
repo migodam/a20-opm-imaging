@@ -1,0 +1,13 @@
+evidence_scope,method,scenes_with_defined_spearman,median_scene_spearman,scenes_with_defined_MAE,equal_scene_mean_MAE,gate_interpretation
+deployable,A0,4,0.43557585776768915,4,0.06740553867207646,PARENT_ONLY
+deployable,A1,4,0.5188682033432731,4,0.058853337065087954,PARENT_ONLY
+deployable,A2,4,0.5004834922265886,4,172.75715494230118,PARENT_ONLY
+deployable,A3,4,0.5196924305411158,4,35.45158473284462,PARENT_ONLY
+oracle_only,A0,0,,0,,PARENT_ONLY
+oracle_only,A1,0,,0,,PARENT_ONLY
+oracle_only,A2,0,,0,,PARENT_ONLY
+oracle_only,A3,0,,0,,PARENT_ONLY
+unclassified,A0,0,,0,,PARENT_ONLY
+unclassified,A1,0,,0,,PARENT_ONLY
+unclassified,A2,0,,0,,PARENT_ONLY
+unclassified,A3,0,,0,,PARENT_ONLY

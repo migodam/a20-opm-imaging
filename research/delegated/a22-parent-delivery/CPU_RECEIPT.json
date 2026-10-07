@@ -1,0 +1,8 @@
+{
+  "scope": "a22-parent-delivery-source",
+  "status": "SOURCE_WORK_CONSERVATIVE",
+  "charged_conservative_cpu_seconds": 5.0,
+  "gpu_occupation_seconds": 0.0,
+  "measurement": "Explicit conservative allowance for parent preservation/render harness source edits and final documentation review; not measured experiment CPU",
+  "excludes": ["all metered unit/analysis/render jobs", "remote controller and child receipts", "other worker source receipts"]
+}

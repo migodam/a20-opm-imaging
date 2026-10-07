@@ -1,0 +1,146 @@
+{
+  "schema": "a22.statistical_reporting.result.v1",
+  "status": "STATISTICAL_REPORTING_WRITTEN",
+  "source": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json",
+  "source_error": null,
+  "selectors": {
+    "family": "ALL",
+    "evidence_scope": "deployable",
+    "noise_branch": "all",
+    "evaluation_split": "held_scene"
+  },
+  "report_directory": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical",
+  "rawdata": {
+    "aggregated_units": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/aggregated_units.csv",
+    "evaluated_units": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/evaluated_units.csv",
+    "calibration_scales": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/calibration_scales.csv",
+    "per_scene_statistics": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/per_scene_statistics.csv",
+    "summaries": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/summaries.csv",
+    "paired_scene_bootstrap": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/paired_scene_bootstrap.csv",
+    "calibrated_unit_plot_rows": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/reporting/statistical/rawdata/calibrated_unit_plot_rows.csv"
+  },
+  "figure_directory": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical",
+  "figure_count": 7,
+  "figures": [
+    {
+      "name": "calibrated_prediction_vs_coefficient_error",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_calibrated_prediction_vs_coefficient_error.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_calibrated_prediction_vs_coefficient_error.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes."
+    },
+    {
+      "name": "per_scene_spearman",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_per_scene_spearman.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_per_scene_spearman.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes. One displayed value per scene/method; no draw-count inference."
+    },
+    {
+      "name": "per_scene_mae",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_per_scene_mae.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_per_scene_mae.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes. One displayed value per scene/method; no draw-count inference."
+    },
+    {
+      "name": "grouped_error_vs_amplitude_noise",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_grouped_error_vs_amplitude_noise.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_grouped_error_vs_amplitude_noise.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes. Raw observation multiplicities are absent from plotted points."
+    },
+    {
+      "name": "paired_scene_incrementality",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_paired_scene_incrementality.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_paired_scene_incrementality.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes. Positive means lower A3 MAE. conditional on saved LOSO/development fits; retraining uncertainty is not included; no gate judgment."
+    },
+    {
+      "name": "offline_full_J_prediction",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_offline_full_J_prediction.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_offline_full_J_prediction.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes. Nuisance-profiled full-J witness is an offline benchmark and is excluded from deployable A0–A3 plots."
+    },
+    {
+      "name": "offline_full_J_total_prediction",
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_offline_full_J_total_prediction.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/figures/a22/statistical/held_scene_deployable_all_offline_full_J_total_prediction.svg",
+      "status": "RECORDED_STATISTICAL_EVIDENCE",
+      "sources": [
+        "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/three_fold_opm/implementation/results/a22/statistics/STATISTICS_EVIDENCE.json"
+      ],
+      "selectors": {
+        "family": "ALL",
+        "evidence_scope": "deployable",
+        "noise_branch": "all",
+        "evaluation_split": "held_scene"
+      },
+      "caption": "held_scene; deployable; all. Saved averaged units and frozen scales; correlated units are not independent scenes. Full-J total response/sensitivity ridge baseline is an offline benchmark and is excluded from deployable A0–A3 plots."
+    }
+  ],
+  "figure_error": null,
+  "complete_calibrated_unit_method_pairs": 1152,
+  "saved_scene_statistic_rows": 24,
+  "uniquely_matching_bootstrap": true,
+  "statistical_results_recomputed": false,
+  "gate_decisions_evaluated_by_reporter": false,
+  "physics_executed": false,
+  "CPU_accounting": "Caller must meter this entire invocation."
+}

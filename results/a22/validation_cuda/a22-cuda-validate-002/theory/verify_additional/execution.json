@@ -1,0 +1,53 @@
+{
+  "name": "verify_additional",
+  "source": "D:\\AI\\A22_THREE_FOLD_OPM\\protocol\\a22\\verification\\verify_additional.py",
+  "output_directory": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\a22-cuda-validate-002\\theory\\verify_additional",
+  "execution_device": "cpu",
+  "status": "PASS",
+  "original_protocol_result_preserved": true,
+  "result_path": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\a22-cuda-validate-002\\theory\\verify_additional\\additional_results.json",
+  "result": {
+    "seed": 20261008,
+    "task_curvature_t10": {
+      "seed": 20261010,
+      "identity_relative_error": 4.20098542644006e-14,
+      "nonlinear_witness_magnitude": 0.014147685045774896,
+      "exact_pairing_bound": 0.0585159537030245,
+      "residual_bound": 0.17864914532631818,
+      "actual_over_exact_bound": 0.24177483490359053,
+      "actual_over_residual_bound": 0.07919257055460814,
+      "t_exact": 0.0546266492008941,
+      "t_upper": 0.07216005911523786,
+      "warning": "Full alpha_L and chosen delta_X are evaluation inputs, not free online certificates."
+    },
+    "profiled_tikhonov": [
+      {
+        "lambda": 0.0,
+        "error": 0.004665733149931819,
+        "bound": 0.040839474529114066,
+        "ratio": 0.11424567048740215,
+        "nuisance_leak": 8.935028228915295e-16
+      },
+      {
+        "lambda": 0.01,
+        "error": 0.012036557518244402,
+        "bound": 0.052908021140703275,
+        "ratio": 0.22749967318253037,
+        "nuisance_leak": 6.200960866199864e-16
+      },
+      {
+        "lambda": 0.5,
+        "error": 0.2904605115224117,
+        "bound": 0.4801131891039868,
+        "ratio": 0.6049834041520185,
+        "nuisance_leak": 2.5537502661287905e-16
+      }
+    ],
+    "compressed_likelihood_relative_error": 1.5444299198629802e-16,
+    "prior_safe_radius": 0.17320508075688773,
+    "prior_data_change_at_radius": 0.03,
+    "schur_complete_map_relative_error": 2.5598662962430027e-16,
+    "warning": "Algebra checks only. Project imaging gates remain NOT_RUN."
+  },
+  "count_origin": "source-static complete execution counts, conservatively prepaid"
+}

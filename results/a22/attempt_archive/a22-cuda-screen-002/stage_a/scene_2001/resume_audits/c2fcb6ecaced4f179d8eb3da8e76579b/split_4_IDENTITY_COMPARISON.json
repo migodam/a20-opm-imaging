@@ -1,0 +1,20 @@
+[
+  {
+    "prior_attempt": 0,
+    "split_rank": 4,
+    "identity_residuals": {
+      "orthogonality": {
+        "saved": 1.0128420408323855e-15,
+        "regenerated": 1.0128420408323855e-15,
+        "absolute_difference": 0.0,
+        "dimensionless_identity_tolerance": 1e-09
+      },
+      "nuisance_leakage": {
+        "saved": 1.9665536501848895e-16,
+        "regenerated": 1.9665536501848895e-16,
+        "absolute_difference": 0.0,
+        "dimensionless_identity_tolerance": 1e-09
+      }
+    }
+  }
+]

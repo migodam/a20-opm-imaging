@@ -1,0 +1,20 @@
+{
+  "scope": "a22-transport-051d3a5cf5f842da8d69dffaa48902cc",
+  "action": "deploy",
+  "status": "COMPLETE",
+  "process_cpu_seconds": 0.254705,
+  "wall_seconds": 2.567929750002804,
+  "remote_process_cpu_seconds": 0.0625,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {
+    "status": "A22_DEPLOYED",
+    "members": 158,
+    "remote_process_cpu_seconds": 0.0625,
+    "member_count": 158,
+    "compressed_bytes": 610965,
+    "private_files_transferred": false,
+    "original_A20_A21_written": false
+  },
+  "new_SHA256_checks": 0
+}

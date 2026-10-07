@@ -1,0 +1,10 @@
+{
+  "name": "verify_additional",
+  "source": "D:\\AI\\A22_THREE_FOLD_OPM\\protocol\\a22\\verification\\verify_additional.py",
+  "output_directory": "D:\\AI\\A22_THREE_FOLD_OPM\\results\\a22\\validation_cuda\\theory\\verify_additional",
+  "execution_device": "cpu",
+  "status": "FAILED",
+  "original_protocol_result_preserved": false,
+  "error_type": "PermissionError",
+  "error": "[WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'D:\\\\AI\\\\A22_THREE_FOLD_OPM\\\\results\\\\jobs\\\\a22-cuda-validate-001\\\\accounting_checkpoint.json.tmp' -> 'D:\\\\AI\\\\A22_THREE_FOLD_OPM\\\\results\\\\jobs\\\\a22-cuda-validate-001\\\\accounting_checkpoint.json'"
+}

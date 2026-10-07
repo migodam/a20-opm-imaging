@@ -1,13 +1,11 @@
-# A20 OPM imaging: pilot and R1 mechanism archive
+# A22 Three-Fold OPM — local gated pilot
 
-Read [START_HERE.md](START_HERE.md) for the actual result, reproduction inputs and evidence.
+Read [START_HERE.md](START_HERE.md) for the completed local evidence package.
 
-**R1: INCONCLUSIVE; legal enrichment fails Gate B.** Five Gaussian late-state cohorts completed 30 valid QPs at actual rank 56. Protected offline oracle retains the reference-direction tangent but fails to recover the reduced GN minimizer. An early baseline reproducibility conflict stopped the remaining matrix. Closed-loop imaging, history ablation and NN are NOT_RUN. See [R1 report](LATE_STATE_SEED_ANATOMY.md), [R1 gate](GATE_DECISION.json), [R1 reproduction](REPRODUCE_R1.md) and [publication receipt](results/a20_r1/PUBLICATION.json).
+Stage A screening: **PARTIAL / STOP**. Four exposed Maxwell scenes, 32 clean finite labels, 2112 valid coefficient-recovery cases, fixed U8/O4/P4/M4 degree1/current rank32. A3 median scene correlation=0.5069, MAE improvement over stronger A1/A2=−0.1263%; the paired scene interval crosses zero.
 
-The original A20 pilot below and its [original entry](A20_PILOT_START_HERE.md) remain historical evidence.
+130 unit/tiny tests and supplied/real-backend health checks pass. This verifies implementation consistency. The 24-scene study, one-shot imaging and NN are **NOT_RUN**; deployment timing Gate T is **NOT_ESTABLISHED**. No publication or automatic follow-on stage.
 
-Registered backend checks passed; six historically exposed 3D vector-Maxwell objects were attempted at two frozen states each. The current implementation does not advance to nonlinear imaging: both voxel references failed KKT validation, and the five Gaussian parents have large late-state H-step errors. Complete-cohort representation screening is **HOLD**; progression is **NO_GO**. Nonlinear quality and deployment acceleration are **NOT_RUN**.
+Known background is `0.1+0.04i`; forecasts remain empirical. Original objects exceed the declared pointwise prior and substantial material energy lies outside the fixed32 model. Full J appears only in offline comparisons.
 
-No neural training or Maxwell solver acceleration was performed. All reference, failed and audit work is charged within the fixed two-hour CPU and twelve-hour GPU limits. Runtime inputs and offline labels are separate. Historical SHA256 fields are retained without new checks.
-
-See [Chinese report](RESEARCH_REPORT_ZH.md), [gate decision](results/GATE_DECISION.json), [reproduction](docs/REPRODUCE.md), [backend map](docs/BACKEND_MAP.md), and [publication receipt](results/PUBLICATION.json).
+This worktree inherits frozen A21 source and historical files. A22's decision authority is exclusively `results/a22/GATE_DECISION.json`; the old root-level gate/report files are historical A21 material.

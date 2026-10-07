@@ -1,0 +1,7 @@
+test_exact_registered_job_and_module (test_a22_stop_owner.StopOwnerTests.test_exact_registered_job_and_module) ... ok
+test_root_prefix_and_other_stage_refused (test_a22_stop_owner.StopOwnerTests.test_root_prefix_and_other_stage_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK

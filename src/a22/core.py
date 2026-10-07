@@ -133,17 +133,25 @@ def constrained_material_solve(A, d, chart, chi0, config, book, *, basis=None, l
     objective_scale = max(float(la.norm(g)), lam, 1e-12)
     with book.span('a22_material_subproblem', material_subproblems=1):
         unconstrained = -la.solve(H, g, assume_a='pos')
-        result = {'iterations': 0, 'solver': 'direct-SPD'}
+        result = {'iterations': 0, 'solver': 'direct-SPD',
+                  'original_inequality_count': int(len(lower)),
+                  'solver_inequality_count': 0}
         if np.min(C@unconstrained-lower) >= -1e-11:
             x = unconstrained
         else:
             fun = lambda x: float(.5*x@H@x+g@x)/objective_scale
             jac = lambda x: (H@x+g)/objective_scale
+            # Only exactly equal coefficient/bound rows are redundant.
+            # Include the bound in equality; retain original first-occurrence
+            # order and the full C/lower below for feasibility and KKT audits.
+            _, first = np.unique(np.column_stack((C, lower)), axis=0, return_index=True)
+            first = np.sort(first)
             opt = minimize(fun, np.zeros(n), jac=jac,
-                           constraints=[LinearConstraint(C, lower, np.inf)], method='SLSQP',
+                           constraints=[LinearConstraint(C[first], lower[first], np.inf)], method='SLSQP',
                            options={'ftol': 1e-16, 'maxiter': config.get('qp_maxiter', 200)})
             x = opt.x
-            result.update(iterations=int(opt.nit), solver='SLSQP-common-quadratic', solver_success=bool(opt.success))
+            result.update(iterations=int(opt.nit), solver='SLSQP-common-quadratic', solver_success=bool(opt.success),
+                          solver_inequality_count=int(len(first)))
         gradient = H@x+g
         normal, audit = _normal(C, lower, x, gradient, tol)
         relative = float(la.norm(audit['defect']))/max(float(la.norm(g)), 1e-12)

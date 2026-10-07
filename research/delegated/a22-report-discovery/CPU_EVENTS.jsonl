@@ -1,0 +1,2 @@
+{"scope": "a22-report-discovery", "event": "minimal_discovery_patch_and_three_fixture_sources", "process_cpu_s": 0.0, "child_cpu_s": 0.0, "implementation_patch_cpu_allowance_s": 5.0, "allowance_is_measured": false}
+{"scope": "a22-report-discovery", "event": "source_only_verification_summary_and_receipt", "process_cpu_s": 0.0007430000000000023, "child_cpu_s": 0.0, "implementation_shell_cpu_allowance_s": 1.0, "duration_wall_s": 0.008267166999999999, "allowance_is_measured": false}

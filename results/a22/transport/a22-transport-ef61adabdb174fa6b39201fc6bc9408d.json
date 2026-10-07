@@ -1,0 +1,12 @@
+{
+  "scope": "a22-transport-ef61adabdb174fa6b39201fc6bc9408d",
+  "action": "preflight",
+  "status": "FAILED",
+  "process_cpu_seconds": 0.052267999999999995,
+  "wall_seconds": 0.3756891250013723,
+  "remote_process_cpu_seconds": 0.0,
+  "GPU_seconds": 0.0,
+  "measurement": "local process startup/import CPU + local child CPU + unbilled remote transport CPU",
+  "details": {},
+  "new_SHA256_checks": 0
+}

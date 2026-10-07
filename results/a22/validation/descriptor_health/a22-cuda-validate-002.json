@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "evidence": "tiny DenseDDA only, no project gate",
+  "checks": [
+    {
+      "name": "actual_two_sided_defect_identity",
+      "relative_error": 9.163236511366815e-15,
+      "tolerance": 1e-09,
+      "status": "PASS"
+    },
+    {
+      "name": "actual_polarizability_second_derivative",
+      "relative_error": 2.6784376808773924e-11,
+      "tolerance": 1e-07,
+      "status": "PASS"
+    }
+  ],
+  "predictions_frozen_before_J": true,
+  "current_rank": 32,
+  "nonlinear_measurements": [
+    {
+      "amplitude": 0.001,
+      "task_remainder": 3.0898005141192406e-07,
+      "paired_nonlinear_budget": 3.367728272056846,
+      "certificate_type": "empirical_indicator"
+    },
+    {
+      "amplitude": 0.004,
+      "task_remainder": 4.9403543464270236e-06,
+      "paired_nonlinear_budget": 3.588975120357826,
+      "certificate_type": "empirical_indicator"
+    },
+    {
+      "amplitude": 0.01,
+      "task_remainder": 3.083567576953254e-05,
+      "paired_nonlinear_budget": 4.059216637004743,
+      "certificate_type": "empirical_indicator"
+    }
+  ],
+  "region_uniform_project_certificate": false,
+  "context_provenance": {
+    "origin": "known_background_OPM_and_residual_actions",
+    "full_J_full_H_full_adjoint_or_truth_used": false,
+    "IR_definition": "B - L Q (Q* L Q)^-1 Q* B, six source blocks",
+    "OR_dual_definition": "S_white* h - L* Q (Q* L Q)^-* Q* S_white* h",
+    "full_L_margin_origin": "1 - sqrt(norm1(F) normInf(F)), sufficient only",
+    "full_L_minimum_bound": 0.6942577445209785,
+    "background_F_norm_bound": 0.3057422554790215,
+    "missing_positive_margin": false,
+    "polarizability_nonlinearity_included": true,
+    "certificate_type": "empirical_indicator",
+    "model_component_certificate_type": "deterministic_bound",
+    "physical_calibration_budget": "source amplitude 5%, receiver gain 3%, same Maxwell source/receiver layout",
+    "regularization": 39796.706263240005,
+    "declared_material_pointwise_prior": 0.25,
+    "declared_material_radius": 0.4592793267718459,
+    "W_external_response": "known-background voxel injection residual, no truth projection used",
+    "calibration_capacity": "one nonnegative multiplicative coefficient per method, same fit scenes"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "a22.validation.v1",
+  "status": "FAILED",
+  "device": "cuda",
+  "source_freeze": "8aa2d5d03c8fc41bda508c2e173a45fa2fea956a",
+  "scientific_gates_adjudicated": false,
+  "claim": "implementation health only; no continuum or recovery acceptance",
+  "theory": [],
+  "backend": null,
+  "error_type": "PermissionError",
+  "error": "[WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: 'D:\\\\AI\\\\A22_THREE_FOLD_OPM\\\\results\\\\jobs\\\\a22-cuda-validate-001\\\\accounting_checkpoint.json.tmp' -> 'D:\\\\AI\\\\A22_THREE_FOLD_OPM\\\\results\\\\jobs\\\\a22-cuda-validate-001\\\\accounting_checkpoint.json'",
+  "inclusive_wall_seconds": 7.407017599995015,
+  "controller_process_cpu_seconds": 5.53125,
+  "CPU_accounting": "caller ledger includes child CPU and all nested work",
+  "count_delta": {
+    "validation_runs": 1,
+    "provided_verifier_runs": 2,
+    "provided_toy_state_evaluations": 7,
+    "provided_toy_full_LU_factorizations": 31,
+    "provided_toy_forward_RHS": 21,
+    "provided_toy_material_RHS": 168,
+    "provided_toy_defect_RHS": 24,
+    "F_calls": 6,
+    "data_generation_F_calls": 6
+  },
+  "caller_book_finished": false
+}
