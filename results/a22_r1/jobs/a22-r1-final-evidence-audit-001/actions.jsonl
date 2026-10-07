@@ -1,0 +1,1 @@
+{"event": "a22_r1_final_readonly_evidence_audit", "phase": "online", "counters": {"final_evidence_audits": 1}, "status": "FAILED", "job": "a22-r1-final-evidence-audit-001", "error": "ValueError: could not convert string to float: 'True'", "wall_seconds": 0.0026257080025970936, "exclusive_wall_seconds": 0.0026257080025970936, "process_cpu_seconds": 0.001683999999999998}

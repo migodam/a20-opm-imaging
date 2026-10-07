@@ -1,0 +1,31 @@
+{
+  "Test_B_started": false,
+  "absolute_tolerance_scale": 1e-08,
+  "attempted_cases": 2112,
+  "cached_QP_contract": "ALL_2112_VALID",
+  "common_source": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+  "counts": {
+    "MATCH": 2086,
+    "MISMATCH": 26
+  },
+  "explicit_pre_outcome_addendum": "REPRODUCTION_CONFLICT_ADDENDUM.md",
+  "full_solution_archive": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_SOLUTIONS.npz",
+  "historical_scalar_gate": "FAILED_RETAINED",
+  "max_absolute_differences": {
+    "coefficient_error": 4.164619049271123e-08,
+    "material_error": 1.631117072381505e-07,
+    "raw_target_coefficient": 2.7755575615628914e-17,
+    "signed_target_error": 4.164619049271123e-08
+  },
+  "new_common_QP_solves": 0,
+  "registered_cases": 2112,
+  "schema": "a22_r1.common_reproduction.v1",
+  "split_tuning": false,
+  "status": "FAILED",
+  "validation_maxima": {
+    "feasibility_violation": 7.632783294297951e-16,
+    "kkt_relative": 9.751508680986546e-09,
+    "normal_cone_relative": 2.657940278647355e-16,
+    "quadratic_relative_difference": 2.1345755180595088e-15
+  }
+}

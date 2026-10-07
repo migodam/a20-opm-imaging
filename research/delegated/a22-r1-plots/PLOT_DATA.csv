@@ -1,0 +1,277 @@
+plot,panel,scene,method,k,test,x_metric,y_metric,x,y,statistic,scene_clusters,source,full_J_scope
+A,main,2001,RANDOM,16,A,nrmse_phys,nrmse_prior,0.5177556371219673,1.0397468173531599,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2003,RANDOM,16,A,nrmse_phys,nrmse_prior,0.643978614666948,1.567761680871242,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2014,RANDOM,16,A,nrmse_phys,nrmse_prior,1.877505795135823,0.7219181829507382,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2009,RANDOM,16,A,nrmse_phys,nrmse_prior,0.9434682699404241,2.102102690552839,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2001,A1,16,A,nrmse_phys,nrmse_prior,0.46886903727590984,1.302509165258716,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2003,A1,16,A,nrmse_phys,nrmse_prior,0.6536227088531482,2.0523792299117365,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2014,A1,16,A,nrmse_phys,nrmse_prior,0.37506907886981083,1.671361743779869,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2009,A1,16,A,nrmse_phys,nrmse_prior,0.6013281524322912,2.166423221380064,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2001,A2,16,A,nrmse_phys,nrmse_prior,0.46886903727590984,1.302509165258716,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2003,A2,16,A,nrmse_phys,nrmse_prior,0.6536227088531482,2.0523792299117365,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2014,A2,16,A,nrmse_phys,nrmse_prior,0.37506907886981083,1.671361743779869,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2009,A2,16,A,nrmse_phys,nrmse_prior,0.6013281524322912,2.166423221380064,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2001,A3,16,A,nrmse_phys,nrmse_prior,0.46886903727590984,1.302509165258716,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2003,A3,16,A,nrmse_phys,nrmse_prior,0.6536227088531482,2.0523792299117365,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2014,A3,16,A,nrmse_phys,nrmse_prior,0.3750690788698108,1.671361743779869,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2009,A3,16,A,nrmse_phys,nrmse_prior,0.6013281524322912,2.166423221380064,scene,1,parent-supplied within-scene replicate average,online-legal
+A,main,2001,OFFLINE_FULL_J,16,A,nrmse_phys,nrmse_prior,0.46886903727590984,1.302509165258716,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+A,main,2003,OFFLINE_FULL_J,16,A,nrmse_phys,nrmse_prior,0.5944590533237208,1.508106600727988,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+A,main,2014,OFFLINE_FULL_J,16,A,nrmse_phys,nrmse_prior,0.6314800139635418,1.6876668281916691,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+A,main,2009,OFFLINE_FULL_J,16,A,nrmse_phys,nrmse_prior,0.6013281524322912,2.166423221380064,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+B,main,2001,RANDOM,16,A,f_truth_phys,f_error_phys,0.7732256698812884,0.4747833964823074,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2003,RANDOM,16,A,f_truth_phys,f_error_phys,0.8527990240167195,0.4947311740888221,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2014,RANDOM,16,A,f_truth_phys,f_error_phys,0.2284031409534145,0.6255778341645911,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2009,RANDOM,16,A,f_truth_phys,f_error_phys,0.7109214730198964,0.32909701488008697,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2001,A1,16,A,f_truth_phys,f_error_phys,0.8450670475349483,0.4329667877031163,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2003,A1,16,A,f_truth_phys,f_error_phys,0.9242427103521401,0.5544989497599458,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2014,A1,16,A,f_truth_phys,f_error_phys,0.6044514073958697,0.0741078597835957,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2009,A1,16,A,f_truth_phys,f_error_phys,0.6368681365287816,0.12236736727834802,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2001,A2,16,A,f_truth_phys,f_error_phys,0.8450670475349485,0.4329667877031163,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2003,A2,16,A,f_truth_phys,f_error_phys,0.9242427103521401,0.5544989497599458,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2014,A2,16,A,f_truth_phys,f_error_phys,0.6044514073958697,0.0741078597835957,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2009,A2,16,A,f_truth_phys,f_error_phys,0.6368681365287816,0.12236736727834802,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2001,A3,16,A,f_truth_phys,f_error_phys,0.8450670475349485,0.4329667877031163,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2003,A3,16,A,f_truth_phys,f_error_phys,0.9242427103521401,0.5544989497599458,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2014,A3,16,A,f_truth_phys,f_error_phys,0.6044514073958697,0.0741078597835957,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2009,A3,16,A,f_truth_phys,f_error_phys,0.6368681365287816,0.12236736727834802,scene,1,parent-supplied within-scene replicate average,online-legal
+B,main,2001,OFFLINE_FULL_J,16,A,f_truth_phys,f_error_phys,0.8450670475349485,0.4329667877031163,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+B,main,2003,OFFLINE_FULL_J,16,A,f_truth_phys,f_error_phys,0.8106523092333281,0.4007201953384769,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+B,main,2014,OFFLINE_FULL_J,16,A,f_truth_phys,f_error_phys,0.6721365128194369,0.2352760213773877,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+B,main,2009,OFFLINE_FULL_J,16,A,f_truth_phys,f_error_phys,0.6368681365287816,0.12236736727834802,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qphys,2001,RANDOM,16,A,method_position,qphys,-0.18,0.6142214414986527,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2003,RANDOM,16,A,method_position,qphys,-0.06,0.5804328630240619,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2014,RANDOM,16,A,method_position,qphys,0.06,3.38375389240071,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2009,RANDOM,16,A,method_position,qphys,0.18,0.4627824461555255,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,,RANDOM,16,A,method_position,qphys,0,0.5973271522613572,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qphys,2001,A1,16,A,method_position,qphys,0.8200000000000001,0.5144152981700115,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2003,A1,16,A,method_position,qphys,0.94,0.5998708892040137,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2014,A1,16,A,method_position,qphys,1.06,0.12578133902475247,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2009,A1,16,A,method_position,qphys,1.18,0.19408362436370455,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,,A1,16,A,method_position,qphys,1,0.354249461266858,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qphys,2001,A2,16,A,method_position,qphys,1.82,0.5144152981700115,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2003,A2,16,A,method_position,qphys,1.94,0.5998708892040137,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2014,A2,16,A,method_position,qphys,2.06,0.12578133902475247,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2009,A2,16,A,method_position,qphys,2.18,0.19408362436370455,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,,A2,16,A,method_position,qphys,2,0.354249461266858,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qphys,2001,A3,16,A,method_position,qphys,2.82,0.5144152981700115,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2003,A3,16,A,method_position,qphys,2.94,0.5998708892040137,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2014,A3,16,A,method_position,qphys,3.06,0.12578133902475247,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,2009,A3,16,A,method_position,qphys,3.18,0.19408362436370455,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qphys,,A3,16,A,method_position,qphys,3,0.354249461266858,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qphys,2001,OFFLINE_FULL_J,16,A,method_position,qphys,3.82,0.5144152981700115,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qphys,2003,OFFLINE_FULL_J,16,A,method_position,qphys,3.94,0.4946481075731362,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qphys,2014,OFFLINE_FULL_J,16,A,method_position,qphys,4.06,0.35642188877595476,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qphys,2009,OFFLINE_FULL_J,16,A,method_position,qphys,4.18,0.19408362436370455,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qphys,,OFFLINE_FULL_J,16,A,method_position,qphys,4,0.4255349981745455,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qprior,2001,RANDOM,16,A,method_position,qprior,-0.18,2.506709101807935,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2003,RANDOM,16,A,method_position,qprior,-0.06,3.4642373623752882,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2014,RANDOM,16,A,method_position,qprior,0.06,0.4800415709205465,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2009,RANDOM,16,A,method_position,qprior,0.18,2.3243751984148475,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,,RANDOM,16,A,method_position,qprior,0,2.415542150111391,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qprior,2001,A1,16,A,method_position,qprior,0.8200000000000001,3.9884269175885634,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2003,A1,16,A,method_position,qprior,0.94,5.899154730374473,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2014,A1,16,A,method_position,qprior,1.06,2.8899923466990622,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2009,A1,16,A,method_position,qprior,1.18,2.4484639570528066,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,,A1,16,A,method_position,qprior,1,3.439209632143813,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qprior,2001,A2,16,A,method_position,qprior,1.82,3.9884269175885634,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2003,A2,16,A,method_position,qprior,1.94,5.899154730374473,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2014,A2,16,A,method_position,qprior,2.06,2.8899923466990622,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2009,A2,16,A,method_position,qprior,2.18,2.4484639570528066,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,,A2,16,A,method_position,qprior,2,3.439209632143813,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qprior,2001,A3,16,A,method_position,qprior,2.82,3.9884269175885634,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2003,A3,16,A,method_position,qprior,2.94,5.899154730374473,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2014,A3,16,A,method_position,qprior,3.06,2.8899923466990622,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,2009,A3,16,A,method_position,qprior,3.18,2.4484639570528066,scene,1,parent-supplied within-scene replicate average,online-legal
+C,qprior,,A3,16,A,method_position,qprior,3,3.439209632143813,median_scene,4,parent-supplied within-scene replicate average,online-legal
+C,qprior,2001,OFFLINE_FULL_J,16,A,method_position,qprior,3.82,3.988426917588564,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qprior,2003,OFFLINE_FULL_J,16,A,method_position,qprior,3.94,3.20467149034854,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qprior,2014,OFFLINE_FULL_J,16,A,method_position,qprior,4.06,2.972531439469735,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qprior,2009,OFFLINE_FULL_J,16,A,method_position,qprior,4.18,2.4484639570528066,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+C,qprior,,OFFLINE_FULL_J,16,A,method_position,qprior,4,3.0886014649091376,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+D,nrmse_phys,2001,A2,16,A,A2_A3_position,nrmse_phys,0,0.46886903727590984,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2001,A3,16,A,A2_A3_position,nrmse_phys,1,0.46886903727590984,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2003,A2,16,A,A2_A3_position,nrmse_phys,0,0.6536227088531482,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2003,A3,16,A,A2_A3_position,nrmse_phys,1,0.6536227088531482,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2014,A2,16,A,A2_A3_position,nrmse_phys,0,0.37506907886981083,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2014,A3,16,A,A2_A3_position,nrmse_phys,1,0.3750690788698108,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2009,A2,16,A,A2_A3_position,nrmse_phys,0,0.6013281524322912,scene,1,parent-supplied within-scene replicate average,online-legal
+D,nrmse_phys,2009,A3,16,A,A2_A3_position,nrmse_phys,1,0.6013281524322912,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2001,A2,16,A,A2_A3_position,s_sep,0,2.882803879615522,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2001,A3,16,A,A2_A3_position,s_sep,1,2.882803879615522,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2003,A2,16,A,A2_A3_position,s_sep,0,3.141587735665888,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2003,A3,16,A,A2_A3_position,s_sep,1,3.1415877356658886,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2014,A2,16,A,A2_A3_position,s_sep,0,4.743732249788459,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2014,A3,16,A,A2_A3_position,s_sep,1,4.743732249788459,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2009,A2,16,A,A2_A3_position,s_sep,0,3.657218749418542,scene,1,parent-supplied within-scene replicate average,online-legal
+D,s_sep,2009,A3,16,A,A2_A3_position,s_sep,1,3.657218749418542,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,RANDOM,8,A,k_position,nrmse_phys,-0.14800000000000002,0.9821316898606903,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,RANDOM,8,A,k_position,nrmse_phys,-0.136,1.6535709767647708,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,RANDOM,8,A,k_position,nrmse_phys,-0.124,1.4366746144860285,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,RANDOM,8,A,k_position,nrmse_phys,-0.112,0.701768445391106,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,RANDOM,8,A,k_position,nrmse_phys,-0.13,1.2094031521733595,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,RANDOM,16,A,k_position,nrmse_phys,0.852,0.5177556371219673,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,RANDOM,16,A,k_position,nrmse_phys,0.864,0.643978614666948,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,RANDOM,16,A,k_position,nrmse_phys,0.876,1.877505795135823,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,RANDOM,16,A,k_position,nrmse_phys,0.888,0.9434682699404241,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,RANDOM,16,A,k_position,nrmse_phys,0.87,0.7937234423036861,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,A1,8,A,k_position,nrmse_phys,-0.083,0.3125594080786675,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,A1,8,A,k_position,nrmse_phys,-0.07100000000000001,0.37335994316492765,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,A1,8,A,k_position,nrmse_phys,-0.059000000000000004,0.3143397786708206,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,A1,8,A,k_position,nrmse_phys,-0.047,0.34860699984557786,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,A1,8,A,k_position,nrmse_phys,-0.065,0.33147338925819925,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,A1,16,A,k_position,nrmse_phys,0.917,0.46886903727590984,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,A1,16,A,k_position,nrmse_phys,0.929,0.6536227088531482,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,A1,16,A,k_position,nrmse_phys,0.9410000000000001,0.37506907886981083,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,A1,16,A,k_position,nrmse_phys,0.9530000000000001,0.6013281524322912,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,A1,16,A,k_position,nrmse_phys,0.935,0.5350985948541005,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,A2,8,A,k_position,nrmse_phys,-0.018000000000000002,0.3125594080786675,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,A2,8,A,k_position,nrmse_phys,-0.006,0.37335994316492765,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,A2,8,A,k_position,nrmse_phys,0.006,0.3143397786708206,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,A2,8,A,k_position,nrmse_phys,0.018000000000000002,0.34860699984557786,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,A2,8,A,k_position,nrmse_phys,0.0,0.33147338925819925,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,A2,16,A,k_position,nrmse_phys,0.982,0.46886903727590984,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,A2,16,A,k_position,nrmse_phys,0.994,0.6536227088531482,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,A2,16,A,k_position,nrmse_phys,1.006,0.37506907886981083,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,A2,16,A,k_position,nrmse_phys,1.018,0.6013281524322912,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,A2,16,A,k_position,nrmse_phys,1.0,0.5350985948541005,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,A3,8,A,k_position,nrmse_phys,0.047,0.3125594080786675,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,A3,8,A,k_position,nrmse_phys,0.059000000000000004,0.37335994316492765,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,A3,8,A,k_position,nrmse_phys,0.07100000000000001,0.3143397786708205,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,A3,8,A,k_position,nrmse_phys,0.083,0.34860699984557786,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,A3,8,A,k_position,nrmse_phys,0.065,0.3314733892581992,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,A3,16,A,k_position,nrmse_phys,1.047,0.46886903727590984,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2003,A3,16,A,k_position,nrmse_phys,1.059,0.6536227088531482,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2014,A3,16,A,k_position,nrmse_phys,1.071,0.3750690788698108,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2009,A3,16,A,k_position,nrmse_phys,1.083,0.6013281524322912,scene,1,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,,A3,16,A,k_position,nrmse_phys,1.065,0.5350985948541005,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,nrmse_phys,2001,OFFLINE_FULL_J,8,A,k_position,nrmse_phys,0.112,0.3125594080786675,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2003,OFFLINE_FULL_J,8,A,k_position,nrmse_phys,0.124,0.37335994316492765,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2014,OFFLINE_FULL_J,8,A,k_position,nrmse_phys,0.136,0.3143397786708205,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2009,OFFLINE_FULL_J,8,A,k_position,nrmse_phys,0.14800000000000002,0.34860699984557786,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,,OFFLINE_FULL_J,8,A,k_position,nrmse_phys,0.13,0.3314733892581992,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2001,OFFLINE_FULL_J,16,A,k_position,nrmse_phys,1.1119999999999999,0.46886903727590984,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2003,OFFLINE_FULL_J,16,A,k_position,nrmse_phys,1.1239999999999999,0.5944590533237208,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2014,OFFLINE_FULL_J,16,A,k_position,nrmse_phys,1.136,0.6314800139635418,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,2009,OFFLINE_FULL_J,16,A,k_position,nrmse_phys,1.148,0.6013281524322912,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,nrmse_phys,,OFFLINE_FULL_J,16,A,k_position,nrmse_phys,1.13,0.597893602878006,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2001,RANDOM,8,A,k_position,s_sep,-0.14800000000000002,0.6287838715539228,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,RANDOM,8,A,k_position,s_sep,-0.136,0.46734844563985173,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,RANDOM,8,A,k_position,s_sep,-0.124,0.7135340345982316,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,RANDOM,8,A,k_position,s_sep,-0.112,2.8589313639920615,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,RANDOM,8,A,k_position,s_sep,-0.13,0.6711589530760772,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,RANDOM,16,A,k_position,s_sep,0.852,2.0267100980867907,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,RANDOM,16,A,k_position,s_sep,0.864,2.447816203495338,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,RANDOM,16,A,k_position,s_sep,0.876,0.39821783501277563,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,RANDOM,16,A,k_position,s_sep,0.888,2.2585137913543134,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,RANDOM,16,A,k_position,s_sep,0.87,2.142611944720552,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,A1,8,A,k_position,s_sep,-0.083,3.4120832420772236,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,A1,8,A,k_position,s_sep,-0.07100000000000001,4.578571842585028,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,A1,8,A,k_position,s_sep,-0.059000000000000004,5.200492177916316,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,A1,8,A,k_position,s_sep,-0.047,6.1233811074913085,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,A1,8,A,k_position,s_sep,-0.065,4.889532010250672,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,A1,16,A,k_position,s_sep,0.917,2.882803879615522,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,A1,16,A,k_position,s_sep,0.929,3.1415877356658886,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,A1,16,A,k_position,s_sep,0.9410000000000001,4.743732249788459,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,A1,16,A,k_position,s_sep,0.9530000000000001,3.657218749418542,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,A1,16,A,k_position,s_sep,0.935,3.399403242542215,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,A2,8,A,k_position,s_sep,-0.018000000000000002,3.4120832420772236,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,A2,8,A,k_position,s_sep,-0.006,4.578571842585028,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,A2,8,A,k_position,s_sep,0.006,5.200492177916316,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,A2,8,A,k_position,s_sep,0.018000000000000002,6.1233811074913085,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,A2,8,A,k_position,s_sep,0.0,4.889532010250672,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,A2,16,A,k_position,s_sep,0.982,2.882803879615522,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,A2,16,A,k_position,s_sep,0.994,3.141587735665888,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,A2,16,A,k_position,s_sep,1.006,4.743732249788459,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,A2,16,A,k_position,s_sep,1.018,3.657218749418542,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,A2,16,A,k_position,s_sep,1.0,3.399403242542215,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,A3,8,A,k_position,s_sep,0.047,3.4120832420772236,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,A3,8,A,k_position,s_sep,0.059000000000000004,4.578571842585028,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,A3,8,A,k_position,s_sep,0.07100000000000001,5.200492177916316,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,A3,8,A,k_position,s_sep,0.083,6.1233811074913085,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,A3,8,A,k_position,s_sep,0.065,4.889532010250672,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,A3,16,A,k_position,s_sep,1.047,2.882803879615522,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2003,A3,16,A,k_position,s_sep,1.059,3.1415877356658886,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2014,A3,16,A,k_position,s_sep,1.071,4.743732249788459,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2009,A3,16,A,k_position,s_sep,1.083,3.657218749418542,scene,1,parent-supplied within-scene replicate average,online-legal
+E,s_sep,,A3,16,A,k_position,s_sep,1.065,3.399403242542215,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,s_sep,2001,OFFLINE_FULL_J,8,A,k_position,s_sep,0.112,3.4120832420772236,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2003,OFFLINE_FULL_J,8,A,k_position,s_sep,0.124,4.578571842585028,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2014,OFFLINE_FULL_J,8,A,k_position,s_sep,0.136,5.200492177916316,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2009,OFFLINE_FULL_J,8,A,k_position,s_sep,0.14800000000000002,6.1233811074913085,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,,OFFLINE_FULL_J,8,A,k_position,s_sep,0.13,4.889532010250672,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2001,OFFLINE_FULL_J,16,A,k_position,s_sep,1.1119999999999999,2.882803879615522,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2003,OFFLINE_FULL_J,16,A,k_position,s_sep,1.1239999999999999,2.546385209851246,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2014,OFFLINE_FULL_J,16,A,k_position,s_sep,1.136,2.8875196667128358,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,2009,OFFLINE_FULL_J,16,A,k_position,s_sep,1.148,3.657218749418542,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,s_sep,,OFFLINE_FULL_J,16,A,k_position,s_sep,1.13,2.885161773164179,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2001,RANDOM,8,A,k_position,f_truth_phys,-0.14800000000000002,0.14698113930703854,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,RANDOM,8,A,k_position,f_truth_phys,-0.136,0.061332480323294934,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,RANDOM,8,A,k_position,f_truth_phys,-0.124,0.07716826382119109,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,RANDOM,8,A,k_position,f_truth_phys,-0.112,0.5915864936827694,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,RANDOM,8,A,k_position,f_truth_phys,-0.13,0.11207470156411481,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,RANDOM,16,A,k_position,f_truth_phys,0.852,0.7732256698812884,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,RANDOM,16,A,k_position,f_truth_phys,0.864,0.8527990240167195,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,RANDOM,16,A,k_position,f_truth_phys,0.876,0.2284031409534145,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,RANDOM,16,A,k_position,f_truth_phys,0.888,0.7109214730198964,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,RANDOM,16,A,k_position,f_truth_phys,0.87,0.7420735714505924,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,A1,8,A,k_position,f_truth_phys,-0.083,0.6289357367696397,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,A1,8,A,k_position,f_truth_phys,-0.07100000000000001,0.7918219699026653,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,A1,8,A,k_position,f_truth_phys,-0.059000000000000004,0.5169087419634614,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,A1,8,A,k_position,f_truth_phys,-0.047,0.5910354324148291,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,A1,8,A,k_position,f_truth_phys,-0.065,0.6099855845922344,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,A1,16,A,k_position,f_truth_phys,0.917,0.8450670475349483,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,A1,16,A,k_position,f_truth_phys,0.929,0.9242427103521401,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,A1,16,A,k_position,f_truth_phys,0.9410000000000001,0.6044514073958697,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,A1,16,A,k_position,f_truth_phys,0.9530000000000001,0.6368681365287816,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,A1,16,A,k_position,f_truth_phys,0.935,0.740967592031865,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,A2,8,A,k_position,f_truth_phys,-0.018000000000000002,0.6289357367696397,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,A2,8,A,k_position,f_truth_phys,-0.006,0.7918219699026653,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,A2,8,A,k_position,f_truth_phys,0.006,0.5169087419634614,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,A2,8,A,k_position,f_truth_phys,0.018000000000000002,0.5910354324148291,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,A2,8,A,k_position,f_truth_phys,0.0,0.6099855845922344,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,A2,16,A,k_position,f_truth_phys,0.982,0.8450670475349485,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,A2,16,A,k_position,f_truth_phys,0.994,0.9242427103521401,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,A2,16,A,k_position,f_truth_phys,1.006,0.6044514073958697,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,A2,16,A,k_position,f_truth_phys,1.018,0.6368681365287816,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,A2,16,A,k_position,f_truth_phys,1.0,0.740967592031865,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,A3,8,A,k_position,f_truth_phys,0.047,0.6289357367696397,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,A3,8,A,k_position,f_truth_phys,0.059000000000000004,0.7918219699026653,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,A3,8,A,k_position,f_truth_phys,0.07100000000000001,0.5169087419634614,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,A3,8,A,k_position,f_truth_phys,0.083,0.5910354324148291,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,A3,8,A,k_position,f_truth_phys,0.065,0.6099855845922344,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,A3,16,A,k_position,f_truth_phys,1.047,0.8450670475349485,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2003,A3,16,A,k_position,f_truth_phys,1.059,0.9242427103521401,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2014,A3,16,A,k_position,f_truth_phys,1.071,0.6044514073958697,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2009,A3,16,A,k_position,f_truth_phys,1.083,0.6368681365287816,scene,1,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,,A3,16,A,k_position,f_truth_phys,1.065,0.740967592031865,median_scene,4,parent-supplied within-scene replicate average,online-legal
+E,f_truth_phys,2001,OFFLINE_FULL_J,8,A,k_position,f_truth_phys,0.112,0.6289357367696397,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2003,OFFLINE_FULL_J,8,A,k_position,f_truth_phys,0.124,0.7918219699026653,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2014,OFFLINE_FULL_J,8,A,k_position,f_truth_phys,0.136,0.5169087419634614,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2009,OFFLINE_FULL_J,8,A,k_position,f_truth_phys,0.14800000000000002,0.5910354324148291,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,,OFFLINE_FULL_J,8,A,k_position,f_truth_phys,0.13,0.6099855845922344,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2001,OFFLINE_FULL_J,16,A,k_position,f_truth_phys,1.1119999999999999,0.8450670475349485,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2003,OFFLINE_FULL_J,16,A,k_position,f_truth_phys,1.1239999999999999,0.8106523092333281,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2014,OFFLINE_FULL_J,16,A,k_position,f_truth_phys,1.136,0.6721365128194369,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,2009,OFFLINE_FULL_J,16,A,k_position,f_truth_phys,1.148,0.6368681365287816,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+E,f_truth_phys,,OFFLINE_FULL_J,16,A,k_position,f_truth_phys,1.13,0.7413944110263825,median_scene,4,parent-supplied within-scene replicate average,OFFLINE diagnostic
+F,main,2001,RANDOM,16,A,nrmse_phys,test_B.nrmse_phys,0.5177556371219673,0.5995003305669593,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2003,RANDOM,16,A,nrmse_phys,test_B.nrmse_phys,0.643978614666948,0.7575369425366493,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2014,RANDOM,16,A,nrmse_phys,test_B.nrmse_phys,1.877505795135823,2.0298772172356467,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2009,RANDOM,16,A,nrmse_phys,test_B.nrmse_phys,0.9434682699404241,0.663294031207478,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2001,A1,16,A,nrmse_phys,test_B.nrmse_phys,0.46886903727590984,0.45277700904756096,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2003,A1,16,A,nrmse_phys,test_B.nrmse_phys,0.6536227088531482,0.6761124934919437,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2014,A1,16,A,nrmse_phys,test_B.nrmse_phys,0.37506907886981083,0.37767791636587633,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2009,A1,16,A,nrmse_phys,test_B.nrmse_phys,0.6013281524322912,0.5329392295567982,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2001,A2,16,A,nrmse_phys,test_B.nrmse_phys,0.46886903727590984,0.4527770091453595,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2003,A2,16,A,nrmse_phys,test_B.nrmse_phys,0.6536227088531482,0.6761124932296941,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2014,A2,16,A,nrmse_phys,test_B.nrmse_phys,0.37506907886981083,0.37767791636587633,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2009,A2,16,A,nrmse_phys,test_B.nrmse_phys,0.6013281524322912,0.53293922951456,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2001,A3,16,A,nrmse_phys,test_B.nrmse_phys,0.46886903727590984,0.4527770090974979,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2003,A3,16,A,nrmse_phys,test_B.nrmse_phys,0.6536227088531482,0.6761124934469945,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2014,A3,16,A,nrmse_phys,test_B.nrmse_phys,0.3750690788698108,0.37767791636587633,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2009,A3,16,A,nrmse_phys,test_B.nrmse_phys,0.6013281524322912,0.5329392294647199,scene,1,parent-supplied within-scene replicate average,online-legal
+F,main,2001,OFFLINE_FULL_J,16,A,nrmse_phys,test_B.nrmse_phys,0.46886903727590984,0.4527770091605443,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+F,main,2003,OFFLINE_FULL_J,16,A,nrmse_phys,test_B.nrmse_phys,0.5944590533237208,0.5801046104151476,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+F,main,2014,OFFLINE_FULL_J,16,A,nrmse_phys,test_B.nrmse_phys,0.6314800139635418,0.6279874721164879,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic
+F,main,2009,OFFLINE_FULL_J,16,A,nrmse_phys,test_B.nrmse_phys,0.6013281524322912,0.5329392294783539,scene,1,parent-supplied within-scene replicate average,OFFLINE diagnostic

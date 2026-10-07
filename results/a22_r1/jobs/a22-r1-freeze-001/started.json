@@ -1,0 +1,18 @@
+{
+  "job": "a22-r1-freeze-001",
+  "device": "cuda",
+  "prior": {
+    "cpu": 186.08915,
+    "gpu": 0.0,
+    "backgrounds": 0,
+    "new_labels": 0,
+    "receipts": [
+      "transport-preflight-19c082f11d304ea68d074f0efc5d9a23",
+      "a22-r1-unit-001",
+      "transport-deploy-6b48b468ba314e74800fdace6e1171e9",
+      "metrics-synthetic-1",
+      "metrics-synthetic-2",
+      "source-implementation-audit-allowance"
+    ]
+  }
+}

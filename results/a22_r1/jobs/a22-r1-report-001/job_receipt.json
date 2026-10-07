@@ -1,0 +1,104 @@
+{
+  "wall_seconds": 4.288799458008725,
+  "process_cpu_seconds": 4.050554,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "report_generations": 1
+  },
+  "exclusive_walls": {
+    "r1_report_and_plots": 4.0527899589942535
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 73924608,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "event": "inclusive_job_receipt",
+  "receipt_id": "a22-r1-report-001",
+  "additive_receipt": true,
+  "status": "COMPLETE",
+  "detail": {
+    "scientific_case": "CASE_C_A2_MATCHES_OR_BEATS_A3",
+    "gates": {
+      "S1": "SUPPORT",
+      "S3": "SUPPORT",
+      "S4": "SUPPORT",
+      "S2": "FAIL"
+    },
+    "primary_A3": {
+      "method": "A3",
+      "k": 16,
+      "Test_A_complete": true,
+      "Test_B_complete": true,
+      "Test_A_scene_medians": {
+        "nrmse_phys": 0.5350985948541005,
+        "nrmse_prior": 1.8618704868458027,
+        "s_sep": 3.399403242542215,
+        "f_error_prior": 0.7223329225092681,
+        "f_truth_phys": 0.740967592031865,
+        "q_phys": 0.354249461266858,
+        "q_prior": 3.439209632143813
+      },
+      "restricted_over_common_scene_ratios": {
+        "2001": 0.9656790555590847,
+        "2003": 1.0344078996785577,
+        "2014": 1.0069556186927664,
+        "2009": 0.8862702125437711
+      },
+      "median_restricted_over_common": 0.9863173371259255,
+      "S1": "SUPPORT",
+      "S3": "SUPPORT",
+      "S4": "SUPPORT",
+      "useful_screening_split": true
+    },
+    "A3_vs_A2": {
+      "resampling_unit": "scene",
+      "expected_scene_cluster_count": 4,
+      "scene_cluster_count": 4,
+      "missing_scene_cluster_count": 0,
+      "excess_scene_cluster_count": 0,
+      "scene_ids": [
+        2001,
+        2003,
+        2014,
+        2009
+      ],
+      "n_resamples": 2000,
+      "seed": 20261911,
+      "confidence_level": 0.95,
+      "interval_kind": "paired scene percentile bootstrap",
+      "complete": true,
+      "missing_a3_scene_count": 0,
+      "missing_a2_scene_count": 0,
+      "missing_paired_scene_count": 0,
+      "missing_a3_scenes": [],
+      "missing_a2_scenes": [],
+      "mean_a3": 0.52472224435779,
+      "mean_a2": 0.52472224435779,
+      "mean_difference": 0.0,
+      "relative_improvement_of_means": 0.0,
+      "mean_paired_relative_improvement": 2.7755575615628914e-17,
+      "median_paired_relative_improvement": 0.0,
+      "mean_difference_ci95": [
+        0.0,
+        1.1102230246251565e-16
+      ],
+      "relative_improvement_of_means_ci95": [
+        0.0,
+        2.220446049250313e-16
+      ],
+      "undefined_relative_bootstrap_count": 0
+    },
+    "independent_scenes": 4,
+    "figures": 6,
+    "invalid_QPs": 0,
+    "raw_metric_rows": 42240,
+    "all_secondary_metrics_preserved": true,
+    "NN": "NOT_RUN",
+    "next_action": "STOP_AND_REPORT"
+  },
+  "nested_spans_nonadditive": true
+}

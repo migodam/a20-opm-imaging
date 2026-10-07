@@ -1,0 +1,15 @@
+{
+  "attempt_path": "results/a22_r1/replay/20261007T163525Z_1d65fc670927",
+  "common_cases_attempted": 2112,
+  "error": "A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run",
+  "error_type": "ReplayReproductionError",
+  "gate_decision": "INCOMPLETE",
+  "new_Maxwell_actions": 0,
+  "new_fullwave_labels": 0,
+  "replay_process_cpu_seconds": 27.951463,
+  "replay_wall_seconds": 28.1365981669951,
+  "run_id": "20261007T163525Z_1d65fc670927",
+  "split_metric_rows_recorded": 0,
+  "status": "FAILED",
+  "terminal": true
+}

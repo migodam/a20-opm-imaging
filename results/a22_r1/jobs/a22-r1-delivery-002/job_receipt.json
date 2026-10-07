@@ -1,0 +1,134 @@
+{
+  "wall_seconds": 0.5227413329994306,
+  "process_cpu_seconds": 0.412173,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "delivery_checks": 1,
+    "evidence_compressions": 9
+  },
+  "exclusive_walls": {
+    "r1_local_link_and_source_audit": 0.014313082996523008,
+    "r1_evidence_gzip_and_exact_byte_roundtrip": 0.27767070900881663
+  },
+  "events": 10,
+  "peak_cpu_rss_bytes": 84361216,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "event": "inclusive_job_receipt",
+  "receipt_id": "a22-r1-delivery-002",
+  "additive_receipt": true,
+  "status": "COMPLETE",
+  "detail": {
+    "schema": "a22_r1.local_delivery.v1",
+    "status": "COMPLETE",
+    "required_files": [
+      "A22_R1_START_HERE.md",
+      "SUBSPACE_SEPARATION_PROTOCOL.md",
+      "SPLIT_DEFINITION_AUDIT.md",
+      "ONE_SHOT_ERROR_LOCALIZATION.md",
+      "RESTRICTED_PHYSICS_BRANCH.md",
+      "CHART_EXTERIOR_AUDIT.md",
+      "results/a22_r1/SPLIT_COMPARISON.csv",
+      "results/a22_r1/PER_SCENE_SPLIT_METRICS.csv",
+      "results/a22_r1/GATE_DECISION.json",
+      "results/a22_r1/COST_LEDGER.jsonl",
+      "results/a22_r1/FAILURE_LEDGER.jsonl"
+    ],
+    "source_commit": "9f6fb19627726a08dbab5558a7b7b850913a9c87",
+    "compressed_raw_evidence": [
+      {
+        "raw_path": "results/a22_r1/replay/20261007T163525Z_1d65fc670927/COMMON_32D_CASES.csv",
+        "compressed_path": "results/a22_r1/replay/20261007T163525Z_1d65fc670927/COMMON_32D_CASES.csv.gz",
+        "raw_bytes": 7126413,
+        "compressed_bytes": 1224291,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T163525Z_1d65fc670927/COMMON_32D_CASES.jsonl",
+        "compressed_path": "results/a22_r1/replay/20261007T163525Z_1d65fc670927/COMMON_32D_CASES.jsonl.gz",
+        "raw_bytes": 8099647,
+        "compressed_bytes": 1246149,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.csv",
+        "compressed_path": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.csv.gz",
+        "raw_bytes": 6966596,
+        "compressed_bytes": 1125774,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+        "compressed_path": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl.gz",
+        "raw_bytes": 7941940,
+        "compressed_bytes": 1145209,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_CASES.csv",
+        "compressed_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_CASES.csv.gz",
+        "raw_bytes": 8271316,
+        "compressed_bytes": 1272315,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_CASES.jsonl",
+        "compressed_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_CASES.jsonl.gz",
+        "raw_bytes": 9350084,
+        "compressed_bytes": 1307778,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/PER_CASE_SPLIT_METRICS.csv",
+        "compressed_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/PER_CASE_SPLIT_METRICS.csv.gz",
+        "raw_bytes": 68682777,
+        "compressed_bytes": 8060270,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/PER_CASE_SPLIT_METRICS.jsonl",
+        "compressed_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/PER_CASE_SPLIT_METRICS.jsonl.gz",
+        "raw_bytes": 130098464,
+        "compressed_bytes": 11375339,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      },
+      {
+        "raw_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/RESTRICTED_SOLUTION_VECTORS.jsonl",
+        "compressed_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/RESTRICTED_SOLUTION_VECTORS.jsonl.gz",
+        "raw_bytes": 59068311,
+        "compressed_bytes": 8456123,
+        "exact_uncompressed_bytes": true,
+        "original_kept_locally": true,
+        "new_SHA256_checks": 0
+      }
+    ],
+    "local_link_errors": [],
+    "frozen_source_changes": [],
+    "public_pushes": 0,
+    "NN": "NOT_RUN",
+    "new_physical_actions": 0,
+    "old_scalar_reproduction": "FAILED_RETAINED",
+    "scientific_case": "CASE_C_A2_MATCHES_OR_BEATS_A3"
+  },
+  "nested_spans_nonadditive": true
+}

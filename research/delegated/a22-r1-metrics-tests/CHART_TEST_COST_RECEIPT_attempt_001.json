@@ -1,0 +1,29 @@
+{
+  "event": "a22_r1_chart_audit_synthetic_tests",
+  "attempt": 1,
+  "started_at_utc": "2026-10-07T16:56:42.275732+00:00",
+  "wall_seconds": 0.4943490000005113,
+  "cpu_user_seconds": 0.36968399999999996,
+  "cpu_system_seconds": 0.102452,
+  "cpu_total_seconds": 0.47213599999999994,
+  "exit_code": 1,
+  "runtime": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+  "workdir": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation",
+  "scope": "Pure chart decompositions and temporary synthetic cache fixtures only; no original experiment data",
+  "physical_actions": 0,
+  "maxwell_actions": 0,
+  "full_wave_labels": 0,
+  "nn_training_runs": 0,
+  "command": [
+    "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_a22_r1_chart_audit.py",
+    "-v"
+  ],
+  "log_path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/research/delegated/a22-r1-metrics-tests/chart_tests_attempt_001.log"
+}

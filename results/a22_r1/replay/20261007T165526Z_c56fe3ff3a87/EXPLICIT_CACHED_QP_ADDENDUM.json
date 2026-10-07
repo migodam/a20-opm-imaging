@@ -1,0 +1,17 @@
+{
+  "acceptance": "same_frozen_quadratic_original_KKT_and_feasibility",
+  "common_cases": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+  "common_platform": "original_Windows",
+  "common_solution_selection": "entire_fixed_Windows_archive_no_per_case_selection",
+  "historical_scalar_gate": "FAILED_RETAINED",
+  "historical_scalar_reproduction": "FAILED_RETAINED",
+  "no_common_QP_rerun": true,
+  "physics_change": false,
+  "registered_before_split_outcome_metrics": true,
+  "restricted_platform": "macOS",
+  "schema": "a22_r1.cached_common_qp_addendum.v1",
+  "score_change": false,
+  "solver_tolerance_change": false,
+  "source_common_cases": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+  "validation": "original_frozen_QP_contract"
+}

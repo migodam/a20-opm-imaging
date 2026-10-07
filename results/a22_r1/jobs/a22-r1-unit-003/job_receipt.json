@@ -1,0 +1,30 @@
+{
+  "wall_seconds": 0.7464561660017353,
+  "process_cpu_seconds": 0.762115,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "unit_suites": 1
+  },
+  "exclusive_walls": {
+    "r1_unit_tests": 0.4462829160038382
+  },
+  "events": 1,
+  "peak_cpu_rss_bytes": 86736896,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "event": "inclusive_job_receipt",
+  "receipt_id": "a22-r1-unit-003",
+  "additive_receipt": true,
+  "status": "COMPLETE",
+  "detail": {
+    "tests": 188,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nested_spans_nonadditive": true
+}

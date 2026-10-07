@@ -1,0 +1,902 @@
+{
+  "status": "COMPLETE",
+  "detail": {
+    "schema": "a22_r1.replay_summary.v1",
+    "status": "COMPLETE",
+    "config": {
+      "schema": "a22_r1.direct_subspace.v1",
+      "source_commit": "4dd4a9fa69d4272f35a6b93d8455f77cb139187b",
+      "scenes": [
+        2001,
+        2003,
+        2014,
+        2009
+      ],
+      "primary_k": 16,
+      "k_values": [
+        16,
+        8
+      ],
+      "common_basis": "exact_saved_online_split_16_V_phys_then_V_prior",
+      "score": {
+        "function": "a22.features.predict_budget",
+        "amplitude": 0.0,
+        "noise_level": 1.0,
+        "intervention": "nominal",
+        "ranking": "ascending_raw_pred_A1_A2_A3_stable_candidate_index",
+        "calibration": "NONE"
+      },
+      "offline_score": "existing_full_J_profiled_regularized_budget_amplitude0_noise1_same_lambda",
+      "random_seed": 20261910,
+      "bootstrap_seed": 20261911,
+      "bootstrap_repetitions": 2000,
+      "norm_floor": 1e-06,
+      "identity_rtol": 1e-09,
+      "reproduction_atol_scale": 1e-08,
+      "small_solve_lambda": "original_full_AW_lambda_for_all_restrictions",
+      "aggregation": "draw_mean_then_equal_direction_amplitude_noise_intervention_conditions_then_equal_scenes",
+      "primary_test": "A_common_full_32D_error_localization",
+      "S1": {
+        "median_scene_S_sep_min": 2.0,
+        "median_scene_q_phys_max": 0.7,
+        "median_scene_q_prior_min": 1.3
+      },
+      "S2": {
+        "equal_scene_mean_NRMSE_phys_improvement_vs_A2_min": 0.15,
+        "bootstrap": "descriptive_only_no_four_scene_formal_PASS"
+      },
+      "S3": {
+        "median_scene_f_truth_phys_min": 0.35
+      },
+      "S4": {
+        "median_scene_restricted_over_common_NRMSE_phys_max": 1.25
+      },
+      "status_language": "screening_SUPPORT_or_FAIL_or_INCOMPLETE_never_formal_PASS",
+      "cpu_cap_seconds": 1800.0,
+      "gpu_occupation_cap_seconds": 600.0,
+      "parent_a22_gpu_cap_seconds": 32400.0,
+      "historical_a22_cpu_seconds": 1838.861312,
+      "historical_a22_gpu_seconds": 1350.713879900024,
+      "known_background_rebuild_cap": 4,
+      "new_full_wave_labels_cap": 0,
+      "NN": "NOT_RUN",
+      "expansion": "NOT_RUN_no_automatic_expansion",
+      "publication": "LOCAL_ONLY"
+    },
+    "run_id": "20261007T165526Z_c56fe3ff3a87",
+    "attempt_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87",
+    "scenes": [
+      2001,
+      2003,
+      2014,
+      2009
+    ],
+    "common_32D_solves": 2112,
+    "common_reproduction": {
+      "schema": "a22_r1.common_reproduction.v1",
+      "status": "FAILED",
+      "registered_cases": 2112,
+      "attempted_cases": 2112,
+      "counts": {
+        "MISMATCH": 26,
+        "MATCH": 2086
+      },
+      "absolute_tolerance_scale": 1e-08,
+      "max_absolute_differences": {
+        "signed_target_error": 4.164619049271123e-08,
+        "material_error": 1.631117072381505e-07,
+        "raw_target_coefficient": 2.7755575615628914e-17,
+        "coefficient_error": 4.164619049271123e-08
+      },
+      "full_solution_archive": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_SOLUTIONS.npz",
+      "Test_B_started": false,
+      "split_tuning": false,
+      "historical_scalar_gate": "FAILED_RETAINED",
+      "explicit_pre_outcome_addendum": "REPRODUCTION_CONFLICT_ADDENDUM.md",
+      "cached_QP_contract": "ALL_2112_VALID",
+      "new_common_QP_solves": 0,
+      "common_source": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+      "validation_maxima": {
+        "kkt_relative": 9.751508680986546e-09,
+        "feasibility_violation": 7.632783294297951e-16,
+        "normal_cone_relative": 2.657940278647355e-16,
+        "quadratic_relative_difference": 2.1345755180595088e-15
+      }
+    },
+    "new_common_32D_solves": 0,
+    "cached_common_32D_reuses": 2112,
+    "restricted_physics_solves": 21120,
+    "invalid_restricted_QPs": 0,
+    "split_metric_rows": 42240,
+    "metric_rows_per_case": 20,
+    "expected_conditions": [
+      {
+        "direction": 0,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 0,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 0,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 0,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 0,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 0,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 0,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 0,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 0,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 0,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 0,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 0,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 1,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 1,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 1,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 1,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 1,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 1,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 1,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 1,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 1,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 1,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 1,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 1,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 2,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 2,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 2,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 2,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 2,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 2,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 2,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 2,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 2,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 2,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 2,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 2,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 3,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 3,
+        "amplitude": 0,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 3,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 3,
+        "amplitude": 0,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 3,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 3,
+        "amplitude": 0,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 3,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 3,
+        "amplitude": 1,
+        "noise": 0.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 3,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 3,
+        "amplitude": 1,
+        "noise": 1.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      },
+      {
+        "direction": 3,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "nominal"
+      },
+      {
+        "direction": 3,
+        "amplitude": 1,
+        "noise": 3.0,
+        "intervention": "source_amplitude_5pct_receiver_gain_3pct"
+      }
+    ],
+    "expected_groups": [
+      {
+        "scene": 2001,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "A1",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "A1",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "A1",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "A1",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "A2",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "A2",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "A2",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "A2",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "A3",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "A3",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "A3",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "A3",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2001,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2001,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "A1",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "A1",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "A1",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "A1",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "A2",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "A2",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "A2",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "A2",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "A3",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "A3",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "A3",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "A3",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2003,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2003,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "A1",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "A1",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "A1",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "A1",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "A2",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "A2",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "A2",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "A2",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "A3",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "A3",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "A3",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "A3",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2014,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2014,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "RANDOM",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "RANDOM",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "A1",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "A1",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "A1",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "A1",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "A2",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "A2",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "A2",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "A2",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "A3",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "A3",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "A3",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "A3",
+        "k": 8,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "OFFLINE_FULL_J",
+        "k": 16,
+        "test": "B"
+      },
+      {
+        "scene": 2009,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "A"
+      },
+      {
+        "scene": 2009,
+        "method": "OFFLINE_FULL_J",
+        "k": 8,
+        "test": "B"
+      }
+    ],
+    "case_metric_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/PER_CASE_SPLIT_METRICS.jsonl",
+    "case_metric_csv": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/PER_CASE_SPLIT_METRICS.csv",
+    "full_solution_path": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/COMMON_32D_SOLUTIONS.npz",
+    "restricted_vector_jsonl": "results/a22_r1/replay/20261007T165526Z_c56fe3ff3a87/RESTRICTED_SOLUTION_VECTORS.jsonl",
+    "online_split_freeze": "results/a22_r1/SPLIT_FREEZE.json",
+    "offline_split_freeze": "results/a22_r1/OFFLINE_SPLIT_FREEZE.json",
+    "costs": {
+      "online_split_wall_seconds": 0.018546999999671243,
+      "offline_split_wall_seconds": 0.0058653330052038655,
+      "cached_replay_wall_seconds": 70.31460670799424,
+      "cached_replay_process_cpu_seconds": 68.141947,
+      "construction_cost_source": "historical A22 ledger; no OPM rebuild inside replay"
+    },
+    "new_Maxwell_actions": 0,
+    "new_fullwave_labels": 0,
+    "NN": "NOT_RUN",
+    "gate_decision": "PARENT_REVIEW_REQUIRED"
+  }
+}

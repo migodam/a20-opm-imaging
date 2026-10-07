@@ -1,0 +1,41 @@
+{
+  "wall_seconds": 303.4137613999774,
+  "process_cpu_seconds": 287.890625,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "split_freezes": 1,
+    "online_split_constructions": 32,
+    "offline_J_cache_reads": 4,
+    "offline_split_constructions": 8,
+    "offline_label_cache_reads": 32,
+    "cached_small_solves": 2112,
+    "common_32D_solves": 2112,
+    "material_subproblems": 2112,
+    "material_optimizer_iterations": 224056
+  },
+  "exclusive_walls": {
+    "a22_r1_online_split_freeze": 0.23419499999727122,
+    "a22_r1_offline_full_J_split_freeze": 0.07440139999380335,
+    "a22_r1_cached_label_read": 0.9782013001095038,
+    "a22_material_subproblem": 275.12289499974577,
+    "a22_r1_common_32D_solve": 14.600949399842648
+  },
+  "events": 4258,
+  "peak_cpu_rss_bytes": 116609024,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "event": "inclusive_job_receipt",
+  "receipt_id": "a22-r1-replay-windows-001",
+  "additive_receipt": true,
+  "status": "FAILED",
+  "detail": {
+    "error_type": "ReplayReproductionError",
+    "error": "A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\AI\\A22_R1_SUBSPACE_SEPARATION\\src\\a22_r1\\cli.py\", line 45, in main\n    detail = run_replay(root, config, book)\n  File \"D:\\AI\\A22_R1_SUBSPACE_SEPARATION\\src\\a22_r1\\replay.py\", line 605, in run_replay\n    raise ReplayReproductionError(dict(reproduction_summary, attempt_path=_rel(out, root)))\na22_r1.replay.ReplayReproductionError: A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run\n"
+  },
+  "nested_spans_nonadditive": true
+}

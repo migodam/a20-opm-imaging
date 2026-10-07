@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "detail": {
+    "error_type": "ReplayReproductionError",
+    "error": "A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run",
+    "traceback": "Traceback (most recent call last):\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/cli.py\", line 45, in main\n    detail = run_replay(root, config, book)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/replay.py\", line 600, in run_replay\n    raise ReplayReproductionError(dict(reproduction_summary, attempt_path=str(out.relative_to(root))))\na22_r1.replay.ReplayReproductionError: A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run\n"
+  }
+}

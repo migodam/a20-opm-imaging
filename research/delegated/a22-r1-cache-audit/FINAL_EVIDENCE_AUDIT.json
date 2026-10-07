@@ -1,0 +1,300 @@
+{
+  "aggregation": {
+    "raw_metric_rows": 42240,
+    "condition_groups": 3840,
+    "scene_groups": 80,
+    "expected_scene_groups": 80,
+    "scene_group_identity": true,
+    "invalid_status_rows": 0,
+    "invalid_condition_groups": 0,
+    "invalid_draw_groups": 0,
+    "numeric_lambda_or_full_scene_flag_mismatch_rows": 0,
+    "scope_mismatch_rows": 0,
+    "floor_rows": 0,
+    "max_raw_to_scene_abs_difference": 8.881784197001252e-16,
+    "all_scene_csv_complete": true
+  },
+  "gate_consistency": {
+    "comparison_max_abs_difference": 4.440892098500626e-16,
+    "gate_metric_max_abs_difference": 2.220446049250313e-16,
+    "independent_A3_gates": {
+      "S1": "SUPPORT",
+      "S3": "SUPPORT",
+      "S4": "SUPPORT",
+      "S2": "FAIL"
+    },
+    "stored_gates": {
+      "S1": "SUPPORT",
+      "S3": "SUPPORT",
+      "S4": "SUPPORT",
+      "S2": "FAIL"
+    },
+    "gates_match": true,
+    "A3_improvement_vs_A2": 0.0,
+    "scene_bootstrap_count": 4,
+    "bootstrap_seed": 20261911,
+    "bootstrap_resamples": 2000,
+    "bootstrap_unit": "scene",
+    "scientific_case": "CASE_C_A2_MATCHES_OR_BEATS_A3",
+    "formal_PASS": false,
+    "methods": {
+      "RANDOM": {
+        "S1": "SUPPORT",
+        "S3": "SUPPORT",
+        "S4": "SUPPORT",
+        "median_physics_nrmse": 0.7937234423036861,
+        "median_s_sep": 2.142611944720552,
+        "median_truth_coverage": 0.7420735714505924,
+        "median_restricted_over_common": 1.1195195339086552
+      },
+      "A1": {
+        "S1": "SUPPORT",
+        "S3": "SUPPORT",
+        "S4": "SUPPORT",
+        "median_physics_nrmse": 0.5350985948541005,
+        "median_s_sep": 3.399403242542215,
+        "median_truth_coverage": 0.740967592031865,
+        "median_restricted_over_common": 0.986317337072673
+      },
+      "A2": {
+        "S1": "SUPPORT",
+        "S3": "SUPPORT",
+        "S4": "SUPPORT",
+        "median_physics_nrmse": 0.5350985948541005,
+        "median_s_sep": 3.399403242542215,
+        "median_truth_coverage": 0.740967592031865,
+        "median_restricted_over_common": 0.9863173371769649
+      },
+      "A3": {
+        "S1": "SUPPORT",
+        "S3": "SUPPORT",
+        "S4": "SUPPORT",
+        "median_physics_nrmse": 0.5350985948541005,
+        "median_s_sep": 3.399403242542215,
+        "median_truth_coverage": 0.740967592031865,
+        "median_restricted_over_common": 0.9863173371259255
+      },
+      "OFFLINE_FULL_J": {
+        "S1": "SUPPORT",
+        "S3": "SUPPORT",
+        "S4": "SUPPORT",
+        "median_physics_nrmse": 0.597893602878006,
+        "median_s_sep": 2.885161773164179,
+        "median_truth_coverage": 0.7413944110263827,
+        "median_restricted_over_common": 0.970765994078288
+      }
+    }
+  },
+  "selected_sets": {
+    "rows": [
+      {
+        "scene": 2001,
+        "k": 8,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "scene": 2001,
+        "k": 16,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "scene": 2003,
+        "k": 8,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "scene": 2003,
+        "k": 16,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "scene": 2014,
+        "k": 8,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "scene": 2014,
+        "k": 16,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "scene": 2009,
+        "k": 8,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "scene": 2009,
+        "k": 16,
+        "all_three_same_selected_set": true,
+        "selected_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    ],
+    "all_three_all_scenes_both_k_equal": true,
+    "max_stored_projector_distance": 4.401107221921024e-16,
+    "projector_distance_audit_difference": 0.0,
+    "all_index_jaccards_one": true
+  },
+  "markdown_tables": {
+    "checked_primary_table_rows": 15,
+    "max_rounding_relative_or_absolute_difference": 3.0428824050953096e-06,
+    "six_significant_digit_rounding_consistent": true
+  },
+  "costs_before_this_audit": {
+    "inclusive_receipt_count_before_audit": 32,
+    "unique_receipt_ids_including_prior_audit_reader": 33,
+    "all_receipt_ids_including_prior_audit_reader": 33,
+    "CPU_total_excluding_this_audit": 729.916521,
+    "GPU_total_excluding_this_audit": 155.35682739998447,
+    "cost_summary_CPU_difference_excluding_audit": 0.0,
+    "cost_summary_GPU_difference_excluding_audit": 0.0,
+    "new_fullwave_labels": 0,
+    "background_full_forward_calls": 4,
+    "both_failed_replay_receipts_in_failure_ledger": true,
+    "both_failed_replay_receipts_in_cost_ledger": true,
+    "under_caps": true,
+    "cost_summary_refresh_needed_after_audit": true
+  },
+  "numerical_limits": {
+    "common_QP_validation": {
+      "feasibility_violation": 7.632783294297951e-16,
+      "kkt_relative": 9.751508680986546e-09,
+      "normal_cone_relative": 2.657940278647355e-16,
+      "quadratic_relative_difference": 2.1345755180595088e-15
+    },
+    "restricted_valid_QPs": 21120,
+    "restricted_invalid_QPs": 0,
+    "max_restricted_KKT_relative": 9.991835900048233e-09,
+    "max_restricted_feasibility_violation": 5.342948306008566e-16,
+    "max_restricted_complementarity": 1.7854188942595796e-09,
+    "existing_validated_active_equation_polishes": 1227,
+    "max_prior_component_norm": 4.558140927046035e-16,
+    "NRMSE_floor_rows": 0,
+    "undefined_primary_metric_rows": 0,
+    "max_projector_completeness_residual": 6.686394526667428e-15,
+    "max_energy_identity_residual": 6.661338147750939e-16,
+    "warning": "Original solver emitted ill-conditioned active-KKT matrix LinAlgWarnings. No jitter/pinv/solver rewrite was used. Every returned restricted point still passed the original final audits.",
+    "numerical_warning_count": "NOT_SAVED_BY_INITIAL_FOREGROUND_REPLAY",
+    "source_audit": "research/delegated/a22-r1-cache-audit/PLATFORM_REPRODUCTION_AUDIT.md"
+  },
+  "historical_reproduction": {
+    "gate_status": "FAILED_RETAINED_WITH_EXPLICIT_PRE_OUTCOME_ADDENDUM",
+    "common_status": "FAILED_RETAINED",
+    "common_source": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_CASES.jsonl",
+    "new_common_QP_solves": 0,
+    "addendum": "REPRODUCTION_CONFLICT_ADDENDUM.md",
+    "restricted_platform": "Mac"
+  },
+  "material_audit_issues": [],
+  "scope": "read-only final evidence audit; no solves, score computation, physical actions or protocol changes"
+}

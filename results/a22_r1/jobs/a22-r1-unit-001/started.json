@@ -1,0 +1,13 @@
+{
+  "job": "a22-r1-unit-001",
+  "device": "cpu",
+  "prior": {
+    "cpu": 5.523655,
+    "gpu": 0.0,
+    "backgrounds": 0,
+    "new_labels": 0,
+    "receipts": [
+      "transport-preflight-19c082f11d304ea68d074f0efc5d9a23"
+    ]
+  }
+}

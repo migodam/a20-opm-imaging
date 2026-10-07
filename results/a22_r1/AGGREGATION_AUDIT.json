@@ -1,0 +1,35 @@
+{
+  "main": {
+    "expected_conditions_per_scene": 48,
+    "expected_conditions_source": "explicit",
+    "expected_groups_source": "explicit",
+    "input_row_count": 42240,
+    "scene_group_count": 80,
+    "complete_scene_group_count": 80,
+    "incomplete_scene_group_count": 0,
+    "missing_condition_count": 0,
+    "missing_noise_draw_count": 0,
+    "excess_noise_draw_count": 0,
+    "duplicate_noise_draw_count": 0,
+    "failed_replicate_count": 0,
+    "unexpected_condition_count": 0
+  },
+  "branch": {
+    "expected_conditions_per_scene": 48,
+    "expected_conditions_source": "explicit",
+    "expected_groups_source": "explicit",
+    "input_row_count": 21120,
+    "scene_group_count": 40,
+    "complete_scene_group_count": 40,
+    "incomplete_scene_group_count": 0,
+    "missing_condition_count": 0,
+    "missing_noise_draw_count": 0,
+    "excess_noise_draw_count": 0,
+    "duplicate_noise_draw_count": 0,
+    "failed_replicate_count": 0,
+    "unexpected_condition_count": 0
+  },
+  "replicate_unit": "noise_draw",
+  "condition_unit": "48 equally weighted conditions per scene",
+  "statistical_unit": "4 scenes, not 2112 cases"
+}

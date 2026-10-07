@@ -1,0 +1,1 @@
+{"event": "a22_r1_final_readonly_evidence_audit", "phase": "online", "counters": {"final_evidence_audits": 1}, "status": "OK", "job": "a22-r1-final-evidence-audit-002", "wall_seconds": 0.5795174579980085, "exclusive_wall_seconds": 0.5795174579980085, "process_cpu_seconds": 0.5754849999999999}

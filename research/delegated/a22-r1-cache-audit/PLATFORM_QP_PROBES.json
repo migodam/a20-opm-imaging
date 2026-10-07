@@ -1,0 +1,327 @@
+{
+  "runtime": {
+    "executable": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+    "python": "3.13.13 (main, Apr  7 2026, 18:19:01) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "threadpools": null,
+    "build_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"15.0.0\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.3.0\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"15.0.0\",\n      \"commands\": \"c++\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    },\n    \"build\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"system\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    },\n    \"lapack\": {\n      \"name\": \"accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"system\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-cf3c84h2/bin/python\",\n    \"version\": \"3.13\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"NEON\",\n      \"NEON_FP16\",\n      \"NEON_VFPV4\",\n      \"ASIMD\"\n    ],\n    \"found\": [\n      \"ASIMDHP\",\n      \"ASIMDDP\"\n    ],\n    \"not found\": [\n      \"ASIMDFHM\"\n    ]\n  }\n}\n{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"15.0.0\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.2.9\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"15.0.0\",\n      \"commands\": \"c++\"\n    },\n    \"fortran\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld64\",\n      \"version\": \"13.4.0\",\n      \"commands\": \"gfortran\"\n    },\n    \"pythran\": {\n      \"version\": \"0.19.0\",\n      \"include directory\": \"../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-xvzpvj76/lib/python3.13/site-packages/pythran\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    },\n    \"build\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    },\n    \"cross-compiled\": false\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"Accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"extraframeworks\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\",\n      \"has ilp64\": false,\n      \"cython blas ilp64\": false\n    },\n    \"lapack\": {\n      \"name\": \"Accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"extraframeworks\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\",\n      \"has ilp64\": false\n    },\n    \"pybind11\": {\n      \"name\": \"pybind11\",\n      \"version\": \"3.0.4\",\n      \"detection method\": \"config-tool\",\n      \"include directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-xvzpvj76/bin/python\",\n    \"version\": \"3.13\"\n  }\n}\n"
+  },
+  "matrix_checks": [
+    {
+      "scene": 2001,
+      "AW_exact_array_equal": true,
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "old_AW_C_contiguous": true,
+      "old_AW_strides": [
+        256,
+        8
+      ],
+      "lambda_saved": 39970.28132448953,
+      "lambda_default_here": 39970.281324489515,
+      "lambda_context_here": 39970.281324489515,
+      "lambda_default_minus_saved": -1.4551915228366852e-11,
+      "lambda_context_minus_saved": -1.4551915228366852e-11,
+      "sigma_saved_and_cache_exact": true
+    },
+    {
+      "scene": 2003,
+      "AW_exact_array_equal": true,
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "old_AW_C_contiguous": true,
+      "old_AW_strides": [
+        256,
+        8
+      ],
+      "lambda_saved": 40321.322228950965,
+      "lambda_default_here": 40321.32222895094,
+      "lambda_context_here": 40321.32222895094,
+      "lambda_default_minus_saved": -2.1827872842550278e-11,
+      "lambda_context_minus_saved": -2.1827872842550278e-11,
+      "sigma_saved_and_cache_exact": true
+    },
+    {
+      "scene": 2014,
+      "AW_exact_array_equal": true,
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "old_AW_C_contiguous": true,
+      "old_AW_strides": [
+        256,
+        8
+      ],
+      "lambda_saved": 40510.39077571165,
+      "lambda_default_here": 40510.39077571165,
+      "lambda_context_here": 40510.39077571165,
+      "lambda_default_minus_saved": 0.0,
+      "lambda_context_minus_saved": 0.0,
+      "sigma_saved_and_cache_exact": true
+    },
+    {
+      "scene": 2009,
+      "AW_exact_array_equal": true,
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "old_AW_C_contiguous": true,
+      "old_AW_strides": [
+        256,
+        8
+      ],
+      "lambda_saved": 40445.83072241458,
+      "lambda_default_here": 40445.830722414605,
+      "lambda_context_here": 40445.830722414605,
+      "lambda_default_minus_saved": 2.1827872842550278e-11,
+      "lambda_context_minus_saved": 2.1827872842550278e-11,
+      "sigma_saved_and_cache_exact": true
+    }
+  ],
+  "probes": [
+    {
+      "case_key": "2001|2|1|3.0|14|source_amplitude_5pct_receiver_gain_3pct",
+      "variant": "explicit_original_lambda_C",
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "qp": {
+        "iterations": 94,
+        "solver": "SLSQP-common-quadratic",
+        "original_inequality_count": 3456,
+        "solver_inequality_count": 32,
+        "solver_success": true,
+        "kkt_relative": 1.1659708608720578e-10,
+        "feasibility_violation": 6.938893903907228e-18,
+        "complementarity": 4.3238132407065236e-13,
+        "lambda_value": 39970.28132448953,
+        "quadratic_value": -6268257.307966992,
+        "no_post_clipping": true,
+        "no_jitter_or_pseudoinverse": true
+      },
+      "actual": {
+        "signed_target_error": 0.01301924451489006,
+        "material_error": 0.1429679141221616
+      },
+      "differences_vs_original_scalar_outputs": {
+        "signed_target_error": -4.617131434403454e-07,
+        "material_error": 9.60593585286329e-07
+      },
+      "differences_vs_local_replay_scalar_outputs": {
+        "signed_target_error": 0.0,
+        "material_error": 0.0
+      },
+      "full_vector_difference_vs_local_replay": 0.0,
+      "unconstrained_gradient_norm": 219121.55215367486,
+      "constraint_normal_norm": 219121.5521536748,
+      "objective_scale_used": 65295465.02612469,
+      "KKT_absolute_defect_norm": 0.007613260956755194,
+      "data_residual_norm": 405.55901224041463,
+      "wall_seconds": 0.013740374997723848,
+      "protocol_changed": false,
+      "diagnostic_only": true
+    },
+    {
+      "case_key": "2001|2|1|3.0|14|source_amplitude_5pct_receiver_gain_3pct",
+      "variant": "unchanged_default_lambda_C",
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "qp": {
+        "iterations": 94,
+        "solver": "SLSQP-common-quadratic",
+        "original_inequality_count": 3456,
+        "solver_inequality_count": 32,
+        "solver_success": true,
+        "kkt_relative": 1.1659708608720578e-10,
+        "feasibility_violation": 6.938893903907228e-18,
+        "complementarity": 4.3238132407065236e-13,
+        "lambda_value": 39970.281324489515,
+        "quadratic_value": -6268257.307966992,
+        "no_post_clipping": true,
+        "no_jitter_or_pseudoinverse": true
+      },
+      "actual": {
+        "signed_target_error": 0.01301924451489006,
+        "material_error": 0.1429679141221616
+      },
+      "differences_vs_original_scalar_outputs": {
+        "signed_target_error": -4.617131434403454e-07,
+        "material_error": 9.60593585286329e-07
+      },
+      "differences_vs_local_replay_scalar_outputs": {
+        "signed_target_error": 0.0,
+        "material_error": 0.0
+      },
+      "full_vector_difference_vs_local_replay": 0.0,
+      "unconstrained_gradient_norm": 219121.55215367486,
+      "constraint_normal_norm": 219121.5521536748,
+      "objective_scale_used": 65295465.02612469,
+      "KKT_absolute_defect_norm": 0.007613260956755194,
+      "data_residual_norm": 405.55901224041463,
+      "wall_seconds": 0.012468208995414898,
+      "protocol_changed": false,
+      "diagnostic_only": true
+    },
+    {
+      "case_key": "2001|2|1|3.0|14|source_amplitude_5pct_receiver_gain_3pct",
+      "variant": "explicit_original_lambda_Fortran_diagnostic",
+      "AW_C_contiguous": false,
+      "AW_F_contiguous": true,
+      "AW_strides": [
+        8,
+        12288
+      ],
+      "qp": {
+        "iterations": 86,
+        "solver": "SLSQP-common-quadratic",
+        "original_inequality_count": 3456,
+        "solver_inequality_count": 32,
+        "solver_success": true,
+        "kkt_relative": 9.751508652994905e-09,
+        "feasibility_violation": 6.938893903907228e-18,
+        "complementarity": 4.741118127285075e-13,
+        "lambda_value": 39970.28132448953,
+        "quadratic_value": -6268257.307966065,
+        "no_post_clipping": true,
+        "no_jitter_or_pseudoinverse": true
+      },
+      "actual": {
+        "signed_target_error": 0.01301970622803833,
+        "material_error": 0.1429669535285692
+      },
+      "differences_vs_original_scalar_outputs": {
+        "signed_target_error": 4.829470157119431e-15,
+        "material_error": -7.105427357601002e-15
+      },
+      "differences_vs_local_replay_scalar_outputs": {
+        "signed_target_error": 4.617131482698156e-07,
+        "material_error": -9.605935923917563e-07
+      },
+      "full_vector_difference_vs_local_replay": 2.9403689038148137e-06,
+      "unconstrained_gradient_norm": 219121.6577514583,
+      "constraint_normal_norm": 219121.65775053317,
+      "objective_scale_used": 65295465.026124686,
+      "KKT_absolute_defect_norm": 0.6367292922035811,
+      "data_residual_norm": 405.55901233459747,
+      "wall_seconds": 0.012107250004191883,
+      "protocol_changed": false,
+      "diagnostic_only": true
+    },
+    {
+      "case_key": "2003|1|1|3.0|10|nominal",
+      "variant": "explicit_original_lambda_C",
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "qp": {
+        "iterations": 133,
+        "solver": "SLSQP-common-quadratic",
+        "original_inequality_count": 3456,
+        "solver_inequality_count": 32,
+        "solver_success": true,
+        "kkt_relative": 7.486526154516784e-10,
+        "feasibility_violation": 6.938893903907228e-18,
+        "complementarity": 1.3295555608691469e-12,
+        "lambda_value": 40321.322228950965,
+        "quadratic_value": -82941726.65570997,
+        "no_post_clipping": true,
+        "no_jitter_or_pseudoinverse": true
+      },
+      "actual": {
+        "signed_target_error": -0.08102353995545876,
+        "material_error": 0.5831468213545844
+      },
+      "differences_vs_original_scalar_outputs": {
+        "signed_target_error": -1.3183930204496708e-07,
+        "material_error": 5.5158109746322737e-08
+      },
+      "differences_vs_local_replay_scalar_outputs": {
+        "signed_target_error": 0.0,
+        "material_error": 0.0
+      },
+      "full_vector_difference_vs_local_replay": 0.0,
+      "unconstrained_gradient_norm": 1449141.1561160376,
+      "constraint_normal_norm": 1449141.1561160253,
+      "objective_scale_used": 252425996.89005992,
+      "KKT_absolute_defect_norm": 0.1889793827797406,
+      "data_residual_norm": 1881.599437113021,
+      "wall_seconds": 0.01529283300624229,
+      "protocol_changed": false,
+      "diagnostic_only": true
+    },
+    {
+      "case_key": "2003|1|1|3.0|10|nominal",
+      "variant": "unchanged_default_lambda_C",
+      "AW_C_contiguous": true,
+      "AW_F_contiguous": false,
+      "AW_strides": [
+        256,
+        8
+      ],
+      "qp": {
+        "iterations": 133,
+        "solver": "SLSQP-common-quadratic",
+        "original_inequality_count": 3456,
+        "solver_inequality_count": 32,
+        "solver_success": true,
+        "kkt_relative": 7.486526154516784e-10,
+        "feasibility_violation": 6.938893903907228e-18,
+        "complementarity": 1.3295555608691469e-12,
+        "lambda_value": 40321.32222895094,
+        "quadratic_value": -82941726.65570997,
+        "no_post_clipping": true,
+        "no_jitter_or_pseudoinverse": true
+      },
+      "actual": {
+        "signed_target_error": -0.08102353995545876,
+        "material_error": 0.5831468213545844
+      },
+      "differences_vs_original_scalar_outputs": {
+        "signed_target_error": -1.3183930204496708e-07,
+        "material_error": 5.5158109746322737e-08
+      },
+      "differences_vs_local_replay_scalar_outputs": {
+        "signed_target_error": 0.0,
+        "material_error": 0.0
+      },
+      "full_vector_difference_vs_local_replay": 0.0,
+      "unconstrained_gradient_norm": 1449141.1561160376,
+      "constraint_normal_norm": 1449141.1561160253,
+      "objective_scale_used": 252425996.89005992,
+      "KKT_absolute_defect_norm": 0.1889793827797406,
+      "data_residual_norm": 1881.599437113021,
+      "wall_seconds": 0.015502000009291805,
+      "protocol_changed": false,
+      "diagnostic_only": true
+    }
+  ],
+  "scope": "five cached QP diagnostic solves only; not official replacement estimates",
+  "interpretation": "Input AW, layout, sigma and old lambda preserved. Five local probes diagnose possible finite-precision optimizer stopping differences; original-environment Windows replay remains the decisive reproduction check. No tolerance relaxation or estimate substitution."
+}

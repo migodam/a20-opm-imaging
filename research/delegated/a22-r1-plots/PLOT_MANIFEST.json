@@ -1,0 +1,54 @@
+{
+  "schema": "a22_r1.static_plots.v1",
+  "status": "COMPLETE",
+  "figures": {
+    "A": {
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/A.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/A.svg"
+    },
+    "B": {
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/B.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/B.svg"
+    },
+    "C": {
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/C.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/C.svg"
+    },
+    "D": {
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/D.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/D.svg"
+    },
+    "E": {
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/E.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/E.svg"
+    },
+    "F": {
+      "png": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/F.png",
+      "svg": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/figures/A22_R1/F.svg"
+    }
+  },
+  "plot_record_count": 276,
+  "supplied_scene_row_count": 80,
+  "complete_scene_row_count": 80,
+  "scene_clusters": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "primary_k": 16,
+  "secondary_k": 8,
+  "known_background": [
+    0.1,
+    0.04
+  ],
+  "scope": "fixed 32D chart; four historically exposed scene clusters",
+  "full_J_scope": "OFFLINE diagnostic only",
+  "gate_decision_performed": false,
+  "evaluator_files_read": false,
+  "test_B_prior_nrmse": "1 by construction; Test B S_sep is not separation evidence",
+  "missing_or_nonfinite_metrics": [],
+  "data_csv": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/research/delegated/a22-r1-plots/PLOT_DATA.csv",
+  "comparison_csv": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/research/delegated/a22-r1-plots/COMPARISON_ROWS.csv",
+  "scene_csv": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/research/delegated/a22-r1-plots/SCENE_ROWS.csv"
+}

@@ -1,0 +1,55 @@
+{
+  "status": "COMPLETE",
+  "runtime_small_solves": 20,
+  "primary_cases_changed": 0,
+  "method_order": [
+    "COMMON_32D",
+    "RANDOM",
+    "A1",
+    "A2",
+    "A3"
+  ],
+  "fixed_scenes": [
+    2001,
+    2003,
+    2014,
+    2009
+  ],
+  "new_Maxwell_actions": 0,
+  "new_fullwave_labels": 0,
+  "repeat_count": 1,
+  "offline_full_J_timing": "NOT_RUN_NO_RUNTIME_CLAIM",
+  "speedup_gate": "NOT_ESTABLISHED",
+  "medians": {
+    "COMMON_32D": {
+      "cache_read_wall_seconds": 0.0068967920014983974,
+      "split_wall_seconds": 4.1649764170870185e-07,
+      "small_solve_wall_seconds": 0.01336702050321037,
+      "cached_one_shot_including_shared_read_seconds": 0.02027404249383835
+    },
+    "RANDOM": {
+      "cache_read_wall_seconds": 0.0068967920014983974,
+      "split_wall_seconds": 4.239549889462069e-05,
+      "small_solve_wall_seconds": 0.0038960625024628825,
+      "cached_one_shot_including_shared_read_seconds": 0.010890020996157546
+    },
+    "A1": {
+      "cache_read_wall_seconds": 0.0068967920014983974,
+      "split_wall_seconds": 5.187495844438672e-06,
+      "small_solve_wall_seconds": 0.003494854499876965,
+      "cached_one_shot_including_shared_read_seconds": 0.010460396006237715
+    },
+    "A2": {
+      "cache_read_wall_seconds": 0.0068967920014983974,
+      "split_wall_seconds": 4.624998837243766e-06,
+      "small_solve_wall_seconds": 0.003459562503849156,
+      "cached_one_shot_including_shared_read_seconds": 0.010425084008602425
+    },
+    "A3": {
+      "cache_read_wall_seconds": 0.0068967920014983974,
+      "split_wall_seconds": 4.562505637295544e-06,
+      "small_solve_wall_seconds": 0.003397583495825529,
+      "cached_one_shot_including_shared_read_seconds": 0.010362500004703179
+    }
+  }
+}

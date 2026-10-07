@@ -1,0 +1,150 @@
+test_changed_material_center_is_refused (test_a22_r1_chart_audit.CachedChartAuditTests.test_changed_material_center_is_refused) ... ok
+test_complete_fixture_writes_36_rows_and_retains_every_input_file (test_a22_r1_chart_audit.CachedChartAuditTests.test_complete_fixture_writes_36_rows_and_retains_every_input_file) ... ERROR
+test_conflicting_existing_csv_is_not_overwritten (test_a22_r1_chart_audit.CachedChartAuditTests.test_conflicting_existing_csv_is_not_overwritten) ... ERROR
+test_corrupted_stored_coefficients_produce_identity_mismatch_with_all_rows (test_a22_r1_chart_audit.CachedChartAuditTests.test_corrupted_stored_coefficients_produce_identity_mismatch_with_all_rows) ... ERROR
+test_empty_original_and_finite_material_are_reported_without_fraction_epsilon (test_a22_r1_chart_audit.CachedChartAuditTests.test_empty_original_and_finite_material_are_reported_without_fraction_epsilon) ... ERROR
+test_global_barrier_precedes_all_chart_and_material_cache_reads (test_a22_r1_chart_audit.CachedChartAuditTests.test_global_barrier_precedes_all_chart_and_material_cache_reads) ... ok
+test_matching_existing_raw_artifacts_are_reused_without_changes (test_a22_r1_chart_audit.CachedChartAuditTests.test_matching_existing_raw_artifacts_are_reused_without_changes) ... ERROR
+test_invalid_mass_metric_dimensions_real_material_and_nonfinite_are_rejected (test_a22_r1_chart_audit.PureChartDecompositionTests.test_invalid_mass_metric_dimensions_real_material_and_nonfinite_are_rejected) ... ok
+test_mass_energy_projection_and_real_then_imaginary_coordinates (test_a22_r1_chart_audit.PureChartDecompositionTests.test_mass_energy_projection_and_real_then_imaginary_coordinates) ... ok
+test_rotated_mass_orthonormal_chart_preserves_energy_identity (test_a22_r1_chart_audit.PureChartDecompositionTests.test_rotated_mass_orthonormal_chart_preserves_energy_identity) ... ok
+test_zero_delta_keeps_energy_fractions_undefined (test_a22_r1_chart_audit.PureChartDecompositionTests.test_zero_delta_keeps_energy_fractions_undefined) ... ERROR
+
+======================================================================
+ERROR: test_complete_fixture_writes_36_rows_and_retains_every_input_file (test_a22_r1_chart_audit.CachedChartAuditTests.test_complete_fixture_writes_36_rows_and_retains_every_input_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/tests/test_a22_r1_chart_audit.py", line 142, in test_complete_fixture_writes_36_rows_and_retains_every_input_file
+    result = chart_audit.build_chart_audit(self.root)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 280, in build_chart_audit
+    csv_value = _csv_text(rows)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 162, in _csv_text
+    writer.writerow({key: json.dumps(value, sort_keys=True, allow_nan=False)
+                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+
+======================================================================
+ERROR: test_conflicting_existing_csv_is_not_overwritten (test_a22_r1_chart_audit.CachedChartAuditTests.test_conflicting_existing_csv_is_not_overwritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/tests/test_a22_r1_chart_audit.py", line 206, in test_conflicting_existing_csv_is_not_overwritten
+    result = chart_audit.build_chart_audit(self.root)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 280, in build_chart_audit
+    csv_value = _csv_text(rows)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 162, in _csv_text
+    writer.writerow({key: json.dumps(value, sort_keys=True, allow_nan=False)
+                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+
+======================================================================
+ERROR: test_corrupted_stored_coefficients_produce_identity_mismatch_with_all_rows (test_a22_r1_chart_audit.CachedChartAuditTests.test_corrupted_stored_coefficients_produce_identity_mismatch_with_all_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/tests/test_a22_r1_chart_audit.py", line 186, in test_corrupted_stored_coefficients_produce_identity_mismatch_with_all_rows
+    result = chart_audit.build_chart_audit(self.root)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 280, in build_chart_audit
+    csv_value = _csv_text(rows)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 162, in _csv_text
+    writer.writerow({key: json.dumps(value, sort_keys=True, allow_nan=False)
+                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+
+======================================================================
+ERROR: test_empty_original_and_finite_material_are_reported_without_fraction_epsilon (test_a22_r1_chart_audit.CachedChartAuditTests.test_empty_original_and_finite_material_are_reported_without_fraction_epsilon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/tests/test_a22_r1_chart_audit.py", line 215, in test_empty_original_and_finite_material_are_reported_without_fraction_epsilon
+    result = chart_audit.build_chart_audit(self.root)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 280, in build_chart_audit
+    csv_value = _csv_text(rows)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 162, in _csv_text
+    writer.writerow({key: json.dumps(value, sort_keys=True, allow_nan=False)
+                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+
+======================================================================
+ERROR: test_matching_existing_raw_artifacts_are_reused_without_changes (test_a22_r1_chart_audit.CachedChartAuditTests.test_matching_existing_raw_artifacts_are_reused_without_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/tests/test_a22_r1_chart_audit.py", line 171, in test_matching_existing_raw_artifacts_are_reused_without_changes
+    first = chart_audit.build_chart_audit(self.root)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 280, in build_chart_audit
+    csv_value = _csv_text(rows)
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/chart_audit.py", line 162, in _csv_text
+    writer.writerow({key: json.dumps(value, sort_keys=True, allow_nan=False)
+                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+
+======================================================================
+ERROR: test_zero_delta_keeps_energy_fractions_undefined (test_a22_r1_chart_audit.PureChartDecompositionTests.test_zero_delta_keeps_energy_fractions_undefined)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/tests/test_a22_r1_chart_audit.py", line 113, in test_zero_delta_keeps_energy_fractions_undefined
+    json.dumps(row, allow_nan=False)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.187s
+
+FAILED (errors=6)

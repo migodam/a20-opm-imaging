@@ -1,0 +1,41 @@
+{
+  "wall_seconds": 28.508205165999243,
+  "process_cpu_seconds": 28.259155,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "split_freezes": 1,
+    "online_split_constructions": 32,
+    "offline_J_cache_reads": 4,
+    "offline_split_constructions": 8,
+    "offline_label_cache_reads": 32,
+    "cached_small_solves": 2112,
+    "common_32D_solves": 2112,
+    "material_subproblems": 2112,
+    "material_optimizer_iterations": 224090
+  },
+  "exclusive_walls": {
+    "a22_r1_online_split_freeze": 0.029003875009948388,
+    "a22_r1_offline_full_J_split_freeze": 0.007793374999891967,
+    "a22_r1_cached_label_read": 0.023595959035446867,
+    "a22_material_subproblem": 24.924647999519948,
+    "a22_r1_common_32D_solve": 1.5978307679470163
+  },
+  "events": 4258,
+  "peak_cpu_rss_bytes": 143196160,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "event": "inclusive_job_receipt",
+  "receipt_id": "a22-r1-replay-001",
+  "additive_receipt": true,
+  "status": "FAILED",
+  "detail": {
+    "error_type": "ReplayReproductionError",
+    "error": "A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run",
+    "traceback": "Traceback (most recent call last):\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/cli.py\", line 45, in main\n    detail = run_replay(root, config, book)\n  File \"/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/src/a22_r1/replay.py\", line 600, in run_replay\n    raise ReplayReproductionError(dict(reproduction_summary, attempt_path=str(out.relative_to(root))))\na22_r1.replay.ReplayReproductionError: A22_R1_COMMON_REPRODUCTION_FAILED; Test B was not run\n"
+  },
+  "nested_spans_nonadditive": true
+}

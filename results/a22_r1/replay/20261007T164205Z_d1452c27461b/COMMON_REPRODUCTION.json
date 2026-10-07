@@ -1,0 +1,20 @@
+{
+  "Test_B_started": false,
+  "absolute_tolerance_scale": 1e-08,
+  "attempted_cases": 2112,
+  "counts": {
+    "MATCH": 2086,
+    "MISMATCH": 26
+  },
+  "full_solution_archive": "results/a22_r1/replay/20261007T164205Z_d1452c27461b/COMMON_32D_SOLUTIONS.npz",
+  "max_absolute_differences": {
+    "coefficient_error": 4.1646190489241786e-08,
+    "material_error": 1.631117072381505e-07,
+    "raw_target_coefficient": 0.0,
+    "signed_target_error": 4.1646190489241786e-08
+  },
+  "registered_cases": 2112,
+  "schema": "a22_r1.common_reproduction.v1",
+  "split_tuning": false,
+  "status": "FAILED"
+}

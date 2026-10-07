@@ -1,0 +1,22 @@
+{
+  "common_QP_validation": {
+    "feasibility_violation": 7.632783294297951e-16,
+    "kkt_relative": 9.751508680986546e-09,
+    "normal_cone_relative": 2.657940278647355e-16,
+    "quadratic_relative_difference": 2.1345755180595088e-15
+  },
+  "restricted_valid_QPs": 21120,
+  "restricted_invalid_QPs": 0,
+  "max_restricted_KKT_relative": 9.991835900048233e-09,
+  "max_restricted_feasibility_violation": 5.342948306008566e-16,
+  "max_restricted_complementarity": 1.7854188942595796e-09,
+  "existing_validated_active_equation_polishes": 1227,
+  "max_prior_component_norm": 4.558140927046035e-16,
+  "NRMSE_floor_rows": 0,
+  "undefined_primary_metric_rows": 0,
+  "max_projector_completeness_residual": 6.686394526667428e-15,
+  "max_energy_identity_residual": 6.661338147750939e-16,
+  "warning": "Original solver emitted ill-conditioned active-KKT matrix LinAlgWarnings. No jitter/pinv/solver rewrite was used. Every returned restricted point still passed the original final audits.",
+  "numerical_warning_count": "NOT_SAVED_BY_INITIAL_FOREGROUND_REPLAY",
+  "source_audit": "research/delegated/a22-r1-cache-audit/PLATFORM_REPRODUCTION_AUDIT.md"
+}

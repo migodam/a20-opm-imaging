@@ -1,0 +1,1 @@
+{"event": "a22_r1_platform_metadata_read", "phase": "online", "counters": {"metadata_audits": 1}, "status": "OK", "job": "a22-r1-platform-metadata-002", "wall_seconds": 0.1562781249958789, "exclusive_wall_seconds": 0.1562781249958789, "process_cpu_seconds": 0.151662}

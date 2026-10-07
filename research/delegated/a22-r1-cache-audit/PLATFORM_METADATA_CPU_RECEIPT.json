@@ -1,0 +1,15 @@
+{
+  "event": "inclusive_external_receipt",
+  "receipt_id": "a22-r1-platform-metadata-001",
+  "wall_seconds": 0.09802404199999999,
+  "process_cpu_seconds": 0.097141,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "metadata_audits": 1,
+    "cached_small_solves": 0,
+    "new_Maxwell_actions": 0,
+    "new_fullwave_labels": 0
+  },
+  "status": "COMPLETE",
+  "measurement": "measured Python process CPU for JSON metadata diagnosis; parent registration required"
+}

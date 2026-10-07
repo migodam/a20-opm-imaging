@@ -1,0 +1,23 @@
+{
+  "event": "a22_r1_cached_chart_exterior_audit",
+  "attempt": 1,
+  "started_at_utc": "2026-10-07T16:58:07.374658+00:00",
+  "wall_seconds": 0.2857424579997314,
+  "cpu_user_seconds": 0.23458199999999998,
+  "cpu_system_seconds": 0.039298,
+  "cpu_total_seconds": 0.27388,
+  "exit_code": 0,
+  "runtime": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/.venv_nn/bin/python",
+  "workdir": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation",
+  "scope": "Cached chart/anchor plus original and finite material labels after complete global split freeze; no data/AW/scores/J read",
+  "physical_actions": 0,
+  "maxwell_actions": 0,
+  "full_wave_labels": 0,
+  "nn_training_runs": 0,
+  "counts": {
+    "online_chart_cache_reads": 4,
+    "original_material_cache_reads": 4,
+    "finite_label_cache_reads": 32
+  },
+  "log_path": "/Volumes/migodam's-external-brain/Research/Inv_SLAM/Gaussian/A22/a22-r1-subspace-separation/research/delegated/a22-r1-metrics-tests/cached_chart_audit_attempt_001.log"
+}

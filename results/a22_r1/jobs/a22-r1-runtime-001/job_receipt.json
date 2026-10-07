@@ -1,0 +1,82 @@
+{
+  "wall_seconds": 0.3530027500091819,
+  "process_cpu_seconds": 0.350102,
+  "gpu_occupation_seconds": 0.0,
+  "counts": {
+    "runtime_small_solves": 20,
+    "material_subproblems": 20,
+    "material_optimizer_iterations": 825
+  },
+  "exclusive_walls": {
+    "a22_material_subproblem": 0.09519608298433013,
+    "r1_cached_runtime_material_solve": 0.012874253981863149
+  },
+  "events": 40,
+  "peak_cpu_rss_bytes": 86343680,
+  "CPU_memory_measurement_available": true,
+  "peak_gpu_allocated_bytes": 0,
+  "peak_gpu_reserved_bytes": 0,
+  "device": "cpu",
+  "CPU_in_GPU_job_included": true,
+  "deployment_wall_definition": "inclusive parent elapsed; never sum nested spans",
+  "event": "inclusive_job_receipt",
+  "receipt_id": "a22-r1-runtime-001",
+  "additive_receipt": true,
+  "status": "COMPLETE",
+  "detail": {
+    "status": "COMPLETE",
+    "runtime_small_solves": 20,
+    "primary_cases_changed": 0,
+    "method_order": [
+      "COMMON_32D",
+      "RANDOM",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "fixed_scenes": [
+      2001,
+      2003,
+      2014,
+      2009
+    ],
+    "new_Maxwell_actions": 0,
+    "new_fullwave_labels": 0,
+    "repeat_count": 1,
+    "offline_full_J_timing": "NOT_RUN_NO_RUNTIME_CLAIM",
+    "speedup_gate": "NOT_ESTABLISHED",
+    "medians": {
+      "COMMON_32D": {
+        "cache_read_wall_seconds": 0.0068967920014983974,
+        "split_wall_seconds": 4.1649764170870185e-07,
+        "small_solve_wall_seconds": 0.01336702050321037,
+        "cached_one_shot_including_shared_read_seconds": 0.02027404249383835
+      },
+      "RANDOM": {
+        "cache_read_wall_seconds": 0.0068967920014983974,
+        "split_wall_seconds": 4.239549889462069e-05,
+        "small_solve_wall_seconds": 0.0038960625024628825,
+        "cached_one_shot_including_shared_read_seconds": 0.010890020996157546
+      },
+      "A1": {
+        "cache_read_wall_seconds": 0.0068967920014983974,
+        "split_wall_seconds": 5.187495844438672e-06,
+        "small_solve_wall_seconds": 0.003494854499876965,
+        "cached_one_shot_including_shared_read_seconds": 0.010460396006237715
+      },
+      "A2": {
+        "cache_read_wall_seconds": 0.0068967920014983974,
+        "split_wall_seconds": 4.624998837243766e-06,
+        "small_solve_wall_seconds": 0.003459562503849156,
+        "cached_one_shot_including_shared_read_seconds": 0.010425084008602425
+      },
+      "A3": {
+        "cache_read_wall_seconds": 0.0068967920014983974,
+        "split_wall_seconds": 4.562505637295544e-06,
+        "small_solve_wall_seconds": 0.003397583495825529,
+        "cached_one_shot_including_shared_read_seconds": 0.010362500004703179
+      }
+    }
+  },
+  "nested_spans_nonadditive": true
+}

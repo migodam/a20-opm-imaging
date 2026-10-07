@@ -1,0 +1,24 @@
+{
+  "job": "a22-r1-unit-003",
+  "device": "cpu",
+  "prior": {
+    "cpu": 352.159174,
+    "gpu": 155.35682739998447,
+    "backgrounds": 4,
+    "new_labels": 0,
+    "receipts": [
+      "transport-preflight-19c082f11d304ea68d074f0efc5d9a23",
+      "a22-r1-unit-001",
+      "transport-deploy-6b48b468ba314e74800fdace6e1171e9",
+      "metrics-synthetic-1",
+      "metrics-synthetic-2",
+      "source-implementation-audit-allowance",
+      "transport-deploy-e8a6bbf0b9264504a3e535f856408ad2",
+      "transport-run-a693e25f2a80419099dbd2d03b1e55ef",
+      "a22-r1-freeze-001",
+      "transport-pull-d5bbf53a1aed4aeca3eab0bbc6a6509c",
+      "a22-r1-unit-002",
+      "a22-r1-replay-001"
+    ]
+  }
+}
