@@ -1,3 +1,13 @@
+# A22-R1 — completed subspace separation screening
+
+**CASE_C_A2_MATCHES_OR_BEATS_A3. No formal PASS, no NN, no expansion.**
+
+[Read the R1 report](A22_R1_START_HERE.md) · [GPT single-file handoff](A22_R1_GPT_HANDOFF.md) · [Gates](results/a22_r1/GATE_DECISION.json)
+
+This branch preserves the earlier A22/A21/A20 evidence. The historical A22 Stage A summary below is not the R1 conclusion.
+
+---
+
 # A22 Three-Fold OPM — local gated pilot
 
 Read [START_HERE.md](START_HERE.md) for the completed local evidence package.

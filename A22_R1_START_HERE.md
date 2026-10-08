@@ -37,7 +37,7 @@ physics NRMSE中位数仍为 **0.535099**；相对分离不等于低绝对误差
 
 图A–F的PNG/SVG及原始数据在[figures](figures/A22_R1/PLOT_MANIFEST.json)。缓存入口、参数、seeds、source记录在[SOURCE_AND_COMMAND_MANIFEST](results/a22_r1/SOURCE_AND_COMMAND_MANIFEST.json)。运行 `PYTHONPATH=src python -B -m a22_r1.cli report --job a22-r1-report-NEW` 重新汇总现有缓存；不要重跑freeze或生成label。新的job名称必须唯一。
 
-本地交付；未自动publish、扩展场景、启动NN或下一阶段。
+原始科学交付为本地。2026-10-08应用户“每一次都要网页链接”要求补齐独立公开分支；发布状态另见[发布回执](results/a22_r1/PUBLICATION_RECORD.json)。不扩展场景、不启动NN或下一阶段。冻结gate中的LOCAL_ONLY保留为当时历史状态。
 
 计时细分见[CACHED_ONE_SHOT_RUNTIME](CACHED_ONE_SHOT_RUNTIME.md)；缓存kernel不能当完整部署加速。
 
