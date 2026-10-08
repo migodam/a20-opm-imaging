@@ -1,8 +1,8 @@
 {
   "schema": "a22_r1.cost_summary.v1",
-  "R1_CPU_including_allowance_seconds": 731.745766,
-  "R1_CPU_measured_seconds": 551.745766,
-  "R1_CPU_source_allowance_seconds": 180.0,
+  "R1_CPU_including_allowance_seconds": 764.711513,
+  "R1_CPU_measured_seconds": 554.711513,
+  "R1_CPU_source_allowance_seconds": 210.0,
   "R1_GPU_related_occupation_seconds": 155.35682739998447,
   "CPU_cap_seconds": 1800.0,
   "GPU_cap_seconds": 600.0,
@@ -11,7 +11,7 @@
   "cumulative_A22_GPU_seconds": 1506.0707073000085,
   "background_predictions": 4,
   "new_fullwave_labels": 0,
-  "unique_inclusive_receipt_count": 37,
+  "unique_inclusive_receipt_count": 39,
   "counts": {
     "unit_suites": 4,
     "original_online_freeze_reads": 4,
@@ -78,7 +78,9 @@
     "delivery_checks": 3,
     "evidence_compressions": 27,
     "final_evidence_audits": 2,
-    "runtime_small_solves": 20
+    "runtime_small_solves": 20,
+    "publication_preparations": 1,
+    "public_branch_pushes": 1
   },
   "cache_replay_new_Maxwell_actions": 0,
   "physical_work_scope": "Four background/descriptor rebuilds have paid nonzero F/Fstar/L/Lstar and solve actions. The new_Maxwell_actions=0 counter in cached jobs applies only to cached replay, not to the entire R1 experiment.",

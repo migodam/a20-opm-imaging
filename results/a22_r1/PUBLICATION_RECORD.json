@@ -1,0 +1,74 @@
+{
+  "schema": "a22_r1.publication.v1",
+  "status": "PUBLISHED_PUBLIC_BRANCH",
+  "trigger": "User requires a web link for every research delivery",
+  "repository": "https://github.com/migodam/a20-opm-imaging",
+  "branch": "a22-r1-subspace-separation",
+  "scientific_delivery_commit": "f6e904800b57c31aa9a047222d37ae60f00fe322",
+  "verified_payload_commit": "9aefb3ffadcee13414adb2e38280f7d346736d8e",
+  "report_url": "https://github.com/migodam/a20-opm-imaging/blob/a22-r1-subspace-separation/A22_R1_START_HERE.md",
+  "GPT_raw_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/A22_R1_GPT_HANDOFF.md",
+  "entry_url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/START_HERE.md",
+  "anonymous_checks": [
+    {
+      "path": "START_HERE.md",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/START_HERE.md",
+      "HTTP_status": 200,
+      "bytes": 777,
+      "authentication": false,
+      "exact_bytes": true
+    },
+    {
+      "path": "A22_R1_GPT_HANDOFF.md",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/A22_R1_GPT_HANDOFF.md",
+      "HTTP_status": 200,
+      "bytes": 38362,
+      "authentication": false,
+      "exact_bytes": true
+    },
+    {
+      "path": "A22_R1_START_HERE.md",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/A22_R1_START_HERE.md",
+      "HTTP_status": 200,
+      "bytes": 5066,
+      "authentication": false,
+      "exact_bytes": true
+    },
+    {
+      "path": "results/a22_r1/GATE_DECISION.json",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/results/a22_r1/GATE_DECISION.json",
+      "HTTP_status": 200,
+      "bytes": 6599,
+      "authentication": false,
+      "exact_bytes": true
+    },
+    {
+      "path": "REPRODUCTION_CONFLICT_ADDENDUM.md",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/REPRODUCTION_CONFLICT_ADDENDUM.md",
+      "HTTP_status": 200,
+      "bytes": 2365,
+      "authentication": false,
+      "exact_bytes": true
+    },
+    {
+      "path": "figures/A22_R1/PLOT_MANIFEST.json",
+      "url": "https://raw.githubusercontent.com/migodam/a20-opm-imaging/a22-r1-subspace-separation/figures/A22_R1/PLOT_MANIFEST.json",
+      "HTTP_status": 200,
+      "bytes": 2771,
+      "authentication": false,
+      "exact_bytes": true
+    }
+  ],
+  "authentication": false,
+  "verified_at_UTC": "2026-10-08T04:56:16.118248+00:00",
+  "scientific_gates_unchanged": true,
+  "frozen_LOCAL_ONLY_is_historical": true,
+  "privacy_secret_matches": [],
+  "new_experiment": false,
+  "new_physical_actions": 0,
+  "new_fullwave_labels": 0,
+  "NN": "NOT_RUN",
+  "release_created": false,
+  "historical_release_and_default_branch_unchanged": true,
+  "new_SHA256_checks": 0
+}
