@@ -70,5 +70,19 @@
   "NN": "NOT_RUN",
   "release_created": false,
   "historical_release_and_default_branch_unchanged": true,
-  "new_SHA256_checks": 0
+  "new_SHA256_checks": 0,
+  "verified_followup_commit": "1c1d48cb01218c024577e421e1b4d403775fb655",
+  "anonymous_branch_followup": {
+    "HTTP_status": 200,
+    "commit": "1c1d48cb01218c024577e421e1b4d403775fb655",
+    "authentication": false,
+    "fresh_query": true
+  },
+  "transient_verification_conflict": {
+    "initial_result": "REMOTE_COMMIT_CONFLICT after acknowledged followup push",
+    "resolution": "Fresh anonymous API and git ls-remote agree with local HEAD",
+    "cause": "Cache or propagation delay inferred; not independently proven",
+    "experiment_or_gate_changed": false,
+    "cost_covered_by_publication_allowance": true
+  }
 }
